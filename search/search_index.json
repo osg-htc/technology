@@ -2431,6 +2431,76 @@
             "title": "Reviewing pull requests"
         },
         {
+            "location": "/meetings/2019/TechArea20190513/",
+            "text": "OSG Technology Area Meeting, 13 May 2019\n\u00b6\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n   \n\n\nAnnouncements\n\u00b6\n\n\n\n\nNext week's meeting cancelled due to HTCondor Week\n\n\nZhenzhou, our new student, starts Topology work today\n\n\n\n\nTriage Duty\n\u00b6\n\n\n\n\nThis week: BrianL\n\n\nNext week: Carl\n\n\n4 (-2) open FreshDesk tickets\n\n\n1 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\u00b6\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\u0394\n\n\nState\n\n\n\n\n\n\n\n\n\n\n161\n\n\n-1\n\n\nOpen\n\n\n\n\n\n\n24\n\n\n-3\n\n\nIn Progress\n\n\n\n\n\n\n7\n\n\n+4\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\u00b6\n\n\n\n\nRHEL 8 has been released; unsure about the timeline for CentOS 8\n\n\nStable stash-cache image has been tagged\n\n\nHosted-CE improvements:  \n\n\nAdd ability to manage WN software/data from the CE host\n\n\nImprove operational flexibility by managing submit host configuration from the CE\n\n\n\n\n\n\nInternal OSG Site installation exercise on 5/24 at 9am CDT\n\n\n\n\nDiscussion\n\u00b6\n\n\nNone this week  \n\n\nSupport Update\n\u00b6\n\n\n\n\nNET2 (Carl): Continuing work on the custom SGE probe to fix missing accounting records\n\n\nSWT2 (BrianL): the blahp does not refresh proxies after 24h on WNs and this has bitten ATLAS.\n\n    Have a fix that worked for SWT2 included in a new build.\n\n\n\n\nOSG Release Team\n\u00b6\n\n\n\n\n\n\n\n\n3.4.30\n\n\n\u0394\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n10\n\n\n+10\n\n\nOpen\n\n\n\n\n\n\n9\n\n\n+9\n\n\nIn Progress\n\n\n\n\n\n\n2\n\n\n+2\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n21\n\n\n+21\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nOSG 3.4.30 - This Week  \n\n\nReady for Testing  \n\n\nxrootd-voms-plugin 0.6.0\n\n\nosg-se-hadoop for EL6\n\n\n\n\n\n\n\n\n\n\nData - Tomorrow  \n\n\nVO Package v90\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3.4.29\n\n\n\u0394\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n-11\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n-10\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n-10\n\n\nReady for Testing\n\n\n\n\n\n\n18\n\n\n+14\n\n\nReady for Release\n\n\n\n\n\n\n18\n\n\n-17\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nOSG 3.4.29 - Last Week  \n\n\nStashCache/XCache (13 tickets)\n\n\nMyProxy using GCT\n\n\n\n\n\n\n\n\nDiscussion\n\u00b6\n\n\n\n\nAI (TimT): Request a mailing list for community testing, populate it with Topology admin contacts, and write an introductory email\n\n\n\n\nOSG Investigations Team\n\u00b6\n\n\n\n\nWorking with Operations on monitoring.  Added Hosted-CE's monitoring.  Continuing to refine.\n\n\nAccounting audit is continuing in collaboration with ATLAS.\n\n\n\n\nFuture\n\u00b6\n\n\n\n\nLots of GRACC questions: \nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3642\n\n\nWhat would it take to run HTCondor-CE gratia probe on a slurm cluster?  On pause.\n\n\n\n\nOngoing\n\u00b6\n\n\n\n\nGRACC Project\n\n\nStashCache Project\n\n\n\n\nDiscussions\n\u00b6\n\n\nNone this week",
+            "title": "May 13, 2019"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#osg-technology-area-meeting-13-may-2019",
+            "text": "Coordinates:  Conference: 719-284-5267, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:",
+            "title": "OSG Technology Area Meeting, 13 May 2019"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#announcements",
+            "text": "Next week's meeting cancelled due to HTCondor Week  Zhenzhou, our new student, starts Topology work today",
+            "title": "Announcements"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#triage-duty",
+            "text": "This week: BrianL  Next week: Carl  4 (-2) open FreshDesk tickets  1 (+0) open GGUS ticket",
+            "title": "Triage Duty"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#jira",
+            "text": "# of tickets  \u0394  State      161  -1  Open    24  -3  In Progress    7  +4  Ready for Testing    0  +0  Ready for Release",
+            "title": "JIRA"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#osg-software-team",
+            "text": "RHEL 8 has been released; unsure about the timeline for CentOS 8  Stable stash-cache image has been tagged  Hosted-CE improvements:    Add ability to manage WN software/data from the CE host  Improve operational flexibility by managing submit host configuration from the CE    Internal OSG Site installation exercise on 5/24 at 9am CDT",
+            "title": "OSG Software Team"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#discussion",
+            "text": "None this week",
+            "title": "Discussion"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#support-update",
+            "text": "NET2 (Carl): Continuing work on the custom SGE probe to fix missing accounting records  SWT2 (BrianL): the blahp does not refresh proxies after 24h on WNs and this has bitten ATLAS. \n    Have a fix that worked for SWT2 included in a new build.",
+            "title": "Support Update"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#osg-release-team",
+            "text": "3.4.30  \u0394  Status      10  +10  Open    9  +9  In Progress    2  +2  Ready for Testing    0  +0  Ready for Release    21  +21  Total      OSG 3.4.30 - This Week    Ready for Testing    xrootd-voms-plugin 0.6.0  osg-se-hadoop for EL6      Data - Tomorrow    VO Package v90    Operations    Nothing    Contrib    Nothing        3.4.29  \u0394  Status      0  -11  Open    0  -10  In Progress    0  -10  Ready for Testing    18  +14  Ready for Release    18  -17  Total      OSG 3.4.29 - Last Week    StashCache/XCache (13 tickets)  MyProxy using GCT",
+            "title": "OSG Release Team"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#discussion_1",
+            "text": "AI (TimT): Request a mailing list for community testing, populate it with Topology admin contacts, and write an introductory email",
+            "title": "Discussion"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#osg-investigations-team",
+            "text": "Working with Operations on monitoring.  Added Hosted-CE's monitoring.  Continuing to refine.  Accounting audit is continuing in collaboration with ATLAS.",
+            "title": "OSG Investigations Team"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#future",
+            "text": "Lots of GRACC questions:  https://opensciencegrid.atlassian.net/browse/SOFTWARE-3642  What would it take to run HTCondor-CE gratia probe on a slurm cluster?  On pause.",
+            "title": "Future"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#ongoing",
+            "text": "GRACC Project  StashCache Project",
+            "title": "Ongoing"
+        },
+        {
+            "location": "/meetings/2019/TechArea20190513/#discussions",
+            "text": "None this week",
+            "title": "Discussions"
+        },
+        {
             "location": "/meetings/2019/TechArea20190506/",
             "text": "OSG Technology Area Meeting,  6 May 2019\n\u00b6\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n BrianL, Carl, Derek, Edgar, Marian, TimT\n\n\nAnnouncements\n\u00b6\n\n\n\n\nMat out for vacation today\n\n\nOSG VO infrastructure undergoing maintenance today\n\n\n\n\nTriage Duty\n\u00b6\n\n\n\n\nThis week: TimT\n\n\nNext week: BrianL\n\n\n6 (-3) open FreshDesk tickets\n\n\n1 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\u00b6\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\u0394\n\n\nState\n\n\n\n\n\n\n\n\n\n\n162\n\n\n-3\n\n\nOpen\n\n\n\n\n\n\n27\n\n\n-2\n\n\nIn Progress\n\n\n\n\n\n\n3\n\n\n-7\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n-4\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\u00b6\n\n\n\n\nNeed to transtion services from ingwe to moria, e.g. SVN backup\n\n\nInternal OSG Site installation exercise on 5/24 at 9am CDT\n\n\nHosted-CE improvements:  \n\n\nAdd ability to manage WN software/data from the CE host\n\n\nImprove operational flexibility by managing submit host configuration from the CE\n\n\n\n\n\n\nExpect Singularity 3 to be moved from upcoming to release\n\n\n\n\nDiscussion\n\u00b6\n\n\nNone this week  \n\n\nSupport Update\n\u00b6\n\n\n\n\nNET2 (Carl): Continuing work on the custom SGE probe to fix missing accounting records\n\n\nSWT2 (BrianL): the blahp does not refresh proxies after 24h on WNs and this has bitten ATLAS.\n\n    Have a fix that works in testing but doesn't seem to work for SWT2.\n\n\n\n\nOSG Release Team\n\u00b6\n\n\n\n\n\n\n\n\n3.4.30\n\n\n\u0394\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n10\n\n\n+10\n\n\nOpen\n\n\n\n\n\n\n9\n\n\n+9\n\n\nIn Progress\n\n\n\n\n\n\n2\n\n\n+2\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n21\n\n\n+21\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nOSG 3.4.30 - This Week\n\n\nReady for Testing  \n\n\nxrootd-voms-plugin 0.6.0\n\n\nosg-se-hadoop for EL6\n\n\n\n\n\n\n\n\n\n\nData - Tomorrow\n\n\nVO Package v90\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3.4.29\n\n\n\u0394\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n-11\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n-10\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n-10\n\n\nReady for Testing\n\n\n\n\n\n\n18\n\n\n+14\n\n\nReady for Release\n\n\n\n\n\n\n18\n\n\n-17\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nOSG 3.4.29 - Last Week\n\n\nStashCache/XCache (13 tickets)\n\n\nMyProxy using GCT\n\n\n\n\n\n\n\n\nDiscussion\n\u00b6\n\n\n\n\nAI (TimT): Request a mailing list for community testing, populate it with Topology admin contacts, and write an introductory email\n\n\n\n\nOSG Investigations Team\n\u00b6\n\n\n\n\nWorking with Operations on monitoring.  Added Hosted-CE's monitoring.  Continuing to refine.\n\n\nAccounting audit is continuing in collaboration with ATLAS.\n\n\n\n\nFuture\n\u00b6\n\n\n\n\nLots of GRACC questions: \nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3642\n\n\nWhat would it take to run HTCondor-CE gratia probe on a slurm cluster?  On pause.\n\n\n\n\nOngoing\n\u00b6\n\n\n\n\nGRACC Project\n\n\nStashCache Project\n\n\n\n\nDiscussions\n\u00b6\n\n\nNone this week",
             "title": "May 6, 2019"
