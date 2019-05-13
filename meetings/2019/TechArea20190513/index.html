@@ -1998,10 +1998,10 @@
                 
                 <h1 id="osg-technology-area-meeting-13-may-2019">OSG Technology Area Meeting, 13 May 2019<a class="headerlink" href="#osg-technology-area-meeting-13-may-2019" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: 719-284-5267, PIN: 57363; <a href="https://www.uberconference.com/osgblin">https://www.uberconference.com/osgblin</a><br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat, TimT, Zhenzhou</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Next week's meeting cancelled due to HTCondor Week</li>
+<li>Next meeting 5/28 (due to HTCondor Week and Memorial Day)</li>
 <li>Zhenzhou, our new student, starts Topology work today</li>
 </ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -2045,6 +2045,7 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
+<li>XRootD 4.10.0 RC 1 released so we need to turn a build around</li>
 <li>RHEL 8 has been released; unsure about the timeline for CentOS 8</li>
 <li>Stable stash-cache image has been tagged</li>
 <li>Hosted-CE improvements:  <ul>
@@ -2055,12 +2056,20 @@
 <li>Internal OSG Site installation exercise on 5/24 at 9am CDT</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>What are the limits on the RHEL developer license? TimT said unlimited VMs on a single host</li>
+<li>Discussion about GLOW stash cache/origin on k8s</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>NET2 (Carl): Continuing work on the custom SGE probe to fix missing accounting records</li>
-<li>SWT2 (BrianL): the blahp does not refresh proxies after 24h on WNs and this has bitten ATLAS.<br />
+<li>Purdue (Marco): privileged singularity is not accepting signals even after dropping privs.
+    Suggested solution is to use unprivileged singularity.</li>
+<li>SuperMIC (Edgar): Troubleshooting issues with CVMFS</li>
+<li>SWT2 (BrianL): the blahp does not refresh proxies after 24h on WNs and this has bitten ATLAS.
     Have a fix that worked for SWT2 included in a new build.</li>
+<li>UCSD (Diego): Troubleshooting issues with using chirp within Singularity containers.
+    Jaime has suggested using the python client.</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
