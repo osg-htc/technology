@@ -2431,6 +2431,76 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2019/TechArea20190610/", 
+            "text": "OSG Technology Area Meeting, 10 June 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n   \n\n\nAnnouncements\n\n\nBrianL OOO Friday  \n\n\nTriage Duty\n\n\n\n\nThis week: TimT\n\n\nNext week: BrianL\n\n\n2 (+0) open FreshDesk tickets\n\n\n1 (+1) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n156\n\n\n+2\n\n\nOpen\n\n\n\n\n\n\n26\n\n\n+1\n\n\nIn Progress\n\n\n\n\n\n\n8\n\n\n+0\n\n\nReady for Testing\n\n\n\n\n\n\n2\n\n\n+2\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.5 packages reviewed: \nhttps://docs.google.com/spreadsheets/d/1WNk8F5XRQSJw3mwTFejJBLNbrQptdUxpWpZ0UEu-4MI/edit?usp=sharing\n\n\nXCache:  \n\n\nAI (BrianL): Get ATLAS/CMS XCache RPM packaging in this week\n\n\nAI (BrianL): Add XCache integration tests to the container CI\n\n\nAI (BrianL, Marian): Put together slides for the XRootD container/packaging/monitoring presentation\n\n\n\n\n\n\nHosted-CE:  \n\n\nInitial script for managing WN software/data from the CE host in the Operation team's hands\n\n\nAI (Mat): elaborate on plans to manage remote submission host patches/config from a central host\n\n\n\n\n\n\nBlahp unification: CHTC git repo and mirroring to GitHub complete. Working through HTCondor build issues.\n\n\nAI (Derek): Review Gratia probe PRs (\nhttps://github.com/opensciencegrid/gratia-probe/pulls\n)\n\n\nAI (Mat): Give IceCube access to the GLOW origin\n\n\nMadison ITB CE host certificates will be updated this week\n\n\n\n\nDiscussion\n\n\n\n\nAI (BrianL): Create ticket for IceCube/GLOW origin VO work\n\n\nAI (BrianL): Talk to FNAL, factory folks about OSG 3.4 support lifetime (due to dropping EL6 support in OSG 3.5)\n\n\n\n\nSupport Update\n\n\n\n\nATLAS (Derek): Accounting audit continues.\n\n\nCMS (Edgar): Told CMS sites that they can use Let's Encrypt certs for their CEs but there are issues. The CERN factory doesn't have LE CAs installed but we control the host so we can install them. Pilot jobs are running ok but SAM tests and PHEDeX transfers are failing. Vanderbilt is paying DigiCert per host certificate, which may be a potential alternative to InCommon and Let's Encrypt.\n\n\nGLOW (BrianL): Some user jobs are being held in IIT startd's with the message \"missing http plugin\"\n\n\nSyracuse (BrianL): troubleshooting why their condor pool negotiator isn't matching their whole node jobs\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.31\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n10\n\n\n+1\n\n\nOpen\n\n\n\n\n\n\n7\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n7\n\n\n+1\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n24\n\n\n+2\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nOSG 3.4.31  \n\n\nReady for Testing  \n\n\nSingularity 3.2.1\n\n\ncctools 7.0.13\n\n\nHTCondor 8.6 patch python packaging to match EPEL\n\n\nXRootD 4.10.0-rc1\n\n\nxrootd-scitokens 1.0.0\n\n\nscitokens-cpp\n\n\nUpcoming: HTCondor 8.8.3\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\n\n\nAI (TimT): Take over osg-sites mailing list for community testing, populate it with Topology admin contacts, and write an introductory email [IN PROGRESS]\n\n\nTimT and Mat are working on getting IGTF CA certificate announcements to the osg-sw-notices [DONE]\n\n\n\n\nOSG Investigations Team\n\n\n\n\nWorking with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)\n\n\nAccounting audit is continuing in collaboration with ATLAS.  Pretty much done on our end.  Accounting portal appears updated.  PDF's look wrong.  They will not be updated, but they look wrong even for the previous bad data.\n\n\nAdapting LIGO style cvmfs + singularity.  Ready for testing.\n\n\n(DONE) Creating cvmfs + scitokens repo to start testing scitokens enabled stashcache.\n\n\ncvmfs-authz-helper (cvmfs-x509-helper) will be built this week.  Pending pull request to fix issues discovered through testing.\n\n\n\n\nFuture\n\n\n\n\nLots of GRACC questions: \nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3642\n\n\nWhat would it take to run HTCondor-CE gratia probe on a slurm cluster?  On pause.\n\n\n\n\nOngoing\n\n\n\n\nGRACC Project\n\n\nStashCache Project\n\n\n\n\nDiscussions\n\n\nNone this week", 
+            "title": "June 10, 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#osg-technology-area-meeting-10-june-2019", 
+            "text": "Coordinates:  Conference: 719-284-5267, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:", 
+            "title": "OSG Technology Area Meeting, 10 June 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#announcements", 
+            "text": "BrianL OOO Friday", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#triage-duty", 
+            "text": "This week: TimT  Next week: BrianL  2 (+0) open FreshDesk tickets  1 (+1) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#jira", 
+            "text": "# of tickets   State      156  +2  Open    26  +1  In Progress    8  +0  Ready for Testing    2  +2  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#osg-software-team", 
+            "text": "OSG 3.5 packages reviewed:  https://docs.google.com/spreadsheets/d/1WNk8F5XRQSJw3mwTFejJBLNbrQptdUxpWpZ0UEu-4MI/edit?usp=sharing  XCache:    AI (BrianL): Get ATLAS/CMS XCache RPM packaging in this week  AI (BrianL): Add XCache integration tests to the container CI  AI (BrianL, Marian): Put together slides for the XRootD container/packaging/monitoring presentation    Hosted-CE:    Initial script for managing WN software/data from the CE host in the Operation team's hands  AI (Mat): elaborate on plans to manage remote submission host patches/config from a central host    Blahp unification: CHTC git repo and mirroring to GitHub complete. Working through HTCondor build issues.  AI (Derek): Review Gratia probe PRs ( https://github.com/opensciencegrid/gratia-probe/pulls )  AI (Mat): Give IceCube access to the GLOW origin  Madison ITB CE host certificates will be updated this week", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#discussion", 
+            "text": "AI (BrianL): Create ticket for IceCube/GLOW origin VO work  AI (BrianL): Talk to FNAL, factory folks about OSG 3.4 support lifetime (due to dropping EL6 support in OSG 3.5)", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#support-update", 
+            "text": "ATLAS (Derek): Accounting audit continues.  CMS (Edgar): Told CMS sites that they can use Let's Encrypt certs for their CEs but there are issues. The CERN factory doesn't have LE CAs installed but we control the host so we can install them. Pilot jobs are running ok but SAM tests and PHEDeX transfers are failing. Vanderbilt is paying DigiCert per host certificate, which may be a potential alternative to InCommon and Let's Encrypt.  GLOW (BrianL): Some user jobs are being held in IIT startd's with the message \"missing http plugin\"  Syracuse (BrianL): troubleshooting why their condor pool negotiator isn't matching their whole node jobs", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#osg-release-team", 
+            "text": "3.4.31   Status      10  +1  Open    7  +0  In Progress    7  +1  Ready for Testing    0  +0  Ready for Release    24  +2  Total      OSG 3.4.31    Ready for Testing    Singularity 3.2.1  cctools 7.0.13  HTCondor 8.6 patch python packaging to match EPEL  XRootD 4.10.0-rc1  xrootd-scitokens 1.0.0  scitokens-cpp  Upcoming: HTCondor 8.8.3      Data    Nothing    Operations    Nothing    Contrib    Nothing", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#discussion_1", 
+            "text": "AI (TimT): Take over osg-sites mailing list for community testing, populate it with Topology admin contacts, and write an introductory email [IN PROGRESS]  TimT and Mat are working on getting IGTF CA certificate announcements to the osg-sw-notices [DONE]", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#osg-investigations-team", 
+            "text": "Working with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)  Accounting audit is continuing in collaboration with ATLAS.  Pretty much done on our end.  Accounting portal appears updated.  PDF's look wrong.  They will not be updated, but they look wrong even for the previous bad data.  Adapting LIGO style cvmfs + singularity.  Ready for testing.  (DONE) Creating cvmfs + scitokens repo to start testing scitokens enabled stashcache.  cvmfs-authz-helper (cvmfs-x509-helper) will be built this week.  Pending pull request to fix issues discovered through testing.", 
+            "title": "OSG Investigations Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#future", 
+            "text": "Lots of GRACC questions:  https://opensciencegrid.atlassian.net/browse/SOFTWARE-3642  What would it take to run HTCondor-CE gratia probe on a slurm cluster?  On pause.", 
+            "title": "Future"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#ongoing", 
+            "text": "GRACC Project  StashCache Project", 
+            "title": "Ongoing"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190610/#discussions", 
+            "text": "None this week", 
+            "title": "Discussions"
+        }, 
+        {
             "location": "/meetings/2019/TechArea20190603/", 
             "text": "OSG Technology Area Meeting,  3 June 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n BrianL, Edgar, Derek, Marian, Mat, TimT\n\n\nAnnouncements\n\n\nMat at FNAL Thursday, 6/6, to discuss Modularity with the Scientific Linux team\n\n\nTriage Duty\n\n\n\n\nThis week: Mat\n\n\nNext week: TimT\n\n\n2 (-2) open FreshDesk tickets\n\n\n0 (-1) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n154\n\n\n-5\n\n\nOpen\n\n\n\n\n\n\n25\n\n\n+4\n\n\nIn Progress\n\n\n\n\n\n\n8\n\n\n+1\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.5 planning to start this week: \nhttps://opensciencegrid.atlassian.net/issues/?jql=labels%20%3D%203.5.0\n\n\nXCache:  \n\n\nAI (BrianL, Edgar): Get ATLAS/CMS XCache RPM packaging in this week\n\n\nAI (BrianL): Add XCache integration tests to the container CI\n\n\n\n\n\n\nHosted-CE:  \n\n\nInitial script for managing WN software/data from the CE host in the Operation team's hands\n\n\nAI (Mat): send email to Ops and UChicago admins to discuss design of managing CE configuration from a central host\n\n\n\n\n\n\nAI (Mat): Give IceCube access to the GLOW origin\n\n\n\n\nDiscussion\n\n\n\n\nAI (BrianL): Investigate missing OSG VMU test results, potentially due to local Gluster issues\n\n\nAI (BrianL): Create ticket for IceCube/GLOW origin VO work\n\n\nAI (BrianL): Talk to FNAL, factory folks about OSG 3.4 support lifetime (due to dropping EL6 support in OSG 3.5)\n\n\n\n\nSupport Update\n\n\n\n\nATLAS (Derek): Accounting audit continues.\n\n\nCMS (Edgar): Told CMS sites that they can use Let's Encrypt certs for their CEs but there are issues. The CERN factory doesn't have LE CAs installed but we control the host so we can install them. Pilot jobs are running ok but SAM tests and PHEDeX transfers are failing. Vanderbilt is paying DigiCert per host certificate, which may be a potential alternative to InCommon and Let's Encrypt.\n\n\nSyracuse (BrianL): troubleshooting issues with factory ops about the OSG VO's inability to fully utilize their idle cores\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.31\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n10\n\n\n+1\n\n\nOpen\n\n\n\n\n\n\n7\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n7\n\n\n+1\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n24\n\n\n+2\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nOSG 3.4.31\n\n\nReady for Testing  \n\n\nSingularity 3.2.1\n\n\ncctools 7.0.13\n\n\nHTCondor 8.6 patch python packaging to match EPEL\n\n\nXRootD 4.10.0-rc1\n\n\nxrootd-scitokens 1.0.0\n\n\nscitokens-cpp\n\n\nUpcoming: HTCondor 8.8.3\n\n\n\n\n\n\n\n\n\n\nData\n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\n\n\nAI (TimT): Take over osg-sites mailing list for community testing, populate it with Topology admin contacts, and write an introductory email [IN PROGRESS]\n\n\nTimT and Mat are working on getting IGTF CA certificate announcements to the osg-sw-notices [DONE]\n\n\n\n\nOSG Investigations Team\n\n\n\n\nWorking with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)\n\n\nAccounting audit is continuing in collaboration with ATLAS.  Pretty much done on our end.  Accounting portal appears updated.  PDF's look wrong.  They will not be updated, but they look wrong even for the previous bad data.\n\n\nAdapting LIGO style cvmfs + singularity.  Ready for testing.\n\n\n(DONE) Creating cvmfs + scitokens repo to start testing scitokens enabled stashcache.\n\n\ncvmfs-authz-helper (cvmfs-x509-helper) will be built this week.  Pending pull request to fix issues discovered through testing.\n\n\n\n\nFuture\n\n\n\n\nLots of GRACC questions: \nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3642\n\n\nWhat would it take to run HTCondor-CE gratia probe on a slurm cluster?  On pause.\n\n\n\n\nOngoing\n\n\n\n\nGRACC Project\n\n\nStashCache Project\n\n\n\n\nDiscussions\n\n\nNone this week", 
             "title": "June 3, 2019"
