@@ -2034,9 +2034,13 @@
                 
                 <h1 id="osg-technology-area-meeting-10-june-2019">OSG Technology Area Meeting, 10 June 2019<a class="headerlink" href="#osg-technology-area-meeting-10-june-2019" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: 719-284-5267, PIN: 57363; <a href="https://www.uberconference.com/osgblin">https://www.uberconference.com/osgblin</a><br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
-<p>BrianL OOO Friday  </p>
+<ul>
+<li>BrianL OOO Friday</li>
+<li>Derek OOO Wed - Fri</li>
+<li>Mat OOO Tuesday PM</li>
+</ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This week: TimT</li>
@@ -2094,17 +2098,19 @@
 <li>AI (Derek): Review Gratia probe PRs (<a href="https://github.com/opensciencegrid/gratia-probe/pulls">https://github.com/opensciencegrid/gratia-probe/pulls</a>)</li>
 <li>AI (Mat): Give IceCube access to the GLOW origin</li>
 <li>Madison ITB CE host certificates will be updated this week</li>
+<li>GlideinWMS 3.5.0 has been released upstream and there are some important upgrade instructions that Marco has noted. It's also still fully compatible with HTCondor 8.6 and older frontend/factory versions.</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <ul>
-<li>AI (BrianL): Create ticket for IceCube/GLOW origin VO work</li>
 <li>AI (BrianL): Talk to FNAL, factory folks about OSG 3.4 support lifetime (due to dropping EL6 support in OSG 3.5)</li>
+<li>AI (Edgar, Mat): ITB submit host request certificate, investigate how glidein3 is monitoring it</li>
 </ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>ATLAS (Derek): Accounting audit continues.  Still editing with Fred.</li>
 <li>CMS (Edgar): Told CMS sites that they can use Let's Encrypt certs for their CEs but there are issues. The CERN factory doesn't have LE CAs installed but we control the host so we can install them. Pilot jobs are running ok but SAM tests and PHEDeX transfers are failing. Vanderbilt is paying DigiCert per host certificate, which may be a potential alternative to InCommon and Let's Encrypt.</li>
 <li>GLOW (BrianL): Some user jobs are being held in IIT startd's with the message "missing http plugin"</li>
+<li>SWT2 (Carl): We've got a Gratia probe pull request in for a Slurm v18 fix; we're also investigating a strange dependency on the OSG user-vo-map that shouldn't be there anymore</li>
 <li>Syracuse (BrianL): troubleshooting why their condor pool negotiator isn't matching their whole node jobs</li>
 <li>OSG User Support (Derek): Virtually attending meeting in Chicago.</li>
 </ul>
