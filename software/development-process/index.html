@@ -485,6 +485,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#verifying-builds-through-travis-ci" title="Verifying builds through Travis-CI" class="md-nav__link">
+    Verifying builds through Travis-CI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#building-packages-for-multiple-osg-release-series" title="Building packages for multiple OSG release series" class="md-nav__link">
     Building packages for multiple OSG release series
   </a>
@@ -1410,6 +1417,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#verifying-builds-through-travis-ci" title="Verifying builds through Travis-CI" class="md-nav__link">
+    Verifying builds through Travis-CI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#building-packages-for-multiple-osg-release-series" title="Building packages for multiple OSG release series" class="md-nav__link">
     Building packages for multiple OSG release series
   </a>
@@ -1546,6 +1560,39 @@
 </ul>
 <p>If you are unsure about which version number to increment in a software update, consult the Software Manager.</p>
 <h2 id="build-procedures">Build Procedures<a class="headerlink" href="#build-procedures" title="Permanent link">&para;</a></h2>
+<h3 id="verifying-builds-through-travis-ci">Verifying builds through Travis-CI<a class="headerlink" href="#verifying-builds-through-travis-ci" title="Permanent link">&para;</a></h3>
+<p>Automatic build verification can be performed for each commit pushed to a GitHub repository with Travis CI.
+To enable this feature, the GitHub repository must meet the following criteria:</p>
+<ol>
+<li>Contains an <code>rpm/&lt;REPO NAME&gt;.spec</code> file that describes the RPM</li>
+<li>Enabled in <a href="https://travis-ci.com/getting_started">Travis CI</a>.
+   Repositories that are part of the <code>opensciencegrid</code> GitHub organization require special permission to enable.
+   Consult Brian or Mat.</li>
+<li>Contains <code>.travis.yml</code> file with the following contents:<div class="codehilite"><pre><span></span><span class="nt">sudo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">required</span>
+<span class="nt">env</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">REPO_NAME=${TRAVIS_REPO_SLUG#*/}</span>
+
+<span class="nt">git</span><span class="p">:</span>
+  <span class="nt">depth</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="nt">quiet</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">services</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+
+<span class="nt">before_install</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">sudo apt-get update</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &#39;DOCKER_OPTS=&quot;-H tcp://127.0.0.1:2375 -H unix:///var/run/docker.sock -s devicemapper&quot;&#39; | sudo tee /etc/default/docker &gt; /dev/null</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">sudo service docker restart</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">sleep 5</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">sudo docker pull opensciencegrid/osg-build</span>
+
+<span class="nt">script</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker run -v $(pwd):/$REPO_NAME -e REPO_NAME=$REPO_NAME --cap-add=SYS_ADMIN opensciencegrid/osg-build build-from-github</span>
+</pre></div>
+
+
+</li>
+</ol>
 <h3 id="building-packages-for-multiple-osg-release-series">Building packages for multiple OSG release series<a class="headerlink" href="#building-packages-for-multiple-osg-release-series" title="Permanent link">&para;</a></h3>
 <p>The OSG Software team supports multiple release series, independent but in parallel to a large degree. In many cases, a single package is the same across release series, and therefore we want to build the package once and share it among the series. The procedure below suggests a way to accomplish this task.</p>
 <p>Current definitions:</p>
