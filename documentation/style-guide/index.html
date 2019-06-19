@@ -1517,9 +1517,26 @@ For example, if you're writing a doc for setting up a Storage Element and a comm
 Or if you're testing the SE from the client side and the command is run as a normal user on a client, use <code>user@client $</code>.</p>
 <h3 id="highlighting-user-input">Highlighting user input<a class="headerlink" href="#highlighting-user-input" title="Permanent link">&para;</a></h3>
 <p>Use descriptive, all-caps text wrapped in angle brackets to to highlight areas that users would have to insert text
-specific to their site. You may also use TWiki-style color highlighting. For example:</p>
-<div class="codehilite"><pre><span></span><span class="gp">root@host #</span> condor_ce_trace -d <span style="color:red">&lt;CE HOSTNAME&gt;</span>
+specific to their site, e.g. <code>&lt;REMOTE SSH HOSTNAME&gt;</code>.
+The same text should be cited verbatim in surrounding prose with further explanation with examples of appropriate values.
+For additional visual highlighting,
+use <a href="https://squidfunk.github.io/mkdocs-material/extensions/codehilite/#highlighting-specific-lines">hl_lines="N"</a>,
+where <code>N</code> can indicate multiple line numbers:</p>
+<div class="codehilite"><pre><span></span><span class="go">``` hl_lines=&quot;1 3&quot;</span>
+<span class="gp">root@condor-ce #</span> yum install htcondor-ce
+<span class="gp">#</span> this is a comment
+<span class="gp">root@condor-ce #</span> condor_ce_trace -d &lt;CE HOSTNAME&gt;
+<span class="go">````</span>
 </pre></div>
+
+
+<p>Similarly, you may also specify <code>:::console hl_lines="N"</code> for indented command blocks, replacing <code>console</code> with any
+language supported by <a href="http://pygments.org/languages/">Pygments</a>.
+The above block is rendered below:</p>
+<div class="codehilite"><pre><span></span><span class="hll"><span class="n">root</span><span class="nv">@condor</span><span class="o">-</span><span class="n">ce</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">htcondor</span><span class="o">-</span><span class="n">ce</span><span class="w"></span>
+</span><span class="err">#</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">comment</span><span class="w"></span>
+<span class="hll"><span class="n">root</span><span class="nv">@condor</span><span class="o">-</span><span class="n">ce</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">condor_ce_trace</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="o">&lt;</span><span class="n">CE</span><span class="w"> </span><span class="n">HOSTNAME</span><span class="o">&gt;</span><span class="w"></span>
+</span></pre></div>
 
 
 <h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h2>
