@@ -434,15 +434,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#git-repos" title="Git repos" class="md-nav__link">
-    Git repos
+  <a href="#github-repos" title="GitHub repos" class="md-nav__link">
+    GitHub repos
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#github-repos" title="GitHub repos" class="md-nav__link">
-    GitHub repos
+  <a href="#git-repos" title="Git repos" class="md-nav__link">
+    Git repos
   </a>
   
 </li>
@@ -1713,15 +1713,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#git-repos" title="Git repos" class="md-nav__link">
-    Git repos
+  <a href="#github-repos" title="GitHub repos" class="md-nav__link">
+    GitHub repos
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#github-repos" title="GitHub repos" class="md-nav__link">
-    GitHub repos
+  <a href="#git-repos" title="Git repos" class="md-nav__link">
+    Git repos
   </a>
   
 </li>
@@ -2182,70 +2182,6 @@ without the prefix component, followed by the sha1sum of the file:</p>
 
 
 </div>
-<h6 id="git-repos">Git repos<a class="headerlink" href="#git-repos" title="Permanent link">&para;</a></h6>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>OSG software policy requires that all Git and GitHub repos used for building software have mirrors at the UW.
-Many software repos under the <a href="https://github.com/opensciencegrid">opensciencegrid GitHub organization</a> are already mirrored.
-If you are uncertain, or have a new project that you want mirrored, send email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#115;&#103;&#45;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#111;&#115;&#103;&#45;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a>.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can use a shorter syntax for GitHub repos -- see below.</p>
-<p>See also <a href="#advanced-features-for-git-and-github-repos">advanced features for Git and GitHub repos</a>.</p>
-</div>
-<p>To reference tags in Git repos, use the following syntax (all on one line):</p>
-<blockquote>
-<p><code>type=git url=&lt;URL&gt; name=&lt;NAME&gt; tag=&lt;TAG&gt; hash=&lt;HASH&gt;</code></p>
-</blockquote>
-<p>where:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Symbol</th>
-<th align="left">Definition</th>
-<th align="left">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>&lt;URL&gt;</code></td>
-<td align="left">Location of the Git repo</td>
-<td align="left"><code>https://github.com/opensciencegrid/osg-build.git</code></td>
-</tr>
-<tr>
-<td align="left"><code>&lt;NAME&gt;</code></td>
-<td align="left">Name of the software (optional)</td>
-<td align="left"><code>osg-build</code></td>
-</tr>
-<tr>
-<td align="left"><code>&lt;TAG&gt;</code></td>
-<td align="left">Git tag to use</td>
-<td align="left"><code>v1.11.2</code></td>
-</tr>
-<tr>
-<td align="left"><code>&lt;HASH&gt;</code></td>
-<td align="left">Full 40-char Git hash of the tag</td>
-<td align="left"><code>5bcf48c442d21b1e8c93a468d884f84122f7cc9e</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>&lt;NAME&gt;</code> is optional; if not present, OSG-Build will use the last component of the URL, without the <code>.git</code> suffix.</p>
-<p>The tarball will be called <code>&lt;NAME&gt;-&lt;VERSION&gt;.tar.gz</code> where <code>&lt;VERSION&gt;</code> is <code>&lt;TAG&gt;</code> without the <code>v</code> prefix (if there is one).</p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>The reference file for <code>osg-build</code>'s repo is named <code>osg.github.source</code> and contains:</p>
-<div class="codehilite"><pre><span></span><span class="k">type</span><span class="o">=</span><span class="n">git</span> <span class="n">url</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">opensciencegrid</span><span class="o">/</span><span class="n">osg</span><span class="o">-</span><span class="n">build</span><span class="p">.</span><span class="n">git</span> <span class="n">name</span><span class="o">=</span><span class="n">osg</span><span class="o">-</span><span class="n">build</span> <span class="n">tag</span><span class="o">=</span><span class="n">v1</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">2</span> <span class="n">hash</span><span class="o">=</span><span class="mi">5</span><span class="n">bcf48c442d21b1e8c93a468d884f84122f7cc9e</span>
-</pre></div>
-
-
-<p>This results in a tarball named <code>osg-build-1.11.2.tar.gz</code>.</p>
-</div>
-<p>In addition, if the repository contains a file called <code>rpm/&lt;NAME&gt;.spec</code>, it will be used as the spec file for the build
-(unless overridden in the <code>osg</code> directory).</p>
 <h6 id="github-repos">GitHub repos<a class="headerlink" href="#github-repos" title="Permanent link">&para;</a></h6>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2307,6 +2243,70 @@ If you are uncertain, or have a new project that you want mirrored, send email t
 <p>This results in a tarball named <code>osg-build-1.12.2.tar.gz</code>.</p>
 </div>
 <p>In addition, if the repository contains a file called <code>rpm/&lt;PROJECT&gt;.spec</code>, it will be used as the spec file for the build
+(unless overridden in the <code>osg</code> directory).</p>
+<h6 id="git-repos">Git repos<a class="headerlink" href="#git-repos" title="Permanent link">&para;</a></h6>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>OSG software policy requires that all Git and GitHub repos used for building software have mirrors at the UW.
+Many software repos under the <a href="https://github.com/opensciencegrid">opensciencegrid GitHub organization</a> are already mirrored.
+If you are uncertain, or have a new project that you want mirrored, send email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#115;&#103;&#45;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#111;&#115;&#103;&#45;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use a shorter syntax for GitHub repos -- see above.</p>
+<p>See also <a href="#advanced-features-for-git-and-github-repos">advanced features for Git and GitHub repos</a>.</p>
+</div>
+<p>To reference tags in Git repos, use the following syntax (all on one line):</p>
+<blockquote>
+<p><code>type=git url=&lt;URL&gt; name=&lt;NAME&gt; tag=&lt;TAG&gt; hash=&lt;HASH&gt;</code></p>
+</blockquote>
+<p>where:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Symbol</th>
+<th align="left">Definition</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>&lt;URL&gt;</code></td>
+<td align="left">Location of the Git repo</td>
+<td align="left"><code>https://github.com/opensciencegrid/osg-build.git</code></td>
+</tr>
+<tr>
+<td align="left"><code>&lt;NAME&gt;</code></td>
+<td align="left">Name of the software (optional)</td>
+<td align="left"><code>osg-build</code></td>
+</tr>
+<tr>
+<td align="left"><code>&lt;TAG&gt;</code></td>
+<td align="left">Git tag to use</td>
+<td align="left"><code>v1.11.2</code></td>
+</tr>
+<tr>
+<td align="left"><code>&lt;HASH&gt;</code></td>
+<td align="left">Full 40-char Git hash of the tag</td>
+<td align="left"><code>5bcf48c442d21b1e8c93a468d884f84122f7cc9e</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>&lt;NAME&gt;</code> is optional; if not present, OSG-Build will use the last component of the URL, without the <code>.git</code> suffix.</p>
+<p>The tarball will be called <code>&lt;NAME&gt;-&lt;VERSION&gt;.tar.gz</code> where <code>&lt;VERSION&gt;</code> is <code>&lt;TAG&gt;</code> without the <code>v</code> prefix (if there is one).</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The reference file for <code>osg-build</code>'s repo is named <code>osg.github.source</code> and contains:</p>
+<div class="codehilite"><pre><span></span><span class="k">type</span><span class="o">=</span><span class="n">git</span> <span class="n">url</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">opensciencegrid</span><span class="o">/</span><span class="n">osg</span><span class="o">-</span><span class="n">build</span><span class="p">.</span><span class="n">git</span> <span class="n">name</span><span class="o">=</span><span class="n">osg</span><span class="o">-</span><span class="n">build</span> <span class="n">tag</span><span class="o">=</span><span class="n">v1</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">2</span> <span class="n">hash</span><span class="o">=</span><span class="mi">5</span><span class="n">bcf48c442d21b1e8c93a468d884f84122f7cc9e</span>
+</pre></div>
+
+
+<p>This results in a tarball named <code>osg-build-1.11.2.tar.gz</code>.</p>
+</div>
+<p>In addition, if the repository contains a file called <code>rpm/&lt;NAME&gt;.spec</code>, it will be used as the spec file for the build
 (unless overridden in the <code>osg</code> directory).</p>
 <h5 id="typical-workflow-when-building-out-of-github-repos">Typical workflow when building out of GitHub repos<a class="headerlink" href="#typical-workflow-when-building-out-of-github-repos" title="Permanent link">&para;</a></h5>
 <ol>
