@@ -1556,13 +1556,14 @@
                 
                 <h1 id="osg-technology-area-meeting-8-july-2019">OSG Technology Area Meeting,  8 July 2019<a class="headerlink" href="#osg-technology-area-meeting-8-july-2019" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: 719-284-5267, PIN: 57363; <a href="https://www.uberconference.com/osgblin">https://www.uberconference.com/osgblin</a><br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>OSG User School next week (July 15-19)</li>
 <li>BrianL OOO Friday afternoon</li>
 <li>TimT OOO July 11-15</li>
 <li>Mat OOO July 15-17</li>
+<li>Canceling next week's meeting; next meeting July 22</li>
 </ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1615,16 +1616,20 @@
 <li>Next doc focus July 25 (1:30-5:30pm CDT)</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>Make OS version support lnaguage stronger; add warnings to XRootD/CVMFS about not supporting &lt; 7.5</li>
+<li>Marco Mambelli will contact Marco Mascheroni to update the CERN GlideinWMS factory to OSG 3.5 for acceptance testing</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Marian working on Brown xrootd issue (AAA CMS problems); still in progress</li>
-<li>Edgar looking into xrootd with MIT issue (xrootd doesn't start due to 'missing' library issue.  Edgar unable to reproduce</li>
-<li>GGUS ticket w/ Doug Johnson about using Let's Encrypt  <ul>
+<li>Brown (Marian): working on XRootD issue (AAA CMS problems); still in progress</li>
+<li>MIT (Carl, Edgar): XRootD LCMAPS issue solved by updating from CentOS 7.3 -&gt; 7.5</li>
+<li>GGUS ticket w/ Doug Johnson about using Let's Encrypt<ul>
 <li>problems with using LVS</li>
 <li>need doc improvements</li>
 </ul>
 </li>
+<li>UCSD (Edgar): Setting up a Comet CE to also serve CMS in addition to LIGO/IceCube</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
@@ -1694,7 +1699,8 @@
 </li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<p>We would like to get HTCondor 8.8 into mainline but the default auth removes <code>DAEMON_LIST</code> so it could break current
+installations of HTCondor</p>
 <h2 id="osg-investigations-team">OSG Investigations Team<a class="headerlink" href="#osg-investigations-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>DONE: Adapting LIGO style cvmfs + singularity. Deployed and working.  <ul>
