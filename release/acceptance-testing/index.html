@@ -1773,7 +1773,7 @@
 <ol>
 <li>
 <p>Disable SELinux by setting the following in <code>/etc/selinux/config</code>.</p>
-<div class="codehilite"><pre><span></span><span class="n">SELINUX</span><span class="o">=</span><span class="n">disabled</span>
+<div class="codehilite"><pre><span></span>SELINUX=disabled
 </pre></div>
 
 
@@ -1797,7 +1797,7 @@
 </li>
 <li>
 <p>Select updated kernel by editing <code>/etc/default/grub</code>.</p>
-<div class="codehilite"><pre><span></span><span class="n">GRUB_DEFAULT</span><span class="o">=</span><span class="mi">0</span>
+<div class="codehilite"><pre><span></span>GRUB_DEFAULT=0
 </pre></div>
 
 
@@ -1831,8 +1831,8 @@
 </li>
 <li>
 <p>Configure web server and start it up. Edit <code>/etc/httpd/conf.d/cvmfs.conf</code>:</p>
-<div class="codehilite"><pre><span></span><span class="k">Listen</span> <span class="mi">8000</span>
-<span class="n">KeepAlive</span> <span class="k">On</span>
+<div class="codehilite"><pre><span></span>Listen 8000
+KeepAlive On
 </pre></div>
 
 
@@ -1925,14 +1925,14 @@
 </li>
 <li>
 <p>Edit fuse configuration <code>/etc/fuse.conf</code>.</p>
-<div class="codehilite"><pre><span></span><span class="n">user_allow_other</span>
+<div class="codehilite"><pre><span></span>user_allow_other
 </pre></div>
 
 
 </li>
 <li>
 <p>Edit autofs configuration and restart service <code>/etc/auto.master</code>.</p>
-<div class="codehilite"><pre><span></span><span class="o">/</span><span class="n">cvmfs</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">auto</span><span class="p">.</span><span class="n">cvmfs</span>
+<div class="codehilite"><pre><span></span>/cvmfs /etc/auto.cvmfs
 </pre></div>
 
 
@@ -1944,9 +1944,9 @@
 </li>
 <li>
 <p>Edit cvmfs configuration (<code>/etc/cvmfs/default.local</code>) to point to replica server.</p>
-<div class="codehilite"><pre><span></span><span class="n">CVMFS_SERVER_URL</span><span class="o">=</span><span class="s">&quot;http://10.128.3.97:8000/cvmfs/@fqrn@&quot;</span>
-<span class="n">CVMFS_REPOSITORIES</span><span class="o">=</span><span class="s">&quot;test.cvmfs-stratum-0.novalocal&quot;</span>
-<span class="n">CVMFS_HTTP_PROXY</span><span class="o">=</span><span class="n">DIRECT</span>
+<div class="codehilite"><pre><span></span>CVMFS_SERVER_URL=&quot;http://10.128.3.97:8000/cvmfs/@fqrn@&quot;
+CVMFS_REPOSITORIES=&quot;test.cvmfs-stratum-0.novalocal&quot;
+CVMFS_HTTP_PROXY=DIRECT
 </pre></div>
 
 
@@ -2112,7 +2112,7 @@ You will have to test that part locally.</p>
 <li>Install <code>htcondor-ce-collector</code></li>
 <li>
 <p>Create a file called <code>/etc/condor-ce/config.d/99-local.conf</code> that contains this line:<pre class='file'></p>
-<div class="codehilite"><pre><span></span><span class="n">COLLECTOR</span><span class="p">.</span><span class="n">ALLOW_ADVERTISE_SCHEDD</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="n">COLLECTOR</span><span class="p">.</span><span class="n">ALLOW_ADVERTISE_SCHEDD</span><span class="p">),</span> <span class="n">your_htcondor_ce_host</span><span class="p">.</span><span class="n">example</span><span class="p">.</span><span class="n">net</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span>COLLECTOR.ALLOW_ADVERTISE_SCHEDD = $(COLLECTOR.ALLOW_ADVERTISE_SCHEDD), your_htcondor_ce_host.example.net&lt;/pre&gt;
 </pre></div>
 
 
@@ -2208,18 +2208,18 @@ You will have to test that part locally.</p>
 <ol>
 <li>
 <p>Download scripts and config files: </p>
-<div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">sthapa</span><span class="o">/</span><span class="n">utilities</span><span class="p">.</span><span class="n">git</span><span class="o">&gt;</span>
-<span class="n">cd</span> <span class="n">utilities</span><span class="o">/</span><span class="n">slurm</span>
+<div class="codehilite"><pre><span></span>cd /tmp/
+git clone &lt;https://github.com/sthapa/utilities.git&gt;
+cd utilities/slurm
 </pre></div>
 
 
 </li>
 <li>
 <p>setup and install slurm components</p>
-<div class="codehilite"><pre><span></span><span class="n">export</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;USERNAME&#39;</span> <span class="err">\</span><span class="o">#</span> <span class="k">user</span> <span class="n">that</span> <span class="n">jobs</span> <span class="n">will</span> <span class="n">run</span> <span class="k">as</span>
-<span class="n">export</span> <span class="k">version</span><span class="o">=</span><span class="s1">&#39;14.11.7&#39;</span> <span class="err">\</span><span class="o">#</span> <span class="n">slurm</span> <span class="k">version</span> <span class="k">to</span> <span class="n">install</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="k">g</span><span class="p">.</span> <span class="mi">16</span><span class="p">.</span><span class="mi">05</span><span class="p">.</span><span class="mi">2</span> <span class="k">or</span> <span class="mi">14</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">7</span><span class="p">)</span>
-<span class="p">.</span><span class="o">/</span><span class="n">slurm</span><span class="o">-</span><span class="n">setup</span><span class="p">.</span><span class="n">sh</span>
+<div class="codehilite"><pre><span></span>export username=&#39;USERNAME&#39; \# user that jobs will run as
+export version=&#39;14.11.7&#39; \# slurm version to install (e.g. 16.05.2 or 14.11.7)
+./slurm-setup.sh
 </pre></div>
 
 
@@ -2232,8 +2232,8 @@ You will have to test that part locally.</p>
 <ol>
 <li>
 <p>Generate test.sh with the following:</p>
-<div class="codehilite"><pre><span></span><span class="c1">#/bin/bash</span>
-<span class="n">echo</span> <span class="s2">&quot;In the directory: `pwd`&quot;</span> <span class="n">echo</span> <span class="s2">&quot;As the user: `whoami`&quot;</span> <span class="n">echo</span> <span class="err">“</span><span class="n">Hostname</span><span class="p">:</span><span class="err">&quot;</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">hostname</span> <span class="n">sleep</span> <span class="mi">60</span> <span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span>#/bin/bash
+echo &quot;In the directory: `pwd`&quot; echo &quot;As the user: `whoami`&quot; echo “Hostname:&quot; /bin/hostname sleep 60 &lt;/pre&gt;
 </pre></div>
 
 
@@ -2272,9 +2272,9 @@ VO without errors.</p>
 <li>vo-client</li>
 </ul>
 <p>In the xrootd server add this lines to file <code>/etc/xrootd/xrootd-clustered.cfg</code></p>
-<div class="codehilite"><pre><span></span><span class="n">xrootd</span><span class="p">.</span><span class="n">seclib</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libXrdSec</span><span class="p">.</span><span class="n">so</span>
-<span class="n">sec</span><span class="p">.</span><span class="n">protparm</span> <span class="n">gsi</span> <span class="o">-</span><span class="n">vomsfun</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libXrdSecgsiVOMS</span><span class="p">.</span><span class="n">so</span> <span class="o">-</span><span class="n">vomsfunparms</span><span class="p">:</span><span class="n">certfmt</span><span class="o">=</span><span class="n">raw</span><span class="o">|</span><span class="n">vos</span><span class="o">=</span><span class="n">cms</span><span class="o">|</span><span class="n">dbg</span> <span class="o">-</span><span class="n">vomsat</span><span class="p">:</span><span class="mi">2</span>
-<span class="n">sec</span><span class="p">.</span><span class="n">protocol</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span> <span class="n">gsi</span> <span class="o">-</span><span class="n">ca</span><span class="p">:</span><span class="mi">1</span> <span class="o">-</span><span class="n">crl</span><span class="p">:</span><span class="mi">3</span>
+<div class="codehilite"><pre><span></span>xrootd.seclib /usr/lib64/libXrdSec.so
+sec.protparm gsi -vomsfun:/usr/lib64/libXrdSecgsiVOMS.so -vomsfunparms:certfmt=raw|vos=cms|dbg -vomsat:2
+sec.protocol /usr/lib64 gsi -ca:1 -crl:3
 </pre></div>
 
 
@@ -2309,57 +2309,57 @@ VO without errors.</p>
 <h2 id="hdfs">HDFS<a class="headerlink" href="#hdfs" title="Permanent link">&para;</a></h2>
 <h3 id="hadoop-name-node-installation">Hadoop name node installation<a class="headerlink" href="#hadoop-name-node-installation" title="Permanent link">&para;</a></h3>
 <p>Use the following script with option 1:</p>
-<div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="nb">set</span> -e
+<div class="codehilite"><pre><span></span>#!/bin/bash
+set -e
 
-<span class="k">select</span> NODETYPE in namenode datanode gridftp<span class="p">;</span> <span class="k">do</span>
-  <span class="o">[[</span> <span class="nv">$NODETYPE</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">break</span>
-<span class="k">done</span>
-<span class="k">case</span> <span class="nv">$NODETYPE</span> in
-  namenode <span class="o">)</span> <span class="nv">NAMENODE</span><span class="o">=</span><span class="nv">$HOSTNAME</span> <span class="p">;;</span>
-         * <span class="o">)</span> <span class="nb">read</span> -p <span class="s1">&#39;hostname for NAMENODE? &#39;</span> NAMENODE <span class="p">;;</span>
-<span class="k">esac</span>
-<span class="nb">echo</span> <span class="nv">NODETYPE</span><span class="o">=</span><span class="nv">$NODETYPE</span>
-<span class="nb">echo</span> <span class="nv">NAMENODE</span><span class="o">=</span><span class="nv">$NAMENODE</span>
-<span class="nb">read</span> -p <span class="s1">&#39;ok? [y/N] &#39;</span> ok
-<span class="k">case</span> <span class="nv">$ok</span> in
-  y*<span class="p">|</span>Y*<span class="o">)</span> <span class="p">;;</span>  <span class="c1"># ok</span>
-      *<span class="o">)</span> <span class="nb">exit</span> <span class="p">;;</span>
-<span class="k">esac</span>
-<span class="c1">#yum install --enablerepo=osg-minefield osg-se-hadoop-$NODETYPE</span>
-yum install osg-se-hadoop-<span class="nv">$NODETYPE</span>
-<span class="k">case</span> <span class="nv">$NODETYPE</span> in
-  namenode<span class="p">|</span>datanode <span class="o">)</span>
-    mkdir -p /data/<span class="o">{</span>hadoop,scratch,checkpoint<span class="o">}</span>
+select NODETYPE in namenode datanode gridftp; do
+  [[ $NODETYPE ]] &amp;&amp; break
+done
+case $NODETYPE in
+  namenode ) NAMENODE=$HOSTNAME ;;
+         * ) read -p &#39;hostname for NAMENODE? &#39; NAMENODE ;;
+esac
+echo NODETYPE=$NODETYPE
+echo NAMENODE=$NAMENODE
+read -p &#39;ok? [y/N] &#39; ok
+case $ok in
+  y*|Y*) ;;  # ok
+      *) exit ;;
+esac
+#yum install --enablerepo=osg-minefield osg-se-hadoop-$NODETYPE
+yum install osg-se-hadoop-$NODETYPE
+case $NODETYPE in
+  namenode|datanode )
+    mkdir -p /data/{hadoop,scratch,checkpoint}
     chown -R hdfs:hdfs /data
-    sed -i s/NAMENODE/<span class="nv">$NAMENODE</span>/ /etc/hadoop/conf.osg/<span class="o">{</span>core,hdfs<span class="o">}</span>-site.xml
-    cp /etc/hadoop/conf.osg/<span class="o">{</span>core,hdfs<span class="o">}</span>-site.xml /etc/hadoop/conf/
+    sed -i s/NAMENODE/$NAMENODE/ /etc/hadoop/conf.osg/{core,hdfs}-site.xml
+    cp /etc/hadoop/conf.osg/{core,hdfs}-site.xml /etc/hadoop/conf/
     touch /etc/hosts_exclude
-    <span class="p">;;</span>
-  gridftp <span class="o">)</span>
+    ;;
+  gridftp )
     ln -snf conf.osg /etc/hadoop/conf
-    sed -i s/NAMENODE/<span class="nv">$NAMENODE</span>/ /etc/hadoop/conf.osg/<span class="o">{</span>core,hdfs<span class="o">}</span>-site.xml
-    <span class="nb">echo</span> <span class="s2">&quot;hadoop-fuse-dfs# /mnt/hadoop fuse server=</span><span class="nv">$NAMENODE</span><span class="s2">,port=9000,rdbuffer=131072,allow_other 0 0&quot;</span> &gt;&gt; /etc/fstab
+    sed -i s/NAMENODE/$NAMENODE/ /etc/hadoop/conf.osg/{core,hdfs}-site.xml
+    echo &quot;hadoop-fuse-dfs# /mnt/hadoop fuse server=$NAMENODE,port=9000,rdbuffer=131072,allow_other 0 0&quot; &gt;&gt; /etc/fstab
     mkdir /mnt/hadoop
     mount /mnt/hadoop
     cp -v /etc/redhat-release /mnt/hadoop/test-file
-    sed -i <span class="s1">&#39;/globus_mapping/s/^# *//&#39;</span> /etc/grid-security/gsi-authz.conf
+    sed -i &#39;/globus_mapping/s/^# *//&#39; /etc/grid-security/gsi-authz.conf
     sed -i s/yourgums.yourdomain/gums.fnal.gov/ /etc/lcmaps.db
     mkdir /mnt/hadoop/fnalgrid
     useradd fnalgrid -g fnalgrid
     chown fnalgrid:fnalgrid /mnt/hadoop/fnalgrid
     service globus-gridftp-server start
-    <span class="k">if</span> <span class="nb">type</span> -t globus-url-copy &gt;/dev/null<span class="p">;</span> <span class="k">then</span>
-      globus-url-copy file:////bin/bash  gsiftp://<span class="nv">$HOSTNAME</span>/mnt/hadoop/fnalgrid/first_test
-    <span class="k">else</span>
-      <span class="nb">echo</span> globus-url-copy not installed
-    <span class="k">fi</span>
-    <span class="p">;;</span>
-<span class="k">esac</span>
-<span class="k">case</span> <span class="nv">$NODETYPE</span> in
-  namenode <span class="o">)</span> su - hdfs -c <span class="s2">&quot;hadoop namenode -format&quot;</span> <span class="p">;;</span>
-<span class="k">esac</span>
-service hadoop-hdfs-<span class="nv">$NODETYPE</span> start
+    if type -t globus-url-copy &gt;/dev/null; then
+      globus-url-copy file:////bin/bash  gsiftp://$HOSTNAME/mnt/hadoop/fnalgrid/first_test
+    else
+      echo globus-url-copy not installed
+    fi
+    ;;
+esac
+case $NODETYPE in
+  namenode ) su - hdfs -c &quot;hadoop namenode -format&quot; ;;
+esac
+service hadoop-hdfs-$NODETYPE start
 </pre></div>
 
 
@@ -2401,64 +2401,64 @@ service hadoop-hdfs-<span class="nv">$NODETYPE</span> start
 <ol>
 <li>
 <p>Install xrootd-server:</p>
-<div class="codehilite"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">xrootd</span><span class="o">-</span><span class="n">server</span>
+<div class="codehilite"><pre><span></span>yum install xrootd-server
 </pre></div>
 
 
 </li>
 <li>
 <p>Install xrootd-plugins</p>
-<div class="codehilite"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">xrootd</span><span class="o">-</span><span class="n">cmstfc</span> <span class="n">xrootd</span><span class="o">-</span><span class="n">hdfs</span>
+<div class="codehilite"><pre><span></span>yum install xrootd-cmstfc xrootd-hdfs
 </pre></div>
 
 
 </li>
 </ol>
 <p>Modify the file <code>/etc/xrootd/xrootd-clustered.cfg</code> to look like this:</p>
-<div class="codehilite"><pre><span></span><span class="nv">xrd</span>.<span class="nv">port</span> <span class="mi">1094</span>
+<div class="codehilite"><pre><span></span>xrd.port 1094
 
-# <span class="nv">The</span> <span class="nv">roles</span> <span class="nv">this</span> <span class="nv">server</span> <span class="nv">will</span> <span class="nv">play</span>.                                                                                            
-<span class="nv">all</span>.<span class="nv">role</span> <span class="nv">server</span>
-<span class="nv">all</span>.<span class="nv">role</span> <span class="nv">manager</span> <span class="k">if</span> <span class="nv">xrootd</span>.<span class="nv">unl</span>.<span class="nv">edu</span>
-# <span class="nv">The</span> <span class="nv">known</span> <span class="nv">managers</span>                                                                                                          
-<span class="nv">all</span>.<span class="nv">manager</span> <span class="nv">srm</span>.<span class="nv">unl</span>.<span class="nv">edu</span>:<span class="mi">1213</span>
-#<span class="nv">all</span>.<span class="nv">manager</span> <span class="nv">xrootd</span>.<span class="nv">ultralight</span>.<span class="nv">org</span>:<span class="mi">1213</span>                                                                                       
+# The roles this server will play.                                                                                            
+all.role server
+all.role manager if xrootd.unl.edu
+# The known managers                                                                                                          
+all.manager srm.unl.edu:1213
+#all.manager xrootd.ultralight.org:1213                                                                                       
 
-# <span class="nv">Allow</span> <span class="nv">any</span> <span class="nv">path</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">exported</span><span class="c1">; this is further refined in the authfile.                                                     </span>
-<span class="nv">all</span>.<span class="nv">export</span> <span class="o">/</span> <span class="nv">nostage</span>
+# Allow any path to be exported; this is further refined in the authfile.                                                     
+all.export / nostage
 
-# <span class="nv">Hosts</span> <span class="nv">allowed</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">this</span> <span class="nv">xrootd</span> <span class="nv">cluster</span>                                                                                    
-<span class="nv">cms</span>.<span class="nv">allow</span> <span class="nv">host</span> <span class="o">*</span>
+# Hosts allowed to use this xrootd cluster                                                                                    
+cms.allow host *
 
-### <span class="nv">Standard</span> <span class="nv">directives</span>                                                                                                       
-# <span class="nv">Simple</span> <span class="nv">sites</span> <span class="nv">probably</span> <span class="nv">don</span><span class="s1">&#39;</span><span class="s">t need to touch these.                                                                            </span>
-# <span class="nv">Logging</span> <span class="nv">verbosity</span>                                                                                                           
-<span class="nv">xrootd</span>.<span class="nv">trace</span> <span class="nv">all</span> <span class="o">-</span><span class="nv">debug</span>
-<span class="nv">ofs</span>.<span class="nv">trace</span> <span class="nv">all</span> <span class="o">-</span><span class="nv">debug</span>
-<span class="nv">xrd</span>.<span class="nv">trace</span> <span class="nv">all</span> <span class="o">-</span><span class="nv">debug</span>
-<span class="nv">cms</span>.<span class="nv">trace</span> <span class="nv">all</span> <span class="o">-</span><span class="nv">debug</span>
+### Standard directives                                                                                                       
+# Simple sites probably don&#39;t need to touch these.                                                                            
+# Logging verbosity                                                                                                           
+xrootd.trace all -debug
+ofs.trace all -debug
+xrd.trace all -debug
+cms.trace all -debug
 
-# <span class="nv">Integrate</span> <span class="nv">with</span> <span class="nv">CMS</span> <span class="nv">TFC</span>, <span class="nv">placed</span> <span class="nv">in</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">storage</span>.<span class="nv">xml</span>                                                                          
-<span class="nv">oss</span>.<span class="nv">namelib</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib64</span><span class="o">/</span><span class="nv">libXrdCmsTfc</span>.<span class="nv">so</span> <span class="nv">file</span>:<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">xrootd</span><span class="o">/</span><span class="nv">storage</span>.<span class="nv">xml</span>?<span class="nv">protocol</span><span class="o">=</span><span class="nv">hadoop</span>
+# Integrate with CMS TFC, placed in /etc/storage.xml                                                                          
+oss.namelib /usr/lib64/libXrdCmsTfc.so file:/etc/xrootd/storage.xml?protocol=hadoop
 
-<span class="nv">xrootd</span>.<span class="nv">seclib</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib64</span><span class="o">/</span><span class="nv">libXrdSec</span>.<span class="nv">so</span>
-<span class="nv">xrootd</span>.<span class="nv">fslib</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib64</span><span class="o">/</span><span class="nv">libXrdOfs</span>.<span class="nv">so</span>
-<span class="nv">ofs</span>.<span class="nv">osslib</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib64</span><span class="o">/</span><span class="nv">libXrdHdfs</span>.<span class="nv">so</span>
-<span class="nv">all</span>.<span class="nv">adminpath</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">run</span><span class="o">/</span><span class="nv">xrootd</span>
-<span class="nv">all</span>.<span class="nv">pidpath</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">run</span><span class="o">/</span><span class="nv">xrootd</span>
+xrootd.seclib /usr/lib64/libXrdSec.so
+xrootd.fslib /usr/lib64/libXrdOfs.so
+ofs.osslib /usr/lib64/libXrdHdfs.so
+all.adminpath /var/run/xrootd
+all.pidpath /var/run/xrootd
 
-<span class="nv">cms</span>.<span class="nv">delay</span> <span class="nv">startup</span> <span class="mi">10</span>
-<span class="nv">cms</span>.<span class="nv">fxhold</span> <span class="mi">60</span><span class="nv">s</span>
-<span class="nv">cms</span>.<span class="nv">perf</span> <span class="nv">int</span> <span class="mi">30</span><span class="nv">s</span> <span class="nv">pgm</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">XrdOlbMonPerf</span> <span class="mi">30</span>
+cms.delay startup 10
+cms.fxhold 60s
+cms.perf int 30s pgm /usr/bin/XrdOlbMonPerf 30
 
-<span class="nv">oss</span>.<span class="nv">space</span> <span class="nv">default_stage</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">xrootd_cache</span>
+oss.space default_stage /opt/xrootd_cache
 </pre></div>
 
 
 <p>Create file <code>/etc/xrootd/storage.xml</code> and place this:</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;storage-mapping&gt;</span>
-<span class="nt">&lt;lfn-to-pfn</span> <span class="na">protocol=</span><span class="s">&quot;hadoop&quot;</span> <span class="na">destination-match=</span><span class="s">&quot;.*&quot;</span> <span class="na">path-match=</span><span class="s">&quot;.*/+tmp2/test-file&quot;</span> <span class="na">result=</span><span class="s">&quot;/test-file&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/storage-mapping&gt;</span>
+<div class="codehilite"><pre><span></span>&lt;storage-mapping&gt;
+&lt;lfn-to-pfn protocol=&quot;hadoop&quot; destination-match=&quot;.*&quot; path-match=&quot;.*/+tmp2/test-file&quot; result=&quot;/test-file&quot;/&gt;
+&lt;/storage-mapping&gt;
 </pre></div>
 
 

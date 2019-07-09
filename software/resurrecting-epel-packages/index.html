@@ -1511,9 +1511,9 @@
 <li>
 <p>Check the Tasks tab in Koji to see if kojira has started regening the repos -- it might take a few minutes to kick in.</p>
 <p>If it doesn't, do it manually (if you're doing multiple packages, save this step until you're done with all of them):</p>
-<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nv">repo</span> <span class="nv">in</span> <span class="nv">osg</span><span class="o">-</span>{<span class="mi">3</span>.<span class="mi">1</span>,<span class="mi">3</span>.<span class="mi">2</span>,<span class="mi">3</span>.<span class="mi">3</span>,<span class="nv">upcoming</span>}<span class="o">-</span><span class="nv">el5</span><span class="o">-</span>{<span class="nv">build</span>,<span class="nv">development</span>,<span class="nv">testing</span>,<span class="nv">release</span>,<span class="nv">prerelease</span>,<span class="nv">release</span><span class="o">-</span><span class="nv">build</span>}<span class="c1">; do</span>
-   <span class="nv">osg</span><span class="o">-</span><span class="nv">koji</span> <span class="nv">regen</span><span class="o">-</span><span class="nv">repo</span> <span class="o">--</span><span class="nv">nowait</span> $<span class="nv">repo</span>
-<span class="nv">done</span>
+<div class="codehilite"><pre><span></span>for repo in osg-{3.1,3.2,3.3,upcoming}-el5-{build,development,testing,release,prerelease,release-build}; do
+   osg-koji regen-repo --nowait $repo
+done
 </pre></div>
 
 
@@ -1604,15 +1604,15 @@
 <h3 id="finding-out-if-a-package-is-still-needed-in-epelrescue">Finding out if a package is still needed in epelrescue<a class="headerlink" href="#finding-out-if-a-package-is-still-needed-in-epelrescue" title="Permanent link">&para;</a></h3>
 <p>Set <code>$pkg</code> to the name of a package to test (e.g. <code>python-six</code>), and <code>$rhel</code> set to the RHEL version you're testing for (e.g. <code>5</code>, <code>6</code>, or <code>7</code>).</p>
 <p>Using Carl's <code>centos-srpms</code>, <code>scientific-srpms</code>, <code>slf-srpms</code> scripts:</p>
-<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nv">script</span> <span class="nv">in</span> <span class="nv">centos</span><span class="o">-</span><span class="nv">srpms</span> <span class="nv">scientific</span><span class="o">-</span><span class="nv">srpms</span> <span class="nv">slf</span><span class="o">-</span><span class="nv">srpms</span><span class="c1">; do</span>
-       <span class="nv">echo</span> <span class="o">-</span><span class="nv">n</span> $<span class="nv">script</span> <span class="s2">&quot;</span><span class="s">: </span><span class="s2">&quot;</span>
-       $<span class="nv">script</span> <span class="o">-</span>$<span class="nv">rhel</span> $<span class="nv">pkg</span> <span class="o">|</span> <span class="nv">grep</span> . <span class="o">||</span> <span class="nv">echo</span> <span class="nv">none</span>
-<span class="nv">done</span>
+<div class="codehilite"><pre><span></span>for script in centos-srpms scientific-srpms slf-srpms; do
+       echo -n $script &quot;: &quot;
+       $script -$rhel $pkg | grep . || echo none
+done
 </pre></div>
 
 
 <p>A dry run of removing the package:</p>
-<div class="codehilite"><pre><span></span><span class="n">osg</span><span class="o">-</span><span class="n">koji</span> <span class="n">untag</span><span class="o">-</span><span class="n">pkg</span> <span class="o">-</span><span class="n">n</span> <span class="c1">--all epelrescue-el$rhel $pkg</span>
+<div class="codehilite"><pre><span></span>osg-koji untag-pkg -n --all epelrescue-el$rhel $pkg
 </pre></div>
 
 

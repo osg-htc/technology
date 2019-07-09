@@ -1868,23 +1868,23 @@
 </li>
 <li>
 <p>Submit a pull request containing with the following body:</p>
-<div class="codehilite"><pre><span></span><span class="c"><span style="color:red">&lt;LINK TO TWIKI DOCUMENT&gt;</span></span>
+<div class="codehilite"><pre><span></span><span style="color:red">&lt;LINK TO TWIKI DOCUMENT&gt;</span>
 
-<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">Enter</span> <span class="n">date</span> <span class="n">into</span> &quot;<span class="n">Migrated</span>&quot; <span class="n">column</span> <span class="n">of</span> <span class="n">google</span> <span class="n">sheet</span>
+- [ ] Enter date into &quot;Migrated&quot; column of google sheet
 </pre></div>
 
 
 <ul>
 <li>
 <p>If you are migrating a document, also add this task:</p>
-<div class="codehilite"><pre><span></span><span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="k">Add</span> <span class="n">migration</span> <span class="n">header</span> <span class="k">to</span> <span class="n">TWiki</span> <span class="n">document</span>
+<div class="codehilite"><pre><span></span>- [ ] Add migration header to TWiki document
 </pre></div>
 
 
 </li>
 <li>
 <p>If you are archiving a document, add this task:</p>
-<div class="codehilite"><pre><span></span><span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="k">Move</span> <span class="n">TWiki</span> <span class="n">document</span> <span class="k">to</span> <span class="n">the</span> <span class="n">trash</span>
+<div class="codehilite"><pre><span></span>- [ ] Move TWiki document to the trash
 </pre></div>
 
 
@@ -1895,22 +1895,22 @@
 <p>See an example pull request <a href="https://github.com/opensciencegrid/technology/pull/98">here</a>.</p>
 <h2 id="after-the-pull-request">After the pull request<a class="headerlink" href="#after-the-pull-request" title="Permanent link">&para;</a></h2>
 <p>After the pull request is merged, replace the contents of TWiki document with the div if you're migrating the document, linking to the location of the migrated document:</p>
-<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nv">div</span> <span class="nv">style</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">border: 1px solid black; margin: 1em 0; padding: 1em; background-color: #FFDDDD; font-weight: 600;</span><span class="s2">&quot;</span><span class="o">&gt;</span>
-<span class="nv">This</span> <span class="nv">document</span> <span class="nv">has</span> <span class="nv">been</span> <span class="nv">migrated</span> <span class="nv">to</span> <span class="o">!</span><span class="nv">GitHub</span> <span class="ss">(</span><span class="o">&lt;</span><span class="nv">LINK</span> <span class="nv">TO</span> <span class="nv">GITHUB</span> <span class="nv">DOCUMENT</span><span class="o">&gt;</span><span class="ss">)</span>. <span class="k">If</span> <span class="nv">you</span> <span class="nv">wish</span> <span class="nv">to</span> <span class="nv">see</span> <span class="nv">the</span> <span class="nv">old</span> <span class="nv">TWiki</span> <span class="nv">document</span>, <span class="nv">use</span> <span class="nv">the</span> <span class="nv">TWiki</span> <span class="nv">history</span> <span class="nv">below</span>.
+<div class="codehilite"><pre><span></span>&lt;div style=&quot;border: 1px solid black; margin: 1em 0; padding: 1em; background-color: #FFDDDD; font-weight: 600;&quot;&gt;
+This document has been migrated to !GitHub (&lt;LINK TO GITHUB DOCUMENT&gt;). If you wish to see the old TWiki document, use the TWiki history below.
 
-<span class="nv">Background</span>:
+Background:
 
-<span class="nv">At</span> <span class="nv">the</span> <span class="k">end</span> <span class="nv">of</span> <span class="nv">year</span> <span class="ss">(</span><span class="mi">2017</span><span class="ss">)</span>, <span class="nv">the</span> <span class="nv">TWiki</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">retired</span> <span class="nv">in</span> <span class="nv">favor</span> <span class="nv">of</span> <span class="o">!</span><span class="nv">GitHub</span>. <span class="nv">You</span> <span class="nv">can</span> <span class="nv">find</span> <span class="nv">the</span> <span class="nv">various</span> <span class="nv">TWiki</span> <span class="nv">webs</span> <span class="nv">and</span> <span class="nv">their</span> <span class="nv">new</span> <span class="o">!</span><span class="nv">GitHub</span> <span class="nv">locations</span> <span class="nv">listed</span> <span class="nv">below</span>:
+At the end of year (2017), the TWiki will be retired in favor of !GitHub. You can find the various TWiki webs and their new !GitHub locations listed below:
 
-   <span class="o">*</span> <span class="nv">Release3</span>: <span class="nv">https</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">opensciencegrid</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">docs</span> <span class="ss">(</span>[[<span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">opensciencegrid</span><span class="o">/</span><span class="nv">docs</span><span class="o">/</span><span class="nv">tree</span><span class="o">/</span><span class="nv">master</span><span class="o">/</span><span class="nv">archive</span>][<span class="nv">archive</span>]]<span class="ss">)</span>
-   <span class="o">*</span> <span class="o">!</span><span class="nv">SoftwareTeam</span>: <span class="nv">https</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">opensciencegrid</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">technology</span> <span class="ss">(</span>[[<span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">opensciencegrid</span><span class="o">/</span><span class="nv">technology</span><span class="o">/</span><span class="nv">tree</span><span class="o">/</span><span class="nv">master</span><span class="o">/</span><span class="nv">archive</span>][<span class="nv">archive</span>]]<span class="ss">)</span>
-<span class="o">&lt;/</span><span class="nv">div</span><span class="o">&gt;</span>
+   * Release3: https://www.opensciencegrid.org/docs ([[https://github.com/opensciencegrid/docs/tree/master/archive][archive]])
+   * !SoftwareTeam: https://www.opensciencegrid.org/technology ([[https://github.com/opensciencegrid/technology/tree/master/archive][archive]])
+&lt;/div&gt;
 </pre></div>
 
 
 <p>If you are archiving a document, move it to the trash instead. Once the document has been updated or trashed, add the date to the spreadsheet and go back to your pull request and mark your tasks as complete. For example, if you completed the migration of a document:</p>
-<div class="codehilite"><pre><span></span><span class="o">-</span><span class="w"> </span><span class="o">[</span><span class="n">X</span><span class="o">]</span><span class="w"> </span><span class="n">Enter</span><span class="w"> </span><span class="nc">date</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="ss">&quot;Migrated&quot;</span><span class="w"> </span><span class="k">column</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">google</span><span class="w"> </span><span class="n">sheet</span><span class="w"></span>
-<span class="o">-</span><span class="w"> </span><span class="o">[</span><span class="n">X</span><span class="o">]</span><span class="w"> </span><span class="k">Add</span><span class="w"> </span><span class="n">migration</span><span class="w"> </span><span class="n">div</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">TWiki</span><span class="w"> </span><span class="n">document</span><span class="w"></span>
+<div class="codehilite"><pre><span></span>- [X] Enter date into &quot;Migrated&quot; column of google sheet
+- [X] Add migration div to TWiki document
 </pre></div>
 
 

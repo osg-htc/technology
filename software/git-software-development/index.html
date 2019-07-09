@@ -1494,8 +1494,8 @@
 
 <h4 id="configuring-ssh-to-use-the-key-for-github">Configuring SSH to use the key for GitHub<a class="headerlink" href="#configuring-ssh-to-use-the-key-for-github" title="Permanent link">&para;</a></h4>
 <p>Make sure SSH uses the new key by default to access GitHub. Create or edit <code>~/.ssh/config</code> and append the following lines:</p>
-<div class="codehilite"><pre><span></span><span class="k">Host</span> <span class="n">github</span><span class="p">.</span><span class="n">com</span>
-<span class="n">IdentityFile</span> <span class="o">%</span><span class="n">RED</span><span class="o">%&lt;</span><span class="n">YOUR_HOME_DIR</span><span class="o">&gt;%</span><span class="n">ENDCOLOR</span><span class="o">%/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_github</span>
+<div class="codehilite"><pre><span></span>Host github.com
+IdentityFile <span style="color:red">&lt;YOUR_HOME_DIR&gt;</span>/.ssh/id_github
 </pre></div>
 
 

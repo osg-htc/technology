@@ -1675,27 +1675,27 @@ To enable this feature, the GitHub repository must meet the following criteria:<
 <h3 id="merging-changes-from-one-release-series-to-another">Merging changes from one release series to another<a class="headerlink" href="#merging-changes-from-one-release-series-to-another" title="Permanent link">&para;</a></h3>
 <p>These instructions assume that you are merging from <code>trunk</code> to <code>branches/osg-3.3</code>. They also assume that the current directory you are in is a checkout of <code>branches/osg-3.3</code>. I will use <code>$pkg</code> to refer to the name of your package.</p>
 <p>First, you will need the commit numbers for your changes:</p>
-<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">log</span> <span class="err">\</span><span class="o">^/</span><span class="n">native</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span><span class="n">trunk</span><span class="o">/</span><span class="err">$</span><span class="n">pkg</span> <span class="o">|</span> <span class="k">less</span>
+<div class="codehilite"><pre><span></span>svn log \^/native/redhat/trunk/$pkg | less
 </pre></div>
 
 
 <p>Write down the commits you want to merge.</p>
 <p>If you only have one commit, merge that commit with -c as follows:</p>
-<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">merge</span> <span class="o">-</span><span class="k">c</span> <span class="err">$</span><span class="n">commit_num</span> <span class="err">\</span><span class="o">^/</span><span class="n">native</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span><span class="n">trunk</span><span class="o">/</span><span class="err">$</span><span class="n">pkg</span> <span class="err">$</span><span class="n">pkg</span>
+<div class="codehilite"><pre><span></span>svn merge -c $commit_num \^/native/redhat/trunk/$pkg $pkg
 </pre></div>
 
 
 <p>Where <code>$commit_num</code> is the SVN revision number of that commit (e.g. 17000). Merging an individual change like this is referred to as "cherry-picking".</p>
 <p>If you have a range of commits and you wish to merge all commits within that range, then do the following:</p>
-<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">merge</span> <span class="o">-</span><span class="n">r</span> <span class="err">$</span><span class="n">start_num</span><span class="p">:</span><span class="err">$</span><span class="n">end_num</span> <span class="err">\</span><span class="o">^/</span><span class="n">native</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span><span class="n">trunk</span><span class="o">/</span><span class="err">$</span><span class="n">pkg</span> <span class="err">$</span><span class="n">pkg</span>
+<div class="codehilite"><pre><span></span>svn merge -r $start_num:$end_num \^/native/redhat/trunk/$pkg $pkg
 </pre></div>
 
 
 <p>Where <code>$start_num</code> is the SVN revision of the commit <em>BEFORE</em> your first commit, and <code>$end_num</code> is the SVN revision of your last commit in that range. <strong>Note:</strong> Be very careful when merging a range from trunk into the maintenance branch so that you do not introduce more changes to the maintenance branch than are necessary.</p>
 <p>If you have multiple commits but they are not contiguous (i.e. there are commits made by you or someone else in that range that you do not want to merge), you will need to cherry-pick each individual commit.</p>
-<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">merge</span> <span class="o">-</span><span class="k">c</span> <span class="err">$</span><span class="n">commit1</span> <span class="err">\</span><span class="o">^/</span><span class="n">native</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span><span class="n">trunk</span><span class="o">/</span><span class="err">$</span><span class="n">pkg</span> <span class="err">$</span><span class="n">pkg</span>
-<span class="n">svn</span> <span class="n">merge</span> <span class="o">-</span><span class="k">c</span> <span class="err">$</span><span class="n">commit2</span> <span class="err">\</span><span class="o">^/</span><span class="n">native</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span><span class="n">trunk</span><span class="o">/</span><span class="err">$</span><span class="n">pkg</span> <span class="err">$</span><span class="n">pkg</span>
-<span class="p">...</span>
+<div class="codehilite"><pre><span></span>svn merge -c $commit1 \^/native/redhat/trunk/$pkg $pkg
+svn merge -c $commit2 \^/native/redhat/trunk/$pkg $pkg
+...
 </pre></div>
 
 

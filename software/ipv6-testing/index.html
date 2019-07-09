@@ -1516,10 +1516,10 @@
 </li>
 <li>
 <p>Modify <code>/etc/sysconfig/network-scripts/ifcfg-eth0</code> and be sure these lines exist, and : </p>
-<div class="codehilite"><pre><span></span><span class="n">IPV6INIT</span><span class="o">=</span><span class="n">yes</span>
-<span class="n">IPV6_AUTOCONF</span><span class="o">=</span><span class="k">no</span>
-<span class="n">IPV6ADDR</span><span class="o">=</span><span class="ss">&quot;<span style="color:red">IPv6 address</span>&quot;</span>
-<span class="n">IPV6_DEFAULTGW</span><span class="o">=</span><span class="ss">&quot;The IPV6 Default Gateway&quot;</span>
+<div class="codehilite"><pre><span></span>IPV6INIT=yes
+IPV6_AUTOCONF=no
+IPV6ADDR=&quot;<span style="color:red">IPv6 address</span>&quot;
+IPV6_DEFAULTGW=&quot;The IPV6 Default Gateway&quot;
 </pre></div>
 
 
@@ -1565,8 +1565,8 @@
 <ol>
 <li>
 <p>Add your ssh_key to your machine and make sure <code>/etc/ssh/sshd_config</code> has the following lines: </p>
-<div class="codehilite"><pre><span></span><span class="n">RSAAuthentication</span> <span class="n">yes</span>
-<span class="n">PubkeyAuthentication</span> <span class="n">yes</span>
+<div class="codehilite"><pre><span></span>RSAAuthentication yes
+PubkeyAuthentication yes
 </pre></div>
 
 
@@ -1586,8 +1586,8 @@
 <ol>
 <li>
 <p>Comment the <code>IPADDR</code> line in <code>/etc/sysconfig/network-scripts/ifcfg-eth0</code>:</p>
-<div class="codehilite"><pre><span></span><span class="o">#</span><span class="n">IPADDR</span><span class="o">=</span><span class="mi">131</span><span class="p">.</span><span class="mi">225</span><span class="p">.</span><span class="mi">41</span><span class="p">.</span><span class="mi">182</span>
-<span class="n">IPV6ADDR</span><span class="o">=</span><span class="ss">&quot;2607:f720:1700:1b30::9b&quot;</span>
+<div class="codehilite"><pre><span></span>#IPADDR=131.225.41.182
+IPV6ADDR=&quot;2607:f720:1700:1b30::9b&quot;
 </pre></div>
 
 

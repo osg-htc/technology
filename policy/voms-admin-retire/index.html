@@ -1429,15 +1429,15 @@ process is documented <a href="https://www.opensciencegrid.org/docs/release/rele
 <h2 id="vo-transition-plans">VO Transition Plans<a class="headerlink" href="#vo-transition-plans" title="Permanent link">&para;</a></h2>
 <p>Based on one-to-one discussions, we believe the majority of VOs only use VOMS-Admin to maintain
 a list of authorized pilots.  For these VOs, we will help convert invocations of <code>voms-proxy-init</code>:</p>
-<div class="codehilite"><pre><span></span><span class="n">voms</span><span class="o">-</span><span class="n">proxy</span><span class="o">-</span><span class="n">init</span> <span class="o">-</span><span class="n">voms</span> <span class="n">hcc</span><span class="p">:</span><span class="o">/</span><span class="n">hcc</span><span class="o">/</span><span class="k">Role</span><span class="o">=</span><span class="n">pilot</span>
+<div class="codehilite"><pre><span></span>voms-proxy-init -voms hcc:/hcc/Role=pilot
 </pre></div>
 
 
 <p>to an equivalent call to <code>voms-proxy-fake</code>:</p>
-<div class="codehilite"><pre><span></span><span class="n">voms</span><span class="o">-</span><span class="n">proxy</span><span class="o">-</span><span class="n">fake</span> <span class="o">-</span><span class="n">hostcert</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">grid</span><span class="o">-</span><span class="k">security</span><span class="o">/</span><span class="n">voms</span><span class="o">/</span><span class="n">vomscert</span><span class="p">.</span><span class="n">pem</span> <span class="err">\</span>
-                <span class="o">-</span><span class="n">hostkey</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">grid</span><span class="o">-</span><span class="k">security</span><span class="o">/</span><span class="n">voms</span><span class="o">/</span><span class="n">vomskey</span><span class="p">.</span><span class="n">pem</span> <span class="err">\</span>
-                <span class="o">-</span><span class="n">fqan</span> <span class="o">/</span><span class="n">hcc</span><span class="o">/</span><span class="k">Role</span><span class="o">=</span><span class="n">pilot</span><span class="o">/</span><span class="n">Capability</span><span class="o">=</span><span class="k">NULL</span> <span class="err">\</span>
-                <span class="o">-</span><span class="n">voms</span> <span class="n">hcc</span> <span class="o">-</span><span class="n">uri</span> <span class="n">hcc</span><span class="o">-</span><span class="n">voms</span><span class="p">.</span><span class="n">unl</span><span class="p">.</span><span class="n">edu</span><span class="p">:</span><span class="mi">15000</span>
+<div class="codehilite"><pre><span></span>voms-proxy-fake -hostcert /etc/grid-security/voms/vomscert.pem \
+                -hostkey /etc/grid-security/voms/vomskey.pem \
+                -fqan /hcc/Role=pilot/Capability=NULL \
+                -voms hcc -uri hcc-voms.unl.edu:15000
 </pre></div>
 
 

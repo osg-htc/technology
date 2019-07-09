@@ -1525,15 +1525,15 @@
 <p>When large-scale testing a CE, one of the objectives is to see if the CE can fully utilize all resources (cores) available to it or if there are bottlenecks preventing that outcome. However to do this would normally require using up production slots, and it is hard to find a site willing to give up so many production slots for so long. Thus, running resourceless jobs in parallel with production jobs allows the testing to proceed without interfering with real work.</p>
 <h3 id="setting-up-a-sleeper-pool">Setting Up a Sleeper Pool<a class="headerlink" href="#setting-up-a-sleeper-pool" title="Permanent link">&para;</a></h3>
 <p>A sleeper pool is created by “tricking” a worker node into thinking it has more cores than physically available. Then, the host is configured so that jobs marked for the sleeper pool are routed to the extra slots. In HTCondor, this is done by changing the START expression on each startd. For example, on a 32-core machine:</p>
-<div class="codehilite"><pre><span></span><span class="k">START</span> <span class="o">=</span> <span class="p">(</span> <span class="err">\</span>
-          <span class="p">(</span><span class="n">SlotID</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
-          <span class="p">(</span><span class="n">SlotID</span> <span class="o">&lt;</span> <span class="mi">33</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
-          <span class="p">(</span><span class="n">RequiresWholeMachine</span> <span class="o">=!=</span> <span class="k">TRUE</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
-          <span class="p">(</span><span class="n">SleepSlot</span> <span class="o">=!=</span> <span class="k">TRUE</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
-          <span class="p">(</span><span class="n">distro</span> <span class="o">=?=</span> <span class="ss">&quot;RHEL6&quot;</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
-          <span class="p">(</span><span class="n">CPU_Only</span> <span class="o">==</span> <span class="k">TRUE</span> <span class="p">)</span> <span class="err">\</span>
-          <span class="p">)</span> <span class="o">||</span> <span class="err">\</span>
-          <span class="p">(</span> <span class="p">(</span><span class="n">SlotID</span> <span class="o">&gt;=</span> <span class="mi">33</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">distro</span> <span class="o">=?=</span> <span class="ss">&quot;RHEL6&quot;</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">SleepSlot</span> <span class="o">==</span> <span class="k">TRUE</span><span class="p">)</span> <span class="p">)</span>
+<div class="codehilite"><pre><span></span>START = ( \
+          (SlotID &gt;= 1) &amp;&amp; \
+          (SlotID &lt; 33) &amp;&amp; \
+          (RequiresWholeMachine =!= TRUE ) &amp;&amp; \
+          (SleepSlot =!= TRUE) &amp;&amp; \
+          (distro =?= &quot;RHEL6&quot; ) &amp;&amp; \
+          (CPU_Only == TRUE ) \
+          ) || \
+          ( (SlotID &gt;= 33) &amp;&amp; (distro =?= &quot;RHEL6&quot; ) &amp;&amp; (SleepSlot == TRUE) )
 </pre></div>
 
 

@@ -1370,10 +1370,10 @@
 <li>In the JIRA ticket, document your testing procedure and request permission from <em>both</em> the Software and the Release Managers. (Since there is no acceptance testing, both of them have to sign off on the new build).</li>
 <li>After receiving permission, tag the builds into the <code>osg-empty</code> tags, and untag them from the <code>osg-development</code> tags. Then regenerate the <code>osg-empty</code> repos. <pre class="screen"></li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="n">osg</span><span class="o">-</span><span class="n">koji</span> <span class="k">move</span><span class="o">-</span><span class="n">pkg</span> <span class="n">osg</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">3</span><span class="o">-</span><span class="n">el6</span><span class="o">-</span><span class="n">development</span> <span class="n">osg</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">3</span><span class="o">-</span><span class="n">el6</span><span class="o">-</span><span class="n">empty</span> <span class="o">&lt;</span><span class="n">EL6_BUILD_NVR</span><span class="o">&gt;</span>
-<span class="n">osg</span><span class="o">-</span><span class="n">koji</span> <span class="k">move</span><span class="o">-</span><span class="n">pkg</span> <span class="n">osg</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">3</span><span class="o">-</span><span class="n">el7</span><span class="o">-</span><span class="n">development</span> <span class="n">osg</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">3</span><span class="o">-</span><span class="n">el7</span><span class="o">-</span><span class="n">empty</span> <span class="o">&lt;</span><span class="n">EL7_BUILD_NVR</span><span class="o">&gt;</span>
-<span class="n">osg</span><span class="o">-</span><span class="n">koji</span> <span class="n">regen</span><span class="o">-</span><span class="n">repo</span> <span class="c1">--nowait osg-3.3-el6-empty</span>
-<span class="n">osg</span><span class="o">-</span><span class="n">koji</span> <span class="n">regen</span><span class="o">-</span><span class="n">repo</span> <span class="c1">--nowait osg-3.3-el7-empty</span>
+<div class="codehilite"><pre><span></span>osg-koji move-pkg osg-3.3-el6-development osg-3.3-el6-empty &lt;EL6_BUILD_NVR&gt;
+osg-koji move-pkg osg-3.3-el7-development osg-3.3-el7-empty &lt;EL7_BUILD_NVR&gt;
+osg-koji regen-repo --nowait osg-3.3-el6-empty
+osg-koji regen-repo --nowait osg-3.3-el7-empty
 </pre></div>
                 
                   

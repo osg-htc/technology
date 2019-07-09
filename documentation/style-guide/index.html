@@ -1512,18 +1512,18 @@ Please convert any document-relative links to site-relative links before updatin
 sections with the same name you can link the subsequent sections by appending <code>_N</code> where <code>N</code> is the section's ordinal
 number minus one, e.g. append <code>_1</code> for the second section. For example, if you have three sections named "Optional
 Configuration", link them like so:</p>
-<div class="codehilite"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="n">st</span> <span class="n">section</span><span class="p">](</span><span class="o">#</span><span class="n">optional</span><span class="o">-</span><span class="n">configuration</span><span class="p">)</span>
-<span class="p">[</span><span class="mi">2</span><span class="n">nd</span> <span class="n">section</span><span class="p">](</span><span class="o">#</span><span class="n">optional</span><span class="o">-</span><span class="n">configuration_1</span><span class="p">)</span>
-<span class="p">[</span><span class="mi">3</span><span class="n">rd</span> <span class="n">section</span><span class="p">](</span><span class="o">#</span><span class="n">optional</span><span class="o">-</span><span class="n">configuration_2</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>[1st section](#optional-configuration)
+[2nd section](#optional-configuration_1)
+[3rd section](#optional-configuration_2)
 </pre></div>
 
 
 <h2 id="command-blocks-and-file-snippets">Command blocks and file snippets<a class="headerlink" href="#command-blocks-and-file-snippets" title="Permanent link">&para;</a></h2>
 <p>Command blocks and file snippets outside of lists should be wrapped in three back-ticks (```) followed by an optional
 code highlighting format:</p>
-<div class="codehilite"><pre><span></span><span class="o">```</span><span class="n">console</span>
-<span class="o">#</span> <span class="n">stuff</span>
-<span class="o">```</span>
+<div class="codehilite"><pre><span></span>```console
+# stuff
+```
 </pre></div>
 
 
@@ -1592,20 +1592,20 @@ The above block is rendered below:</p>
 </li>
 </ul>
 <p>For example:</p>
-<div class="codehilite"><pre><span></span><span class="mi">1</span><span class="p">.</span> <span class="n">Foo</span>
-    <span class="o">-</span> <span class="n">Bar</span>
+<div class="codehilite"><pre><span></span>1. Foo
+    - Bar
 
-            <span class="p">:::</span><span class="n">console</span>
-            <span class="n">COMMAND</span>
-            <span class="n">BLOCK</span>
-        <span class="nb">text</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">Bar</span>
+            :::console
+            COMMAND
+            BLOCK
+        text associated with Bar
 
-    <span class="nb">text</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">Foo</span>
+    text associated with Foo
 
-<span class="mi">1</span><span class="p">.</span> <span class="n">Baz</span>
+1. Baz
 
-        <span class="n">FILE</span>
-        <span class="n">SNIPPET</span>
+        FILE
+        SNIPPET
 </pre></div>
 
 
@@ -1628,8 +1628,8 @@ block is rendered below:</p>
 </li>
 <li>
 <p>Baz</p>
-<div class="codehilite"><pre><span></span><span class="n">FILE</span>
-<span class="n">SNIPPET</span>
+<div class="codehilite"><pre><span></span>FILE
+SNIPPET
 </pre></div>
 
 
@@ -1638,21 +1638,27 @@ block is rendered below:</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <p>To catch the user's attention for important items or pitfalls, we used <code>%NOTE%</code> TWiki macros, these can be replaced with
 admonition-style notes and warnings:</p>
-<div class="codehilite"><pre><span></span><span class="o">!!!</span> <span class="n">note</span>
-    <span class="n">things</span> <span class="k">to</span> <span class="n">note</span>
+<div class="codehilite"><pre><span></span>!!! note
+    things to note
 </pre></div>
 
 
 <p>or</p>
-<div class="codehilite"><pre><span></span><span class="o">!!!</span> <span class="nv">warning</span>
-    <span class="k">if</span> <span class="nv">a</span> <span class="nv">user</span> <span class="nv">doesn</span><span class="s1">&#39;</span><span class="s">t do this thing, bad stuff will happen</span>
+<div class="codehilite"><pre><span></span>!!! warning
+    if a user doesn&#39;t do this thing, bad stuff will happen
 </pre></div>
 
 
 <p>The above blocks are rendered below as an example.</p>
-<p>!!! note things to note</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>things to note</p>
+</div>
 <p>and</p>
-<p>!!! warning if a user doesn't do this thing, bad stuff will happen</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>if a user doesn't do this thing, bad stuff will happen</p>
+</div>
 <p>For a full list of admonition styles, see the documentation
 <a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">here</a>.</p>
                 

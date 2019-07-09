@@ -1763,7 +1763,7 @@ osg-build koji --repo<span class="o">=</span><span class="nv">$MAJOR_VERSION</sp
 <li>Ensure that you meet the <a href="https://github.com/opensciencegrid/vm-test-runs">pre-requisites</a> for submitting VM universe test runs</li>
 <li>
 <p>Prepare the test suite by running:</p>
-<div class="codehilite"><pre><span></span><span class="n">osg</span><span class="o">-</span><span class="n">run</span><span class="o">-</span><span class="n">tests</span> <span class="o">-</span><span class="n">P</span> <span class="s1">&#39;Testing OSG pre-release&#39;</span>
+<div class="codehilite"><pre><span></span>osg-run-tests -P &#39;Testing OSG pre-release&#39;
 </pre></div>
 
 
@@ -1771,7 +1771,7 @@ osg-build koji --repo<span class="o">=</span><span class="nv">$MAJOR_VERSION</sp
 <li>
 <p><code>cd</code> into the directory specified in the output of the previous command</p>
 </li>
-<li>Submit the DAG:<div class="codehilite"><pre><span></span><span class="n">condor_submit_dag</span> <span class="n">master</span><span class="o">-</span><span class="n">run</span><span class="p">.</span><span class="n">dag</span>
+<li>Submit the DAG:<div class="codehilite"><pre><span></span>condor_submit_dag master-run.dag
 </pre></div>
 
 
@@ -1938,24 +1938,24 @@ docker-osg-wn-scripts/update-all docker-osg-wn
     The announcement should mention a handful of the most important updates.
     Due to downstream formatting issues, each major change should end at column 76 or earlier.
     Here is a sample, replace <code>&lt;BRACKETED TEXT&gt;</code> with the appropriate values:</p>
-<div class="codehilite"><pre><span></span><span class="nv">Subject</span>: <span class="nv">Announcing</span> <span class="nv">OSG</span> <span class="nv">Software</span> <span class="nv">version</span> <span class="o">&lt;</span><span class="nv">VERSION</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span>Subject: Announcing OSG Software version &lt;VERSION&gt;
 
-<span class="nv">We</span> <span class="nv">are</span> <span class="nv">pleased</span> <span class="nv">to</span> <span class="nv">announce</span> <span class="nv">OSG</span> <span class="nv">Software</span> <span class="nv">version</span> <span class="o">&lt;</span><span class="nv">VERSION</span><span class="o">&gt;!</span>
+We are pleased to announce OSG Software version &lt;VERSION&gt;!
 
-<span class="nv">Changes</span> <span class="nv">to</span> <span class="nv">OSG</span> <span class="o">&lt;</span><span class="nv">VERSION</span><span class="o">&gt;</span> <span class="k">include</span>:
-<span class="o">-</span> <span class="nv">Major</span> <span class="nv">Change</span> <span class="mi">1</span>
-<span class="o">-</span> <span class="nv">Major</span> <span class="nv">Change</span> <span class="mi">2</span>
-<span class="o">-</span> <span class="nv">Major</span> <span class="nv">Change</span> <span class="mi">3</span>
+Changes to OSG &lt;VERSION&gt; include:
+- Major Change 1
+- Major Change 2
+- Major Change 3
 
-<span class="nv">Release</span> <span class="nv">notes</span> <span class="nv">and</span> <span class="nv">pointers</span> <span class="nv">to</span> <span class="nv">more</span> <span class="nv">documentation</span> <span class="nv">can</span> <span class="nv">be</span> <span class="nv">found</span> <span class="nv">at</span>:
+Release notes and pointers to more documentation can be found at:
 
-<span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">opensciencegrid</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">docs</span><span class="o">/</span><span class="nv">release</span><span class="o">/&lt;</span><span class="nv">SERIES</span>.<span class="nv">VERSION</span><span class="o">&gt;/</span><span class="nv">release</span><span class="o">-&lt;</span><span class="nv">RELEASE</span><span class="o">-</span><span class="nv">VERSION</span><span class="o">&gt;/</span>
+http://www.opensciencegrid.org/docs/release/&lt;SERIES.VERSION&gt;/release-&lt;RELEASE-VERSION&gt;/
 
-<span class="nv">Need</span> <span class="nv">help</span>? <span class="nv">Let</span> <span class="nv">us</span> <span class="nv">know</span>:
+Need help? Let us know:
 
-<span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">opensciencegrid</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">docs</span><span class="o">/</span><span class="nv">common</span><span class="o">/</span><span class="nv">help</span><span class="o">/</span>
+http://www.opensciencegrid.org/docs/common/help/
 
-<span class="nv">We</span> <span class="nv">welcome</span> <span class="nv">feedback</span> <span class="nv">on</span> <span class="nv">this</span> <span class="nv">release</span><span class="o">!</span>
+We welcome feedback on this release!
 </pre></div>
 
 

@@ -2063,7 +2063,7 @@ See the <a href="#upstream">upstream dir info</a> for more information.</p>
 <h4 id="subversion-access">Subversion Access<a class="headerlink" href="#subversion-access" title="Permanent link">&para;</a></h4>
 <p>Our Subversion repository is located at:</p>
 <blockquote>
-<div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">vdt</span><span class="p">.</span><span class="n">cs</span><span class="p">.</span><span class="n">wisc</span><span class="p">.</span><span class="n">edu</span><span class="o">/</span><span class="n">svn</span>
+<div class="codehilite"><pre><span></span>https://vdt.cs.wisc.edu/svn
 </pre></div>
 
 
@@ -2071,7 +2071,7 @@ See the <a href="#upstream">upstream dir info</a> for more information.</p>
 <p><a href="http://vdt.cs.wisc.edu/internal/svn.html">Procedure for offsite users obtaining access to Subversion</a></p>
 <p>Or, from a UW–Madison Computer Sciences machine:</p>
 <blockquote>
-<div class="codehilite"><pre><span></span><span class="n">file</span><span class="p">:</span><span class="o">///</span><span class="n">p</span><span class="o">/</span><span class="n">condor</span><span class="o">/</span><span class="n">workspaces</span><span class="o">/</span><span class="n">vdt</span><span class="o">/</span><span class="n">svn</span>
+<div class="codehilite"><pre><span></span>file:///p/condor/workspaces/vdt/svn
 </pre></div>
 
 
@@ -2212,8 +2212,8 @@ without the prefix component, followed by the sha1sum of the file:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>The reference file for <code>globus-common</code>'s source tarball is named <code>epel.srpm.source</code> and contains:</p>
-<div class="codehilite"><pre><span></span><span class="n">globus</span><span class="o">-</span><span class="n">common</span><span class="o">/</span><span class="mi">16</span><span class="p">.</span><span class="mi">4</span><span class="o">/</span><span class="n">globus</span><span class="o">-</span><span class="n">common</span><span class="o">-</span><span class="mi">16</span><span class="p">.</span><span class="mi">4</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">el6</span><span class="p">.</span><span class="n">src</span><span class="p">.</span><span class="n">rpm</span> <span class="n">sha1sum</span><span class="o">=</span><span class="mi">134478</span><span class="n">c56c2437c335c20636831f794b66290bec</span>
-<span class="o">#</span> <span class="n">Downloaded</span> <span class="k">from</span> <span class="s1">&#39;http://dl.fedoraproject.org/pub/epel/6/SRPMS/globus-common-16.4-1.el6.src.rpm&#39;</span>
+<div class="codehilite"><pre><span></span>globus-common/16.4/globus-common-16.4-1.el6.src.rpm sha1sum=134478c56c2437c335c20636831f794b66290bec
+# Downloaded from &#39;http://dl.fedoraproject.org/pub/epel/6/SRPMS/globus-common-16.4-1.el6.src.rpm&#39;
 </pre></div>
 
 
@@ -2272,7 +2272,7 @@ If you are uncertain, or have a new project that you want mirrored, send email t
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>You can refer to the 1.12.2 release of osg-build with this line:</p>
-<div class="codehilite"><pre><span></span><span class="k">type</span><span class="o">=</span><span class="n">github</span> <span class="n">repo</span><span class="o">=</span><span class="n">opensciencegrid</span><span class="o">/</span><span class="n">osg</span><span class="o">-</span><span class="n">build</span> <span class="n">tag</span><span class="o">=</span><span class="n">v1</span><span class="p">.</span><span class="mi">12</span><span class="p">.</span><span class="mi">2</span> <span class="n">hash</span><span class="o">=</span><span class="n">cff50ffe812282552cedae81f3809d3cf7087a3e</span>
+<div class="codehilite"><pre><span></span>type=github repo=opensciencegrid/osg-build tag=v1.12.2 hash=cff50ffe812282552cedae81f3809d3cf7087a3e
 </pre></div>
 
 
@@ -2336,7 +2336,7 @@ If you are uncertain, or have a new project that you want mirrored, send email t
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>The reference file for <code>osg-build</code>'s repo is named <code>osg.github.source</code> and contains:</p>
-<div class="codehilite"><pre><span></span><span class="k">type</span><span class="o">=</span><span class="n">git</span> <span class="n">url</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">opensciencegrid</span><span class="o">/</span><span class="n">osg</span><span class="o">-</span><span class="n">build</span><span class="p">.</span><span class="n">git</span> <span class="n">name</span><span class="o">=</span><span class="n">osg</span><span class="o">-</span><span class="n">build</span> <span class="n">tag</span><span class="o">=</span><span class="n">v1</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">2</span> <span class="n">hash</span><span class="o">=</span><span class="mi">5</span><span class="n">bcf48c442d21b1e8c93a468d884f84122f7cc9e</span>
+<div class="codehilite"><pre><span></span>type=git url=https://github.com/opensciencegrid/osg-build.git name=osg-build tag=v1.11.2 hash=5bcf48c442d21b1e8c93a468d884f84122f7cc9e
 </pre></div>
 
 
@@ -2391,7 +2391,7 @@ Non-scratch Koji builds will still consider it an error.</p>
 </ul>
 <p>Combining the last two features can really speed up package development.
 For example, you can use this to make scratch builds of the current master:</p>
-<div class="codehilite"><pre><span></span><span class="k">type</span><span class="o">=</span><span class="n">github</span> <span class="n">repo</span><span class="o">=&lt;</span><span class="k">OWNER</span><span class="o">&gt;/&lt;</span><span class="n">PROJECT</span><span class="o">&gt;</span> <span class="n">tarball</span><span class="o">=&lt;</span><span class="n">PROJECT</span><span class="o">&gt;-&lt;</span><span class="k">VERSION</span><span class="o">&gt;</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span> <span class="n">tag</span><span class="o">=</span><span class="n">master</span> <span class="n">hash</span><span class="o">=</span><span class="mi">0</span>
+<div class="codehilite"><pre><span></span>type=github repo=&lt;OWNER&gt;/&lt;PROJECT&gt; tarball=&lt;PROJECT&gt;-&lt;VERSION&gt;.tar.gz tag=master hash=0
 </pre></div>
 
 
@@ -2449,11 +2449,11 @@ For example, you can use this to make scratch builds of the current master:</p>
 <h5 id="use-case-1-packaging-an-upstream-source-tarball">Use Case 1: Packaging an Upstream Source Tarball<a class="headerlink" href="#use-case-1-packaging-an-upstream-source-tarball" title="Permanent link">&para;</a></h5>
 <p>When the OSG Software Team packages an upstream source tarball, for which there is no existing package, the source tarball is referenced with a .source file and we provide a spec file and, if necessary, patches. For example, RSV is provided as a source tarball only. Its package directory contains:</p>
 <blockquote>
-<div class="codehilite"><pre><span></span><span class="n">rsv</span><span class="o">/</span>
-    <span class="n">osg</span><span class="o">/</span>
-        <span class="n">rsv</span><span class="p">.</span><span class="n">spec</span>
-    <span class="n">upstream</span><span class="o">/</span>
-        <span class="n">developer</span><span class="p">.</span><span class="n">tarball</span><span class="p">.</span><span class="k">source</span>
+<div class="codehilite"><pre><span></span>rsv/
+    osg/
+        rsv.spec
+    upstream/
+        developer.tarball.source
 </pre></div>
 
 
@@ -2461,9 +2461,9 @@ For example, you can use this to make scratch builds of the current master:</p>
 <h5 id="use-case-2-passing-through-a-source-rpm">Use Case 2: Passing Through a Source RPM<a class="headerlink" href="#use-case-2-passing-through-a-source-rpm" title="Permanent link">&para;</a></h5>
 <p>When the OSG Software Team simply provides a copy of an existing source RPM, it is referenced with a .source file and that is it. For example, we do not modify the <code>globus-common</code> source RPM from EPEL. Its package directory contains:</p>
 <blockquote>
-<div class="codehilite"><pre><span></span><span class="n">globus</span><span class="o">-</span><span class="n">common</span><span class="o">/</span>
-    <span class="n">upstream</span><span class="o">/</span>
-        <span class="n">epel</span><span class="p">.</span><span class="n">srpm</span><span class="p">.</span><span class="k">source</span>
+<div class="codehilite"><pre><span></span>globus-common/
+    upstream/
+        epel.srpm.source
 </pre></div>
 
 
@@ -2471,12 +2471,12 @@ For example, you can use this to make scratch builds of the current master:</p>
 <h5 id="use-case-3-modifying-a-source-rpm">Use Case 3: Modifying a Source RPM<a class="headerlink" href="#use-case-3-modifying-a-source-rpm" title="Permanent link">&para;</a></h5>
 <p>When the OSG Software Team modifies an existing source RPM, it is referenced with a .source file and then all changes to the upstream source are contained in the <code>osg</code> directory. For example, we use this mechanism for the <code>globus-ftp-client</code> package, originally obtained from EPEL. Its package directory contains:</p>
 <blockquote>
-<div class="codehilite"><pre><span></span><span class="n">globus</span><span class="o">-</span><span class="n">ftp</span><span class="o">-</span><span class="n">client</span><span class="o">/</span>
-    <span class="n">osg</span><span class="o">/</span>
-        <span class="n">globus</span><span class="o">-</span><span class="n">ftp</span><span class="o">-</span><span class="n">client</span><span class="p">.</span><span class="n">spec</span>
-        <span class="mi">1853</span><span class="o">-</span><span class="n">ssh</span><span class="o">-</span><span class="n">bin</span><span class="p">.</span><span class="n">patch</span>
-    <span class="n">upstream</span><span class="o">/</span>
-        <span class="n">epel</span><span class="p">.</span><span class="n">srpm</span><span class="p">.</span><span class="k">source</span>
+<div class="codehilite"><pre><span></span>globus-ftp-client/
+    osg/
+        globus-ftp-client.spec
+        1853-ssh-bin.patch
+    upstream/
+        epel.srpm.source
 </pre></div>
 
 

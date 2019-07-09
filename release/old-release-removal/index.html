@@ -1530,37 +1530,37 @@ Operations to remove.</p>
 files in <code>/p/vdt/public/html/release-info/attic</code> to determine the exact NVRs we
 need, and download them from Koji.</p>
 <h2 id="template-email">Template Email<a class="headerlink" href="#template-email" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="n">Subject</span><span class="o">:</span> <span class="n">OSG</span> <span class="mi">3</span><span class="o">.</span><span class="na">X</span> <span class="n">packages</span> <span class="n">will</span> <span class="n">be</span> <span class="n">removed</span> <span class="n">from</span> <span class="n">the</span> <span class="n">repositories</span> <span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span>
+<div class="codehilite"><pre><span></span>Subject: OSG 3.X packages will be removed from the repositories YYYY-MM-DD
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="nv">On</span> <span class="o">&lt;</span><span class="nv">DAYNAME</span>, <span class="nv">MONTH</span> <span class="nv">DAY</span><span class="o">&gt;</span>, <span class="nv">the</span> <span class="nv">OSG</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">removing</span> <span class="nv">the</span> <span class="nv">OSG</span> <span class="o">&lt;</span><span class="mi">3</span>.<span class="nv">X</span><span class="o">&gt;</span> <span class="nv">release</span>
-<span class="nv">series</span> <span class="nv">from</span> <span class="nv">our</span> <span class="nv">repositories</span>.  <span class="nv">This</span> <span class="nv">includes</span> <span class="nv">both</span> <span class="nv">RPMs</span> <span class="nv">and</span> <span class="nv">tarballs</span> <span class="nv">hosted</span>
-<span class="nv">on</span> <span class="nv">repo</span>.<span class="nv">opensciencegrid</span>.<span class="nv">org</span>.
+<div class="codehilite"><pre><span></span>On &lt;DAYNAME, MONTH DAY&gt;, the OSG will be removing the OSG &lt;3.X&gt; release
+series from our repositories.  This includes both RPMs and tarballs hosted
+on repo.opensciencegrid.org.
 
-<span class="nv">As</span> <span class="nv">a</span> <span class="nv">reminder</span>, <span class="nv">support</span> <span class="k">for</span> <span class="nv">OSG</span> <span class="o">&lt;</span><span class="mi">3</span>.<span class="nv">X</span><span class="o">&gt;</span> <span class="nv">ended</span> <span class="nv">after</span> <span class="o">&lt;</span><span class="nv">MONTH</span> <span class="nv">YEAR</span><span class="o">&gt;</span>.
+As a reminder, support for OSG &lt;3.X&gt; ended after &lt;MONTH YEAR&gt;.
 
-<span class="k">If</span> <span class="nv">your</span> <span class="nv">site</span> <span class="nv">is</span> <span class="nv">running</span> <span class="nv">OSG</span> <span class="o">&lt;</span><span class="mi">3</span>.<span class="nv">X</span><span class="o">&gt;</span>, <span class="nv">you</span> <span class="nv">should</span> <span class="nv">upgrade</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">current</span> <span class="nv">release</span>
-<span class="nv">series</span>, <span class="nv">OSG</span> <span class="mi">3</span>.<span class="nv">Y</span>.  <span class="nv">See</span> <span class="nv">our</span> <span class="nv">upgrade</span> <span class="nv">documentation</span> [<span class="mi">1</span>] <span class="k">for</span> <span class="nv">instructions</span>.  <span class="k">If</span> <span class="nv">you</span>
-<span class="nv">need</span> <span class="nv">assistance</span> <span class="nv">upgrading</span>, <span class="nv">please</span> <span class="nv">contact</span> <span class="nv">us</span> <span class="nv">at</span> <span class="nv">help</span>@<span class="nv">opensciencegrid</span>.<span class="nv">org</span>.
+If your site is running OSG &lt;3.X&gt;, you should upgrade to the current release
+series, OSG 3.Y.  See our upgrade documentation [1] for instructions.  If you
+need assistance upgrading, please contact us at help@opensciencegrid.org.
 
-[<span class="mi">1</span>] <span class="nv">https</span>:<span class="o">//</span><span class="nv">opensciencegrid</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">docs</span><span class="o">/</span><span class="nv">release</span><span class="o">/</span><span class="nv">release_series</span><span class="o">/</span>#<span class="nv">updating</span><span class="o">-</span><span class="nv">from</span><span class="o">-</span><span class="nv">osg</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="mi">32</span><span class="o">-</span><span class="mi">33</span><span class="o">-</span><span class="nv">to</span><span class="o">-</span><span class="mi">34</span>
+[1] https://opensciencegrid.org/docs/release/release_series/#updating-from-osg-31-32-33-to-34
 </pre></div>
 
 
 <p>If we're dropping support for a distro (e.g. EL 5 when we drop OSG 3.2), add
 the following after the first paragraph:</p>
-<div class="codehilite"><pre><span></span><span class="nv">Note</span> <span class="nv">that</span> <span class="nv">OSG</span> <span class="o">&lt;</span><span class="mi">3</span>.<span class="nv">X</span><span class="o">&gt;</span> <span class="nv">was</span> <span class="nv">the</span> <span class="nv">last</span> <span class="nv">release</span> <span class="nv">that</span> <span class="nv">supported</span> <span class="nv">Enterprise</span> <span class="nv">Linux</span> <span class="o">&lt;</span><span class="nv">Z</span><span class="o">&gt;</span>
-<span class="nv">distributions</span>.  <span class="k">If</span> <span class="nv">you</span> <span class="nv">believe</span> <span class="nv">that</span> <span class="nv">you</span> <span class="nv">still</span> <span class="nv">need</span> <span class="nv">support</span> <span class="k">for</span> <span class="nv">this</span> <span class="nv">operating</span>
-<span class="nv">system</span> <span class="nv">series</span>, <span class="nv">please</span> <span class="nv">contact</span> <span class="nv">us</span> <span class="nv">at</span> <span class="nv">help</span>@<span class="nv">opensciencegrid</span>.<span class="nv">org</span>.
+<div class="codehilite"><pre><span></span>Note that OSG &lt;3.X&gt; was the last release that supported Enterprise Linux &lt;Z&gt;
+distributions.  If you believe that you still need support for this operating
+system series, please contact us at help@opensciencegrid.org.
 </pre></div>
 
 
 <p>Since we're dropping support for i386 (32-bit) when we drop OSG 3.3, add the
 following after the first paragraph:</p>
-<div class="codehilite"><pre><span></span><span class="nv">Note</span> <span class="nv">that</span> <span class="nv">OSG</span> <span class="mi">3</span>.<span class="mi">3</span> <span class="nv">was</span> <span class="nv">the</span> <span class="nv">last</span> <span class="nv">release</span> <span class="nv">that</span> <span class="nv">contained</span> <span class="mi">32</span><span class="o">-</span><span class="nv">bit</span> <span class="nv">packages</span>.  <span class="k">If</span>
-<span class="nv">you</span> <span class="nv">believe</span> <span class="nv">that</span> <span class="nv">you</span> <span class="nv">still</span> <span class="nv">need</span> <span class="nv">support</span> <span class="k">for</span> <span class="nv">this</span> <span class="nv">architecture</span>, <span class="nv">please</span>
-<span class="nv">contacts</span> <span class="nv">us</span> <span class="nv">at</span> <span class="nv">help</span>@<span class="nv">opensciencegrid</span>.<span class="nv">org</span>.
+<div class="codehilite"><pre><span></span>Note that OSG 3.3 was the last release that contained 32-bit packages.  If
+you believe that you still need support for this architecture, please
+contacts us at help@opensciencegrid.org.
 </pre></div>
                 
                   
