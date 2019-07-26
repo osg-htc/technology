@@ -1749,6 +1749,22 @@ A yum repository created from the contents of a tag at a specific point in time.
 <li>
 <p><code>root.log</code><br />
     This is the log of mock trying to create an appropriate build root for your RPM. This will invoke yum twice: once to create a generic build root, once for all the dependencies in your BuildRequires. All RPMs in your build root will be logged here. If mock is unable to create the build root, the reason will show up here.</p>
+<ul>
+<li>
+<p>404 Errors</p>
+<p>If you see <code>Error downloading packages</code> and <code>HTTP Error 404 - Not Found</code> errors in your <code>root.log</code>,
+this commonly indicates that an rpm repo mirror was updated and our build repo is out-of-date.
+This can be fixed by regenerating the relevant build repos for your builds.</p>
+<p>This is usually something like <code>osg-3.4-el7-build</code> or <code>osg-upcoming-el7-build</code>;
+but you can find the exact build tag by clicking the Build Target link for the koji task,
+and whatever is listed for the Build Tag is the name of the repo to regen.</p>
+<p>Regenerate each repo that failed with 404 errors:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> osg-koji regen-repo &lt;BUILD TAG&gt;
+</pre></div>
+
+
+</li>
+</ul>
 </li>
 <li>
 <p><code>build.log</code><br />
