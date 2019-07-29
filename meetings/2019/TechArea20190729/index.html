@@ -1580,9 +1580,9 @@
                 
                 <h1 id="osg-technology-area-meeting-29-july-2019">OSG Technology Area Meeting, 29 July 2019<a class="headerlink" href="#osg-technology-area-meeting-29-july-2019" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: 719-284-5267, PIN: 57363; <a href="https://www.uberconference.com/osgblin">https://www.uberconference.com/osgblin</a><br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Carl, Diego, Edgar, Marian, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
-<p>Slack currently having some issues (<a href="https://status.slack.com/">https://status.slack.com/</a>)  </p>
+<p>Derek at PEARC</p>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This week: TimT</li>
@@ -1625,9 +1625,9 @@
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>OSG 3.4.33  <ul>
-<li>Across the board failures with xrootd-lcmaps-1.7.2-1 needs invesetigation (<a href="http://vdt.cs.wisc.edu/tests/20190726-1559/results.html">http://vdt.cs.wisc.edu/tests/20190726-1559/results.html</a>)</li>
-<li>AI (Brian): Stash Origin changes changes; osg-xrootd support</li>
-<li>AI (Carl): Support MySQL changes</li>
+<li>Across the board failures with xrootd-lcmaps-1.7.2-1 needs investigation (<a href="http://vdt.cs.wisc.edu/tests/20190726-1559/results.html">http://vdt.cs.wisc.edu/tests/20190726-1559/results.html</a>)</li>
+<li>AI (Brian): Stash Origin changes; osg-xrootd support</li>
+<li>AI (Carl): Support new MySQL versions in the Slurm Gratia probes</li>
 </ul>
 </li>
 <li>OSG 3.5  <ul>
@@ -1641,15 +1641,15 @@
 <a href="https://opensciencegrid.org//operations/services/topology-contacts-data/#retiring-resources">https://opensciencegrid.org//operations/services/topology-contacts-data/#retiring-resources</a></li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>AI (BrianL): Add Diego to VMU mailing list and start introducing him to the VMU test suite</li>
+<li>AI (BrianL): Review Gratia tickets and let Carl know if he can move forward with building the RPM</li>
+<li>There was some discussion about whether it's a good idea to continue removing resources from Topology. Namely if there are resources that are revived after being retired, there can be a discontinuity in records if the resource is revived under a different site and resource name. There are technical solutions (using <code>git log -S</code> to search through commit history) and process solutions that we can develop to address this potential problem.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Brown (Marian): working on XRootD issue (AAA CMS problems); still in progress</li>
-<li>GGUS ticket w/ Doug Johnson about using Let's Encrypt  <ul>
-<li>problems with using LVS</li>
-<li>need doc improvements</li>
-</ul>
-</li>
+<li>GGUS ticket w/ Doug Johnson about using Let's Encrypt with LVS; resulting in JIRA doc tickets</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
@@ -1774,17 +1774,11 @@
 </li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<p>We would like to get HTCondor 8.8 into mainline but the default auth removes <code>DAEMON_LIST</code> so it could break current installations of HTCondor  </p>
+<p>AI (TimT): write template for community testing announcements (<a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3755">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3755</a>)</p>
 <h2 id="osg-investigations-team">OSG Investigations Team<a class="headerlink" href="#osg-investigations-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>HTCondor-CE Gratia probe installed and running at Nebraska slurm. Records look ok.  Need to perform a "checklist" of attributes to make sure we are correct.  <ul>
-<li><a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3748">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3748</a></li>
-<li>Found we are not collecting system time</li>
-</ul>
-</li>
-<li>CMS asked for application specific attributes to be added to the XRootD Detailed Monitoring Collector.</li>
-<li>GRACC accounting taskforce - Tasking!!! See meeting on Wed.</li>
-<li>Networking wants a tool to "go back in time".</li>
+<li>Derek is at PEARC presenting StashCache work</li>
+<li>Presented accounting task force status and last week's OSG AC meeting</li>
 </ul>
 <h3 id="backburner">Backburner<a class="headerlink" href="#backburner" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1800,7 +1794,10 @@
 <li><a href="http://opensciencegrid.org/docs/data/stashcache/overview/">StashCache Project</a></li>
 </ul>
 <h3 id="discussions">Discussions<a class="headerlink" href="#discussions" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>AI (Edgar): Address CMS XCache auth ticket (<a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3774">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3774</a>)</li>
+<li>AI (BrianL): Build an XCache 1.1 RPM pre-release containing ATLAS/CMS RPMs so that Edgar can build the CMS XCache container# OSG Technology Area Meeting, 29 July 2019</li>
+</ul>
                 
                   
                 
