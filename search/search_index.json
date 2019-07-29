@@ -2431,6 +2431,81 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2019/TechArea20190729/", 
+            "text": "OSG Technology Area Meeting, 29 July 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n   \n\n\nAnnouncements\n\n\nSlack currently having some issues (\nhttps://status.slack.com/\n)  \n\n\nTriage Duty\n\n\n\n\nThis week: TimT\n\n\nNext week: Edgar\n\n\n6 (-4) open FreshDesk tickets\n\n\n2 (-1) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n156\n\n\n-4\n\n\nOpen\n\n\n\n\n\n\n38\n\n\n+8\n\n\nIn Progress\n\n\n\n\n\n\n15\n\n\n-5\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n-1\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.4.33  \n\n\nAcross the board failures with xrootd-lcmaps-1.7.2-1 needs invesetigation (\nhttp://vdt.cs.wisc.edu/tests/20190726-1559/results.html\n)\n\n\nAI (Brian): Stash Origin changes changes; osg-xrootd support\n\n\nAI (Carl): Support MySQL changes\n\n\n\n\n\n\nOSG 3.5  \n\n\nAI (Carl): Start preparing the OSG 3.5 repositories (\nhttps://opensciencegrid.org/technology/release/new-release-series/\n).\n\n    Take notes so that we can generalize the document moving forward.\n\n\nAI (Mat): Upstream OSG GCT patches so we can drop GCT packages from OSG 3.5\n\n\n\n\n\n\nAI (Edgar): Add chkconfig lines to \ngwms-renew-proxies\n (\nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3758\n)\n\n\nNew documentation explaining the Topology resource retirement process:\n\n\nhttps://opensciencegrid.org//operations/services/topology-contacts-data/#retiring-resources\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\n\n\nBrown (Marian): working on XRootD issue (AAA CMS problems); still in progress\n\n\nGGUS ticket w/ Doug Johnson about using Let's Encrypt  \n\n\nproblems with using LVS\n\n\nneed doc improvements\n\n\n\n\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.32\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n5\n\n\n-7\n\n\nOpen\n\n\n\n\n\n\n6\n\n\n-2\n\n\nIn Progress\n\n\n\n\n\n\n17\n\n\n+9\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\nReady for Release\n\n\n\n\n\n\n29\n\n\n+1\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nOSG 3.4.32  \n\n\nReady for Testing  \n\n\ngratia-probe 1.20.9\n\n\ncctools 7.0.14\n\n\nmyproxy 6.2.4\n\n\nsingularity 3.2.1-1.1\n\n\nosg-configure 2.4.0\n\n\nosg-oasis 13\n\n\nscitokens-cpp\n\n\nGlideinWMS 3.5\n\n\nxrootd 4.10.0 and plugins\n\n\ncondor 8.8.4\n\n\n\n\n\n\nReady for Release  \n\n\ncvmfs-x509-helper 2.0\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nWe would like to get HTCondor 8.8 into mainline but the default auth removes \nDAEMON_LIST\n so it could break current installations of HTCondor  \n\n\nOSG Investigations Team\n\n\n\n\nHTCondor-CE Gratia probe installed and running at Nebraska slurm. Records look ok.  Need to perform a \"checklist\" of attributes to make sure we are correct.  \n\n\nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3748\n\n\nFound we are not collecting system time\n\n\n\n\n\n\nCMS asked for application specific attributes to be added to the XRootD Detailed Monitoring Collector.\n\n\nGRACC accounting taskforce - Tasking!!! See meeting on Wed.\n\n\nNetworking wants a tool to \"go back in time\".\n\n\n\n\nBackburner\n\n\n\n\nWorking with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)\n\n\n\n\nFuture\n\n\n\n\nLots of GRACC questions: \nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3642\n\n\n\n\nOngoing\n\n\n\n\nGRACC Project\n\n\nStashCache Project\n\n\n\n\nDiscussions\n\n\nNone this week", 
+            "title": "July 29, 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#osg-technology-area-meeting-29-july-2019", 
+            "text": "Coordinates:  Conference: 719-284-5267, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:", 
+            "title": "OSG Technology Area Meeting, 29 July 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#announcements", 
+            "text": "Slack currently having some issues ( https://status.slack.com/ )", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#triage-duty", 
+            "text": "This week: TimT  Next week: Edgar  6 (-4) open FreshDesk tickets  2 (-1) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#jira", 
+            "text": "# of tickets   State      156  -4  Open    38  +8  In Progress    15  -5  Ready for Testing    0  -1  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#osg-software-team", 
+            "text": "OSG 3.4.33    Across the board failures with xrootd-lcmaps-1.7.2-1 needs invesetigation ( http://vdt.cs.wisc.edu/tests/20190726-1559/results.html )  AI (Brian): Stash Origin changes changes; osg-xrootd support  AI (Carl): Support MySQL changes    OSG 3.5    AI (Carl): Start preparing the OSG 3.5 repositories ( https://opensciencegrid.org/technology/release/new-release-series/ ). \n    Take notes so that we can generalize the document moving forward.  AI (Mat): Upstream OSG GCT patches so we can drop GCT packages from OSG 3.5    AI (Edgar): Add chkconfig lines to  gwms-renew-proxies  ( https://opensciencegrid.atlassian.net/browse/SOFTWARE-3758 )  New documentation explaining the Topology resource retirement process:  https://opensciencegrid.org//operations/services/topology-contacts-data/#retiring-resources", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#discussion", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#support-update", 
+            "text": "Brown (Marian): working on XRootD issue (AAA CMS problems); still in progress  GGUS ticket w/ Doug Johnson about using Let's Encrypt    problems with using LVS  need doc improvements", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#osg-release-team", 
+            "text": "3.4.32   Status      5  -7  Open    6  -2  In Progress    17  +9  Ready for Testing    1  +1  Ready for Release    29  +1  Total      OSG 3.4.32    Ready for Testing    gratia-probe 1.20.9  cctools 7.0.14  myproxy 6.2.4  singularity 3.2.1-1.1  osg-configure 2.4.0  osg-oasis 13  scitokens-cpp  GlideinWMS 3.5  xrootd 4.10.0 and plugins  condor 8.8.4    Ready for Release    cvmfs-x509-helper 2.0      Data    Nothing    Operations    Nothing    Contrib    Nothing", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#discussion_1", 
+            "text": "We would like to get HTCondor 8.8 into mainline but the default auth removes  DAEMON_LIST  so it could break current installations of HTCondor", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#osg-investigations-team", 
+            "text": "HTCondor-CE Gratia probe installed and running at Nebraska slurm. Records look ok.  Need to perform a \"checklist\" of attributes to make sure we are correct.    https://opensciencegrid.atlassian.net/browse/SOFTWARE-3748  Found we are not collecting system time    CMS asked for application specific attributes to be added to the XRootD Detailed Monitoring Collector.  GRACC accounting taskforce - Tasking!!! See meeting on Wed.  Networking wants a tool to \"go back in time\".", 
+            "title": "OSG Investigations Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#backburner", 
+            "text": "Working with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)", 
+            "title": "Backburner"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#future", 
+            "text": "Lots of GRACC questions:  https://opensciencegrid.atlassian.net/browse/SOFTWARE-3642", 
+            "title": "Future"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#ongoing", 
+            "text": "GRACC Project  StashCache Project", 
+            "title": "Ongoing"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190729/#discussions", 
+            "text": "None this week", 
+            "title": "Discussions"
+        }, 
+        {
             "location": "/meetings/2019/TechArea20190722/", 
             "text": "OSG Technology Area Meeting, 22 July 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat\n\n\nAnnouncements\n\n\n\n\nGitHub currently has issues, you may run into 500 errors\n\n\nZhenzhou's (UW-Madison student) last day was last Friday\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: BrianL\n\n\nNext week: TimT\n\n\n10 (+1) open FreshDesk tickets\n\n\n3 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n160\n\n\n-1\n\n\nOpen\n\n\n\n\n\n\n30\n\n\n+4\n\n\nIn Progress\n\n\n\n\n\n\n20\n\n\n+1\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.4.32  \n\n\nAI (Brian): Complete CMS XCache; other XCache 1.1 changes; osg-xrootd\n\n\nAI (Carl): Support Slurm v19 schema change; SWT2 Slurm v18 testing?\n\n\n\n\n\n\nOSG 3.5  \n\n\nAI (Carl): Start preparing the OSG 3.5 repositories (\nhttps://opensciencegrid.org/technology/release/new-release-series/\n).\n    Take notes so that we can generalize the document moving forward.\n\n\nAI (Mat): Upstream OSG GCT patches so we can drop GCT packages from OSG 3.5\n\n\nAI (Diego): Remove group tags from spec files (\nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3547\n)\n\n\n\n\n\n\nAI (Mat): Waiting on Benedikt to verify access to the GLOW origin server, onboard another test user with CHTC RCFs\n\n\nAI (Edgar): Add chkconfig lines to \ngwms-renew-proxies\n (\nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3758\n)\n\n\nNext doc focus this Thursday, July 25 (1:30-5:30pm CDT)\n\n\n\n\nDiscussion\n\n\n\n\nAI (BrianL): Create epic for OSG 3.5\n\n\nAI (Edgar): Create GlideinWMS branch off of v3_4\n\n\nAI (BrianL): Talk to Diego about doc focus expectations\n\n\nThere were some compat issues between 3.5 factories and 3.4.2 frontends. Solved with a frontend upgrade to 3.4.5.\n\n\n\n\nSupport Update\n\n\n\n\nBrown (Marian): working on XRootD issue (AAA CMS problems); still in progress\n\n\nGGUS ticket w/ Doug Johnson about using Let's Encrypt  \n\n\nproblems with using LVS\n\n\nneed doc improvements\n\n\n\n\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.32\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n5\n\n\n-7\n\n\nOpen\n\n\n\n\n\n\n6\n\n\n-2\n\n\nIn Progress\n\n\n\n\n\n\n17\n\n\n+9\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\nReady for Release\n\n\n\n\n\n\n29\n\n\n+1\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nOSG 3.4.32  \n\n\nReady for Testing  \n\n\ngratia-probe 1.20.9\n\n\ncctools 7.0.14\n\n\nmyproxy 6.2.4\n\n\nsingularity 3.2.1-1.1\n\n\nosg-configure 2.4.0\n\n\nosg-oasis 13\n\n\nscitokens-cpp\n\n\nGlideinWMS 3.5\n\n\nxrootd 4.10.0 and plugins\n\n\ncondor 8.8.4\n\n\n\n\n\n\nReady for Release  \n\n\ncvmfs-x509-helper 2.0\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nWe would like to get HTCondor 8.8 into mainline but the default auth removes \nDAEMON_LIST\n so it could break current installations of HTCondor  \n\n\nOSG Investigations Team\n\n\n\n\nHTCondor-CE Gratia probe installed and running at Nebraska slurm. Records look ok.  Need to perform a \"checklist\" of attributes to make sure we are correct.  \n\n\nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3748\n\n\nFound we are not collecting system time.\n\n\n\n\n\n\nCMS asked for application specific attributes to be added to the XRootD Detailed Monitoring Collector.\n\n\nGRACC accounting taskforce - Tasking!!!  See meeting on Wed.\n\n\nNetworking wants a tool to \"go back in time\".\n\n\n\n\nBackburner\n\n\n\n\nWorking with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)\n\n\n\n\nFuture\n\n\n\n\nLots of GRACC questions: \nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3642\n\n\n\n\nOngoing\n\n\n\n\nGRACC Project\n\n\nStashCache Project\n\n\n\n\nDiscussions\n\n\nNone this week", 
             "title": "July 22, 2019"
