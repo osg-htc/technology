@@ -1592,7 +1592,7 @@
                 
                 <h1 id="osg-technology-area-meeting-5-august-2019">OSG Technology Area Meeting,  5 August 2019<a class="headerlink" href="#osg-technology-area-meeting-5-august-2019" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: 719-284-5267, PIN: 57363; <a href="https://www.uberconference.com/osgblin">https://www.uberconference.com/osgblin</a><br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Carl, Diego, Derek, Edgar, Marian, Mat, Tim</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>BrianL OOO Wed-Fri</li>
@@ -1647,14 +1647,9 @@
 <li>OSG 3.5  <ul>
 <li>Package list: <a href="https://docs.google.com/spreadsheets/d/1WNk8F5XRQSJw3mwTFejJBLNbrQptdUxpWpZ0UEu-4MI/edit#gid=566881086">https://docs.google.com/spreadsheets/d/1WNk8F5XRQSJw3mwTFejJBLNbrQptdUxpWpZ0UEu-4MI/edit#gid=566881086</a></li>
 <li>Perform packaging work in the <code>osg-3.5</code> SVN branch</li>
-<li>AI (Carl): Start preparing the OSG 3.5 repositories (<a href="https://opensciencegrid.org/technology/release/new-release-series/">https://opensciencegrid.org/technology/release/new-release-series/</a>).  <ul>
-<li>Release HTCondor 8.9.x into development</li>
-<li>Create a "devops" repo and build packages into it</li>
-</ul>
-</li>
+<li>AI (Carl): Prepare the "devops" repository (<a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3291">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3291</a>)</li>
 <li>AI (Mat, Diego): Remove GUMS and gLexec references from LCMAPS (<a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3776">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3776</a>)</li>
-<li>AI (Mat): Upstream OSG GCT patches so we can drop GCT packages from OSG 3.5</li>
-<li>AI (Diego): build HTCondor 8.9.2 into OSG 3.5 with SciTokens support</li>
+<li>AI (Diego): build HTCondor 8.9.2 into upcoming with SciTokens support</li>
 </ul>
 </li>
 <li>AI (Edgar): Add chkconfig lines to <code>gwms-renew-proxies</code> (<a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3758">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3758</a>)</li>
@@ -1663,17 +1658,21 @@
 <ul>
 <li>AI (BrianL): Add Diego to VMU mailing list and start introducing him to the VMU test suite [DONE]</li>
 <li>AI (BrianL): Review Gratia tickets and let Carl know if he can move forward with building the RPM [DONE]</li>
+<li>Now that we're depending on more EPEL packaging, we should add <code>epel-testing</code> to the nightlies so that we can catch compatability issues early on.
+    This discussion was precipitated by the recent GlideinWMS/Singularity issues and it was noted that we should also have GlideinWMS integration testing.</li>
 </ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Brown (Marian): working on XRootD issue (AAA CMS problems); still in progress</li>
+<li>CLAS12 (Edgar): starting to support them through the GlueX VO; already registered as a project</li>
+<li>CNAF (Edgar, Mat): StashCache authfile generation broken due to an their hostname being different from what's registered in topology; workaround doesn't appear to work and requires more investigation</li>
 <li>GGUS ticket w/ Doug Johnson about using Let's Encrypt with LVS; still need to create the load-balanced GridFTP + Let's Encrypt document</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>3.4.33</th>
+<th>3.4.34</th>
 <th>&Delta;</th>
 <th>Status</th>
 </tr>
@@ -1780,8 +1779,8 @@
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>AI (TimT): write template for community testing announcements (<a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3755">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3755</a>)  </li>
-<li>Madison ITB nodes need to be rebuilt. itb-ce2 and itb-submit will be upgraded to CentOS 7. itb-ce1 remains at SL6.</li>
+<li>AI (TimT): write template for community testing announcements (<a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3755">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3755</a>)</li>
+<li>AI (TimT): Madison ITB nodes need to be rebuilt. itb-ce2 and itb-submit will be upgraded to CentOS 7. itb-ce1 remains at SL6.</li>
 </ul>
 <h2 id="osg-investigations-team">OSG Investigations Team<a class="headerlink" href="#osg-investigations-team" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1814,8 +1813,8 @@
 </ul>
 <h3 id="discussions">Discussions<a class="headerlink" href="#discussions" title="Permanent link">&para;</a></h3>
 <ul>
-<li>AI (Edgar): Address CMS XCache auth ticket (<a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3774">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3774</a>)</li>
-<li>AI (BrianL): Build an XCache 1.1 RPM pre-release containing ATLAS/CMS RPMs so that Edgar can build the CMS XCache container</li>
+<li>AI (Edgar): Address CMS XCache auth ticket (<a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3774">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3774</a>) [DONE]</li>
+<li>AI (BrianL): Build an XCache 1.1 RPM pre-release containing ATLAS/CMS RPMs so that Edgar can build the CMS XCache container [DONE]</li>
 </ul>
                 
                   
