@@ -2110,7 +2110,8 @@ You will have to test that part locally.</p>
 <p>To test a fresh installation:</p>
 <ol>
 <li>Spin up two VM's and set up the EPEL/OSG repos on both of them.</li>
-<li>Choose one of the VM's, it will be the server VM. Consult these <a href="https://www.opensciencegrid.org/docs/other/gsissh/">instructions</a> to set up the server.</li>
+<li>Choose one of the VM's, it will be the server VM. The hostname of this machine will be referenced below as the <code>&lt;SERVER HOSTNAME&gt;</code>
+    Consult these <a href="https://www.opensciencegrid.org/docs/other/gsissh/">instructions</a> to set up the server.</li>
 <li>
 <p>From the other VM (client):</p>
 <ol>
@@ -2126,21 +2127,21 @@ You will have to test that part locally.</p>
 </li>
 <li>
 <p>Connect to the server:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsissh -p <span class="m">2222</span> <span style="color:red">&lt;server hostname&gt;</span>
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsissh -p <span class="m">2222</span> &lt;SERVER HOSTNAME&gt;
 </pre></div>
 
 
 </li>
 <li>
 <p>Copy a test file to the server:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsiscp -p <span class="m">2222</span> testfile <span style="color:red">&lt;server hostname&gt;</span>:/tmp
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsiscp -p <span class="m">2222</span> testfile &lt;SERVER HOSTNAME&gt;:/tmp
 </pre></div>
 
 
 </li>
 <li>
 <p>Connect to the server via SFTP and grab files:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsisftp -P <span class="m">2222</span> <span style="color:red">&lt;server hostname&gt;</span>
+<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> gsisftp -P <span class="m">2222</span> &lt;SERVER HOSTNAME&gt;
 <span class="gp">user@host $</span> <span class="nb">cd</span> /tmp
 <span class="gp">user@host $</span> get testfile
 </pre></div>

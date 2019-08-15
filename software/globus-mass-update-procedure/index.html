@@ -1588,12 +1588,13 @@
 <p>Create a separate SVN branch and populate it with all the packages you will update. (Get the list from the doc created above).</p>
 <div class="codehilite"><pre><span></span><span class="gp">[you@uw]$</span> svn mkdir file:///p/vdt/workspace/svn/native/redhat/branches/globus
 <span class="gp">#</span><span class="c1">## From a checkout, in native/redhat</span>
-<span class="gp">[you@uw]$</span> <span class="k">for</span> x in <span style="color:red">&lt;PACKAGES&gt;</span><span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-     svn copy <span class="nv">$x</span> branches/globus/<span class="si">${</span><span class="nv">x</span><span class="p">#trunk/</span><span class="si">}</span><span class="p">;</span> <span class="se">\</span>
+<span class="hll"><span class="gp">[you@uw]$</span> <span class="k">for</span> x in &lt;PACKAGES&gt;<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+</span>     svn copy <span class="nv">$x</span> branches/globus/<span class="si">${</span><span class="nv">x</span><span class="p">#trunk/</span><span class="si">}</span><span class="p">;</span> <span class="se">\</span>
    <span class="k">done</span>
 </pre></div>
 
 
+<p>Change <code>&lt;PACKAGES&gt;</code> for the list of package names from generated in the above section (<a href="#docs">Docs</a>))</p>
 <h3 id="koji-matcarl">Koji (Mat/Carl)<a class="headerlink" href="#koji-matcarl" title="Permanent link">&para;</a></h3>
 <p>This requires a Koji administrator. Koji admins as of August 2017 are Mat Selmeci and Carl Edquist.</p>
 <p>Ensure Koji tags exist: a destination tag, and a build tag, one for each dver, e.g.:</p>
@@ -1650,11 +1651,13 @@
 <ol>
 <li>
 <p>Run:</p>
-<div class="codehilite"><pre><span></span><span class="gp">[you@uw]$</span> osg-import-srpm <span class="s2">&quot;<span style="color:red">&lt;URL&gt;</span>&quot;</span>
-<span class="gp">[you@uw]$</span> osg-build-globus --scratch <span style="color:red">&lt;PKG&gt;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><span class="hll"><span class="gp">[you@uw]$</span> osg-import-srpm &lt;URL&gt;
+</span><span class="hll"><span class="gp">[you@uw]$</span> osg-build-globus --scratch &lt;PKG&gt;
+</span></pre></div>
 
 
+<p>Change <code>&lt;URL&gt;</code> for the URL from where the package will be donwloaded e.g. https://dl.fedoraproject.org/pub/epel/6/SRPMS/Packages/g/globus-authz-4.2-1.el6.src.rpm
+and <code>&lt;PKG&gt;</code>&gt; for the name of the package e.g. <code>globus-authz</code></p>
 </li>
 <li>
 <p>Commit - use a message like "Update to 3.12-1 from EPEL (SOFTWARE-2197)"</p>
@@ -1667,30 +1670,33 @@
 <ol>
 <li>
 <p>Run:</p>
-<div class="codehilite"><pre><span></span><span class="gp">[you@uw]$</span> osg-import-srpm --diff3 <span class="s2">&quot;<span style="color:red">&lt;URL&gt;</span>&quot;</span>
+<div class="codehilite"><pre><span></span><span class="gp">[you@uw]$</span> osg-import-srpm --diff3 &lt;URL&gt;
 </pre></div>
 
 
+<p>Change <code>&lt;URL&gt;</code> for the URL from where the package will be donwloaded e.g. https://dl.fedoraproject.org/pub/epel/6/SRPMS/Packages/g/globus-authz-4.2-1.el6.src.rpm</p>
 </li>
 <li>
 <p>Fix merge conflicts in the spec file. If not already there, put a .1 after the Release number to mark the changes as ours.</p>
 </li>
 <li>
 <p>Run:</p>
-<div class="codehilite"><pre><span></span><span class="gp">[you@uw]$</span> osg-build quilt <span style="color:red">&lt;PKG&gt;</span>
+<div class="codehilite"><pre><span></span><span class="gp">[you@uw]$</span> osg-build quilt &lt;PKG&gt;
 </pre></div>
 
 
+<p>Change <code>&lt;PKG&gt;</code>&gt; for the name of the package e.g. <code>globus-authz</code></p>
 </li>
 <li>
 <p>Fix patches if necessary.</p>
 </li>
 <li>
 <p>Run:</p>
-<div class="codehilite"><pre><span></span><span class="gp">[you@uw&gt;]$</span> osg-build-globus --scratch <span style="color:red">&lt;PKG&gt;</span>
+<div class="codehilite"><pre><span></span><span class="gp">[you@uw&gt;]$</span> osg-build-globus --scratch &lt;PKG&gt;
 </pre></div>
 
 
+<p>Change <code>&lt;PKG&gt;</code>&gt; for the name of the package e.g. <code>globus-authz</code></p>
 </li>
 <li>
 <p>Commit - use a message like "Update to 8.29-1 from EPEL and merge OSG changes (SOFTWARE-2197)"</p>
@@ -1738,7 +1744,10 @@
 <ol>
 <li>Merge from <code>trunk</code> to <code>branches/globus</code> first, to pick up any globus changes that may have happened in trunk.</li>
 <li>Merge from <code>branches/globus</code> to <code>trunk</code>.</li>
-<li>Move <code>branches/globus</code> to <code>tags/globus-<span style="color:red">&lt;DATE&gt;</span></code>.</li>
+<li>
+<p>Move <code>branches/globus</code> to <code>tags/globus-&lt;DATE&gt;</code>.</p>
+<p>Where <code>&lt;DATE&gt;</code> is the current date in the following format: YYYY-MM-DD, e.g. 2016-08-29</p>
+</li>
 </ol>
                 
                   

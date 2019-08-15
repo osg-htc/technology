@@ -1783,8 +1783,8 @@ svn merge -c $commit2 \^/native/redhat/trunk/$pkg $pkg
 <h3 id="the-full-set-of-tests-defined">The "full set of tests", defined<a class="headerlink" href="#the-full-set-of-tests-defined" title="Permanent link">&para;</a></h3>
 <p>All of the tests mentioned above.</p>
 <h3 id="running-the-tests-in-vm-universe">Running the tests in VM Universe<a class="headerlink" href="#running-the-tests-in-vm-universe" title="Permanent link">&para;</a></h3>
-<p>In the case that the package you're testing is covered by osg-tested-internal, you can run the full set of tests in a manual VM universe test run. Make sure you meet the <a href="https://github.com/opensciencegrid/vm-test-runs">pre-requisites</a> required to submit VM Universe jobs on <code>osghost.chtc.wisc.edu</code>. After that's done, you can prepare the test suite by running:</p>
-<div class="codehilite"><pre><span></span><span class="go">osg-run-tests &#39;Testing <span style="color:red">&lt;change x&gt;</span>&#39;</span>
+<p>In the case that the package you're testing is covered by osg-tested-internal, you can run the full set of tests in a manual VM universe test run. Make sure you meet the <a href="https://github.com/opensciencegrid/vm-test-runs">pre-requisites</a> required to submit VM Universe jobs on <code>osghost.chtc.wisc.edu</code>. After that's done, prepare the test suite with a comment describing the test run. For example, if you were testing a new <code>htcondor-ce</code> package:</p>
+<div class="codehilite"><pre><span></span><span class="go">osg-run-tests &#39;Testing htcondor-ce-3.2.1-1&#39;</span>
 </pre></div>
 
 
@@ -1822,7 +1822,7 @@ svn merge -c $commit2 \^/native/redhat/trunk/$pkg $pkg
 </ul>
 <p>For example (hypothetical promotion request for HTCondor-CE):</p>
 <blockquote>
-<p>May I promote <code>htcondor-ce-2.3.4-2.osg3*.el*</code>? I ran a complete set of automated tests <span style="color:red">&lt;LINK THE PRECEDING TEXT OR SEPARATELY HERE></span>; the HTCondor-CE tests ran and passed in all cases. There were some spurious failures of RSV in the All condition for RHEL 6, but this is a known failure case that is independent of HTCondor-CE. I also did a few spot checks manually (one VM each for SL 6 and SL 7), and in each case setting <code>use_frobnosticator = true</code> in the configuration resulted in the expected behavior as defined in the description field above. The <code>built-against-pkgs</code> tool shows that I built against all the latest HTCondor and BLAHP builds, see below. <span style="color:red">&lt;JIRA-formatted table comes after></span></p>
+<p>May I promote <code>htcondor-ce-2.3.4-2.osg3*.el*</code>? I ran a complete set of automated tests &lt;LINK THE PRECEDING TEXT OR SEPARATELY HERE>; the HTCondor-CE tests ran and passed in all cases. There were some spurious failures of RSV in the All condition for RHEL 6, but this is a known failure case that is independent of HTCondor-CE. I also did a few spot checks manually (one VM each for SL 6 and SL 7), and in each case setting <code>use_frobnosticator = true</code> in the configuration resulted in the expected behavior as defined in the description field above. The <code>built-against-pkgs</code> tool shows that I built against all the latest HTCondor and BLAHP builds, see below. &lt;JIRA-formatted table comes after></p>
 </blockquote>
 <h3 id="promoting">Promoting<a class="headerlink" href="#promoting" title="Permanent link">&para;</a></h3>
 <p>Follow these steps to request promotion, promote a package, and note the promotion in JIRA:</p>

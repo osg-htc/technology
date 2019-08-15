@@ -1513,13 +1513,18 @@
 <p>You have three options for the downloads:</p>
 <ol>
 <li>Use the links in the web interface</li>
-<li>Use the koji command-line interface against the Fedora koji:<ol>
+<li>
+<p>Use the koji command-line interface against the Fedora koji:</p>
+<ol>
 <li>Download <code>fedora-koji.conf</code>, attached to this page</li>
-<li>Run <code>koji --noauth -c fedora-koji.conf download-build --debuginfo <span style="color:red">&lt;BUILD_NVR&gt;</span></code></li>
+<li>Run <code>koji --noauth -c fedora-koji.conf download-build --debuginfo &lt;PACKAGE_NVR&gt;</code></li>
 <li>Delete RPMs for architectures we do not care about (see list above)</li>
 </ol>
+<p><code>&lt;PACKAGE_NVR&gt;</code> is the Name-Version-Release information about the build, which was determined in the step 1 above</p>
 </li>
-<li>Dig around in <a href="https://kojipkgs.fedoraproject.org/packages/">https://kojipkgs.fedoraproject.org/packages/</a></li>
+<li>
+<p>Dig around in <a href="https://kojipkgs.fedoraproject.org/packages/">https://kojipkgs.fedoraproject.org/packages/</a></p>
+</li>
 </ol>
 </li>
 </ol>
@@ -1532,26 +1537,30 @@
 
 
 <p>should be empty</p>
-<p>If not, <span style="color:red">STOP</span> and sign them using the OSG RPM key -- talk to Mat</p>
+<p>If not, <strong>STOP</strong> and sign them using the OSG RPM key -- talk to Mat</p>
 </li>
 <li>
 <p>Import the RPMs themselves into the Koji system</p>
-<div class="codehilite"><pre><span></span><span class="gp">[user@client ~] $</span> osg-koji import <span style="color:red">&lt;RPM_DIRECTORY&gt;</span>/*.rpm
+<div class="codehilite"><pre><span></span><span class="gp">[user@client ~] $</span> osg-koji import &lt;RPM_DIRECTORY&gt;/*.rpm
 </pre></div>
 
 
-<p>They will not be in any tags at this point</p>
+<p>Where <code>&lt;RPM_DIRECTORY&gt;</code> is the directory where you have downloaded the rpms.
+They will not be in any tags at this point</p>
 </li>
 <li>
 <p>Add the package to the whitelist for our koji tag:</p>
-<div class="codehilite"><pre><span></span><span class="gp">[user@client ~] $</span> osg-koji add-pkg <span style="color:red">&lt;OUR_KOJI_TAG&gt;</span> <span style="color:red">&lt;PACKAGE&gt;</span> --owner<span class="o">=</span><span class="s2">&quot;<span style="color:red">&lt;YOUR_KOJI_USERNAME&gt;</span>&quot;</span>
+<div class="codehilite"><pre><span></span><span class="gp">[user@client ~] $</span> osg-koji add-pkg &lt;OUR_KOJI_TAG&gt; &lt;PACKAGE&gt; --owner<span class="o">=</span><span class="s2">&quot;&lt;YOUR_KOJI_USERNAME&gt;&quot;</span>
 </pre></div>
 
 
+<p>Where <code>&lt;OUR_KOJI_TAG&gt;</code> is one of those listed in the table at the top of this page, an example of <code>&lt;PACKAGE&gt;</code> is:
+<code>cvmfs-config-osg-2.4-1.osg34.el6</code> and <code>&lt;YOUR_KOJI_USERNAME&gt;</code> is the username you use to interact with the Koji
+system</p>
 </li>
 <li>
 <p>Actually tag the builds:</p>
-<div class="codehilite"><pre><span></span><span class="gp">[user@client ~] $</span> osg-koji tag-pkg <span style="color:red">&lt;OUR_KOJI_TAG&gt; &lt;BUILD&gt;</span>
+<div class="codehilite"><pre><span></span><span class="gp">[user@client ~] $</span> osg-koji tag-pkg &lt;OUR_KOJI_TAG&gt; &lt;PACKAGE&gt;
 </pre></div>
 
 
@@ -1576,14 +1585,16 @@ done
 <ol>
 <li>
 <p>Find out the NVR of the build:</p>
-<div class="codehilite"><pre><span></span><span class="gp">[user@client ~] $</span> osg-koji list-tagged <span style="color:red">&lt;OUR_KOJI_TAG&gt; &lt;PACKAGE&gt;</span>
+<div class="codehilite"><pre><span></span><span class="gp">[user@client ~] $</span> osg-koji list-tagged &lt;OUR_KOJI_TAG&gt; &lt;PACKAGE&gt;
 </pre></div>
 
 
+<p>Where <code>&lt;OUR_KOJI_TAG&gt;</code> is one of those listed in the table at the top of this page and an example of <code>&lt;PACKAGE&gt;</code> is:
+<code>cvmfs-config-osg-2.4-1.osg34.el6</code></p>
 </li>
 <li>
 <p>Untag the packages:</p>
-<div class="codehilite"><pre><span></span><span class="gp">[user@client ~] $</span> osg-koji untag-pkg <span style="color:red">&lt;OUR_KOJI_TAG&gt; &lt;BUILD&gt;</span>
+<div class="codehilite"><pre><span></span><span class="gp">[user@client ~] $</span> osg-koji untag-pkg &lt;OUR_KOJI_TAG&gt; &lt;PACKAGE&gt;
 </pre></div>
 
 

@@ -1547,31 +1547,31 @@
 <h3 id="enabling-ipv6">Enabling IPV6<a class="headerlink" href="#enabling-ipv6" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Determine the public IPv6 address of your host (highlighted in <span style="color:red">red<span class="twiki-macro ENDCOLOR">): </p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> nslookup -type<span class="o">=</span>aaaa &lt;hostname&gt;
-<span class="go">Server:     132.239.0.252      </span>
+<p>Determine the public IPv6 address of your host. In the example below that would be <code>2001:400:2410:29::182</code>:</p>
+<div class="codehilite"><pre><span></span><span class="hll"><span class="gp">user@host $</span> nslookup -type<span class="o">=</span>aaaa &lt;HOSTNAME&gt;
+</span><span class="go">Server:     132.239.0.252      </span>
 <span class="go">Address:    132.239.0.252#53</span>
 
 <span class="go">Non-authoritative answer:</span>
-<span class="go">ipv6vm001.fnal.gov  has AAAA address <span style="color:red">2001:400:2410:29::182</span></span>
-</pre></div>
+<span class="hll"><span class="go">ipv6vm001.fnal.gov  has AAAA address 2001:400:2410:29::182</span>
+</span></pre></div>
 
 
-<p>Replacing <code>&lt;hostname&gt;</code> with your machine's hostname.</p>
+<p>Replacing <code>&lt;HOSTNAME&gt;</code> with your machine's hostname.</p>
 </li>
 <li>
 <p>Ask your network administrator for your IPv6 default gateway</p>
 </li>
 <li>
 <p>Modify <code>/etc/sysconfig/network-scripts/ifcfg-eth0</code> and be sure these lines exist, and : </p>
-<div class="codehilite"><pre><span></span>IPV6INIT=yes
-IPV6_AUTOCONF=no
-IPV6ADDR=&quot;<span style="color:red">IPv6 address</span>&quot;
-IPV6_DEFAULTGW=&quot;The IPV6 Default Gateway&quot;
+<div class="codehilite"><pre><span></span><span class="go">IPV6INIT=yes</span>
+<span class="go">IPV6_AUTOCONF=no</span>
+<span class="hll"><span class="go">IPV6ADDR=&lt;IPV6 ADDRESS&gt;&quot;</span>
+</span><span class="go">IPV6_DEFAULTGW=&quot;The IPV6 Default Gateway&quot;</span>
 </pre></div>
 
 
-<p>Replacing <span style="color:red">IPv6 address</span> with the address found in step 1.</p>
+<p>Replace <code>&lt;IPV6 ADDRESS&gt;</code> with the address found in step 1.</p>
 </li>
 <li>
 <p>Restart the network devices:</p>

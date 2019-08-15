@@ -1625,8 +1625,8 @@ The server can be stopped with <code>Ctrl-C</code>.</p>
 <li>
 <p>Create a branch based on a branch from the <code>upstream</code> repository:</p>
 <div class="codehilite"><pre><span></span><span class="gp">$</span> git fetch --all
-<span class="gp">$</span> git checkout -b <span style="color:red">&lt;BRANCH NAME&gt;</span> upstream/<span style="color:red">&lt;UPSTREAM BRANCH NAME&gt;</span>
-</pre></div>
+<span class="hll"><span class="gp">$</span> git checkout -b &lt;BRANCH NAME&gt; upstream/&lt;UPSTREAM BRANCH NAME&gt;
+</span></pre></div>
 
 
 <p>Replace <code>&lt;BRANCH NAME&gt;</code> with a name of your choice and <code>&lt;UPSTREAM BRANCH NAME&gt;</code> with a branch name from the
@@ -1663,20 +1663,22 @@ For example, instructors for the 2018 User School should use the <code>materials
 </li>
 <li>
 <p>Continue making changes until you are satisfied with the preview, then stage your changes in git:</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> git add <span style="color:red">&lt;YOUR FILE&gt; &lt;YOUR 2nd FILE&gt;...&lt;YOUR Nth FILE&gt;</span>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> git add &lt;YOUR FILE&gt; &lt;YOUR 2nd FILE&gt;...&lt;YOUR Nth FILE&gt;
 </pre></div>
 
 
-<p>Adding each file that contains changes that you'd wish to make.
+<p>Where <code>&lt;YOUR * FILE&gt;</code> is any file that contains changes that you'd wish to make.
 If you are adding a new page, one of the files should be <code>mkdocs.yml</code>.</p>
 </li>
 <li>
 <p>Commit your changes and push them to your Github fork:</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> git commit -m <span class="s2">&quot;<span style="color:red">&lt;DESCRIPTIVE COMMIT MESSAGE&gt;</span>&quot;</span>
-<span class="gp">$</span> git push origin
+<div class="codehilite"><pre><span></span><span class="hll"><span class="gp">$</span> git commit -m <span class="s2">&quot;&lt;DESCRIPTIVE COMMIT MESSAGE&gt;&quot;</span>
+</span><span class="gp">$</span> git push origin
 </pre></div>
 
 
+<p>Where <code>&lt;DESCRIPTIVE COMMIT MESSAGE&gt;</code> is a meaningful short text that identifies the changes applied, it is a good
+practice, to concatenate the ticket number associated e.g. "Removing color macros (SOFTWARE-3739)"</p>
 </li>
 <li>
 <p>From your Github fork, <a href="https://help.github.com/articles/creating-a-pull-request/">submit a pull request</a></p>
