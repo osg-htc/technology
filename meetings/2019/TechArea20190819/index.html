@@ -1494,9 +1494,10 @@
                 
                 <h1 id="osg-technology-area-meeting-19-august-2019">OSG Technology Area Meeting, 19 August 2019<a class="headerlink" href="#osg-technology-area-meeting-19-august-2019" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: 719-284-5267, PIN: 57363; <a href="https://www.uberconference.com/osgblin">https://www.uberconference.com/osgblin</a><br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Diego, Marco Mambelli, Marian, Matyas</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
+<li>HTCondor Fun day this Friday</li>
 <li>IRIS-HEP retreat September 12, 13: block your calendars</li>
 <li>TimT OOO, returning 8/26</li>
 <li>Carl OOO, returning 8/29</li>
@@ -1552,19 +1553,39 @@
 <li>Package list: <a href="https://docs.google.com/spreadsheets/d/1WNk8F5XRQSJw3mwTFejJBLNbrQptdUxpWpZ0UEu-4MI/edit#gid=566881086">https://docs.google.com/spreadsheets/d/1WNk8F5XRQSJw3mwTFejJBLNbrQptdUxpWpZ0UEu-4MI/edit#gid=566881086</a></li>
 <li>Perform packaging work in the <code>osg-3.5</code> and <code>devops</code> SVN branches</li>
 <li>AI (Mat): Remove GUMS and gLexec references from LCMAPS (<a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3776">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3776</a>)</li>
-<li>AI (BrianL): Investigate OSG 3.5 test failures (slurm config, condor 8.6 -&gt; 8.6 upgrades, GridFTP + HDFS failures)</li>
+<li>AI (BrianL): Investigate OSG 3.5 test failures (slurm config, condor 8.6 -&gt; 8.8 upgrades, GridFTP + HDFS failures)</li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>We decided to punt on the new GPG keys (SOFTWARE-3275) for OSG 3.4.34/3.5.0</li>
+<li>HTCondor yum upgrade failures are due to dropping CREAM support in OSG 3.5 and we hope to find packaging solution</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Brown (Marian): working on XRootD issue (AAA CMS problems); still in progress</li>
-<li>Syracuse (Mat, Edgar): investigated GLOW file transfer issues with Syracuse.</li>
+<li>Syracuse (Mat, Edgar): initial test jobs succeeded, submitting larger test jobs for further validation</li>
 <li>Purdue (Edgar): CMS XCache mostly set up (2 caches, 1 redirector) and just need to open the firewall for the last verification tests</li>
 <li>GGUS ticket w/ Doug Johnson about using Let's Encrypt with LVS; still need to create the ticket for load-balanced GridFTP + Let's Encrypt document</li>
+<li>Vanderbilt (Marian): answered XRootD questions about how to track down misbehaving users</li>
 </ul>
+<h1 id="osg-investigations-team">OSG Investigations Team<a class="headerlink" href="#osg-investigations-team" title="Permanent link">&para;</a></h1>
+<p>No updates this week</p>
+<h2 id="backburner">Backburner<a class="headerlink" href="#backburner" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Working with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)</li>
+</ul>
+<h2 id="future">Future<a class="headerlink" href="#future" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Lots of GRACC questions: <a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-3642">https://opensciencegrid.atlassian.net/browse/SOFTWARE-3642</a></li>
+</ul>
+<h2 id="ongoing">Ongoing<a class="headerlink" href="#ongoing" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://opensciencegrid.atlassian.net/projects/GRACC">GRACC Project</a></li>
+<li><a href="http://opensciencegrid.org/docs/data/stashcache/overview/">StashCache Project</a></li>
+</ul>
+<h2 id="discussions">Discussions<a class="headerlink" href="#discussions" title="Permanent link">&para;</a></h2>
                 
                   
                 
