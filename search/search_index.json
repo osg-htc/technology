@@ -2436,6 +2436,46 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2019/TechArea20190819/", 
+            "text": "OSG Technology Area Meeting, 19 August 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n   \n\n\nAnnouncements\n\n\n\n\nIRIS-HEP retreat September 12, 13: block your calendars\n\n\nTimT OOO, returning 8/26\n\n\nCarl OOO, returning 8/29\n\n\nEdgar OOO, returning 9/2\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: Mat\n\n\nNext week: TimT\n\n\n5 (-2) open FreshDesk tickets\n\n\n2 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n159\n\n\n+3\n\n\nOpen\n\n\n\n\n\n\n45\n\n\n+2\n\n\nIn Progress\n\n\n\n\n\n\n13\n\n\n+0\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.4.34  \n\n\nAI (Brian): Stash Origin changes; osg-xrootd support\n\n\nAI (Mat): Ping Marco to test osg-configure changes\n\n\n\n\n\n\nOSG 3.5  \n\n\nPackage list: \nhttps://docs.google.com/spreadsheets/d/1WNk8F5XRQSJw3mwTFejJBLNbrQptdUxpWpZ0UEu-4MI/edit#gid=566881086\n\n\nPerform packaging work in the \nosg-3.5\n and \ndevops\n SVN branches\n\n\nAI (Mat): Remove GUMS and gLexec references from LCMAPS (\nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3776\n)\n\n\nAI (BrianL): Investigate OSG 3.5 test failures (slurm config, condor 8.6 -\n 8.6 upgrades, GridFTP + HDFS failures)\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\n\n\nBrown (Marian): working on XRootD issue (AAA CMS problems); still in progress\n\n\nSyracuse (Mat, Edgar): investigated GLOW file transfer issues with Syracuse.\n\n\nPurdue (Edgar): CMS XCache mostly set up (2 caches, 1 redirector) and just need to open the firewall for the last verification tests\n\n\nGGUS ticket w/ Doug Johnson about using Let's Encrypt with LVS; still need to create the ticket for load-balanced GridFTP + Let's Encrypt document", 
+            "title": "August, 19 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190819/#osg-technology-area-meeting-19-august-2019", 
+            "text": "Coordinates:  Conference: 719-284-5267, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:", 
+            "title": "OSG Technology Area Meeting, 19 August 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190819/#announcements", 
+            "text": "IRIS-HEP retreat September 12, 13: block your calendars  TimT OOO, returning 8/26  Carl OOO, returning 8/29  Edgar OOO, returning 9/2", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190819/#triage-duty", 
+            "text": "This week: Mat  Next week: TimT  5 (-2) open FreshDesk tickets  2 (+0) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190819/#jira", 
+            "text": "# of tickets   State      159  +3  Open    45  +2  In Progress    13  +0  Ready for Testing    1  +1  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190819/#osg-software-team", 
+            "text": "OSG 3.4.34    AI (Brian): Stash Origin changes; osg-xrootd support  AI (Mat): Ping Marco to test osg-configure changes    OSG 3.5    Package list:  https://docs.google.com/spreadsheets/d/1WNk8F5XRQSJw3mwTFejJBLNbrQptdUxpWpZ0UEu-4MI/edit#gid=566881086  Perform packaging work in the  osg-3.5  and  devops  SVN branches  AI (Mat): Remove GUMS and gLexec references from LCMAPS ( https://opensciencegrid.atlassian.net/browse/SOFTWARE-3776 )  AI (BrianL): Investigate OSG 3.5 test failures (slurm config, condor 8.6 -  8.6 upgrades, GridFTP + HDFS failures)", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190819/#discussion", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190819/#support-update", 
+            "text": "Brown (Marian): working on XRootD issue (AAA CMS problems); still in progress  Syracuse (Mat, Edgar): investigated GLOW file transfer issues with Syracuse.  Purdue (Edgar): CMS XCache mostly set up (2 caches, 1 redirector) and just need to open the firewall for the last verification tests  GGUS ticket w/ Doug Johnson about using Let's Encrypt with LVS; still need to create the ticket for load-balanced GridFTP + Let's Encrypt document", 
+            "title": "Support Update"
+        }, 
+        {
             "location": "/meetings/2019/TechArea20190812/", 
             "text": "OSG Technology Area Meeting, 12 August 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n BrianL, Carl, Derek, Diego, Edgar, Marian, Mat, TimT\n\n\nAnnouncements\n\n\n\n\nIRIS-HEP retreat September 12, 13: block your calendars\n\n\nTimT OOO starting tomorrow, returning 8/26\n\n\nCarl OOO starting next week, returning 8/29\n\n\nEdgar OOO starting next week, returning 9/2\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: Carl\n\n\nNext week: Mat\n\n\n7 (-3) open FreshDesk tickets\n\n\n2 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n156\n\n\n+0\n\n\nOpen\n\n\n\n\n\n\n43\n\n\n+4\n\n\nIn Progress\n\n\n\n\n\n\n13\n\n\n-2\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+1\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.4.34  \n\n\nAI (Brian): Stash Origin changes; osg-xrootd support; xrootd-lcmaps fixes\n\n\nAI (Carl): Support new MySQL versions in the Slurm Gratia probes; UFL kicked back to us\n\n\n\n\n\n\nOSG 3.5  \n\n\nPackage list: \nhttps://docs.google.com/spreadsheets/d/1WNk8F5XRQSJw3mwTFejJBLNbrQptdUxpWpZ0UEu-4MI/edit#gid=566881086\n\n\nPerform packaging work in the \nosg-3.5\n SVN branch\n\n\nAI (Carl): Build \"devops\" and \"contrib\" packages (\nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3291\n)\n\n\nAI (Mat, Diego): Remove GUMS and gLexec references from LCMAPS (\nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3776\n)\n\n\n\n\n\n\n\n\nDiscussion\n\n\n\n\nAI (BrianL): Follow-up with BrianB about HTCondor 8.8 release plans in OSG 3.5\n\n\nAI (BrianL, Mat): Discuss osg-promote routes for goc/devops repos\n\n\n\n\nSupport Update\n\n\n\n\nBrown (Marian): working on XRootD issue (AAA CMS problems); still in progress\n\n\nBrown (Mat, Edgar): helped with Squid/CE topology registrations\n\n\nPurdue (Edgar): CMS XCache mostly set up (2 caches, 1 redirector) and just need to open the firewall for the last verification tests\n\n\nGGUS ticket w/ Doug Johnson about using Let's Encrypt with LVS; still need to create the ticket for load-balanced GridFTP + Let's Encrypt document\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.34\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n15\n\n\n+4\n\n\nOpen\n\n\n\n\n\n\n11\n\n\n-2\n\n\nIn Progress\n\n\n\n\n\n\n10\n\n\n-3\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\nReady for Release\n\n\n\n\n\n\n37\n\n\n+0\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nOSG 3.4.34  \n\n\nReady for Testing  \n\n\nSingularity 3.3.0\n\n\nGlideinWMS 3.5\n\n\nmyproxy 6.2.4\n\n\nosg-configure 2.4.0\n\n\n\n\n\n\nReady for Release  \n\n\nNothing\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\n\n\nAI (TimT): send community testing announcement template for review to technology-team mailing list (\nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3755\n)\n\n\nAI (BrianL): Update community testing policy to note that critical packages will be announced immediately and non-critical packages in weekly digests\n\n\nAI (TimT): Madison ITB nodes need to be rebuilt. itb-ce2 and itb-submit will be upgraded to CentOS 7. itb-ce1 remains at SL6.\n\n\n\n\nOSG Investigations Team\n\n\n\n\nInstalled the CMS XCache docker image into production at UCSD\n\n\nUpdate the OASIS hosts to use the new CVMFS configuration repo (\nhttps://github.com/cvmfs-contrib/config-repo\n)\n\n\nWorking on testing BLAHP systemcpu time.\n\n\n\n\nBackburner\n\n\n\n\nWorking with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)\n\n\n\n\nFuture\n\n\n\n\nLots of GRACC questions: \nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3642\n\n\n\n\nOngoing\n\n\n\n\nGRACC Project\n\n\nStashCache Project\n\n\n\n\nDiscussions\n\n\nNone this week", 
             "title": "August, 12 2019"
