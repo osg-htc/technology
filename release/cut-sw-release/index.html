@@ -608,15 +608,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-update-the-osg-version-rpm" title="Step 1: Update the osg-version RPM" class="md-nav__link">
-    Step 1: Update the osg-version RPM
+  <a href="#step-1-update-the-osg-version-rpm-34-only" title="Step 1: Update the osg-version RPM (3.4 only)" class="md-nav__link">
+    Step 1: Update the osg-version RPM (3.4 only)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-promote-osg-version-and-generate-the-release-list" title="Step 2: Promote osg-version and generate the release list" class="md-nav__link">
-    Step 2: Promote osg-version and generate the release list
+  <a href="#step-2-promote-osg-version-34-only-and-generate-the-release-list" title="Step 2: Promote osg-version (3.4 only) and generate the release list" class="md-nav__link">
+    Step 2: Promote osg-version (3.4 only) and generate the release list
   </a>
   
 </li>
@@ -1586,15 +1586,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-update-the-osg-version-rpm" title="Step 1: Update the osg-version RPM" class="md-nav__link">
-    Step 1: Update the osg-version RPM
+  <a href="#step-1-update-the-osg-version-rpm-34-only" title="Step 1: Update the osg-version RPM (3.4 only)" class="md-nav__link">
+    Step 1: Update the osg-version RPM (3.4 only)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-promote-osg-version-and-generate-the-release-list" title="Step 2: Promote osg-version and generate the release list" class="md-nav__link">
-    Step 2: Promote osg-version and generate the release list
+  <a href="#step-2-promote-osg-version-34-only-and-generate-the-release-list" title="Step 2: Promote osg-version (3.4 only) and generate the release list" class="md-nav__link">
+    Step 2: Promote osg-version (3.4 only) and generate the release list
   </a>
   
 </li>
@@ -1789,7 +1789,7 @@ This document does NOT discuss the policy for deciding what goes into a release,
 <p>The rest of this document makes references to <code>&lt;VERSION(S)&gt;</code> and <code>&lt;NON-UPCOMING VERSIONS(S)&gt;</code>, which refer to a space-delimited list of OSG version(s) and that same list minus <code>upcoming</code> (e.g. <code>3.3.28 3.4.3 upcoming</code> and <code>3.3.28 3.4.3</code>). If you are unsure about either the version or revision, please consult the release manager.</p>
 <h2 id="day-0-generate-preliminary-release-list">Day 0: Generate Preliminary Release List<a class="headerlink" href="#day-0-generate-preliminary-release-list" title="Permanent link">&para;</a></h2>
 <p>The release manager often needs a tentative list of packages to be released. This is done by finding the package differences between osg-testing and the current release.</p>
-<h3 id="step-1-update-the-osg-version-rpm">Step 1: Update the osg-version RPM<a class="headerlink" href="#step-1-update-the-osg-version-rpm" title="Permanent link">&para;</a></h3>
+<h3 id="step-1-update-the-osg-version-rpm-34-only">Step 1: Update the osg-version RPM (3.4 only)<a class="headerlink" href="#step-1-update-the-osg-version-rpm-34-only" title="Permanent link">&para;</a></h3>
 <p>For each release (excluding upcoming), update the version number in the osg-version RPM's spec file and build it in koji:</p>
 <div class="codehilite"><pre><span></span><span class="c1"># If building for the latest release out of trunk</span>
 osg-build koji osg-version
@@ -1800,7 +1800,7 @@ osg-build koji --repo<span class="o">=</span><span class="nv">$MAJOR_VERSION</sp
 
 
 <p>Where <code>&lt;MAJOR VERSION&gt;</code> is of the format <code>x.y</code> (e.g. <code>3.2</code>).</p>
-<h3 id="step-2-promote-osg-version-and-generate-the-release-list">Step 2: Promote osg-version and generate the release list<a class="headerlink" href="#step-2-promote-osg-version-and-generate-the-release-list" title="Permanent link">&para;</a></h3>
+<h3 id="step-2-promote-osg-version-34-only-and-generate-the-release-list">Step 2: Promote osg-version (3.4 only) and generate the release list<a class="headerlink" href="#step-2-promote-osg-version-34-only-and-generate-the-release-list" title="Permanent link">&para;</a></h3>
 <p>Run <code>0-generate-pkg-list</code> from a machine that has your koji-registered user certificate:</p>
 <div class="codehilite"><pre><span></span><span class="nv">VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;VERSION(S)&gt;&quot;</span>
 </pre></div>
@@ -1824,10 +1824,11 @@ osg-build koji --repo<span class="o">=</span><span class="nv">$MAJOR_VERSION</sp
 </pre></div>
 
 
-<p>If there are any discrepancies consult the release manager. You may have to tag or untag packages with the <code>osg-koji</code> tool.</p>
+<p>If there are any discrepancies, consult the release manager. You may have to tag or untag packages with the <code>osg-koji</code> tool.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Please verify that the <code>osg-version</code> RPM is in your set of packages for the release! Also verify that if there is a new version of the <code>osg-tested-internal</code> RPM, then it is included in the release as well!</p>
+<p>Verify that if there is a new version of the <code>osg-tested-internal</code> RPM, then it is included in the release as well!
+For 3.4 releases, also verify that the <code>osg-version</code> RPM is in your set of packages for the release!</p>
 </div>
 <h3 id="step-2-test-pre-release-in-vm-universe">Step 2: Test Pre-Release in VM Universe<a class="headerlink" href="#step-2-test-pre-release-in-vm-universe" title="Permanent link">&para;</a></h3>
 <p>To test pre-release, you will be kicking off a manual VM universe test run from <code>osghost.chtc.wisc.edu</code>.</p>
