@@ -1719,11 +1719,11 @@ and share it among the series.
 The procedure below suggests a way to accomplish this task.</p>
 <p>Current definitions:</p>
 <ul>
-<li>maintenance: None</li>
-<li>current: OSG 3.4 ( <strong>trunk</strong> )</li>
+<li>maintenance: OSG 3.4 ( <strong>trunk</strong> )</li>
+<li>current: OSG 3.5 ( <strong>branches/osg-3.5</strong> )</li>
 </ul>
 <!--
-- future: OSG 3.5 ( *branches/osg-3.5* )
+- future: OSG 3.6 ( *branches/osg-3.6* )
 -->
 
 <p>Procedure:</p>
@@ -1736,7 +1736,7 @@ The procedure below suggests a way to accomplish this task.</p>
 <li>Merge the relevant commits from <strong>trunk</strong> into the <strong>maintenance</strong> branch (see below for tips)</li>
 <li>Optionally, make and test a scratch build from the <strong>maintenance</strong> branch</li>
 <li>Commit the merge</li>
-<li>Make an official build from the <strong>maintenance</strong> branch (e.g.: <code>osg-build koji --repo=3.3 &lt;PACKAGE&gt;</code>)</li>
+<li>Make an official build from the <strong>maintenance</strong> branch (e.g.: <code>osg-build koji --repo=3.4 &lt;PACKAGE&gt;</code>)</li>
 <li>Perform the standard 4 tests for the <strong>maintenance</strong> series (see below)</li>
 <li>As needed (or directed by the Software manager), perform the cross-series tests (see below)</li>
 </ol>
@@ -1754,14 +1754,14 @@ the <code>%dist</code> tag will differ automatically, and hence the <strong>main
 6. Merge the relevant commits from the *trunk* into the *future* branch (see below for tips)
 7. Optionally, make and test a scratch build from the *future* branch
 8. Commit the merge
-9. Make an official build from the *future* branch (e.g.: `osg-build koji --repo=3.4 <PACKAGE>`)
+9. Make an official build from the *future* branch (e.g.: `osg-build koji --repo=3.6 <PACKAGE>`)
 10. Perform install tests for the *future* series (see below)
 11. As needed (or directed by the Software manager), perform the cross-series tests (see below)
 -->
 
 <h3 id="merging-changes-from-one-release-series-to-another">Merging changes from one release series to another<a class="headerlink" href="#merging-changes-from-one-release-series-to-another" title="Permanent link">&para;</a></h3>
-<p>These instructions assume that you are merging from <code>trunk</code> to <code>branches/osg-3.3</code>.
-They also assume that the current directory you are in is a checkout of <code>branches/osg-3.3</code>.
+<p>These instructions assume that you are merging from <code>trunk</code> to <code>branches/osg-3.5</code>.
+They also assume that the current directory you are in is a checkout of <code>branches/osg-3.5</code>.
 I will use <code>$pkg</code> to refer to the name of your package.</p>
 <p>First, you will need the commit numbers for your changes:</p>
 <div class="codehilite"><pre><span></span>svn log \^/native/redhat/trunk/$pkg | less
@@ -1822,16 +1822,15 @@ This is a shorthand description for a standard set of 4 test runs:</p>
 </ul>
 <p>If you have questions, check with the Software Manager to determine the amount of testing that is required per test run.</p>
 <h3 id="the-cross-series-test-defined">The "Cross-Series" test, defined<a class="headerlink" href="#the-cross-series-test-defined" title="Permanent link">&para;</a></h3>
-<p>The cross-series test may need to be run for packages that have been built for multiple release series of the OSG software stack (i.e. 3.3 and 3.4):</p>
+<p>The cross-series test may need to be run for packages that have been built for multiple release series of the OSG software stack (i.e. 3.4 and 3.5):</p>
 <ul>
-<li>On el6, install from the 3.3 repositories, then update from the 3.4 repositories</li>
-<li>On el7, install from the 3.3 repositories, then update from the 3.4 repositories</li>
+<li>On el7, install from the 3.4 repositories, then update from the 3.5 repositories</li>
 </ul>
-<p>Viewed another way, this test is similar to the update installs, above, except from 3.3-release to 3.4-development.</p>
+<p>Viewed another way, this test is similar to the update installs, above, except from 3.4-release to 3.5-development.</p>
 <h3 id="the-long-tail-tests-defined">The "Long Tail" tests, defined<a class="headerlink" href="#the-long-tail-tests-defined" title="Permanent link">&para;</a></h3>
-<p>These tests may need to be run when updating a package that's also in the old, unsupported (3.2) branch. They will consist of:</p>
+<p>These tests may need to be run when updating a package that's also in the old, unsupported (3.3) branch. They will consist of:</p>
 <ul>
-<li>Install from 3.2-release and update to 3.4-development (on el6 only)</li>
+<li>Install from 3.3-release and update to 3.5-development (on el7 only)</li>
 </ul>
 <h3 id="the-full-set-of-tests-defined">The "full set of tests", defined<a class="headerlink" href="#the-full-set-of-tests-defined" title="Permanent link">&para;</a></h3>
 <p>All of the tests mentioned above.</p>
