@@ -1990,7 +1990,7 @@ git clone --depth <span class="m">1</span> file:///p/vdt/workspace/git/repo/tarb
 <h3 id="step-5-remove-old-uw-afs-installations-of-the-tarball-client">Step 5: Remove old UW AFS installations of the tarball client<a class="headerlink" href="#step-5-remove-old-uw-afs-installations-of-the-tarball-client" title="Permanent link">&para;</a></h3>
 <p>To keep space usage down, remove tarball client installations and symlinks under <code>/p/vdt/workspace/tarball-client</code> on UW's AFS that are more than 2 months old.
 To remove them, first check the list:</p>
-<div class="codehilite"><pre><span></span>find /p/vdt/workspace/tarball-client -maxdepth <span class="m">1</span> -mtime +60 -name <span class="m">3</span><span class="se">\*</span> -ls <span class="o">{}</span> +
+<div class="codehilite"><pre><span></span>find /p/vdt/workspace/tarball-client -maxdepth <span class="m">1</span> -mtime +60 -name <span class="m">3</span><span class="se">\*</span> -ls
 </pre></div>
 
 
