@@ -1964,19 +1964,7 @@ locks the repos and regenerates them.</p>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="nb">pushd</span> /p/vdt/public/html/tarball-client
-<span class="k">for</span> ver in <span class="nv">$NON_UPCOMING_VERSIONS</span><span class="p">;</span> <span class="k">do</span>
-    <span class="nv">major_ver</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ver</span><span class="p">%.*</span><span class="si">}</span><span class="s2">&quot;</span>
-    ssh osgcollab@repo.opensciencegrid.org mkdir -p /usr/local/repo/tarball-install/<span class="nv">$major_ver</span>/<span class="nv">$ver</span>
-    scp -p <span class="nv">$major_ver</span>/*/osg-wn-client-<span class="nv">$ver</span>*gz osgcollab@repo.opensciencegrid.org:/usr/local/repo/tarball-install/<span class="nv">$major_ver</span>/<span class="nv">$ver</span>
-<span class="k">done</span>
-<span class="nb">popd</span>
-ssh osgcollab@repo.opensciencegrid.org bin/mk-sims.sh
-<span class="k">for</span> ver in <span class="nv">$NON_UPCOMING_VERSIONS</span><span class="p">;</span> <span class="k">do</span>
-    <span class="nv">major_ver</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ver</span><span class="p">%.*</span><span class="si">}</span><span class="s2">&quot;</span>
-    ssh osgcollab@repo.opensciencegrid.org <span class="s2">&quot;cd /usr/local/repo/tarball-install; ls -l </span><span class="nv">$major_ver</span><span class="s2">/*latest*&quot;</span>
-<span class="k">done</span>
-<span class="c1"># verify the &quot;latest&quot; symlinks point to the version(s) just installed</span>
+<div class="codehilite"><pre><span></span>./2-upload-tarballs <span class="nv">$NON_UPCOMING_VERSIONS</span>
 </pre></div>
 
 
