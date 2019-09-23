@@ -2436,6 +2436,81 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2019/TechArea20190923/", 
+            "text": "OSG Technology Area Meeting, 23 September 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n Mat, Carl, Derek, Edgar, Marian, Marco Mambelli, TimT\n\n\n\nAnnouncements\n\n\n\n\nCC* Workshop Sep 23-25. Tasks for/from this workshop are very high priority!\n\n\nBrianL OOO today, at HTCondor Week Europe Sep 24-27\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: Mat\n\n\nNext week: BrianL\n\n\n15 (+1) open FreshDesk tickets\n\n\n2 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n164\n\n\n+9\n\n\nOpen\n\n\n\n\n\n\n29\n\n\n-1\n\n\nIn Progress\n\n\n\n\n\n\n16\n\n\n+4\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n-1\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.4.36/3.5.2\n\n\nAI (Diego): Apply bosco override patch to HTCondor 8.8.5 in OSG 3.4 (SOFTWARE-3816)\n\n\nAI (Diego): Release stashcache-client (SOFTWARE-3799)\n\n\n\n\n\n\nAI (Carl): Replace HTCondor blahp external with the \"OSG version\" in the HTCondor 8.9 series\n\n\nAI (Carl): Issues with Gratia 1.2.10 need to be fixed (SOFTWARE-3737)\n\n\nAI (Edgar): Test the latest Stash Cache image (SOFTWARE-3810)\n\n\n\n\nDiscussion\n\n\nSupport Update\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.35\n\n\n\n\nBoth\n\n\n\n\n3.5.1\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n2\n\n\n-20\n\n\n1\n\n\n-2\n\n\n3\n\n\n-22\n\n\nOpen\n\n\n\n\n\n\n1\n\n\n+1\n\n\n5\n\n\n+1\n\n\n1\n\n\n-2\n\n\n7\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n2\n\n\n-1\n\n\n2\n\n\n+2\n\n\n6\n\n\n+6\n\n\n10\n\n\n+7\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n1\n\n\n+1\n\n\nReady for Release\n\n\n\n\n\n\n4\n\n\n+1\n\n\n9\n\n\n-17\n\n\n8\n\n\n+2\n\n\n21\n\n\n-14\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware\n\n\nReady for Testing\n\n\n3.4.35\n\n\nGlideinWMS 3.4.6\n\n\nHTCondor 8.8.4\n\n\n\n\n\n\nBoth\n\n\nCVMFS 2.6.3\n\n\n\n\n\n\n3.5.1\n\n\nosg-ce 3.5-2\n\n\nHTCondor CE 4.0.0\n\n\nHTCondor 8.8.5\n\n\n\n\n\n\n\n\n\n\nReady for Release\n\n\n3.4.35\n\n\nSingularity 3.3.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData\n\n\nNothing\n\n\n\n\n\n\nOperations\n\n\nNothing\n\n\n\n\n\n\nContrib\n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week\n\n\nOSG Investigations Team\n\n\n\n\nCMS requested some changes to xrootd monitoring.  Changes are made and deployed... But need debugging.\n\n\nIRIS-HEP meeting went well.\n\n\nWill begin validation of the xrootd monitoring collector.\n\n\nHTCondor-CE gratia probe deployed for several weeks at Nebraska successfully.  Will coordinate with external site to use it (probably Florida).\n\n\nWorked with operations to shorten stashcache negative cache duration.\n\n\nSAND display for CC* workshop: \nhttps://display.sand-ci.org/\n\n\nGRACC development is upcoming for NSF Field of Science improvements.\n\n\n\n\nBackburner\n\n\n\n\nWorking with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)\n\n\n\n\nFuture\n\n\n\n\nLots of GRACC questions: \nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3642\n\n\nGRACC Taskforce\n\n\n\n\nOngoing\n\n\n\n\nGRACC Project\n\n\nStashCache Project\n\n\n\n\nDiscussions\n\n\nNone this week", 
+            "title": "September, 23 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#osg-technology-area-meeting-23-september-2019", 
+            "text": "Coordinates:  Conference: 719-284-5267, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:  Mat, Carl, Derek, Edgar, Marian, Marco Mambelli, TimT", 
+            "title": "OSG Technology Area Meeting, 23 September 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#announcements", 
+            "text": "CC* Workshop Sep 23-25. Tasks for/from this workshop are very high priority!  BrianL OOO today, at HTCondor Week Europe Sep 24-27", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#triage-duty", 
+            "text": "This week: Mat  Next week: BrianL  15 (+1) open FreshDesk tickets  2 (+0) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#jira", 
+            "text": "# of tickets   State      164  +9  Open    29  -1  In Progress    16  +4  Ready for Testing    0  -1  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#osg-software-team", 
+            "text": "OSG 3.4.36/3.5.2  AI (Diego): Apply bosco override patch to HTCondor 8.8.5 in OSG 3.4 (SOFTWARE-3816)  AI (Diego): Release stashcache-client (SOFTWARE-3799)    AI (Carl): Replace HTCondor blahp external with the \"OSG version\" in the HTCondor 8.9 series  AI (Carl): Issues with Gratia 1.2.10 need to be fixed (SOFTWARE-3737)  AI (Edgar): Test the latest Stash Cache image (SOFTWARE-3810)", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#discussion", 
+            "text": "", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#support-update", 
+            "text": "", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#osg-release-team", 
+            "text": "3.4.35   Both   3.5.1   Total   Status      0  +0  2  -20  1  -2  3  -22  Open    1  +1  5  +1  1  -2  7  +0  In Progress    2  -1  2  +2  6  +6  10  +7  Ready for Testing    1  +1  0  +0  0  +0  1  +1  Ready for Release    4  +1  9  -17  8  +2  21  -14  Total      Software  Ready for Testing  3.4.35  GlideinWMS 3.4.6  HTCondor 8.8.4    Both  CVMFS 2.6.3    3.5.1  osg-ce 3.5-2  HTCondor CE 4.0.0  HTCondor 8.8.5      Ready for Release  3.4.35  Singularity 3.3.0        Data  Nothing    Operations  Nothing    Contrib  Nothing", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#discussion_1", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#osg-investigations-team", 
+            "text": "CMS requested some changes to xrootd monitoring.  Changes are made and deployed... But need debugging.  IRIS-HEP meeting went well.  Will begin validation of the xrootd monitoring collector.  HTCondor-CE gratia probe deployed for several weeks at Nebraska successfully.  Will coordinate with external site to use it (probably Florida).  Worked with operations to shorten stashcache negative cache duration.  SAND display for CC* workshop:  https://display.sand-ci.org/  GRACC development is upcoming for NSF Field of Science improvements.", 
+            "title": "OSG Investigations Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#backburner", 
+            "text": "Working with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)", 
+            "title": "Backburner"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#future", 
+            "text": "Lots of GRACC questions:  https://opensciencegrid.atlassian.net/browse/SOFTWARE-3642  GRACC Taskforce", 
+            "title": "Future"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#ongoing", 
+            "text": "GRACC Project  StashCache Project", 
+            "title": "Ongoing"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190923/#discussions", 
+            "text": "None this week", 
+            "title": "Discussions"
+        }, 
+        {
             "location": "/meetings/2019/TechArea20190916/", 
             "text": "OSG Technology Area Meeting, 16 September 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n BrianL, Carl, Diego, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat, TimT\n\n\nAnnouncements\n\n\n\n\nCC* Workshop Sep 23-25. Tasks for/from this workshop are very high priority!\n\n\nBrianL OOO Sep 17-23, HTCondor Week Europe Sep 24-27\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: Edgar\n\n\nNext week: Mat\n\n\n14 (+0) open FreshDesk tickets\n\n\n2 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n155\n\n\n-3\n\n\nOpen\n\n\n\n\n\n\n30\n\n\n+2\n\n\nIn Progress\n\n\n\n\n\n\n12\n\n\n+6\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nPlease review the next triage rotation starting Sep 30\n\n\nOSG 3.4.35/3.5.1  \n\n\nAI (Diego): Apply bosco override patch to HTCondor 8.8.5 in OSG 3.4 (SOFTWARE-3816)\n\n\nAI (Diego): Release stashcache-client (SOFTWARE-3799)\n\n\nAI (Mat): Add support for bosco\ncluster\n override in osg-configure v2 (SOFTWARE-3818)\n\n\n\n\n\n\nAI (Mat): Coordinate with Marco, Jeff, and Judith for the Hosted CE git repo and config management\n\n\nAI (Carl): Replace HTCondor blahp external with the \"OSG version\" in the HTCondor 8.9 series\n\n\nAI (Carl): Issues with Gratia 1.2.10 need to be fixed (SOFTWARE-3737)\n\n\nAI (Edgar): Test the latest Stash Cache image (SOFTWARE-3810)\n\n\n\n\nDiscussion\n\n\n\n\nMarco intends to release GlideinWMS 3.5.1 today so that we can test it in OSG 3.4 and 3.5\n\n\nWe discussed the short-term plan if we find an issue with the latest Bosco tarballs:\n\n\nIf it's an issue with the compiled code, the tarball needs to be rebuilt\n\n\nIf it's an issue with the scripts, Operations will maintain patches\n\n\n\n\n\n\n\n\nSupport Update\n\n\n\n\nBrown (Marian): They're still working on setting their \nstorage.xml\n properly to join CMS AAA\n\n\nCNAF (Edgar): Troubleshooting authorization failures for authenticated Stash Cache\n\n\nCyVerse (Carl): Running into issues with 32-bit depsolving on upgrade\n\n\nHarvard Medical School (Mat): They can actually get user accounts from Harvard so they don't need to use the OpenID-issued certs\n\n\nLHCb (Derek, Carl): LHCb pilot records show up as \nother_egee\n but the raw record doesn't contain this anywhere\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.35\n\n\n\n\nBoth\n\n\n\n\n3.5.1\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n2\n\n\n-20\n\n\n1\n\n\n-2\n\n\n3\n\n\n-22\n\n\nOpen\n\n\n\n\n\n\n1\n\n\n+1\n\n\n5\n\n\n+1\n\n\n1\n\n\n-2\n\n\n7\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n2\n\n\n-1\n\n\n2\n\n\n+2\n\n\n6\n\n\n+6\n\n\n10\n\n\n+7\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n1\n\n\n+1\n\n\nReady for Release\n\n\n\n\n\n\n4\n\n\n+1\n\n\n9\n\n\n-17\n\n\n8\n\n\n+2\n\n\n21\n\n\n-14\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.4.35\n\n\nGlideinWMS 3.4.6\n\n\nHTCondor 8.8.4\n\n\n\n\n\n\nBoth  \n\n\nCVMFS 2.6.3\n\n\n\n\n\n\n3.5.1  \n\n\nosg-ce 3.5-2\n\n\nHTCondor CE 4.0.0\n\n\nHTCondor 8.8.5\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\n3.4.35\n\n\nSingularity 3.3.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week\n\n\nOSG Investigations Team\n\n\n\n\nCMS requested some changes to xrootd monitoring.  Changes are made and deployed... But need debugging.\n\n\nIRIS-HEP meeting went well.\n\n\nWill begin validation of the xrootd monitoring collector.\n\n\nHTCondor-CE gratia probe deployed for several weeks at Nebraska successfully.  Will coordinate with external site to use it (probably Florida).\n\n\nWorked with operations to shorten stashcache negative cache duration.\n\n\nSAND display for CC* workshop: \nhttps://display.sand-ci.org/\n\n\nGRACC development is upcoming for NSF Field of Science improvements.\n\n\n\n\nBackburner\n\n\n\n\nWorking with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)\n\n\n\n\nFuture\n\n\n\n\nLots of GRACC questions: \nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3642\n\n\nGRACC Taskforce\n\n\n\n\nOngoing\n\n\n\n\nGRACC Project\n\n\nStashCache Project\n\n\n\n\nDiscussions\n\n\nNone this week", 
             "title": "September, 16 2019"
