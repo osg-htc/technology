@@ -2436,6 +2436,56 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2019/TechArea20190930/", 
+            "text": "OSG Technology Area Meeting, 30 September 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n   \n\n\nAnnouncements\n\n\nTriage Duty\n\n\n\n\nThis week: BrianL\n\n\nNext week: Mat\n\n\n18 (+3) open FreshDesk tickets\n\n\n2 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n162\n\n\n-2\n\n\nOpen\n\n\n\n\n\n\n30\n\n\n+1\n\n\nIn Progress\n\n\n\n\n\n\n16\n\n\n+0\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nXRootD 4.10.1 was released this morning\n\n\nRelatively few deadlines this month so we'll use our time to pay down some technical debt  \n\n\nComplete sustainable hosted CE project\n\n\nSpin up the new OSG submit host for VMU tests\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\nNone this week  \n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.35\n\n\n\n\nBoth\n\n\n\n\n3.5.1\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n-2\n\n\n0\n\n\n-1\n\n\n0\n\n\n-3\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n-1\n\n\n0\n\n\n-5\n\n\n0\n\n\n-1\n\n\n0\n\n\n-7\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n-2\n\n\n0\n\n\n-2\n\n\n0\n\n\n-6\n\n\n0\n\n\n-10\n\n\nReady for Testing\n\n\n\n\n\n\n2\n\n\n+1\n\n\n1\n\n\n+1\n\n\n0\n\n\n+0\n\n\n3\n\n\n+2\n\n\nReady for Release\n\n\n\n\n\n\n2\n\n\n-2\n\n\n1\n\n\n-8\n\n\n0\n\n\n-8\n\n\n3\n\n\n-18\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nReleased - High Priority  \n\n\nMyProxy, GSI-OpenSSH, Globus GridFTP Server: rebuild without globus-usage\n\n\nSingularity 3.4.0\n\n\nGlideinWMS 3.4.6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3.4.36\n\n\n\n\nBoth\n\n\n\n\n3.5.2\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n26\n\n\n+26\n\n\n2\n\n\n+2\n\n\n28\n\n\n+28\n\n\nOpen\n\n\n\n\n\n\n1\n\n\n+1\n\n\n6\n\n\n+6\n\n\n0\n\n\n+0\n\n\n7\n\n\n+7\n\n\nIn Progress\n\n\n\n\n\n\n2\n\n\n+2\n\n\n5\n\n\n+5\n\n\n8\n\n\n+8\n\n\n15\n\n\n+15\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n3\n\n\n+3\n\n\n37\n\n\n+37\n\n\n10\n\n\n+10\n\n\n50\n\n\n+50\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.4.36  \n\n\nHTCondor 8.8.5\n\n\n\n\n\n\nBoth  \n\n\nCVMFS 2.6.3\n\n\nFrontier Squid 4.8-2.1\n\n\nhosted-ce-tools 0.4\n\n\n\n\n\n\n3.5.1  \n\n\nosg-ce 3.5-2\n\n\nHTCondor CE 4.0.1\n\n\nHTCondor 8.8.5\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\nNothing\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week", 
+            "title": "September, 30 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190930/#osg-technology-area-meeting-30-september-2019", 
+            "text": "Coordinates:  Conference: 719-284-5267, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:", 
+            "title": "OSG Technology Area Meeting, 30 September 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190930/#announcements", 
+            "text": "", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190930/#triage-duty", 
+            "text": "This week: BrianL  Next week: Mat  18 (+3) open FreshDesk tickets  2 (+0) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190930/#jira", 
+            "text": "# of tickets   State      162  -2  Open    30  +1  In Progress    16  +0  Ready for Testing    0  +0  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190930/#osg-software-team", 
+            "text": "XRootD 4.10.1 was released this morning  Relatively few deadlines this month so we'll use our time to pay down some technical debt    Complete sustainable hosted CE project  Spin up the new OSG submit host for VMU tests", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190930/#discussion", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190930/#support-update", 
+            "text": "None this week", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190930/#osg-release-team", 
+            "text": "3.4.35   Both   3.5.1   Total   Status      0  +0  0  -2  0  -1  0  -3  Open    0  -1  0  -5  0  -1  0  -7  In Progress    0  -2  0  -2  0  -6  0  -10  Ready for Testing    2  +1  1  +1  0  +0  3  +2  Ready for Release    2  -2  1  -8  0  -8  3  -18  Total      Released - High Priority    MyProxy, GSI-OpenSSH, Globus GridFTP Server: rebuild without globus-usage  Singularity 3.4.0  GlideinWMS 3.4.6        3.4.36   Both   3.5.2   Total   Status      0  +0  26  +26  2  +2  28  +28  Open    1  +1  6  +6  0  +0  7  +7  In Progress    2  +2  5  +5  8  +8  15  +15  Ready for Testing    0  +0  0  +0  0  +0  0  +0  Ready for Release    3  +3  37  +37  10  +10  50  +50  Total      Software    Ready for Testing    3.4.36    HTCondor 8.8.5    Both    CVMFS 2.6.3  Frontier Squid 4.8-2.1  hosted-ce-tools 0.4    3.5.1    osg-ce 3.5-2  HTCondor CE 4.0.1  HTCondor 8.8.5      Ready for Release    Nothing      Data    Nothing    Operations    Nothing    Contrib    Nothing", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20190930/#discussion_1", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
             "location": "/meetings/2019/TechArea20190923/", 
             "text": "OSG Technology Area Meeting, 23 September 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n Mat, Carl, Derek, Edgar, Marian, Marco Mambelli, TimT\n\n\n\nAnnouncements\n\n\n\n\nCC* Workshop Sep 23-25. Tasks for/from this workshop are very high priority!\n\n\nBrianL OOO today, at HTCondor Week Europe Sep 24-27\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: Mat\n\n\nNext week: BrianL\n\n\n15 (+1) open FreshDesk tickets\n\n\n2 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n164\n\n\n+9\n\n\nOpen\n\n\n\n\n\n\n29\n\n\n-1\n\n\nIn Progress\n\n\n\n\n\n\n16\n\n\n+4\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n-1\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.4.36/3.5.2\n\n\nAI (Diego): Apply bosco override patch to HTCondor 8.8.5 in OSG 3.4 (SOFTWARE-3816)\n\n\nAI (Diego): Release stashcache-client (SOFTWARE-3799)\n\n\n\n\n\n\nAI (Carl): Replace HTCondor blahp external with the \"OSG version\" in the HTCondor 8.9 series\n\n\nAI (Carl): Issues with Gratia 1.2.10 need to be fixed (SOFTWARE-3737)\n\n\nAI (Edgar): Test the latest Stash Cache image (SOFTWARE-3810)\n\n\n\n\nDiscussion\n\n\nSupport Update\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.35\n\n\n\n\nBoth\n\n\n\n\n3.5.1\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n-2\n\n\n0\n\n\n-1\n\n\n0\n\n\n-3\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n-1\n\n\n0\n\n\n-5\n\n\n0\n\n\n-1\n\n\n0\n\n\n-7\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n-2\n\n\n0\n\n\n-2\n\n\n0\n\n\n-6\n\n\n0\n\n\n-10\n\n\nReady for Testing\n\n\n\n\n\n\n2\n\n\n+1\n\n\n1\n\n\n+1\n\n\n0\n\n\n+0\n\n\n3\n\n\n+2\n\n\nReady for Release\n\n\n\n\n\n\n2\n\n\n-2\n\n\n1\n\n\n-8\n\n\n0\n\n\n-8\n\n\n3\n\n\n-18\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nReleased - High Priority\n\n\nMyProxy, GSI-OpenSSH, Globus GridFTP Server: rebuild without globus-usage\n\n\nSingularity 3.4.0\n\n\nGlideinWMS 3.4.6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3.4.36\n\n\n\n\nBoth\n\n\n\n\n3.5.2\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n26\n\n\n+26\n\n\n2\n\n\n+2\n\n\n28\n\n\n+28\n\n\nOpen\n\n\n\n\n\n\n1\n\n\n+1\n\n\n6\n\n\n+6\n\n\n0\n\n\n+0\n\n\n7\n\n\n+7\n\n\nIn Progress\n\n\n\n\n\n\n2\n\n\n+2\n\n\n5\n\n\n+5\n\n\n8\n\n\n+8\n\n\n15\n\n\n+15\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n3\n\n\n+3\n\n\n37\n\n\n+37\n\n\n10\n\n\n+10\n\n\n50\n\n\n+50\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware\n\n\nReady for Testing\n\n\n3.4.36\n\n\nHTCondor 8.8.5\n\n\n\n\n\n\nBoth\n\n\nCVMFS 2.6.3\n\n\nFrontier Squid 4.8-2.1\n\n\nhosted-ce-tools 0.4\n\n\n\n\n\n\n3.5.1\n\n\nosg-ce 3.5-2\n\n\nHTCondor CE 4.0.1\n\n\nHTCondor 8.8.5\n\n\n\n\n\n\n\n\n\n\nReady for Release\n\n\nNothing\n\n\n\n\n\n\n\n\n\n\nData\n\n\nNothing\n\n\n\n\n\n\nOperations\n\n\nNothing\n\n\n\n\n\n\nContrib\n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week\n\n\nOSG Investigations Team\n\n\n\n\nCMS requested some changes to xrootd monitoring.  Changes are made and deployed... But need debugging.\n\n\nWill begin validation of the xrootd monitoring collector.\n\n\nHTCondor-CE gratia probe deployed for several weeks at Nebraska successfully.  Will coordinate with external site to use it (probably Florida).\n\n\nSAND display for CC* workshop: \nhttps://display.sand-ci.org/\n\n\nGRACC development is upcoming for NSF Field of Science improvements.\n\n\n\n\nBackburner\n\n\n\n\nWorking with operations investigating OAuth with co-manage.  Waiting on co-manage (Wisconsin?!?!)\n\n\n\n\nFuture\n\n\n\n\nLots of GRACC questions: \nhttps://opensciencegrid.atlassian.net/browse/SOFTWARE-3642\n\n\nGRACC Taskforce\n\n\n\n\nOngoing\n\n\n\n\nGRACC Project\n\n\nStashCache Project\n\n\n\n\nDiscussions\n\n\nNone this week", 
             "title": "September, 23 2019"
