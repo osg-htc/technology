@@ -2436,6 +2436,66 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2019/TechArea20191007/", 
+            "text": "OSG Technology Area Meeting,  7 October 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n  \n\n\nAnnouncements\n\n\nTriage Duty\n\n\n\n\nThis week: Carl\n\n\nNext week: Edgar\n\n\n20 (+2) open FreshDesk tickets\n\n\n2 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n165\n\n\n+3\n\n\nOpen\n\n\n\n\n\n\n29\n\n\n-1\n\n\nIn Progress\n\n\n\n\n\n\n23\n\n\n+7\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.5.2/3.4.36  \n\n\nKick off VMU tests for stashcache-client\n\n\nscitokens-cpp needs developer testing\n\n\nAI (Mat): Kick off clean installs for Singularity 3.4.1\n\n\nAI (BrianL): Write upgrade instructions for HTCondor-CE 4.0.1\n\n\n\n\n\n\nOSG 3.5.3/3.4.37  \n\n\nAI (Carl): New blahp! (SOFTWARE-3824)\n\n\nAI (Carl): New Gratia probe (SOFTWARE-3737)\n\n\nAI (Diego): Package oidc-agent (SOFTWARE-3820)\n\n\nAI (Diego): Enable checksum verification in xrootd-hdfs (SOFTWARE-3803)\n\n\nAI (Edgar): Investigate auth StashCache issue (SOFTWARE-3810)\n\n\n\n\n\n\nNext doc focus this Thursday Oct 10 at 1:30pm\n\n\n\n\nDiscussion\n\n\n\n\nAI (Carl): Add htcondor/BLAH to the GitHub backup script\n\n\nAI (BrianL): Archive the OSG BLAH repository with pointers to the unified htcondor/BLAH fork\n\n\nAI (TimT): Disable AFS/GitHub sync for htcondor/BLAH\n\n\n\n\nSupport Update\n\n\n\n\nBrown (Marian): Provided some \nsite.xml\n configuration that the admin needs to apply\n\n\nCaltech (Carl): Some HDFS yum warnings upon upgrade that appear to be due to the local site configuration\n\n\nFNAL (Mat): Gave Steve Timm a patch that hardcodes VOMS server to accept TLS \n v1. We don't think we can apply this patch across the board.\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.36\n\n\n\n\nBoth\n\n\n\n\n3.5.2\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n-26\n\n\n0\n\n\n-2\n\n\n0\n\n\n-28\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n-1\n\n\n5\n\n\n-1\n\n\n0\n\n\n+0\n\n\n5\n\n\n-2\n\n\nIn Progress\n\n\n\n\n\n\n2\n\n\n+0\n\n\n5\n\n\n+0\n\n\n8\n\n\n+0\n\n\n15\n\n\n+0\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n3\n\n\n+3\n\n\n37\n\n\n+37\n\n\n10\n\n\n+10\n\n\n20\n\n\n-30\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.4.36  \n\n\nHTCondor 8.8.5\n\n\n\n\n\n\nBoth  \n\n\nCVMFS 2.6.3\n\n\nFrontier Squid 4.8-2.1\n\n\nhosted-ce-tools 0.4\n\n\n\n\n\n\n3.5.1  \n\n\nosg-ce 3.5-2\n\n\nHTCondor CE 4.0.1\n\n\nHTCondor 8.8.5\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\nNothing\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nOSG Investigations\n\n\n\n\nIgor has made some progress on deploying XCaches in Azure, Amazon\n\n\nEdgar met with Caltech folks to discuss CMS XCache usage and deployment. They decided that they will deploy k8s pods for SoCal\n\n\n\n\nDiscussion\n\n\nEdgar mentioned some issues with the submit host setup, including that it's too OSG VO specific and that there is an HTCondor bug that requires a workaround implementation for all UC host certificates", 
+            "title": "October, 7 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#osg-technology-area-meeting-7-october-2019", 
+            "text": "Coordinates:  Conference: 719-284-5267, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:", 
+            "title": "OSG Technology Area Meeting,  7 October 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#announcements", 
+            "text": "", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#triage-duty", 
+            "text": "This week: Carl  Next week: Edgar  20 (+2) open FreshDesk tickets  2 (+0) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#jira", 
+            "text": "# of tickets   State      165  +3  Open    29  -1  In Progress    23  +7  Ready for Testing    0  +0  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#osg-software-team", 
+            "text": "OSG 3.5.2/3.4.36    Kick off VMU tests for stashcache-client  scitokens-cpp needs developer testing  AI (Mat): Kick off clean installs for Singularity 3.4.1  AI (BrianL): Write upgrade instructions for HTCondor-CE 4.0.1    OSG 3.5.3/3.4.37    AI (Carl): New blahp! (SOFTWARE-3824)  AI (Carl): New Gratia probe (SOFTWARE-3737)  AI (Diego): Package oidc-agent (SOFTWARE-3820)  AI (Diego): Enable checksum verification in xrootd-hdfs (SOFTWARE-3803)  AI (Edgar): Investigate auth StashCache issue (SOFTWARE-3810)    Next doc focus this Thursday Oct 10 at 1:30pm", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#discussion", 
+            "text": "AI (Carl): Add htcondor/BLAH to the GitHub backup script  AI (BrianL): Archive the OSG BLAH repository with pointers to the unified htcondor/BLAH fork  AI (TimT): Disable AFS/GitHub sync for htcondor/BLAH", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#support-update", 
+            "text": "Brown (Marian): Provided some  site.xml  configuration that the admin needs to apply  Caltech (Carl): Some HDFS yum warnings upon upgrade that appear to be due to the local site configuration  FNAL (Mat): Gave Steve Timm a patch that hardcodes VOMS server to accept TLS   v1. We don't think we can apply this patch across the board.", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#osg-release-team", 
+            "text": "3.4.36   Both   3.5.2   Total   Status      0  +0  0  -26  0  -2  0  -28  Open    0  -1  5  -1  0  +0  5  -2  In Progress    2  +0  5  +0  8  +0  15  +0  Ready for Testing    0  +0  0  +0  0  +0  0  +0  Ready for Release    3  +3  37  +37  10  +10  20  -30  Total      Software    Ready for Testing    3.4.36    HTCondor 8.8.5    Both    CVMFS 2.6.3  Frontier Squid 4.8-2.1  hosted-ce-tools 0.4    3.5.1    osg-ce 3.5-2  HTCondor CE 4.0.1  HTCondor 8.8.5      Ready for Release    Nothing      Data    Nothing    Operations    Nothing    Contrib    Nothing", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#discussion_1", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#osg-investigations", 
+            "text": "Igor has made some progress on deploying XCaches in Azure, Amazon  Edgar met with Caltech folks to discuss CMS XCache usage and deployment. They decided that they will deploy k8s pods for SoCal", 
+            "title": "OSG Investigations"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191007/#discussion_2", 
+            "text": "Edgar mentioned some issues with the submit host setup, including that it's too OSG VO specific and that there is an HTCondor bug that requires a workaround implementation for all UC host certificates", 
+            "title": "Discussion"
+        }, 
+        {
             "location": "/meetings/2019/TechArea20190930/", 
             "text": "OSG Technology Area Meeting, 30 September 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n BrianL, Carl, Diego, Edgar, Marco Mambelli, Mat, TimT\n\n\nAnnouncements\n\n\nTriage Duty\n\n\n\n\nThis week: BrianL\n\n\nNext week: Carl\n\n\n18 (+3) open FreshDesk tickets\n\n\n2 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n162\n\n\n-2\n\n\nOpen\n\n\n\n\n\n\n30\n\n\n+1\n\n\nIn Progress\n\n\n\n\n\n\n16\n\n\n+0\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nXRootD 4.10.1 was released this morning\n\n\nRelatively few deadlines this month so we'll use our time to pay down some technical debt  \n\n\nComplete sustainable hosted CE project\n\n\nSpin up the new OSG submit host for VMU tests\n\n\n\n\n\n\nNext doc focus Oct 10\n\n\n\n\nDiscussion\n\n\n\n\nNew \"unified\" blahp in the upstream HTCondor punted to 8.9.5 due to build difficulties\n\n\nAI (BrianL): Run VMU tests for GlideinWMS 3.6\n\n\nAI (BrianL): Archive the OSG BLAH repository with pointers to the unified htcondor/BLAH fork\n\n\nAI (Carl): Add htcondor/BLAH to the GitHub backup script\n\n\nAI (TimT): Disable AFS/GitHub sync for htcondor/BLAH\n\n\n\n\nSupport Update\n\n\n\n\nBrown (Marian): Provided some \nsite.xml\n configuration that the admin needs to apply\n\n\nCaltech (Carl): Some HDFS yum warnings upon upgrade that appear to be due to the local site configuration\n\n\nFNAL (Mat): Gave Steve Timm a patch that hardcodes VOMS server to accept TLS \n v1. We don't think we can apply this patch across the board.\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.36\n\n\n\n\nBoth\n\n\n\n\n3.5.2\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n-26\n\n\n0\n\n\n-2\n\n\n0\n\n\n-28\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n-1\n\n\n5\n\n\n-1\n\n\n0\n\n\n+0\n\n\n5\n\n\n-2\n\n\nIn Progress\n\n\n\n\n\n\n2\n\n\n+0\n\n\n5\n\n\n+0\n\n\n8\n\n\n+0\n\n\n15\n\n\n+0\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n3\n\n\n+3\n\n\n37\n\n\n+37\n\n\n10\n\n\n+10\n\n\n20\n\n\n-30\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.4.36  \n\n\nHTCondor 8.8.5\n\n\n\n\n\n\nBoth  \n\n\nCVMFS 2.6.3\n\n\nFrontier Squid 4.8-2.1\n\n\nhosted-ce-tools 0.4\n\n\n\n\n\n\n3.5.1  \n\n\nosg-ce 3.5-2\n\n\nHTCondor CE 4.0.1\n\n\nHTCondor 8.8.5\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\nNothing\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week\n\n\nOSG Investigations\n\n\n\n\nIgor has made some progress on deploying XCaches in Azure, Amazon\n\n\nEdgar met with Caltech folks to discuss CMS XCache usage and deployment. They decided that they will deploy k8s pods for SoCal\n\n\n\n\nDiscussion\n\n\nEdgar mentioned some issues with the submit host setup, including that it's too OSG VO specific and that there is an HTCondor bug that requires a workaround implementation for all UC host certificates", 
             "title": "September, 30 2019"
