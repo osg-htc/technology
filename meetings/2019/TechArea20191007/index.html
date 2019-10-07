@@ -1717,6 +1717,7 @@
 <li>Brown (Marian): Provided some <code>site.xml</code> configuration that the admin needs to apply</li>
 <li>Caltech (Carl): Some HDFS yum warnings upon upgrade that appear to be due to the local site configuration</li>
 <li>FNAL (Mat): Gave Steve Timm a patch that hardcodes VOMS server to accept TLS &gt; v1. We don't think we can apply this patch across the board.</li>
+<li>GRACC information for UMass</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
@@ -1840,11 +1841,14 @@
 <p>None this week</p>
 <h2 id="osg-investigations">OSG Investigations<a class="headerlink" href="#osg-investigations" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Igor has made some progress on deploying XCaches in Azure, Amazon</li>
-<li>Edgar met with Caltech folks to discuss CMS XCache usage and deployment. They decided that they will deploy k8s pods for SoCal</li>
+<li>Simple validation of xrootd-monitoring-collector passed.<ul>
+<li>Working now with Bockjoo on production validation.  Step 1 is making a public test collector</li>
+</ul>
+</li>
+<li>Working with Brian (and Frank?) on GRACC changes.</li>
+<li>Update of GRACC ES, which may require some development changes.</li>
 </ul>
 <h3 id="discussion_2">Discussion<a class="headerlink" href="#discussion_2" title="Permanent link">&para;</a></h3>
-<p>Edgar mentioned some issues with the submit host setup, including that it's too OSG VO specific and that there is an HTCondor bug that requires a workaround implementation for all UC host certificates</p>
                 
                   
                 
