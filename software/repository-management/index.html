@@ -1532,7 +1532,7 @@
 </ul>
 <p>These repos are updated by the <code>mash</code> script running on <code>repo.opensciencegrid.org</code>.</p>
 <h2 id="internal-repositories">Internal repositories<a class="headerlink" href="#internal-repositories" title="Permanent link">&para;</a></h2>
-<p>In addition to the public repositories above, we host two repositories on <code>koji.chtc.wisc.edu</code>. These are updated shortly after jobs are built into them or tagged into them. They are technically publicly accessible, but we discourage the public from using them.</p>
+<p>In addition to the public repositories above, we host two repositories on <code>koji.opensciencegrid.org</code>. These are updated shortly after jobs are built into them or tagged into them. They are technically publicly accessible, but we discourage the public from using them.</p>
 <ul>
 <li>
 <p><strong>minefield</strong>: This repository is a copy of development above.</p>
@@ -1541,9 +1541,9 @@
 <p><strong>prerelease</strong>: This repository is a staging area for software that is slated to be in the next release.</p>
 </li>
 </ul>
-<p>These repos are updated by the <code>kojira</code> daemon running on <code>koji.chtc.wisc.edu</code>.</p>
+<p>These repos are updated by the <code>kojira</code> daemon running on <code>koji.opensciencegrid.org</code>.</p>
 <h2 id="build-repositories">Build repositories<a class="headerlink" href="#build-repositories" title="Permanent link">&para;</a></h2>
-<p>The <code>koji</code> task in <code>osg-build</code> uses the <a href="http://koji.chtc.wisc.edu/koji/taginfo?tagID=472">osg-3.4-el6-build</a>/<a href="http://koji.chtc.wisc.edu/koji/taginfo?tagID=481">osg-3.4-el7-build</a> repo, which is the union of the following repositories:</p>
+<p>The <code>koji</code> task in <code>osg-build</code> uses the <a href="http://koji.opensciencegrid.org/koji/taginfo?tagID=472">osg-3.4-el6-build</a>/<a href="http://koji.opensciencegrid.org/koji/taginfo?tagID=481">osg-3.4-el7-build</a> repo, which is the union of the following repositories:</p>
 <ul>
 <li>Minefield a.k.a. <code>osg-3.4-el6-development</code> / <code>osg-3.4-el7-development</code></li>
 <li>The <code>osg-el6-internal</code> / <code>osg-el7-internal</code> tag (containing build dependencies we do not want to make public)</li>
@@ -1551,7 +1551,7 @@
 <li>CentOS and EPEL</li>
 </ul>
 <p>Koji will work from its internal cache of the above repositories (downloading the packages from the source), and will not update until the build repository is regenerated. By default, Koji does a groupinstall of the build group, then resolves the BuildRequires dependencies.</p>
-<p>The tarball creation scripts use the <a href="https://koji.chtc.wisc.edu/koji/taginfo?tagID=478">osg-3.4-el6-release-build</a> / <a href="https://koji.chtc.wisc.edu/koji/taginfo?tagID=487">osg-3.4-el7-release-build</a> repo, which is the union of the following repositories:</p>
+<p>The tarball creation scripts use the <a href="https://koji.opensciencegrid.org/koji/taginfo?tagID=478">osg-3.4-el6-release-build</a> / <a href="https://koji.opensciencegrid.org/koji/taginfo?tagID=487">osg-3.4-el7-release-build</a> repo, which is the union of the following repositories:</p>
 <ul>
 <li>Release a.k.a. <code>osg-3.4-el6-release</code> / <code>osg-3.4-el7-release</code></li>
 <li>The <code>dist-el6-build</code> / <code>dist-el7-build</code> tag (consisting of the appropriate macros for <code>%dist</code>)</li>

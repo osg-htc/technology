@@ -1743,7 +1743,7 @@
                 
                 
                 <h1 id="koji-workflow">Koji Workflow<a class="headerlink" href="#koji-workflow" title="Permanent link">&para;</a></h1>
-<p>This covers the basics of using and understanding the <a href="https://koji.chtc.wisc.edu/koji">OSG Koji</a> instance. It is meant primarily for OSG Software team members who need to interact with the service.</p>
+<p>This covers the basics of using and understanding the <a href="https://koji.opensciencegrid.org/koji">OSG Koji</a> instance. It is meant primarily for OSG Software team members who need to interact with the service.</p>
 <h2 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h2>
 <p>Using and understanding the following terminology correctly will help in the reading of this document:</p>
 <p><strong>Package</strong><br />
@@ -1817,7 +1817,7 @@ A yum repository created from the contents of a tag at a specific point in time.
 </ul>
 <h3 id="obtaining-a-login">Obtaining a login<a class="headerlink" href="#obtaining-a-login" title="Permanent link">&para;</a></h3>
 <p>You will be using your grid certificate to log in. Email a Koji admin the DN of your certificate, and we will set up a Koji account with the appropriate permissions.</p>
-<p>If you are switching certificate providers, you will need to email a Koji admin with your new DN. You will also need to clear your browser cookies and cache for <code>https://koji.chtc.wisc.edu</code> before trying to use the Koji web interface again. If your CN has changed, you will not be able to use your old certificate.</p>
+<p>If you are switching certificate providers, you will need to email a Koji admin with your new DN. You will also need to clear your browser cookies and cache for <code>https://koji.opensciencegrid.org</code> before trying to use the Koji web interface again. If your CN has changed, you will not be able to use your old certificate.</p>
 <p>Current Koji admins are Mat Selmeci and Carl Edquist.</p>
 <h3 id="configuring-certificate-authentication">Configuring certificate authentication<a class="headerlink" href="#configuring-certificate-authentication" title="Permanent link">&para;</a></h3>
 <p>You must also configure certificate authentication for the command-line tools on your build host:</p>
@@ -1846,12 +1846,12 @@ A yum repository created from the contents of a tag at a specific point in time.
 <h3 id="build-task-results">Build task Results<a class="headerlink" href="#build-task-results" title="Permanent link">&para;</a></h3>
 <h4 id="how-to-find-build-results">How to find build results<a class="headerlink" href="#how-to-find-build-results" title="Permanent link">&para;</a></h4>
 <p>The most recent build results are always shown on the home page of Koji:</p>
-<p><a href="https://koji.chtc.wisc.edu/koji/index">https://koji.chtc.wisc.edu/koji/index</a></p>
+<p><a href="https://koji.opensciencegrid.org/koji/index">https://koji.opensciencegrid.org/koji/index</a></p>
 <p>Clicking on a build result brings you to the build information page. A successful build will result in the build page having build logs, RPMs, and a SRPM.</p>
 <p>If your build isn't in the recent list, you can use the search box in the upper-right-hand corner. Type the exact package name (or use a wildcard), and it will bring up a list of all builds for that package. You can find your build from there. For example, the "lcmaps" package page is here:</p>
-<p><a href="https://koji.chtc.wisc.edu/koji/packageinfo?packageID=56">https://koji.chtc.wisc.edu/koji/packageinfo?packageID=56</a></p>
+<p><a href="https://koji.opensciencegrid.org/koji/packageinfo?packageID=56">https://koji.opensciencegrid.org/koji/packageinfo?packageID=56</a></p>
 <p>And the lcmaps-1.6.6-1.1.osg33.el6 build is here:</p>
-<p><a href="https://koji.chtc.wisc.edu/koji/buildinfo?buildID=7427">https://koji.chtc.wisc.edu/koji/buildinfo?buildID=7427</a></p>
+<p><a href="https://koji.opensciencegrid.org/koji/buildinfo?buildID=7427">https://koji.opensciencegrid.org/koji/buildinfo?buildID=7427</a></p>
 <h4 id="trying-our-your-build">Trying our your build<a class="headerlink" href="#trying-our-your-build" title="Permanent link">&para;</a></h4>
 <p>Because it takes a while for your build to get into one of the regular repositories, it's simplest to download your RPM directly (see the previous section on How to find build results), and install it with:</p>
 <div class="codehilite"><pre><span></span><span class="gp">[root@host]#</span> yum localinstall &lt;RPM&gt;
