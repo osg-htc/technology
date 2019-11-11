@@ -1706,7 +1706,7 @@
                 
                 <h1 id="osg-technology-area-meeting-11-november-2019">OSG Technology Area Meeting, 11 November 2019<a class="headerlink" href="#osg-technology-area-meeting-11-november-2019" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: 719-284-5267, PIN: 57363; <a href="https://www.uberconference.com/osgblin">https://www.uberconference.com/osgblin</a><br />
-<strong>Attending:</strong></p>
+<strong>Attending:</strong> BrianL, Carl, Marco Mambelli, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Marian OOO today</li>
@@ -1766,10 +1766,12 @@
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <ul>
+<li>Nightly/developer VMU tests are functional again after issues with the CHTC pool last week</li>
 <li>AI (BrianL): We decided to add epel-testing to our nightlies to catch potential issues with EPEL updates before they're released</li>
 </ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
+<li>CyVerse (Carl, Mat): upgrade issues were resolved by setting Yum priorities for HTCondor's repositories so that they're better than the OSG repositories. Upstream ticket has been made so that this becomes standard.</li>
 <li>PIC/CIEMAT (BrianL): Job route order in 8.8/8.9 is hash table order instead of config order. Tested a fix for stable from the HTCondor team</li>
 <li>University of Washington (BrianL): Discussed rejoining as an OSG site via Hosted CE. They need to sort outgoing network access on the WNs first.</li>
 </ul>
