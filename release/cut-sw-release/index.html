@@ -2113,7 +2113,7 @@ locks the repos and regenerates them.</p>
 <div class="codehilite"><pre><span></span><span class="nb">cd</span> /tmp
 git clone --depth <span class="m">1</span> file:///p/vdt/workspace/git/repo/tarball-client.git
 <span class="k">for</span> ver in <span class="nv">$NON_UPCOMING_VERSIONS</span><span class="p">;</span> <span class="k">do</span>
-    /p/vdt/workspace/tarball-client/current/sys/osgrun /tmp/tarball-client/upload-tarballs-to-oasis <span class="nv">$ver</span>
+    /p/vdt/workspace/tarball-client/current/sys/osgrun bash -x /tmp/tarball-client/upload-tarballs-to-oasis <span class="nv">$ver</span>
 <span class="k">done</span>
 </pre></div>
 
