@@ -2466,6 +2466,66 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2019/TechArea20191202/", 
+            "text": "OSG Technology Area Meeting,  2 December 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n   \n\n\nAnnouncements\n\n\n\n\nMarian OOO today\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: TimT\n\n\nNext week: Diego\n\n\n7 (-3) open FreshDesk tickets\n\n\n0 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n158\n\n\n-1\n\n\nOpen\n\n\n\n\n\n\n36\n\n\n-3\n\n\nIn Progress\n\n\n\n\n\n\n8\n\n\n-2\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+-1\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.5.7/3.4.41  \n\n\nAI (Mat): Drop or upstream OSG-specific Globus patches (SOFTWARE-2996)\n\n\nAI (Carl): Investigate xrootd-standalone EL6 failures\n\n\nAI (Carl): gsi-openssh: move OSG changes to separate package (SOFTWARE-3915)\n\n\nAI (Carl, Derek): Malformed classad in history file causes gratia probe to silently fail (SOFTWARE-3877)\n\n\nAI (Brian): Write HTCondor-CE 4.1.0 and 3.4.0 documentation (SOFTWARE-3861, SOFTWARE-3862)\n\n\n\n\n\n\nAI (Diego): Replace smart quotes and dashes in osg-notify (SOFTWARE-3893)\n\n\nAI (Carl): Compare HTCondor/HTCondor-CE probe output from history records on itb-ce2 (SOFTWARE-3873)\n\n\nAI (Brian): Rewrite software support (\nhttps://opensciencegrid.org/technology/policy/software-support/\n) documentation\n\n\nAI (Brian): Hosted CE container/chart bug fixes\n\n\nAI (Brian): Working on serving HTML results from osg-sw-submit web server\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\nNone this week  \n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.40\n\n\n\n\nBoth\n\n\n\n\n3.5.6\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n4\n\n\n+0\n\n\n1\n\n\n+0\n\n\n5\n\n\n+0\n\n\nOpen\n\n\n\n\n\n\n1\n\n\n+0\n\n\n4\n\n\n+0\n\n\n1\n\n\n+0\n\n\n6\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n1\n\n\n+0\n\n\n4\n\n\n+0\n\n\n3\n\n\n+0\n\n\n8\n\n\n+0\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\n2\n\n\n+0\n\n\n1\n\n\n+0\n\n\n3\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n2\n\n\n+0\n\n\n14\n\n\n+0\n\n\n6\n\n\n+0\n\n\n22\n\n\n+0\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.6  \n\n\nHTCondor-CE 4.1.0\n\n\n\n\n\n\nBoth  \n\n\nXCache 1.2\n\n\n\n\n\n\n3.4.40  \n\n\nHTCondor-CE 3.4.0\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\n3.5.6  \n\n\nosg-release 3.5-3\n\n\n\n\n\n\nBoth  \n\n\nCCTools 7.0.21\n\n\n\n\n\n\n3.4.40  \n\n\nosg-release 3.4-9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nOSG Investigations Team\n\n\n\n\nUpdate of GRACC ES, which may require some development changes.  GRACC ES update is still ongoing.\n\n\nGithub actions are cool.\n\n\n(Derek) scitokens-cpp update - Make release.\n\n\n(overdue) Simple validation of xrootd-monitoring-collector passed.  \n\n\nData collected for production validation, now to correlate the 2 sources, collector and remote xrootd server.  Difficult step.\n\n\n\n\n\n\n(in progress) Development on perfsonar tape-backup flow with John.\n\n\n(in progress) XRootD development for TCP stats.\n\n\n\n\nDiscussion\n\n\nNone this week", 
+            "title": "December, 2 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#osg-technology-area-meeting-2-december-2019", 
+            "text": "Coordinates:  Conference: 719-284-5267, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:", 
+            "title": "OSG Technology Area Meeting,  2 December 2019"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#announcements", 
+            "text": "Marian OOO today", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#triage-duty", 
+            "text": "This week: TimT  Next week: Diego  7 (-3) open FreshDesk tickets  0 (+0) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#jira", 
+            "text": "# of tickets   State      158  -1  Open    36  -3  In Progress    8  -2  Ready for Testing    1  +-1  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#osg-software-team", 
+            "text": "OSG 3.5.7/3.4.41    AI (Mat): Drop or upstream OSG-specific Globus patches (SOFTWARE-2996)  AI (Carl): Investigate xrootd-standalone EL6 failures  AI (Carl): gsi-openssh: move OSG changes to separate package (SOFTWARE-3915)  AI (Carl, Derek): Malformed classad in history file causes gratia probe to silently fail (SOFTWARE-3877)  AI (Brian): Write HTCondor-CE 4.1.0 and 3.4.0 documentation (SOFTWARE-3861, SOFTWARE-3862)    AI (Diego): Replace smart quotes and dashes in osg-notify (SOFTWARE-3893)  AI (Carl): Compare HTCondor/HTCondor-CE probe output from history records on itb-ce2 (SOFTWARE-3873)  AI (Brian): Rewrite software support ( https://opensciencegrid.org/technology/policy/software-support/ ) documentation  AI (Brian): Hosted CE container/chart bug fixes  AI (Brian): Working on serving HTML results from osg-sw-submit web server", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#discussion", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#support-update", 
+            "text": "None this week", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#osg-release-team", 
+            "text": "3.4.40   Both   3.5.6   Total   Status      0  +0  4  +0  1  +0  5  +0  Open    1  +0  4  +0  1  +0  6  +0  In Progress    1  +0  4  +0  3  +0  8  +0  Ready for Testing    0  +0  2  +0  1  +0  3  +0  Ready for Release    2  +0  14  +0  6  +0  22  +0  Total      Software    Ready for Testing    3.5.6    HTCondor-CE 4.1.0    Both    XCache 1.2    3.4.40    HTCondor-CE 3.4.0      Ready for Release    3.5.6    osg-release 3.5-3    Both    CCTools 7.0.21    3.4.40    osg-release 3.4-9        Data    Nothing    Operations    Nothing    Contrib    Nothing", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#discussion_1", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#osg-investigations-team", 
+            "text": "Update of GRACC ES, which may require some development changes.  GRACC ES update is still ongoing.  Github actions are cool.  (Derek) scitokens-cpp update - Make release.  (overdue) Simple validation of xrootd-monitoring-collector passed.    Data collected for production validation, now to correlate the 2 sources, collector and remote xrootd server.  Difficult step.    (in progress) Development on perfsonar tape-backup flow with John.  (in progress) XRootD development for TCP stats.", 
+            "title": "OSG Investigations Team"
+        }, 
+        {
+            "location": "/meetings/2019/TechArea20191202/#discussion_2", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
             "location": "/meetings/2019/TechArea20191125/", 
             "text": "OSG Technology Area Meeting, 25 November 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Mat, TimT\n\n\nAnnouncements\n\n\n\n\nMarian OOO this week\n\n\nEveryone OOO Friday except maybe Carl, Brian\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: BrianL\n\n\nNext week: TimT\n\n\n10 (-5) open FreshDesk tickets\n\n\n0 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n159\n\n\n-4\n\n\nOpen\n\n\n\n\n\n\n39\n\n\n+5\n\n\nIn Progress\n\n\n\n\n\n\n10\n\n\n+3\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.5.7/3.4.41\n\n\nAI (Mat): Drop or upstream OSG-specific Globus patches (SOFTWARE-2996)\n\n\nAI (Carl, Derek): Malformed classad in history file causes gratia probe to silently fail (SOFTWARE-3877)\n\n\nAI (Carl): gsi-openssh: move OSG changes to separate package (SOFTWARE-3915)\n\n\nAI (Diego): Build XRootD 5.0.0 RC1 (SOFTWARE-3923)\n\n\nAI (Brian): Write HTCondor-CE 4.1.0 and 3.4.0 documentation (SOFTWARE-3861, SOFTWARE-3862)\n\n\n\n\n\n\nAI (Mat): remote worker node setup for Hosted CE container (SOFTWARE-3903, SOFTWARE-3905)\n\n\nAI (Diego): Replace smart quotes and dashes in osg-notify (SOFTWARE-3893)\n\n\nAI (Carl): Compare HTCondor/HTCondor-CE probe output from history records on itb-ce2 (SOFTWARE-3873)\n\n\nosg-sw-submit: Working on serving HTML results from local web server\n\n\n\n\nDiscussion\n\n\nGlideinWMS developer testing completed this morning\n\n\nSupport Update\n\n\nNone this week  \n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.40\n\n\n\n\nBoth\n\n\n\n\n3.5.6\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n4\n\n\n+0\n\n\n1\n\n\n+0\n\n\n5\n\n\n+0\n\n\nOpen\n\n\n\n\n\n\n1\n\n\n+0\n\n\n4\n\n\n+0\n\n\n1\n\n\n+0\n\n\n6\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n1\n\n\n+0\n\n\n4\n\n\n+0\n\n\n3\n\n\n+0\n\n\n8\n\n\n+0\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\n2\n\n\n+0\n\n\n1\n\n\n+0\n\n\n3\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n2\n\n\n+0\n\n\n14\n\n\n+0\n\n\n6\n\n\n+0\n\n\n22\n\n\n+0\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing\n\n\n3.5.6\n\n\nHTCondor-CE 4.1.0\n\n\n\n\n\n\nBoth\n\n\nXCache 1.2\n\n\n\n\n\n\n3.4.40\n\n\nHTCondor-CE 3.4.0\n\n\n\n\n\n\n\n\n\n\nReady for Release\n\n\n3.5.6\n\n\nosg-release 3.5-3\n\n\n\n\n\n\nBoth\n\n\nCCTools 7.0.21\n\n\n\n\n\n\n3.4.40\n\n\nosg-release 3.4-9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nOSG Investigations Team\n\n\n\n\nUpdate of GRACC ES, which may require some development changes.  GRACC ES update is still ongoing.\n\n\nGithub actions are cool.\n\n\n(Derek) scitokens-cpp update - Make release.\n\n\n(overdue) Simple validation of xrootd-monitoring-collector passed.  \n\n\nData collected for production validation, now to correlate the 2 sources, collector and remote xrootd server.  Difficult step.\n\n\n\n\n\n\n(in progress) Development on perfsonar tape-backup flow with John.\n\n\n(in progress) XRootD development for TCP stats.\n\n\n\n\nDiscussion\n\n\nNone this week", 
             "title": "November, 25 2019"
