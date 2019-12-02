@@ -624,22 +624,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-on-the-month-of-the-340-release" title="Do on the month of the 3.4.0 release" class="md-nav__link">
-    Do on the month of the 3.4.0 release
+  <a href="#do-on-the-month-of-the-3x0-release" title="Do on the month of the 3.X.0 release" class="md-nav__link">
+    Do on the month of the 3.X.0 release
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-immediately-after-the-340-release" title="Do immediately after the 3.4.0 release" class="md-nav__link">
-    Do immediately after the 3.4.0 release
+  <a href="#do-immediately-after-the-3x0-release" title="Do immediately after the 3.X.0 release" class="md-nav__link">
+    Do immediately after the 3.X.0 release
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-sometime-after-the-340-release" title="Do sometime after the 3.4.0 release" class="md-nav__link">
-    Do sometime after the 3.4.0 release
+  <a href="#do-sometime-after-the-3x0-release" title="Do sometime after the 3.X.0 release" class="md-nav__link">
+    Do sometime after the 3.X.0 release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-lessons-learned" title="Notes on lessons learned" class="md-nav__link">
+    Notes on lessons learned
   </a>
   
 </li>
@@ -1595,22 +1602,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-on-the-month-of-the-340-release" title="Do on the month of the 3.4.0 release" class="md-nav__link">
-    Do on the month of the 3.4.0 release
+  <a href="#do-on-the-month-of-the-3x0-release" title="Do on the month of the 3.X.0 release" class="md-nav__link">
+    Do on the month of the 3.X.0 release
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-immediately-after-the-340-release" title="Do immediately after the 3.4.0 release" class="md-nav__link">
-    Do immediately after the 3.4.0 release
+  <a href="#do-immediately-after-the-3x0-release" title="Do immediately after the 3.X.0 release" class="md-nav__link">
+    Do immediately after the 3.X.0 release
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-sometime-after-the-340-release" title="Do sometime after the 3.4.0 release" class="md-nav__link">
-    Do sometime after the 3.4.0 release
+  <a href="#do-sometime-after-the-3x0-release" title="Do sometime after the 3.X.0 release" class="md-nav__link">
+    Do sometime after the 3.X.0 release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-lessons-learned" title="Notes on lessons learned" class="md-nav__link">
+    Notes on lessons learned
   </a>
   
 </li>
@@ -1635,30 +1649,28 @@
                 
                 
                 <h1 id="how-to-prepare-a-new-release-series">How to Prepare a New Release Series<a class="headerlink" href="#how-to-prepare-a-new-release-series" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This document was specifically written for OSG 3.4 and will need to be
-adapted to work for 3.5, 3.6, etc.</p>
-<p>The information was taken from
-<a href="https://jira.opensciencegrid.org/browse/SOFTWARE-2622">SOFTWARE-2622</a>
-and
-<a href="http://pages.cs.wisc.edu/~matyas/notes/main/closed-2016/osg34.html">Matyas's notes for the OSG 3.4 release</a>.</p>
-</div>
+<p>Throughout this document, we will refer to the new release series as <code>3.X</code>, and the previous release series as <code>3.OLD</code>.
+For example, if we are creating OSG 3.6, then <code>3.X</code> refers to <code>3.6</code>, and <code>3.OLD</code> refers to <code>3.5</code>.</p>
 <h2 id="do-first-anytime-before-the-month-of-the-release">Do first, anytime before the month of the release<a class="headerlink" href="#do-first-anytime-before-the-month-of-the-release" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Add 3.4 koji tags and targets</p>
+<p>Add 3.X koji tags and targets</p>
 <ul>
-<li>Modify this script as appropriate and run: <a href="https://github.com/opensciencegrid/osg-next-tools/blob/osg34/koji/create-new-koji-osg34-tags-etc">https://github.com/opensciencegrid/osg-next-tools/blob/osg34/koji/create-new-koji-osg34-tags-etc</a></li>
-<li>At first, upcoming-build should continue to inherit from 3.3-devel</li>
-<li>Create osg-3.4-elX-bootstrap and have the build tag inherit from it</li>
+<li>
+<p>Modify this script as appropriate and run:
+    <a href="https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-osg3X-tags-etc">https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-osg3X-tags-etc</a></p>
+<p>In particular, update <code>SERIES</code> as appropriate, and include any applicable enterprise linux versions to the
+<code>EL</code> loop (eg, <code>el7 el8</code>)
+    -   Note that, at first, upcoming-build will continue to inherit from 3.OLD-devel</p>
+</li>
 </ul>
 </li>
 <li>
 <p>Add Koji package signing</p>
 <ul>
-<li>Edit /etc/koji-hub/plugins/sign.conf; copy and modify one of the other osg entries</li>
-<li>Ensure the permissions are 0600 apache:apache</li>
+<li>On koji.chtc.wisc.edu, <code>/etc/koji-hub/plugins/sign.conf</code>; copy all the <code>[osg-3.OLD-*]</code> entries to new entries,
+    renaming the <code>3.OLD</code> parts in the new enties to <code>3.X</code>.</li>
+<li>Ensure the permissions for <code>/etc/koji-hub/plugins/sign.conf</code> are 0600 apache:apache</li>
 <li>Save the result with <code>etckeeper commit</code></li>
 </ul>
 </li>
@@ -1673,29 +1685,19 @@ and
 <h2 id="do-afterward-anytime-before-the-month-of-the-release">Do afterward, anytime before the month of the release<a class="headerlink" href="#do-afterward-anytime-before-the-month-of-the-release" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Create a blank <code>osg-3.4</code> SVN branch and add <code>buildsys-macros</code> package</p>
+<p>Create a blank <code>osg-3.X</code> SVN branch and add <code>buildsys-macros</code> package</p>
 <ol>
 <li>
-<p>svn copy <code>buildsys-macros</code> from trunk and hand-edit it to hardcode all the new values</p>
-<p>For EL 6:</p>
+<p>svn copy <code>buildsys-macros</code> from trunk and hand-edit it to hardcode the new <code>osg_version</code> and <code>dver</code> values</p>
+<p>Do the following steps for all EL versions relevant to the new series; e.g., for EL 7:</p>
 <ol>
-<li>Edit the spec file and set <code>dver</code> to 6</li>
-<li>Run the following commands (adjust the NVR as necessary):<div class="codehilite"><pre><span></span><span class="gp">$</span> osg-build rpmbuild --el6
-<span class="gp">$</span> osg-koji import _build_results/buildsys-macros-*.el6.src.rpm
-<span class="gp">$</span> osg-koji import _build_results/buildsys-macros-*.el6.noarch.rpm
-<span class="gp">$</span> osg-koji tag-pkg osg-3.4-el6-development buildsys-macros-7-5.osg34.el6
-</pre></div>
-
-
-</li>
-</ol>
-<p>Then do the same for EL 7:</p>
-<ol>
-<li>Edit the spec file and set <code>dver</code> to 7</li>
+<li>Edit the spec file and set <code>dver</code> to <code>7</code>, and <code>osg_version</code> to <code>3.X</code></li>
 <li>Run the following commands (adjust the NVR as necessary):<div class="codehilite"><pre><span></span><span class="gp">$</span> osg-build rpmbuild --el7
 <span class="gp">$</span> osg-koji import _build_results/buildsys-macros-*.el7.src.rpm
 <span class="gp">$</span> osg-koji import _build_results/buildsys-macros-*.el7.noarch.rpm
-<span class="gp">$</span> osg-koji tag-pkg osg-3.4-el7-development buildsys-macros-7-5.osg34.el7
+<span class="gp">$</span> <span class="nv">pkg</span><span class="o">=</span><span class="k">$(</span>basename _build_results/buildsys-macros-*.el7.src.rpm<span class="k">)</span>
+<span class="gp">$</span> <span class="nv">pkg</span><span class="o">=</span><span class="si">${</span><span class="nv">pkg</span><span class="p">%.src.rpm</span><span class="si">}</span>
+<span class="gp">$</span> osg-koji tag-pkg osg-3.X-el7-development <span class="s2">&quot;</span><span class="nv">$pkg</span><span class="s2">&quot;</span>
 </pre></div>
 
 
@@ -1705,20 +1707,12 @@ and
 <li>
 <p>Do a 'real' build of <code>buildsys-macros</code></p>
 <ol>
-<li>
-<p>Bump the revision in the <code>buildsys-macros</code> spec file and edit the <code>%changelog</code>.
-    <strong>Again, you will need a version of osg-build with 3.4 support.</strong></p>
-</li>
-<li>
-<p>Set <code>dver</code> to 6. Commit</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> osg-build koji --repo<span class="o">=</span><span class="m">3</span>.4 --el6
-</pre></div>
-
-
-</li>
-<li>
-<p>Set <code>dver</code> to 7. Commit</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> osg-build koji --repo<span class="o">=</span><span class="m">3</span>.4 --el7
+<li>Bump the revision in the <code>buildsys-macros</code> spec file and edit the <code>%changelog</code>.
+    <strong>Again, you will need a version of osg-build with 3.X support.</strong></li>
+</ol>
+<p>Do the following steps for all EL versions relevant to the new series; e.g., for EL 7:</p>
+<ol>
+<li>Set <code>dver</code> to 7. Commit<div class="codehilite"><pre><span></span><span class="gp">$</span> osg-build koji --repo<span class="o">=</span><span class="m">3</span>.X --el7
 </pre></div>
 
 
@@ -1732,16 +1726,18 @@ and
 <ul>
 <li><code>bundles.ini</code></li>
 <li><code>patches/</code></li>
-<li><code>upload-tarballs-to-oasis</code> (for 3.4, <code>foreach_dver_arch</code> will need to be updated because we're dropping i386 support)</li>
+<li><code>upload-tarballs-to-oasis</code> (for 3.X, <code>foreach_dver_arch</code> will need to be updated for the new set of 3.X <code>dver_arches</code>)</li>
 </ul>
 </li>
 <li>
 <p>Populate the <code>bootstrap</code> tags</p>
-<p>Need to have them inherit from the 3.3 development tags, but only packages, not builds (hence the <code>--noconfig</code>; yes, the name is weird)</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> <span class="k">for</span> el in el6 el7<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-    <span class="k">for</span> repo in <span class="m">3</span>.3 upcoming<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<p>Need to have them inherit from the 3.OLD development tags, but only packages, not builds (hence the <code>--noconfig</code>; yes, the name is weird)</p>
+<div class="codehilite"><pre><span></span><span class="gp">#</span> <span class="nb">set</span> <span class="m">3</span>.OLD and <span class="m">3</span>.X as appropriate, specify any relevant dvers <span class="k">for</span> el
+
+<span class="gp">$</span> <span class="k">for</span> el in el7<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+    <span class="k">for</span> repo in <span class="m">3</span>.OLD upcoming<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
         osg-koji add-tag-inheritance --noconfig --priority<span class="o">=</span><span class="m">2</span> <span class="se">\</span>
-            osg-3.4-<span class="nv">$el</span>-bootstrap osg-<span class="nv">$repo</span>-<span class="nv">$el</span>-development<span class="p">;</span> <span class="se">\</span>
+            osg-3.X-<span class="nv">$el</span>-bootstrap osg-<span class="nv">$repo</span>-<span class="nv">$el</span>-development<span class="p">;</span> <span class="se">\</span>
     <span class="k">done</span><span class="p">;</span> <span class="se">\</span>
 <span class="k">done</span>
 </pre></div>
@@ -1752,16 +1748,17 @@ and
 <p>Get the actual NVRs to tag</p>
 <ul>
 <li>I put Brian's spreadsheet into Excel and used its filtering feature to separate out:<ul>
-<li>the packages going into 3.4.0</li>
-<li>the el6 versus el7 packages</li>
+<li>the packages going into 3.X.0</li>
+<li>package differences between each dver (eg, el7 vs el8)</li>
 </ul>
 </li>
-<li>and copied the column containing the NVRs into Vim, and did a search&amp;replace of the dver to the appropriate version</li>
-<li>saved two text files (pkgtotag-el6.txt and pkgtotag-el7.txt)</li>
+<li>save the NVRs for each dver to a separate file, eg, pkgtotag-el7.txt and pkgtotag-el8.txt</li>
 <li>
 <p>Tagging:</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> <span class="k">for</span> el in el6 el7<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-    xargs -a pkgtotag-<span class="nv">$el</span> osg-koji tag-pkg osg-3.4-<span class="nv">$el</span>-bootstrap<span class="p">;</span> <span class="se">\</span>
+<div class="codehilite"><pre><span></span><span class="gp">#</span> <span class="nb">set</span> <span class="m">3</span>.X as appropriate, specify any relevant dvers <span class="k">for</span> el
+
+<span class="gp">$</span> <span class="k">for</span> el in el7 el8<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+    xargs -a pkgtotag-<span class="nv">$el</span> osg-koji tag-pkg osg-3.X-<span class="nv">$el</span>-bootstrap<span class="p">;</span> <span class="se">\</span>
 <span class="k">done</span>
 </pre></div>
 
@@ -1770,10 +1767,14 @@ and
 </li>
 </ul>
 </li>
+<li>
+<p>In order to make testing easier, build the new <code>osg-release</code> and <code>osg-release-itb</code> packages and promote them all
+    the way to release, so that all the 3.X repos exist and have at least one rpm in them.</p>
+</li>
 </ul>
-<h2 id="do-on-the-month-of-the-340-release">Do on the month of the 3.4.0 release<a class="headerlink" href="#do-on-the-month-of-the-340-release" title="Permanent link">&para;</a></h2>
+<h2 id="do-on-the-month-of-the-3x0-release">Do on the month of the 3.X.0 release<a class="headerlink" href="#do-on-the-month-of-the-3x0-release" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Populate SVN branch and tags (as in fill it with the packages we're going to release for 3.4)</li>
+<li>Populate SVN branch and tags (as in fill it with the packages we're going to release for 3.X)</li>
 <li>Mass rebuild<ul>
 <li>Don't forget to update the <code>empty</code> and <code>contrib</code> tags with the appropriate packages;
     <strong>remove the <code>empty*</code> packages from the development tags after they've been tagged into the <code>empty</code> tags</strong></li>
@@ -1789,23 +1790,25 @@ and
 <li>They're only going to test from minefield (and eventurally testing) until the release</li>
 </ul>
 </li>
-<li>Drop the <code>osg-3.4-elX-bootstrap</code> koji tags (after the successful mass rebuild only)</li>
+<li>Drop the <code>osg-3.X-elY-bootstrap</code> koji tags (after the successful mass rebuild only)</li>
+<li>Update <a href="https://github.com/opensciencegrid/docker-software-base">docker-software-base</a>
+  and any container images that are based on it</li>
 </ul>
-<h2 id="do-immediately-after-the-340-release">Do immediately after the 3.4.0 release<a class="headerlink" href="#do-immediately-after-the-340-release" title="Permanent link">&para;</a></h2>
+<h2 id="do-immediately-after-the-3x0-release">Do immediately after the 3.X.0 release<a class="headerlink" href="#do-immediately-after-the-3x0-release" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Update tag inheritance on the <code>upcoming-build</code> tags to inherit from <code>3.4-devel</code> instead of <code>3.3-devel</code></li>
+<li>Update tag inheritance on the <code>upcoming-build</code> tags to inherit from <code>3.X-devel</code> instead of <code>3.OLD-devel</code></li>
 </ul>
-<h2 id="do-sometime-after-the-340-release">Do sometime after the 3.4.0 release<a class="headerlink" href="#do-sometime-after-the-340-release" title="Permanent link">&para;</a></h2>
+<h2 id="do-sometime-after-the-3x0-release">Do sometime after the 3.X.0 release<a class="headerlink" href="#do-sometime-after-the-3x0-release" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Do these three at the same time:<ul>
-<li>Move the SVN <code>trunk</code> to <code>branches/osg-3.3</code> and move <code>branches/osg-3.4</code> to <code>trunk</code></li>
-<li>Update the koji <code>osg-elX</code> build targets to build from and to 3.4 instead of 3.3</li>
+<li>Move the SVN <code>trunk</code> to <code>branches/osg-3.OLD</code> and move <code>branches/osg-3.X</code> to <code>trunk</code></li>
+<li>Update the koji <code>osg-elY</code> build targets to build from and to <code>3.X</code> instead of <code>3.OLD</code></li>
 <li>Notify the software list of this change</li>
 </ul>
 </li>
 <li>Update osg-test / vmu-test-runs again to add release and release -&gt; testing tests</li>
 <li>
-<p>Update the docker-osg-wn-client scripts to build from 3.4 (need direct push access)</p>
+<p>Update the docker-osg-wn-client scripts to build from <code>3.X</code> (need direct push access)</p>
 <ol>
 <li>Update the constants in the <code>genbranches</code> script in the <code>docker-osg-wn-scripts</code> repo</li>
 <li>
@@ -1837,10 +1840,22 @@ Check the results before pushing, and then run <code>git push --all</code></p>
 <p>Update the default promotion route aliases in <code>osg-promote</code></p>
 </li>
 <li>
-<p>Update <a href="../../software/development-process">documentation</a> again to reflect that 3.4 is now the <em>main</em> branch and 3.3 is
-    the <em>maintenance</em> branch:</p>
+<p>Update <a href="../../software/development-process">documentation</a> again to reflect that <code>3.X</code> is now the <em>main</em> branch and
+    <code>3.OLD</code> is the <em>maintenance</em> branch</p>
 </li>
 </ul>
+<h2 id="notes-on-lessons-learned">Notes on lessons learned<a class="headerlink" href="#notes-on-lessons-learned" title="Permanent link">&para;</a></h2>
+<p>Since the <code>upcoming</code> repos are not tied to an upcoming relative to <code>3.OLD</code> or <code>3.X</code>, the meaning of the <code>upcoming</code> repo
+changes when the new OSG series is released.
+Users which have the <code>upcoming</code> repo enabled before the cutover to <code>3.X</code> will find that a yum update will pull down
+packages relative to the <em>new</em> <code>upcoming</code>, relative to <code>3.X</code>, instead of the old upcoming, which was relative to
+<code>3.OLD</code>.</p>
+<p>This may catch them by surprise, as it happens whether or not they update their <code>osg-release</code> package to the new <code>3.X</code>
+version.</p>
+<p>If it is not their intention to update to packages in the <em>new</em> <code>upcoming</code>, users should disable their <code>upcoming</code> yum
+repo by the time of the new OSG series cutover, and the continuation of their old <code>upcoming</code> packages will effectively
+be the main <code>osg</code> repo for the new <code>3.X</code> series, after they have updated their <code>osg-release</code> package (usually by
+installing <code>osg-3.X-elY-release-latest.rpm</code>).</p>
                 
                   
                 
