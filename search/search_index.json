@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "OSG Technology Area\n\n\nWelcome to the home page of the OSG Technology Team documentation area!\n\n\nIf you are looking for site administrator documentation, please visit the \nOSG Documentation page\n.\n\n\nThe Team\n\n\n\n\n\n\n\n\nSoftware and Release\n\n\nTechnology\n\n\n\n\n\n\n\n\n\n\nBrian Lin (software manager)\n\n\nBrian Bockelman (manager) (15%)\n\n\n\n\n\n\nCarl Edquist\n\n\nDerek Weitzel (50%)\n\n\n\n\n\n\nDiego Davila (50%)\n\n\nDiego Davila (50%)\n\n\n\n\n\n\nEdgar Fajardo (50%)\n\n\nEdgar Fajardo (50%)\n\n\n\n\n\n\nMat Selmeci\n\n\nMarian Zvada (20%)\n\n\n\n\n\n\nTim Cartwright (5%)\n\n\n\n\n\n\n\n\nTim Theisen (release manager) (50%)\n\n\n\n\n\n\n\n\n\n\nContact Us\n\n\n\n\nosg-software@opensciencegrid.org\n - General discussion amongst team members\n   (\nsubscribe\n)\n\n\nSlack channel\n - if you can't create an account, send an e-mail to \nosg-software@opensciencegrid.org\n\n\nosg-commits@cs.wisc.edu\n - Broadcast of all source code repo commits\n\n\n\n\nMeetings\n\n\nWhen:\n Every Monday, 11:00 a.m. (U.S. Central)\n\nWhere:\n +1 719-284-5267, PIN #57363; \nUber Conference\n\n\nMeeting note archives can be found directly in the\n\nGitHub repository\n.", 
+            "text": "OSG Technology Area\n\n\nWelcome to the home page of the OSG Technology Team documentation area!\n\n\nIf you are looking for site administrator documentation, please visit the \nOSG Documentation page\n.\n\n\nThe Team\n\n\n\n\n\n\n\n\nSoftware and Release\n\n\nTechnology\n\n\n\n\n\n\n\n\n\n\nBrian Lin (software manager)\n\n\nBrian Bockelman (manager) (15%)\n\n\n\n\n\n\nCarl Edquist\n\n\nDerek Weitzel (50%)\n\n\n\n\n\n\nDiego Davila (50%)\n\n\nDiego Davila (50%)\n\n\n\n\n\n\nEdgar Fajardo (50%)\n\n\nEdgar Fajardo (50%)\n\n\n\n\n\n\nMat Selmeci\n\n\nMarian Zvada (20%)\n\n\n\n\n\n\nTim Cartwright (5%)\n\n\n\n\n\n\n\n\nTim Theisen (release manager) (50%)\n\n\n\n\n\n\n\n\n\n\nContact Us\n\n\n\n\nosg-software@opensciencegrid.org\n - General discussion amongst team members\n   (\nsubscribe\n)\n\n\nSlack channel\n - if you can't create an account, send an e-mail to \nosg-software@opensciencegrid.org\n\n\nosg-commits@cs.wisc.edu\n - Broadcast of all source code repo commits\n\n\n\n\nMeetings\n\n\nWhen:\n Every Monday, 11:00 a.m. (U.S. Central)\n\nWhere:\n +1 971-292-4623, PIN #57363; \nUber Conference\n\n\nMeeting note archives can be found directly in the\n\nGitHub repository\n.", 
             "title": "Home"
         }, 
         {
@@ -22,7 +22,7 @@
         }, 
         {
             "location": "/#meetings", 
-            "text": "When:  Every Monday, 11:00 a.m. (U.S. Central) Where:  +1 719-284-5267, PIN #57363;  Uber Conference  Meeting note archives can be found directly in the GitHub repository .", 
+            "text": "When:  Every Monday, 11:00 a.m. (U.S. Central) Where:  +1 971-292-4623, PIN #57363;  Uber Conference  Meeting note archives can be found directly in the GitHub repository .", 
             "title": "Meetings"
         }, 
         {
