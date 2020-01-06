@@ -2526,6 +2526,66 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2020/TechArea20200106/", 
+            "text": "OSG Technology Area Meeting,  6 January 2020\n\n\nCoordinates:\n Conference: 971-292-4623, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n\n\nAnnouncements\n\n\nTriage Duty\n\n\n\n\nThis week: Mat\n\n\nNext week: Carl\n\n\n8 (+0) open FreshDesk tickets\n\n\n0 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n162\n\n\n+2\n\n\nOpen\n\n\n\n\n\n\n35\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n12\n\n\n+0\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.5.8/3.4.42  \n\n\nAI (Mat): Package default XRootD standalone auth\nfile\n (SOFTWARE-3951)\n\n\nAI (Mat): Various osg-configure fixes/features (SOFTWARE-3382, SOFTWARE-3471, SOFTWARE-3949, SOFTWARE-3953)\n\n\nAI (Carl): HTCondor 8.95 and 8.8.7 releases (SOFTWARE-3929, SOFTWARE-3957)\n\n\nAI (Carl): Add fetch-crl schedd cron (SOFTWARE-3912)\n\n\n\n\n\n\nHosted CE  \n\n\nAI (Mat): Avoid duplicate WN tarball generation for multiple users (SOFTWARE-3848)\n\n\nAI (Carl): Issues related to cache management in condor\nstatus.sh\n (SOFTWARE-3930)\n\n\nAI (Brian): Work with the SLATE team to troubleshoot their Hosted CE deployment\n\n\n\n\n\n\nAI (Brian): Working on serving HTML results from osg-sw-submit web server\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\nNone last week  \n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.41\n\n\n\n\nBoth\n\n\n\n\n3.5.7\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n-5\n\n\n0\n\n\n-1\n\n\n0\n\n\n-6\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n-1\n\n\n0\n\n\n-3\n\n\n0\n\n\n-2\n\n\n0\n\n\n-6\n\n\nIn Progress\n\n\n\n\n\n\n1\n\n\n+0\n\n\n2\n\n\n-2\n\n\n0\n\n\n-3\n\n\n3\n\n\n-5\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\n3\n\n\n+3\n\n\n4\n\n\n+4\n\n\n8\n\n\n+8\n\n\nReady for Release\n\n\n\n\n\n\n2\n\n\n+0\n\n\n5\n\n\n-7\n\n\n4\n\n\n-2\n\n\n11\n\n\n-9\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.7  \n\n\nNothing\n\n\n\n\n\n\nBoth  \n\n\nosg-xrootd 3.4-5: Add 'all.role server' to standalone xrootd configuration\n\n\nCVMFS 2.7.0\n\n\n\n\n\n\n3.4.41  \n\n\nkoji 1.15.3\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\n3.5.7  \n\n\nHTCondor-CE 4.1.0\n\n\nUpcoming: HTCondor 8.9.4\n\n\n\n\n\n\nBoth  \n\n\nGlideinWMS 3.6.1\n\n\nHTCondor 8.8.6\n\n\nHTCondor CE - non-OSG method for modifying job environment\n\n\n\n\n\n\n3.4.41  \n\n\nHTCondor-CE 3.4.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNeed testing for XRootD standalone fresh container  \n\n\nOSG Investigations Team\n\n\n\n\nLos of GRACC visualization updates.\n\n\n(overdue) Simple validation of xrootd-monitoring-collector passed.  \n\n\nData collected for production validation, now to correlate the 2 sources, collector and remote xrootd server.  Difficult step.\n\n\n\n\n\n\n(in progress) Development on perfsonar tape-backup flow with John.  \n\n\nWorking with UChicago\n\n\n\n\n\n\n(in progress) XRootD development for TCP stats.\n\n\n\n\nDiscussion\n\n\nNone this week", 
+            "title": "January, 6 2020"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#osg-technology-area-meeting-6-january-2020", 
+            "text": "Coordinates:  Conference: 971-292-4623, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:", 
+            "title": "OSG Technology Area Meeting,  6 January 2020"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#announcements", 
+            "text": "", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#triage-duty", 
+            "text": "This week: Mat  Next week: Carl  8 (+0) open FreshDesk tickets  0 (+0) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#jira", 
+            "text": "# of tickets   State      162  +2  Open    35  +0  In Progress    12  +0  Ready for Testing    0  +0  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#osg-software-team", 
+            "text": "OSG 3.5.8/3.4.42    AI (Mat): Package default XRootD standalone auth file  (SOFTWARE-3951)  AI (Mat): Various osg-configure fixes/features (SOFTWARE-3382, SOFTWARE-3471, SOFTWARE-3949, SOFTWARE-3953)  AI (Carl): HTCondor 8.95 and 8.8.7 releases (SOFTWARE-3929, SOFTWARE-3957)  AI (Carl): Add fetch-crl schedd cron (SOFTWARE-3912)    Hosted CE    AI (Mat): Avoid duplicate WN tarball generation for multiple users (SOFTWARE-3848)  AI (Carl): Issues related to cache management in condor status.sh  (SOFTWARE-3930)  AI (Brian): Work with the SLATE team to troubleshoot their Hosted CE deployment    AI (Brian): Working on serving HTML results from osg-sw-submit web server", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#discussion", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#support-update", 
+            "text": "None last week", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#osg-release-team", 
+            "text": "3.4.41   Both   3.5.7   Total   Status      0  +0  0  -5  0  -1  0  -6  Open    0  -1  0  -3  0  -2  0  -6  In Progress    1  +0  2  -2  0  -3  3  -5  Ready for Testing    1  +1  3  +3  4  +4  8  +8  Ready for Release    2  +0  5  -7  4  -2  11  -9  Total      Software    Ready for Testing    3.5.7    Nothing    Both    osg-xrootd 3.4-5: Add 'all.role server' to standalone xrootd configuration  CVMFS 2.7.0    3.4.41    koji 1.15.3      Ready for Release    3.5.7    HTCondor-CE 4.1.0  Upcoming: HTCondor 8.9.4    Both    GlideinWMS 3.6.1  HTCondor 8.8.6  HTCondor CE - non-OSG method for modifying job environment    3.4.41    HTCondor-CE 3.4.0        Data    Nothing    Operations    Nothing    Contrib    Nothing", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#discussion_1", 
+            "text": "Need testing for XRootD standalone fresh container", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#osg-investigations-team", 
+            "text": "Los of GRACC visualization updates.  (overdue) Simple validation of xrootd-monitoring-collector passed.    Data collected for production validation, now to correlate the 2 sources, collector and remote xrootd server.  Difficult step.    (in progress) Development on perfsonar tape-backup flow with John.    Working with UChicago    (in progress) XRootD development for TCP stats.", 
+            "title": "OSG Investigations Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200106/#discussion_2", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
             "location": "/meetings/2019/TechArea20191216/", 
             "text": "OSG Technology Area Meeting, 16 December 2019\n\n\nCoordinates:\n Conference: 719-284-5267, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n BrianL, Carl, Derek, Diego, Edgar, Marian, Mat\n\n\nAnnouncements\n\n\n\n\nNext two meetings (Dec 23 and Dec 30) canceled\n\n\nConsult the OSG Software calendar for outages\n\n\nFor emergencies, contact BrianL via Slack (force notification)\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: Edgar\n\n\nNext week: TimT\n\n\n8 (+0) open FreshDesk tickets\n\n\n0 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n159\n\n\n+4\n\n\nOpen\n\n\n\n\n\n\n40\n\n\n+1\n\n\nIn Progress\n\n\n\n\n\n\n5\n\n\n-5\n\n\nReady for Testing\n\n\n\n\n\n\n8\n\n\n+8\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.5.7/3.4.41  \n\n\nAI (Mat): Drop or upstream OSG-specific Globus patches (SOFTWARE-2996)\n\n\nAI (Carl): gsi-openssh: move OSG changes to separate package (SOFTWARE-3915)\n\n\nAI (Carl, Derek): Malformed classad in history file causes gratia probe to silently fail (SOFTWARE-3877)\n\n\nAI (Mat, Tim): Review HTCondor-CE 4.1.0 and 3.4.0 documentation (SOFTWARE-3861, SOFTWARE-3862)\n\n\nAI (Diego): Build XRootD plugins against 5.0.0 rc1 (SOFTWARE-3923)\n\n\nAI (Diego): Build voms-server with patches (SOFTWARE-3879)\n\n\n\n\n\n\nAI (Brian): Hosted CE container/chart bug fixes\n\n\nAI (Brian): Working on serving HTML results from osg-sw-submit web server\n\n\n\n\nDiscussion\n\n\n\n\nAI (Brian, Edgar): Last Friday, Edgar discovered an XCache configuration bug and he will submit a PR.\n\n\nUCSD XRootD update: Diego and Edgar have worked getting this together and they've got it working. Next step is to transition to the OSG XRootD standalone packaging using the documentation. Diego has written a few notes on what was difficult and will pass that along.\n\n\n\n\nSupport Update\n\n\n\n\nBrown (Marian): Still working on getting Phedex working. Marian will coordinate a live support session with the Brown admins and a Phedex expert to finally get this working.\n\n\nCentral Collector, ITB CE (BrianL): clients hang when querying collectors. Nothing show up in the logs but telnet works. Edgar suggested that it may be an issue with dual-stacked clients.\n\n\nUPR (BrianL): some confusion when updating HTCondor (to 8.8 and 8.9) due to security changes\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.41\n\n\n\n\nBoth\n\n\n\n\n3.5.7\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n-5\n\n\n0\n\n\n-1\n\n\n0\n\n\n-6\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n-1\n\n\n0\n\n\n-3\n\n\n0\n\n\n-2\n\n\n0\n\n\n-6\n\n\nIn Progress\n\n\n\n\n\n\n1\n\n\n+0\n\n\n2\n\n\n-2\n\n\n0\n\n\n-3\n\n\n3\n\n\n-5\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\n3\n\n\n+3\n\n\n4\n\n\n+4\n\n\n8\n\n\n+8\n\n\nReady for Release\n\n\n\n\n\n\n2\n\n\n+0\n\n\n5\n\n\n-7\n\n\n4\n\n\n-2\n\n\n11\n\n\n-9\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.7  \n\n\nNothing\n\n\n\n\n\n\nBoth  \n\n\nosg-xrootd 3.4-5: Add 'all.role server' to standalone xrootd configuration\n\n\nCVMFS 2.7.0\n\n\n\n\n\n\n3.4.41  \n\n\nkoji 1.15.3\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\n3.5.7  \n\n\nHTCondor-CE 4.1.0\n\n\nUpcoming: HTCondor 8.9.4\n\n\n\n\n\n\nBoth  \n\n\nGlideinWMS 3.6.1\n\n\nHTCondor 8.8.6\n\n\nHTCondor CE - non-OSG method for modifying job environment\n\n\n\n\n\n\n3.4.41  \n\n\nHTCondor-CE 3.4.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nOSG Investigations Team\n\n\n\n\nLots of GRACC visualization updates.\n\n\n(overdue) Simple validation of xrootd-monitoring-collector passed.  \n\n\nData collected for production validation, now to correlate the 2 sources, collector and remote xrootd server.  Difficult step.\n\n\n\n\n\n\n(in progress) Development on perfsonar tape-backup flow with John.  \n\n\nWorking with UChicago\n\n\n\n\n\n\n(in progress) XRootD development for TCP stats.\n\n\n\n\nDiscussion\n\n\nNone this week", 
             "title": "December, 16 2019"
