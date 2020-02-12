@@ -12,7 +12,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://opensciencegrid.github.io/technology/documentation/markdown-migration/">
+        <link rel="canonical" href="https://opensciencegrid.github.io/technology/software/container-development-guide/">
       
       
       
@@ -39,7 +39,7 @@
     
     
       
-        <title>Migrating Documents to Markdown - OSG Technology Area</title>
+        <title>Container Development Guide - OSG Technology Area</title>
       
     
     
@@ -95,7 +95,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#migrating-to-markdown" tabindex="1" class="md-skip">
+      <a href="#container-development-guide" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -121,7 +121,7 @@
                 OSG Technology Area
               </span>
               <span class="md-header-nav__topic">
-                Migrating Documents to Markdown
+                Container Development Guide
               </span>
             
           
@@ -248,10 +248,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Software
@@ -267,10 +269,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       Packaging
@@ -288,7 +292,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/rpm-development-guide/" title="RPM Development Guide" class="md-nav__link">
+    <a href="../rpm-development-guide/" title="RPM Development Guide" class="md-nav__link">
       RPM Development Guide
     </a>
   </li>
@@ -300,7 +304,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/osg-build-tools/" title="OSG Build Tools" class="md-nav__link">
+    <a href="../osg-build-tools/" title="OSG Build Tools" class="md-nav__link">
       OSG Build Tools
     </a>
   </li>
@@ -312,7 +316,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/quilt/" title="Using Quilt" class="md-nav__link">
+    <a href="../quilt/" title="Using Quilt" class="md-nav__link">
       Using Quilt
     </a>
   </li>
@@ -324,7 +328,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/upcoming-to-main/" title="Upcoming to Main" class="md-nav__link">
+    <a href="../upcoming-to-main/" title="Upcoming to Main" class="md-nav__link">
       Upcoming to Main
     </a>
   </li>
@@ -336,7 +340,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/koji-workflow/" title="Koji Workflow" class="md-nav__link">
+    <a href="../koji-workflow/" title="Koji Workflow" class="md-nav__link">
       Koji Workflow
     </a>
   </li>
@@ -348,7 +352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/create-vo-client/" title="Creating the VO Client Package" class="md-nav__link">
+    <a href="../create-vo-client/" title="Creating the VO Client Package" class="md-nav__link">
       Creating the VO Client Package
     </a>
   </li>
@@ -358,11 +362,110 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../software/container-development-guide/" title="Container Development Guide" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Container Development Guide
+      </label>
+    
+    <a href="./" title="Container Development Guide" class="md-nav__link md-nav__link--active">
       Container Development Guide
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-container-image" title="Creating a New Container Image" class="md-nav__link">
+    Creating a New Container Image
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-github-repository" title="Prepare the GitHub repository" class="md-nav__link">
+    Prepare the GitHub repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-dockerhub-repository" title="Prepare the DockerHub repository" class="md-nav__link">
+    Prepare the DockerHub repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triggering-container-image-builds" title="Triggering Container Image Builds" class="md-nav__link">
+    Triggering Container Image Builds
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-tags-in-dockerhub" title="Managing Tags in DockerHub" class="md-nav__link">
+    Managing Tags in DockerHub
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-tags" title="Adding tags" class="md-nav__link">
+    Adding tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-tags" title="Removing tags" class="md-nav__link">
+    Removing tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-slim-containers" title="Making Slim Containers" class="md-nav__link">
+    Making Slim Containers
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -372,7 +475,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/repository-management/" title="Repository Management" class="md-nav__link">
+    <a href="../repository-management/" title="Repository Management" class="md-nav__link">
       Repository Management
     </a>
   </li>
@@ -384,7 +487,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/globus-mass-update-procedure/" title="Globus Mass Update Procedure" class="md-nav__link">
+    <a href="../globus-mass-update-procedure/" title="Globus Mass Update Procedure" class="md-nav__link">
       Globus Mass Update Procedure
     </a>
   </li>
@@ -396,7 +499,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/resurrecting-epel-packages/" title="Resurrecting Epel Packages" class="md-nav__link">
+    <a href="../resurrecting-epel-packages/" title="Resurrecting Epel Packages" class="md-nav__link">
       Resurrecting Epel Packages
     </a>
   </li>
@@ -408,7 +511,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/koji-mass-rebuilds/" title="Koji Mass Rebuilds" class="md-nav__link">
+    <a href="../koji-mass-rebuilds/" title="Koji Mass Rebuilds" class="md-nav__link">
       Koji Mass Rebuilds
     </a>
   </li>
@@ -444,7 +547,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/development-process/" title="Development Process" class="md-nav__link">
+    <a href="../development-process/" title="Development Process" class="md-nav__link">
       Development Process
     </a>
   </li>
@@ -456,7 +559,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/git-software-development/" title="Git Software Development Process" class="md-nav__link">
+    <a href="../git-software-development/" title="Git Software Development Process" class="md-nav__link">
       Git Software Development Process
     </a>
   </li>
@@ -468,7 +571,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/ce-test-scaling/" title="CE Scale Testing" class="md-nav__link">
+    <a href="../ce-test-scaling/" title="CE Scale Testing" class="md-nav__link">
       CE Scale Testing
     </a>
   </li>
@@ -480,7 +583,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/ipv6-testing/" title="IPv6 Testing" class="md-nav__link">
+    <a href="../ipv6-testing/" title="IPv6 Testing" class="md-nav__link">
       IPv6 Testing
     </a>
   </li>
@@ -492,7 +595,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/requesting-tokens/" title="How to Request Tokens" class="md-nav__link">
+    <a href="../requesting-tokens/" title="How to Request Tokens" class="md-nav__link">
       How to Request Tokens
     </a>
   </li>
@@ -521,7 +624,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/effort-tracking/" title="Effort Tracking" class="md-nav__link">
+    <a href="../effort-tracking/" title="Effort Tracking" class="md-nav__link">
       Effort Tracking
     </a>
   </li>
@@ -533,7 +636,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/release-planning/" title="Release Planning" class="md-nav__link">
+    <a href="../release-planning/" title="Release Planning" class="md-nav__link">
       Release Planning
     </a>
   </li>
@@ -545,7 +648,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/new-team-member/" title="New Team Member" class="md-nav__link">
+    <a href="../new-team-member/" title="New Team Member" class="md-nav__link">
       New Team Member
     </a>
   </li>
@@ -845,7 +948,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../writing-documentation/" title="Writing Documentation" class="md-nav__link">
+    <a href="../../documentation/writing-documentation/" title="Writing Documentation" class="md-nav__link">
       Writing Documentation
     </a>
   </li>
@@ -857,7 +960,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../reviewing-documentation/" title="Reviewing Documentation" class="md-nav__link">
+    <a href="../../documentation/reviewing-documentation/" title="Reviewing Documentation" class="md-nav__link">
       Reviewing Documentation
     </a>
   </li>
@@ -869,7 +972,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../style-guide/" title="Markdown Style Guide" class="md-nav__link">
+    <a href="../../documentation/style-guide/" title="Markdown Style Guide" class="md-nav__link">
       Markdown Style Guide
     </a>
   </li>
@@ -881,7 +984,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../new-doc-area/" title="Creating a New Area" class="md-nav__link">
+    <a href="../../documentation/new-doc-area/" title="Creating a New Area" class="md-nav__link">
       Creating a New Area
     </a>
   </li>
@@ -896,12 +999,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Historical Transitions
@@ -977,193 +1078,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Migrating Documents to Markdown
-      </label>
-    
-    <a href="./" title="Migrating Documents to Markdown" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../documentation/markdown-migration/" title="Migrating Documents to Markdown" class="md-nav__link">
       Migrating Documents to Markdown
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#choosing-the-git-repository" title="Choosing the git repository" class="md-nav__link">
-    Choosing the git repository
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automatic-twiki-conversion" title="Automatic TWiki conversion" class="md-nav__link">
-    Automatic TWiki conversion
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-docker" title="Using docker" class="md-nav__link">
-    Using docker
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requirements" title="Requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#preparing-the-git-repository" title="Preparing the git repository" class="md-nav__link">
-    Preparing the git repository
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#previewing-the-document-tree" title="Previewing the document tree" class="md-nav__link">
-    Previewing the document tree
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converting-documents" title="Converting documents" class="md-nav__link">
-    Converting documents
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#troubleshooting-conversion" title="Troubleshooting conversion" class="md-nav__link">
-    Troubleshooting conversion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conversion-without-docker" title="Conversion without Docker" class="md-nav__link">
-    Conversion without Docker
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requirements_1" title="Requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#preparing-the-git-repository_1" title="Preparing the git repository" class="md-nav__link">
-    Preparing the git repository
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archiving-the-twiki-document" title="Archiving the TWiki document" class="md-nav__link">
-    Archiving the TWiki document
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initial-conversion-with-pandoc" title="Initial conversion with Pandoc" class="md-nav__link">
-    Initial conversion with Pandoc
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#previewing-your-documents-with-mkdocs" title="Previewing your document(s) with Mkdocs" class="md-nav__link">
-    Previewing your document(s) with Mkdocs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#completing-the-conversion" title="Completing the conversion" class="md-nav__link">
-    Completing the conversion
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archiving-documents" title="Archiving Documents" class="md-nav__link">
-    Archiving Documents
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submitting-the-pull-request" title="Submitting the pull request" class="md-nav__link">
-    Submitting the pull request
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#after-the-pull-request" title="After the pull request" class="md-nav__link">
-    After the pull request
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reviewing-pull-requests" title="Reviewing pull requests" class="md-nav__link">
-    Reviewing pull requests
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1829,113 +1748,24 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choosing-the-git-repository" title="Choosing the git repository" class="md-nav__link">
-    Choosing the git repository
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automatic-twiki-conversion" title="Automatic TWiki conversion" class="md-nav__link">
-    Automatic TWiki conversion
+  <a href="#creating-a-new-container-image" title="Creating a New Container Image" class="md-nav__link">
+    Creating a New Container Image
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-docker" title="Using docker" class="md-nav__link">
-    Using docker
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requirements" title="Requirements" class="md-nav__link">
-    Requirements
+  <a href="#prepare-the-github-repository" title="Prepare the GitHub repository" class="md-nav__link">
+    Prepare the GitHub repository
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#preparing-the-git-repository" title="Preparing the git repository" class="md-nav__link">
-    Preparing the git repository
+  <a href="#prepare-the-dockerhub-repository" title="Prepare the DockerHub repository" class="md-nav__link">
+    Prepare the DockerHub repository
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#previewing-the-document-tree" title="Previewing the document tree" class="md-nav__link">
-    Previewing the document tree
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converting-documents" title="Converting documents" class="md-nav__link">
-    Converting documents
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#troubleshooting-conversion" title="Troubleshooting conversion" class="md-nav__link">
-    Troubleshooting conversion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conversion-without-docker" title="Conversion without Docker" class="md-nav__link">
-    Conversion without Docker
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requirements_1" title="Requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#preparing-the-git-repository_1" title="Preparing the git repository" class="md-nav__link">
-    Preparing the git repository
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archiving-the-twiki-document" title="Archiving the TWiki document" class="md-nav__link">
-    Archiving the TWiki document
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initial-conversion-with-pandoc" title="Initial conversion with Pandoc" class="md-nav__link">
-    Initial conversion with Pandoc
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#previewing-your-documents-with-mkdocs" title="Previewing your document(s) with Mkdocs" class="md-nav__link">
-    Previewing your document(s) with Mkdocs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1945,36 +1775,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#completing-the-conversion" title="Completing the conversion" class="md-nav__link">
-    Completing the conversion
+  <a href="#triggering-container-image-builds" title="Triggering Container Image Builds" class="md-nav__link">
+    Triggering Container Image Builds
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#archiving-documents" title="Archiving Documents" class="md-nav__link">
-    Archiving Documents
+  <a href="#managing-tags-in-dockerhub" title="Managing Tags in DockerHub" class="md-nav__link">
+    Managing Tags in DockerHub
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-tags" title="Adding tags" class="md-nav__link">
+    Adding tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-tags" title="Removing tags" class="md-nav__link">
+    Removing tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#submitting-the-pull-request" title="Submitting the pull request" class="md-nav__link">
-    Submitting the pull request
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#after-the-pull-request" title="After the pull request" class="md-nav__link">
-    After the pull request
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reviewing-pull-requests" title="Reviewing pull requests" class="md-nav__link">
-    Reviewing pull requests
+  <a href="#making-slim-containers" title="Making Slim Containers" class="md-nav__link">
+    Making Slim Containers
   </a>
   
 </li>
@@ -1995,320 +1831,124 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/documentation/markdown-migration.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/software/container-development-guide.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="migrating-to-markdown">Migrating to Markdown<a class="headerlink" href="#migrating-to-markdown" title="Permanent link">&para;</a></h1>
-<p>As part of the TWiki retirement (the read-only target date of Oct 1, 2017, with a shutdown date in 2018), we will need to convert the OSG Software and Release3 docs from TWiki syntax to <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a>. The following document outlines the conversion process and conventions.</p>
-<h2 id="choosing-the-git-repository">Choosing the git repository<a class="headerlink" href="#choosing-the-git-repository" title="Permanent link">&para;</a></h2>
-<p>First you will need to choose which git repoository you will be working with:</p>
-<table>
-<thead>
-<tr>
-<th align="left">If you are converting a document from...</th>
-<th align="left">Use this github repository...</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">SoftwareTeam</td>
-<td align="left"><a href="https://www.github.com/opensciencegrid/technology/">technology</a></td>
-</tr>
-<tr>
-<td align="left">Release3</td>
-<td align="left"><a href="https://www.github.com/opensciencegrid/docs/">docs</a></td>
-</tr>
-</tbody>
-</table>
-<p>Once you've chosen the target repository for your document, move onto the next section and pick your conversion method.</p>
-<h2 id="automatic-twiki-conversion">Automatic TWiki conversion<a class="headerlink" href="#automatic-twiki-conversion" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you are only archiving the documents, skip to this <a href="#archiving-documents">section</a>.</p>
-</div>
-<p>Choose one of the following methods for converting TWiki documents:</p>
+                <h1 id="container-development-guide">Container Development Guide<a class="headerlink" href="#container-development-guide" title="Permanent link">&para;</a></h1>
+<p>This document contains instructions for OSG Technology Team members, including:</p>
 <ul>
-<li>Using our own <a href="#using-docker">docker conversion image</a> (recommended)</li>
-<li>Directly using pandoc and mkdocs <a href="#conversion-without-docker">on your own machine</a></li>
+<li>How to to develop container images that adhere to our <a href="../../policy/container-release">container release policy</a></li>
+<li>How to build a new version of an existing image</li>
+<li>How to manage tags for images in the <a href="https://hub.docker.com/r/opensciencegrid/">OSG DockerHub organization</a></li>
+<li>Tips for container image development</li>
 </ul>
-<h3 id="using-docker">Using docker<a class="headerlink" href="#using-docker" title="Permanent link">&para;</a></h3>
-<p>The twiki-converter docker image can be used to preview the document tree via a <a href="http://www.mkdocs.org/#getting-started">mkdocs</a> development server, archive TWiki documents, and convert documents to Markdown via <a href="http://pandoc.org/">pandoc</a>. The image is available on <code>osghost</code>, otherwise, it is availble on <a href="https://hub.docker.com/r/opensciencegrid/docker-twiki-converter/">dockerhub</a>.</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker pull opensciencegrid/docker-twiki-converter
+<h2 id="creating-a-new-container-image">Creating a New Container Image<a class="headerlink" href="#creating-a-new-container-image" title="Permanent link">&para;</a></h2>
+<h3 id="prepare-the-github-repository">Prepare the GitHub repository<a class="headerlink" href="#prepare-the-github-repository" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create a Git repository whose name is prefixed with <code>docker-</code>, e.g. <code>docker-frontier-squid</code></li>
+<li>Create a <code>README.md</code> file describing the software provided by the image</li>
+<li>Create a <code>LICENSE</code> file containing the <a href="https://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2.0 license text</a></li>
+<li>
+<p>Create a <code>Dockerfile</code> based off of the OSG Software Base image:</p>
+<div class="codehilite"><pre><span></span>FROM opensciencegrid/software-base:fresh
+
+LABEL maintainer OSG Software &lt;help@opensciencegrid.org&gt;
+
+RUN yum update -y &amp;&amp; \
+    yum clean all &amp;&amp; \
+    rm -rf /var/cache/yum/*
+
+RUN yum install -y &lt;PACKAGE&gt; --enablerepo=osg-minefield &amp;&amp; \
+    yum clean all &amp;&amp; \
+    rm -rf /var/cache/yum/*
 </pre></div>
 
 
-<h4 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h4>
-<p>To perform a document migration using docker, you will need the following tools and accounts:</p>
+<p>Replacing <code>&lt;PACKAGE&gt;</code> with the name of the RPM you'd like to provide in this container image</p>
+</li>
+</ol>
+<h3 id="prepare-the-dockerhub-repository">Prepare the DockerHub repository<a class="headerlink" href="#prepare-the-dockerhub-repository" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create a Docker Hub repo in the OSG organization.</li>
+<li>Go to the permissions tab and give the <code>robots</code> team <code>Read &amp; Write</code> access</li>
+<li>Copy over <code>.travis.yml</code> and <code>travis/</code> from a previous docker build (e.g., <a href="https://github.com/opensciencegrid/docker-frontier-squid">https://github.com/opensciencegrid/docker-frontier-squid</a>).
+   Update the <code>docker_repos</code> in <code>build_docker.sh</code> to the name of the Docker Hub repo</li>
+<li>Set the <code>+x</code> bit on <code>travis/build_docker.sh</code></li>
+<li>Send the <code>opensciencegrid</code> GitHub repository URL to the Software Manager and ask them to do the following:<ol>
+<li>Enable the repository in Travis-CI</li>
+<li>Add the OSG Software Docker Hub account credentials to the Travis CI repository as secure variables
+   <code>DOCKER_USERNAME</code> and <code>DOCKER_PASSWORD</code>.
+   Ensure that <code>Display value in build log</code> remains unset.
+   Escape any special characters with <code>\</code>.</li>
+<li>Enable weekly cron builds from <code>master</code> and set <code>Always run</code></li>
+</ol>
+</li>
+</ol>
+<h2 id="triggering-container-image-builds">Triggering Container Image Builds<a class="headerlink" href="#triggering-container-image-builds" title="Permanent link">&para;</a></h2>
+<p>To build a new version of an <a href="#creating-a-new-container-image">existing container image</a>, e.g. for a new RPM version of
+software in the container, you can kick off a new build in one of two ways:</p>
 <ul>
-<li><a href="https://help.github.com/articles/fork-a-repo/">Fork</a> and <a href="https://help.github.com/articles/cloning-a-repository/">clone</a> the repository that you chose in the <a href="#choosing-the-git-repository">above section</a></li>
-<li>A host with a running docker service</li>
-<li><code>sudo</code> or membership in the <code>docker</code> group</li>
+<li><strong>If there are no changes necessary to the container packaging:</strong> go to the repository's latest Travis-CI build off of
+  <code>master</code>, e.g. <a href="https://travis-ci.org/opensciencegrid/docker-xcache">https://travis-ci.org/opensciencegrid/docker-xcache</a>, and click "Restart build"</li>
+<li><strong>If changes need to be made to the container packaging:</strong> submit a pull request with your changes to the relevant
+  GitHub repository and request that another team member review it.
+  Once merged into <code>master</code>, a Travis-CI build should start automatically.</li>
 </ul>
-<p>If you cannot install the above tools locally, they are available on <code>osghost</code>. Speak with Brian L for access.</p>
-<h4 id="preparing-the-git-repository">Preparing the git repository<a class="headerlink" href="#preparing-the-git-repository" title="Permanent link">&para;</a></h4>
-<ol>
-<li><code>cd</code> into your local git repository</li>
-<li>
-<p>Add <code>opensciencegrid/technology</code> as the upstream remote repository for merging upstream changes:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git remote add upstream https://www.github.com/opensciencegrid/technology.git
-</pre></div>
-
-
-</li>
-<li>
-<p>Create a branch for the document you plan to convert:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git branch &lt;BRANCH NAME&gt; master
-</pre></div>
-
-
-<p>Replace <code>&lt;BRANCH NAME&gt;</code> with a name of your choice</p>
-</li>
-<li>
-<p>Change to the branch you just created</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git checkout &lt;BRANCH NAME&gt;
-</pre></div>
-
-
-<p>Replace <code>&lt;BRANCH NAME&gt;</code> with the name you chose in the step above</p>
-</li>
-</ol>
-<h4 id="previewing-the-document-tree">Previewing the document tree<a class="headerlink" href="#previewing-the-document-tree" title="Permanent link">&para;</a></h4>
-<p>When starting a twiki-converter docker container, it expects your local github repository to be mounted in <code>/source</code> so that any changes made to the repository are reflected in the mkdocs development server. To start a docker container based off of the twiki-converter docker image:</p>
-<ol>
-<li>
-<p>Create a container from the image with the following command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker run -d -v &lt;PATH TO LOCAL GITHUB REPO&gt;:/source -p <span class="m">8000</span> opensciencegrid/docker-twiki-converter
-</pre></div>
-
-
-<p>Change <code>&lt;PATH TO LOCAL GITHUB REPO&gt;</code> for the directory where you have cloned the repo. The above command should return the container ID, which will be used in subsequent commands.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If the docker container exits immediately, remove the <code>-d</code> option for details. If you see permission denied errors, you may need to disable SELinux or put it in permissive mode.</p>
+<p>If the Travis-CI build completes successfully, you should shortly see new <code>fresh</code> and timestamp tags appear in the
+DockerHub repository.</p>
+<div class="admonition info">
+<p class="admonition-title">Automatic weekly rebuilds</p>
+<p>If the repo's Travis-CI is configured as above, container images will automatically rebuild, and therefore pick up
+new packages available in minefield once per week.</p>
 </div>
-</li>
-<li>
-<p>To find the port that your development server is listening on, use the container ID (you should only need the first few chars of the ID) returned from the previous command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker port &lt;CONTAINER ID&gt;
-</pre></div>
-
-
-<p>Change <code>&lt;CONTAINER ID&gt;</code> for the value returned by the execution of the previous command</p>
-</li>
-<li>
-<p>Access the development server in your browser via <code>http://osghost.chtc.wisc.edu:&lt;PORT&gt;</code> or <code>localhost:&lt;PORT&gt;</code> for containers run on <code>osghost</code> or locally, respectively. <code>osghost</code> has a restrictive firewall so if you have issues accessing your container from outside of the UW-Madison campus, use an SSH tunnel to map the <code>osghost</code> port to a local port.</p>
-</li>
-</ol>
-<h4 id="converting-documents">Converting documents<a class="headerlink" href="#converting-documents" title="Permanent link">&para;</a></h4>
-<p>The docker image contains a convenience script, <code>convert-twiki</code> for saving archives and converting them to Markdown. To run the script in a running container, run the following command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker <span class="nb">exec</span> &lt;CONTAINER ID&gt; convert-twiki &lt;TWIKI URL&gt;
-</pre></div>
-
-
-<p>Where <code>&lt;CONTAINER ID&gt;</code> is the docker container ID and <code>&lt;TWIKI URL&gt;</code> is the link to the TWiki document that you want to convert, e.g. https://twiki.opensciencegrid.org/bin/view/SoftwareTeam/SoftwareDevelopmentProcess . This will result in an archive of the twiki doc, <code>archive/SoftwareDevelopmentProcess</code>, in your local repo and a converted copy, <code>SoftwareDevelopmentProcess.md</code>, placed into the root of your local github repository.  If the twiki url is for a specific revision of the document, a <code>.rNN</code> will be included in the output filenames.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If the above command does not complete quickly, it means that Pandoc is having an issue with a specific section of the document. See <a href="#troubleshooting-conversion">Troubleshooting conversion</a> for next steps.</p>
-</div>
-<p>To see the converted document in your browser:</p>
+<h2 id="managing-tags-in-dockerhub">Managing Tags in DockerHub<a class="headerlink" href="#managing-tags-in-dockerhub" title="Permanent link">&para;</a></h2>
+<h3 id="adding-tags">Adding tags<a class="headerlink" href="#adding-tags" title="Permanent link">&para;</a></h3>
+<p>Images that have passed acceptance testing should be tagged as <code>stable</code>:</p>
 <ol>
-<li>Rename, move the converted document into a folder in <code>docs/</code>.<ul>
-<li>Document file names should be lowercase, <code>-</code> delimited, and descriptive but concise, e.g. <code>markdown-migration.md</code> or <code>cutting-release.md</code></li>
-<li>It's not important to get the name/location correct on the first try as this can be discussed in the pull request</li>
-</ul>
-</li>
-<li><code>sudo chown</code> the archived and converted documents to be owned by you</li>
-<li>Add the document to the <code>pages:</code> section of <code>mkdocs.yml</code> in <a href="http://titlecase.com/">title case</a>, e.g. <code>- Migrating Documents to Markdown: 'software/markdown-migration.md'</code></li>
-<li>Refresh the document tree in your browser</li>
-</ol>
-<p>Once you can view the converted document in your browser, move onto the <a href="#completing-the-conversion">next section</a></p>
-<h4 id="troubleshooting-conversion">Troubleshooting conversion<a class="headerlink" href="#troubleshooting-conversion" title="Permanent link">&para;</a></h4>
-<p>Pandoc sometimes has issues converting documents and requires manual intervention by removing whichever section is causing issues in the conversion.</p>
-<ol>
-<li>Copy the archive of the document into the root of your git repository</li>
 <li>
-<p>Kill the process in the docker container:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker <span class="nb">exec</span> &lt;CONTAINER ID&gt; pkill -9 pandoc
+<p>Install the <code>jq</code> utility:</p>
+<div class="codehilite"><pre><span></span>yum install jq
 </pre></div>
 
 
-<p>Where <code>&lt;CONTAINER ID&gt;</code> is the docker container ID</p>
 </li>
 <li>
-<p>Remove a section from the copy of the archive to find the problematic section (recommendation: use a binary search strategy)</p>
+<p>Get the SHA256 repo digest of the image that the user has tested</p>
 </li>
+<li>Go to the Docker Hub repo (e.g., <a href="https://hub.docker.com/r/opensciencegrid/frontier-squid/tags">https://hub.docker.com/r/opensciencegrid/frontier-squid/tags</a>) and find the
+   <code>&lt;TIMESTAMP TAG&gt;</code> (e.g., <code>20191118-1706</code>) corresponding to the digest in the previous step</li>
 <li>
-<p>Run pandoc manually:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker <span class="nb">exec</span> &lt;CONTAINER ID&gt; pandoc -f twiki -t markdown_github &lt;ARCHIVE COPY&gt; &gt; &lt;MARKDOWN FILE&gt;
+<p>Add your Docker Hub user/pass to a file with <code>600</code> permissions:</p>
+<div class="codehilite"><pre><span></span>export user=&lt;dockerhub username&gt;
+export pass=&lt;dockerhub password&gt;
 </pre></div>
 
 
-<p>Where <code>&lt;CONTAINER ID&gt;</code> is the docker container ID, <code>&lt;ARCHIVE COPY&gt;</code> is the the file you copied in the first step
-and <code>&lt;MARKDOWN FILE&gt;</code> is the resulting <code>.md</code> file</p>
 </li>
 <li>
-<p>Repeat steps 2-4 until you've narrowed down the problematic section</p>
+<p>Run the Docker container image tagging command from <a href="https://github.com/opensciencegrid/release-tools/">release-tools</a>:</p>
+<div class="codehilite"><pre><span></span>./dockerhub-tag-fresh-to-stable.sh &lt;IMAGE NAME&gt; &lt;TIMESTAMP TAG&gt;
+</pre></div>
+
+
 </li>
-<li>Manually convert the offending section</li>
+<li>
+<p>Clean up your Docker Hub user/pass file</p>
+</li>
 </ol>
-<h3 id="conversion-without-docker">Conversion without Docker<a class="headerlink" href="#conversion-without-docker" title="Permanent link">&para;</a></h3>
-<p>If you've already used the <a href="#using-docker">docker method</a>, skip to the section about <a href="#completing-the-conversion">completing the conversion</a>. </p>
-<h4 id="requirements_1">Requirements<a class="headerlink" href="#requirements_1" title="Permanent link">&para;</a></h4>
-<p>This method requires the following:</p>
+<h3 id="removing-tags">Removing tags<a class="headerlink" href="#removing-tags" title="Permanent link">&para;</a></h3>
+<p>Run the Docker container image pruning command from <a href="https://github.com/opensciencegrid/release-tools/">release-tools</a>:</p>
+<div class="codehilite"><pre><span></span>./dockerhub-prune-tags.py &lt;IMAGE NAME&gt;
+</pre></div>
+
+
+<h2 id="making-slim-containers">Making Slim Containers<a class="headerlink" href="#making-slim-containers" title="Permanent link">&para;</a></h2>
+<p>Here are some resources for creating slim, efficient containers:</p>
 <ul>
-<li><a href="https://help.github.com/articles/fork-a-repo/">Fork</a> and <a href="https://help.github.com/articles/cloning-a-repository/">clone</a> the repository that you chose in the <a href="#choosing-the-git-repository">above section</a></li>
-<li>pandoc (&gt; 1.16)</li>
-<li>mkdocs</li>
-<li>MarkdownHighlight</li>
-<li>pygments</li>
+<li><a href="https://developers.redhat.com/blog/2016/03/09/more-about-docker-images-size/">https://developers.redhat.com/blog/2016/03/09/more-about-docker-images-size/</a></li>
+<li><a href="https://github.com/opensciencegrid/topology/pull/399">https://github.com/opensciencegrid/topology/pull/399</a></li>
+<li><a href="https://docs.docker.com/develop/develop-images/multistage-build/">https://docs.docker.com/develop/develop-images/multistage-build/</a></li>
 </ul>
-<h4 id="preparing-the-git-repository_1">Preparing the git repository<a class="headerlink" href="#preparing-the-git-repository_1" title="Permanent link">&para;</a></h4>
-<ol>
-<li><code>cd</code> into your local git repository</li>
-<li>
-<p>Add <code>opensciencegrid/technology</code> as the upstream remote repository for merging upstream changes:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git remote add upstream https://www.github.com/opensciencegrid/technology.git
-</pre></div>
-
-
-</li>
-<li>
-<p>Create a branch for the document you plan to convert:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git branch &lt;BRANCH NAME&gt; master
-</pre></div>
-
-
-<p>Replace <code>&lt;BRANCH NAME&gt;</code> with a name of your choice
-5. Change to the branch you just created</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git checkout &lt;BRANCH NAME&gt;
-</pre></div>
-
-
-<p>Replace <code>&lt;BRANCH NAME&gt;</code> with the name you chose in the step above</p>
-<h4 id="archiving-the-twiki-document">Archiving the TWiki document<a class="headerlink" href="#archiving-the-twiki-document" title="Permanent link">&para;</a></h4>
-</li>
-</ol>
-<p>Follow the instructions for <a href="#archiving-documents">archival</a> then continue to the next section to convert the document with pandoc.</p>
-<h4 id="initial-conversion-with-pandoc">Initial conversion with Pandoc<a class="headerlink" href="#initial-conversion-with-pandoc" title="Permanent link">&para;</a></h4>
-<p><a href="http://pandoc.org/">Pandoc</a> is a tool that's useful for automated conversion of markdown languages. <a href="http://pandoc.org/installing.html">Once installed</a> (alternatively, run pandoc <a href="#using-docker">via docker</a>), run the following command to convert TWiki to Markdown:</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> pandoc -f twiki -t markdown_github &lt;TWIKI FILE&gt; &gt; &lt;MARKDOWN FILE&gt;
-</pre></div>
-
-
-<p>Where <code>&lt;TWIKI FILE&gt;</code> is the path to initial document in raw TWiki and <code>&lt;MARKDOWN FILE&gt;</code> is the path to the resulting document in GitHub Markdown.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you don't see output from the above command quickly, it means that Pandoc is having an issue with a specific section of the document. Stop the command (or docker container), find and temporarily remove the offending section, convert the remainder of the document with Pandoc, and manually convert the offending section.</p>
-</div>
-<h4 id="previewing-your-documents-with-mkdocs">Previewing your document(s) with Mkdocs<a class="headerlink" href="#previewing-your-documents-with-mkdocs" title="Permanent link">&para;</a></h4>
-<p><a href="http://www.mkdocs.org/">Mkdocs</a> has a development mode that can be used to preview documents as you work on them and is available via package manager or <code>pip</code>. <a href="http://www.mkdocs.org/#installation">Once installed</a>, add your document(s) to the <code>pages</code> section of <code>mkdocs.yml</code> and launch the mkdocs server with the following command from the dir containing <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>src/ mkdocs serve
-</pre></div>
-
-
-<p>Access the server at <code>http://127.0.0.1:8000</code> and navigate to the document you're working on. It's useful to open the original TWiki doc in an adjacent tab or window to quickly compare the two.</p>
-<h2 id="completing-the-conversion">Completing the conversion<a class="headerlink" href="#completing-the-conversion" title="Permanent link">&para;</a></h2>
-<p>Manual review of the automatically converted documents are required since the automatic conversion process isn't perfect. This section contains a list of problems commonly encountered in automatically converted documents.</p>
-<p>Visit the <a href="../../documentation/writing-documentation#style-guide">style guide</a> to ensure that the document meets all style guidelines.</p>
-<h2 id="archiving-documents">Archiving Documents<a class="headerlink" href="#archiving-documents" title="Permanent link">&para;</a></h2>
-<p>If the document is slated for archival (check if it says "yes" in the  "archived" column of the spreadsheet), just download the document to the <code>archive</code> folder of your local git repository:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> <span class="nb">cd</span> technology/
-<span class="gp">user@host $</span> curl <span class="s1">&#39;&lt;TWIKI URL&gt;?raw=text&#39;</span> <span class="p">|</span> iconv -f windows-1252 &gt; archive/&lt;TWIKI TITLE&gt;
-</pre></div>
-
-
-<p>Where <code>&lt;TWIKI URL&gt;</code> is the link to the TWiki document that you want to download and <code>&lt;TWIKI TITLE&gt;</code> is the name that will receive the archived file
-For example:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> <span class="nb">cd</span> technology
-<span class="gp">user@host $</span> curl <span class="s1">&#39;https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/SHA2Compliance?raw=text&#39;</span> <span class="p">|</span> iconv -f windows-1252 &gt; archive/SHA2Compliance
-</pre></div>
-
-
-<p>After downloading the document, continue onto the next section to walk through pull request submission.</p>
-<h2 id="submitting-the-pull-request">Submitting the pull request<a class="headerlink" href="#submitting-the-pull-request" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Stage the archived raw TWiki (as well as the converted Markdown document(s) and <code>mkdocs.yml</code> if you are converting the document):</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git add mkdocs.yml archive/&lt;TWIKI ARCHIVE&gt; &lt;PATH TO CONVERTED DOC&gt;
-</pre></div>
-
-
-<p>Where <code>&lt;TWIKI ARCHIVE&gt;</code> is the name of the archived document and <code>&lt;PATH TO CONVERTED DOC&gt;</code> is the path to the <code>.md</code>
-file</p>
-</li>
-<li>
-<p>Commit and push your changes to your GitHub repo:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git commit -m <span class="s2">&quot;&lt;COMMIT MSG&gt;&quot;</span>
-<span class="gp">user@host $</span> git push origin &lt;BRANCH NAME&gt;
-</pre></div>
-
-
-<p>Change <code>&lt;COMMIT MSG&gt;</code> for a meaningful text that describes the conversion done and <code>&lt;BRANCH NAME&gt;</code> with the name
-chosen in the 3rd step of the <a href="#preparing-the-git-repository">Preparing the git repository</a> section</p>
-</li>
-<li>
-<p>Open your browser and navigate to your GitHub fork</p>
-</li>
-<li>
-<p>Submit a pull request containing with the following body:</p>
-<div class="codehilite"><pre><span></span>&lt;LINK TO TWIKI DOCUMENT&gt;
-
-- [ ] Enter date into &quot;Migrated&quot; column of google sheet
-</pre></div>
-
-
-<p>An example of <code>&lt;LINK TO TWIKI DOCUMENT&gt;</code> is: https://twiki.opensciencegrid.org/bin/view/SoftwareTeam/SoftwareDevelopmentProcess</p>
-<ul>
-<li>
-<p>If you are migrating a document, also add this task:</p>
-<div class="codehilite"><pre><span></span>- [ ] Add migration header to TWiki document
-</pre></div>
-
-
-</li>
-<li>
-<p>If you are archiving a document, add this task:</p>
-<div class="codehilite"><pre><span></span>- [ ] Move TWiki document to the trash
-</pre></div>
-
-
-</li>
-</ul>
-</li>
-</ol>
-<p>See an example pull request <a href="https://github.com/opensciencegrid/technology/pull/98">here</a>.</p>
-<h2 id="after-the-pull-request">After the pull request<a class="headerlink" href="#after-the-pull-request" title="Permanent link">&para;</a></h2>
-<p>After the pull request is merged, replace the contents of TWiki document with the div if you're migrating the document, linking to the location of the migrated document:</p>
-<div class="codehilite"><pre><span></span>&lt;div style=&quot;border: 1px solid black; margin: 1em 0; padding: 1em; background-color: #FFDDDD; font-weight: 600;&quot;&gt;
-This document has been migrated to !GitHub (&lt;LINK TO GITHUB DOCUMENT&gt;). If you wish to see the old TWiki document, use the TWiki history below.
-
-Background:
-
-At the end of year (2017), the TWiki will be retired in favor of !GitHub. You can find the various TWiki webs and their new !GitHub locations listed below:
-
-   * Release3: https://www.opensciencegrid.org/docs ([[https://github.com/opensciencegrid/docs/tree/master/archive][archive]])
-   * !SoftwareTeam: https://www.opensciencegrid.org/technology ([[https://github.com/opensciencegrid/technology/tree/master/archive][archive]])
-&lt;/div&gt;
-</pre></div>
-
-
-<p>If you are archiving a document, move it to the trash instead. Once the document has been updated or trashed, add the date to the spreadsheet and go back to your pull request and mark your tasks as complete. For example, if you completed the migration of a document:</p>
-<div class="codehilite"><pre><span></span>- [X] Enter date into &quot;Migrated&quot; column of google sheet
-- [X] Add migration div to TWiki document
-</pre></div>
-
-
-<p>Currently, we do not recommend changing backlinks (links on other twiki pages that refer to the Twiki page you are migrating) to point at the new GitHub URL.  This is to provide a simple reminder to users that the migration will occur, and also is likely low priority regardless as all pages will eventually migrate to GitHub.  This advice may change in the future as we gain experience with this transition.</p>
-<h2 id="reviewing-pull-requests">Reviewing pull requests<a class="headerlink" href="#reviewing-pull-requests" title="Permanent link">&para;</a></h2>
-<p>To review pull requests, <code>cd</code> into the dir containing your git repository and check out the requester's branch, which the twiki-converter container should automatically notice. Here's an example checking out Brian's <code>cut-sw-release</code> branch of the technology repository:</p>
-<div class="codehilite"><pre><span></span><span class="gp">#</span> Add the requester<span class="s1">&#39;s repo as a remote if you haven&#39;</span>t already
-<span class="gp">user@host $</span> git remote add blin https://www.github.com/brianhlin/technology.git
-<span class="gp">user@host $</span> git fetch --all
-<span class="gp">user@host $</span> git checkout blin/cut-sw-release
-</pre></div>
-
-
-<p>Refresh your browser and navigate to the document in the request.</p>
                 
                   
                 
@@ -2329,7 +1969,7 @@ At the end of year (2017), the TWiki will be retired in favor of !GitHub. You ca
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../projects/sha2-support/" title="SHA-2 Support" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../create-vo-client/" title="Creating the VO Client Package" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2338,19 +1978,19 @@ At the end of year (2017), the TWiki will be retired in favor of !GitHub. You ca
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                SHA-2 Support
+                Creating the VO Client Package
               </span>
             </div>
           </a>
         
         
-          <a href="../../meetings/2020/TechArea20200210/" title="February 10, 2020" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../repository-management/" title="Repository Management" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                February 10, 2020
+                Repository Management
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
