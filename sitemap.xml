@@ -191,7 +191,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://opensciencegrid.github.io/technology/policy/comanage-instructions/</loc>
+     <loc>https://opensciencegrid.github.io/technology/policy/comanage-instructions-user/</loc>
+     <lastmod>2020-02-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://opensciencegrid.github.io/technology/policy/comanage-instructions-admin/</loc>
      <lastmod>2020-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
