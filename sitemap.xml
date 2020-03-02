@@ -116,6 +116,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://opensciencegrid.github.io/technology/release/announce-rft-packages/</loc>
+     <lastmod>2020-03-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://opensciencegrid.github.io/technology/release/new-release-series/</loc>
      <lastmod>2020-03-02</lastmod>
      <changefreq>daily</changefreq>
