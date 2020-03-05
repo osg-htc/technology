@@ -2383,18 +2383,17 @@ We welcome feedback on this release!
 </li>
 <li>
 <p>The release manager uses the <a href="https://opensciencegrid.org/operations/services/sending-announcements/">osg-notify tool</a>
-    on <code>submit-1.chtc.wisc.edu</code> to send the release announcement using the following command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> topology
-<span class="gp">$</span> git pull
-<span class="gp">$</span> python bin/osg-notify --cert your-cert.pem --key your-key.pem <span class="se">\</span>
-    --no-sign --type production --message message-file <span class="se">\</span>
+    on <code>osg-sw-submit.chtc.wisc.edu</code> to send the release announcement using the following command:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> osg-notify --cert your-cert.pem --key your-key.pem <span class="se">\</span>
+    --no-sign --type production --message &lt;PATH TO MESSAGE FILE&gt; <span class="se">\</span>
     --subject <span class="s1">&#39;&lt;EMAIL SUBJECT&gt;&#39;</span> <span class="se">\</span>
     --recipients <span class="s2">&quot;osg-general@opensciencegrid.org osg-operations@opensciencegrid.org osg-sites@opensciencegrid.org vdt-discuss@opensciencegrid.org&quot;</span> <span class="se">\</span>
     --oim-recipients resources --oim-contact-type administrative
 </pre></div>
 
 
-<p>Replace <code>&lt;EMAIL SUBJECT&gt;</code> with an appropriate subject for your announcement.</p>
+<p>Replacing <code>&lt;EMAIL SUBJECT&gt;</code> with an appropriate subject for your announcement and <code>&lt;PATH TO MESSAGE FILE&gt;</code> with the
+path to the file containing your message in plain text.</p>
 </li>
 <li>
 <p>The release manager closes the tickets marked 'Ready for Release' in the release's JIRA filter using the 'bulk change' function.
