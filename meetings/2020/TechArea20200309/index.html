@@ -12,7 +12,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://opensciencegrid.github.io/technology/meetings/2020/TechArea20200302/">
+        <link rel="canonical" href="https://opensciencegrid.github.io/technology/meetings/2020/TechArea20200309/">
       
       
       
@@ -39,7 +39,7 @@
     
     
       
-        <title>March 2, 2020 - OSG Technology Area</title>
+        <title>March 9, 2020 - OSG Technology Area</title>
       
     
     
@@ -95,7 +95,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#osg-technology-area-meeting-2-march-2020" tabindex="1" class="md-skip">
+      <a href="#osg-technology-area-meeting-9-march-2020" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -121,7 +121,7 @@
                 OSG Technology Area
               </span>
               <span class="md-header-nav__topic">
-                March 2, 2020
+                March 9, 2020
               </span>
             
           
@@ -1037,18 +1037,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../TechArea20200309/" title="March 9, 2020" class="md-nav__link">
-      March 9, 2020
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -1060,11 +1048,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        March 2, 2020
+        March 9, 2020
       </label>
     
-    <a href="./" title="March 2, 2020" class="md-nav__link md-nav__link--active">
-      March 2, 2020
+    <a href="./" title="March 9, 2020" class="md-nav__link md-nav__link--active">
+      March 9, 2020
     </a>
     
       
@@ -1179,6 +1167,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TechArea20200302/" title="March 2, 2020" class="md-nav__link">
+      March 2, 2020
+    </a>
   </li>
 
         
@@ -1953,22 +1953,18 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/meetings/2020/TechArea20200302.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/meetings/2020/TechArea20200309.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="osg-technology-area-meeting-2-march-2020">OSG Technology Area Meeting,  2 March 2020<a class="headerlink" href="#osg-technology-area-meeting-2-march-2020" title="Permanent link">&para;</a></h1>
+                <h1 id="osg-technology-area-meeting-9-march-2020">OSG Technology Area Meeting,  9 March 2020<a class="headerlink" href="#osg-technology-area-meeting-9-march-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: 971-292-4623, PIN: 57363; <a href="https://www.uberconference.com/osgblin">https://www.uberconference.com/osgblin</a><br />
-<strong>Attending:</strong> BrianL, Carl, Derek, Diego, Edgar, Marco, Marian, Mat</p>
+<strong>Attending:</strong> Mat, Carl, Edgar, Derek, Diego</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
-<ul>
-<li>TimT OOO this week</li>
-<li>BrianL OOO Friday and next Monday</li>
-</ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
-<li>This week: Diego</li>
-<li>Next week: ???</li>
-<li>10 (-2) open FreshDesk tickets</li>
+<li>This week: Carl</li>
+<li>Next week: Brian</li>
+<li>10 (+0) open FreshDesk tickets</li>
 <li>1 (+0) open GGUS ticket</li>
 </ul>
 <h3 id="jira">JIRA<a class="headerlink" href="#jira" title="Permanent link">&para;</a></h3>
@@ -1982,68 +1978,60 @@
 </thead>
 <tbody>
 <tr>
-<td>159</td>
-<td>+6</td>
+<td>163</td>
+<td>+4</td>
 <td>Open</td>
 </tr>
 <tr>
-<td>43</td>
-<td>+2</td>
+<td>41</td>
+<td>-2</td>
 <td>In Progress</td>
 </tr>
 <tr>
-<td>2</td>
-<td>+4</td>
+<td>5</td>
+<td>+3</td>
 <td>Ready for Testing</td>
 </tr>
 <tr>
-<td>0</td>
-<td>+0</td>
+<td>4</td>
+<td>+4</td>
 <td>Ready for Release</td>
 </tr>
 </tbody>
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Did everyone get an email from Freshworks about account migration?</li>
-<li>OSG 3.5.11/3.4.45  <ul>
-<li>AI (Mat): Update Globus packages (SOFTWARE-3991)</li>
+<li>AI (Carl): Release new VO client</li>
+<li>OSG 3.5.11/3.4.45<ul>
+<li>AI (Mat): Update default lcmaps.db to use VOMS mappings (SOFTWARE-3927)</li>
 <li>AI (Diego): Build XRootD plugins for XRootD 5; RC2 expected in the next ~2 weeks (SOFTWARE-3923)</li>
 </ul>
 </li>
-<li>Containers  <ul>
-<li>Need a volunteer to test the XRootD standalone container (SOFTWARE-3934)</li>
+<li>Containers<ul>
+<li>Need a volunteer to test the XRootD standalone container (SOFTWARE-3934)<ul>
+<li>need to figure out how to get Hadoop working with the container before any Hadoop site can test it</li>
+</ul>
+</li>
 <li>Need to enable the XCache data integrity script for CMS and ATLAS XCache</li>
 </ul>
 </li>
-<li>Hosted CE  <ul>
-<li>Fixed some WN client and host cert/key mounting issues last week</li>
-<li>AI (Brian): Simplify remote user configuration (SOFTWARE-3960)</li>
+<li>Hosted CE<ul>
+<li>AI (Brian (not here)): Simplify remote user configuration (SOFTWARE-3960)</li>
 </ul>
 </li>
-<li>GridFTP/GSI transition  <ul>
-<li>AI (Edgar): Update TPC tests to use config.d configuration; add HTTP/S tests for XRootD standalone (SOFTWARE-3936)</li>
+<li>GridFTP/GSI transition<ul>
+<li>AI (Brian (not here)): Demonstrate an HTCondor-CE reporting to the central collector via SSL (SOFTWARE-3939)</li>
+<li>AI (Edgar): Update TPC tests to use config.d configuration; add HTTP/S tests for XRootD standalone (SOFTWARE-3936)  (done)</li>
 <li>AI (Carl): Move OASIS manager login credential information to CILogon (SOFTWARE-3947)</li>
 <li>AI (Mat): Fix-up email templates and confusing web page for the COManage self-registration process</li>
-<li>AI (Mat): Review contents of audit log for places where we may want to audit tokens</li>
-<li>AI (Derek): Demonstrate access to LIGO frame data with SciTokens (waiting on XCache SciTokens integration)</li>
+<li>AI (Derek): Demonstrate access to LIGO frame data with SciTokens (waiting on XCache SciTokens integration) (which is blocked on XRootD RC2)</li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<ul>
-<li>AI (BrianL): Write tickets for TPC config.d and self-registration improvements</li>
-<li>UCSD and UNL aren't interested in a standalone XRootD container for the time being</li>
-<li>XCache SciTokens waiting on XRootD RC2, which is expected this week</li>
-<li>GlideinWMS 3.6.2 RC expected this week</li>
-</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Florida (BrianL, Derek): Investigating delays in SAM test job startup</li>
-<li>FNAL (Marian): hitting issues with IPv6 due to reverse DNS lookups similar to what we saw at UCSD some time ago (possibly fixed in XRootD 5). For now FNL has turned off IPv6 support on the redirectors.</li>
-<li>Nebraska (Diego): Working with admins to transition Nebraska to using XRootD TPC with UCSD</li>
-<li>Purdue (Edgar): reinstalled the CMS XCache with all the new redirectors; had documentation requests and notes</li>
-<li>UConn (Derek): troubleshooting potential issues with yearly summaries</li>
+<li>No update on Nebraska for transferring between Nebraska and UCSD using TPC yet</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
@@ -2169,12 +2157,8 @@
 </ul>
 </li>
 </ul>
+<p>Sent OSG 3.4 end of regular support date email.</p>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>AI (BrianL): Contact ET about OSG 3.4 end of regular support dates</li>
-<li>AI (BrianL): Write weekly ready for testing email</li>
-<li>AI (BrianL): Prepare for vo-client release Wednesday</li>
-</ul>
 <h2 id="osg-investigations-team">OSG Investigations Team<a class="headerlink" href="#osg-investigations-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>scitokens-cpp update in EPEL:
@@ -2204,7 +2188,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../TechArea20200309/" title="March 9, 2020" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../../documentation/markdown-migration/" title="Migrating Documents to Markdown" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2213,19 +2197,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                March 9, 2020
+                Migrating Documents to Markdown
               </span>
             </div>
           </a>
         
         
-          <a href="../TechArea20200224/" title="February 24, 2020" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../TechArea20200302/" title="March 2, 2020" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                February 24, 2020
+                March 2, 2020
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
