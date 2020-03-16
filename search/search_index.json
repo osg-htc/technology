@@ -2631,6 +2631,66 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2020/TechArea20200316/", 
+            "text": "OSG Technology Area Meeting, 16 March 2020\n\n\nCoordinates:\n Conference: 971-292-4623, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n   \n\n\nAnnouncements\n\n\nTriage Duty\n\n\n\n\nThis week: Brian\n\n\nNext week: Edgar\n\n\n10 (+0) open FreshDesk tickets\n\n\n1 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n161\n\n\n-2\n\n\nOpen\n\n\n\n\n\n\n40\n\n\n-1\n\n\nIn Progress\n\n\n\n\n\n\n2\n\n\n-3\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n-4\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.5.12/3.4.46  \n\n\nAI (Mat): Update default lcmaps.db to use VOMS mappings (SOFTWARE-3927)\n\n\nAI (Carl): Various blahp tickets\n\n\nAI (Diego): Release XRootD 4.11.3 (SOFTWARE-4017)\n\n\nAI (BrianL): Release HTCondor-CE (SOFTWARE-4009)\n\n\nAI (Derek): Update XRootD SciTokens 1.2.0\n\n\n\n\n\n\nGridFTP/GSI transition  \n\n\nAI (Diego): Add option to enable the XCache data integrity script for CMS and ATLAS XCache (SOFTWARE-4026)\n\n\nAI (Edgar): Update TPC tests to use config.d configuration; add HTTP/S tests for XRootD standalone (SOFTWARE-3936)  (done)\n\n\nAI (Carl): Move OASIS manager login credential information to CILogon (SOFTWARE-3947)\n\n\nAI (Mat): Fix-up email templates and confusing web page for the COManage self-registration process\n\n\n\n\n\n\nEL8 support  \n\n\nAI (Mat): Test EL8 builds with new Koji hosts\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\nNone this week  \n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.45\n\n\n\n\nBoth\n\n\n\n\n3.5.11\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n3\n\n\n+0\n\n\n9\n\n\n-2\n\n\n12\n\n\n-2\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n+0\n\n\n2\n\n\n+0\n\n\n8\n\n\n+1\n\n\n10\n\n\n+1\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n-1\n\n\n0\n\n\n+0\n\n\n4\n\n\n+0\n\n\n4\n\n\n-1\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\n0\n\n\n+0\n\n\n3\n\n\n+3\n\n\n4\n\n\n+4\n\n\nReady for Release\n\n\n\n\n\n\n1\n\n\n+0\n\n\n5\n\n\n+0\n\n\n24\n\n\n+2\n\n\n30\n\n\n+2\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.11  \n\n\nPegasus 4.9.3\n\n\nscitokens-cpp 0.5.0\n\n\nCCTools 7.0.22\n\n\nXCache validation tool\n\n\n\n\n\n\nBoth  \n\n\nNothing yet\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\n3.5.11  \n\n\nCVMFS 2.7.1\n\n\nosg-oasis 16-2\n\n\noidc-agent 3.3.1\n\n\ngsi-openssh 7.4p1-5\n\n\n\n\n\n\nBoth  \n\n\nNothing yet\n\n\n\n\n\n\n3.4.45  \n\n\nSingularity 3.5.3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nvo-client 101\n\n\n\n\n\n\nOperations  \n\n\nosg-notify smart quotes\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nSent OSG 3.4 end of regular support date email.  \n\n\nDiscussion\n\n\nNone this week  \n\n\nOSG Investigations Team\n\n\n\n\nscitokens-cpp update in EPEL:\n\n\n\n\nhttps://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2020-d247b5382c\n  \n\n\n\n\nPaused: GRACC transition now monitored with gracc-transition website: \nhttps://gracc-transition.herokuapp.com/\n\n\nSciTokens+XrootD requires xrootd 5.0.  RC2 still not released\n\n\n\n\nDiscussion\n\n\nNone this week", 
+            "title": "March 16, 2020"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#osg-technology-area-meeting-16-march-2020", 
+            "text": "Coordinates:  Conference: 971-292-4623, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:", 
+            "title": "OSG Technology Area Meeting, 16 March 2020"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#announcements", 
+            "text": "", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#triage-duty", 
+            "text": "This week: Brian  Next week: Edgar  10 (+0) open FreshDesk tickets  1 (+0) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#jira", 
+            "text": "# of tickets   State      161  -2  Open    40  -1  In Progress    2  -3  Ready for Testing    0  -4  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#osg-software-team", 
+            "text": "OSG 3.5.12/3.4.46    AI (Mat): Update default lcmaps.db to use VOMS mappings (SOFTWARE-3927)  AI (Carl): Various blahp tickets  AI (Diego): Release XRootD 4.11.3 (SOFTWARE-4017)  AI (BrianL): Release HTCondor-CE (SOFTWARE-4009)  AI (Derek): Update XRootD SciTokens 1.2.0    GridFTP/GSI transition    AI (Diego): Add option to enable the XCache data integrity script for CMS and ATLAS XCache (SOFTWARE-4026)  AI (Edgar): Update TPC tests to use config.d configuration; add HTTP/S tests for XRootD standalone (SOFTWARE-3936)  (done)  AI (Carl): Move OASIS manager login credential information to CILogon (SOFTWARE-3947)  AI (Mat): Fix-up email templates and confusing web page for the COManage self-registration process    EL8 support    AI (Mat): Test EL8 builds with new Koji hosts", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#discussion", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#support-update", 
+            "text": "None this week", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#osg-release-team", 
+            "text": "3.4.45   Both   3.5.11   Total   Status      0  +0  3  +0  9  -2  12  -2  Open    0  +0  2  +0  8  +1  10  +1  In Progress    0  -1  0  +0  4  +0  4  -1  Ready for Testing    1  +1  0  +0  3  +3  4  +4  Ready for Release    1  +0  5  +0  24  +2  30  +2  Total      Software    Ready for Testing    3.5.11    Pegasus 4.9.3  scitokens-cpp 0.5.0  CCTools 7.0.22  XCache validation tool    Both    Nothing yet      Ready for Release    3.5.11    CVMFS 2.7.1  osg-oasis 16-2  oidc-agent 3.3.1  gsi-openssh 7.4p1-5    Both    Nothing yet    3.4.45    Singularity 3.5.3        Data    vo-client 101    Operations    osg-notify smart quotes    Contrib    Nothing     Sent OSG 3.4 end of regular support date email.", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#discussion_1", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#osg-investigations-team", 
+            "text": "scitokens-cpp update in EPEL:   https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2020-d247b5382c      Paused: GRACC transition now monitored with gracc-transition website:  https://gracc-transition.herokuapp.com/  SciTokens+XrootD requires xrootd 5.0.  RC2 still not released", 
+            "title": "OSG Investigations Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200316/#discussion_2", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
             "location": "/meetings/2020/TechArea20200309/", 
             "text": "OSG Technology Area Meeting,  9 March 2020\n\n\nCoordinates:\n Conference: 971-292-4623, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n Mat, Carl, Edgar, Derek, Diego\n\n\nAnnouncements\n\n\nTriage Duty\n\n\n\n\nThis week: Carl\n\n\nNext week: Brian\n\n\n10 (+0) open FreshDesk tickets\n\n\n1 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n163\n\n\n+4\n\n\nOpen\n\n\n\n\n\n\n41\n\n\n-2\n\n\nIn Progress\n\n\n\n\n\n\n5\n\n\n+3\n\n\nReady for Testing\n\n\n\n\n\n\n4\n\n\n+4\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nAI (Carl): Release new VO client\n\n\nOSG 3.5.11/3.4.45\n\n\nAI (Mat): Update default lcmaps.db to use VOMS mappings (SOFTWARE-3927)\n\n\nAI (Diego): Build XRootD plugins for XRootD 5; RC2 expected in the next ~2 weeks (SOFTWARE-3923)\n\n\n\n\n\n\nContainers\n\n\nNeed a volunteer to test the XRootD standalone container (SOFTWARE-3934)\n\n\nneed to figure out how to get Hadoop working with the container before any Hadoop site can test it\n\n\n\n\n\n\nNeed to enable the XCache data integrity script for CMS and ATLAS XCache\n\n\n\n\n\n\nHosted CE\n\n\nAI (Brian (not here)): Simplify remote user configuration (SOFTWARE-3960)\n\n\n\n\n\n\nGridFTP/GSI transition\n\n\nAI (Brian (not here)): Demonstrate an HTCondor-CE reporting to the central collector via SSL (SOFTWARE-3939)\n\n\nAI (Edgar): Update TPC tests to use config.d configuration; add HTTP/S tests for XRootD standalone (SOFTWARE-3936)  (done)\n\n\nAI (Carl): Move OASIS manager login credential information to CILogon (SOFTWARE-3947)\n\n\nAI (Mat): Fix-up email templates and confusing web page for the COManage self-registration process\n\n\nAI (Derek): Demonstrate access to LIGO frame data with SciTokens (waiting on XCache SciTokens integration) (which is blocked on XRootD RC2)\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\nNone this week  \n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.45\n\n\n\n\nBoth\n\n\n\n\n3.5.11\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n3\n\n\n+0\n\n\n9\n\n\n-2\n\n\n12\n\n\n-2\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n+0\n\n\n2\n\n\n+0\n\n\n8\n\n\n+1\n\n\n10\n\n\n+1\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n-1\n\n\n0\n\n\n+0\n\n\n4\n\n\n+0\n\n\n4\n\n\n-1\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\n0\n\n\n+0\n\n\n3\n\n\n+3\n\n\n4\n\n\n+4\n\n\nReady for Release\n\n\n\n\n\n\n1\n\n\n+0\n\n\n5\n\n\n+0\n\n\n24\n\n\n+2\n\n\n30\n\n\n+2\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.11  \n\n\nPegasus 4.9.3\n\n\nscitokens-cpp 0.5.0\n\n\nCCTools 7.0.22\n\n\nXCache validation tool\n\n\n\n\n\n\nBoth  \n\n\nNothing yet\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\n3.5.11  \n\n\nCVMFS 2.7.1\n\n\nosg-oasis 16-2\n\n\noidc-agent 3.3.1\n\n\ngsi-openssh 7.4p1-5\n\n\n\n\n\n\nBoth  \n\n\nNothing yet\n\n\n\n\n\n\n3.4.45  \n\n\nSingularity 3.5.3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nvo-client 101\n\n\n\n\n\n\nOperations  \n\n\nosg-notify smart quotes\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nSent OSG 3.4 end of regular support date email.\n\n\nDiscussion\n\n\nNone this week  \n\n\nOSG Investigations Team\n\n\n\n\nscitokens-cpp update in EPEL:\n    \nhttps://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2020-d247b5382c\n\n\nPaused: GRACC transition now monitored with gracc-transition website: https://gracc-transition.herokuapp.com/\n\n\nSciTokens+XrootD requires xrootd 5.0.  RC2 still not released...\n\n\n\n\nDiscussion\n\n\nNone this week", 
             "title": "March 9, 2020"
