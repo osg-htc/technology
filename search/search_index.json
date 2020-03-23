@@ -2636,6 +2636,66 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2020/TechArea20200323/", 
+            "text": "OSG Technology Area Meeting, 23 March 2020\n\n\nCoordinates:\n Conference: 971-292-4623, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n   \n\n\nAnnouncements\n\n\nTriage Duty\n\n\n\n\nThis week: Edgar\n\n\nNext week: Mat\n\n\n12 (+2) open FreshDesk tickets\n\n\n1 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n158\n\n\n-3\n\n\nOpen\n\n\n\n\n\n\n38\n\n\n-2\n\n\nIn Progress\n\n\n\n\n\n\n11\n\n\n+9\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nDoc focus this Thursday, 26 Mar at 1:30pm Central!\n\n\nOSG 3.5.12/3.4.46  \n\n\nAI (Carl): Various blahp tickets, including LSF status update from Jaime (?)\n\n\n\n\n\n\nGridFTP/GSI transition  \n\n\nAI (Diego): Add option to enable the XCache data integrity script for CMS and ATLAS XCache (SOFTWARE-4026)\n\n\nAI (Edgar): Update TPC tests to use config.d configuration; add HTTP/S tests for XRootD standalone (SOFTWARE-3936)  (done)\n\n\nAI (Carl): Move OASIS manager login credential information to CILogon (SOFTWARE-3947)\n\n\nAI (BrianL): Fix-up email templates and confusing web page for the COManage self-registration process\n\n\n\n\n\n\nEL8 support  \n\n\nAI (Mat): Test EL8 builds with new Koji hosts\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\n\n\nNebraska (Diego): Found a bug with the Phedex download script in the production agent that fixed transfer issues\n\n\nPurdue (Diego): Opened a ticket because there are issues with FTS transfers\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.46\n\n\n\n\nBoth\n\n\n\n\n3.5.12\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n5\n\n\n+2\n\n\n7\n\n\n-2\n\n\n12\n\n\n+0\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n+0\n\n\n2\n\n\n+0\n\n\n9\n\n\n+1\n\n\n11\n\n\n+1\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n2\n\n\n-2\n\n\n2\n\n\n-2\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n-1\n\n\n0\n\n\n+0\n\n\n0\n\n\n-3\n\n\n0\n\n\n-4\n\n\nReady for Release\n\n\n\n\n\n\n0\n\n\n-1\n\n\n7\n\n\n+2\n\n\n18\n\n\n-6\n\n\n25\n\n\n-5\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.12  \n\n\nscitokens-cpp 0.5.0\n\n\nXCache validation tool\n\n\n\n\n\n\nBoth  \n\n\nNothing yet\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\n3.5.12  \n\n\nNothing yet\n\n\n\n\n\n\nBoth  \n\n\nNothing yet\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nOSG Investigations Team\n\n\n\n\nscitokens-cpp update now in EPEL stable  \n\n\nEPEL-7\n\n\nEPEL-8\n\n\n\n\n\n\nGRACC transition now monitored with gracc-transition website: \nhttps://gracc-transition.herokuapp.com/\n\n\nSciTokens+XrootD requires xrootd 5.0.  RC2 still not released\n\n\nGRACC Development for new corrections: \nJIRA-4030\n\n\n\n\nDiscussion\n\n\nNone this week", 
+            "title": "March 23, 2020"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#osg-technology-area-meeting-23-march-2020", 
+            "text": "Coordinates:  Conference: 971-292-4623, PIN: 57363;  https://www.uberconference.com/osgblin  Attending:", 
+            "title": "OSG Technology Area Meeting, 23 March 2020"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#announcements", 
+            "text": "", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#triage-duty", 
+            "text": "This week: Edgar  Next week: Mat  12 (+2) open FreshDesk tickets  1 (+0) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#jira", 
+            "text": "# of tickets   State      158  -3  Open    38  -2  In Progress    11  +9  Ready for Testing    0  +0  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#osg-software-team", 
+            "text": "Doc focus this Thursday, 26 Mar at 1:30pm Central!  OSG 3.5.12/3.4.46    AI (Carl): Various blahp tickets, including LSF status update from Jaime (?)    GridFTP/GSI transition    AI (Diego): Add option to enable the XCache data integrity script for CMS and ATLAS XCache (SOFTWARE-4026)  AI (Edgar): Update TPC tests to use config.d configuration; add HTTP/S tests for XRootD standalone (SOFTWARE-3936)  (done)  AI (Carl): Move OASIS manager login credential information to CILogon (SOFTWARE-3947)  AI (BrianL): Fix-up email templates and confusing web page for the COManage self-registration process    EL8 support    AI (Mat): Test EL8 builds with new Koji hosts", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#discussion", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#support-update", 
+            "text": "Nebraska (Diego): Found a bug with the Phedex download script in the production agent that fixed transfer issues  Purdue (Diego): Opened a ticket because there are issues with FTS transfers", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#osg-release-team", 
+            "text": "3.4.46   Both   3.5.12   Total   Status      0  +0  5  +2  7  -2  12  +0  Open    0  +0  2  +0  9  +1  11  +1  In Progress    0  +0  0  +0  2  -2  2  -2  Ready for Testing    0  -1  0  +0  0  -3  0  -4  Ready for Release    0  -1  7  +2  18  -6  25  -5  Total      Software    Ready for Testing    3.5.12    scitokens-cpp 0.5.0  XCache validation tool    Both    Nothing yet      Ready for Release    3.5.12    Nothing yet    Both    Nothing yet        Data    Nothing    Operations    Nothing    Contrib    Nothing", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#discussion_1", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#osg-investigations-team", 
+            "text": "scitokens-cpp update now in EPEL stable    EPEL-7  EPEL-8    GRACC transition now monitored with gracc-transition website:  https://gracc-transition.herokuapp.com/  SciTokens+XrootD requires xrootd 5.0.  RC2 still not released  GRACC Development for new corrections:  JIRA-4030", 
+            "title": "OSG Investigations Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200323/#discussion_2", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
             "location": "/meetings/2020/TechArea20200316/", 
             "text": "OSG Technology Area Meeting, 16 March 2020\n\n\nCoordinates:\n Conference: 971-292-4623, PIN: 57363; \nhttps://www.uberconference.com/osgblin\n\n\nAttending:\n BrianL, Carl, Diego, Derek, Marian, Mat, TimT\n\n\nAnnouncements\n\n\nTriage Duty\n\n\n\n\nThis week: Brian\n\n\nNext week: Edgar\n\n\n10 (+0) open FreshDesk tickets\n\n\n1 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n161\n\n\n-2\n\n\nOpen\n\n\n\n\n\n\n40\n\n\n-1\n\n\nIn Progress\n\n\n\n\n\n\n2\n\n\n-3\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n-4\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.5.12/3.4.46  \n\n\nAI (Mat): Update default lcmaps.db to use VOMS mappings (SOFTWARE-3927)\n\n\nAI (Carl): Various blahp tickets\n\n\nAI (Diego): Release XRootD 4.11.3 (SOFTWARE-4017)\n\n\nAI (BrianL): Release HTCondor-CE (SOFTWARE-4009)\n\n\nAI (Derek): Update XRootD SciTokens 1.2.0\n\n\n\n\n\n\nGridFTP/GSI transition  \n\n\nAI (Diego): Add option to enable the XCache data integrity script for CMS and ATLAS XCache (SOFTWARE-4026)\n\n\nAI (Edgar): Update TPC tests to use config.d configuration; add HTTP/S tests for XRootD standalone (SOFTWARE-3936)  (done)\n\n\nAI (Carl): Move OASIS manager login credential information to CILogon (SOFTWARE-3947)\n\n\nAI (Mat): Fix-up email templates and confusing web page for the COManage self-registration process\n\n\n\n\n\n\nEL8 support  \n\n\nAI (Mat): Test EL8 builds with new Koji hosts\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\n\n\nNebraska (Diego): Found a bug with the Phedex download script in the production agent that fixed transfer issues\n\n\nPurdue (Diego): Opened a ticket because there are issues with FTS transfers\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.46\n\n\n\n\nBoth\n\n\n\n\n3.5.12\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n5\n\n\n+2\n\n\n7\n\n\n-2\n\n\n12\n\n\n+0\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n+0\n\n\n2\n\n\n+0\n\n\n9\n\n\n+1\n\n\n11\n\n\n+1\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n2\n\n\n-2\n\n\n2\n\n\n-2\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n-1\n\n\n0\n\n\n+0\n\n\n0\n\n\n-3\n\n\n0\n\n\n-4\n\n\nReady for Release\n\n\n\n\n\n\n0\n\n\n-1\n\n\n7\n\n\n+2\n\n\n18\n\n\n-6\n\n\n25\n\n\n-5\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.12  \n\n\nscitokens-cpp 0.5.0\n\n\nXCache validation tool\n\n\n\n\n\n\nBoth  \n\n\nNothing yet\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\n3.5.12  \n\n\nNothing yet\n\n\n\n\n\n\nBoth  \n\n\nNothing yet\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nOSG Investigations Team\n\n\n\n\n\n\nscitokens-cpp update now in EPEL stable \nEPEL-7\n \nEPEL-8\n\n\n\n\n\n\nGRACC transition now monitored with gracc-transition website: \nhttps://gracc-transition.herokuapp.com/\n\n\n\n\nSciTokens+XrootD requires xrootd 5.0.  RC2 still not released\n\n\nGRACC Development for new corrections: \nJIRA 4030\n\n\n\n\nDiscussion\n\n\nNone this week", 
             "title": "March 16, 2020"
