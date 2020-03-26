@@ -634,6 +634,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#create-the-announcement" title="Create the Announcement" class="md-nav__link">
+    Create the Announcement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-identify-the-packages-that-are-ready-for-testing" title="Step 1: Identify the packages that are "Ready for Testing"" class="md-nav__link">
+    Step 1: Identify the packages that are "Ready for Testing"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-populate-the-announcement-template" title="Step 2: Populate the Announcement Template" class="md-nav__link">
+    Step 2: Populate the Announcement Template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-send-the-ready-for-testing-announcement" title="Step 3: Send the "Ready for Testing" Announcement" class="md-nav__link">
+    Step 3: Send the "Ready for Testing" Announcement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#announcement-template" title="Announcement Template" class="md-nav__link">
     Announcement Template
   </a>
@@ -1781,6 +1815,40 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#create-the-announcement" title="Create the Announcement" class="md-nav__link">
+    Create the Announcement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-identify-the-packages-that-are-ready-for-testing" title="Step 1: Identify the packages that are "Ready for Testing"" class="md-nav__link">
+    Step 1: Identify the packages that are "Ready for Testing"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-populate-the-announcement-template" title="Step 2: Populate the Announcement Template" class="md-nav__link">
+    Step 2: Populate the Announcement Template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-send-the-ready-for-testing-announcement" title="Step 3: Send the "Ready for Testing" Announcement" class="md-nav__link">
+    Step 3: Send the "Ready for Testing" Announcement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#announcement-template" title="Announcement Template" class="md-nav__link">
     Announcement Template
   </a>
@@ -1809,15 +1877,50 @@
                 <h1 id="ready-for-testing-announcements">Ready for Testing Announcements<a class="headerlink" href="#ready-for-testing-announcements" title="Permanent link">&para;</a></h1>
 <p>Per our <a href="../../policy/community-testing">community testing policy</a>, we must send weekly digests of packages that are ready
 for testing.</p>
-<h2 id="announcement-template">Announcement Template<a class="headerlink" href="#announcement-template" title="Permanent link">&para;</a></h2>
-<p>The following email template is filled out to announce that packages are ready for testing.
-Text between <code>&lt;ANGLE BRACKETS&gt;</code> should be replaced and sections without packages to be tested should be omitted.</p>
-<div class="codehilite"><pre><span></span>Subject: OSG Packages Available for Testing
+<h2 id="create-the-announcement">Create the Announcement<a class="headerlink" href="#create-the-announcement" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-identify-the-packages-that-are-ready-for-testing">Step 1: Identify the packages that are "Ready for Testing"<a class="headerlink" href="#step-1-identify-the-packages-that-are-ready-for-testing" title="Permanent link">&para;</a></h3>
+<p>Run <code>0-generate-pkg-list</code> from a machine that has your koji-registered user certificate:</p>
+<div class="codehilite"><pre><span></span><span class="nv">VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;VERSION(S)&gt;&quot;</span>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span>Several packages are available for testing for tentative release the
-week of &lt;MONTH&gt; &lt;DAY&gt;.
+<div class="codehilite"><pre><span></span>git clone https://github.com/opensciencegrid/release-tools.git
+<span class="nb">cd</span> release-tools
+<span class="m">0</span>-generate-pkg-list <span class="nv">$VERSIONS</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the future, will we have a command the produces the package list sorted according to release series and
+importance.</p>
+</div>
+<h3 id="step-2-populate-the-announcement-template">Step 2: Populate the Announcement Template<a class="headerlink" href="#step-2-populate-the-announcement-template" title="Permanent link">&para;</a></h3>
+<p>Place packages into the appropriate section depending on release series and importance of the package.
+The major packages are listed in the <a href="../../policy/community-testing">community testing policy</a>.
+Omit any packages that do not need to tested by the community such <code>osg-version</code> and internal tools.</p>
+<h3 id="step-3-send-the-ready-for-testing-announcement">Step 3: Send the "Ready for Testing" Announcement<a class="headerlink" href="#step-3-send-the-ready-for-testing-announcement" title="Permanent link">&para;</a></h3>
+<p>The announcement goes to:</p>
+<ul>
+<li><code>osg-sites@opensciencegrid.org</code></li>
+<li><code>cms-t2@fnal.gov</code></li>
+<li><code>usatlas-t2-l@lists.bnl.gov</code></li>
+<li>OIM administrative contacts</li>
+</ul>
+<p>Use the <a href="https://opensciencegrid.org/operations/services/sending-announcements/">osg-notify tool</a>
+on <code>osg-sw-submit.chtc.wisc.edu</code> to send the release announcement using the following command:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> osg-notify --cert your-cert.pem --key your-key.pem <span class="se">\</span>
+    --no-sign --type production --message &lt;PATH TO MESSAGE FILE&gt; <span class="se">\</span>
+    --subject <span class="s1">&#39;OSG Packages Available for Testing&#39;</span> <span class="se">\</span>
+    --recipients <span class="s2">&quot;osg-sites@opensciencegrid.org cms-t2@fnal.gov usatlas-t2-l@lists.bnl.gov&quot;</span> <span class="se">\</span>
+    --oim-recipients resources --oim-contact-type administrative
+</pre></div>
+
+
+<h2 id="announcement-template">Announcement Template<a class="headerlink" href="#announcement-template" title="Permanent link">&para;</a></h2>
+<p>The following email template is filled out to announce that packages are ready for testing.
+Text between <code>&lt;ANGLE BRACKETS&gt;</code> should be replaced and sections without packages to be tested should be omitted.</p>
+<div class="codehilite"><pre><span></span>Several packages are available for testing for tentative release next week.
 
 OSG 3.5 Only:
 -   Major Components*
