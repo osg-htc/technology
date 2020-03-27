@@ -2302,23 +2302,23 @@
         }, 
         {
             "location": "/documentation/reviewing-documentation/", 
-            "text": "Review OSG Software Documentation\n\n\nTo maintain quality documentation, we must regularly review our documentation for clarity and correctness. We differentiate between two types of reviews, content and editorial, which you can think of as for correctness and clarity, respectively. If you are reviewing a document as part of the release process, perform a content review.\n\n\nAfter completing a review, update the appropriate columns in the \ndocument tracking spreadsheet\n. Speak to Brian Lin for write access.\n\n\nContent Review\n\n\nContent reviews are for validating the correctness of technical steps and details. To perform a content review, follow the instructions of the document to a tee as if you were an OSG neophyte. Things to note and/or fix:\n\n\n\n\nAfter completing the instructions in the document:\n\n\nDoes the document inform you how to use the product?\n\n\nDoes the document tell you how to verify that the product is functioning?\n\n\nDoes the product work?\n\n\n\n\n\n\nIncorrect or out of date instructions\n\n\nSteps that may be particularly conducive to software or default configuration as a solution\n\n\nLack of clarity or any other confusion you may have\n\n\n\n\nEditorial Review\n\n\nEditorial reviews are for ensuring docs meet our \nstyle\n and \nlayout\n guidelines; improving readability; and proofing spelling, grammar, and punctuation.", 
+            "text": "Reviewing Software Documentation\n\n\nTo maintain quality documentation, we regularly review our documentation for clarity and correctness.\n\n\nPerforming a Review\n\n\nWhen reviewing a document, follow the instructions of the document to a tee as if you were completely new to the OSG.\nSome common things to note and/or fix:\n\n\n\n\nAfter completing the instructions in the document:\n\n\nDoes the document inform you how to use the product?\n\n\nDoes the document tell you how to verify that the product is functioning?\n\n\nDoes the product work?\n\n\n\n\n\n\nIncorrect or out of date instructions\n\n\nSteps that may be particularly conducive to software or default configuration as a solution\n\n\nLack of clarity or any other confusion you may have\n\n\n\n\nAdditionally, ensure that the document meets our \nstyle\n and\n\nlayout\n guidelines, as well as correct spelling and grammar.\n\n\nCompleting a Review\n\n\nUpon completion of the review:\n\n\n\n\n\n\nUpdate (or add) the review date in the metadata at the top of the document:\n\n\nDateReviewed: YYYY-MM-DD\n\n\n\n\n\n\n\n\n\nSubmit a pull request with the above change and any other improvements from the review", 
             "title": "Reviewing Documentation"
         }, 
         {
-            "location": "/documentation/reviewing-documentation/#review-osg-software-documentation", 
-            "text": "To maintain quality documentation, we must regularly review our documentation for clarity and correctness. We differentiate between two types of reviews, content and editorial, which you can think of as for correctness and clarity, respectively. If you are reviewing a document as part of the release process, perform a content review.  After completing a review, update the appropriate columns in the  document tracking spreadsheet . Speak to Brian Lin for write access.", 
-            "title": "Review OSG Software Documentation"
+            "location": "/documentation/reviewing-documentation/#reviewing-software-documentation", 
+            "text": "To maintain quality documentation, we regularly review our documentation for clarity and correctness.", 
+            "title": "Reviewing Software Documentation"
         }, 
         {
-            "location": "/documentation/reviewing-documentation/#content-review", 
-            "text": "Content reviews are for validating the correctness of technical steps and details. To perform a content review, follow the instructions of the document to a tee as if you were an OSG neophyte. Things to note and/or fix:   After completing the instructions in the document:  Does the document inform you how to use the product?  Does the document tell you how to verify that the product is functioning?  Does the product work?    Incorrect or out of date instructions  Steps that may be particularly conducive to software or default configuration as a solution  Lack of clarity or any other confusion you may have", 
-            "title": "Content Review"
+            "location": "/documentation/reviewing-documentation/#performing-a-review", 
+            "text": "When reviewing a document, follow the instructions of the document to a tee as if you were completely new to the OSG.\nSome common things to note and/or fix:   After completing the instructions in the document:  Does the document inform you how to use the product?  Does the document tell you how to verify that the product is functioning?  Does the product work?    Incorrect or out of date instructions  Steps that may be particularly conducive to software or default configuration as a solution  Lack of clarity or any other confusion you may have   Additionally, ensure that the document meets our  style  and layout  guidelines, as well as correct spelling and grammar.", 
+            "title": "Performing a Review"
         }, 
         {
-            "location": "/documentation/reviewing-documentation/#editorial-review", 
-            "text": "Editorial reviews are for ensuring docs meet our  style  and  layout  guidelines; improving readability; and proofing spelling, grammar, and punctuation.", 
-            "title": "Editorial Review"
+            "location": "/documentation/reviewing-documentation/#completing-a-review", 
+            "text": "Upon completion of the review:    Update (or add) the review date in the metadata at the top of the document:  DateReviewed: YYYY-MM-DD    Submit a pull request with the above change and any other improvements from the review", 
+            "title": "Completing a Review"
         }, 
         {
             "location": "/documentation/style-guide/", 

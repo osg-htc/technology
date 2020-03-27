@@ -95,7 +95,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#review-osg-software-documentation" tabindex="1" class="md-skip">
+      <a href="#reviewing-software-documentation" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -910,15 +910,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#content-review" title="Content Review" class="md-nav__link">
-    Content Review
+  <a href="#performing-a-review" title="Performing a Review" class="md-nav__link">
+    Performing a Review
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#editorial-review" title="Editorial Review" class="md-nav__link">
-    Editorial Review
+  <a href="#completing-a-review" title="Completing a Review" class="md-nav__link">
+    Completing a Review
   </a>
   
 </li>
@@ -1788,15 +1788,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#content-review" title="Content Review" class="md-nav__link">
-    Content Review
+  <a href="#performing-a-review" title="Performing a Review" class="md-nav__link">
+    Performing a Review
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#editorial-review" title="Editorial Review" class="md-nav__link">
-    Editorial Review
+  <a href="#completing-a-review" title="Completing a Review" class="md-nav__link">
+    Completing a Review
   </a>
   
 </li>
@@ -1820,11 +1820,11 @@
                   <a href="https://github.com/opensciencegrid/technology/edit/master/docs/documentation/reviewing-documentation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="review-osg-software-documentation">Review OSG Software Documentation<a class="headerlink" href="#review-osg-software-documentation" title="Permanent link">&para;</a></h1>
-<p>To maintain quality documentation, we must regularly review our documentation for clarity and correctness. We differentiate between two types of reviews, content and editorial, which you can think of as for correctness and clarity, respectively. If you are reviewing a document as part of the release process, perform a content review.</p>
-<p>After completing a review, update the appropriate columns in the <a href="https://docs.google.com/spreadsheets/d/1b3_9WqjUVlszu_tM23ehaOPQVAKb5OSRvmtuLx0u8Go/edit?usp=sharing">document tracking spreadsheet</a>. Speak to Brian Lin for write access.</p>
-<h2 id="content-review">Content Review<a class="headerlink" href="#content-review" title="Permanent link">&para;</a></h2>
-<p>Content reviews are for validating the correctness of technical steps and details. To perform a content review, follow the instructions of the document to a tee as if you were an OSG neophyte. Things to note and/or fix:</p>
+                <h1 id="reviewing-software-documentation">Reviewing Software Documentation<a class="headerlink" href="#reviewing-software-documentation" title="Permanent link">&para;</a></h1>
+<p>To maintain quality documentation, we regularly review our documentation for clarity and correctness.</p>
+<h2 id="performing-a-review">Performing a Review<a class="headerlink" href="#performing-a-review" title="Permanent link">&para;</a></h2>
+<p>When reviewing a document, follow the instructions of the document to a tee as if you were completely new to the OSG.
+Some common things to note and/or fix:</p>
 <ul>
 <li>After completing the instructions in the document:<ul>
 <li>Does the document inform you how to use the product?</li>
@@ -1836,8 +1836,22 @@
 <li>Steps that may be particularly conducive to software or default configuration as a solution</li>
 <li>Lack of clarity or any other confusion you may have</li>
 </ul>
-<h2 id="editorial-review">Editorial Review<a class="headerlink" href="#editorial-review" title="Permanent link">&para;</a></h2>
-<p>Editorial reviews are for ensuring docs meet our <a href="../../documentation/style-guide">style</a> and <a href="../../documentation/writing-documentation#document-layout">layout</a> guidelines; improving readability; and proofing spelling, grammar, and punctuation.</p>
+<p>Additionally, ensure that the document meets our <a href="../../documentation/style-guide">style</a> and
+<a href="../../documentation/writing-documentation#document-layout">layout</a> guidelines, as well as correct spelling and grammar.</p>
+<h2 id="completing-a-review">Completing a Review<a class="headerlink" href="#completing-a-review" title="Permanent link">&para;</a></h2>
+<p>Upon completion of the review:</p>
+<ol>
+<li>
+<p>Update (or add) the review date in the metadata at the top of the document:</p>
+<div class="codehilite"><pre><span></span>DateReviewed: YYYY-MM-DD
+</pre></div>
+
+
+</li>
+<li>
+<p>Submit a pull request with the above change and any other improvements from the review</p>
+</li>
+</ol>
                 
                   
                 
