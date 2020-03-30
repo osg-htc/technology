@@ -777,8 +777,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-8-announce-the-release" title="Step 8: Announce the release" class="md-nav__link">
-    Step 8: Announce the release
+  <a href="#step-8-make-release-note-pages" title="Step 8: Make release note pages" class="md-nav__link">
+    Step 8: Make release note pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9-announce-the-release" title="Step 9: Announce the release" class="md-nav__link">
+    Step 9: Announce the release
   </a>
   
 </li>
@@ -2139,8 +2146,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-8-announce-the-release" title="Step 8: Announce the release" class="md-nav__link">
-    Step 8: Announce the release
+  <a href="#step-8-make-release-note-pages" title="Step 8: Make release note pages" class="md-nav__link">
+    Step 8: Make release note pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9-announce-the-release" title="Step 9: Announce the release" class="md-nav__link">
+    Step 9: Announce the release
   </a>
   
 </li>
@@ -2399,7 +2413,43 @@ docker-osg-wn-scripts/update-all docker-osg-wn
 
 <h3 id="step-7-merge-any-pending-documentation">Step 7: Merge any pending documentation<a class="headerlink" href="#step-7-merge-any-pending-documentation" title="Permanent link">&para;</a></h3>
 <p>For each documentation ticket in this release, merge the pull requests mentioned in the description or comments.</p>
-<h3 id="step-8-announce-the-release">Step 8: Announce the release<a class="headerlink" href="#step-8-announce-the-release" title="Permanent link">&para;</a></h3>
+<h3 id="step-8-make-release-note-pages">Step 8: Make release note pages<a class="headerlink" href="#step-8-make-release-note-pages" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Copy the release note page from the latest software release of each series and put the new version number in the
+    file name. Edit the release number and date.</p>
+</li>
+<li>
+<p>Insert the package and RPM lists generated in Step 2 above.</p>
+</li>
+<li>
+<p>For the list of changes, make an entry for each package that contains short descriptive text that would inform
+    a system administrator whether or not this change is of concern to them. Also, link in any release announcement
+    web page that is available for the software. Look a prior releases of the same software for hints on where to
+    find such a page.</p>
+</li>
+<li>
+<p>Examine the known issues and remove any that were resolved with this release. Of course, add any new ones that
+    have come up.</p>
+</li>
+<li>
+<p>Spell check the release note pages.</p>
+</li>
+<li>
+<p>Add the new pages to the release series table in <code>docs/release/notes.md</code>. List the major packages that are
+    mentioned in the release announcement.</p>
+</li>
+<li>
+<p>Locally serve up the web pages and ensure that the formatting looks good and the links work as expected.</p>
+</li>
+<li>
+<p>Make a pull request, get it approved, and merged.</p>
+</li>
+<li>
+<p>When the web page is available, you can announce the release.</p>
+</li>
+</ol>
+<h3 id="step-9-announce-the-release">Step 9: Announce the release<a class="headerlink" href="#step-9-announce-the-release" title="Permanent link">&para;</a></h3>
 <p>The following instructions are meant for the release manager (or interim release manager). If you are not the release manager, let the release manager know that they can announce the release.</p>
 <ol>
 <li>

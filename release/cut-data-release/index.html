@@ -706,8 +706,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-announce-the-release" title="Step 5: Announce the release" class="md-nav__link">
-    Step 5: Announce the release
+  <a href="#step-5-make-release-note-pages" title="Step 5: Make release note pages" class="md-nav__link">
+    Step 5: Make release note pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-announce-the-release" title="Step 6: Announce the release" class="md-nav__link">
+    Step 6: Announce the release
   </a>
   
 </li>
@@ -1973,8 +1980,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-announce-the-release" title="Step 5: Announce the release" class="md-nav__link">
-    Step 5: Announce the release
+  <a href="#step-5-make-release-note-pages" title="Step 5: Make release note pages" class="md-nav__link">
+    Step 5: Make release note pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-announce-the-release" title="Step 6: Announce the release" class="md-nav__link">
+    Step 6: Announce the release
   </a>
   
 </li>
@@ -2108,7 +2122,38 @@ verify that the version of the VO Package and/or CA certificates match the versi
 </pre></div>
 
 
-<h3 id="step-5-announce-the-release">Step 5: Announce the release<a class="headerlink" href="#step-5-announce-the-release" title="Permanent link">&para;</a></h3>
+<h3 id="step-5-make-release-note-pages">Step 5: Make release note pages<a class="headerlink" href="#step-5-make-release-note-pages" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Copy the release note page from the latest data release of each series and put the new version number in the
+    file name. Edit the release number and date.</p>
+</li>
+<li>
+<p>Insert the package and RPM lists generated in Step 2 above.</p>
+</li>
+<li>
+<p>For the list of changes, make an entry for each package. (VO Package v??, and/or CA certificates based on IGTF 1.??)
+    Under each package, list the VOs or CAs affected. Usually, you can just paste this from their release announcement.
+    (At the time of writing, CA certificate and VO updates are the only packages that go into a data only release.)</p>
+</li>
+<li>
+<p>Spell check the release note pages.</p>
+</li>
+<li>
+<p>Add the new pages to the release series table in <code>docs/release/notes.md</code>. List the major packages that are
+    mentioned in the release announcement.</p>
+</li>
+<li>
+<p>Locally serve up the web pages and ensure that the formatting looks good and the links work as expected.</p>
+</li>
+<li>
+<p>Make a pull request, get it approved, and merged.</p>
+</li>
+<li>
+<p>When the web page is available, you can announce the release.</p>
+</li>
+</ol>
+<h3 id="step-6-announce-the-release">Step 6: Announce the release<a class="headerlink" href="#step-6-announce-the-release" title="Permanent link">&para;</a></h3>
 <p>The following instructions are meant for the release manager (or interim release manager). If you are not the release manager, let the release manager know that they can announce the release.</p>
 <ol>
 <li>
