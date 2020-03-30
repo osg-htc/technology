@@ -1994,7 +1994,7 @@
                 
                 <h1 id="osg-technology-area-meeting-30-march-2020">OSG Technology Area Meeting, 30 March 2020<a class="headerlink" href="#osg-technology-area-meeting-30-march-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: 971-292-4623, PIN: 57363; <a href="https://www.uberconference.com/osgblin">https://www.uberconference.com/osgblin</a><br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Carl, Derek, Diego, Edgar, Marian, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Mat OOO today</li>
@@ -2042,9 +2042,9 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>OSG 3.5.12/3.4.46  <ul>
+<li>OSG 3.5.13/3.4.47<ul>
 <li>AI (Carl): Various blahp tickets, including LSF status update from Jaime (?)</li>
-<li>AI (Diego): May have to build XRootD-4.11.3-1.2 (SOFTWARE-4017)</li>
+<li>AI (Diego): Build XRootD-4.11.3-1.2 (SOFTWARE-4017) with redirector fix</li>
 </ul>
 </li>
 <li>GridFTP/GSI transition  <ul>
@@ -2058,15 +2058,20 @@
 <li>AI (Mat): Test EL8 builds with new Koji hosts</li>
 </ul>
 </li>
+<li>New OSG Software testing host (osg-sw-submit.chtc.wisc.edu) is up and ready!</li>
 <li>Next doc focus 9 Apr 2020 @ 1:30pm</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>AI (Marian): Add BrianL and Andy to discussion about CMS monitoring configuration</li>
+<li>AI (Diego): Send BrianL local UCSD XRootD standalone and redirector configurations</li>
+<li>AI (BrianL): Verify non-UW Software Team access to the new OSG Software testing host</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>ALICE (Carl, Derek): they want two different facilities to report under the same name to the WLCG; investigating possibilities</li>
-<li>LIGO (Edgar, Derek): discussing OASIS manager contact registrations with LIGO management</li>
-<li>Purdue (Diego): wrote some manual tests for direct transfers and uncovered some issues that he's forwarded onto the GGUS ticket</li>
+<li>Caltech, Nebraska (Mat): issue with missing GridFTP logs; we have a package that addresses this issue</li>
+<li>Notre Dame (Edgar): pilots landing on GPU nodes but not able to use the GPUs; we suspect that it's a wrapper script issue</li>
+<li>Purdue (Diego): saw 5-6 different issues and saw that the first two accounted for 70% of the errors. The next build of XRootD should solve the first issue and they are increasing the # of TCP connections to address the second.</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
@@ -2179,6 +2184,7 @@
 </li>
 <li>Operations  <ul>
 <li>gsi-openssh-7.4p1-5</li>
+<li>vm-test-runs-1.1-1</li>
 </ul>
 </li>
 <li>Contrib  <ul>
