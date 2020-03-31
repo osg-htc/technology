@@ -1985,7 +1985,7 @@ RUN yum install -y &lt;PACKAGE&gt; --enablerepo=osg-minefield &amp;&amp; \
 <li>Send the <code>opensciencegrid</code> GitHub repository URL to the Software Manager and ask them to do the following:<ol>
 <li>Enable the repository in Travis-CI</li>
 <li>Add the OSG Software Docker Hub account credentials to the Travis CI repository as secure variables
-   <code>DOCKER_USERNAME</code> and <code>DOCKER_PASSWORD</code>.
+   <code>DOCKER_USERNAME</code> and <code>DOCKER_PASSWORD</code> only available to the <code>master</code> branch.
    Ensure that <code>Display value in build log</code> remains unset.
    Escape any special characters with <code>\</code>.</li>
 <li>Enable weekly cron builds from <code>master</code> and set <code>Always run</code></li>
