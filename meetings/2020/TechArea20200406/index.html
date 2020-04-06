@@ -2006,7 +2006,7 @@
                 
                 <h1 id="osg-technology-area-meeting-6-april-2020">OSG Technology Area Meeting,  6 April 2020<a class="headerlink" href="#osg-technology-area-meeting-6-april-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>  </p>
+<strong>Attending:</strong> BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat, TimT  </p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <p>New COVID-19 site documentation available: <a href="https://opensciencegrid.org/docs/compute-element/covid-19/">https://opensciencegrid.org/docs/compute-element/covid-19/</a>  </p>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -2064,12 +2064,16 @@
 <li>Next doc focus 9 Apr 2020 @ 1:30pm</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>AI (Edgar): Build ENMR singularity image</li>
+<li>AI (BrianL): Follow-up with Diego about running tests manually to troubleshoot XRootD 5 issues</li>
+<li>AI (BrianL): Create GlideinWMS 3.7 ticket and assign it to Edgar</li>
+<li>Diego spoke with XRootD devs about xrootd-lcmaps linked libraries. It built without the libraries so we will test to see it if it stil works.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Caltech, Nebraska (Mat): issue with missing GridFTP logs; we have a package that addresses this issue</li>
-<li>Notre Dame (Edgar): pilots landing on GPU nodes but not able to use the GPUs; we suspect that it's a wrapper script issue</li>
-<li>Purdue (Diego): saw 5-6 different issues and saw that the first two accounted for 70% of the errors. The next build of XRootD should solve the first issue and they are increasing the # of TCP connections to address the second.</li>
+<li>GlueX (Edgar): Had issues with signing VOMS attributes &#x2013; will investigate with BrianL and Carl</li>
+<li>Purdue, UCSD (Diego): Having issues reproducing the XRootD failures &#x2013; we decided that if there aren't regressions, we should just move forward with the release</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
@@ -2178,7 +2182,6 @@
 <ul>
 <li>AI (Edgar): Get Igor to update to a container with the latest frontier-squid, verify it works, and tag it as stable</li>
 <li>AI (Edgar): Comment in SOFTWARE-4017 with the results of the UCSD XRootD update</li>
-<li>AI (Edgar): Promote vo-client-1.103 to testing</li>
 </ul>
 <h2 id="osg-investigations-team">OSG Investigations Team<a class="headerlink" href="#osg-investigations-team" title="Permanent link">&para;</a></h2>
 <ul>
