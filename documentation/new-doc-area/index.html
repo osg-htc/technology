@@ -1941,6 +1941,8 @@ git commit -m &quot;Prepare the repository for Travis-CI deployment&quot;
 <div class="codehilite"><pre><span></span>site_name: &lt;TITLE OF YOUR SITE&gt;
 site_url: https://opensciencegrid.org/&lt;REPO NAME&gt;
 repo_name: https://github.com/opensciencegrid/&lt;REPO NAME&gt;
+theme:
+  name: material
 
 pages:
   - Home: &#39;index.md&#39;
@@ -1949,6 +1951,7 @@ markdown_extensions:
   - admonition
   - codehilite:
       guess_lang: False
+  - meta
   - toc:
       permalink: True
 </pre></div>
