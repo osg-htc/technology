@@ -2002,7 +2002,7 @@ RUN yum install -y &lt;PACKAGE&gt; --enablerepo=osg-minefield &amp;&amp; \
 <h3 id="prepare-the-dockerhub-repository">Prepare the DockerHub repository<a class="headerlink" href="#prepare-the-dockerhub-repository" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Create a Docker Hub repo in the OSG organization.</li>
-<li>Go to the permissions tab and give the <code>robots</code> team <code>Read &amp; Write</code> access</li>
+<li>Go to the permissions tab and give the <code>robots</code> and <code>technology</code> teams <code>Read &amp; Write</code> access</li>
 <li>Copy over <code>.travis.yml</code> and <code>travis/</code> from a previous docker build (e.g., <a href="https://github.com/opensciencegrid/docker-frontier-squid">https://github.com/opensciencegrid/docker-frontier-squid</a>).
    Update the <code>docker_repos</code> in <code>build_docker.sh</code> to the name of the Docker Hub repo</li>
 <li>Set the <code>+x</code> bit on <code>travis/build_docker.sh</code></li>
