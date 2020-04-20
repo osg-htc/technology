@@ -2030,7 +2030,7 @@
                 
                 <h1 id="osg-technology-area-meeting-20-april-2020">OSG Technology Area Meeting, 20 April 2020<a class="headerlink" href="#osg-technology-area-meeting-20-april-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <p>Carl OOO today  </p>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -2077,8 +2077,10 @@
 <li>OSG Release tickets  <ul>
 <li>AI (Edgar): Release XRootD 4.12.0 (SOFTWARE-4063)</li>
 <li>AI (Edgar): Release CCTools 7.1.0+ (SOFTWARE-4031)</li>
+<li>AI (Diego): Troubleshoot VMU test failures with XRootD 5 (SOFTWARE-3923)</li>
 </ul>
 </li>
+<li>AI (Mat): troubleshoot issue with EL8 builds due to dependencies being satisfied by modules instead of by repositories</li>
 <li>AI (BrianL): Begin work on persisting jobs across Open Science CE instances</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
@@ -2086,8 +2088,12 @@
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>AGLT2, BNL, MWT2 (BrianL): negotiator bug in the latest HTCondor 8.8 versions that prevent some jobs from matching when using hierarchical accounting group quotas. HTCondor team working on verifying a fix.</li>
-<li>Rutgers (Derek/BrianL): Issues with Accounting groups, prioritization of COVID research.</li>
-<li>AMNH (Derek/Edgar): now running their squid at Manhattan Internet2 node.  New CE being added as well.</li>
+<li>AMNH (Derek, Edgar): now running their squid at Manhattan Internet2 node.  New CE being added as well.</li>
+<li>Brown (Marian): had Webex troubleshooting session last week and will have a follow-up this week. Has some XRootD + NFS configuration that we may want to add to our own documentation.</li>
+<li>Cybera (Diego): having some issues setting up COVID-19 routes and will discuss with BrianL offline</li>
+<li>GlideinWMS (Marco, Edgar): a few proxy different proxy issues (missing pathlen, cannot generate VO proxies for a sub-vo, and proxy lifetime not getting passed along properly) that are expected to make it into the next 3.6 and 3.7 releases</li>
+<li>Purdue (Diego): was able to produce an issue similar to transfers getting stuck by setting and removing network bandwidth restrictions. Will discuss short timeouts with gfal2 client developers.</li>
+<li>Rutgers (Derek, BrianL): Issues with Accounting groups, prioritization of COVID research.</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
