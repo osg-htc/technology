@@ -2143,9 +2143,10 @@ To enable this feature, the GitHub repository must meet the following criteria:<
 <li>Enabled in <a href="https://travis-ci.com/getting_started">Travis CI</a>.
    Repositories that are part of the <code>opensciencegrid</code> GitHub organization require special permission to enable.
    Consult Brian or Mat.</li>
-<li>Contains <code>.travis.yml</code> file with the following contents:<div class="codehilite"><pre><span></span><span class="nt">sudo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">required</span>
+<li>Contains <code>.travis.yml</code> file with the following contents, with <code>&lt;KOJI_BUILD_TAG&gt;</code> replaced by one of the tags from <a href="https://koji.opensciencegrid.org/koji/search?match=glob&amp;type=tag&amp;terms=*el%3F-build">this list</a>:<div class="codehilite"><pre><span></span><span class="nt">sudo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">required</span>
 <span class="nt">env</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">REPO_NAME=${TRAVIS_REPO_SLUG#*/}</span>
+    <span class="l l-Scalar l-Scalar-Plain">KOJI_BUILD_TAG=&lt;KOJI BUILD TAG&gt;</span>
 
 <span class="nt">git</span><span class="p">:</span>
   <span class="nt">depth</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
@@ -2162,7 +2163,7 @@ To enable this feature, the GitHub repository must meet the following criteria:<
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">sudo docker pull opensciencegrid/osg-build</span>
 
 <span class="nt">script</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker run -v $(pwd):/$REPO_NAME -e REPO_NAME=$REPO_NAME --cap-add=SYS_ADMIN opensciencegrid/osg-build build-from-github</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker run -v $(pwd):/$REPO_NAME -e REPO_NAME=$REPO_NAME -e KOJI_BUILD_TAG=$KOJI_BUILD_TAG --cap-add=SYS_ADMIN opensciencegrid/osg-build build-from-github</span>
 </pre></div>
 
 
