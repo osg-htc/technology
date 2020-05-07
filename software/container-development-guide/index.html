@@ -2081,27 +2081,26 @@ new packages available in minefield once per week.</p>
 
 </li>
 <li>
-<p>Get the SHA256 repo digest of the image that the user has tested</p>
+<p>Get the sha256 repo digest of the image that the user has tested.
+   All you need is the part that starts with <code>sha256:...</code> (aka the <code>&lt;DIGEST&gt;</code>).</p>
 </li>
-<li>Go to the Docker Hub repo (e.g., <a href="https://hub.docker.com/r/opensciencegrid/frontier-squid/tags">https://hub.docker.com/r/opensciencegrid/frontier-squid/tags</a>) and find the
-   <code>&lt;TIMESTAMP TAG&gt;</code> (e.g., <code>20191118-1706</code>) corresponding to the digest in the previous step</li>
 <li>
-<p>Add your Docker Hub user/pass to a file with <code>600</code> permissions:</p>
-<div class="codehilite"><pre><span></span>export user=&lt;dockerhub username&gt;
-export pass=&lt;dockerhub password&gt;
+<p>(Optional) If you are tagging multiple images, you can enter your Docker Hub username and password into environment
+   variables, to avoid having to re-type them.
+   Otherwise the script will prompt for them.</p>
+<div class="codehilite"><pre><span></span>read user     # enter dockerhub username
+read -s pass  # enter dockerhub password
+export user pass
 </pre></div>
 
 
 </li>
 <li>
 <p>Run the Docker container image tagging command from <a href="https://github.com/opensciencegrid/release-tools/">release-tools</a>:</p>
-<div class="codehilite"><pre><span></span>./dockerhub-tag-fresh-to-stable.sh &lt;IMAGE NAME&gt; &lt;TIMESTAMP TAG&gt;
+<div class="codehilite"><pre><span></span>./dockerhub-tag-fresh-to-stable.sh &lt;IMAGE NAME&gt; &lt;DIGEST&gt;
 </pre></div>
 
 
-</li>
-<li>
-<p>Clean up your Docker Hub user/pass file</p>
 </li>
 </ol>
 <h3 id="removing-tags">Removing tags<a class="headerlink" href="#removing-tags" title="Permanent link">&para;</a></h3>
