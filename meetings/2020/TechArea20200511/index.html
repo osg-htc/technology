@@ -2066,7 +2066,7 @@
                 
                 <h1 id="osg-technology-area-meeting-11-may-2020">OSG Technology Area Meeting, 11 May 2020<a class="headerlink" href="#osg-technology-area-meeting-11-may-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat, TimT  </p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2118,15 +2118,22 @@
 <li>OSG 3.5.17  <ul>
 <li>AI (Edgar): XRootD 4.12.0 officially released upstream (SOFTWARE-4063)</li>
 <li>AI (Diego): Release XCache 1.3+ (SOFTWARE-4047)</li>
+<li>AI (Diego): Build XRootD plugin .so's based on XRootD version (SOFTWARE-4093)</li>
 <li>AI (Carl): Release gratia-probe 1.20.13+ (SOFTWARE-3980)</li>
 <li>AI (Mat): Remove OSG references in HTCondor-CE view and condor<sub>ce</sub><sub>info</sub><sub>status</sub> (SOFTWARE-3963)</li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<p>Marco has some Singularity and <code>condor_chirp</code> fixes and updates in GlideinWMS 3.6.3 (expected in 2-3 weeks)  </p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>Brown (Marian): waiting on a response from Brown about registering their XRootD in Topology</li>
+<li>JLab (Edgar): actively troubleshooting issues with submit hosts authenticating with different hosts with Let's Encrypt certs</li>
+<li>LIGO (Carl, Derek): followed up on some extra VO attribtues showing up in the accounting dashboards</li>
+<li>Notre Dame (Carl): answered questions about passing along AccountingGroup via the BLAH</li>
+<li>SWT2 (Derek): had to do Slurm Gratia probe surgery for Oklahoma and UTA. We're getting tired of doing this so UNL is going to pilot using the HTCondor-CE Gratia probe at their Slurm site.</li>
+</ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2242,7 +2249,10 @@
 </li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>AI (Carl): Create a follow-on ticket to fix the INDEX in the CA certificate packaging</li>
+<li>AI (Edgar): Test the latest Frontier Squid package via the <code>fresh</code> container</li>
+</ul>
 <h2 id="osg-investigations-team">OSG Investigations Team<a class="headerlink" href="#osg-investigations-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>GRACC transition now monitored with gracc-transition website: <a href="https://gracc-transition.herokuapp.com/">https://gracc-transition.herokuapp.com/</a>: 99%  <ul>
