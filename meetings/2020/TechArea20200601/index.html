@@ -2090,8 +2090,11 @@
                 
                 <h1 id="osg-technology-area-meeting-1-june-2020">OSG Technology Area Meeting,  1 June 2020<a class="headerlink" href="#osg-technology-area-meeting-1-june-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Derek, Diego, Edgar, Mat, Marian, Marco Mambelli, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Carl OOO Mon/Tue</li>
+</ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This week: BrianL</li>
@@ -2134,6 +2137,7 @@
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>BrianL working on IRIS-HEP quarterly report this week</li>
+<li>Due to the CA expiration, Koji builds from moria hang. Workaround is to hit <code>t</code> followed by <code>Enter</code> to accept the moria certificate.</li>
 <li>OSG 3.5.17  <ul>
 <li>AI (Diego): Move XCache 1.4-related tickets to RFT</li>
 <li>AI (Diego): Build XRootD plugin .so's based on XRootD version (SOFTWARE-4093)</li>
@@ -2152,10 +2156,14 @@
 <p>None this week  </p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Utah (BrianL): Pilots fail to report back to the gWMS collector due to a bad <code>X509_USER_CERT</code> set by Bosco. This is due to a bad Bosco tarball from the CHTC at least 2 weeks ago so any Hosted CEs instantiated during this time may experience these same failures.</li>
+<li>BNL (Edgar): Working on LIGO data frame data working, which is difficult because they get CVMFS config from EGI but cvmfs-x509-helper from OSG.</li>
+<li>CMS (Marco): helped troubleshoot an issue due to CA expiration over the weekend because of stale CAs in a CMS docker container</li>
+<li>FNAL (Derek): Worked to get accounting up and running on new cluster using HTCondor-CE probe with SLURM.</li>
 <li>OSGConnect (Derek): SciTokens CredMon fixes.  Causing user submission issues, to top priority.</li>
 <li>OU (Derek): Helped Horst get a CE up and running on an old cluster.  Though, Horst did most of the work.</li>
-<li>FNAL (Derek): Worked to get accounting up and running on new cluster using HTCondor-CE probe with SLURM.</li>
+<li>Syracuse (Edgar, Derek): submit host reporting records as pilots</li>
+<li>UFL (Marco): Troubleshooting issues finding local Singularity with SAM tests</li>
+<li>Utah (BrianL): Pilots fail to report back to the gWMS collector due to a bad <code>X509_USER_CERT</code> set by Bosco. This is due to a bad Bosco tarball from the CHTC at least 2 weeks ago so any Hosted CEs instantiated during this time may experience these same failures.</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
