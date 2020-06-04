@@ -374,24 +374,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-koji" title="Using Koji" class="md-nav__link">
-    Using Koji
+  <a href="#obtaining-access" title="Obtaining Access" class="md-nav__link">
+    Obtaining Access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup" title="Initial Setup" class="md-nav__link">
+    Initial Setup
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-software" title="Required Software" class="md-nav__link">
-    Required Software
+  <a href="#setting-up-on-moria" title="Setting up on moria" class="md-nav__link">
+    Setting up on moria
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#special-instructions-for-uw-madison-csl-machines" title="Special instructions for UW-Madison CSL machines:" class="md-nav__link">
-    Special instructions for UW-Madison CSL machines:
+  <a href="#setting-up-on-your-own-host" title="Setting up on your own host" class="md-nav__link">
+    Setting up on your own host
   </a>
   
 </li>
@@ -400,20 +406,21 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#obtaining-a-login" title="Obtaining a login" class="md-nav__link">
-    Obtaining a login
+      
+        <li class="md-nav__item">
+  <a href="#authenticating-to-koji" title="Authenticating to Koji" class="md-nav__link">
+    Authenticating to Koji
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-certificate-authentication" title="Configuring certificate authentication" class="md-nav__link">
-    Configuring certificate authentication
+      
+        <li class="md-nav__item">
+  <a href="#using-koji" title="Using Koji" class="md-nav__link">
+    Using Koji
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#creating-a-new-build" title="Creating a new build" class="md-nav__link">
@@ -2027,24 +2034,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-koji" title="Using Koji" class="md-nav__link">
-    Using Koji
+  <a href="#obtaining-access" title="Obtaining Access" class="md-nav__link">
+    Obtaining Access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup" title="Initial Setup" class="md-nav__link">
+    Initial Setup
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-software" title="Required Software" class="md-nav__link">
-    Required Software
+  <a href="#setting-up-on-moria" title="Setting up on moria" class="md-nav__link">
+    Setting up on moria
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#special-instructions-for-uw-madison-csl-machines" title="Special instructions for UW-Madison CSL machines:" class="md-nav__link">
-    Special instructions for UW-Madison CSL machines:
+  <a href="#setting-up-on-your-own-host" title="Setting up on your own host" class="md-nav__link">
+    Setting up on your own host
   </a>
   
 </li>
@@ -2053,20 +2066,21 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#obtaining-a-login" title="Obtaining a login" class="md-nav__link">
-    Obtaining a login
+      
+        <li class="md-nav__item">
+  <a href="#authenticating-to-koji" title="Authenticating to Koji" class="md-nav__link">
+    Authenticating to Koji
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-certificate-authentication" title="Configuring certificate authentication" class="md-nav__link">
-    Configuring certificate authentication
+      
+        <li class="md-nav__item">
+  <a href="#using-koji" title="Using Koji" class="md-nav__link">
+    Using Koji
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#creating-a-new-build" title="Creating a new build" class="md-nav__link">
@@ -2218,52 +2232,144 @@ A unit of work for Koji. Several common tasks are:</p>
 The results of a buildArch task. Their metadata are recorded in the Koji database, and files are saved to disk. Metadata may include checksums, timestamps, and who initiated the task. Artifacts may include RPMs, SRPMs, and build logs.</p>
 <p><strong>Repository</strong><br />
 A yum repository created from the contents of a tag at a specific point in time. By default, the yum repository will contain all successful, non-blocked builds in the tag, plus all RPMs in the external repositories for the tag.</p>
+<h2 id="obtaining-access">Obtaining Access<a class="headerlink" href="#obtaining-access" title="Permanent link">&para;</a></h2>
+<p>Building OSG packages in Koji requires these privileges:</p>
+<ul>
+<li>access to the OSG subversion repository at https://vdt.cs.wisc.edu/svn</li>
+<li>access to a login node at UW Comp Sci such as <code>moria.cs.wisc.edu</code></li>
+<li>access to the Koji service via a grid user certificate</li>
+</ul>
+<p>See the <a href="https://opensciencegrid.org/docs/security/user-certs/">user certificates document</a>
+for information about how to get a user certificate.</p>
+<p>Open a Freshdesk ticket with the subject "Requesting access to Koji" with the following information:
+- top 3 username choices for the login node and SVN
+  (8 characters max, no punctuation)
+- the DN of your user certificate</p>
+<p>Assign the ticket to the Software team.</p>
+<h2 id="initial-setup">Initial Setup<a class="headerlink" href="#initial-setup" title="Permanent link">&para;</a></h2>
+<p>You will be using the <a href="../../software/osg-build-tools">OSG Build Tools</a> to interact with Koji.
+You can use them on either your own machine or on your UW Comp Sci login node such as <code>moria</code>.</p>
+<h3 id="setting-up-on-moria">Setting up on moria<a class="headerlink" href="#setting-up-on-moria" title="Permanent link">&para;</a></h3>
+<p>Perform the following to set up the build tools on <code>moria</code>:</p>
+<ol>
+<li>
+<p>Clone the osg-build git repo</p>
+<div class="codehilite"><pre><span></span><span class="gp">you@moria$</span> git clone https://github.com/opensciencegrid/osg-build <span class="nv">$HOME</span>/osg-build
+</pre></div>
+
+
+</li>
+<li>
+<p>Set your <code>$PATH</code>:</p>
+<div class="codehilite"><pre><span></span><span class="gp">you@moria$</span> <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/osg-build
+<span class="gp">you@moria$</span> <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/p/vdt/workspace/quilt/bin
+<span class="gp">you@moria$</span> <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/p/vdt/workspace/tarball-client/stable/sys
+</pre></div>
+
+
+</li>
+<li>
+<p>Copy your user certificate and key into <code>$HOME/.globus/usercert.pem</code> and <code>$HOME/.globus/userkey.pem</code>.
+    Make sure <code>userkey.pem</code> is only readable by yourself.</p>
+</li>
+<li>
+<p>(Optional) Load your certificate into your browser.
+    This will allow you to make some changes using the <a href="https://koji.opensciencegrid.org/koji">Koji web interface</a>.</p>
+</li>
+<li>
+<p>Set up the OSG Koji config</p>
+<div class="codehilite"><pre><span></span><span class="gp">you@moria$</span> osg-koji setup
+</pre></div>
+
+
+<p>Answer "yes" to all questions.</p>
+</li>
+</ol>
+<h3 id="setting-up-on-your-own-host">Setting up on your own host<a class="headerlink" href="#setting-up-on-your-own-host" title="Permanent link">&para;</a></h3>
+<p>This requires an Enterprise Linux 6 or 7 host.</p>
+<ol>
+<li>
+<p>Install the <a href="https://opensciencegrid.org/docs/common/yum/">OSG YUM repositories</a></p>
+</li>
+<li>
+<p>If using OSG 3.5 or newer, enable the <code>devops</code> repository.</p>
+</li>
+<li>
+<p>Install osg-build and its dependencies:</p>
+<div class="codehilite"><pre><span></span><span class="gp">you@host$</span> sudo yum install osg-build
+</pre></div>
+
+
+</li>
+<li>
+<p>Install a program for getting grid certificates</p>
+<div class="codehilite"><pre><span></span><span class="gp">you@host$</span> sudo yum install globus-proxy-utils
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you already have <code>voms-clients-cpp</code> or <code>voms-clients-java</code> installed,
+you can use <code>voms-proxy-init -rfc</code> instead of <code>grid-proxy-init</code>,
+and don't need to install <code>globus-proxy-utils</code>.</p>
+</div>
+</li>
+<li>
+<p>(Optional) If you want to do mock builds (these are local builds in a chroot), add yourself to the <code>mock</code> user group:</p>
+<div class="codehilite"><pre><span></span><span class="gp">you@host$</span> sudo usermod -a -G mock <span class="nv">$USER</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Copy your user certificate and key into <code>$HOME/.globus/usercert.pem</code> and <code>$HOME/.globus/userkey.pem</code>.
+    Make sure <code>userkey.pem</code> is only readable by yourself.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using a certificate from SAML or Kerberos credentials, such as with <code>cigetcert</code> or <code>kx509</code>,
+skip this step.</p>
+</div>
+</li>
+<li>
+<p>(Optional) Load your certificate into your browser.
+    This will allow you to make some changes using the <a href="https://koji.opensciencegrid.org/koji">Koji web interface</a>.</p>
+</li>
+<li>
+<p>Set up the OSG Koji config</p>
+<div class="codehilite"><pre><span></span><span class="gp">you@moria$</span> osg-koji setup
+</pre></div>
+
+
+<p>Answer "yes" to all questions.</p>
+</li>
+</ol>
+<h2 id="authenticating-to-koji">Authenticating to Koji<a class="headerlink" href="#authenticating-to-koji" title="Permanent link">&para;</a></h2>
+<p>To use the OSG Build tools and the Koji command-line client, you will need to make sure you can authenticate to Koji.
+This involves getting a grid proxy certificate.
+Do one of the following:</p>
+<ul>
+<li>
+<p><strong>On moria</strong><br>
+    Run <code>osgrun grid-proxy-init</code> and type your grid certificate password.
+    If you cannot find <code>osgrun</code>, ensure you have <code>/p/vdt/workspace/tarball-client/stable/sys</code> in your <code>$PATH</code>.</p>
+</li>
+<li>
+<p><strong>On your local machine</strong><br>
+    Run <code>grid-proxy-init</code> (if using <code>globus-proxy-utils</code>) or <code>voms-proxy-init -rfc</code> (if using <code>voms-clients</code>)
+    and type your grid certificate password.</p>
+</li>
+<li>
+<p><strong>On your local machine using SAML or Kerberos-based credentials</strong><br>
+    Run <code>cigetcert</code> or <code>kx509</code> and perform whatever identification challenges you are asked.</p>
+</li>
+</ul>
+<p>To verify your login access and permissions, run:</p>
+<div class="codehilite"><pre><span></span><span class="gp">you@host$</span> osg-koji list-permissions --mine
+</pre></div>
+
+
+<p>You should see a list of your permissions if successful, or an error message if unsuccessful.</p>
 <h2 id="using-koji">Using Koji<a class="headerlink" href="#using-koji" title="Permanent link">&para;</a></h2>
-<h3 id="required-software">Required Software<a class="headerlink" href="#required-software" title="Permanent link">&para;</a></h3>
-<p>Using Koji requires:</p>
-<ul>
-<li><code>osg-build</code> version 1.6.3 or later.</li>
-<li><code>koji</code> 1.6.0-2.osg or later. <strong>Note</strong> that you want a koji build from osg; the output of <code>rpm -q koji</code> should end in ".osg".</li>
-</ul>
-<p>Both pieces of software are available from the osg repositories. <code>osg-build</code> may also be obtained from GitHub by cloning out <code>https://github.com/opensciencegrid/osg-build</code></p>
-<h4 id="special-instructions-for-uw-madison-csl-machines">Special instructions for UW-Madison CSL machines:<a class="headerlink" href="#special-instructions-for-uw-madison-csl-machines" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>Clone the osg-build GitHub repo:</p>
-<div class="codehilite"><pre><span></span><span class="gp">[you@host]$</span> git clone https://github.com/opensciencegrid/osg-build
-</pre></div>
-
-
-</li>
-<li>
-<p>Add this directory to your <code>$PATH</code></p>
-</li>
-<li>
-<p>Run</p>
-<div class="codehilite"><pre><span></span><span class="gp">[you@host]$</span> osg-koji setup
-</pre></div>
-
-
-<p>to set up the koji configuration and certificates in <code>~/.osg-koji</code></p>
-</li>
-</ul>
-<h3 id="obtaining-a-login">Obtaining a login<a class="headerlink" href="#obtaining-a-login" title="Permanent link">&para;</a></h3>
-<p>You will be using your grid certificate to log in. Email a Koji admin the DN of your certificate, and we will set up a Koji account with the appropriate permissions.</p>
-<p>If you are switching certificate providers, you will need to email a Koji admin with your new DN. You will also need to clear your browser cookies and cache for <code>https://koji.opensciencegrid.org</code> before trying to use the Koji web interface again. If your CN has changed, you will not be able to use your old certificate.</p>
-<p>Current Koji admins are Mat Selmeci and Carl Edquist.</p>
-<h3 id="configuring-certificate-authentication">Configuring certificate authentication<a class="headerlink" href="#configuring-certificate-authentication" title="Permanent link">&para;</a></h3>
-<p>You must also configure certificate authentication for the command-line tools on your build host:</p>
-<ul>
-<li>
-<p>Run</p>
-<div class="codehilite"><pre><span></span><span class="gp">[you@host]$</span> osg-koji setup
-</pre></div>
-
-
-<p>to set up the appropriate configuration and certificates in <code>~/.osg-koji</code></p>
-</li>
-</ul>
-<p>After this, you will also be able to run koji commands manually by using the <code>osg-koji</code> wrapper script. You might need to rerun <code>osg-koji setup</code> if you renew or change your cert.</p>
 <h3 id="creating-a-new-build">Creating a new build<a class="headerlink" href="#creating-a-new-build" title="Permanent link">&para;</a></h3>
 <p>We create a new build in Koji from the package's directory in OSG Software subversion.</p>
 <p>If a successful build already exists in Koji (regardless of whether it is in the tag you use), you cannot replace the build. Two builds are the same if they have the same NVR (Name-Version-Release). You <em>can</em> do a "scratch" build, which recompiles, but the results are not added to the tag. This is useful for experimenting with koji.</p>
@@ -2273,7 +2379,6 @@ A yum repository created from the contents of a tag at a specific point in time.
 
 
 <p>To do a scratch build, simply add the <code>--scratch</code> command line flag.</p>
-<p>Each invocation of osg-build will ask for the password once or twice; if you get asked more like 20 times, then you may not be running the OSG-patched version of Koji; try switching to the one from the osg-development repository.</p>
 <p>When you do a non-scratch build, it will build with the <em>osg-el6</em> and <em>osg-el7</em> targets. This will assign your build the <em>osg-3.4-el6-development</em> and <em>osg-3.4-el7-development</em> tags (and your package will be assigned the <em>osg-el6</em> and <em>osg-el7</em> tags). If successful, your build will end up in the Koji <em>osg-minefield</em> yum repos and will eventually show up in the <em>osg-development</em> yum repos. This is a high latency process.</p>
 <h3 id="build-task-results">Build task Results<a class="headerlink" href="#build-task-results" title="Permanent link">&para;</a></h3>
 <h4 id="how-to-find-build-results">How to find build results<a class="headerlink" href="#how-to-find-build-results" title="Permanent link">&para;</a></h4>
@@ -2361,6 +2466,7 @@ and whatever is listed for the Build Tag is the name of the repo to regen.</p>
 <p>Software contributors can promote any package to testing. Members of the security team can promote ca-cert packages to testing.</p>
 <p>To promote from development to testing:</p>
 <h4 id="using-osg-promote">Using <em>osg-promote</em><a class="headerlink" href="#using-osg-promote" title="Permanent link">&para;</a></h4>
+<p>Before using <code>osg-promote</code>, <a href="#authenticating-to-koji">authenticate to Koji as above</a>.</p>
 <p>If you want to promote the latest version:</p>
 <div class="codehilite"><pre><span></span><span class="gp">[you@host]$</span> osg-promote -r &lt;OSGVER&gt;-testing &lt;PACKAGE NAME&gt;
 </pre></div>
