@@ -2671,6 +2671,66 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2020/TechArea20200608/", 
+            "text": "OSG Technology Area Meeting,  8 June 2020\n\n\nCoordinates:\n Conference: +1 312-626-6799, PIN: 718 161 330, \nhttps://cern.zoom.us/j/718161330\n (password sent separately)\n\n\nAttending:\n   \n\n\nAnnouncements\n\n\nIf you are taking Wednesday Jun 10 off for \n#ShutDownSTEM\n, please let me know and try to keep an eye on critical infrastructure or urgent items during the day  \n\n\nTriage Duty\n\n\n\n\nThis week: Carl\n\n\nNext week: Edgar\n\n\n7 (-5) open FreshDesk tickets\n\n\n0 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n148\n\n\n+1\n\n\nOpen\n\n\n\n\n\n\n43\n\n\n-1\n\n\nIn Progress\n\n\n\n\n\n\n14\n\n\n+5\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n-11\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nOSG 3.5.18  \n\n\nAI (BrianL): Automatically remove completed jobs after 30 days (SOFTWARE-4108)\n\n\nAI (Diego): Build XRootD 4.12.2 (SOFTWARE-4063)\n\n\nAI (Diego): Build XRootD plugin .so's based on XRootD version (SOFTWARE-4093)\n\n\n\n\n\n\nGSI/GridFTP migration  \n\n\nAI (Edgar): test new GFAL client available in EPEL testing with XRootD 4 and 5\n\n\nAI (Edgar): Update a VO frontend to GlideinWMS 3.7\n\n\nAI (Carl): OASIS manager + COManage endpoint (SOFTWARE-3947)\n\n\n\n\n\n\nEnterprise Linux 8  \n\n\nAI (Edgar): Test built XRootD packages\n\n\nAI (Mat): Build osg-wn-client tarball (SOFTWARE-4050)\n\n\nAI (Mat): Get CentOS 8 images ready for VMU tests (SOFTWARE-4072)\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\nNone this week  \n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.51\n\n\n\n\nBoth\n\n\n\n\n3.5.17\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n1\n\n\n+0\n\n\n0\n\n\n+0\n\n\n5\n\n\n-2\n\n\n6\n\n\n-2\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n10\n\n\n+0\n\n\n10\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n+0\n\n\n1\n\n\n-2\n\n\n6\n\n\n-4\n\n\n7\n\n\n-6\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\n3\n\n\n+3\n\n\n7\n\n\n+6\n\n\n10\n\n\n+9\n\n\nReady for Release\n\n\n\n\n\n\n1\n\n\n+0\n\n\n4\n\n\n+1\n\n\n28\n\n\n+0\n\n\n33\n\n\n+1\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.17  \n\n\nUpcoming: HTCondor 8.9.7\n\n\nHTCondor 8.8.9\n\n\nXRootD 4.12.1\n\n\nxrootd-lcmaps 1.7.7\n\n\nXCache 1.4.0\n\n\nstashcache-client 5.6.1\n\n\nUpcoming: XRootD 5.0.0\n\n\nEL8 wn client\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\n3.5.17  \n\n\nGlideinWMS 3.7\n\n\ngratia-probe 1.20.13\n\n\nblahp 1.18.46\n\n\nFrontier Squid container\n\n\nHosted CE container\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nOSG Investigations Team\n\n\n\n\nGRACC transition now monitored with gracc-transition website: \nhttps://gracc-transition.herokuapp.com/\n: 99%  \n\n\nMarian can give status.\n\n\n\n\n\n\nXRootD monitoring collector validation is starting.  \n\n\nParallel infrastructure is 100% up and running.\n\n\n\n\n\n\nSlurm gratia probe considerations  \n\n\nFNAL is up and running successfully.\n\n\nNebraska is next, then the world!\n\n\n\n\n\n\nNew GRACC report for Tim sent out this morning!\n\n\nInvestigations team is helping with IRIS-HEP Analysis cluster demo at Nebraska.  BrianB and Derek are helping.  Derek mostly for xcache + tokens components.\n\n\n\n\nDiscussion\n\n\nNone this week", 
+            "title": "June 8, 2020"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#osg-technology-area-meeting-8-june-2020", 
+            "text": "Coordinates:  Conference: +1 312-626-6799, PIN: 718 161 330,  https://cern.zoom.us/j/718161330  (password sent separately)  Attending:", 
+            "title": "OSG Technology Area Meeting,  8 June 2020"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#announcements", 
+            "text": "If you are taking Wednesday Jun 10 off for  #ShutDownSTEM , please let me know and try to keep an eye on critical infrastructure or urgent items during the day", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#triage-duty", 
+            "text": "This week: Carl  Next week: Edgar  7 (-5) open FreshDesk tickets  0 (+0) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#jira", 
+            "text": "# of tickets   State      148  +1  Open    43  -1  In Progress    14  +5  Ready for Testing    0  -11  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#osg-software-team", 
+            "text": "OSG 3.5.18    AI (BrianL): Automatically remove completed jobs after 30 days (SOFTWARE-4108)  AI (Diego): Build XRootD 4.12.2 (SOFTWARE-4063)  AI (Diego): Build XRootD plugin .so's based on XRootD version (SOFTWARE-4093)    GSI/GridFTP migration    AI (Edgar): test new GFAL client available in EPEL testing with XRootD 4 and 5  AI (Edgar): Update a VO frontend to GlideinWMS 3.7  AI (Carl): OASIS manager + COManage endpoint (SOFTWARE-3947)    Enterprise Linux 8    AI (Edgar): Test built XRootD packages  AI (Mat): Build osg-wn-client tarball (SOFTWARE-4050)  AI (Mat): Get CentOS 8 images ready for VMU tests (SOFTWARE-4072)", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#discussion", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#support-update", 
+            "text": "None this week", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#osg-release-team", 
+            "text": "3.4.51   Both   3.5.17   Total   Status      1  +0  0  +0  5  -2  6  -2  Open    0  +0  0  +0  10  +0  10  +0  In Progress    0  +0  1  -2  6  -4  7  -6  Ready for Testing    0  +0  3  +3  7  +6  10  +9  Ready for Release    1  +0  4  +1  28  +0  33  +1  Total      Software    Ready for Testing    3.5.17    Upcoming: HTCondor 8.9.7  HTCondor 8.8.9  XRootD 4.12.1  xrootd-lcmaps 1.7.7  XCache 1.4.0  stashcache-client 5.6.1  Upcoming: XRootD 5.0.0  EL8 wn client      Ready for Release    3.5.17    GlideinWMS 3.7  gratia-probe 1.20.13  blahp 1.18.46  Frontier Squid container  Hosted CE container        Data    Nothing    Operations    Nothing    Contrib    Nothing", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#discussion_1", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#osg-investigations-team", 
+            "text": "GRACC transition now monitored with gracc-transition website:  https://gracc-transition.herokuapp.com/ : 99%    Marian can give status.    XRootD monitoring collector validation is starting.    Parallel infrastructure is 100% up and running.    Slurm gratia probe considerations    FNAL is up and running successfully.  Nebraska is next, then the world!    New GRACC report for Tim sent out this morning!  Investigations team is helping with IRIS-HEP Analysis cluster demo at Nebraska.  BrianB and Derek are helping.  Derek mostly for xcache + tokens components.", 
+            "title": "OSG Investigations Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200608/#discussion_2", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
             "location": "/meetings/2020/TechArea20200601/", 
             "text": "OSG Technology Area Meeting,  1 June 2020\n\n\nCoordinates:\n Conference: +1 312-626-6799, PIN: 718 161 330, \nhttps://cern.zoom.us/j/718161330\n (password sent separately)\n\n\nAttending:\n BrianL, Derek, Diego, Edgar, Mat, Marian, Marco Mambelli, TimT\n\n\nAnnouncements\n\n\n\n\nCarl OOO Mon/Tue\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: BrianL\n\n\nNext week: Carl\n\n\n12 (+4) open FreshDesk tickets\n\n\n0 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n147\n\n\n-1\n\n\nOpen\n\n\n\n\n\n\n44\n\n\n+1\n\n\nIn Progress\n\n\n\n\n\n\n9\n\n\n+1\n\n\nReady for Testing\n\n\n\n\n\n\n11\n\n\n+0\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nBrianL working on IRIS-HEP quarterly report this week\n\n\nDue to the CA expiration, Koji builds from moria hang. Workaround is to hit \nt\n followed by \nEnter\n to accept the moria certificate.\n\n\nOSG 3.5.17  \n\n\nAI (Diego): Move XCache 1.4-related tickets to RFT\n\n\nAI (Diego): Build XRootD plugin .so's based on XRootD version (SOFTWARE-4093)\n\n\n\n\n\n\nEnterprise Linux 8  \n\n\nAI (Edgar): Test built XRootD packages\n\n\nAI (Mat): Build osg-wn-client tarball (SOFTWARE-4050)\n\n\nAI (Mat): Get CentOS 8 images ready for VMU tests (SOFTWARE-4072)\n\n\n\n\n\n\nAI (Carl): Finish OASIS DN + SSH key endpoint (SOFTWARE-3947)\n\n\nAI (Carl): Finish up new CE emailer (SOFTWARE-4057)\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\n\n\nBNL (Edgar): Working on LIGO data frame data working, which is difficult because they get CVMFS config from EGI but cvmfs-x509-helper from OSG.\n\n\nCMS (Marco): helped troubleshoot an issue due to CA expiration over the weekend because of stale CAs in a CMS docker container\n\n\nFNAL (Derek): Worked to get accounting up and running on new cluster using HTCondor-CE probe with SLURM.\n\n\nOSGConnect (Derek): SciTokens CredMon fixes.  Causing user submission issues, to top priority.\n\n\nOU (Derek): Helped Horst get a CE up and running on an old cluster.  Though, Horst did most of the work.\n\n\nSyracuse (Edgar, Derek): submit host reporting records as pilots\n\n\nUFL (Marco): Troubleshooting issues finding local Singularity with SAM tests\n\n\nUtah (BrianL): Pilots fail to report back to the gWMS collector due to a bad \nX509_USER_CERT\n set by Bosco. This is due to a bad Bosco tarball from the CHTC at least 2 weeks ago so any Hosted CEs instantiated during this time may experience these same failures.\n\n\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.51\n\n\n\n\nBoth\n\n\n\n\n3.5.17\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n1\n\n\n+0\n\n\n0\n\n\n+0\n\n\n5\n\n\n-2\n\n\n6\n\n\n-2\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n10\n\n\n+0\n\n\n10\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n+0\n\n\n1\n\n\n-2\n\n\n6\n\n\n-4\n\n\n7\n\n\n-6\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\n3\n\n\n+3\n\n\n7\n\n\n+6\n\n\n10\n\n\n+9\n\n\nReady for Release\n\n\n\n\n\n\n1\n\n\n+0\n\n\n4\n\n\n+1\n\n\n28\n\n\n+0\n\n\n33\n\n\n+1\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.17  \n\n\nUpcoming: HTCondor 8.9.7\n\n\nHTCondor 8.8.9\n\n\nXRootD 4.12.1\n\n\nxrootd-lcmaps 1.7.7\n\n\nXCache 1.4.0\n\n\nstashcache-client 5.6.1\n\n\nUpcoming: XRootD 5.0.0\n\n\nEL8 wn client\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\n3.5.17  \n\n\nGlideinWMS 3.7\n\n\ngratia-probe 1.20.13\n\n\nblahp 1.18.46\n\n\nFrontier Squid container\n\n\nHosted CE container\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nNone this week  \n\n\nOSG Investigations Team\n\n\n\n\nGRACC transition now monitored with gracc-transition website: \nhttps://gracc-transition.herokuapp.com/\n: 99%  \n\n\nMarian can give status.\n\n\n\n\n\n\nXRootD monitoring collector validation is starting.  \n\n\nParallel infrastructure is 100% up and running.\n\n\n\n\n\n\nSlurm gratia probe considerations  \n\n\nFNAL is up and running successfully.\n\n\nNebraska is next, then the world!\n\n\n\n\n\n\nNew GRACC report for Tim sent out this morning!\n\n\nInvestigations team is helping with IRIS-HEP Analysis cluster demo at Nebraska.  BrianB and Derek are helping.  Derek mostly for xcache + tokens components.\n\n\n\n\nDiscussion\n\n\nNone this week", 
             "title": "June 1, 2020"
