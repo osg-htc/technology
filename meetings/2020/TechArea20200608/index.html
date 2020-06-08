@@ -2102,7 +2102,7 @@
                 
                 <h1 id="osg-technology-area-meeting-8-june-2020">OSG Technology Area Meeting,  8 June 2020<a class="headerlink" href="#osg-technology-area-meeting-8-june-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Carl, Diego, Edgar, Mat, Marian, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <p>If you are taking Wednesday Jun 10 off for <a href="https://www.shutdownstem.com/">#ShutDownSTEM</a>, please let me know and try to keep an eye on critical infrastructure or urgent items during the day  </p>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -2159,16 +2159,26 @@
 </ul>
 </li>
 <li>Enterprise Linux 8  <ul>
-<li>AI (Edgar): Test built XRootD packages</li>
+<li>AI (Edgar): Test built XRootD packages (lower prio)</li>
 <li>AI (Mat): Build osg-wn-client tarball (SOFTWARE-4050)</li>
 <li>AI (Mat): Get CentOS 8 images ready for VMU tests (SOFTWARE-4072)</li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li><code>xrootd-hdfs</code> and <code>xrootd-lcmaps</code> currently don't create versioned shared libs. Now that XRootD advertises its major version, it should be reflected in the plugin shared libs.</li>
+<li>AI (BrianL): create ticket for testing GFAL client for Edgar</li>
+<li>AI (BrianL): discuss Cybera CE management with Jeff and Igor</li>
+<li>AI (Diego): noticed that <code>development</code> label of the <code>atlas-xcache</code> container is old. This is expected so he should delete that label from Docker Hub and update the documentation to use <code>fresh</code> instead.</li>
+<li>EL8 Bosco tarballs fail to build with the new BLAHP source. We don't have a pressing need for this yet but would like this to be resolved in the HTCondor 9.0.0 release</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>Bellarmine (Mat): CE wasn't accepting pilots, turned out to be an old osg-ca-certs version</li>
+<li>GLOW (Mat): GLOW cache also experienced problems due to the out-of-date osg-ca-certs. Mat will follow-up with Operations to see why check_mk tests didn't catch this</li>
+<li>JLab (Edgar): working on security questionnaires so that he can continue setting up services (also has to fill out questionnaires for BNL and FNAL)</li>
+</ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2279,24 +2289,15 @@
 </li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>AI (TimT): assign Frontier Squid, XCache, and xrootd-lcmaps tickets to Edgar so he can let us know if he's testing the latest versions in his container deployments</li>
+<li>HTCondor 8.9.7 will be re-released this week but we need to review Jason's update instructions to publish them ourselves and/or modify the packaging so that manual interventions aren't required</li>
+<li>Horst has tested and verified the VOMS update</li>
+</ul>
 <h2 id="osg-investigations-team">OSG Investigations Team<a class="headerlink" href="#osg-investigations-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>GRACC transition now monitored with gracc-transition website: <a href="https://gracc-transition.herokuapp.com/">https://gracc-transition.herokuapp.com/</a>: 99%  <ul>
-<li>Marian can give status.</li>
-</ul>
-</li>
-<li>XRootD monitoring collector validation is starting.  <ul>
-<li>Parallel infrastructure is 100% up and running.</li>
-</ul>
-</li>
-<li>Slurm gratia probe considerations  <ul>
-<li>FNAL is up and running successfully.</li>
-<li>Nebraska is next, then the world!</li>
-</ul>
-</li>
-<li>New GRACC report for Tim sent out this morning!</li>
-<li>Investigations team is helping with IRIS-HEP Analysis cluster demo at Nebraska.  BrianB and Derek are helping.  Derek mostly for xcache + tokens components.</li>
+<li>Derek out today</li>
+<li>Want to do gracc 2 switchover soon; will wait until Derek's back and also need (another) reindex.</li>
 </ul>
 <h3 id="discussion_2">Discussion<a class="headerlink" href="#discussion_2" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
