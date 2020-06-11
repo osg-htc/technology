@@ -2396,7 +2396,7 @@ Below are some tips for writing a good promotion request:</p>
 </ul>
 </li>
 <li>If there are critical build dependencies that we typically check, include reports from the <code>built-against-pkgs</code> tool<ul>
-<li>Note: This step is really just for known, specific cases, like the {HTCondor, HTCondor-CE, BLAHP} set and the {BeStMan, GUMS, VOMS Admin, etc.} Java set</li>
+<li>Note: This step is really just for known, specific cases, like the {HTCondor, BLAHP} set</li>
 <li>Occasionally, the OSG Software manager will request the tool to be run for other cases</li>
 </ul>
 </li>
@@ -2421,6 +2421,8 @@ The <code>built-against-pkgs</code> tool shows that I built against all the late
 <li>Use <a href="../../software/osg-build-tools#osg-promote">osg-promote</a> to promote the package(s) from development to testing</li>
 <li>Comment on the associated JIRA ticket(s) with osg-promote's JIRA-formatted output (or at least the build NVRs) and,
     if you know, suggestions for acceptance testing</li>
+<li>Update the JIRA ticket description with a bulleted list describing changes in the promoted version(s) compared to
+    the currently released version(s)</li>
 <li>Mark each associated JIRA ticket as “Ready For Testing”</li>
 </ol>
                 
