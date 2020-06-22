@@ -2126,7 +2126,7 @@
                 
                 <h1 id="osg-technology-area-meeting-22-june-2020">OSG Technology Area Meeting, 22 June 2020<a class="headerlink" href="#osg-technology-area-meeting-22-june-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong>   BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2169,30 +2169,51 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>OSG 3.5.20  <ul>
+<li>OSG 3.5.20<ul>
 <li>AI (Carl): Broken links on cadist web page (SOFTWARE-3874)</li>
 <li>AI (Carl): Release CCTools 7.1.6+ (SOFTWARE-4132)</li>
-<li>AI (Diego): Build XRootD plugin .so's based on XRootD version (SOFTWARE-4093)</li>
+<li>AI (Diego): Build XRootD plugin .so's based on XRootD version (SOFTWARE-4093)<ul>
+<li>Also remove the XRootD version requirement that was causing upgrade issues.
+   The changes can be tested together.</li>
 </ul>
 </li>
-<li>GSI/GridFTP migration  <ul>
-<li>AI (Edgar): test new GFAL client available in EPEL testing with XRootD 4 and 5</li>
+</ul>
+</li>
+<li>GSI/GridFTP migration<ul>
+<li>AI (Edgar): test new GFAL client available in EPEL testing with XRootD 4 and 5<ul>
+<li>The new client works with XRootD 4; still cannot test on XRootD 5rc4.
+   Edgar is in communication with Andy to debug and fix.
+   Two problems with XRootD: HTTPS is not recognized as a plugin and the proxy is being rejected.</li>
+</ul>
+</li>
 <li>AI (Edgar): Update a VO frontend to GlideinWMS 3.7</li>
-<li>AI (Carl): OASIS manager + COManage endpoint (SOFTWARE-3947)</li>
+<li>Edgar updated the JLab frontend to GlideinWMS 3.7-1.
+   Seems stable but there are other, unrelated issues at JLab.</li>
+<li>AI (Carl): OASIS manager + COManage endpoint (SOFTWARE-3947)<ul>
+<li>Some back and forth with Dave Dykstra, who is experiencing authorization issues.
+   Since the data is public, it's possible that the authorization check can be dropped.
+   Should check that it causes no privacy issues (for example).</li>
+</ul>
+</li>
 <li>AI (Mat): Add API token authentication to Topology (SOFTWARE-4134)</li>
 </ul>
 </li>
-<li>Enterprise Linux 8  <ul>
+<li>Enterprise Linux 8<ul>
 <li>AI (Edgar): Test built XRootD packages</li>
 <li>AI (Mat): Build osg-wn-client tarball (SOFTWARE-4050)</li>
 <li>AI (Mat): Get CentOS 8 images ready for VMU tests (SOFTWARE-4072)</li>
 </ul>
 </li>
-<li>AI (Carl): Add ability to tag CC* resources in Topology (SOFTWARE-4000)</li>
+<li>AI (Carl): Add ability to tag CC* resources in Topology (SOFTWARE-4000)<ul>
+<li>The tagging will be done on the Resource level, not Resource Group;
+    Derek will have to adjust GRACC import script appropriately, though it's low priority.</li>
+</ul>
+</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<p>None this week.</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
+<p>None this week.</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
