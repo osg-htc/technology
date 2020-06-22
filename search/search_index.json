@@ -2317,7 +2317,7 @@
         }, 
         {
             "location": "/documentation/reviewing-documentation/", 
-            "text": "Reviewing Software Documentation\n\n\nTo maintain quality documentation, we regularly review our documentation for clarity and correctness.\n\n\nPerforming a Review\n\n\nWhen reviewing a document, follow the instructions of the document to a tee as if you were completely new to the OSG.\nSome common things to note and/or fix:\n\n\n\n\nAfter completing the instructions in the document:\n\n\nDoes the document inform you how to use the product?\n\n\nDoes the document tell you how to verify that the product is functioning?\n\n\nDoes the product work?\n\n\n\n\n\n\nIncorrect or out of date instructions\n\n\nSteps that may be particularly conducive to software or default configuration as a solution\n\n\nLack of clarity or any other confusion you may have\n\n\n\n\nAdditionally, ensure that the document meets our \nstyle\n and\n\nlayout\n guidelines, as well as correct spelling and grammar.\n\n\nCompleting a Review\n\n\nUpon completion of the review:\n\n\n\n\n\n\nUpdate (or add) the review date in the metadata at the top of the document:\n\n\nDateReviewed: YYYY-MM-DD\n\n\n\n\n\n\n\n\n\nSubmit a pull request with the above change and any other improvements from the review", 
+            "text": "Reviewing Software Documentation\n\n\nTo maintain quality documentation, we regularly review our documentation for clarity and correctness.\n\n\nPerforming a Review\n\n\nWhen reviewing a document, follow the instructions of the document to a tee as if you were completely new to the OSG.\nSome common things to note and/or fix:\n\n\n\n\nAfter completing the instructions in the document:\n\n\nDoes the document inform you how to use the product?\n\n\nDoes the document tell you how to verify that the product is functioning?\n\n\nDoes the product work?\n\n\n\n\n\n\nIncorrect or out of date instructions\n\n\nSteps that may be particularly conducive to software or default configuration as a solution\n\n\nLack of clarity or any other confusion you may have\n\n\n\n\nAdditionally, ensure that the document meets our \nstyle\n and\n\nlayout\n guidelines, as well as correct spelling and grammar.\n\n\nCompleting a Review\n\n\nUpon completion of the review:\n\n\n\n\n\n\nUpdate (or add) the review date in the metadata at the top of the document above the \nh1\n:\n\n\nDateReviewed: YYYY-MM-DD\n\n\n\n\n\n\n\n\n\nSubmit a pull request with the above change and any other improvements from the review", 
             "title": "Reviewing Documentation"
         }, 
         {
@@ -2332,7 +2332,7 @@
         }, 
         {
             "location": "/documentation/reviewing-documentation/#completing-a-review", 
-            "text": "Upon completion of the review:    Update (or add) the review date in the metadata at the top of the document:  DateReviewed: YYYY-MM-DD    Submit a pull request with the above change and any other improvements from the review", 
+            "text": "Upon completion of the review:    Update (or add) the review date in the metadata at the top of the document above the  h1 :  DateReviewed: YYYY-MM-DD    Submit a pull request with the above change and any other improvements from the review", 
             "title": "Completing a Review"
         }, 
         {
