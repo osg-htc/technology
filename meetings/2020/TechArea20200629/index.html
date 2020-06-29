@@ -2138,12 +2138,15 @@
                 
                 <h1 id="osg-technology-area-meeting-29-june-2020">OSG Technology Area Meeting, 29 June 2020<a class="headerlink" href="#osg-technology-area-meeting-29-june-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong>   Brian, Derek, Diego, Marian, Mat, Edgar, TimT, Marco Mambelli</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Carl OOO today</li>
-<li>Edgar OOO Tue + Wed afternoons</li>
-<li>Mat OOO Friday</li>
+<li>Edgar OOO Tue + Wed afternoons; Thu</li>
+<li>UCSD, UNL out Friday</li>
+<li>Mat out Friday</li>
+<li>Brian out next Mon and Tue</li>
+<li>Tim out for two weeks starting next Mon</li>
 </ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2192,12 +2195,18 @@
 </ul>
 </li>
 <li>GSI/GridFTP migration  <ul>
-<li>AI (Edgar): verify the version of GFAL client you tested so we can give it karma (SOFTWARE-4120)</li>
+<li>AI (Edgar): verify the version of GFAL client you tested so we can give it karma (SOFTWARE-4120)<ul>
+<li>Edgar will also test GFAL client + xrootd 5 on the same machine</li>
+</ul>
+</li>
 <li>AI (Mat): Add API token authentication to Topology (SOFTWARE-4134)</li>
 </ul>
 </li>
 <li>Enterprise Linux 8  <ul>
-<li>AI (Edgar): Add OpenSSL 1.1.1 support to xrootd-lcmaps (SOFTWARE-4150)</li>
+<li>AI (Edgar): Add OpenSSL 1.1.1 support to xrootd-lcmaps (SOFTWARE-4150)<ul>
+<li>Edgar to update ticket with areas of code that need to be updated</li>
+</ul>
+</li>
 <li>AI (Mat): Finish doc for VM base images, separating out the effort required to building EL8 vs the rest (SOFTWARE-4072)</li>
 <li>AI (Mat): Build osg-wn-client tarball (SOFTWARE-4050)</li>
 </ul>
@@ -2205,9 +2214,15 @@
 <li>AI (Carl): Add ability to tag CC* resources in Topology (SOFTWARE-4000)</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<p>Edgar:
+    - Georgia Tech StashCache using very old version of the packages; the error is about not being able to get an Authfile from topology.
+    - Clas12 is registered as a project but not a VO, which was causing issues because they are sending batch records tagged with a "Clas12" VO.
+      Since they are part of JLab, they should be under the JLab umbrella but they are using their own top-level VOMS attribute.
+      Clas12 will be registered as a VO under the JLab VO in topology (similar to how DUNE is registered).</p>
+<p>Diego:
+    - Helped Riccardo di Maria set up an XRootD dev environment.  Riccardo was compiling XRootD himself, which resulted in a different version number for XRootD and this led to dependency resolution issues when installing the plugins.
+    - Worked with JINR sysadmin to test HTTP transfers between UCSD and JINR.</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
