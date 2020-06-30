@@ -770,15 +770,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-7-merge-any-pending-documentation" title="Step 7: Merge any pending documentation" class="md-nav__link">
-    Step 7: Merge any pending documentation
+  <a href="#step-7-verify-the-vo-package-andor-ca-certificates" title="Step 7: Verify the VO Package and/or CA certificates" class="md-nav__link">
+    Step 7: Verify the VO Package and/or CA certificates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-8-make-release-note-pages" title="Step 8: Make release note pages" class="md-nav__link">
-    Step 8: Make release note pages
+  <a href="#step-8-merge-any-pending-documentation" title="Step 8: Merge any pending documentation" class="md-nav__link">
+    Step 8: Merge any pending documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9-make-release-note-pages" title="Step 9: Make release note pages" class="md-nav__link">
+    Step 9: Make release note pages
   </a>
   
 </li>
@@ -2283,15 +2290,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-7-merge-any-pending-documentation" title="Step 7: Merge any pending documentation" class="md-nav__link">
-    Step 7: Merge any pending documentation
+  <a href="#step-7-verify-the-vo-package-andor-ca-certificates" title="Step 7: Verify the VO Package and/or CA certificates" class="md-nav__link">
+    Step 7: Verify the VO Package and/or CA certificates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-8-make-release-note-pages" title="Step 8: Make release note pages" class="md-nav__link">
-    Step 8: Make release note pages
+  <a href="#step-8-merge-any-pending-documentation" title="Step 8: Merge any pending documentation" class="md-nav__link">
+    Step 8: Merge any pending documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9-make-release-note-pages" title="Step 9: Make release note pages" class="md-nav__link">
+    Step 9: Make release note pages
   </a>
   
 </li>
@@ -2356,16 +2370,12 @@ This document does NOT discuss the policy for deciding what goes into a release,
 <h2 id="day-0-generate-preliminary-release-list">Day 0: Generate Preliminary Release List<a class="headerlink" href="#day-0-generate-preliminary-release-list" title="Permanent link">&para;</a></h2>
 <p>The release manager often needs a tentative list of packages to be released. This is done by finding the package differences between osg-testing and the current release.</p>
 <h3 id="step-1-update-the-osg-version-rpm-34-only">Step 1: Update the osg-version RPM (3.4 only)<a class="headerlink" href="#step-1-update-the-osg-version-rpm-34-only" title="Permanent link">&para;</a></h3>
-<p>For each release (excluding upcoming), update the version number in the osg-version RPM's spec file and build it in koji:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># If building for the latest release out of trunk</span>
-osg-build koji osg-version
-<span class="c1"># If building for an older release out of a branch:</span>
-<span class="nv">MAJOR_VERSION</span><span class="o">=</span>&lt;MAJOR VERSION&gt;
-osg-build koji --repo<span class="o">=</span><span class="nv">$MAJOR_VERSION</span> osg-version
+<p>For each 3.4 release, update the version number in the osg-version RPM's spec file and build it in koji:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Build OSG 3.4&#39;s osg-version package</span>
+osg-build koji --repo<span class="o">=</span><span class="m">3</span>.4 osg-version
 </pre></div>
 
 
-<p>Where <code>&lt;MAJOR VERSION&gt;</code> is of the format <code>x.y</code> (e.g. <code>3.2</code>).</p>
 <h3 id="step-2-promote-osg-version-34-only-and-generate-the-release-list">Step 2: Promote osg-version (3.4 only) and generate the release list<a class="headerlink" href="#step-2-promote-osg-version-34-only-and-generate-the-release-list" title="Permanent link">&para;</a></h3>
 <p>Run <code>0-generate-pkg-list</code> from a machine that has your koji-registered user certificate:</p>
 <div class="codehilite"><pre><span></span><span class="nv">VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;VERSION(S)&gt;&quot;</span>
@@ -2397,7 +2407,7 @@ osg-build koji --repo<span class="o">=</span><span class="nv">$MAJOR_VERSION</sp
 For 3.4 releases, also verify that the <code>osg-version</code> RPM is in your set of packages for the release!</p>
 </div>
 <h3 id="step-2-test-pre-release-in-vm-universe">Step 2: Test Pre-Release in VM Universe<a class="headerlink" href="#step-2-test-pre-release-in-vm-universe" title="Permanent link">&para;</a></h3>
-<p>To test pre-release, you will be kicking off a manual VM universe test run from <code>osghost.chtc.wisc.edu</code>.</p>
+<p>To test pre-release, you will be kicking off a manual VM universe test run from <code>osg-sw-submit.chtc.wisc.edu</code>.</p>
 <ol>
 <li>Ensure that you meet the <a href="https://github.com/opensciencegrid/vm-test-runs">pre-requisites</a> for submitting VM universe test runs</li>
 <li>
@@ -2410,7 +2420,7 @@ For 3.4 releases, also verify that the <code>osg-version</code> RPM is in your s
 <li>
 <p><code>cd</code> into the directory specified in the output of the previous command</p>
 </li>
-<li>Submit the DAG:<div class="codehilite"><pre><span></span>condor_submit_dag master-run.dag
+<li>Submit the DAG:<div class="codehilite"><pre><span></span>./master-run.sh
 </pre></div>
 
 
@@ -2445,8 +2455,15 @@ If you not local to Madison, consult the release manager for the designated pers
 </pre></div>
 
 
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Enter a@a.a for your upload accost at first. The script will build the tarballs but not upload them.
+Test them in next step and then rerun the script and enter the proper account information.
+The script will pick up where is left of and upload the tarballs.</p>
+</div>
 <h3 id="step-6-briefly-test-the-client-tarballs">Step 6: Briefly test the client tarballs<a class="headerlink" href="#step-6-briefly-test-the-client-tarballs" title="Permanent link">&para;</a></h3>
-<p>As an <strong>unprivileged user</strong>, extract each tarball into a separate directory. Make sure osg-post-install works. Make sure <code>osgrun osg-version</code> works by running the following tests, replacing <code>&lt;NON-UPCOMING VERSION(S)</code> with the appropriate version numbers:</p>
+<p>Copy 1-verify-tarballs into /tmp.
+As an <strong>unprivileged user</strong>, run the script:</p>
 <div class="codehilite"><pre><span></span><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
 </pre></div>
 
@@ -2501,7 +2518,7 @@ locks the repos and regenerates them.</p>
 <li>For each release version, use the <code>*release-note*</code> files to update the relevant sections of the release note pages.</li>
 </ol>
 <h3 id="step-3-upload-the-client-tarballs">Step 3: Upload the client tarballs<a class="headerlink" href="#step-3-upload-the-client-tarballs" title="Permanent link">&para;</a></h3>
-<p>Upload the tarballs to the repository with the following procedure from a UW CS machine (e.g., <code>ingwe</code>):</p>
+<p>Upload the tarballs to the repository with the following procedure from a UW CS machine (e.g., <code>moria</code>):</p>
 <div class="codehilite"><pre><span></span><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
 </pre></div>
 
@@ -2523,7 +2540,7 @@ locks the repos and regenerates them.</p>
 <div class="codehilite"><pre><span></span><span class="nb">cd</span> /tmp
 git clone --depth <span class="m">1</span> file:///p/vdt/workspace/git/repo/tarball-client.git
 <span class="k">for</span> ver in <span class="nv">$NON_UPCOMING_VERSIONS</span><span class="p">;</span> <span class="k">do</span>
-    /p/vdt/workspace/tarball-client/current/sys/osgrun bash -x /tmp/tarball-client/upload-tarballs-to-oasis <span class="nv">$ver</span>
+    /p/vdt/workspace/tarball-client/current/sys/osgrun /tmp/tarball-client/upload-tarballs-to-oasis <span class="nv">$ver</span>
 <span class="k">done</span>
 </pre></div>
 
@@ -2555,9 +2572,21 @@ docker-osg-wn-scripts/update-all docker-osg-wn
 </pre></div>
 
 
-<h3 id="step-7-merge-any-pending-documentation">Step 7: Merge any pending documentation<a class="headerlink" href="#step-7-merge-any-pending-documentation" title="Permanent link">&para;</a></h3>
+<h3 id="step-7-verify-the-vo-package-andor-ca-certificates">Step 7: Verify the VO Package and/or CA certificates<a class="headerlink" href="#step-7-verify-the-vo-package-andor-ca-certificates" title="Permanent link">&para;</a></h3>
+<p>If this release contains either the <code>vo-client</code> or <code>osg-ca-certs</code> package, verify that the CA web site has been updated.
+Wait for the <a href="https://repo.opensciencegrid.org/cadist/">CA certificates</a> to be updated.
+It may take a while for the updates to reach the mirror used to update the web site.
+The repository is checked hourly for updated CA certificates.
+Once the web page is updated, run the following command to update the VO Package and/or CA certificates in the tarball installations and
+verify that the version of the VO Package and/or CA certificates match the version that was promoted to release.</p>
+<div class="codehilite"><pre><span></span>/p/vdt/workspace/tarball-client/current/amd64_rhel6/osgrun osg-update-data
+/p/vdt/workspace/tarball-client/current/amd64_rhel7/osgrun osg-update-data
+</pre></div>
+
+
+<h3 id="step-8-merge-any-pending-documentation">Step 8: Merge any pending documentation<a class="headerlink" href="#step-8-merge-any-pending-documentation" title="Permanent link">&para;</a></h3>
 <p>For each documentation ticket in this release, merge the pull requests mentioned in the description or comments.</p>
-<h3 id="step-8-make-release-note-pages">Step 8: Make release note pages<a class="headerlink" href="#step-8-make-release-note-pages" title="Permanent link">&para;</a></h3>
+<h3 id="step-9-make-release-note-pages">Step 9: Make release note pages<a class="headerlink" href="#step-9-make-release-note-pages" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Copy the release note page from the latest software release of each series and put the new version number in the
