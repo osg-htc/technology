@@ -2026,21 +2026,21 @@ cd &lt;REPO NAME&gt;
 </li>
 <li>
 <p>Login using your GitHub credentials:</p>
-<div class="codehilite"><pre><span></span>travis login
+<div class="codehilite"><pre><span></span>travis login --com
 </pre></div>
 
 
 </li>
 <li>
 <p>Enable the repository in Travis:</p>
-<div class="codehilite"><pre><span></span>travis enable -r opensciencegrid/&lt;REPO NAME&gt;
+<div class="codehilite"><pre><span></span>travis enable --com -r opensciencegrid/&lt;REPO NAME&gt;
 </pre></div>
 
 
 </li>
 <li>
 <p>Encrypt the deploy key and temporarily save the output (you will need the hashes later for <code>.travis.env</code>):</p>
-<div class="codehilite"><pre><span></span>travis encrypt-file deploy-key
+<div class="codehilite"><pre><span></span>travis encrypt-file --com deploy-key
 </pre></div>
 
 
