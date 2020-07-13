@@ -1108,6 +1108,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#glideinwms" title="GlideinWMS" class="md-nav__link">
+    GlideinWMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#support-update" title="Support Update" class="md-nav__link">
     Support Update
   </a>
@@ -2090,6 +2097,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#glideinwms" title="GlideinWMS" class="md-nav__link">
+    GlideinWMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#support-update" title="Support Update" class="md-nav__link">
     Support Update
   </a>
@@ -2162,11 +2176,13 @@
                 
                 <h1 id="osg-technology-area-meeting-13-july-2020">OSG Technology Area Meeting, 13 July 2020<a class="headerlink" href="#osg-technology-area-meeting-13-july-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong>   BrianL, Carl, Diego, Edgar, Marian, Marco Mambelli, Mat</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Mat OOO tomorrow</li>
 <li>TimT OOO until next Monday</li>
+<li>Derek OOO next week</li>
+<li>OSG User School this week and next week</li>
 </ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2209,29 +2225,46 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>OSG 3.5.20  <ul>
+<li>OSG 3.5.20<ul>
 <li>AI (Diego): Investigate XRootD 5 VMU failures (SOFTWARE-3923)</li>
+<li>AI (Edgar): Work with XRootD developers to obtain a patch for XRootD 5 and build it in OSG</li>
 </ul>
 </li>
-<li>Containers  <ul>
+<li>Containers<ul>
 <li>AI (Edgar): Review XCache default directories PR (SOFTWARE-4159)</li>
 <li>AI (Edgar): Add <code>tcmalloc</code> to XCache containers (SOFTWARE-4166)</li>
 <li>AI (Edgar): Promote frontier-squid container to stable (SOFTWARE-4156)</li>
 <li>AI (Carl): Transition software base and Frontier Squid to GitHub Actions (SOFTWARE-4171, SOFTWARE-4172)</li>
 </ul>
 </li>
-<li>Enterprise Linux 8  <ul>
-<li>AI (Edgar): Add OpenSSL 1.1.1 support to xrootd-lcmaps (SOFTWARE-4150)</li>
-<li>AI (Mat): Finish doc for VM base images, separating out the effort required to building EL8 vs the rest (SOFTWARE-4072)</li>
+<li>Enterprise Linux 8<ul>
+<li>AI (Edgar): Test OpenSSL 1.1.1 support for xrootd-lcmaps (SOFTWARE-4150)<ul>
+<li>Testing via XCache not possible because Python bindings for HTCondor (for OSG) are not available yet.
+    Edgar will test using xrootd-standalone</li>
+</ul>
+</li>
+<li>AI (Mat): Add functioning VMU tests for EL8 (SOFTWARE-4072)</li>
 <li>AI (Mat): Build osg-wn-client tarball (SOFTWARE-4050)</li>
 </ul>
 </li>
 <li>AI (BrianL): Design a plan with Derek/BrianB to generate pilot records in the OSG pilot container (SOFTWARE-4169)</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>The task of tagging CC<em> resources will be performed by Hosted CE operators (for Hosted CEs)
+    or by BrianL or delegate for other resources.
+    Actual tagging will wait until the site's CC</em> status is public.</li>
+</ul>
+<h3 id="glideinwms">GlideinWMS<a class="headerlink" href="#glideinwms" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Developers continuing to work on Python 3 migration</li>
+<li>Marco will build test versions of GlideinWMS into the osg-contrib repos</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>Edgar working with Georgia Tech for fixing their cache;
+    will set up a screen sharing session in order to speed up communication with admins.</li>
+</ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2338,6 +2371,14 @@
 </li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Edgar will check if the logging changes in osg-xrootd 3.5-13 are included in his current containers.</p>
+</li>
+<li>
+<p>No release this week.</p>
+</li>
+</ul>
 <h2 id="osg-investigations-team">OSG Investigations Team<a class="headerlink" href="#osg-investigations-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>GRACC2 Transitioned!</li>
