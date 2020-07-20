@@ -2088,9 +2088,11 @@ for testing.</p>
 importance.</p>
 </div>
 <h3 id="step-2-populate-the-announcement-template">Step 2: Populate the Announcement Template<a class="headerlink" href="#step-2-populate-the-announcement-template" title="Permanent link">&para;</a></h3>
-<p>Place packages into the appropriate section depending on release series and importance of the package.
-The major packages are listed in the <a href="../../policy/community-testing">community testing policy</a>.
-Omit any packages that do not need to tested by the community such <code>osg-version</code> and internal tools.</p>
+<p>Find the software components that the packages in the list correspond to.
+For example, <code>htcondor-ce-4.4.0-1.osg35.el7</code> should be listed as "HTCondor-CE 4.4.0".
+Place software components into the appropriate section depending on release series and importance of the software.
+The major software components are listed in the <a href="../../policy/community-testing">community testing policy</a>.
+Omit any software that does not need to tested by the community such <code>osg-version</code> and internal tools.</p>
 <h3 id="step-3-send-the-ready-for-testing-announcement">Step 3: Send the "Ready for Testing" Announcement<a class="headerlink" href="#step-3-send-the-ready-for-testing-announcement" title="Permanent link">&para;</a></h3>
 <p>The announcement goes to:</p>
 <ul>
@@ -2111,32 +2113,34 @@ on <code>osg-sw-submit.chtc.wisc.edu</code> to send the release announcement usi
 
 <h2 id="announcement-template">Announcement Template<a class="headerlink" href="#announcement-template" title="Permanent link">&para;</a></h2>
 <p>The following email template is filled out to announce that packages are ready for testing.
-Text between <code>&lt;ANGLE BRACKETS&gt;</code> should be replaced and sections without packages to be tested should be omitted.</p>
+Text between <code>&lt;ANGLE BRACKETS&gt;</code> should be replaced and sections without packages to be tested should be omitted.
+Omit release numbers unless they are relevant (e.g. for a packaging-only change).
+Each major component should have a line about what's new.</p>
 <div class="codehilite"><pre><span></span>Several packages are available for testing for tentative release next week.
 
 OSG 3.5 Only:
 -   Major Components*
-    -   Major Package n.v.r (Comment, Security, etc.)
-    -   Major Package n.v.r
+    -   &lt;Major Component Name and Version (NV)&gt; - &lt;DESCRIPTION&gt;
+    -   &lt;Major Component NV&gt; - &lt;DESCRIPTION&gt;
 -   Minor Components
-    -   Minor Package n.v.r
-    -   Minor Package n.v.r
+    -   &lt;Minor Component NV&gt;
+    -   &lt;Minor Component NV&gt;
 
 Both OSG 3.5 and 3.4:
 -   Major Components*
-    -   Major Package n.v.r (Comment, Security, etc.)
-    -   Major Package n.v.r
+    -   &lt;Major Component NV&gt; - &lt;DESCRIPTION&gt;
+    -   &lt;Major Component NV&gt; - &lt;DESCRIPTION&gt;
 -   Minor Components
-    -   Minor Package n.v.r
-    -   Minor Package n.v.r
+    -   &lt;Minor Component NV&gt;
+    -   &lt;Minor Component NV&gt;
 
 OSG 3.4 Only:
 -   Major Components*
-    -   Major Package n.v.r (Comment, Security, etc.)
-    -   Major Package n.v.r
+    -   &lt;Major Component NV&gt; - &lt;DESCRIPTION&gt;
+    -   &lt;Major Component NV&gt; - &lt;DESCRIPTION&gt;
 -   Minor Components
-    -   Minor Package n.v.r
-    -   Minor Package n.v.r
+    -   &lt;Minor Component NV&gt;
+    -   &lt;Minor Component NV&gt;
 
 To install any of these packages, run the following command:
 
