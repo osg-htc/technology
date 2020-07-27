@@ -2186,11 +2186,12 @@
                 
                 <h1 id="osg-technology-area-meeting-27-july-2020">OSG Technology Area Meeting, 27 July 2020<a class="headerlink" href="#osg-technology-area-meeting-27-july-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>BrianL OOO next week</li>
 <li>Mat OOO Monday and Friday</li>
+<li>Doc focus doodle poll sent</li>
 </ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2244,20 +2245,28 @@
 </li>
 <li>Enterprise Linux 8  <ul>
 <li>AI (Edgar): Add OpenSSL 1.1.1 support to xrootd-lcmaps (SOFTWARE-4150)  <ul>
-<li>Testing via XCache not possible because Python bindings for HTCondor (for OSG) are not available yet.<br />
-    Edgar will test using xrootd-standalone</li>
+<li>HTCondor in osg-development for EL8; Edgar can now build the XRootD metapackages and use them for testing</li>
 </ul>
 </li>
 <li>AI (Diego): Release scitokens for EL8 (SOFTWARE-4126)</li>
 <li>AI (Diego): Kick off Frontier Squid EL8 VMU (SOFTWARE-4105)</li>
 <li>AI (Mat): Build osg-wn-client tarball (SOFTWARE-4050)</li>
 <li>AI (TimT): Release condor for el8 (SOFTWARE-4157)</li>
+<li>AI (Mat, Edgar): Change osg-test tests that are marked "el7 only" to "el7 and el8"</li>
+<li>AI (Mat, TimT): Build condor 8.9 for el8</li>
 </ul>
 </li>
 <li>AI (BrianL, Carl): Write design doc for generating pilot records for OSG pilot containers (SOFTWARE-4169)</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>Marco:<ul>
+<li>No Fermicloud EL8 template available yet, nor is there an ETA;
+    admins planning to upgrade OpenNebula before starting work</li>
+<li>GlideinWMS release coming soon</li>
+</ul>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <p>None this week  </p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
