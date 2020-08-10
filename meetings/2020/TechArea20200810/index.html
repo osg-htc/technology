@@ -2210,11 +2210,12 @@
                 
                 <h1 id="osg-technology-area-meeting-10-august-2020">OSG Technology Area Meeting, 10 August 2020<a class="headerlink" href="#osg-technology-area-meeting-10-august-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong>   BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Doc focus this Thursday starting at 13:30 CDT</li>
 <li>OSG All Hands Aug 31 - Sep 3</li>
+<li>Release of vo-client as soon as possible today because of SLAC VOMS server cert expiration</li>
 </ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2256,11 +2257,33 @@
 </tbody>
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
-<p>Tech team priorities this week: <a href="https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19">https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19</a>  </p>
+<p>Tech team priorities this week: <a href="https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19">https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19</a></p>
+<ul>
+<li>AI: Carl - Release IGTF certs today.<ul>
+<li>This includes EL8 builds.</li>
+</ul>
+</li>
+<li>AI: Carl - Tracking CC* GPU jobs (in progress).</li>
+<li>AI: Mat - Update osg-test to handle StashCache and SciTokens integration.</li>
+<li>AI: Diego - Build scitokens packages for EL8.<ul>
+<li>This includes scitokens-credmon for EL8, which requires Python 3 support.</li>
+</ul>
+</li>
+<li>AI: Diego - Run VMU tests for frontier squid.</li>
+<li>Edgar tested XCache for XRootD 4 in EL8; it needed condor and blahp built for EL8 but it is successfully running.</li>
+<li>AI: Edgar - Send BrianL an <code>rpm -qa</code> dump to help get a list of all the packages that were touched.</li>
+<li>Edgar tested XCache 1.5.0 but found some issues; will make a PR.</li>
+<li>TimT - built HTCondor 8.9 in upcoming for EL8; will make a patch to fix permission issues that cause RPM verification to fail.</li>
+<li>BLAHP needs to built for upcoming; BrianL will investigate if there are any related tickets.</li>
+</ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<p>None this week</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>TimT: Received a ticket for XRootD Ceph support; will route it to BrianL.</li>
+<li>Edgar: Wesley Smith at JLab is installing the origin and has some questions about the documentation,
+    specifically about Topology registration.</li>
+</ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
