@@ -2676,6 +2676,66 @@
             "title": "Reviewing pull requests"
         }, 
         {
+            "location": "/meetings/2020/TechArea20200810/", 
+            "text": "OSG Technology Area Meeting, 10 August 2020\n\n\nCoordinates:\n Conference: +1 312-626-6799, PIN: 718 161 330, \nhttps://cern.zoom.us/j/718161330\n (password sent separately)\n\n\nAttending:\n   \n\n\nAnnouncements\n\n\n\n\nDoc focus this Thursday starting at 13:30 CDT\n\n\nOSG All Hands Aug 31 - Sep 3\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: TimT\n\n\nNext week: Diego\n\n\n8 (+0) open FreshDesk tickets\n\n\n0 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n165\n\n\n-1\n\n\nOpen\n\n\n\n\n\n\n41\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n19\n\n\n-1\n\n\nReady for Testing\n\n\n\n\n\n\n1\n\n\n+1\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\nTech team priorities this week: \nhttps://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19\n  \n\n\nDiscussion\n\n\nNone this week  \n\n\nSupport Update\n\n\nNone this week  \n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.54\n\n\n\n\nBoth\n\n\n\n\n3.5.22\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n7\n\n\n+2\n\n\n7\n\n\n+2\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n6\n\n\n+3\n\n\n6\n\n\n+3\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n12\n\n\n-5\n\n\n12\n\n\n-5\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n0\n\n\n-4\n\n\n0\n\n\n-4\n\n\nReady for Release\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n25\n\n\n-4\n\n\n25\n\n\n-4\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.21  \n\n\noidc-agent 3.3.3\n\n\nXRootD plugins - version matching\n\n\nUpcoming XRootD 5.0.0\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\nNothing\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nXRootD 5.0.0 is ready for release\n\n\nOSG Investigations Team\n\n\n\n\nValidation document is in \"Draft\"\n\n\nCVMFS Singularity Sync is going to start using singularity to create the containers. Working on testing, see github discussion:  \n\n\nhttps://github.com/opensciencegrid/cvmfs-singularity-sync/issues/245\n\n\nMore feedback from interested parties and they seem to be happy. Will provide feedback when Derek is back from vacation.\n\n\n\n\n\n\nDerek needs help with XCache test failures.\n\n\nStashCP Go implementation, may want some help with \"evaluating\" it as a replacement for stashcp.\n\n\n\n\nDiscussion\n\n\nNone this week", 
+            "title": "August 10, 2020"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#osg-technology-area-meeting-10-august-2020", 
+            "text": "Coordinates:  Conference: +1 312-626-6799, PIN: 718 161 330,  https://cern.zoom.us/j/718161330  (password sent separately)  Attending:", 
+            "title": "OSG Technology Area Meeting, 10 August 2020"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#announcements", 
+            "text": "Doc focus this Thursday starting at 13:30 CDT  OSG All Hands Aug 31 - Sep 3", 
+            "title": "Announcements"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#triage-duty", 
+            "text": "This week: TimT  Next week: Diego  8 (+0) open FreshDesk tickets  0 (+0) open GGUS ticket", 
+            "title": "Triage Duty"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#jira", 
+            "text": "# of tickets   State      165  -1  Open    41  +0  In Progress    19  -1  Ready for Testing    1  +1  Ready for Release", 
+            "title": "JIRA"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#osg-software-team", 
+            "text": "Tech team priorities this week:  https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19", 
+            "title": "OSG Software Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#discussion", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#support-update", 
+            "text": "None this week", 
+            "title": "Support Update"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#osg-release-team", 
+            "text": "3.4.54   Both   3.5.22   Total   Status      0  +0  0  +0  7  +2  7  +2  Open    0  +0  0  +0  6  +3  6  +3  In Progress    0  +0  0  +0  12  -5  12  -5  Ready for Testing    0  +0  0  +0  0  -4  0  -4  Ready for Release    0  +0  0  +0  25  -4  25  -4  Total      Software    Ready for Testing    3.5.21    oidc-agent 3.3.3  XRootD plugins - version matching  Upcoming XRootD 5.0.0      Ready for Release    Nothing      Data    Nothing    Operations    Nothing    Contrib    Nothing", 
+            "title": "OSG Release Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#discussion_1", 
+            "text": "XRootD 5.0.0 is ready for release", 
+            "title": "Discussion"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#osg-investigations-team", 
+            "text": "Validation document is in \"Draft\"  CVMFS Singularity Sync is going to start using singularity to create the containers. Working on testing, see github discussion:    https://github.com/opensciencegrid/cvmfs-singularity-sync/issues/245  More feedback from interested parties and they seem to be happy. Will provide feedback when Derek is back from vacation.    Derek needs help with XCache test failures.  StashCP Go implementation, may want some help with \"evaluating\" it as a replacement for stashcp.", 
+            "title": "OSG Investigations Team"
+        }, 
+        {
+            "location": "/meetings/2020/TechArea20200810/#discussion_2", 
+            "text": "None this week", 
+            "title": "Discussion"
+        }, 
+        {
             "location": "/meetings/2020/TechArea20200803/", 
             "text": "OSG Technology Area Meeting, 3 August 2020\n\n\nCoordinates:\n Conference: +1 312-626-6799, PIN: 718 161 330, \nhttps://cern.zoom.us/j/718161330\n (password sent separately)\n\n\nAttending:\n   Carl, Derek, Diego, Edgar, Marian, Tim\n\n\nAnnouncements\n\n\n\n\nBrianL OOO this week\n\n\nMat OOO Monday\n\n\nCarl OOO Thursday\n\n\n\n\nTriage Duty\n\n\n\n\nThis week: Mat\n\n\nNext week: Tim\n\n\n7 (-1) open FreshDesk tickets\n\n\n0 (+0) open GGUS ticket\n\n\n\n\nJIRA\n\n\n\n\n\n\n\n\n# of tickets\n\n\n\n\nState\n\n\n\n\n\n\n\n\n\n\n166\n\n\n-1\n\n\nOpen\n\n\n\n\n\n\n41\n\n\n+0\n\n\nIn Progress\n\n\n\n\n\n\n20\n\n\n+2\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n-4\n\n\nReady for Release\n\n\n\n\n\n\n\n\nOSG Software Team\n\n\n\n\nAI (Derek): XCache 1.5.0 breaks osg-test tests and docker-xcache CI (preventing image tag updates!), probably due to hardcoded Authfiles in the tests of both:  \n\n\nhttps://github.com/opensciencegrid/docker-xcache/blob/master/tests/test_stashcache_origin.sh#L10\n\n\nhttps://github.com/opensciencegrid/docker-xcache/blob/master/tests/test_stashcache.sh#L9\n\n\nhttps://github.com/opensciencegrid/osg-test/blob/master/osgtest/tests/test_155_stashcache.py#L81-L100\n\n\n\n\n\n\nTech team priorities this week: \nhttps://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19\n\n\nDoc Focus scheduled for August 13 1:30pm CDT\n\n\n\n\nDiscussion\n\n\n\n\nDerek: scitokens-cpp is already in EPEL 7 and 8. Do we need it in OSG 3.5?\n\n\n\n\nSupport Update\n\n\nEdgar: Helping SDSC with some CC* grant work\n\n\nOSG Release Team\n\n\n\n\n\n\n\n\n3.4.54\n\n\n\n\nBoth\n\n\n\n\n3.5.22\n\n\n\n\nTotal\n\n\n\n\nStatus\n\n\n\n\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n7\n\n\n+2\n\n\n7\n\n\n+2\n\n\nOpen\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n6\n\n\n+3\n\n\n6\n\n\n+3\n\n\nIn Progress\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n12\n\n\n-5\n\n\n12\n\n\n-5\n\n\nReady for Testing\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n0\n\n\n-4\n\n\n0\n\n\n-4\n\n\nReady for Release\n\n\n\n\n\n\n0\n\n\n+0\n\n\n0\n\n\n+0\n\n\n25\n\n\n-4\n\n\n25\n\n\n-4\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\nSoftware  \n\n\nReady for Testing  \n\n\n3.5.21  \n\n\noidc-agent 3.3.3\n\n\nXRootD plugins - version matching\n\n\nUpcoming XRootD 5.0.0\n\n\n\n\n\n\n\n\n\n\nReady for Release  \n\n\nNothing\n\n\n\n\n\n\n\n\n\n\nData  \n\n\nNothing\n\n\n\n\n\n\nOperations  \n\n\nNothing\n\n\n\n\n\n\nContrib  \n\n\nNothing\n\n\n\n\n\n\n\n\nDiscussion\n\n\nXRootD 5.0.0 is ready for release\n\n\nOSG Investigations Team\n\n\n\n\nValidation document is in \"Draft\"\n\n\nCVMFS Singularity Sync is going to start using singularity to create the containers. Working on testing, see github discussion:  \n\n\nhttps://github.com/opensciencegrid/cvmfs-singularity-sync/issues/245\n\n\nMore feedback from interested parties and they seem to be happy. Will provide feedback when Derek is back from vacation.\n\n\n\n\n\n\nDerek needs help with XCache test failures.\n\n\nStashCP Go implementation, may want some help with \"evaluating\" it as a replacement for stashcp.\n\n\n\n\nDiscussion\n\n\nNone this week", 
             "title": "August 3, 2020"
