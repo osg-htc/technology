@@ -2247,23 +2247,28 @@
         }, 
         {
             "location": "/policy/comanage-instructions-user/", 
-            "text": "Registering for the OSG COManage\n\n\nOSG is using a new identity management system called COManage.\nInitially, this system will be used for managing access to OSG staff-internal monitoring webpages at UNL,\nand managing access for OASIS logins.\n\n\nFollow the instructions below to register with COManage and join the OSG group.\n\n\n\n\nNote\n\n\nThis page is for users who want to register with COManage.\nIf you are a COManage Admin and want to approve a user registration,\ngo to the \nApproving COManage Registrations\n page instead.\n\n\n\n\n\n\n\n\nGo to \nhttps://registry.cilogon.org/registry/co_petitions/start/coef:64\n\n\n\n\n\n\nSearch for your institution and select it.\n\n\n\n\n\n\nLog in with your institutional credentials.\n    You should reach the \"OSG Registration: Self Signup With Approval\" page.\n\n\n\n\n\n\nClick the \"BEGIN\" button.\n\n\n\n\n\n\nEnter your name and email address in the form fields;\n    defaults might be filled in from what your institution provided,\n    but you are permitted to change them.\n    In particular, your email address does not have to match your login identity.\n\n\n\n\n\n\nClick the \"SUBMIT\" button.\n\n\n\n\n\n\nVerify Your Email Address\n\n\nAfter submitting your registration, you should receive an email from \n asking you to verify your OSG\nregistration.\nFollow the link in the email and click on the \"Accept\" button to verify your email address.\n\n\nWait for Approval\n\n\nAfter verifying your email address, your registration must be approved by OSG staff.\nOnce your registration has been approved, you will receive an email verifying your completed OSG registration.\n\n\nGetting Help\n\n\nFor assistance with the OSG contact registration process, please use\n\nthis page\n.", 
+            "text": "Registering with the OSG\n\n\n\n\nCOManage administrators\n\n\nThis page is for users who want to register with the OSG.\nIf you are a COManage Admin and need to approve a user registration,\ngo to the \nApproving COManage Registrations\n page instead.\n\n\n\n\nOSG uses the \nCOManage\n identity management system\nto register OSG contacts.\nCOManage is backed by the \nInCommon federation\n, meaning that users can register\nwith the OSG using their institutional identities with familiar single-sign on forms.\n\n\nSubmitting a Registration Petition\n\n\nBeging the OSG registration process using your institutional credentials at the following link:\n\n\nhttps://registry.cilogon.org/registry/co_petitions/start/coef:64\n\n\n\n\nOverriding name and email\n\n\nIn most cases, your institution will provide defaults for your name and email address.\nIf you prefer, you may override these values.\n\n\n\n\nVerifying Your Email Address\n\n\nAfter submitting your registration petition, you will receive an email from \n to verify your email\naddress.\nFollow the link in the email and click on the \"Accept\" button to complete the verification.\n\n\nWaiting for Approval\n\n\nAfter verifying your email address, your registration must be approved by OSG staff.\nOnce your registration has been approved, you will receive an email confirming your OSG registration.\n\n\nGetting Help\n\n\nFor assistance with the OSG contact registration process, please use\n\nthis page\n.", 
             "title": "Registering in COManage"
         }, 
         {
-            "location": "/policy/comanage-instructions-user/#registering-for-the-osg-comanage", 
-            "text": "OSG is using a new identity management system called COManage.\nInitially, this system will be used for managing access to OSG staff-internal monitoring webpages at UNL,\nand managing access for OASIS logins.  Follow the instructions below to register with COManage and join the OSG group.   Note  This page is for users who want to register with COManage.\nIf you are a COManage Admin and want to approve a user registration,\ngo to the  Approving COManage Registrations  page instead.     Go to  https://registry.cilogon.org/registry/co_petitions/start/coef:64    Search for your institution and select it.    Log in with your institutional credentials.\n    You should reach the \"OSG Registration: Self Signup With Approval\" page.    Click the \"BEGIN\" button.    Enter your name and email address in the form fields;\n    defaults might be filled in from what your institution provided,\n    but you are permitted to change them.\n    In particular, your email address does not have to match your login identity.    Click the \"SUBMIT\" button.", 
-            "title": "Registering for the OSG COManage"
+            "location": "/policy/comanage-instructions-user/#registering-with-the-osg", 
+            "text": "COManage administrators  This page is for users who want to register with the OSG.\nIf you are a COManage Admin and need to approve a user registration,\ngo to the  Approving COManage Registrations  page instead.   OSG uses the  COManage  identity management system\nto register OSG contacts.\nCOManage is backed by the  InCommon federation , meaning that users can register\nwith the OSG using their institutional identities with familiar single-sign on forms.", 
+            "title": "Registering with the OSG"
         }, 
         {
-            "location": "/policy/comanage-instructions-user/#verify-your-email-address", 
-            "text": "After submitting your registration, you should receive an email from   asking you to verify your OSG\nregistration.\nFollow the link in the email and click on the \"Accept\" button to verify your email address.", 
-            "title": "Verify Your Email Address"
+            "location": "/policy/comanage-instructions-user/#submitting-a-registration-petition", 
+            "text": "Beging the OSG registration process using your institutional credentials at the following link:  https://registry.cilogon.org/registry/co_petitions/start/coef:64   Overriding name and email  In most cases, your institution will provide defaults for your name and email address.\nIf you prefer, you may override these values.", 
+            "title": "Submitting a Registration Petition"
         }, 
         {
-            "location": "/policy/comanage-instructions-user/#wait-for-approval", 
-            "text": "After verifying your email address, your registration must be approved by OSG staff.\nOnce your registration has been approved, you will receive an email verifying your completed OSG registration.", 
-            "title": "Wait for Approval"
+            "location": "/policy/comanage-instructions-user/#verifying-your-email-address", 
+            "text": "After submitting your registration petition, you will receive an email from   to verify your email\naddress.\nFollow the link in the email and click on the \"Accept\" button to complete the verification.", 
+            "title": "Verifying Your Email Address"
+        }, 
+        {
+            "location": "/policy/comanage-instructions-user/#waiting-for-approval", 
+            "text": "After verifying your email address, your registration must be approved by OSG staff.\nOnce your registration has been approved, you will receive an email confirming your OSG registration.", 
+            "title": "Waiting for Approval"
         }, 
         {
             "location": "/policy/comanage-instructions-user/#getting-help", 
