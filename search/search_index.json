@@ -2247,7 +2247,7 @@
         }, 
         {
             "location": "/policy/comanage-instructions-user/", 
-            "text": "Registering with the OSG\n\n\n\n\nCOManage administrators\n\n\nThis page is for users who want to register with the OSG.\nIf you are a COManage Admin and need to approve a user registration,\ngo to the \nApproving COManage Registrations\n page instead.\n\n\n\n\nOSG uses the \nCOManage\n identity management system\nto register OSG contacts.\nCOManage is backed by the \nInCommon federation\n, meaning that users can register\nwith the OSG using their institutional identities with familiar single-sign on forms.\n\n\nSubmitting a Registration Petition\n\n\nBegin the OSG registration process using your institutional credentials at the following link\n(you will be redirected to the OSG COManage self-signup form):\n\n\nhttps://opensciencegrid.org/register\n\n\n\n\nOverriding name and email\n\n\nIn most cases, your institution will provide defaults for your name and email address.\nIf you prefer, you may override these values.\n\n\n\n\nVerifying Your Email Address\n\n\nAfter submitting your registration application, you will receive an email from \n to verify your email\naddress.\nFollow the link in the email and click on the \"Accept\" button to complete the verification.\n\n\nWaiting for Approval\n\n\nAfter verifying your email address, your registration must be approved by OSG staff.\nOnce your registration has been approved, you will receive an email confirming your OSG registration.\n\n\nGetting Help\n\n\nFor assistance with the OSG contact registration process, please use\n\nthis page\n.", 
+            "text": "Registering with the OSG\n\n\n\n\nCOManage administrators\n\n\nThis page is for users who want to register with the OSG.\nIf you are a COManage Admin and need to approve a user registration,\ngo to the \nApproving COManage Registrations\n page instead.\n\n\n\n\nOSG uses the \nCOManage\n identity management system\nto register OSG contacts.\nCOManage is backed by the \nInCommon federation\n, meaning that users can register\nwith the OSG using their institutional identities with familiar single-sign on forms.\n\n\nSubmitting an Application\n\n\nTo register with the OSG, submit an appplication using the self-signup process:\n\n\n\n\n\n\nGo to \nhttps://opensciencegrid.org/register\n\n\n\n\n\n\nYou will be presented with a CILogon Single-Sign On page.\n    Select your insitution and sign in with your insitutional credentials:\n\n\n\n\n\n\n\n\nAfter you have signed in, you will be presented with the self-signup form.\n    Click the \"BEGIN\" button:\n\n\n\n\n\n\n\n\nEnter your name and email address.\n    In most cases, your institution will provide defaults for your name and email address.\n    If you prefer, you may override these values.\n    Click the \"SUBMIT\" button:\n\n\n\n\n\n\n\n\nVerifying Your Email Address\n\n\nAfter submitting your registration application, you will receive an email from \n to verify your email\naddress.\nFollow the link in the email and click the \"Accept\" button to complete the verification:\n\n\n\n\nWaiting for Approval\n\n\nAfter verifying your email address, your registration must be approved by OSG staff.\nOnce your registration has been approved, you will receive an email confirming your OSG registration:\n\n\n\n\nGetting Help\n\n\nFor assistance with the OSG contact registration process, please use\n\nthis page\n.", 
             "title": "Registering with the OSG"
         }, 
         {
@@ -2256,18 +2256,18 @@
             "title": "Registering with the OSG"
         }, 
         {
-            "location": "/policy/comanage-instructions-user/#submitting-a-registration-petition", 
-            "text": "Begin the OSG registration process using your institutional credentials at the following link\n(you will be redirected to the OSG COManage self-signup form):  https://opensciencegrid.org/register   Overriding name and email  In most cases, your institution will provide defaults for your name and email address.\nIf you prefer, you may override these values.", 
-            "title": "Submitting a Registration Petition"
+            "location": "/policy/comanage-instructions-user/#submitting-an-application", 
+            "text": "To register with the OSG, submit an appplication using the self-signup process:    Go to  https://opensciencegrid.org/register    You will be presented with a CILogon Single-Sign On page.\n    Select your insitution and sign in with your insitutional credentials:     After you have signed in, you will be presented with the self-signup form.\n    Click the \"BEGIN\" button:     Enter your name and email address.\n    In most cases, your institution will provide defaults for your name and email address.\n    If you prefer, you may override these values.\n    Click the \"SUBMIT\" button:", 
+            "title": "Submitting an Application"
         }, 
         {
             "location": "/policy/comanage-instructions-user/#verifying-your-email-address", 
-            "text": "After submitting your registration application, you will receive an email from   to verify your email\naddress.\nFollow the link in the email and click on the \"Accept\" button to complete the verification.", 
+            "text": "After submitting your registration application, you will receive an email from   to verify your email\naddress.\nFollow the link in the email and click the \"Accept\" button to complete the verification:", 
             "title": "Verifying Your Email Address"
         }, 
         {
             "location": "/policy/comanage-instructions-user/#waiting-for-approval", 
-            "text": "After verifying your email address, your registration must be approved by OSG staff.\nOnce your registration has been approved, you will receive an email confirming your OSG registration.", 
+            "text": "After verifying your email address, your registration must be approved by OSG staff.\nOnce your registration has been approved, you will receive an email confirming your OSG registration:", 
             "title": "Waiting for Approval"
         }, 
         {
