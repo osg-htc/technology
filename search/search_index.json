@@ -2187,7 +2187,7 @@
         }, 
         {
             "location": "/policy/container-release/", 
-            "text": "Container Release Policy\n\n\n17 April 2019\n\n\nContainer images are an increasingly popular tool for shortening the software development life cycle, allowing for speedy\ndeployment of new software versions or additional instances of a service.\nSelect services in the OSG Software Stack will be distributed as container images to support VOs and sites that are\ninterested in this model.\n\n\nThis document contains policy information for container images distributed by the OSG Software Team.\n\n\nContents and Sources\n\n\nSimilar to our existing RPM infrastructure, container image sources, build logs, and artifacts will be stored in\npublicly available repositories (e.g. GitHub, Docker Hub) for collaboration and traceability.\nAdditionally, container images distributed by the OSG Software team will be based off of the latest version of a \n\nsupported platform\n with software installed from OS,\nEPEL, and \nOSG release\n Yum repositories with select packages\ninstalled from \nosg-development\n.\n\n\nTags\n\n\nOSG Software container images will be tagged with at least one of the following tags:\n\n\n\n\n\n\n\n\nTag\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfresh\n\n\nImages that build successfully and pass automated tests. Intended for users that need the latest fixes and features.\n\n\n\n\n\n\ntimestamp\n\n\nEach \nfresh\n image  is also tagged with a timestamp reflecting their build date and time. Intended for rollback in case of issues with the current \nfresh\n image.\n\n\n\n\n\n\nstable\n\n\nfresh\n images that pass acceptance testing; approved by the Release Manager. Intended for stable production use.\n\n\n\n\n\n\n\n\nCleanup\n\n\nImages with only a timestamp tag will be untagged according to the following policy:\n\n\n\n\nWeekly timestamped image tags will be kept for at least three months\n\n\nAfter three months, monthly timestamped image tags will be kept for at least one year\n\n\n\n\nAnnouncements\n\n\nContainer images that have been tagged as \nstable\n will be noted in the OSG release notes and announcements.", 
+            "text": "Container Release Policy\n\n\n17 April 2019\n\n\nContainer images are an increasingly popular tool for shortening the software development life cycle, allowing for speedy\ndeployment of new software versions or additional instances of a service.\nSelect services in the OSG Software Stack will be distributed as container images to support VOs and sites that are\ninterested in this model.\n\n\nThis document contains policy information for container images distributed by the OSG Software Team.\n\n\nContents and Sources\n\n\nSimilar to our existing RPM infrastructure, container image sources, build logs, and artifacts will be stored in\npublicly available repositories (e.g. GitHub, Docker Hub) for collaboration and traceability.\nAdditionally, container images distributed by the OSG Software team will be based off of the latest version of a \n\nsupported platform\n with software installed from OS,\nEPEL, and \nOSG release\n Yum repositories with select packages\ninstalled from \nosg-development\n.\n\n\nTags\n\n\nOSG Software container images will be tagged with at least one of the following tags:\n\n\n\n\n\n\n\n\nTag\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfresh\n\n\nImages that build successfully and pass automated tests. Intended for users that need the latest fixes and features.\n\n\n\n\n\n\ntimestamp\n\n\nEach \nfresh\n image  is also tagged with a timestamp reflecting their build date and time. Intended for rollback in case of issues with the current \nfresh\n image.\n\n\n\n\n\n\nstable\n\n\nfresh\n images that pass acceptance testing; approved by the Release Manager. Intended for stable production use.\n\n\n\n\n\n\n\n\nCleanup\n\n\nThe OSG will keep images based on the \nDocker Hub image retention policy\n.\nIn summary, container images that have not been pulled or updated in 6 months will be removed.\n\n\nAnnouncements\n\n\nContainer images that have been tagged as \nstable\n will be noted in the OSG release notes and announcements.\n\n\nChange Log\n\n\n\n\n14 August 2020:\n Updated cleanup policy to match Docker Hub image retention policy.", 
             "title": "Container Release Policy"
         }, 
         {
@@ -2207,13 +2207,18 @@
         }, 
         {
             "location": "/policy/container-release/#cleanup", 
-            "text": "Images with only a timestamp tag will be untagged according to the following policy:   Weekly timestamped image tags will be kept for at least three months  After three months, monthly timestamped image tags will be kept for at least one year", 
+            "text": "The OSG will keep images based on the  Docker Hub image retention policy .\nIn summary, container images that have not been pulled or updated in 6 months will be removed.", 
             "title": "Cleanup"
         }, 
         {
             "location": "/policy/container-release/#announcements", 
             "text": "Container images that have been tagged as  stable  will be noted in the OSG release notes and announcements.", 
             "title": "Announcements"
+        }, 
+        {
+            "location": "/policy/container-release/#change-log", 
+            "text": "14 August 2020:  Updated cleanup policy to match Docker Hub image retention policy.", 
+            "title": "Change Log"
         }, 
         {
             "location": "/policy/community-testing/", 

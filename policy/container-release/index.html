@@ -859,6 +859,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#change-log" title="Change Log" class="md-nav__link">
+    Change Log
+  </a>
+  
+</li>
+      
       
       
       
@@ -2081,6 +2088,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#change-log" title="Change Log" class="md-nav__link">
+    Change Log
+  </a>
+  
+</li>
+      
       
       
       
@@ -2139,13 +2153,14 @@ installed from <code>osg-development</code>.</p>
 </tbody>
 </table>
 <h3 id="cleanup">Cleanup<a class="headerlink" href="#cleanup" title="Permanent link">&para;</a></h3>
-<p>Images with only a timestamp tag will be untagged according to the following policy:</p>
-<ul>
-<li>Weekly timestamped image tags will be kept for at least three months</li>
-<li>After three months, monthly timestamped image tags will be kept for at least one year</li>
-</ul>
+<p>The OSG will keep images based on the <a href="https://www.docker.com/pricing/retentionfaq">Docker Hub image retention policy</a>.
+In summary, container images that have not been pulled or updated in 6 months will be removed.</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <p>Container images that have been tagged as <strong>stable</strong> will be noted in the OSG release notes and announcements.</p>
+<h2 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>14 August 2020:</strong> Updated cleanup policy to match Docker Hub image retention policy.</li>
+</ul>
                 
                   
                 
