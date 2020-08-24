@@ -1686,7 +1686,7 @@
                 
                 <h1 id="osg-technology-area-meeting-24-august-2020">OSG Technology Area Meeting, 24 August 2020<a class="headerlink" href="#osg-technology-area-meeting-24-august-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong>   Brian L, Carl, Derek, Diego, Edgar, Marco Mambelli, Mat, Tim T</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>OSG All Hands Aug 31 - Sep 3  <ul>
@@ -1751,12 +1751,43 @@
 <li>Tech team priorities this week: <a href="https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66">https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66</a></li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>AI (Diego): Continue to build and scitokens packages for EL8.  Contact Jason Patton for software help.</li>
+<li>AI (Edgar): Build scitokens-issuer for EL8; Derek to merge pull request and make a new release.</li>
+<li>AI (Edgar): Build osg-gridftp for EL8 since osg-xrootd-standalone is blocked by osg-configure.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>JLab (BrianL): Walked the admin through setting up an Origin container.<br />
-    Takeaway: we really need to improve the container so that it's easier to test before Topology registration.</li>
-<li>Vanderbilt (BrianL): Pilots being killed by the CE after 8 hours (shortly after a proxy renewal). Investigating with the HTCondor team.</li>
+<li>
+<p>JLab (BrianL): Walked the admin through setting up an Origin container.
+    Topology registration is done; Derek will work on CVMFS.
+    JLab will have their own CVMFS endpoint at jlab.opensciencegrid.org, with per-experiment directories.</p>
+<ul>
+<li>Takeaway: we really need to improve the container so that it's easier to test before Topology registration.
+  Our current policy is to require registration before installing the software; we will revisit the policy.</li>
+</ul>
+</li>
+<li>
+<p>Vanderbilt (BrianL): Pilots being killed by the CE after 8 hours (shortly after a proxy renewal). Investigating with the HTCondor team.</p>
+</li>
+<li>
+<p>Edgar: Working on giving UC-Irvine a hosted CE on SLATE.
+    Also planning to set up a hosted CE for EXPANSE, but needs to do it without SLATE.</p>
+<ul>
+<li>Martin Kandes has complained about the install instructions for the worker node client.
+  Brian L would like additional information;
+  for a hosted CE, the site admin shouldn't have to install worker node client.</li>
+</ul>
+</li>
+<li>
+<p>Marco Mambelli: Planning to release glideinWMS 3.6.3; there is a known issue with a missing dependency in the spec file, which will be fixed in the next release.</p>
+<ul>
+<li>glideinWMS 3.7.1-rc1 has been released.</li>
+</ul>
+</li>
+<li>
+<p>Tim T: Built Bosco tarballs for EL8 per Ops request for Clemson.</p>
+</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
@@ -1906,6 +1937,14 @@
 </ul>
 <h3 id="discussion_2">Discussion<a class="headerlink" href="#discussion_2" title="Permanent link">&para;</a></h3>
 <p>Miron has expressed interest in improving Hosted CE monitoring</p>
+<ul>
+<li>
+<p>Tim T discovered that the HTCondor Campus Factory subpackage is broken;
+    was wondering what it was, and if it was still in use, or required for BOSCO.</p>
+<p>Derek (original author) said it was a way for campuses to set up a mini-Glidein Factory.
+bosco_cluster has callouts to it but they can be removed with minimal effort.</p>
+</li>
+</ul>
                 
                   
                 
