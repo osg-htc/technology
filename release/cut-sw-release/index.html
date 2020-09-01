@@ -1976,15 +1976,15 @@ For 3.4 releases, also verify that the <code>osg-version</code> RPM is in your s
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Test upcoming even though nothing will be released into upcoming. It is possible that a blahp (or some other) update in 3.X could affect upcoming.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>If there are failures, consult the release-manager before proceeding.</p>
 </div>
 <h3 id="step-3-test-pre-release-on-the-madison-itb-site">Step 3: Test Pre-Release on the Madison ITB site<a class="headerlink" href="#step-3-test-pre-release-on-the-madison-itb-site" title="Permanent link">&para;</a></h3>
 <p>Test the pre-release on the Madison ITB by following the <a href="/release/itb-testing/">ITB pre-release testing instructions</a>.
 If you not local to Madison, consult the release manager for the designated person to do this testing.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Test upcoming even though nothing will be release into upcoming. It is possible that a blahp (or some other) update in 3.X could affect upcoming.</p>
-</div>
 <h3 id="step-4-regenerate-the-build-repositories">Step 4: Regenerate the build repositories<a class="headerlink" href="#step-4-regenerate-the-build-repositories" title="Permanent link">&para;</a></h3>
 <p>To avoid 404 errors when retrieving packages, it's necessary to regenerate the build repositories. Run the following script from a machine with your koji-registered user certificate:</p>
 <div class="codehilite"><pre><span></span><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
