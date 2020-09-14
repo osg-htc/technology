@@ -1698,7 +1698,7 @@
                 
                 <h1 id="osg-technology-area-meeting-14-september-2020">OSG Technology Area Meeting, 14 September 2020<a class="headerlink" href="#osg-technology-area-meeting-14-september-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong> Brian L, Carl, Derek, Diego, Edgar, Marco Mambelli, Mat, Tim T  </p>
+<strong>Attending:</strong> Brian L, Derek, Diego, Edgar, Marco Mambelli, Mat, Tim T</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Next week's meeting canceled (HTCondor Week Europe)</li>
@@ -1759,12 +1759,49 @@
 <li>Tech team priorities this week: <a href="https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66">https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66</a></li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>
+<p>UCSD team members (Edgar, Diego) will be moving to the GIL project,
+    which is primarily involved in network and software performance testing;
+    they will continue to provide OSG Software effort until the end of October.</p>
+</li>
+<li>
+<p>AI (Diego):</p>
+<ul>
+<li>Build XRootD 5.0.2 rc1 for upcoming.</li>
+<li>Build python-scitokens.</li>
+</ul>
+</li>
+<li>AI (Edgar):<ul>
+<li>Release vo-client in time for this week's release.</li>
+<li>Review and merge documentation PR about prescribed xcache locations.</li>
+<li>Present Data Lake talk at WLCG meeting tomorrow.</li>
+</ul>
+</li>
+<li>AI (Mat):<ul>
+<li>Build osg-configure once Python 3 conversion PR is merged.</li>
+<li>Continue to work on OIDC auth for Topology.</li>
+<li>Write talks for HTCondor Week Europe.</li>
+</ul>
+</li>
+</ul>
+<p>Marco Mambelli:
+    -   Working on GWMS 3.7 release candidate and GWMS 3.6.4.
+    -   Troubleshooting condor_chirp issue with Marco Mascheroni.</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Georgia State (BrianL): investigated Hosted CE SSH issues (in progress)</li>
 <li>Georgia Tech (BrianL): assisted with their self-deployed SLATE Hosted CE with Lincoln + Judith</li>
 <li>Swinburne University (BrianL): setting up a new Hosted CE for them via the CHTC Tiger k8s cluster</li>
+<li>Multiple (Derek): Two WLCG sites not showing any EGI jobs; could be related to a restart of the "EGI Portal".
+    OSG usage at EGI not showing up in the graphs.</li>
+<li>CalTech (Edgar): Working with Justas to help him set up xrootd-multiuser with checksums,
+    but running into a bug in xrootd/xrootd-multiuser that gives the wrong checksums.
+    Running into GWMS problems after upgrading the HTCondor central manager to 8.9;
+    will debug with Marco.</li>
+<li>CMU (Mat): gfal-ls ticket given to Wei, but waiting on debug information; Mat will ping user.</li>
+<li>Cesga (Mat): script trying to contact Topology via the old iu.edu address.
+    Mat will help them switch over to the current address.</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
@@ -1912,7 +1949,12 @@
 <li>UNL's production cache is 5.0.1, with SciTokens enabled.</li>
 </ul>
 <h3 id="discussion_2">Discussion<a class="headerlink" href="#discussion_2" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>Planning to upgrade XCache redirectors to XRootD 5 and change the config to
+    require cache&lt;-&gt;redirector commuication to use TLS.
+    This will break XRootD 4 caches; almost all caches have been moved to XRootD 5, except for ItalianGrid.
+    Edgar will get in touch with them.</li>
+</ul>
                 
                   
                 
