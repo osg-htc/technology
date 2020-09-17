@@ -1,5 +1,5 @@
 !!! note
-    If you are performing a data release, please follow the instructions [here](/release/cut-data-release/)
+    If you are performing a data release, please follow the instructions [here](cut-data-release.md)
 
 How to Cut a Software Release
 =============================
@@ -86,6 +86,9 @@ To test pre-release, you will be kicking off a manual VM universe test run from 
 4.  Submit the DAG:
 
         ./master-run.sh
+
+!!! note
+    Test upcoming even though nothing will be released into upcoming. It is possible that a blahp (or some other) update in 3.X could affect upcoming.
 
 !!! note
     If there are failures, consult the release-manager before proceeding.

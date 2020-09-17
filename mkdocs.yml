@@ -1,5 +1,5 @@
 site_name: OSG Technology Area
-site_url: https://opensciencegrid.github.io/technology/
+site_url: https://opensciencegrid.org/technology/
 repo_url: https://github.com/opensciencegrid/technology/
 theme:
   name: material
@@ -54,7 +54,7 @@ nav:
     - Software Release Policy: 'policy/software-release.md'
     - Container Release Policy: 'policy/container-release.md'
     - 'Community Testing': 'policy/community-testing.md'
-    - Registering in COManage: 'policy/comanage-instructions-user.md'
+    - Registering with the OSG: 'policy/comanage-instructions-user.md'
     - Approving COManage Registrations: 'policy/comanage-instructions-admin.md'
   - Documentation:
     - Writing Documentation: 'documentation/writing-documentation.md'
@@ -69,6 +69,9 @@ nav:
     - SHA-2 Support: 'projects/sha2-support.md'
     - Migrating Documents to Markdown: 'documentation/markdown-migration.md'
   - Meetings:
+    - September 14, 2020: 'meetings/2020/TechArea20200914.md'
+    - August 24, 2020: 'meetings/2020/TechArea20200824.md'
+    - August 17, 2020: 'meetings/2020/TechArea20200817.md'      
     - August 10, 2020: 'meetings/2020/TechArea20200810.md'
     - August 3, 2020: 'meetings/2020/TechArea20200803.md'
     - July 27, 2020: 'meetings/2020/TechArea20200727.md'
@@ -99,52 +102,6 @@ nav:
     - January, 27 2020: 'meetings/2020/TechArea20200127.md'
     - January, 13 2020: 'meetings/2020/TechArea20200113.md'
     - January, 6 2020: 'meetings/2020/TechArea20200106.md'
-    - December, 16 2019: 'meetings/2019/TechArea20191216.md'
-    - December, 9 2019: 'meetings/2019/TechArea20191209.md'
-    - December, 2 2019: 'meetings/2019/TechArea20191202.md'
-    - November, 25 2019: 'meetings/2019/TechArea20191125.md'
-    - November, 18 2019: 'meetings/2019/TechArea20191118.md'
-    - November, 11 2019: 'meetings/2019/TechArea20191111.md'
-    - November, 4 2019: 'meetings/2019/TechArea20191104.md'
-    - October, 28 2019: 'meetings/2019/TechArea20191028.md'
-    - October, 21 2019: 'meetings/2019/TechArea20191021.md'
-    - October, 14 2019: 'meetings/2019/TechArea20191014.md'
-    - October, 7 2019: 'meetings/2019/TechArea20191007.md'
-    - September, 30 2019: 'meetings/2019/TechArea20190930.md'
-    - September, 23 2019: 'meetings/2019/TechArea20190923.md'
-    - September, 16 2019: 'meetings/2019/TechArea20190916.md'
-    - September, 9 2019: 'meetings/2019/TechArea20190909.md'
-    - August, 26 2019: 'meetings/2019/TechArea20190826.md'
-    - August, 19 2019: 'meetings/2019/TechArea20190819.md'
-    - August, 12 2019: 'meetings/2019/TechArea20190812.md'
-    - August, 5 2019: 'meetings/2019/TechArea20190805.md'
-    - July 29, 2019: 'meetings/2019/TechArea20190729.md'
-    - July 22, 2019: 'meetings/2019/TechArea20190722.md'
-    - July 8, 2019: 'meetings/2019/TechArea20190708.md'
-    - July 1, 2019: 'meetings/2019/TechArea20190701.md'
-    - June 24, 2019: 'meetings/2019/TechArea20190624.md'
-    - June 17, 2019: 'meetings/2019/TechArea20190617.md'
-    - June 10, 2019: 'meetings/2019/TechArea20190610.md'
-    - June 3, 2019: 'meetings/2019/TechArea20190603.md'
-    - May 28, 2019: 'meetings/2019/TechArea20190528.md'
-    - May 13, 2019: 'meetings/2019/TechArea20190513.md'
-    - May 6, 2019: 'meetings/2019/TechArea20190506.md'
-    - April 29, 2019: 'meetings/2019/TechArea20190429.md'
-    - April 22, 2019: 'meetings/2019/TechArea20190422.md'
-    - April 15, 2019: 'meetings/2019/TechArea20190415.md'
-    - April 8, 2019: 'meetings/2019/TechArea20190408.md'
-    - April 1, 2019: 'meetings/2019/TechArea20190401.md'
-    - March 25, 2019: 'meetings/2019/TechArea20190325.md'
-    - March 11, 2019: 'meetings/2019/TechArea20190311.md'
-    - March 4, 2019: 'meetings/2019/TechArea20190304.md'
-    - February 25, 2019: 'meetings/2019/TechArea20190225.md'
-    - February 18, 2019: 'meetings/2019/TechArea20190218.md'
-    - February 11, 2019: 'meetings/2019/TechArea20190211.md'
-    - February 4, 2019: 'meetings/2019/TechArea20190204.md'
-    - January 28, 2019: 'meetings/2019/TechArea20190128.md'
-    - January 22, 2019: 'meetings/2019/TechArea20190122.md'
-    - January 14, 2019: 'meetings/2019/TechArea20190114.md'
-    - January 7, 2019: 'meetings/2019/TechArea20190107.md'
 
 markdown_extensions:
   - admonition

@@ -1,52 +1,61 @@
-Registering for the OSG COManage
-================================
+DateReviewed: 2020-08-12
 
-OSG is using a new identity management system called COManage.
-Initially, this system will be used for managing access to OSG staff-internal monitoring webpages at UNL,
-and managing access for OASIS logins.
+Registering with the OSG
+========================
 
-Follow the instructions below to register with COManage and join the OSG group.
-
-!!! note
-    This page is for users who want to register with COManage.
-    If you are a COManage Admin and want to approve a user registration,
+!!! note "COManage administrators"
+    This page is for users who want to register with the OSG.
+    If you are a COManage Admin and need to approve a user registration,
     go to the [Approving COManage Registrations](/policy/comanage-instructions-admin) page instead.
 
+OSG uses the [COManage](https://www.internet2.edu/products-services/trust-identity/comanage/) identity management system
+to register OSG contacts.
+COManage is backed by the [InCommon federation](https://www.incommon.org/federation/), meaning that users can register
+with the OSG using their institutional identities with familiar single sign-on forms.
 
-1.  Go to <https://registry.cilogon.org/registry/co_petitions/start/coef:64>
+Submitting an Application
+-------------------------
 
-1.  Search for your institution and select it.
+To register with the OSG, submit an appplication using the self-signup process:
 
-1.  Log in with your institutional credentials.
-    You should reach the "OSG Registration: Self Signup With Approval" page.
+1.  Go to <https://opensciencegrid.org/register>
 
-1.  Click the "BEGIN" button.
+1.  You will be presented with a CILogon Single-Sign On page.
+    Select your insitution and sign in with your insitutional credentials:
 
-1.  Enter your name and email address in the form fields;
-    defaults might be filled in from what your institution provided,
-    but you are permitted to change them.
-    In particular, your email address does not have to match your login identity.
+    ![comanage-sso](/img/comanage/comanage-sso.png)
 
-1.  Click the "SUBMIT" button.
+1.  After you have signed in, you will be presented with the self-signup form.
+    Click the "BEGIN" button:
 
-1.  Check for an email from <registry@cilogon.org> asking you to verify your OSG registration.
-    Follow the link in the email.
-    You should see an "Invitation to OSG" page.
+    ![comanage-landing-page](/img/comanage/comanage-landing-page.png)
 
-1.  Click the "Accept" button.
-    You should see a message on top saying "Petition Confirmed".
+1.  Enter your name and email address.
+    In most cases, your institution will provide defaults for your name and email address.
+    If you prefer, you may override these values.
+    Click the "SUBMIT" button:
 
-1.  Wait for approval from a COManage Admin.
-    You will get an email from <registry@cilogon.org> saying "Petition for <NAME> changed status
-    from Pending Approval to Approved".
-    Ignore the links in the email.
+    ![comanage-enrollment-form](/img/comanage/comanage-enrollment-form.png)
 
-1.  To verify your access, go to
-    <https://registry.cilogon.org/registry/users/login>.
+Verifying Your Email Address
+----------------------------
 
-    If you see a page saying "Welcome to OSG. Please select an action from the menus.",
-    then your registration was successful.
+After submitting your registration application, you will receive an email from <registry@cilogon.org> to verify your email
+address.
+Follow the link in the email and click the "Accept" button to complete the verification:
 
-    Otherwise, if you see the "Self Signup With Approval" page, then your registration was unsuccessful;
-    contact <help@opensciencegrid.org> for assistance.
+![comanage-verify-email](/img/comanage/comanage-email-verification-form.png)
 
+Waiting for Approval
+--------------------
+
+After verifying your email address, your registration must be approved by OSG staff.
+Once your registration has been approved, you will receive an email confirming your OSG registration:
+
+![comanage-verified-email](/img/comanage/comanage-verified-email.png)
+
+Getting Help
+------------
+
+For assistance with the OSG contact registration process, please use
+[this page](https://opensciencegrid.org/docs/common/help/).
