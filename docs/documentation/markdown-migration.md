@@ -201,7 +201,7 @@ Completing the conversion
 
 Manual review of the automatically converted documents are required since the automatic conversion process isn't perfect. This section contains a list of problems commonly encountered in automatically converted documents.
 
-Visit the [style guide](/documentation/writing-documentation#style-guide) to ensure that the document meets all style guidelines.
+Visit the [style guide](../documentation/writing-documentation#style-guide) to ensure that the document meets all style guidelines.
 
 Archiving Documents
 -------------------

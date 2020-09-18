@@ -1,7 +1,7 @@
 How to Request Tokens
 =====================
 
-As part of the [GridFTP and GSI migration](/policy/gridftp-gsi-migration), the OSG will be transitioning authentication
+As part of the [GridFTP and GSI migration](../policy/gridftp-gsi-migration), the OSG will be transitioning authentication
 away from X.509 certificates to the use of bearer tokens such as [SciTokens](http://scitokens.org/) or
 [WLCG JWT](https://twiki.cern.ch/twiki/bin/view/LCG/WLCGAuthorizationWG).
 This document is intended as a guide for OSG developers for requesting tokens necessary for software development.

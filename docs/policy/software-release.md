@@ -2,7 +2,7 @@ Software Release Policy
 =======================
 
 This document contains information about the OSG Software Yum repositories and their policies.
-For details regarding the technical process for an OSG release, see [this document](/release/cut-sw-release/).
+For details regarding the technical process for an OSG release, see [this document](../release/cut-sw-release/).
 
 Yum Repositories
 ----------------
@@ -151,5 +151,5 @@ They still move through the usual process for release, and the Software and Rele
 should be promoted to the next repository level.
 However, the actual releases of these packages do not increment the version number of the software stack.
 
-[The release process for data packages is discussed here.](/release/cut-data-release/)
+[The release process for data packages is discussed here.](../release/cut-data-release/)
 

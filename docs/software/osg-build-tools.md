@@ -2,7 +2,7 @@
 OSG Build Tools
 ===============
 
-This page documents the tools used for RPM development for the OSG Software Stack. See [the RPM development guide](/software/rpm-development-guide) for the principles on which these tools are based.
+This page documents the tools used for RPM development for the OSG Software Stack. See [the RPM development guide](../software/rpm-development-guide) for the principles on which these tools are based.
 
 The tools are distributed in the `osg-build` RPM in our repositories, but can also be used from a Git clone of [opensciencegrid/osg-build on GitHub](https://github.com/opensciencegrid/osg-build).
 
@@ -19,7 +19,7 @@ This is the primary tool used in building source and binary RPMs.
 
 > `osg-build <TASK> [options] <PACKAGE DIRECTORY> [...]`
 
-*package\_directory* is a directory containing an `osg/` and/or an `upstream/` subdirectory. See [the RPM development guide](/software/rpm-development-guide) for how these directories are organized.
+*package\_directory* is a directory containing an `osg/` and/or an `upstream/` subdirectory. See [the RPM development guide](../software/rpm-development-guide) for how these directories are organized.
 
 #### Tasks
 
@@ -184,7 +184,7 @@ Default is `osg-el6` for el6 and `osg-el7` for el7.
 
 ##### --koji-tag *tag*
 
-The koji tag to add packages to. See the [Koji Workflow guide](/software/koji-workflow) for more information on the terminology. The special value `TARGET` uses the destination tag defined in the koji target.
+The koji tag to add packages to. See the [Koji Workflow guide](../software/koji-workflow) for more information on the terminology. The special value `TARGET` uses the destination tag defined in the koji target.
 
 Default is `osg-el6` or `osg-el7`.
 

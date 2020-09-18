@@ -1,7 +1,7 @@
 Plans for Future Releases
 =========================
 
-This informal page is the mapping of "technology goals" (e.g., "release software Foo version X") to release numbers. It is meant to be updated as the releases evolve (and items are moved back in schedule). For package support policy between release series, see [this page](/policy/release-series).
+This informal page is the mapping of "technology goals" (e.g., "release software Foo version X") to release numbers. It is meant to be updated as the releases evolve (and items are moved back in schedule). For package support policy between release series, see [this page](../policy/release-series).
 
 Unless explicitly noted, bullet points refer to software in the release repo.
 
@@ -12,25 +12,25 @@ OSG 3.4 (May 2017)
 
 | Package(s)        | Change in osg-release                     | Notes                                                                                                                                       |
 |:------------------|:------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|
-| BeStMan2          | Drop | [Retirement policy](/policy/bestman2-retire) |
+| BeStMan2          | Drop | [Retirement policy](../policy/bestman2-retire) |
 | edg-mkgridmap     | Drop | [SOFTWARE-2600](https://jira.opensciencegrid.org/browse/SOFTWARE-2600)                                                                      |
 | frontier-squid    | Modify  | Version 3                                                                                                                                   |
 | glexec            | Drop | [SOFTWARE-2620](https://jira.opensciencegrid.org/browse/SOFTWARE-2600)                                                                      |
 | GRAM              | Drop | [SOFTWARE-2530](https://jira.opensciencegrid.org/browse/SOFTWARE-2600)                                                                      |
-| GUMS              | Drop | [Retirement policy](/policy/gums-retire), [SOFTWARE-2600](https://jira.opensciencegrid.org/browse/SOFTWARE-2600) |
+| GUMS              | Drop | [Retirement policy](../policy/gums-retire), [SOFTWARE-2600](https://jira.opensciencegrid.org/browse/SOFTWARE-2600) |
 | jglobus           | Drop | [SOFTWARE-2606](https://jira.opensciencegrid.org/browse/SOFTWARE-2600)                                                                      |
 | netlogger         | Drop |                                                                                                                                             |
 | osg-ce            | Modify  | Drop [GridFTP](https://jira.opensciencegrid.org/browse/SOFTWARE-2623), [gums-client](https://jira.opensciencegrid.org/browse/SOFTWARE-2482) |
 | osg-info-services | Drop |                                                                                                                                             |
 | osg-version       | Drop |                                                                                                                                             |
 | singularity       | Add |                                                                                                                                             |
-| voms-admin-server | Drop | [Retirement policy](/policy/voms-admin-retire) |
+| voms-admin-server | Drop | [Retirement policy](../policy/voms-admin-retire) |
 
 Track OSG 3.4 updates through its [JIRA epic](https://jira.opensciencegrid.org/browse/SOFTWARE-2329).
 
 ### Support Policy for OSG 3.3
 
-According to our [release support policy](/policy/release-series) and the release date of May 2017 for OSG 3.4, OSG 3.3 will receive routine software updates until November 2017 and critical updates until May 2018.
+According to our [release support policy](../policy/release-series) and the release date of May 2017 for OSG 3.4, OSG 3.3 will receive routine software updates until November 2017 and critical updates until May 2018.
 
 Previous Releases
 -----------------

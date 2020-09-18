@@ -28,15 +28,23 @@ Use the following conventions for headings:
 Links
 -----
 
-!!! danger "Avoid document relative links"
-    Document-relative links to other pages have changed in MkDocs 1.0.0 in a backwards-incompatible way.
-    Please convert any document-relative links to site-relative links before updating the `doc-ci-scripts` submodule.
+!!! danger "Only use document relative links in MkDocs 1.0.0 and newer"
+    MkDocs 1.0.0 does not support site-relative links (e.g. `/software/development-process`).
+    You must use document-relative links (e.g. `../software/development-process`) instead.
+
+    Earlier versions of this guide recommended site-relative links;
+    these only worked in earlier versions of MkDocs.
+
+    Please convert any site-relative links to document-relative links
+    before updating the `doc-ci-scripts` submodule to use MkDocs 1.0.0+.
 
 - Links to internal pages should not have the `.md` extension
-- Use site-relative (`/software/development-process`) instead of document-relative (`../software/development-process`)
-  links.
-  This will allow us to easily search for links and move documents around in the future.
+
 - Links to the area's homepage (e.g. https://opensciencegrid.org/technology/) need to be of the form `[link text](/)`
+
+- Links to other areas (like from https://opensciencegrid.org/technology/ to
+  https://opensciencegrid.org/operations/) need to be absolute links (i.e. include the domain name)
+
 
 ### Section links ###
 

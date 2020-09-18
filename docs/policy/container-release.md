@@ -17,7 +17,7 @@ Similar to our existing RPM infrastructure, container image sources, build logs,
 publicly available repositories (e.g. GitHub, Docker Hub) for collaboration and traceability.
 Additionally, container images distributed by the OSG Software team will be based off of the latest version of a 
 [supported platform](https://opensciencegrid.org/docs/release/supported_platforms/) with software installed from OS,
-EPEL, and [OSG release](/policy/software-release#yum-repositories) Yum repositories with select packages
+EPEL, and [OSG release](../policy/software-release#yum-repositories) Yum repositories with select packages
 installed from `osg-development`.
 
 Tags

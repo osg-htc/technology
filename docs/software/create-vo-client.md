@@ -83,16 +83,16 @@ To make the tarball:
 Once the tarball is created:
 
 -   If you have not already verified the changes expected in the JIRA ticket, compare the contents of the new tarball
-    with the previous version in the [upstream source cache](/software/rpm-development-guide#upstream-source-cache).
+    with the previous version in the [upstream source cache](../software/rpm-development-guide#upstream-source-cache).
 
--   Upload the tarball into the [upstream source cache](/software/rpm-development-guide#upstream-source-cache), under
+-   Upload the tarball into the [upstream source cache](../software/rpm-development-guide#upstream-source-cache), under
     the `vo-client/<NN>/` directory.
 
 
 RPM Spec File Maintenance
 -------------------------
 
-The OSG RPM spec file is [maintained in Subversion](/software/rpm-development-guide#revision-control-system).
+The OSG RPM spec file is [maintained in Subversion](../software/rpm-development-guide#revision-control-system).
 
 The VO Client package is located in `native/redhat/trunk/vo-client`; that is,
 [here](https://vdt.cs.wisc.edu/svn/native/redhat/trunk/vo-client/).
@@ -107,14 +107,14 @@ There are two files that need to be maintained:
 -   `upstream/release_tarball.source`
 
     -   Update the relative path for the new tarball within the
-        [upstream source cache](/software/rpm-development-guide#upstream-source-cache).
+        [upstream source cache](../software/rpm-development-guide#upstream-source-cache).
         Typically this will be `vo-client/<NN>/vo-client-<NN>-osg.tar.gz`.
 
 
 RPM Building
 ------------
 
-After installing the [osg-build tools](/software/osg-build-tools), check out a clean copy of the `vo-client` packaging
+After installing the [osg-build tools](../software/osg-build-tools), check out a clean copy of the `vo-client` packaging
 directory from svn, then:
 
 -   `osg-build prebuild .`
@@ -128,7 +128,7 @@ directory from svn, then:
 This will push the RPMs into the OSG development repository.
 
 !!! note
-    Koji requires additional setup compared to rpmbuild; [see the documentation here](/software/koji-workflow).
+    Koji requires additional setup compared to rpmbuild; [see the documentation here](../software/koji-workflow).
 
 
 Publishing the New Release
@@ -159,7 +159,7 @@ To publish the new release on GitHub:
 Promotion to Testing and Release:
 ---------------------------------
 
-Read [Release Policy](/policy/software-release).
+Read [Release Policy](../policy/software-release).
 
 Note that the `vo-client` package frequently is part of a separate `-data` release; it does not necessarily have to
 wait for the main release cycle.

@@ -48,7 +48,7 @@ Additional Materials
 If you are interested in learning more about the OSG and what it means to share resources via the OSG services, consider
 reviewing the following slides that were presented at the recent CC\* PI meeting:
 
-- [Introduction to OSG and OSG Participants](/files/Introduction-to-OSG.pdf)
-- [How Resources are Shared and Used via OSG](/files/OSG-Sharing-Resources.pdf)
-- [Contributing OSG Resources through Hosted CE](/files/Contributing-OSG-Resources.pdf)
-- [Using and Facilitating the Use of OSG Resources](/files/Using-OSG-Resources.pdf)
+- [Introduction to OSG and OSG Participants](../files/Introduction-to-OSG.pdf)
+- [How Resources are Shared and Used via OSG](../files/OSG-Sharing-Resources.pdf)
+- [Contributing OSG Resources through Hosted CE](../files/Contributing-OSG-Resources.pdf)
+- [Using and Facilitating the Use of OSG Resources](../files/Using-OSG-Resources.pdf)

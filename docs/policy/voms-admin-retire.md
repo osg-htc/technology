@@ -51,7 +51,7 @@ contact the VOMS-Admin interface for a list of authorizations.
 In 2015/2016, LCMAPS and GUMS were upgraded so GUMS skips the VOMS-Admin lookup when
 LCMAPS asserts the validation was performed.  Hence, when GUMS sites update clients to the
 latest (April 2017) LCMAPS and HTCondor-CE releases, the callout to VOMS-Admin is no longer
-needed. _Note_: In parallel to the VOMS-Admin transition, OSG Software plans to [retire GUMS](/policy/gums-retire).
+needed. _Note_: In parallel to the VOMS-Admin transition, OSG Software plans to [retire GUMS](../policy/gums-retire).
 There is no need to complete one transition before the other.
 
 Sites using `edg-mkgridmap` will need to use its replacement, `lcmaps-plugins-voms` (this

@@ -1,7 +1,7 @@
 Ready for Testing Announcements
 ===============================
 
-Per our [community testing policy](/policy/community-testing), we must send weekly digests of packages that are ready
+Per our [community testing policy](../policy/community-testing), we must send weekly digests of packages that are ready
 for testing.
 
 Create the Announcement
@@ -29,7 +29,7 @@ cd release-tools
 Find the software components that the packages in the list correspond to.
 For example, `htcondor-ce-4.4.0-1.osg35.el7` should be listed as "HTCondor-CE 4.4.0".
 Place software components into the appropriate section depending on release series and importance of the software.
-The major software components are listed in the [community testing policy](/policy/community-testing).
+The major software components are listed in the [community testing policy](../policy/community-testing).
 Omit any software that does not need to tested by the community such `osg-version` and internal tools.
 
 ### Step 3: Send the "Ready for Testing" Announcement

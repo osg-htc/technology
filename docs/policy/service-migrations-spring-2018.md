@@ -112,7 +112,7 @@ If you experience any problems with OASIS or CVMFS, please contact us at
 
 The OSG VOMS service was used to sign VOMS attributes for members of the OSG VO and responded to queries for a list of
 VO members.
-[VOMS Admin Server is deprecated](/policy/voms-admin-retire) in the OSG and the OSG VOMS servers were retired as planned.
+[VOMS Admin Server is deprecated](../policy/voms-admin-retire) in the OSG and the OSG VOMS servers were retired as planned.
 
 ### RSV ###
 

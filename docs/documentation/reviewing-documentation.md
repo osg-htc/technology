@@ -19,8 +19,8 @@ Some common things to note and/or fix:
 - Steps that may be particularly conducive to software or default configuration as a solution
 - Lack of clarity or any other confusion you may have
 
-Additionally, ensure that the document meets our [style](/documentation/style-guide) and
-[layout](/documentation/writing-documentation#document-layout) guidelines, as well as correct spelling and grammar.
+Additionally, ensure that the document meets our [style](../documentation/style-guide) and
+[layout](../documentation/writing-documentation#document-layout) guidelines, as well as correct spelling and grammar.
 
 Completing a Review
 -------------------

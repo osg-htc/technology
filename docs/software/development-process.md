@@ -12,14 +12,14 @@ Overall Development Cycle
 For a typical update to an existing package, the overall development cycle is roughly as follows:
 
 1.  Download the new upstream source (tarball, source RPM, checkout) into
-    [the UW AFS upstream area](/software/rpm-development-guide#upstream-source-cache)
-2.  In [a checkout of our packaging code](/software/rpm-development-guide#revision-control-system),
-    update [the reference to the upstream file](/software/rpm-development-guide#upstream) and,
-    as needed, [the RPM spec file](/software/rpm-development-guide#osg)
-3.  Use [osg-build](/software/osg-build-tools#osg-build) to perform a scratch build of the updated package
+    [the UW AFS upstream area](../software/rpm-development-guide#upstream-source-cache)
+2.  In [a checkout of our packaging code](../software/rpm-development-guide#revision-control-system),
+    update [the reference to the upstream file](../software/rpm-development-guide#upstream) and,
+    as needed, [the RPM spec file](../software/rpm-development-guide#osg)
+3.  Use [osg-build](../software/osg-build-tools#osg-build) to perform a scratch build of the updated package
 4.  Verify that the build succeeded; if not, redo previous steps until success
 5.  Optionally, lightly test the new RPM(s); if there are problems, redo previous steps until success
-6.  Use [osg-build](/software/osg-build-tools#osg-build) to perform an official build of the updated package
+6.  Use [osg-build](../software/osg-build-tools#osg-build) to perform an official build of the updated package
     (which will go into the development repos)
 7.  Perform standard developer testing of the new RPM(s) — see below for details
 8.  Obtain permission from the Software Manager to promote the package
@@ -287,7 +287,7 @@ Follow these steps to request promotion, promote a package, and note the promoti
 1.  Make sure the package update has at least one associated JIRA ticket;
     if there is no ticket, at least create one for releasing the package(s)
 2.  Obtain permission to promote the package(s) from the Software Manager (see above)
-3.  Use [osg-promote](/software/osg-build-tools#osg-promote) to promote the package(s) from development to testing
+3.  Use [osg-promote](../software/osg-build-tools#osg-promote) to promote the package(s) from development to testing
 4.  Comment on the associated JIRA ticket(s) with osg-promote's JIRA-formatted output (or at least the build NVRs) and,
     if you know, suggestions for acceptance testing
 1.  Update the JIRA ticket description with a bulleted list describing changes in the promoted version(s) compared to

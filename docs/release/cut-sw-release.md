@@ -6,7 +6,7 @@ How to Cut a Software Release
 
 This document details the process for releasing new OSG Release version(s).
 This document does NOT discuss the policy for deciding what goes into a release, which can be found
-[here](/policy/software-release).
+[here](../policy/software-release).
 
 Due to the length of time that this process takes, it is recommended to do the release over three or more days to allow for errors to be corrected and tests to be run.
 
@@ -95,7 +95,7 @@ To test pre-release, you will be kicking off a manual VM universe test run from 
 
 ### Step 3: Test Pre-Release on the Madison ITB site
 
-Test the pre-release on the Madison ITB by following the [ITB pre-release testing instructions](/release/itb-testing/).
+Test the pre-release on the Madison ITB by following the [ITB pre-release testing instructions](../release/itb-testing/).
 If you not local to Madison, consult the release manager for the designated person to do this testing.
 
 ### Step 4: Regenerate the build repositories
@@ -353,5 +353,5 @@ Day 3: Update the ITB
 Now that the release has had a chance to propagate to all the mirrors, update the Madison ITB site by following
 the [yum update section](https://docs.google.com/document/d/11Njz9YMWg67f_TMzcrbdD7anZRIsf9-wiXx-inWhO4U/edit#bookmark=id.4d34og8) of the Madison ITB document.
 If you are not local to Madison, consult the release manager for the designated person to do the update.
-Remember to stop the HTCondor and HTCondor-CE daemons according to the [HTCondor pre-release testing instructions](/release/itb-testing/#installing-htcondor-prerelease).
+Remember to stop the HTCondor and HTCondor-CE daemons according to the [HTCondor pre-release testing instructions](../release/itb-testing/#installing-htcondor-prerelease).
 Those daemons will need to be restarted after the upgrade.

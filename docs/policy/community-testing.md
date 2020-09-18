@@ -7,7 +7,7 @@ The community of OSG resource providers has a vested interest in the quality and
 We would like to notify our stakeholders of software updates as soon as they are designated as "Ready for Testing" by
 the Software Team.
 Direct engagement with the entire community would allow for feedback from a broader array of interested parties.
-Combined with our [flexible release model](/policy/flexible-release-model), we hope to further improve the turnaround
+Combined with our [flexible release model](../policy/flexible-release-model), we hope to further improve the turnaround
 time of new features and bug fixes.
 
 Implementation

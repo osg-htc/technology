@@ -71,7 +71,7 @@ Assign the ticket to the Software team.
 Initial Setup
 -------------
 
-You will be using the [OSG Build Tools](/software/osg-build-tools) to interact with Koji.
+You will be using the [OSG Build Tools](../software/osg-build-tools) to interact with Koji.
 You can use them on either your own machine or on your UW Comp Sci login node such as `moria`.
 
 
@@ -305,7 +305,7 @@ If you want to promote a specific version:
 
  For `osg-promote`, you may omit the `.osg34.el6` or `.osg34.el7`; the script will add the appropriate disttag on.
 
-See [OSG Building Tools](/software/osg-build-tools) for full details on `osg-promote`.
+See [OSG Building Tools](../software/osg-build-tools) for full details on `osg-promote`.
 
 ### Creating custom koji areas
 

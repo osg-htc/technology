@@ -110,7 +110,7 @@ Do on the month of the 3.X.0 release
 - Update mash
     - On repo-itb
     - On repo
-- Update documentation [here](/software/development-process)
+- Update documentation [here](../software/development-process)
 - Update osg-test / vmu-test-runs
     -   They're only going to test from minefield (and eventurally testing) until the release
 - Drop the `osg-3.X-elY-bootstrap` koji tags (after the successful mass rebuild only)
@@ -157,7 +157,7 @@ Do sometime after the 3.X.0 release
 
 -   Update the default promotion route aliases in `osg-promote`
 
--   Update [documentation](/software/development-process) again to reflect that `3.X` is now the _main_ branch and
+-   Update [documentation](../software/development-process) again to reflect that `3.X` is now the _main_ branch and
     `3.OLD` is the _maintenance_ branch
 
 

@@ -3,7 +3,7 @@ Container Development Guide
 
 This document contains instructions for OSG Technology Team members, including:
 
-- How to to develop container images that adhere to our [container release policy](/policy/container-release)
+- How to to develop container images that adhere to our [container release policy](../policy/container-release)
 - How to build a new version of an existing image
 - How to manage tags for images in the [OSG DockerHub organization](https://hub.docker.com/r/opensciencegrid/)
 - Tips for container image development

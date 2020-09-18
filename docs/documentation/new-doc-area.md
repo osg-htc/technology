@@ -68,6 +68,9 @@ Before starting, make sure that you have the `git` and `gem` tools installed.
 
 1. Follow [these instructions](https://github.com/opensciencegrid/doc-ci-scripts#travis-ci-documentation-scripts) to add
    the `doc-ci-scripts` sub-module
+
+   Use the `mkdocs-v1` branch of the `doc-ci-scripts` submodule.
+
 1. Create `mkdocs.yml` containing the following:
 
         site_name: <TITLE OF YOUR SITE>
@@ -76,7 +79,7 @@ Before starting, make sure that you have the `git` and `gem` tools installed.
         theme:
           name: material
 
-        pages:
+        nav:
           - Home: 'index.md'
 
         markdown_extensions:
