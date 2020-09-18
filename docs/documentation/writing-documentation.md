@@ -3,19 +3,20 @@ Writing OSG Documentation
 
 **LINKING TEST**
 
-| **link**                                                                 | **goes to (rel. to osg.org)** | 
-| [style-guide](style-guide)                                           | |
-| [style-guide/](style-guide/)                                         | |
-| [style-guide.md](style-guide.md)                                     | |
-| [./style-guide](./style-guide)                                           | |
-| [./style-guide/](./style-guide/)                                         | |
-| [./style-guide.md](./style-guide.md)                                     | |
-| [../documentation/style-guide](../documentation/style-guide)             | |
-| [../documentation/style-guide/](../documentation/style-guide/)           | |
-| [../documentation/style-guide.md](../documentation/style-guide.md)       | |
-| [../../documentation/style-guide](../../documentation/style-guide)       | |
-| [../../documentation/style-guide/](../../documentation/style-guide/)     | |
-| [../../documentation/style-guide.md](../../documentation/style-guide.md) | |
+ | **link**                                                                   | **goes to (rel. to osg.org/tech-itb)**               | **tl;dr**    |
+ |:---------------------------------------------------------------------------|:-----------------------------------------------------|:-------------|
+ | [style-guide](style-guide)                                                 | /documentation/writing-documentation/style-guide     | BUSTED       |
+ | [style-guide/](style-guide/)                                               | /documentation/writing-documentation/style-guide/    | BUSTED       |
+ | [style-guide.md](style-guide.md)                                           | /documentation/style-guide/                          | ok           |
+ | [./style-guide](./style-guide)                                             | /documentation/writing-documentation/style-guide     | BUSTED       |
+ | [./style-guide/](./style-guide/)                                           | /documentation/writing-documentation/style-guide/    | BUSTED       |
+ | [./style-guide.md](./style-guide.md)                                       | /documentation/style-guide/                          | ok           |
+ | [../documentation/style-guide](../documentation/style-guide)               | /documentation/documentation/style-guide             | BUSTED       |
+ | [../documentation/style-guide/](../documentation/style-guide/)             | /documentation/documentation/style-guide/            | BUSTED       |
+ | [../documentation/style-guide.md](../documentation/style-guide.md)         | /documentation/style-guide/                          | ok           |
+ | [../../documentation/style-guide](../../documentation/style-guide)         | /documentation/style-guide                           | ok           |
+ | [../../documentation/style-guide/](../../documentation/style-guide/)       | /documentation/style-guide/                          | ok           |
+ | [../../documentation/style-guide.md](../../documentation/style-guide.md)   | /documentation/style-guide.md                        | BUSTED       |
 
 Many OSG pages are written in [markdown](https://en.wikipedia.org/wiki/Markdown), built using
 [MkDocs](http://www.mkdocs.org/), and served via [GitHub Pages](https://pages.github.com/).
