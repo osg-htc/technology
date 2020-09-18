@@ -3,7 +3,10 @@ Writing OSG Documentation
 
 **LINKING TEST**
 
-| **link**                                                                 | **goes to** | 
+| **link**                                                                 | **goes to (rel. to osg.org)** | 
+| [style-guide](style-guide)                                           | |
+| [style-guide/](style-guide/)                                         | |
+| [style-guide.md](style-guide.md)                                     | |
 | [./style-guide](./style-guide)                                           | |
 | [./style-guide/](./style-guide/)                                         | |
 | [./style-guide.md](./style-guide.md)                                     | |
