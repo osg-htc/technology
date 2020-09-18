@@ -1,6 +1,18 @@
 Writing OSG Documentation
 =========================
 
+**LINKING TEST**
+
+- [./ link without .md](./style-guide)
+- [./ link with trailing /](./style-guide/)
+- [./ link with .md](./style-guide.md)
+- [../ link without .md](../documentation/style-guide)
+- [../ link with trailing /](../documentation/style-guide/)
+- [../ link with .md](../documentation/style-guide.md)
+- [you've gotta be kidding me link without .md](../../documentation/style-guide)
+- [you've gotta be kidding me link with trailing /](../../documentation/style-guide/)
+- [you've gotta be kidding me link with .md](../../documentation/style-guide.md)
+
 Many OSG pages are written in [markdown](https://en.wikipedia.org/wiki/Markdown), built using
 [MkDocs](http://www.mkdocs.org/), and served via [GitHub Pages](https://pages.github.com/).
 To [contribute content](#contributing-content), submit a pull request to the relevant GitHub repository,
