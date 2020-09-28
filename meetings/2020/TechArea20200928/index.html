@@ -1505,6 +1505,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#glideinwms-news" title="GlideinWMS News" class="md-nav__link">
+    GlideinWMS News
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1535,19 +1542,6 @@
     OSG Investigations Team
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discussion_2" title="Discussion" class="md-nav__link">
-    Discussion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -1571,18 +1565,15 @@
                 
                 <h1 id="osg-technology-area-meeting-28-september-2020">OSG Technology Area Meeting, 28 September 2020<a class="headerlink" href="#osg-technology-area-meeting-28-september-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong> Brian L, Derek, Diego, Edgar, Marco Mambelli, Mat, Tim T</p>
+<strong>Attending:</strong> Carl, Diego, Edgar, Marco Mambelli, Mat, Tim T</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Next week's meeting canceled (HTCondor Week Europe)</li>
-<li>PATh grant has been awarded!</li>
-</ul>
+<p>None this week.</p>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
-<li>This week: Mat</li>
-<li>Next week: Diego</li>
-<li>8 (+1) open FreshDesk tickets</li>
-<li>3 (+1) open GGUS ticket</li>
+<li>This week: Tim T</li>
+<li>Carl to send out email for the next rotation.</li>
+<li>7 (-1) open FreshDesk tickets</li>
+<li>3 (+0) open GGUS tickets</li>
 </ul>
 <h3 id="jira">JIRA<a class="headerlink" href="#jira" title="Permanent link">&para;</a></h3>
 <table>
@@ -1596,85 +1587,51 @@
 <tbody>
 <tr>
 <td>166</td>
-<td>+2</td>
+<td>+0</td>
 <td>Open</td>
 </tr>
 <tr>
-<td>12</td>
-<td>-4</td>
+<td>15</td>
+<td>+3</td>
 <td>Selected for Dev</td>
 </tr>
 <tr>
-<td>14</td>
-<td>-1</td>
+<td>15</td>
+<td>+1</td>
 <td>In Progress</td>
 </tr>
 <tr>
-<td>5</td>
-<td>+1</td>
+<td>4</td>
+<td>-1</td>
 <td>Dev Complete</td>
 </tr>
 <tr>
-<td>23</td>
-<td>+4</td>
+<td>17</td>
+<td>-6</td>
 <td>Ready for Testing</td>
 </tr>
 <tr>
-<td>1</td>
-<td>+0</td>
+<td>6</td>
+<td>+5</td>
 <td>Ready for Release</td>
 </tr>
 </tbody>
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Doc focus Sep 17 13:30 - 17:30 CDT</li>
 <li>Tech team priorities this week: <a href="https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66">https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66</a></li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>UCSD team members (Edgar, Diego) will be moving to the GIL project,
-    which is primarily involved in network and software performance testing;
-    they will continue to provide OSG Software effort until the end of October.</p>
-</li>
-<li>
-<p>AI (Diego):</p>
-<ul>
-<li>Build XRootD 5.0.2 rc1 for upcoming.</li>
-<li>Build python-scitokens.</li>
-</ul>
-</li>
-<li>AI (Edgar):<ul>
-<li>Release vo-client in time for this week's release.</li>
-<li>Review and merge documentation PR about prescribed xcache locations.</li>
-<li>Present Data Lake talk at WLCG meeting tomorrow.</li>
-</ul>
-</li>
-<li>AI (Mat):<ul>
-<li>Build osg-configure once Python 3 conversion PR is merged.</li>
-<li>Continue to work on OIDC auth for Topology.</li>
-<li>Write talks for HTCondor Week Europe.</li>
-</ul>
-</li>
-</ul>
-<p>Marco Mambelli:
-    -   Working on GWMS 3.7 release candidate and GWMS 3.6.4.
-    -   Troubleshooting condor_chirp issue with Marco Mascheroni.</p>
+<p>None.</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Georgia State (BrianL): investigated Hosted CE SSH issues (in progress)</li>
-<li>Georgia Tech (BrianL): assisted with their self-deployed SLATE Hosted CE with Lincoln + Judith</li>
-<li>Swinburne University (BrianL): setting up a new Hosted CE for them via the CHTC Tiger k8s cluster</li>
-<li>Multiple (Derek): Two WLCG sites not showing any EGI jobs; could be related to a restart of the "EGI Portal".
-    OSG usage at EGI not showing up in the graphs.</li>
-<li>CalTech (Edgar): Working with Justas to help him set up xrootd-multiuser with checksums,
-    but running into a bug in xrootd/xrootd-multiuser that gives the wrong checksums.
-    Running into GWMS problems after upgrading the HTCondor central manager to 8.9;
-    will debug with Marco.</li>
-<li>CMU (Mat): gfal-ls ticket given to Wei, but waiting on debug information; Mat will ping user.</li>
-<li>Cesga (Mat): script trying to contact Topology via the old iu.edu address.
-    Mat will help them switch over to the current address.</li>
+<li>Edgar: StashCache at PIC upgraded to the upcoming-fresh version but it's broken for them.  Edgar is troubleshooting; will reach out to XRootD developers for assistance.  The symptom is an SSL permission denied, but the error only shows up in XRootD 5 and goes away when they downgrade.</li>
+</ul>
+<h3 id="glideinwms-news">GlideinWMS News<a class="headerlink" href="#glideinwms-news" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Marco Mascheroni testing 3.6.4 in the ITB.  (This will be in OSG 3.4 and OSG 3.5.)</li>
+<li>3.9 now in osg-contrib (this includes Python 3 support).</li>
+<li>Continuing work on 3.7; integrating some work from the recent tokens hackathon.</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
@@ -1788,7 +1745,7 @@
 </ul>
 </li>
 <li>Ready for Release  <ul>
-<li>3.5.55  <ul>
+<li>3.4.55  <ul>
 <li>Singularity 3.6.3</li>
 </ul>
 </li>
@@ -1810,25 +1767,9 @@
 </li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<p>None this week</p>
 <h2 id="osg-investigations-team">OSG Investigations Team<a class="headerlink" href="#osg-investigations-team" title="Permanent link">&para;</a></h2>
-<ul>
-<li>(No-progress) CVMFS Singularity Sync is going to start using singularity to create the containers. Working on testing, see github discussion:  <ul>
-<li><a href="https://github.com/opensciencegrid/cvmfs-singularity-sync/issues/245">https://github.com/opensciencegrid/cvmfs-singularity-sync/issues/245</a></li>
-<li>More feedback from interested parties and they seem to be happy. Will provide feedback when Derek is back from vacation.</li>
-</ul>
-</li>
-<li>StashCP Go implementation is ongoing.</li>
-<li>Proactive site monitoring is progressing nicely.  Presented last week at Ops, good feedback!</li>
-<li>UNL's production cache is 5.0.1, with SciTokens enabled.</li>
-</ul>
-<h3 id="discussion_2">Discussion<a class="headerlink" href="#discussion_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Planning to upgrade XCache redirectors to XRootD 5 and change the config to
-    require cache&lt;-&gt;redirector commuication to use TLS.
-    This will break XRootD 4 caches; almost all caches have been moved to XRootD 5, except for ItalianGrid.
-    Edgar will get in touch with them.</li>
-</ul>
+<p>None this week</p>
                 
                   
                 
