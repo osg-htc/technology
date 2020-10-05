@@ -1112,6 +1112,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#glideinwms" title="GlideinWMS" class="md-nav__link">
+    GlideinWMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#support-update" title="Support Update" class="md-nav__link">
     Support Update
   </a>
@@ -1650,6 +1657,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#glideinwms" title="GlideinWMS" class="md-nav__link">
+    GlideinWMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#support-update" title="Support Update" class="md-nav__link">
     Support Update
   </a>
@@ -1722,8 +1736,9 @@
                 
                 <h1 id="osg-technology-area-meeting-5-october-2020">OSG Technology Area Meeting,  5 October 2020<a class="headerlink" href="#osg-technology-area-meeting-5-october-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong>   BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
+<p>CC<em> spin-up meeting for the 2020 CC</em> recipients later this month -- requests for materials will be high-priority.</p>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This week: BrianL</li>
@@ -1778,15 +1793,43 @@
 <li>Doc focus Oct 22 13:30 - 17:30 CDT</li>
 <li>Tech team priorities this week: <a href="https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66">https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66</a></li>
 <li>AI (Edgar): merge <a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-4203">https://opensciencegrid.atlassian.net/browse/SOFTWARE-4203</a></li>
-<li>Does XRootD 4.12.5 fix issues found with XRootD 4.12.4?</li>
+<li>Does XRootD 4.12.5 fix issues found with XRootD 4.12.4?<ul>
+<li>No; the error seems to affect TPC in the entire 4.12.X series.
+    For some reason, nightly VMU tests (which test TPC) have not detected the issue.
+    AI (Edgar/Diego): Investigate why VMU tests do not catch this issue.</li>
+<li>AI (Edgar/Diego): Report problem to XRootD developers as a GitHub issue.</li>
+</ul>
+</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>Diego: PR for Python 3 support for SciTokens was merged.</li>
+<li>AI (Diego): Rebuild XRootD plugins for XRootD 5 (except XRootD-HDFS).</li>
+<li>AI (Edgar): Build osg-xrootd and x509-scitokens-issuer for EL8, since they are no longer blocked by osg-configure.
+    (This is lower priority than XRootD issues mentioned above.)</li>
+<li>AI (BrianL): Coordinate improvement of cache federation registration process.</li>
+<li>
+<p>AI (Mat): Investigate stale URLs in technology docs.</p>
+</li>
+<li>
+<p>TimT:</p>
+<ul>
+<li>Encountering build failures for HTCondor on EL8 -- these appear to be random (i.e. rebuilds succeed).</li>
+<li>HTCondor-CE tests with HTCondor 8.9.9 are brittle and randomly fail to run.
+    BrianL will investigate.</li>
+</ul>
+</li>
+</ul>
+<h3 id="glideinwms">GlideinWMS<a class="headerlink" href="#glideinwms" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Will release 3.6.5, which includes a fix for a bind-mount issue encountered by Marco Mascheroni.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Univeristy of Connecticut (BrianL): investigating Blahp segfault with Flightworthy</li>
 <li>JLab (Derek): Origin host is crashing.  Not necessarily the OSG provided container.</li>
-<li></li>
+<li>Edgar: Continuing to debug issues with XRootD 5 in the CNAF StashCache -- maybe caused by authfile generation.
+    Also testing HTCondor 8.9.9 tarballs in the LIGO ITB.</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <table>
