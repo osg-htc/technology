@@ -1746,7 +1746,7 @@
                 
                 <h1 id="osg-technology-area-meeting-19-october-2020">OSG Technology Area Meeting, 19 October 2020<a class="headerlink" href="#osg-technology-area-meeting-19-october-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong>   BrianL, Carl, Derek, Diego, Edgar, Marco Mambelli, Marian, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Oct 22-23 Workshop: Supporting Campus Researchers with dHTC and the OSG</li>
@@ -1807,9 +1807,23 @@
 <li>Tech team priorities this week: <a href="https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66">https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66</a></li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>There will be upcoming changes to Freshdesk SLAs and policies; exact details to come later.</li>
+<li>XRootD 4.12.5 release is out.</li>
+<li>Derek: LIGO dataframe access with SciTokens is at a roadblock because LIGO shares an origin with CMS; LIGO wants TLS enabled but CMS is not ready for it.  LIGO will move to their own origin server.</li>
+<li>AI (Diego): Continue building XRootD 5 plugins for EL8, and updating xrootd-multiuser.</li>
+<li>AI (Edgar): Push xrootd-standalone and x509-scitokens-issuer over the finish line</li>
+<li>
+<p>AI (Mat): Document building xrootd-compat packages; build Ubuntu containers.</p>
+</li>
+<li>
+<p>GlideinWMS: 3.7.1 work continuing.  3.6.5 released recently and has been stable in production.
+    Jeff having trouble restricting disk usage on a site; Marco will debug and seek help from HTCondor developers.</p>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Expanse (Edgar, BrianL): Tracked down some EL8 Bosco incompatibilities. These fixes need to be included in Bosco override fiiles until they're fixed upstream.</li>
+<li>Expanse (Edgar, BrianL): Tracked down some EL8 Bosco incompatibilities. These fixes need to be included in Bosco override files until they're fixed upstream.</li>
 <li>JLab (Derek): JLab Origin much more stable this week.  Continuing to aggressively monitor, but so far so good.</li>
 <li>OSG Connect (Derek): StashCP issue when the writeback address is a directory and not a file.  Curl doesn't give an error message, it just gives a non-zero exit code.  So the error from stashcp is cryptic.  Will investigate solution.</li>
 </ul>
