@@ -1758,7 +1758,7 @@
                 
                 <h1 id="osg-technology-area-meeting-26-october-2020">OSG Technology Area Meeting, 26 October 2020<a class="headerlink" href="#osg-technology-area-meeting-26-october-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1 312-626-6799, PIN: 718 161 330, <a href="https://cern.zoom.us/j/718161330">https://cern.zoom.us/j/718161330</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong>   BrianL, Diego, Edgar, Marco Mambell, Marian, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <p>This is Diego and Edgar's last week on the Software and Release team!  </p>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -1813,11 +1813,34 @@
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Doc focus this Thursday Oct 29 1:30pm</li>
+<li>Kubernetes hackathon tomorrow Oct 27 12:00pm</li>
 <li>CVMFS + EL6 nightly failures due to SELinux issue and newly changed OSG CVMFS config; workaround in place</li>
 <li>Tech team priorities this week: <a href="https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66">https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19&amp;quickFilter=66</a></li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>Our VIRGO contact is the VIRGO Computing Coordinator Stefano Bagnasco (bagnasco@to.infn.it).</li>
+<li>IRIS-HEP Analysis Systems workshop today and tomorrow.</li>
+<li>AI (Diego): diagnose XRootD 5 on EL8 issues.</li>
+<li>AI (Edgar):<ul>
+<li>debug why xrootd-multiuser plugin keeps XRootD server from starting.</li>
+<li>debug why binary used to generate macaroons is core dumping; contact Zach Miller for assistance.</li>
+</ul>
+</li>
+<li>
+<p>AI (Mat): help Mark Coatsworth with EL8/Python3 support for HTCondor-CE.</p>
+</li>
+<li>
+<p>Multiple issues with BOSCO/Hosted-CEs:</p>
+<ul>
+<li>Job persistence hasn't been implemented for Hosted-CE containers yet, which means restarts kill jobs.
+    This makes testing and config updates somewhat harmful.
+    A potential solution is using a PersistendVolumeClaim but that's not easy on SLATE.</li>
+<li>Bosco keeps persistent state in <code>/tmp</code>; Expanse had their submit node set up with DNS round-robin which means state was sometimes there, sometimes not.
+    Edgar added a manual workaround.</li>
+</ul>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Expanse (Edgar, BrianL): CMS user not being set up properly and PATH being overriden: PRs in to fix both</li>
