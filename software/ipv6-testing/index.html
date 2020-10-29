@@ -1874,7 +1874,7 @@ IPV6ADDR=&quot;2607:f720:1700:1b30::9b&quot;
 
 <h3 id="testing-in-mixed-mode">Testing in mixed mode<a class="headerlink" href="#testing-in-mixed-mode" title="Permanent link">&para;</a></h3>
 <p>To test IPv6 in mixed mode, you can use the <code>ntop</code> tool to monitor traffic over IPv6. <code>ntop</code> is installed on all the test machines and you can access the web interface at <em>hostname:3000</em>. To see a table that displays network traffic between your VM and another host by going to <em>All Protocols</em> -&gt; <em>Traffic</em> and looking at the IPv6 column.</p>
-<p><img alt="NTP-web" src="/img/ipv6-testing.png" /></p>
+<p><img alt="NTP-web" src="../../img/ipv6-testing.png" /></p>
 <h4 id="enforcing-communication-over-ipv6">Enforcing communication over IPv6<a class="headerlink" href="#enforcing-communication-over-ipv6" title="Permanent link">&para;</a></h4>
 <p>If you want to enforce IPv6 over mixed mode you can try using the IPv6 address for whatever software that you are testing. For example with xrdcp:</p>
 <div class="codehilite"><pre><span></span><span class="gp">root@host #</span> xrdcp -d <span class="m">1</span> /tmp/first_test root://<span class="o">[</span><span class="m">2607</span>:f720:1700:1b30::a4<span class="o">]</span>:1094//tmp/first_test_8

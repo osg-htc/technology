@@ -1741,16 +1741,29 @@
 </ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
-<p class="admonition-title">Avoid document relative links</p>
-<p>Document-relative links to other pages have changed in MkDocs 1.0.0 in a backwards-incompatible way.
-Please convert any document-relative links to site-relative links before updating the <code>doc-ci-scripts</code> submodule.</p>
+<p class="admonition-title">Only use document relative links in MkDocs 1.0.0 and newer</p>
+<p>MkDocs 1.0.0 does not support site-relative links (e.g. <code>/software/development-process.md</code>).
+You must use document-relative links (e.g. <code>../software/development-process.md</code>) instead.</p>
+<p>Earlier versions of this guide recommended site-relative links;
+these only worked in earlier versions of MkDocs.
+Document-relative links work in all versions of MkDocs.</p>
+<p>Please convert any site-relative links to document-relative links
+before updating the <code>doc-ci-scripts</code> submodule to use MkDocs 1.0.0+.</p>
 </div>
 <ul>
-<li>Links to internal pages should not have the <code>.md</code> extension</li>
-<li>Use site-relative (<code>/software/development-process</code>) instead of document-relative (<code>../software/development-process</code>)
-  links.
-  This will allow us to easily search for links and move documents around in the future.</li>
-<li>Links to the area's homepage (e.g. https://opensciencegrid.org/technology/) need to be of the form <code>[link text](/)</code></li>
+<li>
+<p>Links to internal pages must have the <code>.md</code> extension.
+  (Earlier versions of this guide said links should not have the <code>.md</code> extension,
+  but adding the <code>.md</code> extension is required for MkDocs 1.0.0+.
+  Links with the <code>.md</code> extension work in all versions of MkDocs.)</p>
+</li>
+<li>
+<p>Links to the area's homepage (e.g. https://opensciencegrid.org/technology/) need to be of the form <code>[link text](/)</code></p>
+</li>
+<li>
+<p>Links to other areas (like from https://opensciencegrid.org/technology/ to
+  https://opensciencegrid.org/operations/) need to be absolute links (i.e. include the domain name)</p>
+</li>
 </ul>
 <h3 id="section-links">Section links<a class="headerlink" href="#section-links" title="Permanent link">&para;</a></h3>
 <p>To link sections within a page, lowercase the entire section name and replace spaces with dashes. If there are multiple

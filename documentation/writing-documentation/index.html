@@ -943,6 +943,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#upgrading-to-mkdocs-v1" title="Upgrading to MkDocs v1" class="md-nav__link">
+    Upgrading to MkDocs v1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#document-layout" title="Document Layout" class="md-nav__link">
     Document Layout
   </a>
@@ -1666,6 +1673,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#upgrading-to-mkdocs-v1" title="Upgrading to MkDocs v1" class="md-nav__link">
+    Upgrading to MkDocs v1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#document-layout" title="Document Layout" class="md-nav__link">
     Document Layout
   </a>
@@ -1825,20 +1839,29 @@ For example, instructors for the 2018 User School should use the <code>materials
 <p>If you do not know which <code>upstream</code> branch to use, pick <code>master</code>.</p>
 </li>
 <li>
-<p>Make your changes in the <code>docs/</code> directory of your local clone, following the <a href="/documentation/style-guide">style guide</a>:</p>
+<p>Make your changes in the <code>docs/</code> directory of your local clone, following the <a href="../style-guide/">style guide</a>:</p>
 <ul>
 <li><strong>If you are making changes to an existing page:</strong><ol>
 <li>Open <code>mkdocs.yml</code> and find the location of the file relative to the <code>docs/</code> directory</li>
 <li>Make your changes to that file and move onto the next step</li>
 </ol>
 </li>
-<li><strong>If you are contributing a new page:</strong><ol>
+<li>
+<p><strong>If you are contributing a new page:</strong></p>
+<ol>
 <li>Name the page. Page file names should be lowercase, <code>-</code> delimited, and concise but descriptive,
    e.g. <code>markdown-migration.md</code> or <code>cutting-release.md</code></li>
 <li>Place the page in the relevant sub-folder of the <code>docs/</code> directory.
    If you are unsure of the appropriate location, note that in the description of the pull request.</li>
-<li>Add the document to the <code>pages:</code> section of <code>mkdocs.yml</code> in <a href="http://titlecase.com/">title case</a>,
+<li>Add the document to the <code>nav:</code> section of <code>mkdocs.yml</code> in <a href="http://titlecase.com/">title case</a>,
    e.g. <code>- Migrating Documents to Markdown: 'software/markdown-migration.md'</code></li>
+</ol>
+<p>!!!note
+       If <code>mkdocs.yml</code> contains does not contain a <code>nav:</code> section,
+       add the above to the <code>pages:</code> section instead.
+       This means that the repository is using an older version of MkDocs
+       and will need to be <a href="#upgrading-to-mkdocs-v1">upgraded to MkDocs v1</a></p>
+<ol>
 <li>If you are writing site administrator documentation, following the <a href="#document-layout">suggested document layout</a></li>
 </ol>
 </li>
@@ -1884,6 +1907,68 @@ For example:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Since there is only one ITB docs area, simultaneous new commits to different <code>itb.*</code> branches will overwrite each other's changes. To re-deploy your changes, find your <a href="https://travis-ci.org/opensciencegrid/docs/branches">Travis-CI build</a> and restart it <strong>BUT</strong> coordinate with the author of the other commits to avoid conflicts.</p>
+</div>
+<h2 id="upgrading-to-mkdocs-v1">Upgrading to MkDocs v1<a class="headerlink" href="#upgrading-to-mkdocs-v1" title="Permanent link">&para;</a></h2>
+<p>The version of MkDocs used to generate documentation pages is determined by the submodule of <code>osg-ci-scripts</code>
+found in the <code>ci</code> directory.
+Most current documentation areas use MkDocs 0.17.5.
+However, we are planning to upgrade each repo to use MkDocs 1.0.4 or newer,
+which contains additional functionality and bug fixes.</p>
+<p>Before upgrading, you must fix the following incompatibilities:</p>
+<ul>
+<li>
+<p>Change the <code>pages:</code> section of <code>mkdocs.yml</code> to a <code>nav:</code> section.
+  The section contents are identical; only the name is changing.</p>
+</li>
+<li>
+<p>Update all of the links in the documents as follows:</p>
+</li>
+<li>Ensure links end in <code>.md</code></li>
+<li>Ensure links are document-relative, not site-relative (e.g. <code>../software/development-process</code>
+    instead of <code>/software/development-process</code></li>
+</ul>
+<p>Once these are done, use the following procedure to update:</p>
+<ol>
+<li>
+<p>In the repository you are updating, create an itb branch from master, e.g.
+   <code>git checkout -b itb.mkdocsv1 master</code></p>
+</li>
+<li>
+<p>cd into the <code>ci</code> directory in the root of your repository</p>
+</li>
+<li>
+<p><code>git fetch</code> to get all changes from the origin</p>
+</li>
+<li>
+<p><code>git checkout mkdocs-v1</code> to switch to the branch</p>
+</li>
+<li>
+<p>cd into the root of your repository</p>
+</li>
+<li>
+<p><code>git add ci</code>
+   <code>git commit</code>
+   to store your changes</p>
+</li>
+<li>
+<p>In your virtualenv, run
+   <code>pip install --upgrade -r ci/pip-requirements.txt</code></p>
+</li>
+<li>
+<p>Run mkdocs to <a href="#previewing-the-pages">preview your changes</a>;
+   be sure to verify that links work as expected</p>
+</li>
+<li>
+<p>Follow the <a href="#deploying-content-to-the-itb-advanced">ITB deployment instructions</a>
+   to preview the changes on the website</p>
+</li>
+<li>
+<p>Create a pull request against <code>master</code> for your change</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you require assistance with the transition, don't hesitate to email <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a></p>
 </div>
 <h2 id="document-layout">Document Layout<a class="headerlink" href="#document-layout" title="Permanent link">&para;</a></h2>
 <p>This section contains suggested layouts of externally-facing, <a href="https://github.com/opensciencegrid/docs/">site administrator documentation</a>.

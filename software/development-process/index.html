@@ -1824,14 +1824,14 @@ It is meant to be the central source for all development processes for the Softw
 <p>For a typical update to an existing package, the overall development cycle is roughly as follows:</p>
 <ol>
 <li>Download the new upstream source (tarball, source RPM, checkout) into
-    <a href="/software/rpm-development-guide#upstream-source-cache">the UW AFS upstream area</a></li>
-<li>In <a href="/software/rpm-development-guide#revision-control-system">a checkout of our packaging code</a>,
-    update <a href="/software/rpm-development-guide#upstream">the reference to the upstream file</a> and,
-    as needed, <a href="/software/rpm-development-guide#osg">the RPM spec file</a></li>
-<li>Use <a href="/software/osg-build-tools#osg-build">osg-build</a> to perform a scratch build of the updated package</li>
+    <a href="../rpm-development-guide/#upstream-source-cache">the UW AFS upstream area</a></li>
+<li>In <a href="../rpm-development-guide/#revision-control-system">a checkout of our packaging code</a>,
+    update <a href="../rpm-development-guide/#upstream">the reference to the upstream file</a> and,
+    as needed, <a href="../rpm-development-guide/#osg">the RPM spec file</a></li>
+<li>Use <a href="../osg-build-tools/#osg-build">osg-build</a> to perform a scratch build of the updated package</li>
 <li>Verify that the build succeeded; if not, redo previous steps until success</li>
 <li>Optionally, lightly test the new RPM(s); if there are problems, redo previous steps until success</li>
-<li>Use <a href="/software/osg-build-tools#osg-build">osg-build</a> to perform an official build of the updated package
+<li>Use <a href="../osg-build-tools/#osg-build">osg-build</a> to perform an official build of the updated package
     (which will go into the development repos)</li>
 <li>Perform standard developer testing of the new RPM(s) — see below for details</li>
 <li>Obtain permission from the Software Manager to promote the package</li>
@@ -2074,7 +2074,7 @@ The <code>built-against-pkgs</code> tool shows that I built against all the late
 <li>Make sure the package update has at least one associated JIRA ticket;
     if there is no ticket, at least create one for releasing the package(s)</li>
 <li>Obtain permission to promote the package(s) from the Software Manager (see above)</li>
-<li>Use <a href="/software/osg-build-tools#osg-promote">osg-promote</a> to promote the package(s) from development to testing</li>
+<li>Use <a href="../osg-build-tools/#osg-promote">osg-promote</a> to promote the package(s) from development to testing</li>
 <li>Comment on the associated JIRA ticket(s) with osg-promote's JIRA-formatted output (or at least the build NVRs) and,
     if you know, suggestions for acceptance testing</li>
 <li>Update the JIRA ticket description with a bulleted list describing changes in the promoted version(s) compared to

@@ -1688,6 +1688,9 @@ git commit -m &quot;Prepare the repository for Travis-CI deployment&quot;
 <p>Follow <a href="https://github.com/opensciencegrid/doc-ci-scripts#travis-ci-documentation-scripts">these instructions</a> to add
    the <code>doc-ci-scripts</code> sub-module</p>
 </li>
+</ol>
+<p>Use the <code>mkdocs-v1</code> branch of the <code>doc-ci-scripts</code> submodule.</p>
+<ol>
 <li>
 <p>Create <code>mkdocs.yml</code> containing the following:</p>
 <div class="codehilite"><pre><span></span>site_name: &lt;TITLE OF YOUR SITE&gt;
@@ -1696,7 +1699,7 @@ repo_name: https://github.com/opensciencegrid/&lt;REPO NAME&gt;
 theme:
   name: material
 
-pages:
+nav:
   - Home: &#39;index.md&#39;
 
 markdown_extensions:
