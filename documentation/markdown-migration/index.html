@@ -1,7 +1,4 @@
 
-
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -9,33 +6,14 @@
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
       
       
         <link rel="canonical" href="https://opensciencegrid.org/technology/documentation/markdown-migration/">
       
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
     
     
       
@@ -43,21 +21,22 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.358818c7.min.css">
       
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f0267088.min.css">
+        
       
     
     
-      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
-    
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
       <link rel="stylesheet" href="../../css/extra.css">
@@ -68,89 +47,80 @@
     
   </head>
   
-    <body dir="ltr">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
-        
-      </defs>
-    </svg>
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#migrating-to-markdown" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://opensciencegrid.org/technology/" title="OSG Technology Area" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            
-              <span class="md-header-nav__topic">
-                OSG Technology Area
-              </span>
-              <span class="md-header-nav__topic">
-                Migrating Documents to Markdown
-              </span>
-            
-          
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
         
-          
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        <a href="#migrating-to-markdown" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://opensciencegrid.org/technology/" title="OSG Technology Area" class="md-header-nav__button md-logo" aria-label="OSG Technology Area">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            OSG Technology Area
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
             
+              Migrating Documents to Markdown
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -158,80 +128,60 @@
     </div>
   </div>
 </div>
-          
+    
+    
+      <div class="md-header-nav__source">
         
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-
-  <a href="https://github.com/opensciencegrid/technology/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/opensciencegrid/technology/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
     
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
       </div>
     
-    <div class="md-source__repository">
-      GitHub
-    </div>
-  </a>
-
-          </div>
-        </div>
-      
-    </div>
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
+      
       
         
       
-      
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://opensciencegrid.org/technology/" title="OSG Technology Area" class="md-nav__button md-logo">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://opensciencegrid.org/technology/" title="OSG Technology Area" class="md-nav__button md-logo" aria-label="OSG Technology Area">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
     </a>
     OSG Technology Area
   </label>
   
     <div class="md-nav__source">
       
-
-
-  
-
-
-  <a href="https://github.com/opensciencegrid/technology/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/opensciencegrid/technology/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
     
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      GitHub
-    </div>
-  </a>
-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -242,7 +192,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Home
     </a>
   </li>
@@ -255,13 +205,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Software
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Software" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
         Software
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -274,13 +226,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
     
     <label class="md-nav__link" for="nav-2-1">
       Packaging
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Packaging" data-md-level="2">
       <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon"></span>
         Packaging
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -292,7 +246,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/rpm-development-guide/" title="RPM Development Guide" class="md-nav__link">
+    <a href="../../software/rpm-development-guide/" class="md-nav__link">
       RPM Development Guide
     </a>
   </li>
@@ -304,7 +258,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/osg-build-tools/" title="OSG Build Tools" class="md-nav__link">
+    <a href="../../software/osg-build-tools/" class="md-nav__link">
       OSG Build Tools
     </a>
   </li>
@@ -316,7 +270,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/quilt/" title="Using Quilt" class="md-nav__link">
+    <a href="../../software/quilt/" class="md-nav__link">
       Using Quilt
     </a>
   </li>
@@ -328,7 +282,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/upcoming-to-main/" title="Upcoming to Main" class="md-nav__link">
+    <a href="../../software/upcoming-to-main/" class="md-nav__link">
       Upcoming to Main
     </a>
   </li>
@@ -340,7 +294,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/koji-workflow/" title="Koji Workflow" class="md-nav__link">
+    <a href="../../software/koji-workflow/" class="md-nav__link">
       Koji Workflow
     </a>
   </li>
@@ -352,7 +306,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/create-vo-client/" title="Creating the VO Client Package" class="md-nav__link">
+    <a href="../../software/create-vo-client/" class="md-nav__link">
       Creating the VO Client Package
     </a>
   </li>
@@ -364,7 +318,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/container-development-guide/" title="Container Development Guide" class="md-nav__link">
+    <a href="../../software/container-development-guide/" class="md-nav__link">
       Container Development Guide
     </a>
   </li>
@@ -376,7 +330,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/repository-management/" title="Repository Management" class="md-nav__link">
+    <a href="../../software/repository-management/" class="md-nav__link">
       Repository Management
     </a>
   </li>
@@ -388,7 +342,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/globus-mass-update-procedure/" title="Globus Mass Update Procedure" class="md-nav__link">
+    <a href="../../software/globus-mass-update-procedure/" class="md-nav__link">
       Globus Mass Update Procedure
     </a>
   </li>
@@ -400,7 +354,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/resurrecting-epel-packages/" title="Resurrecting Epel Packages" class="md-nav__link">
+    <a href="../../software/resurrecting-epel-packages/" class="md-nav__link">
       Resurrecting Epel Packages
     </a>
   </li>
@@ -412,7 +366,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/koji-mass-rebuilds/" title="Koji Mass Rebuilds" class="md-nav__link">
+    <a href="../../software/koji-mass-rebuilds/" class="md-nav__link">
       Koji Mass Rebuilds
     </a>
   </li>
@@ -430,13 +384,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
     
     <label class="md-nav__link" for="nav-2-2">
       Development
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Development" data-md-level="2">
       <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon"></span>
         Development
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -448,7 +404,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/development-process/" title="Development Process" class="md-nav__link">
+    <a href="../../software/development-process/" class="md-nav__link">
       Development Process
     </a>
   </li>
@@ -460,7 +416,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/git-software-development/" title="Git Software Development Process" class="md-nav__link">
+    <a href="../../software/git-software-development/" class="md-nav__link">
       Git Software Development Process
     </a>
   </li>
@@ -472,7 +428,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/ce-test-scaling/" title="CE Scale Testing" class="md-nav__link">
+    <a href="../../software/ce-test-scaling/" class="md-nav__link">
       CE Scale Testing
     </a>
   </li>
@@ -484,7 +440,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/ipv6-testing/" title="IPv6 Testing" class="md-nav__link">
+    <a href="../../software/ipv6-testing/" class="md-nav__link">
       IPv6 Testing
     </a>
   </li>
@@ -496,7 +452,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/requesting-tokens/" title="How to Request Tokens" class="md-nav__link">
+    <a href="../../software/requesting-tokens/" class="md-nav__link">
       How to Request Tokens
     </a>
   </li>
@@ -513,7 +469,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/software-support/" title="Software Support" class="md-nav__link">
+    <a href="../../policy/software-support/" class="md-nav__link">
       Software Support
     </a>
   </li>
@@ -525,7 +481,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/effort-tracking/" title="Effort Tracking" class="md-nav__link">
+    <a href="../../software/effort-tracking/" class="md-nav__link">
       Effort Tracking
     </a>
   </li>
@@ -537,7 +493,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/release-planning/" title="Release Planning" class="md-nav__link">
+    <a href="../../software/release-planning/" class="md-nav__link">
       Release Planning
     </a>
   </li>
@@ -549,7 +505,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../software/new-team-member/" title="New Team Member" class="md-nav__link">
+    <a href="../../software/new-team-member/" class="md-nav__link">
       New Team Member
     </a>
   </li>
@@ -567,13 +523,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Release
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Release" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
         Release
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -585,7 +543,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/cut-sw-release/" title="How to Cut a Release" class="md-nav__link">
+    <a href="../../release/cut-sw-release/" class="md-nav__link">
       How to Cut a Release
     </a>
   </li>
@@ -597,7 +555,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/cut-data-release/" title="How to Cut a Data Release" class="md-nav__link">
+    <a href="../../release/cut-data-release/" class="md-nav__link">
       How to Cut a Data Release
     </a>
   </li>
@@ -609,7 +567,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/announce-rft-packages/" title="Ready for Testing Announcements" class="md-nav__link">
+    <a href="../../release/announce-rft-packages/" class="md-nav__link">
       Ready for Testing Announcements
     </a>
   </li>
@@ -621,7 +579,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/new-release-series/" title="New Release Series" class="md-nav__link">
+    <a href="../../release/new-release-series/" class="md-nav__link">
       New Release Series
     </a>
   </li>
@@ -633,7 +591,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/old-release-removal/" title="Old Release Series Removal" class="md-nav__link">
+    <a href="../../release/old-release-removal/" class="md-nav__link">
       Old Release Series Removal
     </a>
   </li>
@@ -645,7 +603,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/itb-testing/" title="ITB Prerelease Testing" class="md-nav__link">
+    <a href="../../release/itb-testing/" class="md-nav__link">
       ITB Prerelease Testing
     </a>
   </li>
@@ -657,7 +615,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/empty-pkgs/" title="Empty Packages" class="md-nav__link">
+    <a href="../../release/empty-pkgs/" class="md-nav__link">
       Empty Packages
     </a>
   </li>
@@ -669,7 +627,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release/acceptance-testing/" title="Acceptance Testing" class="md-nav__link">
+    <a href="../../release/acceptance-testing/" class="md-nav__link">
       Acceptance Testing
     </a>
   </li>
@@ -687,13 +645,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Policy
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Policy" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
         Policy
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -705,7 +665,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/gridftp-gsi-migration/" title="GridFTP and GSI Migration" class="md-nav__link">
+    <a href="../../policy/gridftp-gsi-migration/" class="md-nav__link">
       GridFTP and GSI Migration
     </a>
   </li>
@@ -717,7 +677,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/campus-cyberinfrastructure/" title="Campus Cyberinfrastructure" class="md-nav__link">
+    <a href="../../policy/campus-cyberinfrastructure/" class="md-nav__link">
       Campus Cyberinfrastructure
     </a>
   </li>
@@ -729,7 +689,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/cream-support/" title="CREAM-CE Support" class="md-nav__link">
+    <a href="../../policy/cream-support/" class="md-nav__link">
       CREAM-CE Support
     </a>
   </li>
@@ -741,7 +701,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/release-series/" title="Release Series Support" class="md-nav__link">
+    <a href="../../policy/release-series/" class="md-nav__link">
       Release Series Support
     </a>
   </li>
@@ -753,7 +713,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/globus-toolkit/" title="Globus Toolkit Support" class="md-nav__link">
+    <a href="../../policy/globus-toolkit/" class="md-nav__link">
       Globus Toolkit Support
     </a>
   </li>
@@ -765,7 +725,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/external-oasis-repos/" title="OASIS Repository Mirroring" class="md-nav__link">
+    <a href="../../policy/external-oasis-repos/" class="md-nav__link">
       OASIS Repository Mirroring
     </a>
   </li>
@@ -777,7 +737,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/flexible-release-model/" title="Flexible Release Model" class="md-nav__link">
+    <a href="../../policy/flexible-release-model/" class="md-nav__link">
       Flexible Release Model
     </a>
   </li>
@@ -789,7 +749,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/software-release/" title="Software Release Policy" class="md-nav__link">
+    <a href="../../policy/software-release/" class="md-nav__link">
       Software Release Policy
     </a>
   </li>
@@ -801,7 +761,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/container-release/" title="Container Release Policy" class="md-nav__link">
+    <a href="../../policy/container-release/" class="md-nav__link">
       Container Release Policy
     </a>
   </li>
@@ -813,7 +773,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/community-testing/" title="Community Testing" class="md-nav__link">
+    <a href="../../policy/community-testing/" class="md-nav__link">
       Community Testing
     </a>
   </li>
@@ -825,7 +785,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/comanage-instructions-user/" title="Registering with the OSG" class="md-nav__link">
+    <a href="../../policy/comanage-instructions-user/" class="md-nav__link">
       Registering with the OSG
     </a>
   </li>
@@ -837,7 +797,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/comanage-instructions-admin/" title="Approving COManage Registrations" class="md-nav__link">
+    <a href="../../policy/comanage-instructions-admin/" class="md-nav__link">
       Approving COManage Registrations
     </a>
   </li>
@@ -855,13 +815,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Documentation
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Documentation" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
         Documentation
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -873,7 +835,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../writing-documentation/" title="Writing Documentation" class="md-nav__link">
+    <a href="../writing-documentation/" class="md-nav__link">
       Writing Documentation
     </a>
   </li>
@@ -885,7 +847,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../reviewing-documentation/" title="Reviewing Documentation" class="md-nav__link">
+    <a href="../reviewing-documentation/" class="md-nav__link">
       Reviewing Documentation
     </a>
   </li>
@@ -897,7 +859,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../style-guide/" title="Markdown Style Guide" class="md-nav__link">
+    <a href="../style-guide/" class="md-nav__link">
       Markdown Style Guide
     </a>
   </li>
@@ -909,7 +871,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../new-doc-area/" title="Creating a New Area" class="md-nav__link">
+    <a href="../new-doc-area/" class="md-nav__link">
       Creating a New Area
     </a>
   </li>
@@ -929,13 +891,15 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Historical Transitions
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Historical Transitions" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
         Historical Transitions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -947,7 +911,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/service-migrations-spring-2018/" title="Service Migrations - Spring 2018" class="md-nav__link">
+    <a href="../../policy/service-migrations-spring-2018/" class="md-nav__link">
       Service Migrations - Spring 2018
     </a>
   </li>
@@ -959,7 +923,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/gums-retire/" title="GUMS Retirement" class="md-nav__link">
+    <a href="../../policy/gums-retire/" class="md-nav__link">
       GUMS Retirement
     </a>
   </li>
@@ -971,7 +935,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/bestman2-retire/" title="BeStMan2 Retirement" class="md-nav__link">
+    <a href="../../policy/bestman2-retire/" class="md-nav__link">
       BeStMan2 Retirement
     </a>
   </li>
@@ -983,7 +947,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../policy/voms-admin-retire/" title="VOMS Admin Retirement" class="md-nav__link">
+    <a href="../../policy/voms-admin-retire/" class="md-nav__link">
       VOMS Admin Retirement
     </a>
   </li>
@@ -995,7 +959,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../projects/sha2-support/" title="SHA-2 Support" class="md-nav__link">
+    <a href="../../projects/sha2-support/" class="md-nav__link">
       SHA-2 Support
     </a>
   </li>
@@ -1010,82 +974,86 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Migrating Documents to Markdown
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Migrating Documents to Markdown" class="md-nav__link md-nav__link--active">
+    <a href="./" class="md-nav__link md-nav__link--active">
       Migrating Documents to Markdown
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choosing-the-git-repository" title="Choosing the git repository" class="md-nav__link">
+  <a href="#choosing-the-git-repository" class="md-nav__link">
     Choosing the git repository
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#automatic-twiki-conversion" title="Automatic TWiki conversion" class="md-nav__link">
+  <a href="#automatic-twiki-conversion" class="md-nav__link">
     Automatic TWiki conversion
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Automatic TWiki conversion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-docker" title="Using docker" class="md-nav__link">
+  <a href="#using-docker" class="md-nav__link">
     Using docker
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Using docker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#requirements" title="Requirements" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#preparing-the-git-repository" title="Preparing the git repository" class="md-nav__link">
+  <a href="#preparing-the-git-repository" class="md-nav__link">
     Preparing the git repository
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#previewing-the-document-tree" title="Previewing the document tree" class="md-nav__link">
+  <a href="#previewing-the-document-tree" class="md-nav__link">
     Previewing the document tree
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#converting-documents" title="Converting documents" class="md-nav__link">
+  <a href="#converting-documents" class="md-nav__link">
     Converting documents
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#troubleshooting-conversion" title="Troubleshooting conversion" class="md-nav__link">
+  <a href="#troubleshooting-conversion" class="md-nav__link">
     Troubleshooting conversion
   </a>
   
@@ -1097,43 +1065,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#conversion-without-docker" title="Conversion without Docker" class="md-nav__link">
+  <a href="#conversion-without-docker" class="md-nav__link">
     Conversion without Docker
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Conversion without Docker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#requirements_1" title="Requirements" class="md-nav__link">
+  <a href="#requirements_1" class="md-nav__link">
     Requirements
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#preparing-the-git-repository_1" title="Preparing the git repository" class="md-nav__link">
+  <a href="#preparing-the-git-repository_1" class="md-nav__link">
     Preparing the git repository
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#archiving-the-twiki-document" title="Archiving the TWiki document" class="md-nav__link">
+  <a href="#archiving-the-twiki-document" class="md-nav__link">
     Archiving the TWiki document
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#initial-conversion-with-pandoc" title="Initial conversion with Pandoc" class="md-nav__link">
+  <a href="#initial-conversion-with-pandoc" class="md-nav__link">
     Initial conversion with Pandoc
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#previewing-your-documents-with-mkdocs" title="Previewing your document(s) with Mkdocs" class="md-nav__link">
+  <a href="#previewing-your-documents-with-mkdocs" class="md-nav__link">
     Previewing your document(s) with Mkdocs
   </a>
   
@@ -1150,43 +1118,39 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#completing-the-conversion" title="Completing the conversion" class="md-nav__link">
+  <a href="#completing-the-conversion" class="md-nav__link">
     Completing the conversion
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#archiving-documents" title="Archiving Documents" class="md-nav__link">
+  <a href="#archiving-documents" class="md-nav__link">
     Archiving Documents
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#submitting-the-pull-request" title="Submitting the pull request" class="md-nav__link">
+  <a href="#submitting-the-pull-request" class="md-nav__link">
     Submitting the pull request
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#after-the-pull-request" title="After the pull request" class="md-nav__link">
+  <a href="#after-the-pull-request" class="md-nav__link">
     After the pull request
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reviewing-pull-requests" title="Reviewing pull requests" class="md-nav__link">
+  <a href="#reviewing-pull-requests" class="md-nav__link">
     Reviewing pull requests
   </a>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -1207,13 +1171,15 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Meetings
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Meetings" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
         Meetings
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1225,7 +1191,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20201109/" title="November 9, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20201109/" class="md-nav__link">
       November 9, 2020
     </a>
   </li>
@@ -1237,7 +1203,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20201102/" title="November 2, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20201102/" class="md-nav__link">
       November 2, 2020
     </a>
   </li>
@@ -1249,7 +1215,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20201026/" title="October 26, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20201026/" class="md-nav__link">
       October 26, 2020
     </a>
   </li>
@@ -1261,7 +1227,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20201019/" title="October 19, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20201019/" class="md-nav__link">
       October 19, 2020
     </a>
   </li>
@@ -1273,7 +1239,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20201012/" title="October 12, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20201012/" class="md-nav__link">
       October 12, 2020
     </a>
   </li>
@@ -1285,7 +1251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20201005/" title="October 5, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20201005/" class="md-nav__link">
       October 5, 2020
     </a>
   </li>
@@ -1297,7 +1263,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200928/" title="September 28, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200928/" class="md-nav__link">
       September 28, 2020
     </a>
   </li>
@@ -1309,7 +1275,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200914/" title="September 14, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200914/" class="md-nav__link">
       September 14, 2020
     </a>
   </li>
@@ -1321,7 +1287,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200824/" title="August 24, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200824/" class="md-nav__link">
       August 24, 2020
     </a>
   </li>
@@ -1333,7 +1299,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200817/" title="August 17, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200817/" class="md-nav__link">
       August 17, 2020
     </a>
   </li>
@@ -1345,7 +1311,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200810/" title="August 10, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200810/" class="md-nav__link">
       August 10, 2020
     </a>
   </li>
@@ -1357,7 +1323,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200803/" title="August 3, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200803/" class="md-nav__link">
       August 3, 2020
     </a>
   </li>
@@ -1369,7 +1335,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200727/" title="July 27, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200727/" class="md-nav__link">
       July 27, 2020
     </a>
   </li>
@@ -1381,7 +1347,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200720/" title="July 20, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200720/" class="md-nav__link">
       July 20, 2020
     </a>
   </li>
@@ -1393,7 +1359,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200713/" title="July 13, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200713/" class="md-nav__link">
       July 13, 2020
     </a>
   </li>
@@ -1405,7 +1371,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200706/" title="July 6, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200706/" class="md-nav__link">
       July 6, 2020
     </a>
   </li>
@@ -1417,7 +1383,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200629/" title="June 29, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200629/" class="md-nav__link">
       June 29, 2020
     </a>
   </li>
@@ -1429,7 +1395,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200622/" title="June 22, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200622/" class="md-nav__link">
       June 22, 2020
     </a>
   </li>
@@ -1441,7 +1407,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200615/" title="June 15, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200615/" class="md-nav__link">
       June 15, 2020
     </a>
   </li>
@@ -1453,7 +1419,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200608/" title="June 8, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200608/" class="md-nav__link">
       June 8, 2020
     </a>
   </li>
@@ -1465,7 +1431,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200601/" title="June 1, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200601/" class="md-nav__link">
       June 1, 2020
     </a>
   </li>
@@ -1477,7 +1443,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200518/" title="May 18, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200518/" class="md-nav__link">
       May 18, 2020
     </a>
   </li>
@@ -1489,7 +1455,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200511/" title="May 11, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200511/" class="md-nav__link">
       May 11, 2020
     </a>
   </li>
@@ -1501,7 +1467,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200504/" title="May 4, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200504/" class="md-nav__link">
       May 4, 2020
     </a>
   </li>
@@ -1513,7 +1479,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200427/" title="April 27, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200427/" class="md-nav__link">
       April 27, 2020
     </a>
   </li>
@@ -1525,7 +1491,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200420/" title="April 20, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200420/" class="md-nav__link">
       April 20, 2020
     </a>
   </li>
@@ -1537,7 +1503,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200413/" title="April 13, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200413/" class="md-nav__link">
       April 13, 2020
     </a>
   </li>
@@ -1549,7 +1515,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200406/" title="April 6, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200406/" class="md-nav__link">
       April 6, 2020
     </a>
   </li>
@@ -1561,7 +1527,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200330/" title="March 30, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200330/" class="md-nav__link">
       March 30, 2020
     </a>
   </li>
@@ -1573,7 +1539,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200323/" title="March 23, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200323/" class="md-nav__link">
       March 23, 2020
     </a>
   </li>
@@ -1585,7 +1551,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200316/" title="March 16, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200316/" class="md-nav__link">
       March 16, 2020
     </a>
   </li>
@@ -1597,7 +1563,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200309/" title="March 9, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200309/" class="md-nav__link">
       March 9, 2020
     </a>
   </li>
@@ -1609,7 +1575,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200302/" title="March 2, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200302/" class="md-nav__link">
       March 2, 2020
     </a>
   </li>
@@ -1621,7 +1587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200224/" title="February 24, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200224/" class="md-nav__link">
       February 24, 2020
     </a>
   </li>
@@ -1633,7 +1599,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200217/" title="February 17, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200217/" class="md-nav__link">
       February 17, 2020
     </a>
   </li>
@@ -1645,7 +1611,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200210/" title="February 10, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200210/" class="md-nav__link">
       February 10, 2020
     </a>
   </li>
@@ -1657,7 +1623,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200203/" title="February 3, 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200203/" class="md-nav__link">
       February 3, 2020
     </a>
   </li>
@@ -1669,7 +1635,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200127/" title="January, 27 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200127/" class="md-nav__link">
       January, 27 2020
     </a>
   </li>
@@ -1681,7 +1647,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200113/" title="January, 13 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200113/" class="md-nav__link">
       January, 13 2020
     </a>
   </li>
@@ -1693,7 +1659,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meetings/2020/TechArea20200106/" title="January, 6 2020" class="md-nav__link">
+    <a href="../../meetings/2020/TechArea20200106/" class="md-nav__link">
       January, 6 2020
     </a>
   </li>
@@ -1715,68 +1681,71 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choosing-the-git-repository" title="Choosing the git repository" class="md-nav__link">
+  <a href="#choosing-the-git-repository" class="md-nav__link">
     Choosing the git repository
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#automatic-twiki-conversion" title="Automatic TWiki conversion" class="md-nav__link">
+  <a href="#automatic-twiki-conversion" class="md-nav__link">
     Automatic TWiki conversion
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Automatic TWiki conversion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-docker" title="Using docker" class="md-nav__link">
+  <a href="#using-docker" class="md-nav__link">
     Using docker
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Using docker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#requirements" title="Requirements" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#preparing-the-git-repository" title="Preparing the git repository" class="md-nav__link">
+  <a href="#preparing-the-git-repository" class="md-nav__link">
     Preparing the git repository
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#previewing-the-document-tree" title="Previewing the document tree" class="md-nav__link">
+  <a href="#previewing-the-document-tree" class="md-nav__link">
     Previewing the document tree
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#converting-documents" title="Converting documents" class="md-nav__link">
+  <a href="#converting-documents" class="md-nav__link">
     Converting documents
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#troubleshooting-conversion" title="Troubleshooting conversion" class="md-nav__link">
+  <a href="#troubleshooting-conversion" class="md-nav__link">
     Troubleshooting conversion
   </a>
   
@@ -1788,43 +1757,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#conversion-without-docker" title="Conversion without Docker" class="md-nav__link">
+  <a href="#conversion-without-docker" class="md-nav__link">
     Conversion without Docker
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Conversion without Docker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#requirements_1" title="Requirements" class="md-nav__link">
+  <a href="#requirements_1" class="md-nav__link">
     Requirements
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#preparing-the-git-repository_1" title="Preparing the git repository" class="md-nav__link">
+  <a href="#preparing-the-git-repository_1" class="md-nav__link">
     Preparing the git repository
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#archiving-the-twiki-document" title="Archiving the TWiki document" class="md-nav__link">
+  <a href="#archiving-the-twiki-document" class="md-nav__link">
     Archiving the TWiki document
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#initial-conversion-with-pandoc" title="Initial conversion with Pandoc" class="md-nav__link">
+  <a href="#initial-conversion-with-pandoc" class="md-nav__link">
     Initial conversion with Pandoc
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#previewing-your-documents-with-mkdocs" title="Previewing your document(s) with Mkdocs" class="md-nav__link">
+  <a href="#previewing-your-documents-with-mkdocs" class="md-nav__link">
     Previewing your document(s) with Mkdocs
   </a>
   
@@ -1841,43 +1810,39 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#completing-the-conversion" title="Completing the conversion" class="md-nav__link">
+  <a href="#completing-the-conversion" class="md-nav__link">
     Completing the conversion
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#archiving-documents" title="Archiving Documents" class="md-nav__link">
+  <a href="#archiving-documents" class="md-nav__link">
     Archiving Documents
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#submitting-the-pull-request" title="Submitting the pull request" class="md-nav__link">
+  <a href="#submitting-the-pull-request" class="md-nav__link">
     Submitting the pull request
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#after-the-pull-request" title="After the pull request" class="md-nav__link">
+  <a href="#after-the-pull-request" class="md-nav__link">
     After the pull request
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reviewing-pull-requests" title="Reviewing pull requests" class="md-nav__link">
+  <a href="#reviewing-pull-requests" class="md-nav__link">
     Reviewing pull requests
   </a>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -1891,7 +1856,9 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/documentation/markdown-migration.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/documentation/markdown-migration.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
                 
                 
                 <h1 id="migrating-to-markdown">Migrating to Markdown<a class="headerlink" href="#migrating-to-markdown" title="Permanent link">&para;</a></h1>
@@ -1929,9 +1896,8 @@
 </ul>
 <h3 id="using-docker">Using docker<a class="headerlink" href="#using-docker" title="Permanent link">&para;</a></h3>
 <p>The twiki-converter docker image can be used to preview the document tree via a <a href="http://www.mkdocs.org/#getting-started">mkdocs</a> development server, archive TWiki documents, and convert documents to Markdown via <a href="http://pandoc.org/">pandoc</a>. The image is available on <code>osghost</code>, otherwise, it is availble on <a href="https://hub.docker.com/r/opensciencegrid/docker-twiki-converter/">dockerhub</a>.</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker pull opensciencegrid/docker-twiki-converter
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> docker pull opensciencegrid/docker-twiki-converter
+</code></pre></div>
 
 <h4 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h4>
 <p>To perform a document migration using docker, you will need the following tools and accounts:</p>
@@ -1948,24 +1914,21 @@
 <li><code>cd</code> into your local git repository</li>
 <li>
 <p>Add <code>opensciencegrid/technology</code> as the upstream remote repository for merging upstream changes:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git remote add upstream https://www.github.com/opensciencegrid/technology.git
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> git remote add upstream https://www.github.com/opensciencegrid/technology.git
+</code></pre></div>
 
 </li>
 <li>
 <p>Create a branch for the document you plan to convert:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git branch &lt;BRANCH NAME&gt; master
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> git branch &lt;BRANCH NAME&gt; master
+</code></pre></div>
 
 <p>Replace <code>&lt;BRANCH NAME&gt;</code> with a name of your choice</p>
 </li>
 <li>
 <p>Change to the branch you just created</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git checkout &lt;BRANCH NAME&gt;
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> git checkout &lt;BRANCH NAME&gt;
+</code></pre></div>
 
 <p>Replace <code>&lt;BRANCH NAME&gt;</code> with the name you chose in the step above</p>
 </li>
@@ -1975,9 +1938,8 @@
 <ol>
 <li>
 <p>Create a container from the image with the following command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker run -d -v &lt;PATH TO LOCAL GITHUB REPO&gt;:/source -p <span class="m">8000</span> opensciencegrid/docker-twiki-converter
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> docker run -d -v &lt;PATH TO LOCAL GITHUB REPO&gt;:/source -p <span class="m">8000</span> opensciencegrid/docker-twiki-converter
+</code></pre></div>
 
 <p>Change <code>&lt;PATH TO LOCAL GITHUB REPO&gt;</code> for the directory where you have cloned the repo. The above command should return the container ID, which will be used in subsequent commands.</p>
 <div class="admonition note">
@@ -1987,9 +1949,8 @@
 </li>
 <li>
 <p>To find the port that your development server is listening on, use the container ID (you should only need the first few chars of the ID) returned from the previous command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker port &lt;CONTAINER ID&gt;
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> docker port &lt;CONTAINER ID&gt;
+</code></pre></div>
 
 <p>Change <code>&lt;CONTAINER ID&gt;</code> for the value returned by the execution of the previous command</p>
 </li>
@@ -1999,9 +1960,8 @@
 </ol>
 <h4 id="converting-documents">Converting documents<a class="headerlink" href="#converting-documents" title="Permanent link">&para;</a></h4>
 <p>The docker image contains a convenience script, <code>convert-twiki</code> for saving archives and converting them to Markdown. To run the script in a running container, run the following command:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker <span class="nb">exec</span> &lt;CONTAINER ID&gt; convert-twiki &lt;TWIKI URL&gt;
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> docker <span class="nb">exec</span> &lt;CONTAINER ID&gt; convert-twiki &lt;TWIKI URL&gt;
+</code></pre></div>
 
 <p>Where <code>&lt;CONTAINER ID&gt;</code> is the docker container ID and <code>&lt;TWIKI URL&gt;</code> is the link to the TWiki document that you want to convert, e.g. https://twiki.opensciencegrid.org/bin/view/SoftwareTeam/SoftwareDevelopmentProcess . This will result in an archive of the twiki doc, <code>archive/SoftwareDevelopmentProcess</code>, in your local repo and a converted copy, <code>SoftwareDevelopmentProcess.md</code>, placed into the root of your local github repository.  If the twiki url is for a specific revision of the document, a <code>.rNN</code> will be included in the output filenames.</p>
 <div class="admonition warning">
@@ -2026,9 +1986,8 @@
 <li>Copy the archive of the document into the root of your git repository</li>
 <li>
 <p>Kill the process in the docker container:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker <span class="nb">exec</span> &lt;CONTAINER ID&gt; pkill -9 pandoc
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> docker <span class="nb">exec</span> &lt;CONTAINER ID&gt; pkill -9 pandoc
+</code></pre></div>
 
 <p>Where <code>&lt;CONTAINER ID&gt;</code> is the docker container ID</p>
 </li>
@@ -2037,9 +1996,8 @@
 </li>
 <li>
 <p>Run pandoc manually:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> docker <span class="nb">exec</span> &lt;CONTAINER ID&gt; pandoc -f twiki -t markdown_github &lt;ARCHIVE COPY&gt; &gt; &lt;MARKDOWN FILE&gt;
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> docker <span class="nb">exec</span> &lt;CONTAINER ID&gt; pandoc -f twiki -t markdown_github &lt;ARCHIVE COPY&gt; &gt; &lt;MARKDOWN FILE&gt;
+</code></pre></div>
 
 <p>Where <code>&lt;CONTAINER ID&gt;</code> is the docker container ID, <code>&lt;ARCHIVE COPY&gt;</code> is the the file you copied in the first step
 and <code>&lt;MARKDOWN FILE&gt;</code> is the resulting <code>.md</code> file</p>
@@ -2065,22 +2023,19 @@ and <code>&lt;MARKDOWN FILE&gt;</code> is the resulting <code>.md</code> file</p
 <li><code>cd</code> into your local git repository</li>
 <li>
 <p>Add <code>opensciencegrid/technology</code> as the upstream remote repository for merging upstream changes:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git remote add upstream https://www.github.com/opensciencegrid/technology.git
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> git remote add upstream https://www.github.com/opensciencegrid/technology.git
+</code></pre></div>
 
 </li>
 <li>
 <p>Create a branch for the document you plan to convert:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git branch &lt;BRANCH NAME&gt; master
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> git branch &lt;BRANCH NAME&gt; master
+</code></pre></div>
 
 <p>Replace <code>&lt;BRANCH NAME&gt;</code> with a name of your choice
 5. Change to the branch you just created</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git checkout &lt;BRANCH NAME&gt;
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> git checkout &lt;BRANCH NAME&gt;
+</code></pre></div>
 
 <p>Replace <code>&lt;BRANCH NAME&gt;</code> with the name you chose in the step above</p>
 <h4 id="archiving-the-twiki-document">Archiving the TWiki document<a class="headerlink" href="#archiving-the-twiki-document" title="Permanent link">&para;</a></h4>
@@ -2089,9 +2044,8 @@ and <code>&lt;MARKDOWN FILE&gt;</code> is the resulting <code>.md</code> file</p
 <p>Follow the instructions for <a href="#archiving-documents">archival</a> then continue to the next section to convert the document with pandoc.</p>
 <h4 id="initial-conversion-with-pandoc">Initial conversion with Pandoc<a class="headerlink" href="#initial-conversion-with-pandoc" title="Permanent link">&para;</a></h4>
 <p><a href="http://pandoc.org/">Pandoc</a> is a tool that's useful for automated conversion of markdown languages. <a href="http://pandoc.org/installing.html">Once installed</a> (alternatively, run pandoc <a href="#using-docker">via docker</a>), run the following command to convert TWiki to Markdown:</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> pandoc -f twiki -t markdown_github &lt;TWIKI FILE&gt; &gt; &lt;MARKDOWN FILE&gt;
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">$</span> pandoc -f twiki -t markdown_github &lt;TWIKI FILE&gt; &gt; &lt;MARKDOWN FILE&gt;
+</code></pre></div>
 
 <p>Where <code>&lt;TWIKI FILE&gt;</code> is the path to initial document in raw TWiki and <code>&lt;MARKDOWN FILE&gt;</code> is the path to the resulting document in GitHub Markdown.</p>
 <div class="admonition note">
@@ -2100,46 +2054,41 @@ and <code>&lt;MARKDOWN FILE&gt;</code> is the resulting <code>.md</code> file</p
 </div>
 <h4 id="previewing-your-documents-with-mkdocs">Previewing your document(s) with Mkdocs<a class="headerlink" href="#previewing-your-documents-with-mkdocs" title="Permanent link">&para;</a></h4>
 <p><a href="http://www.mkdocs.org/">Mkdocs</a> has a development mode that can be used to preview documents as you work on them and is available via package manager or <code>pip</code>. <a href="http://www.mkdocs.org/#installation">Once installed</a>, add your document(s) to the <code>pages</code> section of <code>mkdocs.yml</code> and launch the mkdocs server with the following command from the dir containing <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="gp">$</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>src/ mkdocs serve
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">$</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>src/ mkdocs serve
+</code></pre></div>
 
 <p>Access the server at <code>http://127.0.0.1:8000</code> and navigate to the document you're working on. It's useful to open the original TWiki doc in an adjacent tab or window to quickly compare the two.</p>
 <h2 id="completing-the-conversion">Completing the conversion<a class="headerlink" href="#completing-the-conversion" title="Permanent link">&para;</a></h2>
 <p>Manual review of the automatically converted documents are required since the automatic conversion process isn't perfect. This section contains a list of problems commonly encountered in automatically converted documents.</p>
-<p>Visit the <a href="../writing-documentation/#style-guide">style guide</a> to ensure that the document meets all style guidelines.</p>
+<p>Visit the <a href="../style-guide/">style guide</a> to ensure that the document meets all style guidelines.</p>
 <h2 id="archiving-documents">Archiving Documents<a class="headerlink" href="#archiving-documents" title="Permanent link">&para;</a></h2>
 <p>If the document is slated for archival (check if it says "yes" in the  "archived" column of the spreadsheet), just download the document to the <code>archive</code> folder of your local git repository:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> <span class="nb">cd</span> technology/
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> <span class="nb">cd</span> technology/
 <span class="gp">user@host $</span> curl <span class="s1">&#39;&lt;TWIKI URL&gt;?raw=text&#39;</span> <span class="p">|</span> iconv -f windows-1252 &gt; archive/&lt;TWIKI TITLE&gt;
-</pre></div>
-
+</code></pre></div>
 
 <p>Where <code>&lt;TWIKI URL&gt;</code> is the link to the TWiki document that you want to download and <code>&lt;TWIKI TITLE&gt;</code> is the name that will receive the archived file
 For example:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> <span class="nb">cd</span> technology
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> <span class="nb">cd</span> technology
 <span class="gp">user@host $</span> curl <span class="s1">&#39;https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/SHA2Compliance?raw=text&#39;</span> <span class="p">|</span> iconv -f windows-1252 &gt; archive/SHA2Compliance
-</pre></div>
-
+</code></pre></div>
 
 <p>After downloading the document, continue onto the next section to walk through pull request submission.</p>
 <h2 id="submitting-the-pull-request">Submitting the pull request<a class="headerlink" href="#submitting-the-pull-request" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Stage the archived raw TWiki (as well as the converted Markdown document(s) and <code>mkdocs.yml</code> if you are converting the document):</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git add mkdocs.yml archive/&lt;TWIKI ARCHIVE&gt; &lt;PATH TO CONVERTED DOC&gt;
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> git add mkdocs.yml archive/&lt;TWIKI ARCHIVE&gt; &lt;PATH TO CONVERTED DOC&gt;
+</code></pre></div>
 
 <p>Where <code>&lt;TWIKI ARCHIVE&gt;</code> is the name of the archived document and <code>&lt;PATH TO CONVERTED DOC&gt;</code> is the path to the <code>.md</code>
 file</p>
 </li>
 <li>
 <p>Commit and push your changes to your GitHub repo:</p>
-<div class="codehilite"><pre><span></span><span class="gp">user@host $</span> git commit -m <span class="s2">&quot;&lt;COMMIT MSG&gt;&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="gp">user@host $</span> git commit -m <span class="s2">&quot;&lt;COMMIT MSG&gt;&quot;</span>
 <span class="gp">user@host $</span> git push origin &lt;BRANCH NAME&gt;
-</pre></div>
-
+</code></pre></div>
 
 <p>Change <code>&lt;COMMIT MSG&gt;</code> for a meaningful text that describes the conversion done and <code>&lt;BRANCH NAME&gt;</code> with the name
 chosen in the 3rd step of the <a href="#preparing-the-git-repository">Preparing the git repository</a> section</p>
@@ -2149,26 +2098,23 @@ chosen in the 3rd step of the <a href="#preparing-the-git-repository">Preparing 
 </li>
 <li>
 <p>Submit a pull request containing with the following body:</p>
-<div class="codehilite"><pre><span></span>&lt;LINK TO TWIKI DOCUMENT&gt;
+<div class="codehilite"><pre><span></span><code>&lt;LINK TO TWIKI DOCUMENT&gt;
 
 - [ ] Enter date into &quot;Migrated&quot; column of google sheet
-</pre></div>
-
+</code></pre></div>
 
 <p>An example of <code>&lt;LINK TO TWIKI DOCUMENT&gt;</code> is: https://twiki.opensciencegrid.org/bin/view/SoftwareTeam/SoftwareDevelopmentProcess</p>
 <ul>
 <li>
 <p>If you are migrating a document, also add this task:</p>
-<div class="codehilite"><pre><span></span>- [ ] Add migration header to TWiki document
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>- [ ] Add migration header to TWiki document
+</code></pre></div>
 
 </li>
 <li>
 <p>If you are archiving a document, add this task:</p>
-<div class="codehilite"><pre><span></span>- [ ] Move TWiki document to the trash
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>- [ ] Move TWiki document to the trash
+</code></pre></div>
 
 </li>
 </ul>
@@ -2177,7 +2123,7 @@ chosen in the 3rd step of the <a href="#preparing-the-git-repository">Preparing 
 <p>See an example pull request <a href="https://github.com/opensciencegrid/technology/pull/98">here</a>.</p>
 <h2 id="after-the-pull-request">After the pull request<a class="headerlink" href="#after-the-pull-request" title="Permanent link">&para;</a></h2>
 <p>After the pull request is merged, replace the contents of TWiki document with the div if you're migrating the document, linking to the location of the migrated document:</p>
-<div class="codehilite"><pre><span></span>&lt;div style=&quot;border: 1px solid black; margin: 1em 0; padding: 1em; background-color: #FFDDDD; font-weight: 600;&quot;&gt;
+<div class="codehilite"><pre><span></span><code>&lt;div style=&quot;border: 1px solid black; margin: 1em 0; padding: 1em; background-color: #FFDDDD; font-weight: 600;&quot;&gt;
 This document has been migrated to !GitHub (&lt;LINK TO GITHUB DOCUMENT&gt;). If you wish to see the old TWiki document, use the TWiki history below.
 
 Background:
@@ -2187,28 +2133,23 @@ At the end of year (2017), the TWiki will be retired in favor of !GitHub. You ca
    * Release3: https://www.opensciencegrid.org/docs ([[https://github.com/opensciencegrid/docs/tree/master/archive][archive]])
    * !SoftwareTeam: https://www.opensciencegrid.org/technology ([[https://github.com/opensciencegrid/technology/tree/master/archive][archive]])
 &lt;/div&gt;
-</pre></div>
-
+</code></pre></div>
 
 <p>If you are archiving a document, move it to the trash instead. Once the document has been updated or trashed, add the date to the spreadsheet and go back to your pull request and mark your tasks as complete. For example, if you completed the migration of a document:</p>
-<div class="codehilite"><pre><span></span>- [X] Enter date into &quot;Migrated&quot; column of google sheet
+<div class="codehilite"><pre><span></span><code>- [X] Enter date into &quot;Migrated&quot; column of google sheet
 - [X] Add migration div to TWiki document
-</pre></div>
-
+</code></pre></div>
 
 <p>Currently, we do not recommend changing backlinks (links on other twiki pages that refer to the Twiki page you are migrating) to point at the new GitHub URL.  This is to provide a simple reminder to users that the migration will occur, and also is likely low priority regardless as all pages will eventually migrate to GitHub.  This advice may change in the future as we gain experience with this transition.</p>
 <h2 id="reviewing-pull-requests">Reviewing pull requests<a class="headerlink" href="#reviewing-pull-requests" title="Permanent link">&para;</a></h2>
 <p>To review pull requests, <code>cd</code> into the dir containing your git repository and check out the requester's branch, which the twiki-converter container should automatically notice. Here's an example checking out Brian's <code>cut-sw-release</code> branch of the technology repository:</p>
-<div class="codehilite"><pre><span></span><span class="gp">#</span> Add the requester<span class="s1">&#39;s repo as a remote if you haven&#39;</span>t already
+<div class="codehilite"><pre><span></span><code><span class="gp">#</span> Add the requester<span class="s1">&#39;s repo as a remote if you haven&#39;</span>t already
 <span class="gp">user@host $</span> git remote add blin https://www.github.com/brianhlin/technology.git
 <span class="gp">user@host $</span> git fetch --all
 <span class="gp">user@host $</span> git checkout blin/cut-sw-release
-</pre></div>
-
+</code></pre></div>
 
 <p>Refresh your browser and navigate to the document in the request.</p>
-                
-                  
                 
               
               
@@ -2225,34 +2166,34 @@ At the end of year (2017), the TWiki will be retired in favor of !GitHub. You ca
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../projects/sha2-support/" title="SHA-2 Support" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../../projects/sha2-support/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 SHA-2 Support
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../../meetings/2020/TechArea20201109/" title="November 9, 2020" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../../meetings/2020/TechArea20201109/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 November 9, 2020
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -2263,14 +2204,11 @@ At the end of year (2017), the TWiki will be retired in favor of !GitHub. You ca
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
-      
-        
       
     </div>
   </div>
@@ -2278,9 +2216,18 @@ At the end of year (2017), the TWiki will be retired in favor of !GitHub. You ca
       
     </div>
     
-      <script src="../../assets/javascripts/application.a353778b.js"></script>
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>
