@@ -1694,9 +1694,9 @@ responsibilities and when to transition from direct support inquiries to a ticke
 <li>If you need to collect information about a problematic host, ask users to run <code>osg-system-profiler</code>.
     It can shorten the number of times you ask for information because it collects quite a bit for you.</li>
 <li>If you run across a problem that has a chance of being hit by other users:<ul>
-<li>Is there a bug we should fix in the software?
-    Or something we could improve in the software?</li>
-<li>Is there a way to improve our documentation?</li>
+<li>Is there a bug we should fix in the software? Open a Jira ticket.</li>
+<li>Is there something we could improve in the software? Notify the Software Manager.</li>
+<li>Is there a way to improve our documentation? Notify the Software Manager.</li>
 <li>Can you extend our troubleshooting documents to help people track this down more quickly?
     Consider the troubleshooting documents to be as much for us as for our users.</li>
 <li>Is this something that other Technology Team members should be aware of?
@@ -1720,8 +1720,8 @@ If you are on triage duty, your responsibilities are as follows:</p>
 <li>
 <p><strong>Watch for new software tickets:</strong> review the
     <a href="https://support.opensciencegrid.org/a/tickets/filters/5000319518">Unresolved Software Tickets</a> and
-    <a href="https://support.opensciencegrid.org/a/tickets/filters/5000322056">All Unassigned Tickets</a> filters at least twice
-    daily for new OSG Software-related tickets.
+    <a href="https://support.opensciencegrid.org/a/tickets/filters/5000322056">All Unassigned Tickets</a> filters at least three
+    times daily for new OSG Software-related tickets.
     For any such unassigned tickets, assign it as follows:</p>
 <ul>
 <li><em>If you can handle an incoming ticket,</em> assign it to yourself.
@@ -1832,8 +1832,8 @@ When replying to or otherwise updating a Freshdesk ticket, there are a few thing
 </thead>
 <tbody>
 <tr>
-<td>Pending</td>
-<td>Assignee is responsible for next actions</td>
+<td>Open</td>
+<td>OSG staff is responsible for next actions</td>
 </tr>
 <tr>
 <td>Waiting on Customer</td>
@@ -1844,7 +1844,7 @@ When replying to or otherwise updating a Freshdesk ticket, there are a few thing
 <td>Assignee needs a response from a CC</td>
 </tr>
 <tr>
-<td>Closed</td>
+<td>Resolved</td>
 <td>Support is complete or the user is unresponsive. <a href="#triage-duty">See above</a>.</td>
 </tr>
 <tr>
@@ -1852,8 +1852,8 @@ When replying to or otherwise updating a Freshdesk ticket, there are a few thing
 <td>Ticket has not yet been assigned (initial ticket state)</td>
 </tr>
 <tr>
-<td>Resolved</td>
-<td><strong>DO NOT USE</strong>. Similar to <code>Closed</code> but sends a user survey.</td>
+<td>Closed</td>
+<td><strong>DO NOT SET MANUALLY</strong>. Terminal ticket state that is set by Freshdesk.</td>
 </tr>
 </tbody>
 </table>
