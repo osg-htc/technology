@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://opensciencegrid.org/technology/documentation/new-doc-area/">
+        <link rel="canonical" href="https://opensciencegrid.org/technology/documentation/publish-osg-pages/">
       
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Creating a New Area - OSG Technology Area</title>
+        <title>Publishing OSG pages - OSG Technology Area</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-a-new-area" class="md-skip">
+        <a href="#publishing-osg-pages-with-mkdocs" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Creating a New Area
+              Publishing OSG pages
             
           </span>
         </div>
@@ -882,12 +882,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Creating a New Area
+        Publishing OSG pages
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Creating a New Area
+      Publishing OSG pages
     </a>
     
       
@@ -904,9 +904,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#creating-new-pages" class="md-nav__link">
+    Creating New Pages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creating-an-itb-area" class="md-nav__link">
     Creating an ITB Area
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transitioning-to-github-actions" class="md-nav__link">
+    Transitioning to GitHub Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Transitioning to GitHub Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-the-repository" class="md-nav__link">
+    Preparing the repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disabling-travis-ci" class="md-nav__link">
+    Disabling Travis CI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-github-actions" class="md-nav__link">
+    Enabling GitHub Actions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1550,9 +1591,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#creating-new-pages" class="md-nav__link">
+    Creating New Pages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creating-an-itb-area" class="md-nav__link">
     Creating an ITB Area
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transitioning-to-github-actions" class="md-nav__link">
+    Transitioning to GitHub Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Transitioning to GitHub Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-the-repository" class="md-nav__link">
+    Preparing the repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disabling-travis-ci" class="md-nav__link">
+    Disabling Travis CI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-github-actions" class="md-nav__link">
+    Enabling GitHub Actions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1568,15 +1650,22 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/documentation/new-doc-area.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/documentation/publish-osg-pages.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="creating-a-new-area">Creating a New Area<a class="headerlink" href="#creating-a-new-area" title="Permanent link">&para;</a></h1>
-<p>This document contains instructions for creating a new top-level OSG website via <a href="https://pages.github.com/">GitHub Pages</a>
-and deploying it automatically with <a href="https://travis-ci.org/">Travis-CI</a>.
-This document assumes that you are an administrator of the <code>opensciencegrid</code> GitHub organization.
+                <h1 id="publishing-osg-pages-with-mkdocs">Publishing OSG Pages with MkDocs<a class="headerlink" href="#publishing-osg-pages-with-mkdocs" title="Permanent link">&para;</a></h1>
+<p>The OSG uses <a href="https://www.mkdocs.org/">MkDocs</a> for <a href="https://opensciencegrid.org/docs/">site documentation</a> and
+team-specific web pages (e.g. <a href="https://opensciencegrid.org/technology/">https://opensciencegrid.org/technology/</a>).
+This document contains instructions for creating a new OSG area through GitHub and transitioning an existing MkDocs
+GitHub repository from <a href="https://travis-ci.com/">Travis CI</a> to <a href="https://github.com/features/actions">GitHub Actions</a>.</p>
+<h2 id="creating-new-pages">Creating New Pages<a class="headerlink" href="#creating-new-pages" title="Permanent link">&para;</a></h2>
+<div class="admonition help">
+<p class="admonition-title">Need assistance?</p>
+<p>If you need any assistance with setting up your GitHub repository, please reach out to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a>.</p>
+</div>
+<p>This document assumes that you are an administrator of the <code>opensciencegrid</code> GitHub organization.
 Before starting, make sure that you have the <code>git</code> and <code>gem</code> tools installed.</p>
 <ol>
 <li>
@@ -1713,7 +1802,7 @@ git commit -m &quot;Staging initial web page contents&quot;
 </li>
 </ol>
 <h2 id="creating-an-itb-area">Creating an ITB Area<a class="headerlink" href="#creating-an-itb-area" title="Permanent link">&para;</a></h2>
-<p>This section describes creating an ITB repository for a documentation area created in the <a href="#creating-a-new-area">previous section</a></p>
+<p>This section describes creating an ITB repository for a documentation area created in the <a href="#creating-new-pages">previous section</a></p>
 <ol>
 <li>
 <p>Create a new repository in the <a href="https://github.com/organizations/opensciencegrid/repositories/new">opensciencegrid organization</a> and name it <code>&lt;REPO NAME&gt;-itb</code>.
@@ -1788,6 +1877,117 @@ git commit -m &quot;Add ITB deployment&quot;
 </code></pre></div>
 
 <p>Your documents should be shortly available at <code>https://www.opensciencegrid.org/&lt;REPO NAME&gt;</code></p>
+</li>
+</ol>
+<h2 id="transitioning-to-github-actions">Transitioning to GitHub Actions<a class="headerlink" href="#transitioning-to-github-actions" title="Permanent link">&para;</a></h2>
+<div class="admonition help">
+<p class="admonition-title">Need assistance?</p>
+<p>If you need any assistance with transitioning your repository to GitHub actions, please reach out to
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a>.</p>
+</div>
+<p>When originally developed, OSG MkDocs repositories were set up to automatically publish web page changes through
+<a href="https://travis-ci.com/">Travis CI</a>.
+But in November 2020, Travis CI changed their pricing model so we are moving the automatic publishing infrastructure
+to GitHub Actions and using this opportunity to also upgrade the version of MkDocs.</p>
+<p>To ensure that your pages continue to be autmoatically published you will need to prepare your repository for the new
+version of MkDocs, disable Travis CI, and enable GitHub Actions.</p>
+<h3 id="preparing-the-repository">Preparing the repository<a class="headerlink" href="#preparing-the-repository" title="Permanent link">&para;</a></h3>
+<p>Before upgrading, you must fix the following incompatibilities:</p>
+<ul>
+<li>
+<p>Rename the <code>pages:</code> section of <code>mkdocs.yml</code> to <code>nav:</code>.
+    The section contents are identical; only the name is changing.</p>
+</li>
+<li>
+<p>Update all of the <a href="../style-guide/#links">links</a> in the documents as follows:</p>
+<ul>
+<li>Ensure links end in <code>.md</code></li>
+<li>Ensure links are document-relative, not site-relative</li>
+</ul>
+<p>For example, links should be of the form <code>../software/development-process.md</code> instead of
+<code>/software/development-process</code>.</p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Previewing your pages with Docker</p>
+<p>If you would like to ensure the correctness of your fixes, run the following command:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">docker run -it -v ${PWD}/docs -p 8000:8000 squidfunk/mkdocs-material:6.1.4</span>
+</code></pre></div>
+
+<p>After running this command, enter <code>localhost:8000</code> in your browser to preview your pages.
+Saved changes made to <code>.md</code> files are automatically updated in your browser!</p>
+</div>
+<h3 id="disabling-travis-ci">Disabling Travis CI<a class="headerlink" href="#disabling-travis-ci" title="Permanent link">&para;</a></h3>
+<p>After you've prepared your repository for the transition, disable Travis CI by removing related files from it.
+Perform the following actions from the command-line:</p>
+<ol>
+<li>
+<p>Clone the repository that is still using Travis CI:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">git clone https://github.com/opensciencegrid/&lt;GIT REPOSITORY&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p><code>cd</code> into the directory containing the repository (should be the same as <code>&lt;GIT REPOSITORY&gt;</code> by default)</p>
+</li>
+<li>
+<p>Remove all of the Travs CI related files:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">git rm ci</span>
+<span class="go">git rm .travis.env deploy-key.enc .travis.yml</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Commit your changes:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">git commit -am &quot;Disable Travis CI&quot;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Push your changes (you will be prompted for your GitHub credentials):</p>
+<div class="codehilite"><pre><span></span><code><span class="go">git push origin master</span>
+</code></pre></div>
+
+</li>
+</ol>
+<h3 id="enabling-github-actions">Enabling GitHub Actions<a class="headerlink" href="#enabling-github-actions" title="Permanent link">&para;</a></h3>
+<p>The new method for validating and publishing OSG pages for a MkDocs repository can be enabled entirely through the
+<a href="https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/sharing-workflows-with-your-organization#using-a-workflow-template">GitHub web interface</a>:</p>
+<ol>
+<li>
+<p>Navigate to the <code>opensciencegrid</code> fork of the GitHub repository in your web browser,
+    e.g. <a href="https://github.com/opensciencegrid/docs/">https://github.com/opensciencegrid/docs/</a></p>
+</li>
+<li>
+<p>Click on the <code>Actions</code> tab:</p>
+<p><img alt="Select the 'Actions' tab from your GitHub repository" src="../../img/mkdocs/select-actions-tab.png" /></p>
+</li>
+<li>
+<p>Find the <code>Publish MkDocs static HTML</code> workflow by the Open Science Grid and click the <code>Set up this workflow</code> button:</p>
+<p><img alt="Select the 'Publish MkDocs static HTML workflow" src="../../img/mkdocs/select-publish-action.png" /></p>
+</li>
+<li>
+<p>Click on the <code>Start commit</code> drop-down button then click <code>Commit new file</code>:</p>
+<p><img alt="Commit the workflow" src="../../img/mkdocs/commit-publish-mkdocs-action.png" /></p>
+</li>
+<li>
+<p><strong>(Optional)</strong> Enable the <code>Validate MkDocs Static HTML</code> workflow to check links and markdown correctness of pull
+    requests to the repository.</p>
+<ol>
+<li>
+<p>Navigate to the <code>Actions</code> tab as before</p>
+</li>
+<li>
+<p>Click on the <code>New Workflow</code> button:</p>
+<p><img alt="Click the 'New workflow' button" src="../../img/mkdocs/select-new-workflow.png" /></p>
+</li>
+<li>
+<p>Find the <code>Validate MkDocs static HTML</code> workflow by the Open Science Grid and click <code>Set up this workflow</code></p>
+</li>
+<li>
+<p>As before, click on the <code>Start commit</code> drop-down button then click <code>Commit new file</code></p>
+</li>
+</ol>
 </li>
 </ol>
                 
