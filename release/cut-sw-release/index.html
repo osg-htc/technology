@@ -2062,7 +2062,7 @@ If you not local to Madison, consult the release manager for the designated pers
 </code></pre></div>
 
 <h3 id="step-5-create-the-client-tarballs">Step 5: Create the client tarballs<a class="headerlink" href="#step-5-create-the-client-tarballs" title="Permanent link">&para;</a></h3>
-<p>Create the client tarballs as root on an EL7 fermicloud machine using the relevant script from git:</p>
+<p>Create the OSG 3.4 client tarballs as root on an EL7 fermicloud machine using the relevant script from git:</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
 </code></pre></div>
 
@@ -2077,13 +2077,30 @@ If you not local to Madison, consult the release manager for the designated pers
 Test them in next step and then rerun the script and enter the proper account information.
 The script will pick up where it left off and upload the tarballs.</p>
 </div>
+<p>Create the OSG 3.5 client tarballs on dumbo.chtc.wisc.edu using the relevant script from git:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSION</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION&gt;&quot;</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/opensciencegrid/tarball-client.git
+<span class="nb">cd</span> tarball-client
+./docker-make-client-tarball --osgver <span class="m">3</span>.5 --version <span class="nv">$NON_UPCOMING_VERSION</span> --all
+</code></pre></div>
+
+<p>After testing the tarballs in the next step. Upload them to AFS.</p>
+<div class="codehilite"><pre><span></span><code>./upload-tarballs-to-afs <span class="nv">$NON_UPCOMING_VERSION</span>
+</code></pre></div>
+
 <h3 id="step-6-briefly-test-the-client-tarballs">Step 6: Briefly test the client tarballs<a class="headerlink" href="#step-6-briefly-test-the-client-tarballs" title="Permanent link">&para;</a></h3>
-<p>Copy 1-verify-tarballs into /tmp.
-As an <strong>unprivileged user</strong>, run the script:</p>
+<p>Copy verification scripts into /tmp.</p>
+<div class="codehilite"><pre><span></span><code>cp -p <span class="m">1</span>-verify-tarballs release-common.sh /tmp
+</code></pre></div>
+
+<p>As an <strong>unprivileged user</strong>, run the script:</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>./1-verify-tarballs <span class="nv">$NON_UPCOMING_VERSIONS</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> /tmp
+./1-verify-tarballs <span class="nv">$NON_UPCOMING_VERSIONS</span>
 </code></pre></div>
 
 <p>If you have time, try some of the binaries, such as grid-proxy-init.</p>
