@@ -1785,6 +1785,12 @@ RUN yum install -y &lt;PACKAGE&gt; --enablerepo=osg-minefield &amp;&amp; \
 </li>
 <li>Ask the Software Manager to give this repo access to the <code>DOCKER_USERNAME</code> and <code>DOCKER_PASSWORD</code> organizational secrets</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Repository dispatch</p>
+<p>Any repository that sends dispatches to another repository (e.g. <code>docker-software-base</code>, <code>docker-compute-entrypoint</code>)
+needs access to the <code>REPO_ACCESS_TOKEN</code> organization secret.
+Ask the Software Manager for access.</p>
+</div>
 <h3 id="prepare-the-docker-hub-repository">Prepare the Docker Hub repository<a class="headerlink" href="#prepare-the-docker-hub-repository" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Create a Docker Hub repo in the OSG organization.
