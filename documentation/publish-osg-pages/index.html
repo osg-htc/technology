@@ -1934,10 +1934,15 @@ Saved changes made to <code>.md</code> files are automatically updated in your b
 Perform the following actions from the command-line:</p>
 <ol>
 <li>
-<p>Clone the repository that is still using Travis CI:</p>
+<p>Create a fresh clone of the repository that is still using Travis CI:</p>
 <div class="codehilite"><pre><span></span><code><span class="go">git clone https://github.com/opensciencegrid/&lt;GIT REPOSITORY&gt;</span>
 </code></pre></div>
 
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>For the rest of the steps in this documentation to work, you should create a new clone of the repository using
+the above command, even if you already have an existing copy!</p>
+</div>
 </li>
 <li>
 <p><code>cd</code> into the directory containing the repository (should be the same as <code>&lt;GIT REPOSITORY&gt;</code> by default)</p>
@@ -1983,8 +1988,12 @@ Perform the following actions from the command-line:</p>
 <p><img alt="Commit the workflow" src="../../img/mkdocs/commit-publish-mkdocs-action.png" /></p>
 </li>
 <li>
-<p><strong>(Optional)</strong> Enable the <code>Validate MkDocs Static HTML</code> workflow to check links and markdown correctness of pull
-    requests to the repository.</p>
+<p>Navigate to the <code>Actions</code> tab to verify your transition.
+    If you see green check marks, your pages are now being published with GitHub Actions!</p>
+</li>
+<li>
+<p><strong>(Optional)</strong> Enable the <code>Validate MkDocs Static HTML</code> workflow to check for broken links and markdown correctness
+    of pull requests to the repository.</p>
 <ol>
 <li>
 <p>Navigate to the <code>Actions</code> tab as before</p>
