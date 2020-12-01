@@ -1771,6 +1771,7 @@ To do this, we use GitHub Actions to:</p>
     e.g. <code>docker-frontier-squid</code></li>
 <li>Create a <code>README.md</code> file describing the software provided by the image</li>
 <li>Create a <code>LICENSE</code> file containing the <a href="https://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2.0 license text</a></li>
+<li>Set the repository topic to <code>container</code></li>
 <li>
 <p>Create a <code>Dockerfile</code> based off of the OSG Software Base image:</p>
 <div class="codehilite"><pre><span></span><code>FROM opensciencegrid/software-base:fresh
@@ -1781,7 +1782,7 @@ RUN yum update -y &amp;&amp; \
     yum clean all &amp;&amp; \
     rm -rf /var/cache/yum/*
 
-RUN yum install -y &lt;PACKAGE&gt; --enablerepo=osg-minefield &amp;&amp; \
+RUN yum install -y &lt;PACKAGE&gt; --enablerepo=osg-testing &amp;&amp; \
     yum clean all &amp;&amp; \
     rm -rf /var/cache/yum/*
 </code></pre></div>
