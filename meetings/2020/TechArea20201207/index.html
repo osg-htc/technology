@@ -1797,7 +1797,7 @@
                 
                 <h1 id="osg-technology-area-meeting-7-december-2020">OSG Technology Area Meeting,  7 December 2020<a class="headerlink" href="#osg-technology-area-meeting-7-december-2020" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392, <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong> BrianB, BrianL, Junheng, Marco Mambelli, Mat, TimT</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1854,9 +1854,23 @@
 <li>Tech area plates: <a href="https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19">https://opensciencegrid.atlassian.net/secure/RapidBoard.jspa?rapidView=19</a></li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>Marco: GWMS 3.7.2 released, includes bugfixes for IDTOKEN support; in upcoming-testing.AI (Mat): Submit bug report for XRootD 5.1.0rc1 problem detected in VMU tests.</li>
+<li>AI (Mat): Mail GridCF list about Travis CI's policy changes.</li>
+<li>AI (Mat): Ask Marco Mascheroni if he's happy with the new Pilot sections for OSG Configure.</li>
+<li>AI (Mat): Continue work on OSG flocking negotiator.</li>
+<li>AI (BrianL): Investigate webapp frameworks and EL 8 compatibility for HTCondor CE View.</li>
+<li>AI (Junheng): Investigate registry logout error.</li>
+<li>AI (TimT): Add PowerPC support to EPEL HTCondor packages.</li>
+<li>VPN access now required to log in to Fermicloud head node (fcluigpvm01.fnal.gov).
+    2FA required to access Fermi VPN.
+    Steve Timm's suggested solution is to create a (persistent) VM for creating other VMs if that's not possible.<br />
+    Marco will send instructions on how to get access to Fermi VPN.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
+<li>IceCube (Mat, Derek): Stash Origin now appears to work after creating dummy SciTokens information in Topology.<br />
+    UCL stash origin needed the same fix but needs additional debugging; Derek is providing assistance.</li>
 <li>JLab (BrianL): blahp status queries time out trying to populate the Slurm job status cache.<br />
     Opened a ticket with the the HTCondor team: <a href="https://opensciencegrid.atlassian.net/browse/HTCONDOR-104">https://opensciencegrid.atlassian.net/browse/HTCONDOR-104</a></li>
 </ul>
