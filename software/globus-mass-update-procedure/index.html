@@ -1869,7 +1869,7 @@
 <h2 id="per-package-work">Per-package work<a class="headerlink" href="#per-package-work" title="Permanent link">&para;</a></h2>
 <ol>
 <li>cd into branches/globus</li>
-<li>Download packages from <a href="http://dl.fedoraproject.org/pub/epel/6/SRPMS/">http://dl.fedoraproject.org/pub/epel/6/SRPMS/</a></li>
+<li>Download packages from <a href="http://dl.fedoraproject.org/pub/epel/7/SRPMS/">http://dl.fedoraproject.org/pub/epel/7/SRPMS/</a></li>
 </ol>
 <p>A useful alias:</p>
 <div class="codehilite"><pre><span></span><code><span class="gp">[you@host]$</span> <span class="nb">alias</span> osg-build-globus<span class="o">=</span><span class="s2">&quot;osg-build koji --ktt el6-globus --ktt el7-globus&quot;</span>
@@ -1883,7 +1883,7 @@
 </span><span class="hll"><span class="gp">[you@uw]$</span> osg-build-globus --scratch &lt;PKG&gt;
 </span></code></pre></div>
 
-<p>Change <code>&lt;URL&gt;</code> for the URL from where the package will be donwloaded e.g. https://dl.fedoraproject.org/pub/epel/6/SRPMS/Packages/g/globus-authz-4.2-1.el6.src.rpm
+<p>Change <code>&lt;URL&gt;</code> for the URL from where the package will be donwloaded e.g. https://dl.fedoraproject.org/pub/epel/7/SRPMS/Packages/g/globus-authz-4.3-1.el7.src.rpm
 and <code>&lt;PKG&gt;</code>&gt; for the name of the package e.g. <code>globus-authz</code></p>
 </li>
 <li>
@@ -1900,7 +1900,7 @@ and <code>&lt;PKG&gt;</code>&gt; for the name of the package e.g. <code>globus-a
 <div class="codehilite"><pre><span></span><code><span class="gp">[you@uw]$</span> osg-import-srpm --diff3 &lt;URL&gt;
 </code></pre></div>
 
-<p>Change <code>&lt;URL&gt;</code> for the URL from where the package will be donwloaded e.g. https://dl.fedoraproject.org/pub/epel/6/SRPMS/Packages/g/globus-authz-4.2-1.el6.src.rpm</p>
+<p>Change <code>&lt;URL&gt;</code> for the URL from where the package will be donwloaded e.g. https://dl.fedoraproject.org/pub/epel/7/SRPMS/Packages/g/globus-authz-4.3-1.el7.src.rpm</p>
 </li>
 <li>
 <p>Fix merge conflicts in the spec file. If not already there, put a .1 after the Release number to mark the changes as ours.</p>

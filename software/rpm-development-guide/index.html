@@ -2829,7 +2829,7 @@ The members of the OSG Software and Release teams may promote packages through t
 <p>The syntax <code>%{?el6}</code> expands to the value of the <code>%el6</code> macro if it is defined, and to the empty string if not; the <code>0</code> is there to keep the condition from being empty in the <code>%if</code> statement if the macro is not defined.</p>
 <h2 id="renaming-or-removing-packages">Renaming or Removing Packages<a class="headerlink" href="#renaming-or-removing-packages" title="Permanent link">&para;</a></h2>
 <p>Occasionally we want to cause a package to be removed on update, or replaced by a package with a different name.</p>
-<p>For the most part, the <a href="https://fedoraproject.org/wiki/Packaging:Guidelines#Renaming.2FReplacing_Existing_Packages">Fedora Packaging Guidelines page on renames</a> shows how to do that.
+<p>For the most part, the <a href="https://docs.fedoraproject.org/en-US/packaging-guidelines/#renaming-or-replacing-existing-packages">Fedora Packaging Guidelines page on renames</a> shows how to do that.
 The exception is that we do not have the equivalent of a <code>fedora-obsolete-packages</code> package, so in order to force the removal of an entire package (not a subpackage), we have to dummy out the package instead -- see below.
 (This should be a rare situation.)</p>
 <div class="admonition note">
