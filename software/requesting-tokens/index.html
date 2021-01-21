@@ -1757,11 +1757,11 @@ This document is intended as a guide for OSG developers for requesting tokens ne
 <tbody>
 <tr>
 <td>HTCondor <code>READ</code></td>
-<td><code>condor:/READ condor:/ALLOW</code></td>
+<td><code>condor:/READ</code></td>
 </tr>
 <tr>
 <td>HTCondor <code>WRITE</code></td>
-<td><code>condor:/WRITE condor:/ALLOW</code></td>
+<td><code>condor:/WRITE</code></td>
 </tr>
 <tr>
 <td>XRootD read</td>
@@ -1775,9 +1775,10 @@ This document is intended as a guide for OSG developers for requesting tokens ne
 </table>
 <p>For example, to request HTCondor <code>READ</code> and <code>WRITE</code> access, specify the following scopes:</p>
 <div class="codehilite"><pre><span></span><code>This issuer supports the following scopes: openid profile email address phone offline_access wlcg iam wlcg.groups
-Space delimited list of scopes or &#39;max&#39; [openid profile offline_access]: wlcg offline_access condor:/READ condor:/WRITE condor:/ALLOW
+Space delimited list of scopes or &#39;max&#39; [openid profile offline_access]: wlcg offline_access condor:/READ condor:/WRITE
 </code></pre></div>
 
+<p>Note that, prior to HTCondor 8.9.7, the server also needed <code>condor:/ALLOW</code> in all cases.</p>
 </li>
 <li>
 <p>When prompted, open <a href="https://wlcg.cloud.cnaf.infn.it/device">https://wlcg.cloud.cnaf.infn.it/device</a> in a browser, enter the code provided by <code>oidc-gen</code>,
