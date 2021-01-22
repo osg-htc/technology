@@ -1,7 +1,7 @@
 Container Release Policy
 ========================
 
-17 April 2019
+22 January 2021
 
 Container images are an increasingly popular tool for shortening the software development life cycle, allowing for speedy
 deployment of new software versions or additional instances of a service.
@@ -17,32 +17,43 @@ Similar to our existing RPM infrastructure, container image sources, build logs,
 publicly available repositories (e.g. GitHub, Docker Hub) for collaboration and traceability.
 Additionally, container images distributed by the OSG Software team will be based off of the latest version of a 
 [supported platform](https://opensciencegrid.org/docs/release/supported_platforms/) with software installed from OS,
-EPEL, and [OSG release](../policy/software-release.md#yum-repositories) Yum repositories with select packages
-installed from `osg-development`.
+EPEL, and [OSG](../policy/software-release.md#yum-repositories) Yum repositories.
 
 Tags
 ----
 
-OSG Software container images will be tagged with at least one of the following tags:
+OSG Software container images will be built at least weekly and tagged with one of the following:
 
-| Tag       | Description                                                                                                                                                       |
-|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `fresh`   | Images that build successfully and pass automated tests. Intended for users that need the latest fixes and features.                                              |
-| timestamp | Each `fresh` image  is also tagged with a timestamp reflecting their build date and time. Intended for rollback in case of issues with the current `fresh` image. |
-| `stable`  | `fresh` images that pass acceptance testing; approved by the Release Manager. Intended for stable production use.                                                 |
+| Tag                            | Description                                                                                                              |
+|--------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| `testing`                      | For the latest fixes and features. Built with RPMs from the `osg-testing` and/or `osg-upcoming-testing` Yum repositories |
+| `release`                      | For production use. Built with RPMs from the `osg-release` and/or `osg-upcoming-release` Yum repositories                |
+| `rc.testing.*`, `rc.release.*` | Release candidate images; see the [Validation section below](#Validation) for details                                    |
 
-### Cleanup  ###
+Each newly built image from the table above will also be tagged with a `-<TIMESTAMP>` suffix to allow for rollback in
+case of broken images.
+
+### Cleanup ###
 
 The OSG will keep images based on the [Docker Hub image retention policy](https://www.docker.com/pricing/retentionfaq).
 In summary, container images that have not been pulled or updated in 6 months will be removed.
 
+Validation
+----------
 
-Announcements
--------------
+OSG Software container images consist of RPMs for OSG services that are tested through
+[existing release processes](software-release.md) as well as scripts and configuration specific to the container
+implementation of the service.
+New container images limited to RPM updates undergo additional automated testing before being published.
 
-Container images that have been tagged as **stable** will be noted in the OSG release notes and announcements.
+In order to test changes to container-specific scripts or configuration, OSG Software performs automated tests and
+coordinates testing of release candidate images (e.g. `rc.testing.*`, `rc.testing.*`) before applying these changes to
+the `testing` and `release` image tags.
 
 Change Log
 ----------
 
+- **22 January 2021:** Modify the tagging policy to more closely track OSG Yum repositories
 - **14 August 2020:** Updated cleanup policy to match Docker Hub image retention policy.
+- **17 April 2019:** Initial policy
+
