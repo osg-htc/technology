@@ -28,7 +28,7 @@ OSG Software container images will be built at least weekly and tagged with one 
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | `testing`                      | For the latest fixes and features. Built with RPMs from the `osg-testing` and/or `osg-upcoming-testing` Yum repositories |
 | `release`                      | For production use. Built with RPMs from the `osg-release` and/or `osg-upcoming-release` Yum repositories                |
-| `rc.testing.*`, `rc.release.*` | Release candidate images; see the [Validation section below](#Validation) for details                                    |
+| `rc.testing.*`, `rc.release.*` | Release candidate images; see the [Validation section below](#validation) for details                                    |
 
 Each newly built image from the table above will also be tagged with a `-<TIMESTAMP>` suffix to allow for rollback in
 case of broken images.
