@@ -47,7 +47,7 @@ implementation of the service.
 New container images limited to RPM updates undergo additional automated testing before being published.
 
 In order to test changes to container-specific scripts or configuration, OSG Software performs automated tests and
-coordinates testing of release candidate images (e.g. `rc.testing.*`, `rc.testing.*`) before applying these changes to
+coordinates testing of release candidate images (e.g. `rc.testing.*`, `rc.release.*`) before applying these changes to
 the `testing` and `release` image tags.
 
 Change Log
