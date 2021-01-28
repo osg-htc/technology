@@ -25,7 +25,7 @@ Occasionally there may be other repositories for specific short-term purposes.
     **osg-rolling** and **osg-release-VERSION** are only present in the OSG 3.5 series.
 
 1.  **osg-rolling**: This is where software goes before being included in a point release. Intended for end-users.
-    In OSG 3.5, software goes into **osg-rolling** when it is put into **osg-prelease**.
+    In OSG 3.5, software goes into **osg-rolling** when it is put into **osg-prerelease**.
 
 We also create a repository per release, called **osg-release-VERSION** (such as osg-release-3.5.4).
 This is intended mostly for testing purposes, though users may occasionally find it useful.
@@ -100,7 +100,7 @@ When moving packages to *osg-prerelease*, the team member doing the release will
     specific ad-hoc testing.
     (If appropriate, consider proposing extensions to the automated test suite.)
 
-We expect that in most cases, this process of updating and testing the *osg-prelease* repository
+We expect that in most cases, this process of updating and testing the *osg-prerelease* repository
 will be less than one day.
 If there are urgent security updates to release, this process may be shortened.
 
