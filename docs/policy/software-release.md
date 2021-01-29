@@ -27,14 +27,17 @@ Occasionally there may be other repositories for specific short-term purposes.
 1.  **osg-rolling**: This is where software goes before being included in a point release. Intended for end-users.
     In OSG 3.5, software goes into **osg-rolling** when it is put into **osg-prerelease**.
 
-We also create a repository per release, called **osg-release-VERSION** (such as osg-release-3.5.4).
-This is intended mostly for testing purposes, though users may occasionally find it useful.
+1.  **osg-release-VERSION**: This repository is created per release and its name contains the version number (e.g. osg-release-3.5.4).
+    This is intended mostly for testing purposes, though users may occasionally find it useful.
 
 Version Numbers
 ---------------
 
-!!! note "OSG 3.5 Only"
-    This version number scheme is only applicable to the OSG 3.5 series.
+### OSG 3.6+
+
+The version number matches the release series.
+
+### OSG 3.5
 
 There is a single version number that is used to summarize the contents of the *osg-release* repository.
 Having a single version number is very useful for a variety of reasons, including:
@@ -63,7 +66,7 @@ Progression of Repositories
 
 This figure shows the progression of repositories that packages will go through:
 
-     osg-development -> osg-testing -> osg-prerelease -> osg-release
+     osg-development -> osg-testing -> osg-prerelease / osg-rolling -> osg-release
                       \
                        -> osg-contrib
 
