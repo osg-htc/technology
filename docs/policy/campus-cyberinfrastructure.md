@@ -45,7 +45,7 @@ To contribute computational resources to the OSG, the following will be needed:
   [Grid Engine](http://www.univa.com/products/),
   [HTCondor](https://research.cs.wisc.edu/htcondor/),
   [LSF](https://www.ibm.com/us-en/marketplace/hpc-workload-management),
-  [PBS Pro](https://www.pbsworks.com/PBSProduct.aspx?n=Altair-PBS-Professional&c=Overview-and-Capabilities)/[Torque](https://adaptivecomputing.com/cherry-services/torque-resource-manager/),
+  [PBS Pro](https://www.altair.com/pbs-professional/)/[Torque](https://adaptivecomputing.com/cherry-services/torque-resource-manager/),
   [Slurm](https://slurm.schedmd.com/), and some local cloud provisioners.
 - Outbound network connectivity from the cluster's worker nodes
 - SSH access to your local cluster's submit node from a known IP address
