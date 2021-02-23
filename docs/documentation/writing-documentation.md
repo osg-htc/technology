@@ -156,8 +156,6 @@ In addition to the introduction above, installation documents should have the fo
 - **Installation:** Procedural instructions that tell the user how to install the software
   ([example](http://www.opensciencegrid.org/docs/compute-element/install-htcondor-ce/#installing-htcondor-ce))
 - **Validation:** How does the user make sure their installation is functional?
-- **Help:** Often just a link to the relevant [help document](http://www.opensciencegrid.org/docs/common/help/) as well
-  as contact information for specific support groups, if applicable.
 
 Optionally, the following sections should be included as necessary.
 
