@@ -35,7 +35,8 @@ Life-cycle Dates
 
 | Release Series | Initial Release | End of Regular Support | End of Critical Bug/Security Support |
 | :------------: | --------------- | ---------------------- | ------------------------------------ |
-| 3.5            | August 2019     | Not set                | Not set                              |
+| 3.6            | Februrary 2021  | Not set                | Not set                              |
+| 3.5            | August 2019     | August 2021            | February 2022                        |
 | 3.4            | June 2017       | February 2020          | November 2020                        |
 | 3.3            | August 2015     | December 2017          | May 2018                             |
 | 3.2            | November 2013   | February 2016          | August 2016                          |
