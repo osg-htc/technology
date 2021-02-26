@@ -821,8 +821,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#announcements" class="md-nav__link">
-    Announcements
+  <a href="#validation" class="md-nav__link">
+    Validation
   </a>
   
 </li>
@@ -1779,8 +1779,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#announcements" class="md-nav__link">
-    Announcements
+  <a href="#validation" class="md-nav__link">
+    Validation
   </a>
   
 </li>
@@ -1810,7 +1810,7 @@
                 
                 
                 <h1 id="container-release-policy">Container Release Policy<a class="headerlink" href="#container-release-policy" title="Permanent link">&para;</a></h1>
-<p>17 April 2019</p>
+<p>22 January 2021</p>
 <p>Container images are an increasingly popular tool for shortening the software development life cycle, allowing for speedy
 deployment of new software versions or additional instances of a service.
 Select services in the OSG Software Stack will be distributed as container images to support VOs and sites that are
@@ -1821,10 +1821,9 @@ interested in this model.</p>
 publicly available repositories (e.g. GitHub, Docker Hub) for collaboration and traceability.
 Additionally, container images distributed by the OSG Software team will be based off of the latest version of a 
 <a href="https://opensciencegrid.org/docs/release/supported_platforms/">supported platform</a> with software installed from OS,
-EPEL, and <a href="../software-release/#yum-repositories">OSG release</a> Yum repositories with select packages
-installed from <code>osg-development</code>.</p>
+EPEL, and <a href="../software-release/#yum-repositories">OSG</a> Yum repositories.</p>
 <h2 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h2>
-<p>OSG Software container images will be tagged with at least one of the following tags:</p>
+<p>OSG Software container images will be built at least weekly and tagged with one of the following:</p>
 <table>
 <thead>
 <tr>
@@ -1834,27 +1833,37 @@ installed from <code>osg-development</code>.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>fresh</code></td>
-<td>Images that build successfully and pass automated tests. Intended for users that need the latest fixes and features.</td>
+<td><code>testing</code></td>
+<td>For the latest fixes and features. Built with RPMs from the <code>osg-testing</code> and/or <code>osg-upcoming-testing</code> Yum repositories</td>
 </tr>
 <tr>
-<td>timestamp</td>
-<td>Each <code>fresh</code> image  is also tagged with a timestamp reflecting their build date and time. Intended for rollback in case of issues with the current <code>fresh</code> image.</td>
+<td><code>release</code></td>
+<td>For production use. Built with RPMs from the <code>osg-release</code> and/or <code>osg-upcoming-release</code> Yum repositories</td>
 </tr>
 <tr>
-<td><code>stable</code></td>
-<td><code>fresh</code> images that pass acceptance testing; approved by the Release Manager. Intended for stable production use.</td>
+<td><code>rc.testing.*</code>, <code>rc.release.*</code></td>
+<td>Release candidate images; see the <a href="#validation">Validation section below</a> for details</td>
 </tr>
 </tbody>
 </table>
+<p>Each newly built image from the table above will also be tagged with a <code>-&lt;TIMESTAMP&gt;</code> suffix to allow for rollback in
+case of broken images.</p>
 <h3 id="cleanup">Cleanup<a class="headerlink" href="#cleanup" title="Permanent link">&para;</a></h3>
 <p>The OSG will keep images based on the <a href="https://www.docker.com/pricing/retentionfaq">Docker Hub image retention policy</a>.
 In summary, container images that have not been pulled or updated in 6 months will be removed.</p>
-<h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
-<p>Container images that have been tagged as <strong>stable</strong> will be noted in the OSG release notes and announcements.</p>
+<h2 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h2>
+<p>OSG Software container images consist of RPMs for OSG services that are tested through
+<a href="../software-release/">existing release processes</a> as well as scripts and configuration specific to the container
+implementation of the service.
+New container images limited to RPM updates undergo additional automated testing before being published.</p>
+<p>In order to test changes to container-specific scripts or configuration, OSG Software performs automated tests and
+coordinates testing of release candidate images (e.g. <code>rc.testing.*</code>, <code>rc.release.*</code>) before applying these changes to
+the <code>testing</code> and <code>release</code> image tags.</p>
 <h2 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h2>
 <ul>
+<li><strong>22 January 2021:</strong> Modify the tagging policy to more closely track OSG Yum repositories</li>
 <li><strong>14 August 2020:</strong> Updated cleanup policy to match Docker Hub image retention policy.</li>
+<li><strong>17 April 2019:</strong> Initial policy</li>
 </ul>
                 
               
