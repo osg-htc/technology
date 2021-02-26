@@ -1883,11 +1883,12 @@ For example, if we are creating OSG 3.6, then <code>3.X</code> refers to <code>3
 </ol>
 </li>
 <li>
-<p>Update <code>tarball-client</code> scripts</p>
+<p>Update <a href="https://github.com/opensciencegrid/tarball-client/"><code>tarball-client</code></a></p>
 <ul>
 <li><code>bundles.ini</code></li>
 <li><code>patches/</code></li>
 <li><code>upload-tarballs-to-oasis</code> (for 3.X, <code>foreach_dver_arch</code> will need to be updated for the new set of 3.X <code>dver_arches</code>)</li>
+<li>Add relase-series specific <code>repos/osg-3.X-el&lt;DVER&gt;.repo.in</code> for each supported distro version (e.g., <code>7</code>, <code>8</code>)</li>
 </ul>
 </li>
 <li>
