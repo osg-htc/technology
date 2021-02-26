@@ -793,6 +793,26 @@
     Version Numbers
   </a>
   
+    <nav class="md-nav" aria-label="Version Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osg-36" class="md-nav__link">
+    OSG 3.6+
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osg-35" class="md-nav__link">
+    OSG 3.5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -825,8 +845,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#moving-packages-to-osg-prerelease-and-osg-rolling-readying-the-release" class="md-nav__link">
-    Moving packages to osg-prerelease and osg-rolling; Readying the release
+  <a href="#moving-packages-to-osg-prerelease-readying-the-release" class="md-nav__link">
+    Moving packages to osg-prerelease; Readying the release
   </a>
   
 </li>
@@ -834,13 +854,6 @@
           <li class="md-nav__item">
   <a href="#moving-packages-to-osg-release" class="md-nav__link">
     Moving packages to osg-release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#moving-packages-to-osg-release-version" class="md-nav__link">
-    Moving packages to osg-release-VERSION
   </a>
   
 </li>
@@ -1812,6 +1825,26 @@
     Version Numbers
   </a>
   
+    <nav class="md-nav" aria-label="Version Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osg-36" class="md-nav__link">
+    OSG 3.6+
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osg-35" class="md-nav__link">
+    OSG 3.5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1844,8 +1877,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#moving-packages-to-osg-prerelease-and-osg-rolling-readying-the-release" class="md-nav__link">
-    Moving packages to osg-prerelease and osg-rolling; Readying the release
+  <a href="#moving-packages-to-osg-prerelease-readying-the-release" class="md-nav__link">
+    Moving packages to osg-prerelease; Readying the release
   </a>
   
 </li>
@@ -1853,13 +1886,6 @@
           <li class="md-nav__item">
   <a href="#moving-packages-to-osg-release" class="md-nav__link">
     Moving packages to osg-release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#moving-packages-to-osg-release-version" class="md-nav__link">
-    Moving packages to osg-release-VERSION
   </a>
   
 </li>
@@ -1918,16 +1944,30 @@ For details regarding the technical process for an OSG release, see <a href="../
 <li><strong>osg-testing</strong>: This is where software goes when it is ready for wide-spread testing, including upstream release
     candidates</li>
 <li><strong>osg-prerelease</strong>: This is where software goes just before being released, for final verification.</li>
-<li><strong>osg-rolling</strong>: This is where software goes before being included in a point release. Intended for end-users.</li>
 <li><strong>osg-release</strong>: This is the official, production release of the software stack.
     This is the main repository for end-users.</li>
 <li><strong>osg-contrib</strong>: This is where software goes that is not officially supported by the OSG Software Team,
     but we provide as a convenience for software our users might find useful.</li>
 </ol>
-<p>We also create a repository per release, called <strong>osg-release-VERSION</strong> (such as osg-release-3.0.4).
-This is intended mostly for testing purposes, though users may occasionally find it useful.</p>
 <p>Occasionally there may be other repositories for specific short-term purposes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>osg-rolling</strong> and <strong>osg-release-VERSION</strong> are only present in the OSG 3.5 series.</p>
+</div>
+<ol>
+<li>
+<p><strong>osg-rolling</strong>: This is where software goes before being included in a point release. Intended for end-users.
+    In OSG 3.5, software goes into <strong>osg-rolling</strong> when it is put into <strong>osg-prerelease</strong>.</p>
+</li>
+<li>
+<p><strong>osg-release-VERSION</strong>: This repository is created per release and its name contains the version number (e.g. osg-release-3.5.4).
+    This is intended mostly for testing purposes, though users may occasionally find it useful.</p>
+</li>
+</ol>
 <h2 id="version-numbers">Version Numbers<a class="headerlink" href="#version-numbers" title="Permanent link">&para;</a></h2>
+<h3 id="osg-36">OSG 3.6+<a class="headerlink" href="#osg-36" title="Permanent link">&para;</a></h3>
+<p>The version number matches the release series.</p>
+<h3 id="osg-35">OSG 3.5<a class="headerlink" href="#osg-35" title="Permanent link">&para;</a></h3>
 <p>There is a single version number that is used to summarize the contents of the <em>osg-release</em> repository.
 Having a single version number is very useful for a variety of reasons, including:</p>
 <ol>
@@ -1942,16 +1982,12 @@ Having a single version number is very useful for a variety of reasons, includin
 <li>The version number is only meaningful in the <em>osg-release</em> repository, though for technical reasons it's present (as
     an RPM) in other repositories.</li>
 </ol>
-<p>The version number is communicated in two ways:</p>
+<p>The version number is communicated as follows:</p>
 <ol>
 <li>Every time a new release is made, the version number is updated.
     All release notes and communication to users about this release uses the new version number.</li>
-<li>There is an <em>osg-version</em> RPM that reports the version of the release. Major metapackages (osg-ce, osg-client,
-    etc...) depend on this RPM.
-    The RPM itself has the version number in it. It also provide a program that reports the version, and a text file
-    that contains the version number.</li>
 </ol>
-<p>The version number will be of the form X.Y.Z. As of this writing, version numbers are 3.4.Z, where Z indicates a minor
+<p>The version number will be of the form X.Y.Z. As of this writing, version numbers are 3.5.Z, where Z indicates a minor
 revision.</p>
 <h2 id="progression-of-repositories">Progression of Repositories<a class="headerlink" href="#progression-of-repositories" title="Permanent link">&para;</a></h2>
 <p>This figure shows the progression of repositories that packages will go through:</p>
@@ -1970,64 +2006,49 @@ In cases where there is uncertainty, discuss it with the Software Manager.</p>
 <p>A package may be moved from <em>osg-development</em> to <em>osg-testing</em> when the individual maintainer of that package decides
 that it is ready for widespread testing and when approved by the OSG Software Manager.
 Approval is needed because this is when we first make packages available to people outside of the OSG Software Team.</p>
-<h3 id="moving-packages-to-osg-prerelease-and-osg-rolling-readying-the-release">Moving packages to osg-prerelease and osg-rolling; Readying the release<a class="headerlink" href="#moving-packages-to-osg-prerelease-and-osg-rolling-readying-the-release" title="Permanent link">&para;</a></h3>
+<h3 id="moving-packages-to-osg-prerelease-readying-the-release">Moving packages to osg-prerelease; Readying the release<a class="headerlink" href="#moving-packages-to-osg-prerelease-readying-the-release" title="Permanent link">&para;</a></h3>
 <p>When we are ready to make a production release, we first move the correct subset of packages from <em>osg-testing</em> into
-<em>osg-prerelease</em> and <em>osg-rolling</em>.
+<em>osg-prerelease</em>.
 This should be done after checking with the OSG Release Manager to verify that it's okay to release the software.
 The intention of <em>osg-prerelease</em> is to do a final verification that we have the correct set of packages for release and
 that they really work together.
-The intention of <em>osg-rolling</em> is to make thoroughly tested software available to users before its first point release.
 This is important because the <em>osg-testing</em> repository might contain a mix of packages that are ready for release with
 packages that are not ready for release.
-When moving packages to <em>osg-prerelease</em> and <em>osg-rolling</em>, the team member doing the release will:</p>
+When moving packages to <em>osg-prerelease</em>, the team member doing the release will:</p>
 <ul>
-<li>Update the osg-version RPM to reflect the new version.
-    Push this RPM through <em>osg-development</em>, <em>osg-testing</em>, and into <em>osg-prerelease</em> and <em>osg-rolling</em>.</li>
-<li>Find the correct set of packages to push from <em>osg-testing</em> into <em>osg-prerelease</em> and <em>osg-rolling</em>.</li>
-<li>At a minimum, run the automated test suite on the contents of <em>osg-prerelease</em> and <em>osg-rolling</em>.
+<li>Find the correct set of packages to push from <em>osg-testing</em> into <em>osg-prerelease</em>.</li>
+<li>At a minimum, run the automated test suite on the contents of <em>osg-prerelease</em>.
     In cases were more extensive testing is needed, or the test suite doesn't sufficiently cover the testing needs, do
     specific ad-hoc testing.
     (If appropriate, consider proposing extensions to the automated test suite.)</li>
 </ul>
-<p>We expect that in most cases, this process of updating and testing the <em>osg-prelease</em> and <em>osg-rolling</em> repositories
+<p>We expect that in most cases, this process of updating and testing the <em>osg-prerelease</em> repository
 will be less than one day.
 If there are urgent security updates to release, this process may be shortened.</p>
 <h3 id="moving-packages-to-osg-release">Moving packages to osg-release<a class="headerlink" href="#moving-packages-to-osg-release" title="Permanent link">&para;</a></h3>
 <p>When the <em>osg-prerelease</em> repository has been updated and verified, all of the changed software can be moved into the
 <em>osg-release</em> repository.
-As part of this move, two important tasks must be done:</p>
+As part of this move, three important tasks must be done:</p>
 <ol>
-<li>Record the complete set of packages in the new release repository.</li>
-<li>Update the <a href="https://www.opensciencegrid.org/docs/release/notes">Release Notes</a>.
-    Note that each release has a separate page to describe the release, and it's linked from the main page.
-    The individual page lists the changes at a high level (i.e. Updated package X to version Y) and the complete set of
-    RPMs that changed.</li>
-<li>Create a ticket on ticket.opensciencegrid.org with a release announcement.
-    Operations will distribute it to the right places.</li>
+<li>The released packages are automatically recorded in such a manner that end users/administrators can be notified if desired.</li>
+<li><a href="../community-testing/#major-packages">Major package</a> updates will also be recorded on the OSG 3.6 "News" page with links to the respective release note page or change log.</li>
+<li>An announcement is sent out whenever a <a href="../community-testing/#major-packages">major package</a> is updated.</li>
 </ol>
-<p>In addition, we will make another Koji tag/yum repository called <em>osg-release-VERSION</em>.
-All of the latest packages in osg-release will be tagged to be in this repository, and the tag will be locked.
-This will give us a reproducible way to install any given OSG Software release.</p>
-<h3 id="moving-packages-to-osg-release-version">Moving packages to osg-release-VERSION<a class="headerlink" href="#moving-packages-to-osg-release-version" title="Permanent link">&para;</a></h3>
-<p>When we make a specific release, we copy the osg-release repository to a versioned osg-release-VERSION repository.
-This allows us to do testing with specific versions and in rare cases allows users to use a specific release.</p>
 <h3 id="moving-packages-to-osg-contrib">Moving packages to osg-contrib<a class="headerlink" href="#moving-packages-to-osg-contrib" title="Permanent link">&para;</a></h3>
 <p>The <em>osg-contrib</em> repository is loosely regulated.
 In most cases, the team member in charge of the package can decide when a package is updated in <em>osg-contrib</em>.
 Contrib packages should be tested in <em>osg-development</em> first.</p>
 <h3 id="timing-of-releases">Timing of releases<a class="headerlink" href="#timing-of-releases" title="Permanent link">&para;</a></h3>
-<p>Code freezes happen two business days in advance of the release (normally Friday).
-Specifically: RPM updates intended to be included in the next release (that is, pushed to the osg-release yum repo) must
-be in the osg-testing yum repo by noon Central Time two business days in advance of the release.
-This will allow time for final testing, discussions, reverts, etc.</p>
+<p>Software is released between 9AM and 5PM Central Time on a work day that is followed by a work day.
+The idea is to have a working day to correct any problems with a release rather than having a problematic
+release persist over a weekend or holiday.</p>
 <p>We will make exceptions for urgent situations; consult with the release manager when needed.</p>
 <h2 id="ca-certificates-and-vo-client-packages">CA Certificates and VO Client packages<a class="headerlink" href="#ca-certificates-and-vo-client-packages" title="Permanent link">&para;</a></h2>
 <p>Packages that contain only data are not part of the usual release cycle.
 Currently, these are the CA certificate packages and the VO Client packages.
 Updates to these packages come from the Security Team and Software Team, respectively.
 They still move through the usual process for release, and the Software and Release Managers decide when these packages
-should be promoted to the next repository level.
-However, the actual releases of these packages do not increment the version number of the software stack.</p>
+should be promoted to the next repository level.</p>
 <p><a href="../../release/cut-data-release/">The release process for data packages is discussed here.</a></p>
                 
               
