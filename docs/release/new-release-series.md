@@ -60,10 +60,11 @@ Do afterward, anytime before the month of the release
                 :::console
                 $ osg-build koji --repo=3.X --el7
 
-- Update `tarball-client` scripts
+- Update [`tarball-client`](https://github.com/opensciencegrid/tarball-client/)
     - `bundles.ini`
     - `patches/`
     - `upload-tarballs-to-oasis` (for 3.X, `foreach_dver_arch` will need to be updated for the new set of 3.X `dver_arches`)
+    - Add relase-series specific `repos/osg-3.X-el<DVER>.repo.in` for each supported distro version (e.g., `7`, `8`)
 
 -   Populate the `bootstrap` tags
 
