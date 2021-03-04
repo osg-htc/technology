@@ -196,6 +196,8 @@ Before upgrading, you must fix the following incompatibilities:
     For example, links should be of the form `../software/development-process.md` instead of
     `/software/development-process`.
 
+-   Push your changes to your fork and [create a pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
+
 !!! tip "Previewing your pages with Docker"
 
     If you would like to ensure the correctness of your fixes, run the following command:
