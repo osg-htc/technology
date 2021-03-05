@@ -13,8 +13,8 @@ The Team
 | Brian Lin (software manager)        | Brian Bockelman (manager) (15%) |
 | Carl Edquist                        | Derek Weitzel (50%)             |
 | Mat Selmeci                         | Diego Davila (50%)              |
-| Tim Cartwright (5%)                 | Edgar Fajardo (50%)             |
-| Tim Theisen (release manager) (50%) | Marian Zvada (20%)              |
+| Tim Cartwright (5%)                 | Marian Zvada (20%)              |
+| Tim Theisen (release manager) (50%) |                                 |
 
 Contact Us
 ----------
