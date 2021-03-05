@@ -41,8 +41,8 @@ Detailed migration plans can be found [in this document](https://docs.google.com
 | Oct 2019  | OSG no longer carries OSG-specific patches for the GCT.  All patches are upstreamed or retired.        | &#9989;       |
 | Mar 2020  | "GSI free" site demo. Show, at proof-of-concept / prototype level, all components without use of GCT.  | &#9989;       |
 | Sep 2020  | All GCT-free components are in OSG-Upcoming.                                                           | &#9989;       |
-| Jan 2021  | OSG series 3.6, without GCT dependencies, is released.                                                 | &#9989;       |
-| Jan 2022  | End of support for OSG 3.5.                                                                            |               |
+| Feb 2021  | OSG series 3.6, without GCT dependencies, is released.                                                 | &#9989;       |
+| Feb 2022  | End of support for OSG 3.5.                                                                            |               |
 
 Frequently Asked Questions
 --------------------------
@@ -83,6 +83,7 @@ Yes.
 Version History
 ---------------
 
+- **2021-03-05**: Updated dates for the initial OSG 3.6 release and the targeted OSG 3.5 retirement
 - **2020-03-30**: Completed GSI-free site demonstration
 - **2020-03-17**: Highlighted delay in Jan 2020 milestone and new expected completion date of Mar 2020
 - **2020-03-16**: Updated completed items on the overall timeline; added link for detailed document
