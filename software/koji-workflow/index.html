@@ -2194,12 +2194,12 @@ Do one of the following:</p>
 <ul>
 <li>
 <p><strong>On moria</strong><br>
-    Run <code>osgrun grid-proxy-init</code> and type your grid certificate password.
+    Run <code>osgrun grid-proxy-init -bits 2048</code> and type your grid certificate password.
     If you cannot find <code>osgrun</code>, ensure you have <code>/p/vdt/workspace/tarball-client/stable/sys</code> in your <code>$PATH</code>.</p>
 </li>
 <li>
 <p><strong>On your local machine</strong><br>
-    Run <code>grid-proxy-init</code> (if using <code>globus-proxy-utils</code>) or <code>voms-proxy-init -rfc</code> (if using <code>voms-clients</code>)
+    Run <code>grid-proxy-init -bits 2048</code> (if using <code>globus-proxy-utils</code>) or <code>voms-proxy-init -rfc -bits 2048</code> (if using <code>voms-clients</code>)
     and type your grid certificate password.</p>
 </li>
 <li>
@@ -2212,6 +2212,21 @@ Do one of the following:</p>
 </code></pre></div>
 
 <p>You should see a list of your permissions if successful, or an error message if unsuccessful.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you see the error <code>SSL: EE_KEY_TOO_SMALL</code>, OpenSSL may be rejecting your proxy because it is too short.
+Be sure to request at least 2048 bits by passing <code>-bits 2048</code> to <code>grid-proxy-init</code> or <code>voms-proxy-init</code>.
+You can check the key length by examining your proxy:</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">you@host$</span> openssl x509 -in /tmp/x509up_u<span class="k">$(</span>id -u<span class="k">)</span> -noout -text
+</code></pre></div>
+
+<p>and looking at the "Subject Public Key Info" which might look like</p>
+<div class="codehilite"><pre><span></span><code>Subject Public Key Info:
+    Public Key Algorithm: rsaEncryption
+        RSA Public-Key: (2048 bit)
+</code></pre></div>
+
+</div>
 <h2 id="using-koji">Using Koji<a class="headerlink" href="#using-koji" title="Permanent link">&para;</a></h2>
 <h3 id="creating-a-new-build">Creating a new build<a class="headerlink" href="#creating-a-new-build" title="Permanent link">&para;</a></h3>
 <p>We create a new build in Koji from the package's directory in OSG Software subversion.</p>
