@@ -159,11 +159,11 @@ This involves getting a grid proxy certificate.
 Do one of the following:
 
 -   **On moria**<br>
-    Run `osgrun grid-proxy-init` and type your grid certificate password.
+    Run `osgrun grid-proxy-init -bits 2048` and type your grid certificate password.
     If you cannot find `osgrun`, ensure you have `/p/vdt/workspace/tarball-client/stable/sys` in your `$PATH`.
 
 -   **On your local machine**<br>
-    Run `grid-proxy-init` (if using `globus-proxy-utils`) or `voms-proxy-init -rfc` (if using `voms-clients`)
+    Run `grid-proxy-init -bits 2048` (if using `globus-proxy-utils`) or `voms-proxy-init -rfc -bits 2048` (if using `voms-clients`)
     and type your grid certificate password.
 
 -   **On your local machine using SAML or Kerberos-based credentials**<br>
@@ -175,6 +175,21 @@ To verify your login access and permissions, run:
 you@host$ osg-koji list-permissions --mine
 ```
 You should see a list of your permissions if successful, or an error message if unsuccessful.
+
+
+!!! note
+    If you see the error `SSL: EE_KEY_TOO_SMALL`, OpenSSL may be rejecting your proxy because it is too short.
+    Be sure to request at least 2048 bits by passing `-bits 2048` to `grid-proxy-init` or `voms-proxy-init`.
+    You can check the key length by examining your proxy:
+
+        :::console
+        you@host$ openssl x509 -in /tmp/x509up_u$(id -u) -noout -text
+
+    and looking at the "Subject Public Key Info" which might look like
+
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
 
 
 Using Koji
