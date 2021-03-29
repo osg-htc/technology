@@ -309,6 +309,12 @@ The following instructions are meant for the release manager (or interim release
 
         http://www.opensciencegrid.org/docs/release/<SERIES.VERSION>/release-<RELEASE-VERSION>/
 
+        The following containers have updated 'release' tags and are available
+        through Docker Hub (https://hub.docker.com/r/opensciencegrid/):
+        - container name 1
+        - container name 2
+        - container name 3
+
         Need help? Let us know:
 
         http://www.opensciencegrid.org/docs/common/help/
