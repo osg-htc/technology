@@ -1965,7 +1965,7 @@
                 
                 <h1 id="osg-technology-area-meeting-30-march-2021">OSG Technology Area Meeting, 30 March 2021<a class="headerlink" href="#osg-technology-area-meeting-30-march-2021" title="Permanent link">&para;</a></h1>
 <p><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392, <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)<br />
-<strong>Attending:</strong>   </p>
+<strong>Attending:</strong>   BrianL, Carl, Derek, Jason Patton, Marco, Marian, Mat</p>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>IRIS-HEP full team retreat Apr 27-30 canceled</li>
@@ -2026,15 +2026,32 @@
 <li><code>xrootd-multiuser</code> is broken for XRootD 5. Should we delay the release?</li>
 <li><code>osg-xrootd</code> needs to be updated to fix its use of <code>ofs.authlib</code></li>
 <li>Anything else we should document in the update notes?</li>
+<li>AI (Carl): Rebuild condor RPM</li>
+<li>AI (Mat): Add multiple config directories to HTCondor packaging</li>
 </ul>
 </li>
 <li>AI (Carl, with help from Mat): Enable networking in Koji builds</li>
+<li>AI (Mat): Finish adding CVMFS to the OSG backfill container</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week  </p>
+<ul>
+<li>kojibuilder2 (new K8s builder in the production namespace) not reporting to the koji hub.</li>
+<li>GlideinWMS:<ul>
+<li>3.7.3 release candidate is in testing.</li>
+<li>New 3.9 release needed to fix the following bugs:
+    https://cdcvs.fnal.gov/redmine/issues/25620, https://cdcvs.fnal.gov/redmine/issues/25619
+    String encoding issue at glideFactoryLib.py, Update LDAP module for Python 3, both affect only AWS submission, not regular grid submission.</li>
+</ul>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Chameleon Cloud (BrianL): investigating an issue where the OSG validation script is failing so the container isn't running jobs</li>
+<li>Purdue (Carl, Derek): Derek successfully removed the errant local records for Purdue;
+    Carl will ask Purdue to re-run the custom Gratia probe he provided to them.</li>
+<li>AMNH (Derek): Assisting them with SLURM configuration.
+    Might be worthwhile to write a 'recommended SLURM configuration' document, even if it's not widely publicized.</li>
+<li>OzSTAR (Marian): Assisting them with stash cache setup.</li>
 </ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <ul>
