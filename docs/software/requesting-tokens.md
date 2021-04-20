@@ -39,8 +39,8 @@ Requesting Tokens
 
         | **Capability**   | **Scope**                     |
         |------------------|-------------------------------|
-        | HTCondor `READ`  | `condor:/READ`                |
-        | HTCondor `WRITE` | `condor:/WRITE`               |
+        | HTCondor `READ`  | `compute.read`                |
+        | HTCondor `WRITE` | `compute.modify compute.cancel compute.create` |
         | XRootD read      | `read:/`                      |
         | XRootD write     | `write:/`                     |
 
