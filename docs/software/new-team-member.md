@@ -11,7 +11,7 @@ Setup Instructions for New Team Members
     - Obtain a user certificate here: <https://cilogon.org>
     - Import the certificate into your browser of choice
 1. Access to FermiCloud
-    - <https://cdcvs.fnal.gov/redmine/projects/fcl/wiki>
+    - fermicloud-help AT fnal.gov
 1. [Register](https://ggus.eu/?mode=register) for a GGUS account with the following information:
     - Your certificate's subject DN
     - Select `none` from the "Virtual Organization" drop-down
