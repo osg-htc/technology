@@ -2084,7 +2084,7 @@
 </ul>
 </li>
 <li>XRootD in 3.6  <ul>
-<li>Need to document native VOMS and SciTokens auth. Upstream docs?</li>
+<li>Need to document native VOMS and SciTokens auth. Upstream docs? <a href="https://github.com/xrootd/xrootd/tree/master/src/XrdSciTokens">SciTokens</a></li>
 <li>osg-xrootd needs to be updated (at least removing LCMAPS + config)</li>
 <li>Topology changes probably need to be made to also support the new format</li>
 </ul>
@@ -2095,9 +2095,18 @@
 <p>None this week  </p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <p>None this week  </p>
+<ul>
+<li>(Derek) ORNL is running a patched slurm gratia probe.  We should engage with them to run a production probe, if we can.  But their use case complicates things.</li>
+</ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <ul>
-<li>XRootD accounting information (from Frank):  <ul>
+<li>GRACC ITB Collector k8s on Tiger <a href="https://opensciencegrid.atlassian.net/browse/OPS-184">Jira</a></li>
+<li>XRootD Multiuser: One more comment from Andy, so there will be a 1.0.1 (sorry)<ul>
+<li>Known not to work with xrootd async io.  But that might be ok.</li>
+</ul>
+</li>
+<li>StashCP go client is working, just waiting on effort from Derek on how to package / deliver it.  As a reminder, compiling on EL7 makes it work on EL7, 8, ubuntu...  Go is great!</li>
+<li>XRootD accounting information (from Frank):<ul>
 <li>May need help with automating the process of generating these reports.  A month only takes a few minutes.  Longer periods take much longer.</li>
 <li>Table of working set, read, and re-read for monthly, quarterly, and year.</li>
 </ul>
