@@ -56,6 +56,7 @@ nav:
     - 'Community Testing': 'policy/community-testing.md'
     - Registering with the OSG: 'policy/comanage-instructions-user.md'
     - Approving COManage Registrations: 'policy/comanage-instructions-admin.md'
+    - Handling Topology/Contacts Registrations: 'policy/topology-registration.md'
   - Documentation:
     - Writing Documentation: 'documentation/writing-documentation.md'
     - Reviewing Documentation: 'documentation/reviewing-documentation.md'
