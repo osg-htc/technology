@@ -47,7 +47,7 @@ Requesting Tokens
         For example, to request HTCondor `READ` and `WRITE` access, specify the following scopes:
 
             This issuer supports the following scopes: openid profile email address phone offline_access wlcg iam wlcg.groups
-            Space delimited list of scopes or 'max' [openid profile offline_access]: wlcg offline_access condor:/READ condor:/WRITE
+            Space delimited list of scopes or 'max' [openid profile offline_access]: wlcg offline_access compute.read compute.modify compute.cancel compute.create
     
         Note that, prior to HTCondor 8.9.7, the server also needed `condor:/ALLOW` in all cases.
 
