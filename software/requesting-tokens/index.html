@@ -1987,14 +1987,15 @@ Space delimited list of scopes or &#39;max&#39; [openid profile offline_access]:
 </li>
 <li>
 <p>Request a token using the client name that you used above with <code>oidc-gen</code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="go">oidc-token &lt;CLIENT NAME&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="go">oidc-token --aud=&quot;&lt;SERVER AUDIENCE&gt;&quot; &lt;CLIENT NAME&gt;</span>
 </code></pre></div>
 
 </li>
-<li>
-<p>Copy the output of <code>oidc-token</code> into a file on the host where you need SciToken authentication, e.g. an HTCondor or
-   XRootD client.</p>
-</li>
+</ol>
+<p>For tokens used against an HTCondor-CE, set <code>&lt;SERVER AUDIENCE&gt;</code> to <code>&lt;CE FQDN&gt;:&lt;CE PORT&gt;</code>.</p>
+<ol>
+<li>Copy the output of <code>oidc-token</code> into a file on the host where you need SciToken authentication, e.g. an HTCondor or
+   XRootD client.</li>
 </ol>
 <h2 id="troubleshooting-tokens">Troubleshooting Tokens<a class="headerlink" href="#troubleshooting-tokens" title="Permanent link">&para;</a></h2>
 <p>You can inspect the payload  by copy-pasting the token into the "Encoded" text box here: <a href="http://jwt.io/">http://jwt.io/</a>.
