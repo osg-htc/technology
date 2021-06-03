@@ -62,7 +62,9 @@ Requesting Tokens
 1. Request a token using the client name that you used above with `oidc-gen`:
 
         :::console
-        oidc-token <CLIENT NAME>
+        oidc-token --aud="<SERVER AUDIENCE>" <CLIENT NAME>
+
+   For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to `<CE FQDN>:<CE PORT>`.
 
 1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
    XRootD client.
