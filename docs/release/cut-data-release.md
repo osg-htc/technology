@@ -142,7 +142,7 @@ Day 2: Pushing the Release
 
 ### Step 1: Upload the tarballs to AFS
 
-After testing the tarballs in the next step. Upload them to AFS. (This step moved to release
+Upload the tarballs to AFS. (This step moved to release
 day, since repo.opensciencegrid.org tarballs are automatically updated hourly from the VDT
 web site served out of AFS.)
 
@@ -152,7 +152,8 @@ web site served out of AFS.)
 
 ### Step 2: Update the UW AFS installation of the tarball client
 
-The UW keeps an install of the tarball client in `/p/vdt/workspace/tarball-client` on the UW's AFS. To update it, run the following commands:
+The UW keeps an installation of the tarball client in `/p/vdt/workspace/tarball-client`
+on the UW's AFS. To update it, run the following commands:
 
 ```bash
 NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
