@@ -2332,14 +2332,15 @@ verify tarball script fails. So, copy the tarballs to a known directory on moria
 <p>Wait for clearance. The OSG Release Coordinator (in consultation with the Software Team and any testers) need to sign off on the update before it is released. If you are releasing things over two days, this is a good place to stop for the day.</p>
 <h2 id="day-2-pushing-the-release">Day 2: Pushing the Release<a class="headerlink" href="#day-2-pushing-the-release" title="Permanent link">&para;</a></h2>
 <h3 id="step-1-upload-the-tarballs-to-afs">Step 1: Upload the tarballs to AFS<a class="headerlink" href="#step-1-upload-the-tarballs-to-afs" title="Permanent link">&para;</a></h3>
-<p>After testing the tarballs in the next step. Upload them to AFS. (This step moved to release
+<p>Upload the tarballs to AFS. (This step moved to release
 day, since repo.opensciencegrid.org tarballs are automatically updated hourly from the VDT
 web site served out of AFS.)</p>
 <div class="codehilite"><pre><span></span><code>./1-upload-tarballs-to-afs -d <span class="nv">$REVISION</span> <span class="nv">$NON_UPCOMING_VERSION</span>
 </code></pre></div>
 
 <h3 id="step-2-update-the-uw-afs-installation-of-the-tarball-client">Step 2: Update the UW AFS installation of the tarball client<a class="headerlink" href="#step-2-update-the-uw-afs-installation-of-the-tarball-client" title="Permanent link">&para;</a></h3>
-<p>The UW keeps an install of the tarball client in <code>/p/vdt/workspace/tarball-client</code> on the UW's AFS. To update it, run the following commands:</p>
+<p>The UW keeps an installation of the tarball client in <code>/p/vdt/workspace/tarball-client</code>
+on the UW's AFS. To update it, run the following commands:</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
 </code></pre></div>
 
