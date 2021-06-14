@@ -2086,7 +2086,9 @@ e.g. in order to clone my local fork of the <code>openscience/technology</code> 
 <p>Once you have your local repo, do the following:</p>
 <ol>
 <li>
-<p>Create a branch to hold changes that are related to the issue you are working on. Give the <code>&lt;BRANCH&gt;</code> a name that will remind you of its purpose, such as <code>sw2345-pathchange</code></p>
+<p>Create a branch to hold changes that are related to the issue you are working on.
+   Give the <code>&lt;BRANCH&gt;</code> a name that will remind you of its purpose, including any relevant ticket numbers, such as
+   <code>SOFTWARE-2345.pathchange</code>:</p>
 <div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $</span> git checkout -b &lt;BRANCH&gt;
 </code></pre></div>
 
@@ -2096,6 +2098,19 @@ e.g. in order to clone my local fork of the <code>openscience/technology</code> 
 <div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $</span> git push origin &lt;BRANCH&gt;
 </code></pre></div>
 
+<div class="admonition tip">
+<p class="admonition-title">The Art of Good Commits</p>
+<p>In addition to writing good code, it's important to organize your changes that are helpful to those viewing them
+in the future (including yourself!).
+This includes:</p>
+<ul>
+<li>Splitting up changes into logically separate chunks (<code>git rebase</code> can be a helpful tool for this)</li>
+<li>Describing the "why" of the change in addition to the "what" and "how" (utilizing the commit body if necessary)</li>
+<li>Writing succint commit message titles in the imperative (limited to 72 chars)</li>
+<li>Including any relevant ticket numbers (e.g., <code>Change that default path (SOFTWARE-2345)</code>).</li>
+</ul>
+<p>See online guides such as <a href="https://dev.to/ruanbrandao/how-to-make-good-git-commits-256k">this one</a> for more details.</p>
+</div>
 </li>
 <li>
 <p>Select your branch in the GitHub web interface, then create a "pull request" against the original repo. Add a good description of your change into the message for the pull request. Enter a JIRA ticket number in the message to automatically link the pull request to the JIRA ticket.</p>
