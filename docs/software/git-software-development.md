@@ -85,7 +85,9 @@ If you've never contributed to this project on GitHub before, do the following s
 
 Once you have your local repo, do the following:
 
-1. Create a branch to hold changes that are related to the issue you are working on. Give the `<BRANCH>` a name that will remind you of its purpose, such as `sw2345-pathchange`
+1. Create a branch to hold changes that are related to the issue you are working on.
+   Give the `<BRANCH>` a name that will remind you of its purpose, including any relevant ticket numbers, such as
+   `SOFTWARE-2345.pathchange`:
 
         :::console
         [user@client ~ ] $ git checkout -b <BRANCH>
