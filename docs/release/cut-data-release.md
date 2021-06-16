@@ -108,7 +108,7 @@ REVISION=<REVISION>
 ```bash
 git clone https://github.com/opensciencegrid/tarball-client.git
 pushd tarball-client
-./docker-make-client-tarball --osgver 3.5 --version $NON_UPCOMING_VERSION --relname $REVISION --all
+./docker-make-client-tarball --osgver 3.5 --version $NON_UPCOMING_VERSION --relnum $REVISION --all
 popd
 ```
 
