@@ -2147,22 +2147,20 @@ and therefore pick up new packages available in minefield once per week.</p>
 </li>
 <li>
 <p>Get the sha256 repo digest of the image that the user has tested.
-   All you need is the part that starts with <code>sha256:...</code> (aka the <code>&lt;DIGEST&gt;</code>).</p>
-</li>
-</ol>
+    All you need is the part that starts with <code>sha256:...</code> (aka the <code>&lt;DIGEST&gt;</code>).</p>
 <p>A Kubernetes user can get the digest from the "Image ID" line obtained by running:</p>
-<div class="codehilite"><pre><span></span><code>     kubectl describe pod &lt;POD&gt;
+<div class="codehilite"><pre><span></span><code> kubectl describe pod &lt;POD&gt;
 </code></pre></div>
 
 <p>A Docker user can get the digest by running:</p>
-<div class="codehilite"><pre><span></span><code>     docker image inspect &lt;IMAGE NAME&gt;:&lt;TAG&gt; | jq &#39;.[0].Id&#39;
+<div class="codehilite"><pre><span></span><code> docker image inspect &lt;IMAGE NAME&gt;:&lt;TAG&gt; | jq &#39;.[0].Id&#39;
 </code></pre></div>
 
-<ol>
+</li>
 <li>
 <p>(Optional) If you are tagging multiple images, you can enter your Docker Hub username and password into environment
-   variables, to avoid having to re-type them.
-   Otherwise the script will prompt for them.</p>
+    variables, to avoid having to re-type them.
+    Otherwise the script will prompt for them.</p>
 <div class="codehilite"><pre><span></span><code>read user     # enter dockerhub username
 read -s pass  # enter dockerhub password
 export user pass
