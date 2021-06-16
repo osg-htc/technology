@@ -2446,7 +2446,9 @@ docker-osg-wn-scripts/update-all docker-osg-wn
 </code></pre></div>
 
 <h3 id="step-8-rebuild-the-docker-software-base">Step 8: Rebuild the Docker software base<a class="headerlink" href="#step-8-rebuild-the-docker-software-base" title="Permanent link">&para;</a></h3>
-<p>Go to the opensciencegrid/docker-software-base <a href="https://github.com/opensciencegrid/docker-software-base/actions">Actions</a> page. Click on the most recent <code>build-docker-image</code> run. Then click on the <code>Re-run jobs</code> button.</p>
+<p>Go to the <code>build-docker-image</code> workflow page of the <code>opensciencegrid/docker-software-base</code>:
+<a href="https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml">https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml</a>
+Click the <code>Run Workflow</code> button, select the <code>master</code> branch, and click <code>Run workflow</code>.</p>
 <h3 id="step-9-verify-the-vo-package-andor-ca-certificates">Step 9: Verify the VO Package and/or CA certificates<a class="headerlink" href="#step-9-verify-the-vo-package-andor-ca-certificates" title="Permanent link">&para;</a></h3>
 <p>If this release contains either the <code>vo-client</code> or <code>osg-ca-certs</code> package, verify that the CA web site has been updated.
 Wait for the <a href="https://repo.opensciencegrid.org/cadist/">CA certificates</a> to be updated.
