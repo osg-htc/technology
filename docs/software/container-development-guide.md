@@ -105,31 +105,31 @@ Managing Tags in DockerHub
 
 Images that have passed acceptance testing should be tagged as `stable`:
 
-1. Install the `jq` utility:
+1.  Install the `jq` utility:
 
         yum install jq
 
-1. Get the sha256 repo digest of the image that the user has tested.
-   All you need is the part that starts with `sha256:...` (aka the `<DIGEST>`).
+1.  Get the sha256 repo digest of the image that the user has tested.
+    All you need is the part that starts with `sha256:...` (aka the `<DIGEST>`).
    
-   A Kubernetes user can get the digest from the "Image ID" line obtained by running:
+    A Kubernetes user can get the digest from the "Image ID" line obtained by running:
    
          kubectl describe pod <POD>
    
-   A Docker user can get the digest by running:
+    A Docker user can get the digest by running:
    
          docker image inspect <IMAGE NAME>:<TAG> | jq '.[0].Id'
 
 
-1. (Optional) If you are tagging multiple images, you can enter your Docker Hub username and password into environment
-   variables, to avoid having to re-type them.
-   Otherwise the script will prompt for them.
+1.  (Optional) If you are tagging multiple images, you can enter your Docker Hub username and password into environment
+    variables, to avoid having to re-type them.
+    Otherwise the script will prompt for them.
 
         read user     # enter dockerhub username
         read -s pass  # enter dockerhub password
         export user pass
 
-1. Run the Docker container image tagging command from [release-tools](https://github.com/opensciencegrid/release-tools/):
+1.  Run the Docker container image tagging command from [release-tools](https://github.com/opensciencegrid/release-tools/):
 
         ./dockerhub-tag-fresh-to-stable.sh <IMAGE NAME> <DIGEST>
 
