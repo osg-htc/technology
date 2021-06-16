@@ -238,7 +238,9 @@ cd docker-osg-wn
 
 ### Step 8: Rebuild the Docker software base
 
-Go to the opensciencegrid/docker-software-base [Actions](https://github.com/opensciencegrid/docker-software-base/actions) page. Click on the most recent `build-docker-image` run. Then click on the `Re-run jobs` button.
+Go to the `build-docker-image` workflow page of the `opensciencegrid/docker-software-base`:
+<https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml>
+Click the `Run Workflow` button, select the `master` branch, and click `Run workflow`.
 
 ### Step 9: Verify the VO Package and/or CA certificates
 
