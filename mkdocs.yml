@@ -70,6 +70,7 @@ nav:
     - SHA-2 Support: 'projects/sha2-support.md'
     - Migrating Documents to Markdown: 'documentation/markdown-migration.md'
   - Meetings:
+    - June 22, 2021: 'meetings/2021/TechArea20210622.md'
     - June 15, 2021: 'meetings/2021/TechArea20210615.md'
     - June 8, 2021: 'meetings/2021/TechArea20210608.md'
     - May 18, 2021: 'meetings/2021/TechArea20210518.md'
