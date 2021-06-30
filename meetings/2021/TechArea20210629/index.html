@@ -2165,13 +2165,18 @@
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>MWT2 (BrianL): merged in .rpmsave containing a config fix for held job pile-up due to `SYSTEM<sub>PERIODIC</sub>` expressions fighting</li>
+<li>Lehigh (Derek): (DONE) Removed extranous records</li>
+<li>GLOW (Derek): Submitted GRACC records with start date in 2008.  Caused by node coming up after power outage with date set to 2008, so jobs will have "started" in 2008, and run until now, resulting in huge walltimes.  Will remove.</li>
+<li>KSU (Derek): Likely IDS blocking access to data for JLAB jobs running at KSU.  Not sure how to solve other than have JLAB blacklist KSU.</li>
 </ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <ul>
 <li>XRootD Multiuser: 1.1.0 is tagged: <a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-4658">https://opensciencegrid.atlassian.net/browse/SOFTWARE-4658</a> (in testing below)</li>
-<li>StashCP go client is working and tested, and being tested by Christina now. Need to talk to Mats on packaging and releasing.</li>
+<li>StashCP go client is working and tested, and being tested by Christina now. Need to talk to Mats on packaging and releasing. (will follow up)</li>
+<li>Debugging of gracc nodes after tiger update resulted in restarting a few pods, and 1 typo discovered.</li>
+<li>Design document is done and is being distributed for xrootd monitoring collector NG (next gen).  Shoveler development has begun!</li>
 <li>
-<p>Design document is done and is being distributed.</p>
+<p>XRootD TCP plugin is ready for packaging.  Derek will follow up with software team on who to hand that off to.</p>
 </li>
 <li>
 <p>(Stalled, but need to get back to it) XRootD accounting information (from Frank):  </p>
