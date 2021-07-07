@@ -93,7 +93,7 @@ Per-package work
 ----------------
 
 1.  cd into branches/globus
-2.  Download packages from <http://dl.fedoraproject.org/pub/epel/7/SRPMS/>
+2.  Download packages from <https://dl.fedoraproject.org/pub/epel/7/source/tree/Packages/>
 
 A useful alias:
 
