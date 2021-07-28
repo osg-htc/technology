@@ -13,23 +13,23 @@ Before you can request the appropriate tokens, you must have the following:
 
 -   A [WLCG INDIGO IAM](https://wlcg.cloud.cnaf.infn.it/) account belonging to the `wlcg`, `wlcg/pilots`, and `wlcg/xfers`
     groups.
--   An installation of [oidc-agent](https://indigo-dc.gitbook.io/oidc-agent/) available as an RPM from the OSG
-    repositories
+-   The ability to run containers through tools like `docker` or `podman`
 
 Requesting Tokens
 -----------------
 
-`oidc-agent` is similar to SSH agent except that it works with OpenID Connect token providers.
+[oidc-agent](https://indigo-dc.gitbook.io/oidc-agent/) is similar to SSH agent except that it works with OpenID Connect
+token providers.
 
-1. Start the agent and add the appropriate variables to your environment:
+1. Start an agent container in the background and name it `my-agent` to easily run subsequent commands against it:
 
         :::console
-        eval `oidc-agent`
+        docker run -d --name my-agent opensciencegrid/oidc-agent:release
 
 1. Generate a local client profile and follow the prompts:
 
         :::console
-        oidc-gen -w device <CLIENT NAME>
+        docker exec -it my-agent oidc-gen -w device <CLIENT NAME>
 
     1. Specify the WLCG INDIGO IAM instance as the client issuer:
 
@@ -62,7 +62,7 @@ Requesting Tokens
 1. Request a token using the client name that you used above with `oidc-gen`:
 
         :::console
-        oidc-token --aud="<SERVER AUDIENCE>" <CLIENT NAME>
+        docker exec -it my-agent oidc-token --aud="<SERVER AUDIENCE>" <CLIENT NAME>
 
    For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to `<CE FQDN>:<CE PORT>`.
 
