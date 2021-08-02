@@ -2170,7 +2170,7 @@ To do this, we use GitHub Actions to:</p>
 <li>Set the repository topic to <code>container</code></li>
 <li>
 <p>Create a <code>Dockerfile</code> based off of the OSG Software Base image:</p>
-<div class="codehilite"><pre><span></span><code>FROM opensciencegrid/software-base:fresh
+<div class="codehilite"><pre><span></span><code>FROM opensciencegrid/software-base:&lt;OSG RELEASE SERIES&gt;-&lt;EL MAJOR VERSION&gt;-release
 
 LABEL maintainer OSG Software &lt;help@opensciencegrid.org&gt;
 
@@ -2178,12 +2178,14 @@ RUN yum update -y &amp;&amp; \
     yum clean all &amp;&amp; \
     rm -rf /var/cache/yum/*
 
-RUN yum install -y &lt;PACKAGE&gt; --enablerepo=osg-testing &amp;&amp; \
+RUN yum install -y &lt;PACKAGE&gt; &amp;&amp; \
     yum clean all &amp;&amp; \
     rm -rf /var/cache/yum/*
 </code></pre></div>
 
-<p>Replacing <code>&lt;PACKAGE&gt;</code> with the name of the RPM you'd like to provide in this container image</p>
+<p>Replacing <code>&lt;PACKAGE&gt;</code> with the name of the RPM you'd like to provide in this container image,
+<code>&lt;OSG RELEASE SERIES&gt;</code> with the OSG release series version (e.g., <code>3.6</code>),
+and <code>&lt;EL MAJOR VERSION&gt;</code> with the Enterprise Linux major version (e.g., <code>7</code>).</p>
 </li>
 <li>
 <p>Add the pre-defined OSG Software container publishing GitHub Actions workflow.
