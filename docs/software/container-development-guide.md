@@ -30,7 +30,7 @@ To do this, we use GitHub Actions to:
 1.  Set the repository topic to `container`
 1.  Create a `Dockerfile` based off of the OSG Software Base image:
 
-        FROM opensciencegrid/software-base:fresh
+        FROM opensciencegrid/software-base:<OSG RELEASE SERIES>-<EL MAJOR VERSION>-release
 
         LABEL maintainer OSG Software <help@opensciencegrid.org>
 
@@ -38,12 +38,14 @@ To do this, we use GitHub Actions to:
             yum clean all && \
             rm -rf /var/cache/yum/*
 
-        RUN yum install -y <PACKAGE> --enablerepo=osg-testing && \
+        RUN yum install -y <PACKAGE> && \
             yum clean all && \
             rm -rf /var/cache/yum/*
 
 
-    Replacing `<PACKAGE>` with the name of the RPM you'd like to provide in this container image
+    Replacing `<PACKAGE>` with the name of the RPM you'd like to provide in this container image,
+    `<OSG RELEASE SERIES>` with the OSG release series version (e.g., `3.6`),
+    and `<EL MAJOR VERSION>` with the Enterprise Linux major version (e.g., `7`).
 
 1.  Add the pre-defined OSG Software container publishing GitHub Actions workflow.
     From the GitHub repository, perform the following steps:
