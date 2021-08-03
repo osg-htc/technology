@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    
+    <meta name="robots" content="noindex, nofollow" />
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://opensciencegrid.org/technology/software/git-software-development/">
+        <link rel="canonical" href="https://opensciencegrid.org/technology/meetings/2021/TechArea20210803/">
       
-      <link rel="icon" href="../../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
-        <title>Git Software Development Process - OSG Technology Area</title>
+        <title>August 3, 2021 - OSG Technology Area</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.33e2939f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -39,7 +39,7 @@
     
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
     
       
@@ -56,7 +56,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#git-software-development-workflow" class="md-skip">
+        <a href="#osg-technology-area-meeting-27-july-2021" class="md-skip">
           Skip to content
         </a>
       
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="OSG Technology Area" class="md-header__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
+    <a href="../../.." title="OSG Technology Area" class="md-header__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Git Software Development Process
+              August 3, 2021
             
           </span>
         </div>
@@ -168,7 +168,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="OSG Technology Area" class="md-nav__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
+    <a href="../../.." title="OSG Technology Area" class="md-nav__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -200,7 +200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -213,14 +213,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         Software
@@ -259,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rpm-development-guide/" class="md-nav__link">
+      <a href="../../../software/rpm-development-guide/" class="md-nav__link">
         RPM Development Guide
       </a>
     </li>
@@ -271,7 +269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../osg-build-tools/" class="md-nav__link">
+      <a href="../../../software/osg-build-tools/" class="md-nav__link">
         OSG Build Tools
       </a>
     </li>
@@ -283,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quilt/" class="md-nav__link">
+      <a href="../../../software/quilt/" class="md-nav__link">
         Using Quilt
       </a>
     </li>
@@ -295,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upcoming-to-main/" class="md-nav__link">
+      <a href="../../../software/upcoming-to-main/" class="md-nav__link">
         Upcoming to Main
       </a>
     </li>
@@ -307,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../koji-workflow/" class="md-nav__link">
+      <a href="../../../software/koji-workflow/" class="md-nav__link">
         Koji Workflow
       </a>
     </li>
@@ -319,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../create-vo-client/" class="md-nav__link">
+      <a href="../../../software/create-vo-client/" class="md-nav__link">
         Creating the VO Client Package
       </a>
     </li>
@@ -331,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../container-development-guide/" class="md-nav__link">
+      <a href="../../../software/container-development-guide/" class="md-nav__link">
         Container Development Guide
       </a>
     </li>
@@ -343,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../repository-management/" class="md-nav__link">
+      <a href="../../../software/repository-management/" class="md-nav__link">
         Repository Management
       </a>
     </li>
@@ -355,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../globus-mass-update-procedure/" class="md-nav__link">
+      <a href="../../../software/globus-mass-update-procedure/" class="md-nav__link">
         Globus Mass Update Procedure
       </a>
     </li>
@@ -367,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resurrecting-epel-packages/" class="md-nav__link">
+      <a href="../../../software/resurrecting-epel-packages/" class="md-nav__link">
         Resurrecting Epel Packages
       </a>
     </li>
@@ -379,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../koji-mass-rebuilds/" class="md-nav__link">
+      <a href="../../../software/koji-mass-rebuilds/" class="md-nav__link">
         Koji Mass Rebuilds
       </a>
     </li>
@@ -395,14 +393,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       <label class="md-nav__link" for="__nav_2_2">
         Development
@@ -420,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development-process/" class="md-nav__link">
+      <a href="../../../software/development-process/" class="md-nav__link">
         Development Process
       </a>
     </li>
@@ -430,117 +426,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Git Software Development Process
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../software/git-software-development/" class="md-nav__link">
         Git Software Development Process
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#git-and-github-basics" class="md-nav__link">
-    Git and GitHub basics
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-shell-access-to-github" class="md-nav__link">
-    Getting shell access to GitHub
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting shell access to GitHub">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-new-ssh-key-optional-but-recommended" class="md-nav__link">
-    Creating a new SSH key (optional but recommended)
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating a new SSH key (optional but recommended)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generating-the-key" class="md-nav__link">
-    Generating the key
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-ssh-to-use-the-key-for-github" class="md-nav__link">
-    Configuring SSH to use the key for GitHub
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-the-ssh-public-key-to-github" class="md-nav__link">
-    Adding the SSH public key to GitHub
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#testing-that-shell-access-works" class="md-nav__link">
-    Testing that shell access works
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contribution-workflow" class="md-nav__link">
-    Contribution workflow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#release-workflow" class="md-nav__link">
-    Release workflow
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -550,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ce-test-scaling/" class="md-nav__link">
+      <a href="../../../software/ce-test-scaling/" class="md-nav__link">
         CE Scale Testing
       </a>
     </li>
@@ -562,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ipv6-testing/" class="md-nav__link">
+      <a href="../../../software/ipv6-testing/" class="md-nav__link">
         IPv6 Testing
       </a>
     </li>
@@ -574,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../requesting-tokens/" class="md-nav__link">
+      <a href="../../../software/requesting-tokens/" class="md-nav__link">
         How to Request Tokens
       </a>
     </li>
@@ -592,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/software-support/" class="md-nav__link">
+      <a href="../../../policy/software-support/" class="md-nav__link">
         Software Support
       </a>
     </li>
@@ -604,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../effort-tracking/" class="md-nav__link">
+      <a href="../../../software/effort-tracking/" class="md-nav__link">
         Effort Tracking
       </a>
     </li>
@@ -616,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../release-planning/" class="md-nav__link">
+      <a href="../../../software/release-planning/" class="md-nav__link">
         Release Planning
       </a>
     </li>
@@ -628,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../new-team-member/" class="md-nav__link">
+      <a href="../../../software/new-team-member/" class="md-nav__link">
         New Team Member
       </a>
     </li>
@@ -670,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/cut-sw-release/" class="md-nav__link">
+      <a href="../../../release/cut-sw-release/" class="md-nav__link">
         How to Cut a Release
       </a>
     </li>
@@ -682,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/cut-data-release/" class="md-nav__link">
+      <a href="../../../release/cut-data-release/" class="md-nav__link">
         How to Cut a Data Release
       </a>
     </li>
@@ -694,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/announce-rft-packages/" class="md-nav__link">
+      <a href="../../../release/announce-rft-packages/" class="md-nav__link">
         Ready for Testing Announcements
       </a>
     </li>
@@ -706,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/new-release-series/" class="md-nav__link">
+      <a href="../../../release/new-release-series/" class="md-nav__link">
         New Release Series
       </a>
     </li>
@@ -718,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/old-release-removal/" class="md-nav__link">
+      <a href="../../../release/old-release-removal/" class="md-nav__link">
         Old Release Series Removal
       </a>
     </li>
@@ -730,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/itb-testing/" class="md-nav__link">
+      <a href="../../../release/itb-testing/" class="md-nav__link">
         ITB Prerelease Testing
       </a>
     </li>
@@ -742,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/empty-pkgs/" class="md-nav__link">
+      <a href="../../../release/empty-pkgs/" class="md-nav__link">
         Empty Packages
       </a>
     </li>
@@ -754,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/acceptance-testing/" class="md-nav__link">
+      <a href="../../../release/acceptance-testing/" class="md-nav__link">
         Acceptance Testing
       </a>
     </li>
@@ -796,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/gridftp-gsi-migration/" class="md-nav__link">
+      <a href="../../../policy/gridftp-gsi-migration/" class="md-nav__link">
         GridFTP and GSI Migration
       </a>
     </li>
@@ -808,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/campus-cyberinfrastructure/" class="md-nav__link">
+      <a href="../../../policy/campus-cyberinfrastructure/" class="md-nav__link">
         Campus Cyberinfrastructure
       </a>
     </li>
@@ -820,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/cream-support/" class="md-nav__link">
+      <a href="../../../policy/cream-support/" class="md-nav__link">
         CREAM-CE Support
       </a>
     </li>
@@ -832,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/release-series/" class="md-nav__link">
+      <a href="../../../policy/release-series/" class="md-nav__link">
         Release Series Support
       </a>
     </li>
@@ -844,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/globus-toolkit/" class="md-nav__link">
+      <a href="../../../policy/globus-toolkit/" class="md-nav__link">
         Globus Toolkit Support
       </a>
     </li>
@@ -856,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/external-oasis-repos/" class="md-nav__link">
+      <a href="../../../policy/external-oasis-repos/" class="md-nav__link">
         OASIS Repository Mirroring
       </a>
     </li>
@@ -868,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/flexible-release-model/" class="md-nav__link">
+      <a href="../../../policy/flexible-release-model/" class="md-nav__link">
         Flexible Release Model
       </a>
     </li>
@@ -880,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/software-release/" class="md-nav__link">
+      <a href="../../../policy/software-release/" class="md-nav__link">
         Software Release Policy
       </a>
     </li>
@@ -892,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/container-release/" class="md-nav__link">
+      <a href="../../../policy/container-release/" class="md-nav__link">
         Container Release Policy
       </a>
     </li>
@@ -904,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/community-testing/" class="md-nav__link">
+      <a href="../../../policy/community-testing/" class="md-nav__link">
         Community Testing
       </a>
     </li>
@@ -916,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/comanage-instructions-user/" class="md-nav__link">
+      <a href="../../../policy/comanage-instructions-user/" class="md-nav__link">
         Registering with the OSG
       </a>
     </li>
@@ -928,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/comanage-instructions-admin/" class="md-nav__link">
+      <a href="../../../policy/comanage-instructions-admin/" class="md-nav__link">
         Approving COManage Registrations
       </a>
     </li>
@@ -940,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/topology-registration/" class="md-nav__link">
+      <a href="../../../policy/topology-registration/" class="md-nav__link">
         Handling Topology/Contacts Registrations
       </a>
     </li>
@@ -982,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/writing-documentation/" class="md-nav__link">
+      <a href="../../../documentation/writing-documentation/" class="md-nav__link">
         Writing Documentation
       </a>
     </li>
@@ -994,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/reviewing-documentation/" class="md-nav__link">
+      <a href="../../../documentation/reviewing-documentation/" class="md-nav__link">
         Reviewing Documentation
       </a>
     </li>
@@ -1006,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/style-guide/" class="md-nav__link">
+      <a href="../../../documentation/style-guide/" class="md-nav__link">
         Markdown Style Guide
       </a>
     </li>
@@ -1018,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/publish-osg-pages/" class="md-nav__link">
+      <a href="../../../documentation/publish-osg-pages/" class="md-nav__link">
         Publishing OSG pages
       </a>
     </li>
@@ -1060,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/service-migrations-spring-2018/" class="md-nav__link">
+      <a href="../../../policy/service-migrations-spring-2018/" class="md-nav__link">
         Service Migrations - Spring 2018
       </a>
     </li>
@@ -1072,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/gums-retire/" class="md-nav__link">
+      <a href="../../../policy/gums-retire/" class="md-nav__link">
         GUMS Retirement
       </a>
     </li>
@@ -1084,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/bestman2-retire/" class="md-nav__link">
+      <a href="../../../policy/bestman2-retire/" class="md-nav__link">
         BeStMan2 Retirement
       </a>
     </li>
@@ -1096,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/voms-admin-retire/" class="md-nav__link">
+      <a href="../../../policy/voms-admin-retire/" class="md-nav__link">
         VOMS Admin Retirement
       </a>
     </li>
@@ -1108,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projects/sha2-support/" class="md-nav__link">
+      <a href="../../../projects/sha2-support/" class="md-nav__link">
         SHA-2 Support
       </a>
     </li>
@@ -1120,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/markdown-migration/" class="md-nav__link">
+      <a href="../../../documentation/markdown-migration/" class="md-nav__link">
         Migrating Documents to Markdown
       </a>
     </li>
@@ -1139,12 +1029,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       <label class="md-nav__link" for="__nav_7">
         Meetings
@@ -1160,11 +1052,136 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210803/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          August 3, 2021
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         August 3, 2021
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#announcements" class="md-nav__link">
+    Announcements
+  </a>
+  
+    <nav class="md-nav" aria-label="Announcements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triage-duty" class="md-nav__link">
+    Triage Duty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jira-as-of-monday" class="md-nav__link">
+    Jira (as of Monday)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osg-software-team" class="md-nav__link">
+    OSG Software Team
+  </a>
+  
+    <nav class="md-nav" aria-label="OSG Software Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-update" class="md-nav__link">
+    Support Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osg-devops" class="md-nav__link">
+    OSG DevOps
+  </a>
+  
+    <nav class="md-nav" aria-label="OSG DevOps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_1" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osg-release-team" class="md-nav__link">
+    OSG Release Team
+  </a>
+  
+    <nav class="md-nav" aria-label="OSG Release Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_2" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1174,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210727/" class="md-nav__link">
+      <a href="../TechArea20210727/" class="md-nav__link">
         July 27, 2021
       </a>
     </li>
@@ -1186,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210720/" class="md-nav__link">
+      <a href="../TechArea20210720/" class="md-nav__link">
         July 20, 2021
       </a>
     </li>
@@ -1198,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210713/" class="md-nav__link">
+      <a href="../TechArea20210713/" class="md-nav__link">
         July 13, 2021
       </a>
     </li>
@@ -1210,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210706/" class="md-nav__link">
+      <a href="../TechArea20210706/" class="md-nav__link">
         July 6, 2021
       </a>
     </li>
@@ -1222,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210629/" class="md-nav__link">
+      <a href="../TechArea20210629/" class="md-nav__link">
         June 29, 2021
       </a>
     </li>
@@ -1234,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210622/" class="md-nav__link">
+      <a href="../TechArea20210622/" class="md-nav__link">
         June 22, 2021
       </a>
     </li>
@@ -1246,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210615/" class="md-nav__link">
+      <a href="../TechArea20210615/" class="md-nav__link">
         June 15, 2021
       </a>
     </li>
@@ -1258,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210608/" class="md-nav__link">
+      <a href="../TechArea20210608/" class="md-nav__link">
         June 8, 2021
       </a>
     </li>
@@ -1270,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210518/" class="md-nav__link">
+      <a href="../TechArea20210518/" class="md-nav__link">
         May 18, 2021
       </a>
     </li>
@@ -1282,7 +1299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210511/" class="md-nav__link">
+      <a href="../TechArea20210511/" class="md-nav__link">
         May 11, 2021
       </a>
     </li>
@@ -1294,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210504/" class="md-nav__link">
+      <a href="../TechArea20210504/" class="md-nav__link">
         May 4, 2021
       </a>
     </li>
@@ -1306,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210420/" class="md-nav__link">
+      <a href="../TechArea20210420/" class="md-nav__link">
         April 20, 2021
       </a>
     </li>
@@ -1318,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210413/" class="md-nav__link">
+      <a href="../TechArea20210413/" class="md-nav__link">
         April 13, 2021
       </a>
     </li>
@@ -1330,7 +1347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210406/" class="md-nav__link">
+      <a href="../TechArea20210406/" class="md-nav__link">
         April 6, 2021
       </a>
     </li>
@@ -1342,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210330/" class="md-nav__link">
+      <a href="../TechArea20210330/" class="md-nav__link">
         March 30, 2021
       </a>
     </li>
@@ -1354,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210323/" class="md-nav__link">
+      <a href="../TechArea20210323/" class="md-nav__link">
         March 23, 2021
       </a>
     </li>
@@ -1366,7 +1383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210309/" class="md-nav__link">
+      <a href="../TechArea20210309/" class="md-nav__link">
         March 9, 2021
       </a>
     </li>
@@ -1378,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210302/" class="md-nav__link">
+      <a href="../TechArea20210302/" class="md-nav__link">
         March 2, 2021
       </a>
     </li>
@@ -1390,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210223/" class="md-nav__link">
+      <a href="../TechArea20210223/" class="md-nav__link">
         February 23, 2021
       </a>
     </li>
@@ -1402,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210216/" class="md-nav__link">
+      <a href="../TechArea20210216/" class="md-nav__link">
         February 16, 2021
       </a>
     </li>
@@ -1414,7 +1431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210209/" class="md-nav__link">
+      <a href="../TechArea20210209/" class="md-nav__link">
         February 9, 2021
       </a>
     </li>
@@ -1426,7 +1443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210202/" class="md-nav__link">
+      <a href="../TechArea20210202/" class="md-nav__link">
         February 2, 2021
       </a>
     </li>
@@ -1438,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210126/" class="md-nav__link">
+      <a href="../TechArea20210126/" class="md-nav__link">
         January 26, 2021
       </a>
     </li>
@@ -1450,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210119/" class="md-nav__link">
+      <a href="../TechArea20210119/" class="md-nav__link">
         January 19, 2021
       </a>
     </li>
@@ -1462,7 +1479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210112/" class="md-nav__link">
+      <a href="../TechArea20210112/" class="md-nav__link">
         January 12, 2021
       </a>
     </li>
@@ -1474,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210104/" class="md-nav__link">
+      <a href="../TechArea20210104/" class="md-nav__link">
         January 4, 2021
       </a>
     </li>
@@ -1486,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201221/" class="md-nav__link">
+      <a href="../../2020/TechArea20201221/" class="md-nav__link">
         December 21, 2020
       </a>
     </li>
@@ -1498,7 +1515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201214/" class="md-nav__link">
+      <a href="../../2020/TechArea20201214/" class="md-nav__link">
         December 14, 2020
       </a>
     </li>
@@ -1510,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201207/" class="md-nav__link">
+      <a href="../../2020/TechArea20201207/" class="md-nav__link">
         December 7, 2020
       </a>
     </li>
@@ -1522,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201130/" class="md-nav__link">
+      <a href="../../2020/TechArea20201130/" class="md-nav__link">
         November 30, 2020
       </a>
     </li>
@@ -1534,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201123/" class="md-nav__link">
+      <a href="../../2020/TechArea20201123/" class="md-nav__link">
         November 23, 2020
       </a>
     </li>
@@ -1546,7 +1563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201116/" class="md-nav__link">
+      <a href="../../2020/TechArea20201116/" class="md-nav__link">
         November 16, 2020
       </a>
     </li>
@@ -1558,7 +1575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201109/" class="md-nav__link">
+      <a href="../../2020/TechArea20201109/" class="md-nav__link">
         November 9, 2020
       </a>
     </li>
@@ -1570,7 +1587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201102/" class="md-nav__link">
+      <a href="../../2020/TechArea20201102/" class="md-nav__link">
         November 2, 2020
       </a>
     </li>
@@ -1582,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201026/" class="md-nav__link">
+      <a href="../../2020/TechArea20201026/" class="md-nav__link">
         October 26, 2020
       </a>
     </li>
@@ -1594,7 +1611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201019/" class="md-nav__link">
+      <a href="../../2020/TechArea20201019/" class="md-nav__link">
         October 19, 2020
       </a>
     </li>
@@ -1606,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201012/" class="md-nav__link">
+      <a href="../../2020/TechArea20201012/" class="md-nav__link">
         October 12, 2020
       </a>
     </li>
@@ -1618,7 +1635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201005/" class="md-nav__link">
+      <a href="../../2020/TechArea20201005/" class="md-nav__link">
         October 5, 2020
       </a>
     </li>
@@ -1630,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200928/" class="md-nav__link">
+      <a href="../../2020/TechArea20200928/" class="md-nav__link">
         September 28, 2020
       </a>
     </li>
@@ -1642,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200914/" class="md-nav__link">
+      <a href="../../2020/TechArea20200914/" class="md-nav__link">
         September 14, 2020
       </a>
     </li>
@@ -1654,7 +1671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200824/" class="md-nav__link">
+      <a href="../../2020/TechArea20200824/" class="md-nav__link">
         August 24, 2020
       </a>
     </li>
@@ -1666,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200817/" class="md-nav__link">
+      <a href="../../2020/TechArea20200817/" class="md-nav__link">
         August 17, 2020
       </a>
     </li>
@@ -1678,7 +1695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200810/" class="md-nav__link">
+      <a href="../../2020/TechArea20200810/" class="md-nav__link">
         August 10, 2020
       </a>
     </li>
@@ -1690,7 +1707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200803/" class="md-nav__link">
+      <a href="../../2020/TechArea20200803/" class="md-nav__link">
         August 3, 2020
       </a>
     </li>
@@ -1702,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200727/" class="md-nav__link">
+      <a href="../../2020/TechArea20200727/" class="md-nav__link">
         July 27, 2020
       </a>
     </li>
@@ -1714,7 +1731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200720/" class="md-nav__link">
+      <a href="../../2020/TechArea20200720/" class="md-nav__link">
         July 20, 2020
       </a>
     </li>
@@ -1726,7 +1743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200713/" class="md-nav__link">
+      <a href="../../2020/TechArea20200713/" class="md-nav__link">
         July 13, 2020
       </a>
     </li>
@@ -1738,7 +1755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200706/" class="md-nav__link">
+      <a href="../../2020/TechArea20200706/" class="md-nav__link">
         July 6, 2020
       </a>
     </li>
@@ -1750,7 +1767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200629/" class="md-nav__link">
+      <a href="../../2020/TechArea20200629/" class="md-nav__link">
         June 29, 2020
       </a>
     </li>
@@ -1762,7 +1779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200622/" class="md-nav__link">
+      <a href="../../2020/TechArea20200622/" class="md-nav__link">
         June 22, 2020
       </a>
     </li>
@@ -1774,7 +1791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200615/" class="md-nav__link">
+      <a href="../../2020/TechArea20200615/" class="md-nav__link">
         June 15, 2020
       </a>
     </li>
@@ -1786,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200608/" class="md-nav__link">
+      <a href="../../2020/TechArea20200608/" class="md-nav__link">
         June 8, 2020
       </a>
     </li>
@@ -1798,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200601/" class="md-nav__link">
+      <a href="../../2020/TechArea20200601/" class="md-nav__link">
         June 1, 2020
       </a>
     </li>
@@ -1810,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200518/" class="md-nav__link">
+      <a href="../../2020/TechArea20200518/" class="md-nav__link">
         May 18, 2020
       </a>
     </li>
@@ -1822,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200511/" class="md-nav__link">
+      <a href="../../2020/TechArea20200511/" class="md-nav__link">
         May 11, 2020
       </a>
     </li>
@@ -1834,7 +1851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200504/" class="md-nav__link">
+      <a href="../../2020/TechArea20200504/" class="md-nav__link">
         May 4, 2020
       </a>
     </li>
@@ -1846,7 +1863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200427/" class="md-nav__link">
+      <a href="../../2020/TechArea20200427/" class="md-nav__link">
         April 27, 2020
       </a>
     </li>
@@ -1858,7 +1875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200420/" class="md-nav__link">
+      <a href="../../2020/TechArea20200420/" class="md-nav__link">
         April 20, 2020
       </a>
     </li>
@@ -1870,7 +1887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200413/" class="md-nav__link">
+      <a href="../../2020/TechArea20200413/" class="md-nav__link">
         April 13, 2020
       </a>
     </li>
@@ -1882,7 +1899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200406/" class="md-nav__link">
+      <a href="../../2020/TechArea20200406/" class="md-nav__link">
         April 6, 2020
       </a>
     </li>
@@ -1894,7 +1911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200330/" class="md-nav__link">
+      <a href="../../2020/TechArea20200330/" class="md-nav__link">
         March 30, 2020
       </a>
     </li>
@@ -1906,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200323/" class="md-nav__link">
+      <a href="../../2020/TechArea20200323/" class="md-nav__link">
         March 23, 2020
       </a>
     </li>
@@ -1918,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200316/" class="md-nav__link">
+      <a href="../../2020/TechArea20200316/" class="md-nav__link">
         March 16, 2020
       </a>
     </li>
@@ -1930,7 +1947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200309/" class="md-nav__link">
+      <a href="../../2020/TechArea20200309/" class="md-nav__link">
         March 9, 2020
       </a>
     </li>
@@ -1942,7 +1959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200302/" class="md-nav__link">
+      <a href="../../2020/TechArea20200302/" class="md-nav__link">
         March 2, 2020
       </a>
     </li>
@@ -1954,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200224/" class="md-nav__link">
+      <a href="../../2020/TechArea20200224/" class="md-nav__link">
         February 24, 2020
       </a>
     </li>
@@ -1966,7 +1983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200217/" class="md-nav__link">
+      <a href="../../2020/TechArea20200217/" class="md-nav__link">
         February 17, 2020
       </a>
     </li>
@@ -1978,7 +1995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200210/" class="md-nav__link">
+      <a href="../../2020/TechArea20200210/" class="md-nav__link">
         February 10, 2020
       </a>
     </li>
@@ -1990,7 +2007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200203/" class="md-nav__link">
+      <a href="../../2020/TechArea20200203/" class="md-nav__link">
         February 3, 2020
       </a>
     </li>
@@ -2002,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200127/" class="md-nav__link">
+      <a href="../../2020/TechArea20200127/" class="md-nav__link">
         January, 27 2020
       </a>
     </li>
@@ -2014,7 +2031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200113/" class="md-nav__link">
+      <a href="../../2020/TechArea20200113/" class="md-nav__link">
         January, 13 2020
       </a>
     </li>
@@ -2026,7 +2043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200106/" class="md-nav__link">
+      <a href="../../2020/TechArea20200106/" class="md-nav__link">
         January, 6 2020
       </a>
     </li>
@@ -2064,57 +2081,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#git-and-github-basics" class="md-nav__link">
-    Git and GitHub basics
+  <a href="#announcements" class="md-nav__link">
+    Announcements
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-shell-access-to-github" class="md-nav__link">
-    Getting shell access to GitHub
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting shell access to GitHub">
+    <nav class="md-nav" aria-label="Announcements">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-a-new-ssh-key-optional-but-recommended" class="md-nav__link">
-    Creating a new SSH key (optional but recommended)
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating a new SSH key (optional but recommended)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generating-the-key" class="md-nav__link">
-    Generating the key
+  <a href="#triage-duty" class="md-nav__link">
+    Triage Duty
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuring-ssh-to-use-the-key-for-github" class="md-nav__link">
-    Configuring SSH to use the key for GitHub
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-the-ssh-public-key-to-github" class="md-nav__link">
-    Adding the SSH public key to GitHub
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#testing-that-shell-access-works" class="md-nav__link">
-    Testing that shell access works
+  <a href="#jira-as-of-monday" class="md-nav__link">
+    Jira (as of Monday)
   </a>
   
 </li>
@@ -2125,16 +2108,69 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contribution-workflow" class="md-nav__link">
-    Contribution workflow
+  <a href="#osg-software-team" class="md-nav__link">
+    OSG Software Team
   </a>
+  
+    <nav class="md-nav" aria-label="OSG Software Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-update" class="md-nav__link">
+    Support Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#release-workflow" class="md-nav__link">
-    Release workflow
+  <a href="#osg-devops" class="md-nav__link">
+    OSG DevOps
   </a>
+  
+    <nav class="md-nav" aria-label="OSG DevOps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_1" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osg-release-team" class="md-nav__link">
+    OSG Release Team
+  </a>
+  
+    <nav class="md-nav" aria-label="OSG Release Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_2" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2150,167 +2186,246 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/software/git-software-development.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/opensciencegrid/technology/edit/master/docs/meetings/2021/TechArea20210803.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="git-software-development-workflow">Git software development workflow<a class="headerlink" href="#git-software-development-workflow" title="Permanent link">&para;</a></h1>
-<p>This document describes the development workflow for OSG software packages kept in GitHub. It is intended for people who wish to contribute to OSG software.</p>
-<h2 id="git-and-github-basics">Git and GitHub basics<a class="headerlink" href="#git-and-github-basics" title="Permanent link">&para;</a></h2>
-<p>If you are unfamiliar with Git and GitHub, the GitHub website has a good series of tutorials at <a href="https://help.github.com/categories/bootcamp/">https://help.github.com/categories/bootcamp/</a></p>
-<h2 id="getting-shell-access-to-github">Getting shell access to GitHub<a class="headerlink" href="#getting-shell-access-to-github" title="Permanent link">&para;</a></h2>
-<p>There are multiple ways of authenticating to GitHub from the shell. This section will cover using SSH keys. This is no longer the method recommended by GitHub, but is easier to set up for someone with existing SSH experience.</p>
-<p>The instructions here are derived from <a href="https://help.github.com/articles/generating-an-ssh-key/">GitHub's own instructions on using SSH keys</a>.</p>
-<h3 id="creating-a-new-ssh-key-optional-but-recommended">Creating a new SSH key (optional but recommended)<a class="headerlink" href="#creating-a-new-ssh-key-optional-but-recommended" title="Permanent link">&para;</a></h3>
-<p>If you already have an SSH keypair in your <code>~/.ssh</code> directory that you want to use for GitHub, you may skip this step. It is more secure, however, to create a new keypair specifically for use with GitHub.</p>
-<p>The instructions below will create an SSH public/private key pair with the private key stored in <code>~/.ssh/id_github</code> and public key stored in <code>~/.ssh/id_github.pub</code>.</p>
-<h4 id="generating-the-key">Generating the key<a class="headerlink" href="#generating-the-key" title="Permanent link">&para;</a></h4>
-<p>Use <code>ssh-keygen</code> to generate the SSH keypair. For <code>&lt;EMAIL_ADDRESS&gt;</code>, use the email address associated with your GitHub account.</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>ssh-keygen -t rsa -b <span class="m">4096</span> -f ~/.ssh/id_github -C &lt;EMAIL_ADDRESS&gt;
-</code></pre></div>
-
-<h4 id="configuring-ssh-to-use-the-key-for-github">Configuring SSH to use the key for GitHub<a class="headerlink" href="#configuring-ssh-to-use-the-key-for-github" title="Permanent link">&para;</a></h4>
-<p>Make sure SSH uses the new key by default to access GitHub. Create or edit <code>~/.ssh/config</code> and append the following lines:</p>
-<div class="codehilite"><pre><span></span><code>Host github.com
-<span class="hll">IdentityFile &lt;YOUR_HOME_DIR&gt;/.ssh/id_github
-</span></code></pre></div>
-
-<p>Where <YOUR_HOME_DIR> is the output of the command:
-<code>echo $HOME</code></p>
-<h3 id="adding-the-ssh-public-key-to-github">Adding the SSH public key to GitHub<a class="headerlink" href="#adding-the-ssh-public-key-to-github" title="Permanent link">&para;</a></h3>
-<p>Using the GitHub web interface:</p>
-<ol>
-<li>On the upper right of the screen, click on your profile picture</li>
-<li>In the menu that pops up, click "Settings"</li>
-<li>On the left-hand sidebar, click "SSH and GPG keys"</li>
-<li>In the top right of the "SSH keys" box, click "New SSH key"</li>
-<li>In the "Title" field of the dialog that pops up, enter a descriptive name for the key</li>
-<li>Open the public key file (e.g. <code>~/.ssh/id_github.pub</code> (don't forget the <code>.pub</code>)) in a text editor and copy its full contents to the clipboard</li>
-<li>In the "Key" field, paste the public key</li>
-<li>Below the "Key" field, click "Add SSH key"</li>
-</ol>
-<p>You should see your new key in the "SSH keys" list.</p>
-<h3 id="testing-that-shell-access-works">Testing that shell access works<a class="headerlink" href="#testing-that-shell-access-works" title="Permanent link">&para;</a></h3>
-<p>To verify you can authenticate to GitHub using SSH, SSH to <code>git@github.com</code>. You should see a message that 'you've successfully authenticated, but GitHub does not provide shell access.'</p>
-<h2 id="contribution-workflow">Contribution workflow<a class="headerlink" href="#contribution-workflow" title="Permanent link">&para;</a></h2>
-<p>We use the standard GitHub <a href="https://help.github.com/articles/using-pull-requests/">pull request</a> workflow for making contributions to OSG software.</p>
-<p>If you've never contributed to this project on GitHub before, do the following steps first:</p>
-<ol>
-<li>Using the GitHub web interface, fork the repo you wish to contribute to.</li>
-<li>
-<p>Make a clone of your forked repo on your local machine.</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git clone git@github.com:&lt;USERNAME/PROJECT&gt;
-</code></pre></div>
-
-<p>Where <code>&lt;USERNAME&gt;</code> is your github username and <code>&lt;PROJECT&gt;</code> is the name of the project you want to contribute to,
-e.g. in order to clone my local fork of the <code>openscience/technology</code> repository: </p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git clone https://github.com/ddavila0/technology.git
-</code></pre></div>
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you get a "Permission denied" error, your public key may not be set up with GitHub -- please see the "Getting shell access to GitHub" section above.</p>
-<p>If you get some other error, <a href="https://help.github.com/categories/ssh/">the GitHub page on SSH</a> may contain useful information on troubleshooting.</p>
-</div>
-</li>
-</ol>
-<p>Once you have your local repo, do the following:</p>
-<ol>
-<li>
-<p>Create a branch to hold changes that are related to the issue you are working on.
-   Give the <code>&lt;BRANCH&gt;</code> a name that will remind you of its purpose, including any relevant ticket numbers, such as
-   <code>SOFTWARE-2345.pathchange</code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git checkout -b &lt;BRANCH&gt;
-</code></pre></div>
-
-</li>
-<li>
-<p>Make your commits to this branch, then push the branch to your repo on GitHub.</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git push origin &lt;BRANCH&gt;
-</code></pre></div>
-
-<div class="admonition tip">
-<p class="admonition-title">The Art of Good Commits</p>
-<p>In addition to writing good code, it's important to organize your changes that are helpful to those viewing them
-in the future (including yourself!).
-This includes:</p>
+                <h1 id="osg-technology-area-meeting-27-july-2021">OSG Technology Area Meeting, 27 July 2021<a class="headerlink" href="#osg-technology-area-meeting-27-july-2021" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Splitting up changes into logically separate chunks (<code>git rebase</code> can be a helpful tool for this)</li>
-<li>Describing the "why" of the change in addition to the "what" and "how" (utilizing the commit body if necessary)</li>
-<li>Writing succint commit message titles in the imperative (limited to 72 chars)</li>
-<li>Including any relevant ticket numbers (e.g., <code>Change that default path (SOFTWARE-2345)</code>).</li>
+<li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
+    <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
+<li><strong>Attending:</strong></li>
 </ul>
-<p>See online guides such as <a href="https://dev.to/ruanbrandao/how-to-make-good-git-commits-256k">this one</a> for more details.</p>
-</div>
-</li>
-<li>
-<p>Select your branch in the GitHub web interface, then create a "pull request" against the original repo. Add a good description of your change into the message for the pull request. Enter a JIRA ticket number in the message to automatically link the pull request to the JIRA ticket.</p>
-</li>
-<li>
-<p>Request a review from the drop down menu on the right and wait for your pull request to be reviewed by a software team member.</p>
+<h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
+<h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
-<li>If the team member accepts your changes, they will merge your pull request, and your changes will be incorporated upstream. You may then delete the branch you created your pull request from.</li>
-<li>If your changes are rejected, then you may make additional changes to the branch that your pull request is for. Once you push the changes from your local repo to your GitHub repo, they will automatically be added to the pull request.</li>
+<li>This week: Carl</li>
+<li>Next week: Mat</li>
+<li>7 (+1) open FreshDesk tickets</li>
+<li>0 (+0) open GGUS ticket</li>
+</ul>
+<h3 id="jira-as-of-monday">Jira (as of Monday)<a class="headerlink" href="#jira-as-of-monday" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th># of tickets</th>
+<th>&Delta;</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>153</td>
+<td>+5</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>26</td>
+<td>+1</td>
+<td>Selected for Dev</td>
+</tr>
+<tr>
+<td>39</td>
+<td>+3</td>
+<td>In Progress</td>
+</tr>
+<tr>
+<td>11</td>
+<td>-1</td>
+<td>Dev Complete</td>
+</tr>
+<tr>
+<td>3</td>
+<td>+0</td>
+<td>Ready for Testing</td>
+</tr>
+<tr>
+<td>5</td>
+<td>+2</td>
+<td>Ready for Release</td>
+</tr>
+</tbody>
+</table>
+<h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Tim makeup doc focus: EL8 interest is increasing</li>
+<li>Doc focus Aug 20</li>
+<li>Release<ul>
+<li>AI (TimT): SciTokens credmon?</li>
+<li>AI (Carl): Move Gratia sub-tickets into RFT</li>
+<li>AI (Carl): Improve default ProbeConfig directory configuration</li>
 </ul>
 </li>
-</ol>
-<h2 id="release-workflow">Release workflow<a class="headerlink" href="#release-workflow" title="Permanent link">&para;</a></h2>
-<p>This section is intended for OSG Software team members or the primary developers of a software project (i.e. those that make releases). Some of the steps require direct write access the GitHub repo for the project owned by <code>opensciencegrid</code>. (If you can approve pull requests, you have write access).</p>
-<p>A release of a software is created from your local clone of a software project. Before you release, you need to make sure your local clone is in sync with the GitHub repo owned by <code>opensciencegrid</code> (the OSG repo):</p>
-<ol>
+<li>GSI Transition<ul>
+<li>AI (Carl): Directly query OSG COManage's LDAP for OSGID (SOFTWARE-4528)</li>
+<li>AI (Mat): Add API token authentication to Topology (SOFTWARE-4134)</li>
+<li>AI (BrianL): Get XRootD tests running with proxies again (SOFTWARE-4604)</li>
+</ul>
+</li>
+<li>OSG VO Backfill Containers<ul>
+<li>AI (Mat): Add support for limiting resources available to the osgvo-docker-pilot (SOFTWARE-4634)</li>
+<li>AI (BrianL): Add CI tests</li>
+</ul>
+</li>
+</ul>
+<h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
+<p>None this week</p>
+<h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Georgia Tech (BrianL): Gave them some AP HTCondor config that should prevent pilots from flocking out to pilots</li>
+<li>Lancium (BrianL, Mats): live backfill container debugging session that uncovered issues in the periodic health check
+    not properly detecting unrpiv Singularity.</li>
+</ul>
+<h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
+<ul>
+<li>StashCP go client is working and tested, and being tested by Christina now. Need to talk to Mats on packaging and releasing. (will follow up).  No news from Christina,</li>
+<li>Design document is done and is being distributed for xrootd monitoring collector NG (next gen).  Shoveler is working and lightly tested.  Now on to the collector.</li>
+<li>XRootD TCP plugin is ready for packaging.  Derek will follow up with software team on who to hand that off to.</li>
+<li>Discussions of xrootd-multiuser support for checksumming on-the-fly.  After a discussion, the checksum-on-the-fly funcationality will be ported to xrootd-multiuser.  Copied largely from xrootd-hdfs.  This does mean that out-of-order writes will not be supported.</li>
 <li>
-<p>If you haven't already, add the OSG repo as a "remote" to your repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git remote add upstream git@github.com:opensciencegrid/&lt;PROJECT&gt;
-</code></pre></div>
-
-<p>Where <code>&lt;PROJECT&gt;</code> is the name of the project you are going to release, e.g. <PROJECT> for <code>openscience/technology</code> repository it would be <code>technology.git</code></p>
+<p>More partners are asking about scitokens-cpp, and compatibility.  Expect some updates.</p>
+<ul>
+<li>Maybe we have been doing tokens wrong?  Use the `typ` rather than `ver`.</li>
+</ul>
 </li>
 <li>
-<p>Fetch changes from the OSG repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git fetch upstream
-</code></pre></div>
-
+<p>(Stalled, but need to get back to it) XRootD accounting information (from Frank):</p>
+<ul>
+<li>May need help with automating the process of generating these reports.  A month only takes a few minutes.  Longer periods take much longer.</li>
+<li>Table of working set, read, and re-read for monthly, quarterly, and year.</li>
+</ul>
 </li>
-<li>
-<p>Compare your branch you are releasing from (probably <code>master</code>) to its copy in the OSG repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git checkout master<span class="p">;</span> git diff upstream/master
-</code></pre></div>
-
-<p>There should be no differences.</p>
+</ul>
+<h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
+<p>None this week</p>
+<h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>3.5.41</th>
+<th>&Delta;</th>
+<th>Both</th>
+<th>&Delta;</th>
+<th>3.6</th>
+<th>&Delta;</th>
+<th>Total</th>
+<th>&Delta;</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>+0</td>
+<td>1</td>
+<td>+0</td>
+<td>3</td>
+<td>-1</td>
+<td>13</td>
+<td>-1</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>2</td>
+<td>+1</td>
+<td>2</td>
+<td>-1</td>
+<td>1</td>
+<td>+0</td>
+<td>5</td>
+<td>+0</td>
+<td>Selected for Development</td>
+</tr>
+<tr>
+<td>0</td>
+<td>+0</td>
+<td>2</td>
+<td>+1</td>
+<td>5</td>
+<td>+1</td>
+<td>7</td>
+<td>+2</td>
+<td>In Progress</td>
+</tr>
+<tr>
+<td>0</td>
+<td>+0</td>
+<td>3</td>
+<td>+1</td>
+<td>0</td>
+<td>+0</td>
+<td>3</td>
+<td>+1</td>
+<td>Development Complete</td>
+</tr>
+<tr>
+<td>3</td>
+<td>+1</td>
+<td>4</td>
+<td>+1</td>
+<td>0</td>
+<td>+0</td>
+<td>7</td>
+<td>+2</td>
+<td>Ready for Testing</td>
+</tr>
+<tr>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>+0</td>
+<td>Ready for Release</td>
+</tr>
+<tr>
+<td>14</td>
+<td>+2</td>
+<td>12</td>
+<td>+2</td>
+<td>9</td>
+<td>+0</td>
+<td>35</td>
+<td>+4</td>
+<td>Total</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Software<ul>
+<li>Ready for Testing<ul>
+<li>OSG 3.5-upcoming<ul>
+<li>HTCondor 9.0.2 + blahp 2.1.0</li>
+<li>XRootD 5.3.0</li>
+<li>XCache 2.0.1 (Python 3 conversion)</li>
+</ul>
 </li>
-<li>
-<p>Once this is done, release the software as you usually do. This process varies from one project to another, but often it involves running <code>make upstream</code> or similar. Check your project's <code>README</code> file for instructions.</p>
+</ul>
 </li>
-<li><strong>Test your software.</strong></li>
-<li>
-<p>Tag the commit that you made the release from. Git release tags are conventionally called <code>VERSION</code>, where <em>VERSION</em> is the version of the software you are releasing. So if you're releasing version 1.3.0, you would create the <code>&lt;TAG&gt;</code> <code>v1.3.0</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Once a tag has been pushed to the OSG repo, it should not be changed. Be sure the commit you want to tag is the final one you made the release from.</p>
-</div>
-<ol>
-<li>
-<p>Create the tag in your local repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git tag &lt;TAG&gt;
-</code></pre></div>
-
+<li>Ready for Release<ul>
+<li>Nothing Yet</li>
+</ul>
 </li>
-<li>
-<p>Push the tag to your own GitHub repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git push origin &lt;TAG&gt;
-</code></pre></div>
-
+</ul>
 </li>
-<li>
-<p>Push the tag to the OSG repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git push upstream &lt;TAG&gt;
-</code></pre></div>
-
+<li>Data<ul>
+<li>VO Package v114</li>
+</ul>
 </li>
-</ol>
+<li>Operations<ul>
+<li>Nothing</li>
+</ul>
 </li>
-</ol>
+<li>Contrib<ul>
+<li>Nothing</li>
+</ul>
+</li>
+</ul>
+<h3 id="discussion_2">Discussion<a class="headerlink" href="#discussion_2" title="Permanent link">&para;</a></h3>
+<p>None this week</p>
                 
               
               
@@ -2329,7 +2444,7 @@ This includes:</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../development-process/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../../../documentation/markdown-migration/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2338,19 +2453,19 @@ This includes:</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Development Process
+              Migrating Documents to Markdown
             </div>
           </div>
         </a>
       
       
-        <a href="../ce-test-scaling/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../TechArea20210727/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              CE Scale Testing
+              July 27, 2021
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2379,10 +2494,10 @@ This includes:</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d892486b.min.js"></script>
       
     
   </body>
