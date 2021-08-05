@@ -60,7 +60,11 @@ To do this, we use GitHub Actions to:
     1.  Search for and select "osg-bot"
     1.  Choose the "Write" role, and click the button to Add osg-bot to the repo.
         (The osg-bot user needs this permission in order to trigger automatic builds.)
-1. Ask the Software Manager to give this repo access to the `DOCKER_USERNAME` and `DOCKER_PASSWORD` organizational secrets
+1. Ask the Software Manager to give this repo access to the following organizational secrets
+   -   `DOCKER_USERNAME`
+   -   `DOCKER_PASSWORD`
+   -   `OSG_HARBOR_ROBOT_USER`
+   -   `OSG_HARBOR_ROBOT_PASSWORD`
 
 !!! note "Repository dispatch"
     Any repository that sends dispatches to another repository (e.g. `docker-software-base`, `docker-compute-entrypoint`)
