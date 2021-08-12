@@ -2292,26 +2292,19 @@
     limit of 400 starts/20 min</li>
 </ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Elasticsearch will need to be updated.  Working on a schedule.</li>
-<li>StashCP go client is working and tested, and being tested by Christina now. Need to talk to Mats on packaging and releasing. (will follow up).  No news from Christina,</li>
-<li>Design document is done and is being distributed for xrootd monitoring collector NG (next gen).  Shoveler is working and lightly tested.  Collector is 50% done.  Design document is still not reviewed, but moving foward anyways.</li>
-<li>XRootD TCP plugin is ready for packaging.  Derek will follow up with software team on who to hand that off to.</li>
-<li>Discussions of xrootd-multiuser support for checksumming on-the-fly.  After a discussion, the checksum-on-the-fly funcationality will be ported to xrootd-multiuser.  Copied largely from xrootd-hdfs.  This does mean that out-of-order writes will not be supported.</li>
-<li>
-<p>More partners are asking about scitokens-cpp, and compatibility.  Expect some updates.</p>
-<ul>
-<li>Maybe we have been doing tokens wrong?  Use the `typ` rather than `ver`.</li>
-</ul>
-</li>
-<li>
-<p>(Stalled, but need to get back to it) XRootD accounting information (from Frank):</p>
-<ul>
-<li>May need help with automating the process of generating these reports.  A month only takes a few minutes.  Longer periods take much longer.</li>
-<li>Table of working set, read, and re-read for monthly, quarterly, and year.</li>
-</ul>
-</li>
-</ul>
+<p>New:
+-   Request to inject entire HTCondor job classad into GRACC records.  Will require gratia-probe-condor changes.</p>
+<p>Ongoing:
+-   Elasticsearch will need to be updated, scheduled for last week in August.
+-   StashCP go client is working and tested, and being tested by Christina now. Need to talk to Mats on packaging and releasing. (will follow up).  No news from Christina,
+-   Design document is done and is being distributed for xrootd monitoring collector NG (next gen).  Shoveler is working and lightly tested.  Collector is 80% done.  Design document is still not reviewed, but moving foward anyways.
+-   Discussions of xrootd-multiuser support for checksumming on-the-fly.  After a discussion, the checksum-on-the-fly funcationality will be ported to xrootd-multiuser.  Copied largely from xrootd-hdfs.  This does mean that out-of-order writes will not be supported.</p>
+<p>Back burner:
+-   (Stalled, but need to get back to it) XRootD accounting information (from Frank):
+    -   May need help with automating the process of generating these reports.  A month only takes a few minutes.  Longer periods take much longer.
+    -   Table of working set, read, and re-read for monthly, quarterly, and year.
+-   XRootD TCP plugin is ready for packaging.  Derek will follow up with software team on who to hand that off to.
+    -   https://opensciencegrid.atlassian.net/browse/SOFTWARE-4744</p>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
