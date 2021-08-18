@@ -2219,7 +2219,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Carl, Marco, Marian, Mat, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -2296,11 +2296,23 @@
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <ul>
 <li>GRACC upgrade is planned for the end of August</li>
+<li>Diego noticed some condor_mapfile entries weren't matching if the incoming
+    cert had both commas and VOMS attributes.  There's a regex recipe that
+    fixes it, which needs to be documented (HTCONDOR-651)</li>
 </ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Brown (BrianL): authN failures with their GridFTP + XRootD setup</li>
 <li>Caltech (BrianL): investigated 8.8.15 stacktrace</li>
+<li>LIGO-WA &amp; LIGO-LA (Carl): invstigating missing probes in the
+    payload summary page</li>
+<li>GlideinWMS (Marco):<ul>
+<li>removed the code section in the user job wrapper that
+    tried to add condor_chirp; will be replaced with a
+    Python version</li>
+<li>3.7 release candidate still in progress</li>
+</ul>
+</li>
 </ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <p>New:
