@@ -50,7 +50,7 @@ CVMFS
         root@host # yum update
         root@host # yum install epel-release
         root@host # yum install yum-plugin-priorities
-        root@host # rpm -Uvh <https://repo.opensciencegrid.org/osg/3.3/osg-3.3-el7-release-latest.rpm>
+        root@host # rpm -Uvh <https://repo.opensciencegrid.org/osg/3.6/osg-3.6-el7-release-latest.rpm>
         root@host # yum install cvmfs cvmfs-server
 
 8. Configure web server and start it up. Edit `/etc/httpd/conf.d/cvmfs.conf`:
@@ -117,7 +117,7 @@ CVMFS
         root@host # yum update
         root@host # yum install epel-release
         root@host # yum install yum-plugin-priorities
-        root@host # rpm -Uvh <https://repo.opensciencegrid.org/osg/3.3/osg-3.3-el7-release-latest.rpm>
+        root@host # rpm -Uvh <https://repo.opensciencegrid.org/osg/3.6/osg-3.6-el7-release-latest.rpm>
         root@host # yum install cvmfs
 
 2. Upload a copy of the CVMFS repository's public key and place in `/etc/cvmfs/keys` directory.
@@ -167,7 +167,7 @@ CVMFS
     -   yum update
     -   yum install epel-release
     -   yum install yum-plugin-priorities
-    -   rpm -Uvh <https://repo.opensciencegrid.org/osg/3.3/osg-3.3-el7-release-latest.rpm>
+    -   rpm -Uvh <https://repo.opensciencegrid.org/osg/3.6/osg-3.6-el7-release-latest.rpm>
     -   yum install osg-oasis 
 2. Verify latest versions of cvmfs, cvmfs-config-osg, and cvmfs-x509-helper have been installed. 
 3. Edit fuse configuration.
