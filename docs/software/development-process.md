@@ -44,39 +44,9 @@ If you are unsure about which version number to increment in a software update, 
 Build Procedures
 ----------------
 
-### Verifying builds through Travis-CI
-
-Automatic build verification can be performed for each commit pushed to a GitHub repository with Travis CI.
-To enable this feature, the GitHub repository must meet the following criteria:
-
-1. Contains an `rpm/<REPO NAME>.spec` file that describes the RPM
-1. Enabled in [Travis CI](https://travis-ci.com/getting_started).
-   Repositories that are part of the `opensciencegrid` GitHub organization require special permission to enable.
-   Consult Brian or Mat.
-1. Contains `.travis.yml` file with the following contents, with `<KOJI_BUILD_TAG>` replaced by one of the tags from [this list](https://koji.opensciencegrid.org/koji/search?match=glob&type=tag&terms=*el%3F-build):
-
-        :::yaml
-        sudo: required
-        env:
-          - REPO_NAME=${TRAVIS_REPO_SLUG#*/}
-            KOJI_BUILD_TAG=<KOJI BUILD TAG>
-
-        git:
-          depth: false
-          quiet: true
-
-        services:
-          - docker
-
-        before_install:
-          - sudo apt-get update
-          - echo 'DOCKER_OPTS="-H tcp://127.0.0.1:2375 -H unix:///var/run/docker.sock -s devicemapper"' | sudo tee /etc/default/docker > /dev/null
-          - sudo service docker restart
-          - sleep 5
-          - sudo docker pull opensciencegrid/osg-build
-
-        script:
-          - docker run -v $(pwd):/$REPO_NAME -e REPO_NAME=$REPO_NAME -e KOJI_BUILD_TAG=$KOJI_BUILD_TAG --cap-add=SYS_ADMIN opensciencegrid/osg-build build-from-github
+<!-- TODO not written yet
+### Verifying builds through GitHub Actions
+-->
 
 ### Building packages for multiple OSG release series
 
