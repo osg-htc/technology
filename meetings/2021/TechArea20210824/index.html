@@ -2231,7 +2231,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> Brian, Carl, Derek, Marco, Marian, Mat, Tim</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2302,6 +2302,7 @@
 </li>
 <li>Other<ul>
 <li>AI (BrianL): Add backfill container CI tests</li>
+<li>AI (TimT): Release HTCondor 9.1.4; add a fix/patch for proxy delegation</li>
 </ul>
 </li>
 </ul>
@@ -2310,6 +2311,13 @@
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Colorado (BrianL): OSG-issued IGTF certs won't work because their IT won't issue a PTR pointing to the OSG domain</li>
+<li>Brown (Derek): Supporting Brown with their old XRootD configs</li>
+<li>Caltech (Derek)/LIGO (Carl): Debugging accounting information not showing up in the GRACC or in Gratia logs.
+    (These are two separate tickets for the same issue; BrianL will merge them)</li>
+<li>UERJ (Carl): Provided support for tuning GridFTP configuration</li>
+<li>Hosted CEs (Carl): Hosted CEs failed to quarantine history files because the Gratia probes run as the 'condor' user
+    and do not have write permission to the quarantine directory.
+    This results in zero-length jobs not being reported to GRACC</li>
 </ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <p>New:
