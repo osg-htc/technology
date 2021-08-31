@@ -2243,7 +2243,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> Brian, Carl, Derek, Marco, Marian, Mat, Tim</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <p>CE Token Hackathon 1-5pm today</p>
@@ -2317,9 +2317,31 @@
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>Mat and Marco should attend CE hackathon today; frontend admins should consider briefly joining.</li>
+<li>Marco investigating an incompatibility between a 3.6.5 factory (used at FNAL) and newer frontends.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>Marian:<ul>
+<li>Singularity issues at Utah.  Should assign ticket to Mats Rynge and add Mat as a watcher.</li>
+<li>HTCondor not properly handling CNAMEs in the IGWN central manager.
+    Admins should create an A record for now, but BrianB will ask the HTCondor developers to address the issue.</li>
+</ul>
+</li>
+<li>Carl:<ul>
+<li>Waiting for response from LIGO about their accounting issue.</li>
+<li>No follow-up yet from HTCondor devs for DUNE/TIFR.  Carl will examine the schedd log for any clues.</li>
+</ul>
+</li>
+<li>Mat:<ul>
+<li>Helping Andrew Melo with an overloaded schedd;
+    HTCondor developers have joined the conversation.</li>
+<li>Greg Daues at U Illinois hasn't responded regarding minor XRootD security issue they found.
+    Fix expected in XRootD 5.4.0; since it's security-related, it will also go into OSG 3.5-upcoming.</li>
+</ul>
+</li>
+</ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <p>New:
 -   Request to inject entire HTCondor job classad into GRACC records.  Will require gratia-probe-condor changes.
