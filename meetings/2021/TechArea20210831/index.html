@@ -2345,11 +2345,10 @@
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <p>New:
 -   Request to inject entire HTCondor job classad into GRACC records.  Will require gratia-probe-condor changes.
--   StashCP Go client is now being used and distributed with every OSPool Glidein!  Being used in the <code>stash:///</code> transfer plugin and starting to be used by Mats on his singularity image distribution.</p>
+-   Elasticsearch is being from 7.10.2 to 7.14.1.  Some downtime expected, but only momentarily.  No gratia probes or clients should notice.</p>
 <p>Ongoing:
--   Elasticsearch will need to be updated, scheduled for last week in August.  Planning ongoing.
--   Design document is done and is being distributed for xrootd monitoring collector NG (next gen).  Shoveler is working and lightly tested.  Collector is 90% done.  Design document is still not reviewed, but moving foward anyways.
--   Discussions of xrootd-multiuser support for checksumming on-the-fly.  After a discussion, the checksum-on-the-fly funcationality will be ported to xrootd-multiuser.  Copied largely from xrootd-hdfs.  This does mean that out-of-order writes will not be supported.</p>
+-   Shoveler is working and lightly tested.  Collector is 90% done.
+-   Checksums in xrootd-multiuser is 70% done.</p>
 <p>Back burner:
 -   (Stalled, but need to get back to it) XRootD accounting information (from Frank):
     -   May need help with automating the process of generating these reports.  A month only takes a few minutes.  Longer periods take much longer.
