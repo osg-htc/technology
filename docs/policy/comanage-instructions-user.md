@@ -11,7 +11,7 @@ with the OSG using their institutional identities with familiar single sign-on f
 Submitting an Application
 -------------------------
 
-To register with the OSG, submit an appplication using the self-signup process:
+To register with the OSG, submit an application using the self-signup process:
 
 1.  Visit <https://opensciencegrid.org/register>
 
