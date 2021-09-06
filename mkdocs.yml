@@ -55,6 +55,7 @@ nav:
     - Container Release Policy: 'policy/container-release.md'
     - 'Community Testing': 'policy/community-testing.md'
     - Registering with the OSG: 'policy/comanage-instructions-user.md'
+    - New OSPool User Registration: 'policy/new-ospool-user.md'
     - Approving COManage Registrations: 'policy/comanage-instructions-admin.md'
     - Handling Topology/Contacts Registrations: 'policy/topology-registration.md'
   - Documentation:
