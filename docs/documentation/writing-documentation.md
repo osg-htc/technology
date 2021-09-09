@@ -81,7 +81,7 @@ To contribute content to the OSG, follow these steps to submit a pull request wi
            e.g. `markdown-migration.md` or `cutting-release.md`
         1. Place the page in the relevant sub-folder of the `docs/` directory.
            If you are unsure of the appropriate location, note that in the description of the pull request.
-        1. Add the document to the `nav:` section of `mkdocs.yml` in [title case](http://titlecase.com/),
+        1. Add the document to the `nav:` section of `mkdocs.yml` in [APA-style title case](https://titlecaseconverter.com/?style=APA&showExplanations=1&keepAllCaps=1&multiLine=1&highlightChanges=1&convertOnPaste=1&straightQuotes=0),
            e.g. `- Migrating Documents to Markdown: 'software/markdown-migration.md'`
 
            !!!note

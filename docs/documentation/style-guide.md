@@ -20,7 +20,8 @@ Use the following conventions for headings:
 - The title should be the only level 1 heading
 - Level 1 headings should use the `====` format
 - Level 2 headings should use the `----` format
-- Use [Title Case](https://titlecase.com/) for level 1 and level 2 headings.
+- Use [APA-style title case](https://titlecaseconverter.com/?style=APA&showExplanations=1&keepAllCaps=1&multiLine=1&highlightChanges=1&convertOnPaste=1&straightQuotes=0)
+  for level 1 and level 2 headings.
   Only capitalize the first word for all other headings.
 - Other heading levels should use the appropriate number of `#`
 - Go no deeper than of level 5 headings

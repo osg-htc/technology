@@ -107,7 +107,7 @@ To see the converted document in your browser:
     - Document file names should be lowercase, `-` delimited, and descriptive but concise, e.g. `markdown-migration.md` or `cutting-release.md`
     - It's not important to get the name/location correct on the first try as this can be discussed in the pull request
 2. `sudo chown` the archived and converted documents to be owned by you
-3. Add the document to the `pages:` section of `mkdocs.yml` in [title case](http://titlecase.com/), e.g. `- Migrating Documents to Markdown: 'software/markdown-migration.md'`
+3. Add the document to the `pages:` section of `mkdocs.yml` in [APA-style title case](https://titlecaseconverter.com/?style=APA&showExplanations=1&keepAllCaps=1&multiLine=1&highlightChanges=1&convertOnPaste=1&straightQuotes=0), e.g. `- Migrating Documents to Markdown: 'software/markdown-migration.md'`
 4. Refresh the document tree in your browser
 
 Once you can view the converted document in your browser, move onto the [next section](#completing-the-conversion)
