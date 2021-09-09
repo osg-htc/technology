@@ -94,7 +94,7 @@ If you experience any problems with MyOSG or the topology repository, please con
 
 ### GRACC Accounting and WLCG Accounting ###
 
-No changes were made to the [GRACC accounting](https://gracc.opensciencegrid.org/dashboard/db/gracc-home?orgId=1)
+No changes were made to the [GRACC accounting](https://gracc.opensciencegrid.org/d/000000074/gracc-home?orgId=1)
 service during the service migration.
 
 If you experience any problems with GRACC accounting, please contact us at
