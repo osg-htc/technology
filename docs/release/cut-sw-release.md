@@ -223,18 +223,27 @@ find /p/vdt/workspace/tarball-client -maxdepth 1 -mtime +60 -name 3\* -exec rm -
 
 ### Step 7: Update the Docker WN client
 
-Update the GitHub repo at [opensciencegrid/docker-osg-wn](https://github.com/opensciencegrid/docker-osg-wn) using the `update-all` script found in [opensciencegrid/docker-osg-wn-scripts](https://github.com/opensciencegrid/docker-osg-wn-scripts). This requires push access to the `opensciencegrid/docker-osg-wn` repo.
+Update the GitHub repo at [opensciencegrid/docker-osg-wn](https://github.com/opensciencegrid/docker-osg-wn) using the
+`update-all` script found in
+[opensciencegrid/docker-osg-wn-scripts](https://github.com/opensciencegrid/docker-osg-wn-scripts).
+This requires push access to the `opensciencegrid/docker-osg-wn` repo and access to `dumbo.chtc.wisc.edu`.
 
-Instructions for using the script:
+1.  SSH into `dumbo.chtc.wisc.edu`
 
-```bash
-git clone git@github.com:opensciencegrid/docker-osg-wn-scripts.git
-git clone git@github.com:opensciencegrid/docker-osg-wn.git
-docker-osg-wn-scripts/update-all docker-osg-wn
-cd docker-osg-wn
-# Verify everything looks fine and run the 'git push' command
-# that 'update-all' should have printed
-```
+1.  Clone the necessary repositories:
+
+        git clone git@github.com:opensciencegrid/docker-osg-wn-scripts.git
+        git clone git@github.com:opensciencegrid/docker-osg-wn.git
+
+1.  Build and push the images:
+
+        docker-osg-wn-scripts/update-all docker-osg-wn
+
+1.  Check that everything is ok and update the `docker-osg-wn` branches using the `git push` command that the
+    `update-all` script should have printed:
+
+        cd docker-osg-wn
+        git push ...
 
 ### Step 8: Rebuild the Docker software base
 
