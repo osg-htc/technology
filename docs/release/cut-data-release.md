@@ -228,6 +228,10 @@ find /p/vdt/workspace/tarball-client -maxdepth 1 -mtime +60 -name 3\* -exec rm -
 
 ### Step 7: Update the Docker WN client
 
+!!! warning "Lengthy build time"
+    Until we resolve [SOFTWARE-4692](https://opensciencegrid.atlassian.net/browse/SOFTWARE-4692), the scripts have been
+    updated to build each image on the local host and push directly to Docker Hub so this process can take over an hour.
+
 Update the GitHub repo at [opensciencegrid/docker-osg-wn](https://github.com/opensciencegrid/docker-osg-wn) using the
 `update-all` script found in
 [opensciencegrid/docker-osg-wn-scripts](https://github.com/opensciencegrid/docker-osg-wn-scripts).
@@ -239,6 +243,10 @@ This requires push access to the `opensciencegrid/docker-osg-wn` repo and access
 
         git clone git@github.com:opensciencegrid/docker-osg-wn-scripts.git
         git clone git@github.com:opensciencegrid/docker-osg-wn.git
+
+1.  Enter your Docker Hub user name and password to be able to directly push images:
+
+        docker login
 
 1.  Build and push the images:
 
