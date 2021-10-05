@@ -223,35 +223,14 @@ find /p/vdt/workspace/tarball-client -maxdepth 1 -mtime +60 -name 3\* -exec rm -
 
 ### Step 7: Update the Docker WN client
 
-!!! warning "Lengthy build time"
-    Until we resolve [SOFTWARE-4692](https://opensciencegrid.atlassian.net/browse/SOFTWARE-4692), the scripts have been
-    updated to build each image on the local host and push directly to Docker Hub so this process can take over an hour.
+The GitHub repository at [opensciencegrid/docker-osg-wn](https://github.com/opensciencegrid/docker-osg-wn) controls the
+contents and tags pushed for the [opensciencegrid/osg-wn](https://hub.docker.com/r/opensciencegrid/osg-wn/) container image.
 
-Update the GitHub repo at [opensciencegrid/docker-osg-wn](https://github.com/opensciencegrid/docker-osg-wn) using the
-`update-all` script found in
-[opensciencegrid/docker-osg-wn-scripts](https://github.com/opensciencegrid/docker-osg-wn-scripts).
-This requires push access to the `opensciencegrid/docker-osg-wn` repo and access to `dumbo.chtc.wisc.edu`.
+1.  Navigate to the [build/push workflow](https://github.com/opensciencegrid/docker-osg-wn/actions/workflows/build-container.yml)
 
-1.  SSH into `dumbo.chtc.wisc.edu`
+1.  Click the `Run workflow` button and select the `master` branch
 
-1.  Clone the necessary repositories:
-
-        git clone git@github.com:opensciencegrid/docker-osg-wn-scripts.git
-        git clone git@github.com:opensciencegrid/docker-osg-wn.git
-
-1.  Enter your Docker Hub user name and password to be able to directly push images:
-
-        docker login
-
-1.  Build and push the images:
-
-        docker-osg-wn-scripts/update-all docker-osg-wn
-
-1.  Check that everything is ok and update the `docker-osg-wn` branches using the `git push` command that the
-    `update-all` script should have printed:
-
-        cd docker-osg-wn
-        git push ...
+1.  Verify that all builds succeed
 
 ### Step 8: Rebuild the Docker software base
 
