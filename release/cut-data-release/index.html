@@ -2654,45 +2654,17 @@ remove them:</p>
 </code></pre></div>
 
 <h3 id="step-7-update-the-docker-wn-client">Step 7: Update the Docker WN client<a class="headerlink" href="#step-7-update-the-docker-wn-client" title="Permanent link">&para;</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Lengthy build time</p>
-<p>Until we resolve <a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-4692">SOFTWARE-4692</a>, the scripts have been
-updated to build each image on the local host and push directly to Docker Hub so this process can take over an hour.</p>
-</div>
-<p>Update the GitHub repo at <a href="https://github.com/opensciencegrid/docker-osg-wn">opensciencegrid/docker-osg-wn</a> using the
-<code>update-all</code> script found in
-<a href="https://github.com/opensciencegrid/docker-osg-wn-scripts">opensciencegrid/docker-osg-wn-scripts</a>.
-This requires push access to the <code>opensciencegrid/docker-osg-wn</code> repo and access to <code>dumbo.chtc.wisc.edu</code>.</p>
+<p>The GitHub repository at <a href="https://github.com/opensciencegrid/docker-osg-wn">opensciencegrid/docker-osg-wn</a> controls the
+contents and tags pushed for the <a href="https://hub.docker.com/r/opensciencegrid/osg-wn/">opensciencegrid/osg-wn</a> container image.</p>
 <ol>
 <li>
-<p>SSH into <code>dumbo.chtc.wisc.edu</code></p>
+<p>Navigate to the <a href="https://github.com/opensciencegrid/docker-osg-wn/actions/workflows/build-container.yml">build/push workflow</a></p>
 </li>
 <li>
-<p>Clone the necessary repositories:</p>
-<div class="codehilite"><pre><span></span><code>git clone git@github.com:opensciencegrid/docker-osg-wn-scripts.git
-git clone git@github.com:opensciencegrid/docker-osg-wn.git
-</code></pre></div>
-
+<p>Click the <code>Run workflow</code> button and select the <code>master</code> branch</p>
 </li>
 <li>
-<p>Enter your Docker Hub user name and password to be able to directly push images:</p>
-<div class="codehilite"><pre><span></span><code>docker login
-</code></pre></div>
-
-</li>
-<li>
-<p>Build and push the images:</p>
-<div class="codehilite"><pre><span></span><code>docker-osg-wn-scripts/update-all docker-osg-wn
-</code></pre></div>
-
-</li>
-<li>
-<p>Check that everything is ok and update the <code>docker-osg-wn</code> branches using the <code>git push</code> command that the
-    <code>update-all</code> script should have printed:</p>
-<div class="codehilite"><pre><span></span><code>cd docker-osg-wn
-git push ...
-</code></pre></div>
-
+<p>Verify that all builds succeed</p>
 </li>
 </ol>
 <h3 id="step-8-rebuild-the-docker-software-base">Step 8: Rebuild the Docker software base<a class="headerlink" href="#step-8-rebuild-the-docker-software-base" title="Permanent link">&para;</a></h3>
