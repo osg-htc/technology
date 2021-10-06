@@ -2303,7 +2303,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong> BrianL, Carl, Derek, Marco Mambelli, Marian, Mat, TimT</li>
+<li><strong>Attending:</strong> BrianL, Carl, Marco Mambelli, Marian, Mat, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2373,13 +2373,24 @@
 <li>AI (Carl): Merge Topology and CILogon contact data (SOFTWARE-4734)</li>
 <li>AI (BrianL): Add Singularity backfill container CI tests (SOFTWARE-4726)</li>
 <li>AI (Carl): Add Topology endpoint for querying resources tied to VOs</li>
+<li>AI (BrianL/HTCondor developers): Make internal documentation for how to add SciTokens to a CE in preparation for the token workshop</li>
+<li>AI (Mat): Review remaining issues for the Let's Encrypt CA expiration fire.</li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>Marco: Debugging glideinWMS compatibility issues with HTCondor 9.0.6; attempting to install 9.0.1 for testing but having dependency issues.
+    Brian says that it's a frequent issue when trying to install old versions of HTCondor on EL7.
+    Mat suggests trying the HTCondor Docker images if a 9.0.1 version is available.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>TimT: Justas (Caltech) is requesting additional GPU attributes in the job classad; Tim will link him up with one of the HTCondor developers directly.</li>
+<li>Carl: There is no easy upgrade path to the Python 3 version of gfal2-util due to RPM dependency issues;
+    filed a ticket with EPEL, will try to contact developers directly if there's no response to the ticket.</li>
+<li>Marian: Continuing to support LIGO with using IDTOKEN authentication.</li>
+</ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <p>New:
 -   Request to inject entire HTCondor job classad into GRACC records.  Will require gratia-probe-condor changes.</p>
