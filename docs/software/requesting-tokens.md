@@ -21,8 +21,8 @@ Before you can request the appropriate tokens, you must have the following:
 Requesting Tokens
 -----------------
 
-[oidc-agent](https://indigo-dc.gitbook.io/oidc-agent/) is similar to SSH agent except that it works with OpenID Connect
-token providers.
+[oidc-agent](https://indigo-dc.gitbook.io/oidc-agent/) is a process that runs in the background that can request access
+and refresh tokens from OpenID Connect token providers.
 
 ### Using a container
 
