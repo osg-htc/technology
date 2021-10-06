@@ -338,4 +338,4 @@ Further reading
 
 -   Official Koji documentation: <https://docs.pagure.org/koji/>
 -   Fedora's koji documentation: <https://fedoraproject.org/wiki/Koji>
--   Fedora's "Using Koji" page: <https://fedoraproject.org/wiki/Using_the_Koji_build_system> Note that some instructions there may not apply to OSG's Koji. For the most part though, they are useful.
+-   Fedora's "Using Koji" page: <https://docs.fedoraproject.org/en-US/package-maintainers/Using_the_Koji_Build_System/> Note that some instructions there may not apply to OSG's Koji. For the most part though, they are useful.
