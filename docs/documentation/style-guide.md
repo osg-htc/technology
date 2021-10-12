@@ -113,7 +113,7 @@ Use descriptive, all-caps text wrapped in angle brackets to to highlight areas t
 specific to their site, e.g. `<REMOTE SSH HOSTNAME>`.
 The same text should be cited verbatim in surrounding prose with further explanation with examples of appropriate values.
 For additional visual highlighting,
-use [hl_lines="N"](https://squidfunk.github.io/mkdocs-material/extensions/codehilite/#highlighting-specific-lines),
+use [hl_lines="N"](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#highlighting-specific-lines),
 where `N` can indicate multiple line numbers:
 
 ~~~console
@@ -144,7 +144,7 @@ When constructing lists, use the following guidelines:
   following formatting:
     - For code blocks or file snippets, add an empty line after any regular text, then insert `(N+1)*4` spaces at the
       beginning of each line, where N is the level of the item in the list. To apply code highlighting, start the code
-      block with `:::<FORMAT>`; see [this page](http://squidfunk.github.io/mkdocs-material/extensions/codehilite/) for
+      block with `:::<FORMAT>`; see [this page](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) for
       details, including possible highlighting formats.  For an example of formatting a code section inside a list, see
       [the release series document](https://github.com/opensciencegrid/docs/blame/fd631cfa594b0726e021584dc12d9cf2a3a69206/docs/release/release_series.md#L110-L118).
     - For additional text (i.e. after a code block), insert `N*4` spaces at the beginning of each line, where N is the
@@ -218,4 +218,4 @@ and
     if a user doesn't do this thing, bad stuff will happen
 
 For a full list of admonition styles, see the documentation
-[here](https://squidfunk.github.io/mkdocs-material/extensions/admonition/).
+[here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/).
