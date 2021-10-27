@@ -84,12 +84,12 @@ To contribute content to the OSG, follow these steps to submit a pull request wi
         1. Add the document to the `nav:` section of `mkdocs.yml` in [APA-style title case](https://titlecaseconverter.com/?style=APA&showExplanations=1&keepAllCaps=1&multiLine=1&highlightChanges=1&convertOnPaste=1&straightQuotes=0),
            e.g. `- Migrating Documents to Markdown: 'software/markdown-migration.md'`
 
-           !!!note
-               If `mkdocs.yml` contains does not contain a `nav:` section,
-               add the above to the `pages:` section instead.
-               This means that the repository is using an older version of MkDocs
-               and will need to be
-               [transitioned to GitHub Actions](publish-osg-pages.md#transitioning-to-github-actions).
+            !!! note
+                If `mkdocs.yml` contains does not contain a `nav:` section,
+                add the above to the `pages:` section instead.
+                This means that the repository is using an older version of MkDocs
+                and will need to be
+                [transitioned to GitHub Actions](publish-osg-pages.md#transitioning-to-github-actions).
 
         1. If you are writing site administrator documentation, following the [suggested document layout](#document-layout)
 
