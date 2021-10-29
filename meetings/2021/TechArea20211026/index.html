@@ -1150,46 +1150,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#osg-devops" class="md-nav__link">
-    OSG DevOps
-  </a>
-  
-    <nav class="md-nav" aria-label="OSG DevOps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discussion_1" class="md-nav__link">
-    Discussion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#osg-release-team" class="md-nav__link">
-    OSG Release Team
-  </a>
-  
-    <nav class="md-nav" aria-label="OSG Release Team">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discussion_2" class="md-nav__link">
-    Discussion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2278,46 +2238,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#osg-devops" class="md-nav__link">
-    OSG DevOps
-  </a>
-  
-    <nav class="md-nav" aria-label="OSG DevOps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discussion_1" class="md-nav__link">
-    Discussion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#osg-release-team" class="md-nav__link">
-    OSG Release Team
-  </a>
-  
-    <nav class="md-nav" aria-label="OSG Release Team">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discussion_2" class="md-nav__link">
-    Discussion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2339,7 +2259,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong></li>
+<li><strong>Attending:</strong> BrianL, Mat, Marco Mambelli</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
@@ -2402,36 +2322,15 @@
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
-<h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
-<h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
-<p>New:
--   Transition to IDTOKENs for IGWN, JLab, GLUEX
--   Shoveler and Collector is tested, and UNL is using it in production now.
-    - Now writing docs on how to run the shoveler.</p>
-<p>Ongoing:
--   Request to inject entire HTCondor job classad into GRACC records. Will require gratia-probe-condor changes.  </p>
-<p>Back burner:
--   (Stalled, but need to get back to it) XRootD accounting information (from Frank):
-    -   May need help with automating the process of generating these reports.  A month only takes a few minutes.  Longer periods take much longer.
-    -   Table of working set, read, and re-read for monthly, quarterly, and year.
--   XRootD TCP plugin is ready for packaging.  Derek will follow up with software team on who to hand that off to.
-    -   https://opensciencegrid.atlassian.net/browse/SOFTWARE-4744</p>
-<h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
-<h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
+<p>There were some reports of user jobs failing in OSPool backfill containers due to insufficient storage space in <code>/tmp</code>.
+OSPool jobs almost always run inside Singularity containers and GlideinWMS has mechanisms that will decide what to mount
+from the host (in this case the backfill container), into <code>/tmp</code> inside the Singularity container:</p>
 <ul>
-<li>Ready for Testing<ul>
-<li>Nothing</li>
+<li><a href="https://github.com/glideinWMS/glideinwms/blob/fa3babd2452c7deeb2b8de543595aa2412ddef7b/creation/web_base/glidein_startup.sh#L591">https://github.com/glideinWMS/glideinwms/blob/fa3babd2452c7deeb2b8de543595aa2412ddef7b/creation/web_base/glidein_startup.sh#L591</a></li>
+<li><a href="https://github.com/glideinWMS/glideinwms/blob/fa3babd2452c7deeb2b8de543595aa2412ddef7b/creation/web_base/singularity_lib.sh#L1639">https://github.com/glideinWMS/glideinwms/blob/fa3babd2452c7deeb2b8de543595aa2412ddef7b/creation/web_base/singularity_lib.sh#L1639</a></li>
 </ul>
-</li>
-<li>Ready for Release<ul>
-<li>Nothing</li>
-</ul>
-</li>
-</ul>
-<h3 id="discussion_2">Discussion<a class="headerlink" href="#discussion_2" title="Permanent link">&para;</a></h3>
+<p>It'd be worth checking to verify that the affected user jobs were running inside Singularity.</p>
+<h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
                 
               
