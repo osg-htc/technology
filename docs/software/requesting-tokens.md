@@ -26,103 +26,138 @@ and refresh tokens from OpenID Connect token providers.
 
 ### Using a container
 
-1. Start an agent container in the background and name it `my-agent` to easily run subsequent commands against it:
+1. Registering a new profile:
 
-        :::console
-        docker run -d --name my-agent opensciencegrid/oidc-agent:release
+    1. Start an agent container in the background and name it `my-agent` to easily run subsequent commands against it:
 
-1. Generate a local client profile and follow the prompts:
+            :::console
+            docker run -d --name my-agent opensciencegrid/oidc-agent:release
 
-        :::console
-        docker exec -it my-agent oidc-gen -w device <CLIENT NAME>
+    1. Generate a local client profile and follow the prompts:
 
-    1. Specify the WLCG INDIGO IAM instance as the client issuer:
+            :::console
+            docker exec -it my-agent oidc-gen -w device <CLIENT PROFILE>
 
-            Issuer [https://iam-test.indigo-datacloud.eu/]: https://wlcg.cloud.cnaf.infn.it/
+        1. Specify the WLCG INDIGO IAM instance as the client issuer:
 
-    1. Request `wlcg`, `offline_access`, and other scopes for the capabilities that you need:
+                Issuer [https://iam-test.indigo-datacloud.eu/]: https://wlcg.cloud.cnaf.infn.it/
 
-        | **Capability**   | **Scope**                     |
-        |------------------|-------------------------------|
-        | HTCondor `READ`  | `compute.read`                |
-        | HTCondor `WRITE` | `compute.modify compute.cancel compute.create` |
-        | XRootD read      | `read:/`                      |
-        | XRootD write     | `write:/`                     |
+        1. Request `wlcg`, `offline_access`, and other scopes for the capabilities that you need:
 
-        For example, to request HTCondor `READ` and `WRITE` access, specify the following scopes:
+            | **Capability**   | **Scope**                     |
+            |------------------|-------------------------------|
+            | HTCondor `READ`  | `compute.read`                |
+            | HTCondor `WRITE` | `compute.modify compute.cancel compute.create` |
+            | XRootD read      | `read:/`                      |
+            | XRootD write     | `write:/`                     |
 
-            This issuer supports the following scopes: openid profile email address phone offline_access wlcg iam wlcg.groups
-            Space delimited list of scopes or 'max' [openid profile offline_access]: wlcg offline_access compute.read compute.modify compute.cancel compute.create
+            For example, to request HTCondor `READ` and `WRITE` access, specify the following scopes:
+
+                This issuer supports the following scopes: openid profile email address phone offline_access wlcg iam wlcg.groups
+                Space delimited list of scopes or 'max' [openid profile offline_access]: wlcg offline_access compute.read compute.modify compute.cancel compute.create
     
-        Note that, prior to HTCondor 8.9.7, the server also needed `condor:/ALLOW` in all cases.
+            Note that, prior to HTCondor 8.9.7, the server also needed `condor:/ALLOW` in all cases.
 
-    1. When prompted, open <https://wlcg.cloud.cnaf.infn.it/device> in a browser, enter the code provided by `oidc-gen`,
+        1. When prompted, open <https://wlcg.cloud.cnaf.infn.it/device> in a browser, enter the code provided by `oidc-gen`,
        and click "Submit".
 
-    1. On the next page, verify the scopes and client profile name, and click "Authorize".
+        1. On the next page, verify the scopes and client profile name, and click "Authorize".
 
-    1. Enter a password to encrypt your local client profile.
+        1. Enter a password to encrypt your local client profile.
        You'll need to remember this if you want to re-use this profile in subsequent sessions.
 
-1. Request a token using the client name that you used above with `oidc-gen`:
+1. Request a token using the client profile that you used above with `oidc-gen`:
 
-        :::console
-        docker exec -it my-agent oidc-token --aud="<SERVER AUDIENCE>" <CLIENT NAME>
+    !!! note
+        You must first [register a new profile](#using-a-container)
+	
+    1. Request token:
 
-   For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to `<CE FQDN>:<CE PORT>`.
+            :::console
+            docker exec -it my-agent oidc-token --aud="<SERVER AUDIENCE>" <CLIENT PROFILE>
 
-1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
+
+    1. For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to  
+    `<CE FQDN>:<CE PORT>`.
+
+        1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
    XRootD client.
+
+1. Reload a profile:
+
+    1. Required if you restart the running container:
+
+            docker exec -it my-agent oidc-add <CLIENT PROFILE>
+
+    1. Enter password used to encrypt your `<CLIENT PROFILE>` created during profile registration.
+
 
 ### Using an RPM
 
-1. Start the agent and add the appropriate variables to your environment:
+1. Registering a new profile:
 
-        :::console
-        eval `oidc-agent`
+    1. Start the agent and add the appropriate variables to your environment:
 
-1. Generate a local client profile and follow the prompts:
+            :::console
+            eval `oidc-agent`
 
-        :::console
-        oidc-gen -w device <CLIENT NAME>
+    1. Generate a local client profile and follow the prompts:
 
-    1. Specify the WLCG INDIGO IAM instance as the client issuer:
+            :::console
+            oidc-gen -w device <CLIENT PROFILE>
 
-            Issuer [https://iam-test.indigo-datacloud.eu/]: https://wlcg.cloud.cnaf.infn.it/
+        1. Specify the WLCG INDIGO IAM instance as the client issuer:
 
-    1. Request `wlcg`, `offline_access`, and other scopes for the capabilities that you need:
+                Issuer [https://iam-test.indigo-datacloud.eu/]: https://wlcg.cloud.cnaf.infn.it/
 
-        | **Capability**   | **Scope**                     |
-        |------------------|-------------------------------|
-        | HTCondor `READ`  | `compute.read`                |
-        | HTCondor `WRITE` | `compute.modify compute.cancel compute.create` |
-        | XRootD read      | `read:/`                      |
-        | XRootD write     | `write:/`                     |
+        1. Request `wlcg`, `offline_access`, and other scopes for the capabilities that you need:
 
-        For example, to request HTCondor `READ` and `WRITE` access, specify the following scopes:
+            | **Capability**   | **Scope**                     |
+            |------------------|-------------------------------|
+            | HTCondor `READ`  | `compute.read`                |
+            | HTCondor `WRITE` | `compute.modify compute.cancel compute.create` |
+            | XRootD read      | `read:/`                      |
+            | XRootD write     | `write:/`                     |
 
-            This issuer supports the following scopes: openid profile email address phone offline_access wlcg iam wlcg.groups
-            Space delimited list of scopes or 'max' [openid profile offline_access]: wlcg offline_access compute.read compute.modify compute.cancel compute.create
+            For example, to request HTCondor `READ` and `WRITE` access, specify the following scopes:
+
+                This issuer supports the following scopes: openid profile email address phone offline_access wlcg iam wlcg.groups
+                Space delimited list of scopes or 'max' [openid profile offline_access]: wlcg offline_access compute.read compute.modify compute.cancel compute.create
     
-        Note that, prior to HTCondor 8.9.7, the server also needed `condor:/ALLOW` in all cases.
+            Note that, prior to HTCondor 8.9.7, the server also needed `condor:/ALLOW` in all cases.
 
-    1. When prompted, open <https://wlcg.cloud.cnaf.infn.it/device> in a browser, enter the code provided by `oidc-gen`,
+        1. When prompted, open <https://wlcg.cloud.cnaf.infn.it/device> in a browser, enter the code provided by `oidc-gen`,
        and click "Submit".
 
-    1. On the next page, verify the scopes and client profile name, and click "Authorize".
+        1. On the next page, verify the scopes and client profile name, and click "Authorize".
 
-    1. Enter a password to encrypt your local client profile.
-       You'll need to remember this if you want to re-use this profile in subsequent sessions.
+        1. Enter a password to encrypt your local client profile.
+           You'll need to remember this if you want to re-use this profile in subsequent sessions.
 
-1. Request a token using the client name that you used above with `oidc-gen`:
+1. Request a token using the client profile that you used above with `oidc-gen`:
 
-        :::console
-        oidc-token --aud="<SERVER AUDIENCE>" <CLIENT NAME>
+    !!! note
+        You must first [register a new profile](#using-an-rpm)
 
-   For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to `<CE FQDN>:<CE PORT>`.
+    1. Request token:
 
-1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
+            :::console
+            oidc-token --aud="<SERVER AUDIENCE>" <CLIENT PROFILE>
+
+    1. For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to  
+    `<CE FQDN>:<CE PORT>`.
+
+        1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
    XRootD client.
+
+1. Reload a profile:
+
+    1. Required if you log out of the running machine:
+
+            :::console
+            oidc-add <CLIENT PROFILE>
+
+    1. Enter password used to encrypt your `<CLIENT PROFILE>` created during profile registration.
 
 Troubleshooting Tokens
 ----------------------
