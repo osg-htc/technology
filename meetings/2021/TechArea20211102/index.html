@@ -2351,7 +2351,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Marian, Mat, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -2408,18 +2408,24 @@
 <li>Release<ul>
 <li>AI (Mat, BrianL): XRootD in OSG 3.6 (SOFTWARE-4494)</li>
 <li>AI (Mat) review <code>xrootd-multiuser</code> and <code>osg-ca-certs-updater</code> promotion requests</li>
-<li>AI (Carl): Create new gratia-probe-condor-ap package (SOFTWARE-4846)</li>
+<li>AI (Carl, BrianL): Create new gratia-probe-condor-ap package (SOFTWARE-4846)</li>
 <li>AI (Carl, BrianL): osg-pki-tools in OSG 3.6 (SOFTWARE-4786)</li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>HTCondor 9.0.7 and 9.3.0 expected later today</li>
+<li>HTCondor credmon requires python-scitokens but it's currently shipped only in OSG repos, not EPEL,
+    meaning it's not available for UW builds of HTCondor.  TimT will decide if it's better
+    to also ship python-scitokens in the HTCondor repos, or try and get it into EPEL.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>University of Colorado (BrianL): they were not receiving payload jobs, had them redeploy with updated containers and
     it appears that things are working ok now</li>
 <li>JLab (BrianL): help talk them through setting up a token issuer</li>
+<li>JLab (Marian): debugging why their new schedd does not show up in the VO Summary</li>
 </ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <p>New:
