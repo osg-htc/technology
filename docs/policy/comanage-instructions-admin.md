@@ -48,13 +48,13 @@ Troubleshooting
 
 1.  Under the `People` drop-down on the left,  click on `My Population`
 
-1.  Browse to the ``CO Person`` record.
+1.  Browse to the `CO Person` record.
 
-1.  Scroll down to the ``Role``, click ``Edit``, and set the status for the ``Role`` to ``Active``.
+1.  Scroll down to the `Role`, click `Edit`, and set the status for the `Role` to `Active`.
 
-1.  Verify that the overall status of the ``CO Person`` record is ``Active``.  If not, change it to ``Active`` as well.
+1.  Verify that the overall status of the `CO Person` record is `Active`.  If not, change it to `Active` as well.
 
-1.  Click on ``Autogenerate Identifiers`` on the right, so that the necessary identifiers are created.
+1.  Click on `Autogenerate Identifiers` on the right, so that the necessary identifiers are created.
 
-1.  Now that the necessary identifiers exist for the ``CO Person`` record, the LDAP DN can be computed and the record
-    provisioned in LDAP. To make sure, click on ``Provisioned Services`` and then  ``Provision``.
+1.  Now that the necessary identifiers exist for the `CO Person` record, the LDAP DN can be computed and the record
+    provisioned in LDAP. To make sure, click on `Provisioned Services` and then  `Provision`.
