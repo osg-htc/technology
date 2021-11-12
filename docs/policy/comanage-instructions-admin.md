@@ -46,6 +46,8 @@ Troubleshooting
 
 ### The COManage petition is stuck in the "confirmed" state
 
+1.  Under the `People` drop-down on the left,  click on `My Population`
+
 1.  Browse to the ``CO Person`` record.
 
 1.  Scroll down to the ``Role``, click ``Edit``, and set the status for the ``Role`` to ``Active``.
