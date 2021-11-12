@@ -840,9 +840,51 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Approving COManage Registrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Approving COManage Registrations
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-comanage-petition-is-stuck-in-the-confirmed-state" class="md-nav__link">
+    The COManage petition is stuck in the "confirmed" state
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2126,6 +2168,34 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-comanage-petition-is-stuck-in-the-confirmed-state" class="md-nav__link">
+    The COManage petition is stuck in the "confirmed" state
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2184,6 +2254,29 @@ go to the <a href="../comanage-instructions-user/">Registering for the OSG COMan
 (the first link will give them "Permission Denied" and
 the second link will merely allow them to "acknowledge" that they received the email).</p>
 <p>If the user asks, reassure them that they are registered and no further action needs to be taken.</p>
+</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="the-comanage-petition-is-stuck-in-the-confirmed-state">The COManage petition is stuck in the "confirmed" state<a class="headerlink" href="#the-comanage-petition-is-stuck-in-the-confirmed-state" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Under the <code>People</code> drop-down on the left,  click on <code>My Population</code></p>
+</li>
+<li>
+<p>Browse to the <code>CO Person</code> record.</p>
+</li>
+<li>
+<p>Scroll down to the <code>Role</code>, click <code>Edit</code>, and set the status for the <code>Role</code> to <code>Active</code>.</p>
+</li>
+<li>
+<p>Verify that the overall status of the <code>CO Person</code> record is <code>Active</code>.  If not, change it to <code>Active</code> as well.</p>
+</li>
+<li>
+<p>Click on <code>Autogenerate Identifiers</code> on the right, so that the necessary identifiers are created.</p>
+</li>
+<li>
+<p>Now that the necessary identifiers exist for the <code>CO Person</code> record, the LDAP DN can be computed and the record
+    provisioned in LDAP. To make sure, click on <code>Provisioned Services</code> and then  <code>Provision</code>.</p>
 </li>
 </ol>
                 
