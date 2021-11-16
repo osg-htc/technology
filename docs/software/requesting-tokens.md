@@ -65,7 +65,7 @@ and refresh tokens from OpenID Connect token providers.
 ### Requesting access tokens
 
 !!! note
-    You must first [register a new profile](#registering-an-oidc-profile)
+    You must first [register a new profile](#registering-an-oidc-profile).
 
 1. Request a token using the client profile that you used with `oidc-gen`:
 	
@@ -73,7 +73,7 @@ and refresh tokens from OpenID Connect token providers.
         docker exec -it my-agent oidc-token --aud="<SERVER AUDIENCE>" <CLIENT PROFILE>
 
 
-For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to  
+    For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to  
     `<CE FQDN>:<CE PORT>`.
 
   1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
@@ -82,11 +82,17 @@ For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to
 ### Reloading an OIDC profile
 
 !!! note
-    Required after restarting the running container.
+    Required after restarting the running container. You must have an existing [registered profile](#registering-an-oidc-profile).
 
 1. Reload profile:
 
+            :::console
             docker exec -it my-agent oidc-add <CLIENT PROFILE>
+
+    1. If your existing container is not already running, start it:
+
+                :::console
+                docker start my-agent
 
 1. Enter password used to encrypt your `<CLIENT PROFILE>` created during profile registration.
 
@@ -135,14 +141,14 @@ For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to
 ### Requesting access tokens
 
 !!! note
-    You must first [register a new profile](#registering-an-oidc-profile_1)
+    You must first [register a new profile](#registering-an-oidc-profile_1).
 
 1. Request a token using the client profile that you used with `oidc-gen`:
 
         :::console
         oidc-token --aud="<SERVER AUDIENCE>" <CLIENT PROFILE>
 
-For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to  
+    For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to  
     `<CE FQDN>:<CE PORT>`.
 
   1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
@@ -151,12 +157,17 @@ For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to
 ### Reloading an OIDC profile
 
 !!! note
-    Required if you log out of the running machine
+    Required if you log out of the running machine. You must have an existing [registered profile](#registering-an-oidc-profile_1).
 
 1. Reload profile:
 
         :::console
         oidc-add <CLIENT PROFILE>
+
+    1. If you do not already have a running 'oidc-agent', start one:
+
+            :::console
+            eval 'oidc-agent'
 
 1. Enter password used to encrypt your `<CLIENT PROFILE>` created during profile registration.
 
