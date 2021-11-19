@@ -34,7 +34,7 @@ Before starting, make sure that you have the `git` and `gem` tools installed.
 
 1. Create a `gh-pages` branch in the GitHub repository:
 
-        git push origin master:gh-pages
+        git push origin main:gh-pages
 
 1. Update the contents of `README.md` and populate the `LICENSE` file with a
    [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode.txt):
@@ -108,7 +108,7 @@ Before starting, make sure that you have the `git` and `gem` tools installed.
 
 1. Push local changes to the GitHub repository:
 
-        git push origin master
+        git push origin main
 
     Your documents should be shortly available at `https://www.opensciencegrid.org/<REPO NAME>`
 
@@ -131,7 +131,7 @@ This section describes creating an ITB repository for a documentation area creat
 
 1. Create a `gh-pages` branch in the GitHub repository:
 
-        git push origin master:gh-pages
+        git push origin main:gh-pages
 
 1. Update the contents of `README.md`
 1. In the non-ITB repository, create and encrypt the ITB repository deploy key
@@ -162,7 +162,7 @@ This section describes creating an ITB repository for a documentation area creat
    Make sure to check `Allow write access`.
 1. Still in the non-ITB repository, push your local changes to the GitHub repository
 
-        git push origin master
+        git push origin main
 
     Your documents should be shortly available at `https://www.opensciencegrid.org/<REPO NAME>`
 
