@@ -112,6 +112,8 @@ Before starting, make sure that you have the `git` and `gem` tools installed.
 
     Your documents should be shortly available at `https://www.opensciencegrid.org/<REPO NAME>`
 
+1. Contact <help@opensciencegrid.org> to request repository backups to UW-Madison.
+
 Creating an ITB Area
 --------------------
 
