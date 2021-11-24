@@ -2347,7 +2347,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong> BrianL, Marco Mambelli, Mat,  Tim Theisein</li>
+<li><strong>Attending:</strong> BrianL, Marco Mambelli, Mat,  TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -2416,11 +2416,17 @@
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <p>HTCondor <code>scitokens-credmon</code> for EL8: aiming for Post-christmas release</p>
+<p>Marco: Fixing GlideinWMS 3.7.6 bugs; afterwards, further development will be Python 3 only.
+There are several patches used in OSG OS Pool frontend -- Marco will talk to Mats Rynge about getting them upstream.</p>
+<p>Proxy delegation in the OSG 3.6 build of HTCondor 9 is broken; does not affect the OSG 3.5-upcoming build, and will be fixed in 9.0.8.</p>
+<p>Fermilab is hiring for a developer position.</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Lancium (BrianL): GPUs not showing up in Lancium resources due to HTCondor 9.0.6 GPU discovery bug;
     OS Registry doesn't work with Google IDs since they don't provide an <code>eduPersonPrincipalName</code> (<code>eppn</code>)</li>
 <li>Nikhef (BrianL, Marian, Diego): helped troubleshoot IDTOKEN exchange since they updated to OSG 3.6</li>
+<li>LBL (Mat): Gratia probes weren't reporting in; this was due to files on disk not having been properly restored from backup;
+    <code>yum reinstall</code> fixed the issue.</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <p>Aiming for a release next week:</p>
