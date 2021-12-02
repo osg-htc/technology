@@ -76,7 +76,7 @@ and refresh tokens from OpenID Connect token providers.
     For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to  
     `<CE FQDN>:<CE PORT>`.
 
-  1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
+1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
    XRootD client.
 
 ### Reloading an OIDC profile
@@ -84,15 +84,16 @@ and refresh tokens from OpenID Connect token providers.
 !!! note
     Required after restarting the running container. You must have an existing [registered profile](#registering-an-oidc-profile).
 
+1. If your existing container is not already running, start it:
+
+        :::console
+        docker start my-agent
+
 1. Reload profile:
 
-            :::console
-            docker exec -it my-agent oidc-add <CLIENT PROFILE>
+        :::console
+        docker exec -it my-agent oidc-add <CLIENT PROFILE>
 
-    1. If your existing container is not already running, start it:
-
-                :::console
-                docker start my-agent
 
 1. Enter password used to encrypt your `<CLIENT PROFILE>` created during profile registration.
 
@@ -151,7 +152,7 @@ and refresh tokens from OpenID Connect token providers.
     For tokens used against an HTCondor-CE, set `<SERVER AUDIENCE>` to  
     `<CE FQDN>:<CE PORT>`.
 
-  1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
+1. Copy the output of `oidc-token` into a file on the host where you need SciToken authentication, e.g. an HTCondor or
    XRootD client.
 
 ### Reloading an OIDC profile
@@ -159,15 +160,16 @@ and refresh tokens from OpenID Connect token providers.
 !!! note
     Required if you log out of the running machine. You must have an existing [registered profile](#registering-an-oidc-profile_1).
 
+1. If you do not already have a running 'oidc-agent', start one:
+
+        :::console
+        eval 'oidc-agent'
+
 1. Reload profile:
 
         :::console
         oidc-add <CLIENT PROFILE>
 
-    1. If you do not already have a running 'oidc-agent', start one:
-
-            :::console
-            eval 'oidc-agent'
 
 1. Enter password used to encrypt your `<CLIENT PROFILE>` created during profile registration.
 
