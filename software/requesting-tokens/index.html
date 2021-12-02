@@ -506,23 +506,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-tokens" class="md-nav__link">
-    Requesting Tokens
+  <a href="#requesting-tokens-using-a-container" class="md-nav__link">
+    Requesting Tokens Using a Container
   </a>
   
-    <nav class="md-nav" aria-label="Requesting Tokens">
+    <nav class="md-nav" aria-label="Requesting Tokens Using a Container">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-a-container" class="md-nav__link">
-    Using a container
+  <a href="#registering-an-oidc-profile" class="md-nav__link">
+    Registering an OIDC profile
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-an-rpm" class="md-nav__link">
-    Using an RPM
+  <a href="#requesting-access-tokens" class="md-nav__link">
+    Requesting access tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reloading-an-oidc-profile" class="md-nav__link">
+    Reloading an OIDC profile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requesting-tokens-with-an-rpm-installation" class="md-nav__link">
+    Requesting Tokens with an RPM installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Requesting Tokens with an RPM installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registering-an-oidc-profile_1" class="md-nav__link">
+    Registering an OIDC profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requesting-access-tokens_1" class="md-nav__link">
+    Requesting access tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reloading-an-oidc-profile_1" class="md-nav__link">
+    Reloading an OIDC profile
   </a>
   
 </li>
@@ -2241,23 +2282,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-tokens" class="md-nav__link">
-    Requesting Tokens
+  <a href="#requesting-tokens-using-a-container" class="md-nav__link">
+    Requesting Tokens Using a Container
   </a>
   
-    <nav class="md-nav" aria-label="Requesting Tokens">
+    <nav class="md-nav" aria-label="Requesting Tokens Using a Container">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-a-container" class="md-nav__link">
-    Using a container
+  <a href="#registering-an-oidc-profile" class="md-nav__link">
+    Registering an OIDC profile
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-an-rpm" class="md-nav__link">
-    Using an RPM
+  <a href="#requesting-access-tokens" class="md-nav__link">
+    Requesting access tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reloading-an-oidc-profile" class="md-nav__link">
+    Reloading an OIDC profile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requesting-tokens-with-an-rpm-installation" class="md-nav__link">
+    Requesting Tokens with an RPM installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Requesting Tokens with an RPM installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registering-an-oidc-profile_1" class="md-nav__link">
+    Registering an OIDC profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requesting-access-tokens_1" class="md-nav__link">
+    Requesting access tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reloading-an-oidc-profile_1" class="md-nav__link">
+    Reloading an OIDC profile
   </a>
   
 </li>
@@ -2308,10 +2390,10 @@ This document is intended as a guide for OSG developers for requesting tokens ne
 </ul>
 </li>
 </ul>
-<h2 id="requesting-tokens">Requesting Tokens<a class="headerlink" href="#requesting-tokens" title="Permanent link">&para;</a></h2>
+<h2 id="requesting-tokens-using-a-container">Requesting Tokens Using a Container<a class="headerlink" href="#requesting-tokens-using-a-container" title="Permanent link">&para;</a></h2>
 <p><a href="https://indigo-dc.gitbook.io/oidc-agent/">oidc-agent</a> is a process that runs in the background that can request access
 and refresh tokens from OpenID Connect token providers.</p>
-<h3 id="using-a-container">Using a container<a class="headerlink" href="#using-a-container" title="Permanent link">&para;</a></h3>
+<h3 id="registering-an-oidc-profile">Registering an OIDC profile<a class="headerlink" href="#registering-an-oidc-profile" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Start an agent container in the background and name it <code>my-agent</code> to easily run subsequent commands against it:</p>
@@ -2321,7 +2403,7 @@ and refresh tokens from OpenID Connect token providers.</p>
 </li>
 <li>
 <p>Generate a local client profile and follow the prompts:</p>
-<div class="codehilite"><pre><span></span><code><span class="go">docker exec -it my-agent oidc-gen -w device &lt;CLIENT NAME&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="go">docker exec -it my-agent oidc-gen -w device &lt;CLIENT PROFILE&gt;</span>
 </code></pre></div>
 
 <ol>
@@ -2379,19 +2461,50 @@ Space delimited list of scopes or &#39;max&#39; [openid profile offline_access]:
 </li>
 </ol>
 </li>
+</ol>
+<h3 id="requesting-access-tokens">Requesting access tokens<a class="headerlink" href="#requesting-access-tokens" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must first <a href="#registering-an-oidc-profile">register a new profile</a>.</p>
+</div>
+<ol>
 <li>
-<p>Request a token using the client name that you used above with <code>oidc-gen</code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="go">docker exec -it my-agent oidc-token --aud=&quot;&lt;SERVER AUDIENCE&gt;&quot; &lt;CLIENT NAME&gt;</span>
+<p>Request a token using the client profile that you used with <code>oidc-gen</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">docker exec -it my-agent oidc-token --aud=&quot;&lt;SERVER AUDIENCE&gt;&quot; &lt;CLIENT PROFILE&gt;</span>
+</code></pre></div>
+
+<p>For tokens used against an HTCondor-CE, set <code>&lt;SERVER AUDIENCE&gt;</code> to<br />
+<code>&lt;CE FQDN&gt;:&lt;CE PORT&gt;</code>.</p>
+</li>
+<li>
+<p>Copy the output of <code>oidc-token</code> into a file on the host where you need SciToken authentication, e.g. an HTCondor or
+   XRootD client.</p>
+</li>
+</ol>
+<h3 id="reloading-an-oidc-profile">Reloading an OIDC profile<a class="headerlink" href="#reloading-an-oidc-profile" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required after restarting the running container. You must have an existing <a href="#registering-an-oidc-profile">registered profile</a>.</p>
+</div>
+<ol>
+<li>
+<p>If your existing container is not already running, start it:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">docker start my-agent</span>
 </code></pre></div>
 
 </li>
+<li>
+<p>Reload profile:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">docker exec -it my-agent oidc-add &lt;CLIENT PROFILE&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Enter password used to encrypt your <code>&lt;CLIENT PROFILE&gt;</code> created during profile registration.</p>
+</li>
 </ol>
-<p>For tokens used against an HTCondor-CE, set <code>&lt;SERVER AUDIENCE&gt;</code> to <code>&lt;CE FQDN&gt;:&lt;CE PORT&gt;</code>.</p>
-<ol>
-<li>Copy the output of <code>oidc-token</code> into a file on the host where you need SciToken authentication, e.g. an HTCondor or
-   XRootD client.</li>
-</ol>
-<h3 id="using-an-rpm">Using an RPM<a class="headerlink" href="#using-an-rpm" title="Permanent link">&para;</a></h3>
+<h2 id="requesting-tokens-with-an-rpm-installation">Requesting Tokens with an RPM installation<a class="headerlink" href="#requesting-tokens-with-an-rpm-installation" title="Permanent link">&para;</a></h2>
+<h3 id="registering-an-oidc-profile_1">Registering an OIDC profile<a class="headerlink" href="#registering-an-oidc-profile_1" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Start the agent and add the appropriate variables to your environment:</p>
@@ -2401,7 +2514,7 @@ Space delimited list of scopes or &#39;max&#39; [openid profile offline_access]:
 </li>
 <li>
 <p>Generate a local client profile and follow the prompts:</p>
-<div class="codehilite"><pre><span></span><code><span class="go">oidc-gen -w device &lt;CLIENT NAME&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="go">oidc-gen -w device &lt;CLIENT PROFILE&gt;</span>
 </code></pre></div>
 
 <ol>
@@ -2437,9 +2550,12 @@ Space delimited list of scopes or &#39;max&#39; [openid profile offline_access]:
 <td>XRootD write</td>
 <td><code>write:/</code></td>
 </tr>
+<tr>
+<td>For example, to request HTCondor <code>READ</code> and <code>WRITE</code> access, specify the following scopes:</td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<p>For example, to request HTCondor <code>READ</code> and <code>WRITE</code> access, specify the following scopes:</p>
 <div class="codehilite"><pre><span></span><code>This issuer supports the following scopes: openid profile email address phone offline_access wlcg iam wlcg.groups
 Space delimited list of scopes or &#39;max&#39; [openid profile offline_access]: wlcg offline_access compute.read compute.modify compute.cancel compute.create
 </code></pre></div>
@@ -2459,17 +2575,47 @@ Space delimited list of scopes or &#39;max&#39; [openid profile offline_access]:
 </li>
 </ol>
 </li>
+</ol>
+<h3 id="requesting-access-tokens_1">Requesting access tokens<a class="headerlink" href="#requesting-access-tokens_1" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must first <a href="#registering-an-oidc-profile_1">register a new profile</a>.</p>
+</div>
+<ol>
 <li>
-<p>Request a token using the client name that you used above with <code>oidc-gen</code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="go">oidc-token --aud=&quot;&lt;SERVER AUDIENCE&gt;&quot; &lt;CLIENT NAME&gt;</span>
+<p>Request a token using the client profile that you used with <code>oidc-gen</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">oidc-token --aud=&quot;&lt;SERVER AUDIENCE&gt;&quot; &lt;CLIENT PROFILE&gt;</span>
+</code></pre></div>
+
+<p>For tokens used against an HTCondor-CE, set <code>&lt;SERVER AUDIENCE&gt;</code> to<br />
+<code>&lt;CE FQDN&gt;:&lt;CE PORT&gt;</code>.</p>
+</li>
+<li>
+<p>Copy the output of <code>oidc-token</code> into a file on the host where you need SciToken authentication, e.g. an HTCondor or
+   XRootD client.</p>
+</li>
+</ol>
+<h3 id="reloading-an-oidc-profile_1">Reloading an OIDC profile<a class="headerlink" href="#reloading-an-oidc-profile_1" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required if you log out of the running machine. You must have an existing <a href="#registering-an-oidc-profile_1">registered profile</a>.</p>
+</div>
+<ol>
+<li>
+<p>If you do not already have a running 'oidc-agent', start one:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">eval &#39;oidc-agent&#39;</span>
 </code></pre></div>
 
 </li>
-</ol>
-<p>For tokens used against an HTCondor-CE, set <code>&lt;SERVER AUDIENCE&gt;</code> to <code>&lt;CE FQDN&gt;:&lt;CE PORT&gt;</code>.</p>
-<ol>
-<li>Copy the output of <code>oidc-token</code> into a file on the host where you need SciToken authentication, e.g. an HTCondor or
-   XRootD client.</li>
+<li>
+<p>Reload profile:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">oidc-add &lt;CLIENT PROFILE&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Enter password used to encrypt your <code>&lt;CLIENT PROFILE&gt;</code> created during profile registration.</p>
+</li>
 </ol>
 <h2 id="troubleshooting-tokens">Troubleshooting Tokens<a class="headerlink" href="#troubleshooting-tokens" title="Permanent link">&para;</a></h2>
 <p>You can inspect the payload  by copy-pasting the token into the "Encoded" text box here: <a href="http://jwt.io/">http://jwt.io/</a>.
