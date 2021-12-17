@@ -32,7 +32,10 @@ OSG Software container images will be built at least weekly and tagged with the 
 |------------|----------------------------------------------------------------------------------------------------------|
 | `<SERIES>` | The [OSG release series](#release-series) used for software installation. Possible values: `3.6` and `3.5`. |
 | `<REPO>`   | [OSG Yum repositories](https://opensciencegrid.org/docs/common/yum/#repositories) used for software installation, including the corresponding `upcoming` repository. Possible values: `release` and `testing`. |
-| `<TIME>`   | The time that the image was built. Image tags containing a timestamp are treated as immutable.           |
+| `<TIME>`   | The time that the image was built, in the format YYYYMMDD-HHMM; see below for an example.                 |
+
+!!! note
+   Image names without a timestamp should be considered mutable.
 
 For example, to deploy an
 [Open Science Data Federation cache](https://opensciencegrid.org/docs/data/stashcache/run-stashcache-container/)
