@@ -2197,8 +2197,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jira-as-of-monday-todo" class="md-nav__link">
-    Jira (as of Monday) (TODO)
+  <a href="#jira-as-of-monday" class="md-nav__link">
+    Jira (as of Monday)
   </a>
   
 </li>
@@ -2296,7 +2296,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong> Mat</li>
+<li><strong>Attending:</strong> Mat, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <p>Brian out today.</p>
@@ -2307,7 +2307,7 @@
 <li>4 (+0) open FreshDesk tickets</li>
 <li>0 (+0) open GGUS ticket</li>
 </ul>
-<h3 id="jira-as-of-monday-todo">Jira (as of Monday) (TODO)<a class="headerlink" href="#jira-as-of-monday-todo" title="Permanent link">&para;</a></h3>
+<h3 id="jira-as-of-monday">Jira (as of Monday)<a class="headerlink" href="#jira-as-of-monday" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2318,18 +2318,18 @@
 </thead>
 <tbody>
 <tr>
-<td>179</td>
-<td>-4</td>
+<td>178</td>
+<td>-1</td>
 <td>Open</td>
 </tr>
 <tr>
-<td>23</td>
-<td>+1</td>
+<td>21</td>
+<td>-2</td>
 <td>Selected for Dev</td>
 </tr>
 <tr>
-<td>30</td>
-<td>+0</td>
+<td>35</td>
+<td>+5</td>
 <td>In Progress</td>
 </tr>
 <tr>
@@ -2338,8 +2338,8 @@
 <td>Dev Complete</td>
 </tr>
 <tr>
-<td>3</td>
-<td>-2</td>
+<td>9</td>
+<td>+7</td>
 <td>Ready for Testing</td>
 </tr>
 <tr>
@@ -2350,8 +2350,33 @@
 </tbody>
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Mat: update stashcache-client RPM to contain stashcp 6.4.0</li>
+<li>TimT: release HTCondor 9.0.9+, HTCondor 9.5.0+</li>
+</ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>HTCondor developers adding Rocky Linux 8 as one of their platforms for UW
+    builds (replacing CentOS Linux 8, which was EOL as of the end of last
+    year).  OSG is testing on Rocky Linux 8 (among other compatible platforms)
+    but still using CentOS Linux 8 for build repos; no decision on yet on which
+    variant to use as a replacement but CentOS Stream 8 is likely since that is
+    what Fermilab is using.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Doug Benjamin (BNL) needed to be added as a Topology contact for several
+    resources for submitting downtime; TimC is working on making sure Topology
+    contacts are up to date.</p>
+</li>
+<li>
+<p>Gluex was unable to access some of their files hosted on stash origins via
+    CVMFS; their directory had too many files and bloated the CVMFS catalog to the
+    point where it kept getting evicted from clients' caches.  Derek split the catalog
+    into smaller catalogs, which should solve the problem.</p>
+</li>
+</ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
