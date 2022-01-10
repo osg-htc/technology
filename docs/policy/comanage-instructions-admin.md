@@ -22,6 +22,14 @@ Follow the instructions below to approve a user registration.
 1.  Log in with your institutional credentials.
     You should see a "View CO Petition..." page.
     The Status should be "Pending Approval".
+    
+    !!! note
+    	You can also access this page by logging into https://registry.cilogon.org/registry and
+    	clicking on "CO Petitions" under the left-hand "People" menu. 
+
+1.  Click on the name of the pending application. 
+	This will take to you the page where you can see their full application and 
+	have the option to approve them. 
 
 1.  Verify that the application is legitimate.
     Ask someone affiliated with the site, VO, or the sponsor of a project to verify the applicant's affiliation.
