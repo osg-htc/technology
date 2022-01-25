@@ -2471,7 +2471,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Derek, Marco, Mat, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2528,14 +2528,34 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>AI (Mat): release stashcp 6.5.3+</li>
+<li>AI (Mat): Release stashcp 6.5.3+</li>
 <li>AI (Mat): Write osg-resource-catalog-generator, update osg-configure-bosco deps and script refs</li>
-<li>AI (TimT): create a ticket for a student to write a script to run the appropriate regen-repo commands next time.</li>
-<li>AI (TimT): release HTCondor 9.0.9+, HTCondor 9.5.0+</li>
-<li>AI (BrianL): release osg-flock 1.7+</li>
+<li>AI (TimT): Create a ticket for a student to write a script to run the appropriate regen-repo commands next time.</li>
+<li>AI (TimT): Release HTCondor 9.0.9+, HTCondor 9.5.0+</li>
+<li>AI (BrianL): Release osg-flock 1.7+</li>
+<li>AI (BrianL): Create new release tags for XRootD images.</li>
+<li>AI (BrianL): Collaborate with Fermi to get default token mappings for their experiments.</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>GlideinWMS 3.7.6 released, which is the last of the 3.7 series.
+    Most frontends (GLOW, OSPool, IGWN, and others) are already using the 3.9 series, as is HEPCloud.</li>
+<li>A workaround is available for the credential name issue on GSI-less frontends,
+    and will be documented in the ticket.
+    Dennis is working on a fix.</li>
+<li>GlideinWMS team is working on a way to send a token to GCE and AWS pilots since HTCondor file transfer does not work.</li>
+<li>
+<p>TJ of the HTCondor Team is also working on a solution.</p>
+</li>
+<li>
+<p>Discussed whether HTCondor patch releases should be moved out of the devops repos into the mainline repos.
+    We've decided against it because patch releases are more intended for testing on the OS Pool than for general usage.</p>
+</li>
+<li>
+<p>The stashcp RPM in progress for OSG is binary-only because Go 1.16 is not available in EPEL 7.
+    Dave Dykstra mentioned trying to get the EPEL version of Go updated; if he is successful, we can revisit the packaging.</p>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>ASU (BrianL): Investigate no pilot hours due to too many open FDs while running Gratia</li>
