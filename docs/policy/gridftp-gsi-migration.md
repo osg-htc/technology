@@ -34,15 +34,15 @@ Timeline
 The following table contains the major milestones and deliverables for the entire transition.
 Detailed migration plans can be found [in this document](https://docs.google.com/a/wisc.edu/document/d/1DAFeAaUmHHVcJGZMTIDUtLs9koCruQRDY1sJq1opeNs/edit?usp=sharing).
 
-| **Date**  | **Milestone or Deliverable**                                                                           | **Completed** |
-|-----------|--------------------------------------------------------------------------------------------------------|---------------|
-| Aug 2019  | Beginning of OSG 3.5 release series (last release series depending on GCT)                             | &#9989;       |
-| Aug 2019  | Including HTCondor 8.9.2 in the ‘upcoming’ repository (first HTCondor version with SciTokens support). | &#9989;       |
-| Oct 2019  | OSG no longer carries OSG-specific patches for the GCT.  All patches are upstreamed or retired.        | &#9989;       |
-| Mar 2020  | "GSI free" site demo. Show, at proof-of-concept / prototype level, all components without use of GCT.  | &#9989;       |
-| Sep 2020  | All GCT-free components are in OSG-Upcoming.                                                           | &#9989;       |
-| Feb 2021  | OSG series 3.6, without GCT dependencies, is released.                                                 | &#9989;       |
-| Feb 2022  | End of support for OSG 3.5.                                                                            |               |
+| **Date**   | **Milestone or Deliverable**                                                                           | **Completed** |
+|------------|--------------------------------------------------------------------------------------------------------|---------------|
+| Aug 2019   | Beginning of OSG 3.5 release series (last release series depending on GCT)                             | &#9989;       |
+| Aug 2019   | Including HTCondor 8.9.2 in the ‘upcoming’ repository (first HTCondor version with SciTokens support). | &#9989;       |
+| Oct 2019   | OSG no longer carries OSG-specific patches for the GCT.  All patches are upstreamed or retired.        | &#9989;       |
+| Mar 2020   | "GSI free" site demo. Show, at proof-of-concept / prototype level, all components without use of GCT.  | &#9989;       |
+| Sep 2020   | All GCT-free components are in OSG-Upcoming.                                                           | &#9989;       |
+| Feb 2021   | OSG series 3.6, without GCT dependencies, is released.                                                 | &#9989;       |
+| 1 May 2022 | End of support for OSG 3.5.                                                                            |               |
 
 Frequently Asked Questions
 --------------------------
