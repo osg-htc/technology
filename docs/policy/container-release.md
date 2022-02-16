@@ -1,7 +1,7 @@
 Container Release Policy
 ========================
 
-22 January 2021
+16 February 2022
 
 Container images are an increasingly popular tool for shortening the software development life cycle, allowing for speedy
 deployment of new software versions or additional instances of a service.
@@ -35,8 +35,7 @@ case of broken images.
 
 ### Cleanup ###
 
-The OSG will keep images based on the [Docker Hub image retention policy](https://www.docker.com/pricing/retentionfaq).
-In summary, container images that have not been pulled or updated in 6 months will be removed.
+Image tags older than 6 months will be automatically removed.
 
 Validation
 ----------
@@ -53,6 +52,7 @@ the `testing` and `release` image tags.
 Change Log
 ----------
 
+- **16 February 2022:** Remove Docker Hub dependency from the cleanup policy.
 - **22 January 2021:** Modify the tagging policy to more closely track OSG Yum repositories
 - **14 August 2020:** Updated cleanup policy to match Docker Hub image retention policy.
 - **17 April 2019:** Initial policy
