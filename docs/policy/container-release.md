@@ -33,7 +33,7 @@ OSG Software container images will be built at least weekly and tagged with one 
 Each newly built image from the table above will also be tagged with a `-<TIMESTAMP>` suffix to allow for rollback in
 case of broken images.
 
-### Cleanup ###
+### Retention ###
 
 Image tags older than 6 months will be automatically removed.
 
@@ -52,7 +52,7 @@ the `testing` and `release` image tags.
 Change Log
 ----------
 
-- **16 February 2022:** Remove Docker Hub dependency from the cleanup policy.
+- **16 February 2022:** Remove Docker Hub dependency from the retention policy.
 - **22 January 2021:** Modify the tagging policy to more closely track OSG Yum repositories
 - **14 August 2020:** Updated cleanup policy to match Docker Hub image retention policy.
 - **17 April 2019:** Initial policy
