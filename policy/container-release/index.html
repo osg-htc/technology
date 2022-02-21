@@ -830,8 +830,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cleanup" class="md-nav__link">
-    Cleanup
+  <a href="#retention" class="md-nav__link">
+    Retention
   </a>
   
 </li>
@@ -2355,8 +2355,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cleanup" class="md-nav__link">
-    Cleanup
+  <a href="#retention" class="md-nav__link">
+    Retention
   </a>
   
 </li>
@@ -2398,7 +2398,7 @@
                 
                 
                 <h1 id="container-release-policy">Container Release Policy<a class="headerlink" href="#container-release-policy" title="Permanent link">&para;</a></h1>
-<p>22 January 2021</p>
+<p>16 February 2022</p>
 <p>Container images are an increasingly popular tool for shortening the software development life cycle, allowing for speedy
 deployment of new software versions or additional instances of a service.
 Select services in the OSG Software Stack will be distributed as container images to support VOs and sites that are
@@ -2436,9 +2436,9 @@ EPEL, and <a href="../software-release/#yum-repositories">OSG</a> Yum repositori
 </table>
 <p>Each newly built image from the table above will also be tagged with a <code>-&lt;TIMESTAMP&gt;</code> suffix to allow for rollback in
 case of broken images.</p>
-<h3 id="cleanup">Cleanup<a class="headerlink" href="#cleanup" title="Permanent link">&para;</a></h3>
-<p>The OSG will keep images based on the <a href="https://www.docker.com/pricing/retentionfaq">Docker Hub image retention policy</a>.
-In summary, container images that have not been pulled or updated in 6 months will be removed.</p>
+<h3 id="retention">Retention<a class="headerlink" href="#retention" title="Permanent link">&para;</a></h3>
+<p>Image tags older than 6 months will be automatically removed.
+Additionally, the Software Team may remove images with detected security flaws.</p>
 <h2 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h2>
 <p>OSG Software container images consist of RPMs for OSG services that are tested through
 <a href="../software-release/">existing release processes</a> as well as scripts and configuration specific to the container
@@ -2449,6 +2449,7 @@ coordinates testing of release candidate images (e.g. <code>rc.testing.*</code>,
 the <code>testing</code> and <code>release</code> image tags.</p>
 <h2 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h2>
 <ul>
+<li><strong>16 February 2022:</strong> Remove Docker Hub dependency from the retention policy.</li>
 <li><strong>22 January 2021:</strong> Modify the tagging policy to more closely track OSG Yum repositories</li>
 <li><strong>14 August 2020:</strong> Updated cleanup policy to match Docker Hub image retention policy.</li>
 <li><strong>17 April 2019:</strong> Initial policy</li>
