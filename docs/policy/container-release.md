@@ -36,6 +36,7 @@ case of broken images.
 ### Retention ###
 
 Image tags older than 6 months will be automatically removed.
+Additionally, the Software Team may remove images with detected security flaws.
 
 Validation
 ----------
