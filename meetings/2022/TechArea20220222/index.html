@@ -2507,7 +2507,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> Brian Chase, BrianL, Mat</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2564,7 +2564,11 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Kubernetes Hackathon today!</li>
+<li>Kubernetes Hackathon today! Potential projects:<ul>
+<li>Add Prometheus monitoring for the Postgresql node</li>
+<li>Set up a secondary CHTC (GLOW) frontend on River</li>
+</ul>
+</li>
 <li>AI (Mat): Update osg-configure-bosco dependency and build osg-configure</li>
 <li>AI (Mat): xcache-reporter packaging issues</li>
 <li>AI (Mat): kick off tests for GlideinWMS 3.7.6 and 3.9.4</li>
@@ -2573,12 +2577,26 @@
 <li>AI (BrianL): address issues with gratia-probe-condor-ap</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>
+<p>Additional develoment work is needed to support multi-VO APs, especially with Gratia reporting
+    (probes can only deal with one VO at a time) and figuring out how to map jobs to VOs in a way
+    that the probe can recognize.</p>
+</li>
+<li>
+<p><code>rpm --verify</code> test in VMU tests does not handle virtual dependencies; it does two things:</p>
+<ul>
+<li>verify that all listed packages were installed (can be done with a yum flag)</li>
+<li>verify that files on disk match files in package (has caught at least one error within living memory)</li>
+</ul>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>GSU (BrianL): investigate SSH certificate issues</li>
 <li>JLab (BrianL): troubleshoot missing payload records from APs</li>
 <li>Lancium (BrianL): investigate <code>HAS_SINGULARITY = False</code></li>
+<li>SDSC (Mat): troubleshoot cache/origin authentication</li>
 </ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
