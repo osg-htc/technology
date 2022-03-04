@@ -44,8 +44,8 @@ and refresh tokens from OpenID Connect token providers.
         |------------------|-------------------------------|
         | HTCondor `READ`  | `compute.read`                |
         | HTCondor `WRITE` | `compute.modify compute.cancel compute.create` |
-        | XRootD read      | `read:/`                      |
-        | XRootD write     | `write:/`                     |
+        | XRootD read      | `storage.read:/`                               |
+        | XRootD write     | `storage.write:/`                              |
 
         For example, to request HTCondor `READ` and `WRITE` access, specify the following scopes:
 
