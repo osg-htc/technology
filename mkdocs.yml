@@ -46,6 +46,7 @@ nav:
   - Policy:
     - GridFTP and GSI Migration: 'policy/gridftp-gsi-migration.md'
     - Campus Cyberinfrastructure: 'policy/campus-cyberinfrastructure.md'
+    - Collaborations and Bearer Tokens: 'policy/collab-bearer-tokens.md'
     - CREAM-CE Support: 'policy/cream-support.md'
     - 'Release Series Support': 'policy/release-series.md'
     - 'Globus Toolkit Support': 'policy/globus-toolkit.md'
