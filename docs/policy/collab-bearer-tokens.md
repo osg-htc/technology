@@ -81,7 +81,8 @@ Replacing `<PATH>` with a path to the storage location that the bearer should be
 
 ### Subject ###
 
-Subjects should be unique, stable identifiers that correspond to a user or service (e.g. pilot job submission).
+Subjects (i.e., the `sub` claim) should be unique, stable identifiers that correspond to a user or service
+(e.g. pilot job submission).
 In other words, subjects combined with a token issuer can be used for suspending access for a given collaboration user,
 user-level accounting, monitoring, auditing, or tracing.
 In tandem with a token issuer URL (i.e., the `iss` claim), subjects can be used by site HTCondor-CE or XRootD services
