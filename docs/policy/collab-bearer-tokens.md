@@ -21,7 +21,8 @@ Issuers
 To generate bearer tokens, a collaboration must adminster at least one "token issuer" to issue tokens to their users.
 In addition to generating and signing tokens, token issuers provide a public endpoint that can be used to validate an
 issued token,
-e.g. an OSG Compute Entrypoint will contact the token issuer to authorize a bearer token used for pilot job submission.
+e.g. an OSG Compute Entrypoint (CE) will contact the token issuer to authorize a bearer token used for pilot job
+submission.
 
 !!! attention "Token issuer uptime"
     Due to the centralized nature of bearer token validation, token issuers should be treated as critical, highly
@@ -78,6 +79,35 @@ Scopes utilized by OSG services include the following:
 | XRootD write     | `write:<PATH>`      | `storage.modify:<PATH>`                        |
 
 Replacing `<PATH>` with a path to the storage location that the bearer should be authorized to access.
+
+### Issuer ###
+
+The issuer URL, or the `iss` claim, indicates the endpoint to use for authenticating a given token.
+A collaboration may have more than one token issuer but a single token issuer should never serve more than one
+collaboration.
+In other words, given the token issuer, the site can determine the collaboration that issued the token.
+The following collaborations have registered token issuers with the OSG:
+
+| **Collaboration** | **Issuers**                                                                                   |   |
+|-------------------|-----------------------------------------------------------------------------------------------|---|
+| ATLAS             | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/ATLAS.yaml>    |   |
+| CLAS12            | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/CLAS12.yaml>   |   |
+| CMS               | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/CMS.yaml>      |   |
+| DES               | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/DES.yaml>      |   |
+| DUNE              | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/DUNE.yaml>     |   |
+| EIC               | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/EIC.yaml>      |   |
+| Fermilab          | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/Fermilab.yaml> |   |
+| CHTC (née GLOW)   | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/GLOW.yaml>     |   |
+| Gluex             | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/Gluex.yaml>    |   |
+| IceCube           | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/IceCube.yaml>  |   |
+| LIGO              | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/LIGO.yaml>     |   |
+| Mu2e              | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/Mu2e.yaml>     |   |
+| OSPool            | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/OSG.yaml>      |   |
+| SBND              | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/SBND.yaml>     |   |
+| gm2               | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/gm2.yaml>      |   |
+
+The OSG distributes the `osg-scitokens-mapfile` RPM package that includes default issuer and [subject](#subject)
+to default user mappings for use by OSG CEs.
 
 ### Subject ###
 
