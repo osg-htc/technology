@@ -104,7 +104,7 @@ aud = <CE FQDN>:<CE PORT>
 
 ### WLCG groups ###
 
-WLCG tokens may have the claim `wlcg.groups` consisting of a comma and space separated list of collaboration groups.
+WLCG tokens may have the `wlcg.groups` claim consisting of a comma and space separated list of collaboration groups.
 The format of these groups are similar to VOMS FQANs: `/<collaboration>[/<group>][/Role=<role>]`,
 replacing `<collaboration>`, `<group>`, and `<role>` with the collaboration, group, and role, respectively, where the
 group and role are optional.
