@@ -12,7 +12,8 @@ a collaboration:
     proxies themselves
 
 Now, sites can authenticate and authorize clients presenting bearer tokens, such as SciTokens or WLCG tokens.
-This document describes how collaborations can issue bearer tokens that are compatible with OSG sites.
+This document describes how collaborations can issue bearer tokens for the aforementioned use cases in ways that are
+compatible with OSG sites.
 
 Issuers
 -------
