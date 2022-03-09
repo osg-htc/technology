@@ -27,7 +27,8 @@ submission.
 !!! attention "Token issuer uptime"
     Due to the centralized nature of bearer token validation, token issuers should be treated as critical, highly
     available services.
-    Otherwise, a token issuer outage will result in OSG sites being unable to authenticate a collaboration's tokens.
+    Otherwise, a token issuer outage will result in OSG sites being unable to authenticate a collaboration's tokens,
+    meaning an interruption in pilot job submission and authenticated data transfers.
 
 Choose one of the token issuer types below, depending on the needs of your collaboration.
 
