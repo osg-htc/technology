@@ -122,7 +122,7 @@ to map to a local identity.
 !!! tip "Privacy considerations"
     Depending on your collaboration's userbase and contributing sites, you may have to take privacy concerns, such as
     the GDPR into account when assigning subjects to users.
-    Thus, it may be preferable to assign user a randomly-generated string as their `sub`.
+    Thus, it may be preferable to assign users a randomly-generated string as their `sub`.
 
 ### Audience ###
 
