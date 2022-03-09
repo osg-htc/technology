@@ -106,8 +106,8 @@ The following collaborations have registered token issuers with the OSG:
 | SBND              | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/SBND.yaml>     |   |
 | gm2               | <https://github.com/opensciencegrid/topology/blob/master/virtual-organizations/gm2.yaml>      |   |
 
-The OSG distributes the `osg-scitokens-mapfile` RPM package that includes default issuer and [subject](#subject)
-to default user mappings for use by OSG CEs.
+The OSG distributes the `osg-scitokens-mapfile` RPM package that includes issuer and [subject](#subject) to default user
+mappings for use by OSG CEs.
 
 ### Subject ###
 
