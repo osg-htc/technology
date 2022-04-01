@@ -17,11 +17,69 @@ OSG Software service container images intended for OSG site admin use need to be
 pick up any OS updates, as well as upon any changes to the images themselves.
 To do this, we use GitHub Actions to:
 
-1.  Build new images on commits to `master`
+1.  Build new images on commits to `master` or `main`
 1.  Update the `docker-software-base` on a schedule, which triggers builds for all image repos through repository dispatch
-1.  Push container images to Docker Hub.
+1.  Push container images to Docker Hub and the OSG Container Registry (Harbor)
 
-### Prepare the GitHub repository ###
+Code for new container images should now be stored in the GitHub repository
+[opensciencegrid/images](https://github.com/opensciencegrid/images);
+[see below for instructions](#add-image-code-to-the-opensciencegrid-images-repo).
+
+The previous convention was to use individual GitHub repos for each image;
+these are [described below](#old-image-repositories).
+
+
+### Add image code to the opensciencegrid/images repo
+
+Images are automatically built from the subdirectories of the
+[opensciencegrid directory](https://github.com/opensciencegrid/images/tree/main/opensciencegrid).
+A set of images will be built for each subdirectory, with each set containing multiple images
+based on OSG release series (e.g. `3.5`, `3.6`) and release level (e.g. `testing`, `release`).
+
+1.  Fork and clone the <https://github.com/opensciencegrid/images> repo
+1.  Create a subdirectory under `opensciencegrid/`
+1.  Create a `README.md` file describing the software provided by the image
+1.  Create a `LICENSE` file containing the [Apache 2.0 license text](https://www.apache.org/licenses/LICENSE-2.0.txt)
+1.  Create a `Dockerfile` building from the OSG Software Base image:
+
+        ARG BASE_OSG_SERIES=3.6
+        ARG BASE_YUM_REPO=release
+
+        FROM opensciencegrid/software-base:$BASE_OSG_SERIES-<DISTRO VERSION>-$BASE_YUM_REPO
+
+        # Previous instance has gone out of scope
+        ARG BASE_OSG_SERIES=3.6
+        ARG BASE_YUM_REPO=release
+
+        LABEL maintainer OSG Software <help@opensciencegrid.org>
+
+        RUN yum install -y <PACKAGE(S)> && \
+            yum clean all && \
+            rm -rf /var/cache/yum/*
+
+    Replacing `<DISTRO VERSION>` with the Enterprise Linux version abbreviation (e.g., `el7`, `el8`),
+    and `<PACKAGE(S)>` with the RPM(s) you'd like to provide in this image.
+
+
+!!! note "Hardcoding OSG series or release level"
+    If you do not want to build your image for all release series (for example, it's 3.6-only),
+    or you do not want to build your image for all release levels (for example, always build from release),
+    hardcode those instead of using the arguments, as in:
+
+        ARG BASE_OSG_SERIES=3.6
+
+        FROM opensciencegrid/software-base:$BASE_OSG_SERIES-el8-release
+
+
+### Prepare the Docker Hub repository ###
+
+1. Ask the Software Manager to create a Docker Hub repo in the OSG organization.
+   The name should generally match the subdirectory name under the images repo.
+1. Go to the permissions tab and give the `robots` and `technology` teams `Read & Write` access
+
+
+
+### Old image repositories
 
 1.  Create a Git repository in the `opensciencegrid` organization whose name is prefixed with `docker-`,
     e.g. `docker-frontier-squid`
