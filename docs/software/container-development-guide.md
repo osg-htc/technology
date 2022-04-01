@@ -79,14 +79,20 @@ based on OSG release series (e.g. `3.5`, `3.6`) and release level (e.g. `testing
 
 
 
-### Old image repositories
+Old Image Repositories
+----------------------
 
-1.  Create a Git repository in the `opensciencegrid` organization whose name is prefixed with `docker-`,
-    e.g. `docker-frontier-squid`
-1.  Create a `README.md` file describing the software provided by the image
-1.  Create a `LICENSE` file containing the [Apache 2.0 license text](https://www.apache.org/licenses/LICENSE-2.0.txt)
-1.  Set the repository topic to `container`
-1.  Create a `Dockerfile` based off of the OSG Software Base image:
+Some container images are stored in individual repositories under the `opensciencegrid` organization,
+with names prefixed with `docker-` and with the `container` repository topic.
+
+New images should not be created this way, but existing images may need to be updated or fixed;
+this section describes their layout and mechanics.
+
+Old image repos will have:
+
+1.  A `README.md` file describing the software provided by the image
+1.  A `LICENSE` file containing the [Apache 2.0 license text](https://www.apache.org/licenses/LICENSE-2.0.txt)
+1.  A `Dockerfile` based off of the OSG Software Base image:
 
         FROM opensciencegrid/software-base:<OSG RELEASE SERIES>-<EL MAJOR VERSION>-release
 
@@ -100,47 +106,32 @@ based on OSG release series (e.g. `3.5`, `3.6`) and release level (e.g. `testing
             yum clean all && \
             rm -rf /var/cache/yum/*
 
-
     Replacing `<PACKAGE>` with the name of the RPM you'd like to provide in this container image,
     `<OSG RELEASE SERIES>` with the OSG release series version (e.g., `3.6`),
     and `<EL MAJOR VERSION>` with the Enterprise Linux major version (e.g., `7`).
 
-1.  Add the pre-defined OSG Software container publishing GitHub Actions workflow.
-    From the GitHub repository, perform the following steps:
-    1.  Go to the `Actions` tab
-    1.  Select the `Publish OSG Software container image` workflow
-        (you may have to click `Add new workflow` first if the repository has existing workflows)
-    1.  Click `Start commit` then `Commit new file`
-1. Give write permissions to the "osg-bot" user for this GitHub repo, navigating to:
-    1.  "Settings"
-    1.  "Manage access"
-    1.  "Invite teams or people"
-    1.  Search for and select "osg-bot"
-    1.  Choose the "Write" role, and click the button to Add osg-bot to the repo.
-        (The osg-bot user needs this permission in order to trigger automatic builds.)
-1. Ask the Software Manager to give this repo access to the following organizational secrets
+    The `BASE_OSG_SERIES` and `BASE_YUM_REPO` arguments may or may not be used.
+
+1.  The pre-defined `Publish OSG Software container image` workflow, found under the `Actions` tab.
+
+    The user "osg-bot" needs to have the "Write" role for this repo in order to trigger automatic builds.
+
+1. Access to the following organizational secrets
     -   `DOCKER_USERNAME`
     -   `DOCKER_PASSWORD`
     -   `OSG_HARBOR_ROBOT_USER`
     -   `OSG_HARBOR_ROBOT_PASSWORD`
 
-!!! note "Repository dispatch"
-    Any repository that sends dispatches to another repository (e.g. `docker-software-base`, `docker-compute-entrypoint`)
-    needs access to the `REPO_ACCESS_TOKEN` organization secret.
-    Ask the Software Manager for access.
+    The repo may also have access to the `REPO_ACCESS_TOKEN` organization secret,
+    if it needs to send dispatches to another repository (e.g. `docker-software-base`).
 
-### Prepare the Docker Hub repository ###
+1.  A Docker Hub repository with a name matching the GitHub repo name, without the `docker-` prefix,
+    with `Read & Write` access for the `robots` and `technology` teams.
 
-1. Ask the Software Manager to create a Docker Hub repo in the OSG organization.
-   The name should generally match the GitHub repo name, without the `docker-` prefix.
-1. Go to the permissions tab and give the `robots` and `technology` teams `Read & Write` access
+In addition, for repository dispatch from docker-software-base, they are listed in the
+[GitHub Actions workflow for docker-software-base](https://github.com/opensciencegrid/docker-software-base/blob/master/.github/workflows/build-container.yml),
+in the `dispatch-repo:` list (under `jobs:` `dispatch:` `strategy:` `matrix:`).
 
-### Set up repository dispatch from docker-software-base ###
-
-1. Edit the
-   [GitHub Actions workflow for docker-software-base](https://github.com/opensciencegrid/docker-software-base/blob/master/.github/workflows/build-container.yml),
-   and add the new GitHub repo name to the `dispatch-repo:` list (under `jobs:` `dispatch:` `strategy:` `matrix:`).
-1. Make a Pull Request for your change.
 
 Triggering Container Image Builds
 ---------------------------------
@@ -153,7 +144,7 @@ e.g. for a new RPM version of software in the container, you can kick off a new 
   "Re-run all jobs".
 - **If changes need to be made to the container packaging:** submit a pull request with your changes to the relevant
   GitHub repository and request that another team member review it.
-  Once merged into `master`, a GitHub Actions build should start automatically.
+  Once merged into `master` or `main`, a GitHub Actions build should start automatically.
 
 If the GitHub Actions build completes successfully, you should shortly see new `fresh` and timestamp tags appear in the
 DockerHub repository.
