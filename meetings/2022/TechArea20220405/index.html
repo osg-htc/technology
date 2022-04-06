@@ -2579,7 +2579,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Derek, Marco Mambelli, Mat</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2642,6 +2642,7 @@
 <li>Kubernetes hackathon today:<ul>
 <li>Dex for Tiger</li>
 <li>Update CHTC cache/origin</li>
+<li>Upgrade production GLOW frontend</li>
 </ul>
 </li>
 <li>AI (Mat): increase default key size in renew proxy (SOFTWARE-5112)</li>
@@ -2650,10 +2651,46 @@
 <li>AI (BrianL): update VOMS clients default proxy key bit length to 2048 bits (SOFTWARE-4889)</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>
+<p>Marco: adding small requested changes to 3.7.7; 3.9.5 in progress, including the code
+    to generate scitokens and wlcg tokens using an external script</p>
+</li>
+<li>
+<p>BrianB ran into an issue with an expired GLOW proxy causing a failure at the factory,
+    even though token auth was enabled; he will send Marco the configuration that caused it</p>
+</li>
+<li>
+<p>CMS is still sending 1024-bit proxies which no longer work on EL 8.
+    We need to find out where their proxies are generated and ask them to upgrade.
+    EL 8 can be configured to accept 1024-bit proxies again, but this makes sites less
+    secure so we do not want to recommend it</p>
+</li>
+<li>
+<p>New security release of Go upcoming; no details on the issue yet, but we may
+    need to rebuild our software if it's affected</p>
+</li>
+<li>
+<p>CMS has requested that we build worker node images using Alma Linux, because
+    they have not validated CentOS Stream 8.  (WLCG sites in general have been avoiding
+    Stream 8 because it goes EOL in the middle of Run 3.)  OS SW does not currently test
+    Alma but that would not be too difficult to add</p>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>OSG Connect (BrianL): help with AP update to OSG 3.6</li>
+<li>
+<p>OSG Connect (BrianL): help with AP update to OSG 3.6</p>
+</li>
+<li>
+<p>UNL (Derek): help with GRACC records issues.  Since UNL is running OSG 3.5 for now,
+    they can use the condor batch system probe</p>
+</li>
+<li>
+<p>CRIC (Mat): with BrianB's, help found a Topology issue that was causing SSL errors
+    for CRIC, caused by CentOS Stream 8 dropping a needed package from their default
+    container image</p>
+</li>
 </ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <p>No updates this week</p>
