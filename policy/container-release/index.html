@@ -842,6 +842,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#deprecated" class="md-nav__link">
+    Deprecated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#retention" class="md-nav__link">
     Retention
   </a>
@@ -2439,6 +2446,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#deprecated" class="md-nav__link">
+    Deprecated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#retention" class="md-nav__link">
     Retention
   </a>
@@ -2495,31 +2509,64 @@ Additionally, container images distributed by the OSG Software team will be base
 <a href="https://opensciencegrid.org/docs/release/supported_platforms/">supported platform</a> with software installed from OS,
 EPEL, and <a href="../software-release/#yum-repositories">OSG</a> Yum repositories.</p>
 <h2 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h2>
-<p>OSG Software container images will be built at least weekly and tagged with one of the following:</p>
+<p>OSG Software container images will be built at least weekly and tagged with the following format:</p>
+<div class="codehilite"><pre><span></span><code>&lt;SERIES&gt;-&lt;REPO&gt;[-&lt;TIME&gt;]
+</code></pre></div>
+
 <table>
 <thead>
 <tr>
-<th>Tag</th>
+<th>Field</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>testing</code></td>
-<td>For the latest fixes and features. Built with RPMs from the <code>osg-testing</code> and/or <code>osg-upcoming-testing</code> Yum repositories</td>
+<td><code>&lt;SERIES&gt;</code></td>
+<td>The <a href="../release-series/">OSG release series</a> used for software installation. Possible values: <code>3.6</code> and <code>3.5</code>.</td>
 </tr>
 <tr>
-<td><code>release</code></td>
-<td>For production use. Built with RPMs from the <code>osg-release</code> and/or <code>osg-upcoming-release</code> Yum repositories</td>
+<td><code>&lt;REPO&gt;</code></td>
+<td><a href="https://opensciencegrid.org/docs/common/yum/#repositories">OSG Yum repositories</a> used for software installation, including the corresponding <code>upcoming</code> repository. Possible values: <code>release</code> and <code>testing</code>.</td>
 </tr>
 <tr>
-<td><code>rc.testing.*</code>, <code>rc.release.*</code></td>
-<td>Release candidate images; see the <a href="#validation">Validation section below</a> for details</td>
+<td><code>&lt;TIME&gt;</code></td>
+<td>The time that the image was built, in the format YYYYMMDD-HHMM; see below for an example.</td>
 </tr>
 </tbody>
 </table>
-<p>Each newly built image from the table above will also be tagged with a <code>-&lt;TIMESTAMP&gt;</code> suffix to allow for rollback in
-case of broken images.</p>
+<div class="admonition warning">
+<p class="admonition-title">OSG Software Release Series life cycle</p>
+<p>Container images based on <a href="../release-series/">unsupported OSG release series</a> will stop receiving regular updates.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Immutable vs mutable tags</p>
+<p>Image tags without a build time are treated as mutable, i.e. these tags are regularly updated with the latest
+available software in their respective Yum repositories.
+Image tags with a build time are treated as immutable and do not change.</p>
+</div>
+<p>For example, to deploy an
+<a href="https://opensciencegrid.org/docs/data/stashcache/run-stashcache-container/">Open Science Data Federation cache</a>
+with the latest production software versions from OSG 3.6, use the following image tag:</p>
+<div class="codehilite"><pre><span></span><code>opensciencegrid/stash-cache:3.6-release
+</code></pre></div>
+
+<p>However, to deploy a cache with software that was available in the <code>osg-testing</code> and <code>osg-upcoming-testing</code> repositories
+at 3:17 PM on December 17, 2021, use the following image tag:</p>
+<div class="codehilite"><pre><span></span><code>opensciencegrid/stash-cache:3.6-testing-20211217-1517
+</code></pre></div>
+
+<h3 id="deprecated">Deprecated<a class="headerlink" href="#deprecated" title="Permanent link">&para;</a></h3>
+<p>Images based off of OSG 3.5 originally did not have the release series prefix.
+The following tags will no longer be supported after the retirement of OSG 3.5 on May 1, 2022:</p>
+<div class="codehilite"><pre><span></span><code>release-&lt;TIME&gt;
+release
+testing-&lt;TIME&gt;
+testing
+</code></pre></div>
+
+<p>Where <code>&lt;TIME&gt;</code> is the time that the tag was built.
+See <a href="../release-series/">this page</a> for more details on release series support.</p>
 <h3 id="retention">Retention<a class="headerlink" href="#retention" title="Permanent link">&para;</a></h3>
 <p>Image tags older than 6 months will be automatically removed.
 Additionally, the Software Team may remove images with detected security flaws.</p>
@@ -2529,10 +2576,10 @@ Additionally, the Software Team may remove images with detected security flaws.<
 implementation of the service.
 New container images limited to RPM updates undergo additional automated testing before being published.</p>
 <p>In order to test changes to container-specific scripts or configuration, OSG Software performs automated tests and
-coordinates testing of release candidate images (e.g. <code>rc.testing.*</code>, <code>rc.release.*</code>) before applying these changes to
-the <code>testing</code> and <code>release</code> image tags.</p>
+coordinates testing of release candidate images before applying these changes to the production <a href="#tags">tags</a>.</p>
 <h2 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h2>
 <ul>
+<li><strong>21 April 2022:</strong> Deprecate tags without the OSG release series</li>
 <li><strong>16 February 2022:</strong> Remove Docker Hub dependency from the retention policy.</li>
 <li><strong>22 January 2021:</strong> Modify the tagging policy to more closely track OSG Yum repositories</li>
 <li><strong>14 August 2020:</strong> Updated cleanup policy to match Docker Hub image retention policy.</li>
