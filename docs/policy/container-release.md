@@ -30,7 +30,7 @@ OSG Software container images will be built at least weekly and tagged with the 
 
 | Field      | Description                                                                                              |
 |------------|----------------------------------------------------------------------------------------------------------|
-| `<SERIES>` | The [OSG release series](#release-series) used for software installation. Possible values: `3.6` and `3.5`. |
+| `<SERIES>` | The [OSG release series](release-series.md) used for software installation. Possible values: `3.6` and `3.5`. |
 | `<REPO>`   | [OSG Yum repositories](https://opensciencegrid.org/docs/common/yum/#repositories) used for software installation, including the corresponding `upcoming` repository. Possible values: `release` and `testing`. |
 | `<TIME>`   | The time that the image was built, in the format YYYYMMDD-HHMM; see below for an example.                 |
 
