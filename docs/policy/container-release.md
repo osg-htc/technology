@@ -22,16 +22,57 @@ EPEL, and [OSG](../policy/software-release.md#yum-repositories) Yum repositories
 Tags
 ----
 
-OSG Software container images will be built at least weekly and tagged with one of the following:
+OSG Software container images will be built at least weekly and tagged with the following format:
 
-| Tag                            | Description                                                                                                              |
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `testing`                      | For the latest fixes and features. Built with RPMs from the `osg-testing` and/or `osg-upcoming-testing` Yum repositories |
-| `release`                      | For production use. Built with RPMs from the `osg-release` and/or `osg-upcoming-release` Yum repositories                |
-| `rc.testing.*`, `rc.release.*` | Release candidate images; see the [Validation section below](#validation) for details                                    |
+```
+<SERIES>-<REPO>[-<TIME>]
+```
 
-Each newly built image from the table above will also be tagged with a `-<TIMESTAMP>` suffix to allow for rollback in
-case of broken images.
+| Field      | Description                                                                                              |
+|------------|----------------------------------------------------------------------------------------------------------|
+| `<SERIES>` | The [OSG release series](release-series.md) used for software installation. Possible values: `3.6` and `3.5`. |
+| `<REPO>`   | [OSG Yum repositories](https://opensciencegrid.org/docs/common/yum/#repositories) used for software installation, including the corresponding `upcoming` repository. Possible values: `release` and `testing`. |
+| `<TIME>`   | The time that the image was built, in the format YYYYMMDD-HHMM; see below for an example.                 |
+
+
+!!! warning "OSG Software Release Series life cycle"
+    Container images based on [unsupported OSG release series](release-series.md) will stop receiving regular updates.
+
+!!! info "Immutable vs mutable tags"
+    Image tags without a build time are treated as mutable, i.e. these tags are regularly updated with the latest
+    available software in their respective Yum repositories.
+    Image tags with a build time are treated as immutable and do not change.
+
+For example, to deploy an
+[Open Science Data Federation cache](https://opensciencegrid.org/docs/data/stashcache/run-stashcache-container/)
+with the latest production software versions from OSG 3.6, use the following image tag:
+
+```
+opensciencegrid/stash-cache:3.6-release
+```
+
+However, to deploy a cache with software that was available in the `osg-testing` and `osg-upcoming-testing` repositories
+at 3:17 PM on December 17, 2021, use the following image tag:
+
+
+```
+opensciencegrid/stash-cache:3.6-testing-20211217-1517
+```
+
+### Deprecated ###
+
+Images based off of OSG 3.5 originally did not have the release series prefix.
+The following tags will no longer be supported after the retirement of OSG 3.5 on May 1, 2022:
+
+```
+release-<TIME>
+release
+testing-<TIME>
+testing
+```
+
+Where `<TIME>` is the time that the tag was built.
+See [this page](release-series.md) for more details on release series support.
 
 ### Retention ###
 
@@ -47,12 +88,12 @@ implementation of the service.
 New container images limited to RPM updates undergo additional automated testing before being published.
 
 In order to test changes to container-specific scripts or configuration, OSG Software performs automated tests and
-coordinates testing of release candidate images (e.g. `rc.testing.*`, `rc.release.*`) before applying these changes to
-the `testing` and `release` image tags.
+coordinates testing of release candidate images before applying these changes to the production [tags](#tags).
 
 Change Log
 ----------
 
+- **21 April 2022:** Deprecate tags without the OSG release series
 - **16 February 2022:** Remove Docker Hub dependency from the retention policy.
 - **22 January 2021:** Modify the tagging policy to more closely track OSG Yum repositories
 - **14 August 2020:** Updated cleanup policy to match Docker Hub image retention policy.
