@@ -58,7 +58,7 @@ opensciencegrid/stash-cache:3.6-testing-20211217-1517
 ### Deprecated ###
 
 Images based off of OSG 3.5 originally did not have the release series prefix.
-The following tags will no longer be supported after the retirement of OSG 3.5 at the end of February 2022:
+The following tags will no longer be supported after the retirement of OSG 3.5 on May 1, 2022:
 
 ```
 release-<TIME>
