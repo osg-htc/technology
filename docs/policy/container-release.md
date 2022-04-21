@@ -34,6 +34,10 @@ OSG Software container images will be built at least weekly and tagged with the 
 | `<REPO>`   | [OSG Yum repositories](https://opensciencegrid.org/docs/common/yum/#repositories) used for software installation, including the corresponding `upcoming` repository. Possible values: `release` and `testing`. |
 | `<TIME>`   | The time that the image was built, in the format YYYYMMDD-HHMM; see below for an example.                 |
 
+
+!!! warning "OSG Software Release Series life cycle"
+    Container images based on [unsupported OSG release series](release-series.md) will stop receiving regular updates.
+
 !!! info "Immutable vs mutable tags"
     Image tags without a build time are treated as mutable, i.e. these tags are regularly updated with the latest
     available software in their respective Yum repositories.
