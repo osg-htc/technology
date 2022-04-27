@@ -26,7 +26,7 @@ Contact Us
 Meetings
 --------
 
-**When:** Every Monday, 9:00 a.m. (U.S. Central)
+**When:** Every Tuesday, 9:30 a.m. (U.S. Central)
 **Where:** +1-415-655-0002, PIN: 146 266 9392, <https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c> (password sent separately)
 
 Meeting note archives can be found directly in the
