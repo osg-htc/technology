@@ -2615,10 +2615,11 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
-<li><strong>Attending:</strong></li>
+<li><strong>Attending:</strong> BrianL, Carl, Derek, Mat, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <p>OSG 3.5 EOL!</p>
+<p>Doc focus this Friday, primarily concentrated on removing old OSG 3.5 documentation.</p>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This week: BrianL</li>
@@ -2671,15 +2672,21 @@
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Kubernetes Hackathon today!<ul>
-<li>AI (Carl):</li>
-<li>AI (Mat):</li>
-<li>AI (BrianL): move FE cert-manager patches to base</li>
+<li>AI (Carl): Make CronJob for fixing up user GIDs in COManage.</li>
+<li>AI (Mat): Investigate auto-update failures in the PATh facility Kubernetes pool.</li>
+<li>AI (BrianL): Move FE cert-manager patches to base</li>
+<li>AI (BrianL): Investigate upgrade path from Flux v1 to Flux v2</li>
 </ul>
 </li>
 <li>Doc focus this Friday</li>
 <li>Primary MkDocs repositories being moved to the osg-htc GitHub organization.
     Technology first, then docs</li>
-<li>Central collector host cert expires on May 6</li>
+<li>AI (BrianL): Work with JeffD to debug site failures starting after OSG 3.6 upgrades.</li>
+<li>AI (BrianL): Respond to Scott Koranda regarding missing EPPNs in COManage.</li>
+<li>AI (Carl): Remove certinfo usage from Gratia.</li>
+<li>AI (Mat): Renew central collector host cert (which expires on May 6); UNL SANs are no longer necessary.</li>
+<li>AI (Mat): Register PATh Facility Execute Points in Topology.</li>
+<li>AI (TimT): Test HTCondor 9.9.0 in CHTC; new remote management features might impact glideins so those will need extra testing.</li>
 <li>Next projects:<ul>
 <li>Transition contacts to COManage</li>
 <li>Finish sending OSPool StartD logs to the GRACC</li>
@@ -2690,9 +2697,16 @@
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<p>Added a "contrib" directory to the opensciencegrid/images repo so people can contribute images;
+the first contributor was FNAL with some FTS images.
+There is a danger of the GitHub Actions for the repo taking too long; the Software Team will investigate fixes as necessary.</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>Derek: Debugging various randomly occurring XRootD-Standalone issues.</li>
+<li>Derek: Debugging CEs that have stopped reporting to GRACC after upgrading to OSG 3.6;
+    will stay in touch with the Software Team regarding necessary software/packaging/documentation fixes resulting from these.</li>
+<li>Carl: Debug Igor's issue with viewing Topology resources using his COManage credentials.</li>
+</ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
