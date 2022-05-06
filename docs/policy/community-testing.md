@@ -41,7 +41,6 @@ The following packages are considered critical to the production Open Science Gr
 - Frontier Squid
 - GlideinWMS
 - Gratia Probes
-- HDFS
 - HTCondor
 - HTCondor-CE
 - XCache
@@ -63,6 +62,7 @@ Common exceptions to the policy include releases that contain one or more of the
 Version History
 ---------------
 
+- **2022-05-06**: Drop unsupported software from the critical package list
 - **2019-10-08**: Add policy exceptions
 - **2019-08-12**: Add notification frequency details
 - **2019-02-20**: Initial policy
