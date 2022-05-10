@@ -2626,16 +2626,21 @@
                 <h1 id="osg-technology-area-meeting-10-may-2022">OSG Technology Area Meeting, 10 May 2022<a class="headerlink" href="#osg-technology-area-meeting-10-may-2022" title="Permanent link">&para;</a></h1>
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
-    <a href="https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c">https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c</a> (password sent separately)</li>
+    <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
 <li><strong>Attending:</strong> </li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>BrianL OOO next week</li>
+<li>HTCondor week May 23 - 26</li>
+<li>Next two meetings canceled</li>
+</ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This week: Mat</li>
 <li>Next week: TimT</li>
-<li>16 (+3) open FreshDesk tickets</li>
-<li>1 (-1) open GGUS ticket</li>
+<li>13 (-3) open FreshDesk tickets</li>
+<li>2 (+1) open GGUS ticket</li>
 </ul>
 <h3 id="jira-as-of-monday">Jira (as of Monday)<a class="headerlink" href="#jira-as-of-monday" title="Permanent link">&para;</a></h3>
 <table>
@@ -2648,28 +2653,28 @@
 </thead>
 <tbody>
 <tr>
-<td>184</td>
-<td>-1</td>
+<td>192</td>
+<td>+5</td>
 <td>Open</td>
 </tr>
 <tr>
-<td>30</td>
-<td>-3</td>
+<td>27</td>
+<td>-2</td>
 <td>Selected for Dev</td>
 </tr>
 <tr>
-<td>29</td>
-<td>+0</td>
+<td>34</td>
+<td>+6</td>
 <td>In Progress</td>
 </tr>
 <tr>
-<td>15</td>
-<td>-5</td>
+<td>17</td>
+<td>+1</td>
 <td>Dev Complete</td>
 </tr>
 <tr>
-<td>24</td>
-<td>+10</td>
+<td>9</td>
+<td>-7</td>
 <td>Ready for Testing</td>
 </tr>
 <tr>
@@ -2681,41 +2686,24 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Kubernetes Hackathon today!<ul>
-<li>AI (Carl): Make CronJob for fixing up user GIDs in COManage.</li>
-<li>AI (Mat): Investigate auto-update failures in the PATh facility Kubernetes pool.</li>
-<li>AI (BrianL): Move FE cert-manager patches to base</li>
-<li>AI (BrianL): Investigate upgrade path from Flux v1 to Flux v2</li>
+<li>OSG 3.6<ul>
+<li>AI (Carl) remove certinfo log messages</li>
+<li>AI (Mat) XRootD 5.4.3 RC1</li>
 </ul>
 </li>
-<li>Doc focus this Friday</li>
-<li>Primary MkDocs repositories being moved to the osg-htc GitHub organization.
-    Technology first, then docs</li>
-<li>AI (BrianL): Work with JeffD to debug site failures starting after OSG 3.6 upgrades.</li>
-<li>AI (BrianL): Respond to Scott Koranda regarding missing EPPNs in COManage.</li>
-<li>AI (Carl): Remove certinfo usage from Gratia.</li>
-<li>AI (Mat): Renew central collector host cert (which expires on May 6); UNL SANs are no longer necessary.</li>
-<li>AI (Mat): Register PATh Facility Execute Points in Topology.</li>
-<li>AI (TimT): Test HTCondor 9.9.0 in CHTC; new remote management features might impact glideins so those will need extra testing.</li>
-<li>Next projects:<ul>
-<li>Transition contacts to COManage</li>
-<li>Finish sending OSPool StartD logs to the GRACC</li>
-<li>Streamline deployments of OSDF caches and origins</li>
-<li>Retire OSG 3.5</li>
-<li>Allow for custom workflows in opensciencegrid/images</li>
+<li>Next week:<ul>
+<li>AI (Mat) Streamlining OSDF service deployment: add Topology endpoint returning a list of OSDF caches for a given
+    path</li>
+<li>AI (Carl) Topology COManage transition: pull contact db into COManage contact results where missing</li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>Added a "contrib" directory to the opensciencegrid/images repo so people can contribute images;
-the first contributor was FNAL with some FTS images.
-There is a danger of the GitHub Actions for the repo taking too long; the Software Team will investigate fixes as necessary.</p>
+<p>None this week</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>BNL (Derek): Debugging various randomly occurring slow or failing transfers with XRootD-Standalone </li>
-<li>GRACC (Derek): Debugging CEs that have stopped reporting to GRACC after upgrading to OSG 3.6;
-    will stay in touch with the Software Team regarding necessary software/packaging/documentation fixes resulting from these.</li>
-<li>GIL (Carl): Debug Igor's issue with viewing Topology resources using his COManage credentials.</li>
+<li>ComputeCanada (BrianL): troubleshoot missing <code>OSG_WN_TMP</code> due to HTCondor change from <code>GLITE_LOCATION</code> to
+    <code>BLAHPD_LOCATION</code> in HTCondor 9.3.0</li>
 </ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <ul>
