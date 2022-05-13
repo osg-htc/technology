@@ -372,8 +372,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prepare-the-github-repository" class="md-nav__link">
-    Prepare the GitHub repository
+  <a href="#add-image-code-to-the-opensciencegridimages-repo" class="md-nav__link">
+    Add image code to the opensciencegrid/images repo
   </a>
   
 </li>
@@ -385,15 +385,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#set-up-repository-dispatch-from-docker-software-base" class="md-nav__link">
-    Set up repository dispatch from docker-software-base
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#old-image-repositories" class="md-nav__link">
+    Old Image Repositories
+  </a>
   
 </li>
       
@@ -2504,8 +2504,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prepare-the-github-repository" class="md-nav__link">
-    Prepare the GitHub repository
+  <a href="#add-image-code-to-the-opensciencegridimages-repo" class="md-nav__link">
+    Add image code to the opensciencegrid/images repo
   </a>
   
 </li>
@@ -2517,15 +2517,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#set-up-repository-dispatch-from-docker-software-base" class="md-nav__link">
-    Set up repository dispatch from docker-software-base
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#old-image-repositories" class="md-nav__link">
+    Old Image Repositories
+  </a>
   
 </li>
       
@@ -2601,19 +2601,75 @@
 pick up any OS updates, as well as upon any changes to the images themselves.
 To do this, we use GitHub Actions to:</p>
 <ol>
-<li>Build new images on commits to <code>master</code></li>
+<li>Build new images on commits to <code>master</code> or <code>main</code></li>
 <li>Update the <code>docker-software-base</code> on a schedule, which triggers builds for all image repos through repository dispatch</li>
-<li>Push container images to Docker Hub.</li>
+<li>Push container images to Docker Hub and the OSG Container Registry (Harbor)</li>
 </ol>
-<h3 id="prepare-the-github-repository">Prepare the GitHub repository<a class="headerlink" href="#prepare-the-github-repository" title="Permanent link">&para;</a></h3>
+<p>Code for new container images should now be stored in the GitHub repository
+<a href="https://github.com/opensciencegrid/images">opensciencegrid/images</a>;
+<a href="#add-image-code-to-the-opensciencegrid-images-repo">see below for instructions</a>.</p>
+<p>The previous convention was to use individual GitHub repos for each image;
+these are <a href="#old-image-repositories">described below</a>.</p>
+<h3 id="add-image-code-to-the-opensciencegridimages-repo">Add image code to the opensciencegrid/images repo<a class="headerlink" href="#add-image-code-to-the-opensciencegridimages-repo" title="Permanent link">&para;</a></h3>
+<p>Images are automatically built from the subdirectories of the
+<a href="https://github.com/opensciencegrid/images/tree/main/opensciencegrid">opensciencegrid directory</a>.
+A set of images will be built for each subdirectory, with each set containing multiple images
+based on OSG release series (e.g. <code>3.5</code>, <code>3.6</code>) and release level (e.g. <code>testing</code>, <code>release</code>).</p>
 <ol>
-<li>Create a Git repository in the <code>opensciencegrid</code> organization whose name is prefixed with <code>docker-</code>,
-    e.g. <code>docker-frontier-squid</code></li>
+<li>Fork and clone the <a href="https://github.com/opensciencegrid/images">https://github.com/opensciencegrid/images</a> repo</li>
+<li>Create a subdirectory under <code>opensciencegrid/</code></li>
 <li>Create a <code>README.md</code> file describing the software provided by the image</li>
 <li>Create a <code>LICENSE</code> file containing the <a href="https://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2.0 license text</a></li>
-<li>Set the repository topic to <code>container</code></li>
 <li>
-<p>Create a <code>Dockerfile</code> based off of the OSG Software Base image:</p>
+<p>Create a <code>Dockerfile</code> building from the OSG Software Base image:</p>
+<div class="codehilite"><pre><span></span><code>ARG BASE_OSG_SERIES=3.6
+ARG BASE_YUM_REPO=release
+
+FROM opensciencegrid/software-base:$BASE_OSG_SERIES-&lt;DISTRO VERSION&gt;-$BASE_YUM_REPO
+
+# Previous instance has gone out of scope
+ARG BASE_OSG_SERIES=3.6
+ARG BASE_YUM_REPO=release
+
+LABEL maintainer OSG Software &lt;help@opensciencegrid.org&gt;
+
+RUN yum install -y &lt;PACKAGE(S)&gt; &amp;&amp; \
+    yum clean all &amp;&amp; \
+    rm -rf /var/cache/yum/*
+</code></pre></div>
+
+<p>Replacing <code>&lt;DISTRO VERSION&gt;</code> with the Enterprise Linux version abbreviation (e.g., <code>el7</code>, <code>el8</code>),
+and <code>&lt;PACKAGE(S)&gt;</code> with the RPM(s) you'd like to provide in this image.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Hardcoding OSG series or release level</p>
+<p>If you do not want to build your image for all release series (for example, it's 3.6-only),
+or you do not want to build your image for all release levels (for example, always build from release),
+hardcode those instead of using the arguments, as in:</p>
+<div class="codehilite"><pre><span></span><code>ARG BASE_OSG_SERIES=3.6
+
+FROM opensciencegrid/software-base:$BASE_OSG_SERIES-el8-release
+</code></pre></div>
+
+</div>
+<h3 id="prepare-the-docker-hub-repository">Prepare the Docker Hub repository<a class="headerlink" href="#prepare-the-docker-hub-repository" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ask the Software Manager to create a Docker Hub repo in the OSG organization.
+   The name should generally match the subdirectory name under the images repo.</li>
+<li>Go to the permissions tab and give the <code>robots</code> and <code>technology</code> teams <code>Read &amp; Write</code> access</li>
+</ol>
+<h2 id="old-image-repositories">Old Image Repositories<a class="headerlink" href="#old-image-repositories" title="Permanent link">&para;</a></h2>
+<p>Some container images are stored in individual repositories under the <code>opensciencegrid</code> organization,
+with names prefixed with <code>docker-</code> and with the <code>container</code> repository topic.</p>
+<p>New images should not be created this way, but existing images may need to be updated or fixed;
+this section describes their layout and mechanics.</p>
+<p>Old image repos will have:</p>
+<ol>
+<li>A <code>README.md</code> file describing the software provided by the image</li>
+<li>A <code>LICENSE</code> file containing the <a href="https://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2.0 license text</a></li>
+<li>
+<p>A <code>Dockerfile</code> based off of the OSG Software Base image:</p>
 <div class="codehilite"><pre><span></span><code>FROM opensciencegrid/software-base:&lt;OSG RELEASE SERIES&gt;-&lt;EL MAJOR VERSION&gt;-release
 
 LABEL maintainer OSG Software &lt;help@opensciencegrid.org&gt;
@@ -2630,53 +2686,31 @@ RUN yum install -y &lt;PACKAGE&gt; &amp;&amp; \
 <p>Replacing <code>&lt;PACKAGE&gt;</code> with the name of the RPM you'd like to provide in this container image,
 <code>&lt;OSG RELEASE SERIES&gt;</code> with the OSG release series version (e.g., <code>3.6</code>),
 and <code>&lt;EL MAJOR VERSION&gt;</code> with the Enterprise Linux major version (e.g., <code>7</code>).</p>
+<p>The <code>BASE_OSG_SERIES</code> and <code>BASE_YUM_REPO</code> arguments may or may not be used.</p>
 </li>
 <li>
-<p>Add the pre-defined OSG Software container publishing GitHub Actions workflow.
-    From the GitHub repository, perform the following steps:</p>
-<ol>
-<li>Go to the <code>Actions</code> tab</li>
-<li>Select the <code>Publish OSG Software container image</code> workflow
-    (you may have to click <code>Add new workflow</code> first if the repository has existing workflows)</li>
-<li>Click <code>Start commit</code> then <code>Commit new file</code></li>
-</ol>
+<p>The pre-defined <code>Publish OSG Software container image</code> workflow, found under the <code>Actions</code> tab.</p>
+<p>The user "osg-bot" needs to have the "Write" role for this repo in order to trigger automatic builds.</p>
 </li>
-<li>Give write permissions to the "osg-bot" user for this GitHub repo, navigating to:<ol>
-<li>"Settings"</li>
-<li>"Manage access"</li>
-<li>"Invite teams or people"</li>
-<li>Search for and select "osg-bot"</li>
-<li>Choose the "Write" role, and click the button to Add osg-bot to the repo.
-    (The osg-bot user needs this permission in order to trigger automatic builds.)</li>
-</ol>
-</li>
-<li>Ask the Software Manager to give this repo access to the following organizational secrets<ul>
+<li>
+<p>Access to the following organizational secrets</p>
+<ul>
 <li><code>DOCKER_USERNAME</code></li>
 <li><code>DOCKER_PASSWORD</code></li>
 <li><code>OSG_HARBOR_ROBOT_USER</code></li>
 <li><code>OSG_HARBOR_ROBOT_PASSWORD</code></li>
 </ul>
+<p>The repo may also have access to the <code>REPO_ACCESS_TOKEN</code> organization secret,
+if it needs to send dispatches to another repository (e.g. <code>docker-software-base</code>).</p>
+</li>
+<li>
+<p>A Docker Hub repository with a name matching the GitHub repo name, without the <code>docker-</code> prefix,
+    with <code>Read &amp; Write</code> access for the <code>robots</code> and <code>technology</code> teams.</p>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Repository dispatch</p>
-<p>Any repository that sends dispatches to another repository (e.g. <code>docker-software-base</code>, <code>docker-compute-entrypoint</code>)
-needs access to the <code>REPO_ACCESS_TOKEN</code> organization secret.
-Ask the Software Manager for access.</p>
-</div>
-<h3 id="prepare-the-docker-hub-repository">Prepare the Docker Hub repository<a class="headerlink" href="#prepare-the-docker-hub-repository" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Ask the Software Manager to create a Docker Hub repo in the OSG organization.
-   The name should generally match the GitHub repo name, without the <code>docker-</code> prefix.</li>
-<li>Go to the permissions tab and give the <code>robots</code> and <code>technology</code> teams <code>Read &amp; Write</code> access</li>
-</ol>
-<h3 id="set-up-repository-dispatch-from-docker-software-base">Set up repository dispatch from docker-software-base<a class="headerlink" href="#set-up-repository-dispatch-from-docker-software-base" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Edit the
-   <a href="https://github.com/opensciencegrid/docker-software-base/blob/master/.github/workflows/build-container.yml">GitHub Actions workflow for docker-software-base</a>,
-   and add the new GitHub repo name to the <code>dispatch-repo:</code> list (under <code>jobs:</code> <code>dispatch:</code> <code>strategy:</code> <code>matrix:</code>).</li>
-<li>Make a Pull Request for your change.</li>
-</ol>
+<p>In addition, for repository dispatch from docker-software-base, they are listed in the
+<a href="https://github.com/opensciencegrid/docker-software-base/blob/master/.github/workflows/build-container.yml">GitHub Actions workflow for docker-software-base</a>,
+in the <code>dispatch-repo:</code> list (under <code>jobs:</code> <code>dispatch:</code> <code>strategy:</code> <code>matrix:</code>).</p>
 <h2 id="triggering-container-image-builds">Triggering Container Image Builds<a class="headerlink" href="#triggering-container-image-builds" title="Permanent link">&para;</a></h2>
 <p>To build a new version of an <a href="#creating-new-osg-software-containers">existing container image</a>,
 e.g. for a new RPM version of software in the container, you can kick off a new build in one of two ways:</p>
@@ -2686,7 +2720,7 @@ e.g. for a new RPM version of software in the container, you can kick off a new 
   "Re-run all jobs".</li>
 <li><strong>If changes need to be made to the container packaging:</strong> submit a pull request with your changes to the relevant
   GitHub repository and request that another team member review it.
-  Once merged into <code>master</code>, a GitHub Actions build should start automatically.</li>
+  Once merged into <code>master</code> or <code>main</code>, a GitHub Actions build should start automatically.</li>
 </ul>
 <p>If the GitHub Actions build completes successfully, you should shortly see new <code>fresh</code> and timestamp tags appear in the
 DockerHub repository.</p>
