@@ -2,12 +2,12 @@
 
 This repository contains the internal documents for the OSG Technology Area.
 
-- [Github hosted](http://opensciencegrid.github.io/technology)
+- [Github hosted](http://osg-htc.org/technology)
 
 ## Other OSG documentation on Github
 
-- [OSG Council](https://opensciencegrid.github.io/council)
-- [OSG Production](https://opensciencegrid.github.io/production)
+- [OSG Council](https://osg-htc.org/council)
+- [OSG Production](https://osg-htc.org/production)
 
 ## Resources
 

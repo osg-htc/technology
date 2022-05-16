@@ -3,7 +3,7 @@ OSG Technology Area
 
 Welcome to the home page of the OSG Technology Team documentation area!
 
-If you are looking for site administrator documentation, please visit the [OSG Documentation page](https://www.opensciencegrid.org/docs/).
+If you are looking for site administrator documentation, please visit the [OSG Documentation page](https://www.osg-htc.org/docs/).
 
 The Team
 --------
@@ -30,5 +30,5 @@ Meetings
 **Where:** +1-415-655-0002, PIN: 146 266 9392, <https://morgridge.webex.com/webappng/sites/morgridge/meeting/info/791d9dddc5464eb6a73fc7746331d06c> (password sent separately)
 
 Meeting note archives can be found directly in the
-[GitHub repository](https://github.com/opensciencegrid/technology/tree/master/docs/meetings).
+[GitHub repository](https://github.com/osg-htc/technology/tree/master/docs/meetings).
 

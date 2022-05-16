@@ -5,7 +5,7 @@ The NSF Campus Cyberinfrastructure (CC\*) program invests in coordinated campus-
 improvements, innovation, integration, and engineering for science applications and distributed research projects, 
 including  enhancements to campus networking and computing resources.
 
-The [Open Science Grid](https://www.opensciencegrid.org) (as part of the 
+The [Open Science Grid](https://www.osg-htc.org) (as part of the 
 [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io/)), is here to help you with your 
 Campus Cyberinfrastructure (CC\*) proposal!  Please contact us at 
 [cc-star-proposals@opensciencegrid.org](mailto:cc-star-proposals@opensciencegrid.org)
@@ -40,7 +40,7 @@ and enable users to take advantage of these from submission points (whether via 
 
 To contribute computational resources to the OSG, the following will be needed:
 
-- An existing compute cluster running on a [supported operating system](https://opensciencegrid.org/docs/release/supported_platforms/)
+- An existing compute cluster running on a [supported operating system](https://osg-htc.org/docs/release/supported_platforms/)
   with a supported resource management system:
   [Grid Engine](http://www.univa.com/products/),
   [HTCondor](https://research.cs.wisc.edu/htcondor/),
@@ -49,7 +49,7 @@ To contribute computational resources to the OSG, the following will be needed:
   [Slurm](https://slurm.schedmd.com/), and some local cloud provisioners.
 - Outbound network connectivity from the cluster's worker nodes
 - SSH access to your local cluster's submit node from a known IP address
-- [Temporary scratch space](https://opensciencegrid.org/docs/worker-node/using-wn/#the-worker-node-environment) on each
+- [Temporary scratch space](https://osg-htc.org/docs/worker-node/using-wn/#the-worker-node-environment) on each
   worker node and shared home directories on each cluster node
 - Installation of some additional packages on the local cluster, IF the site would like to maximize its ability to support
   users, including those with large per-job data, containerized software, and/or GPU jobs.

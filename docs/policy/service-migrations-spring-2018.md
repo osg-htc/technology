@@ -135,7 +135,7 @@ If you experience any problems with the central Collector, please contact us at
 
 ### Homepage ###
 
-The [OSG homepage](https://opensciencegrid.org) was a Wordpress instance that has been moved to a static site.
+The [OSG homepage](https://osg-htc.org) was a Wordpress instance that has been moved to a static site.
 
 If you experience any problems with the homepage, please contact us at
 [help@opensciencegrid.org](mailto:help@opensciencegrid.org).

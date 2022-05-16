@@ -46,10 +46,10 @@ Links
   but adding the `.md` extension is required for MkDocs 1.0.0+.
   Links with the `.md` extension work in all versions of MkDocs.)
 
-- Links to the area's homepage (e.g. https://opensciencegrid.org/technology/) need to be of the form `[link text](/)`
+- Links to the area's homepage (e.g. https://osg-htc.org/technology/) need to be of the form `[link text](/)`
 
-- Links to other areas (like from https://opensciencegrid.org/technology/ to
-  https://opensciencegrid.org/operations/) need to be absolute links (i.e. include the domain name)
+- Links to other areas (like from https://osg-htc.org/technology/ to
+  https://osg-htc.org/operations/) need to be absolute links (i.e. include the domain name)
 
 
 ### Section links ###

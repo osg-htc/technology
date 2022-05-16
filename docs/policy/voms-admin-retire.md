@@ -55,7 +55,7 @@ needed. _Note_: In parallel to the VOMS-Admin transition, OSG Software plans to 
 There is no need to complete one transition before the other.
 
 Sites using `edg-mkgridmap` will need to use its replacement, `lcmaps-plugins-voms` (this
-process is documented [here](https://www.opensciencegrid.org/docs/release/release_series/#migrating-from-edg-mkgridmap-to-lcmaps-voms-plugin)).
+process is documented [here](https://www.osg-htc.org/docs/release/release_series/#migrating-from-edg-mkgridmap-to-lcmaps-voms-plugin)).
 
 VO Transition Plans
 -------------------
@@ -81,7 +81,7 @@ currently on the VOMS-Admin server to be kept on the frontend host.  The fronten
 to the certificate.
 
 !!! info
-    See [this documentation](https://opensciencegrid.org/docs/other/install-gwms-frontend/#proxy-configuration) to
+    See [this documentation](https://osg-htc.org/docs/other/install-gwms-frontend/#proxy-configuration) to
     update your GlideinWMS Frontend to use the new proxy generation command.
 
 We plan to transition more complex VOs - those using VOMS-Admin to track membership in a VO - to `comanage`.  It is

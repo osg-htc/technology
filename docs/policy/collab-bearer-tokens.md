@@ -166,4 +166,4 @@ wlcg.groups = /cms, /cms/Role=pilot
 Help
 ----
 
-To get assistance, please use the [this page](https://opensciencegrid.org/docs/common/help/).
+To get assistance, please use the [this page](https://osg-htc.org/docs/common/help/).

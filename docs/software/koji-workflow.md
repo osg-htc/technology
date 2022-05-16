@@ -57,7 +57,7 @@ Building OSG packages in Koji requires these privileges:
 - access to a login node at UW Comp Sci such as `moria.cs.wisc.edu`
 - access to the Koji service via a grid user certificate
 
-See the [user certificates document](https://opensciencegrid.org/docs/security/user-certs/)
+See the [user certificates document](https://osg-htc.org/docs/security/user-certs/)
 for information about how to get a user certificate.
 
 Open a Freshdesk ticket with the subject "Requesting access to Koji" with the following information:
@@ -109,7 +109,7 @@ Perform the following to set up the build tools on `moria`:
 
 This requires an Enterprise Linux 6 or 7 host.
 
-1.  Install the [OSG YUM repositories](https://opensciencegrid.org/docs/common/yum/)
+1.  Install the [OSG YUM repositories](https://osg-htc.org/docs/common/yum/)
 
 1.  If using OSG 3.5 or newer, enable the `devops` repository.
 

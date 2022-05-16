@@ -1,8 +1,8 @@
 Publishing OSG Pages with MkDocs
 ================================
 
-The OSG uses [MkDocs](https://www.mkdocs.org/) for [site documentation](https://opensciencegrid.org/docs/) and
-team-specific web pages (e.g. <https://opensciencegrid.org/technology/>).
+The OSG uses [MkDocs](https://www.mkdocs.org/) for [site documentation](https://osg-htc.org/docs/) and
+team-specific web pages (e.g. <https://osg-htc.org/technology/>).
 This document contains instructions for creating a new OSG area through GitHub and transitioning an existing MkDocs
 GitHub repository from [Travis CI](https://travis-ci.com/) to [GitHub Actions](https://github.com/features/actions).
 
@@ -83,7 +83,7 @@ Before starting, make sure that you have the `git` and `gem` tools installed.
 1. Create `mkdocs.yml` containing the following:
 
         site_name: <TITLE OF YOUR SITE>
-        site_url: https://opensciencegrid.org/<REPO NAME>
+        site_url: https://osg-htc.org/<REPO NAME>
         repo_name: https://github.com/opensciencegrid/<REPO NAME>
         theme:
           name: material
