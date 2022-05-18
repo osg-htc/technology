@@ -9,7 +9,7 @@ attempting to achieve with the mirroring service.
 This is not a service-level agreement but rather a statement of responsibilities.
 
 !!! note
-    To actually understand the technical procedure for mirroring a repository, [see the following page](https://www.opensciencegrid.org/docs/data/external-oasis-repos).  This document solely covers the policy aspects.
+    To actually understand the technical procedure for mirroring a repository, [see the following page](https://www.osg-htc.org/docs/data/external-oasis-repos).  This document solely covers the policy aspects.
 
 Introduction
 ------------
@@ -27,7 +27,7 @@ for use of the software in external repositories, but will help end-users contac
 OSG Responsibilities
 ---------------------
 
-* OSG will provide the Stratum-1 server network according to [the OASIS SLA](https://www.opensciencegrid.org/operations/SLA/oasis/)
+* OSG will provide the Stratum-1 server network according to [the OASIS SLA](https://www.osg-htc.org/operations/SLA/oasis/)
 * OSG will provide a best-effort mirror of the full contents of the external repo.  We will attempt to provide best-effort integrity of the
   object contents, but assume users of the Stratum-1 will do further integrity checking.  No SLA is provided covering potential data corruptions.
 * OSG will provide best-effort notification to the mirrored repository in case OSG detects a service outage of the external repo.

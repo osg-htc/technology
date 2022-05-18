@@ -1,6 +1,6 @@
 site_name: OSG Technology Area
-site_url: https://opensciencegrid.org/technology/
-repo_url: https://github.com/opensciencegrid/technology/
+site_url: https://osg-htc.org/technology/
+repo_url: https://github.com/osg-htc/technology/
 theme:
   name: material
   custom_dir: osgthedocs
@@ -148,7 +148,7 @@ nav:
     - September 28, 2020: 'meetings/2020/TechArea20200928.md'
     - September 14, 2020: 'meetings/2020/TechArea20200914.md'
     - August 24, 2020: 'meetings/2020/TechArea20200824.md'
-    - August 17, 2020: 'meetings/2020/TechArea20200817.md'      
+    - August 17, 2020: 'meetings/2020/TechArea20200817.md'
     - August 10, 2020: 'meetings/2020/TechArea20200810.md'
     - August 3, 2020: 'meetings/2020/TechArea20200803.md'
     - July 27, 2020: 'meetings/2020/TechArea20200727.md'

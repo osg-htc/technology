@@ -41,7 +41,7 @@ The announcement goes to:
 -   `usatlas-t2-l@lists.bnl.gov`
 -   OIM administrative contacts
 
-Use the [osg-notify tool](https://opensciencegrid.org/operations/services/sending-announcements/)
+Use the [osg-notify tool](https://osg-htc.org/operations/services/sending-announcements/)
 on `osg-sw-submit.chtc.wisc.edu` to send the release announcement using the following command:
 
     :::console
@@ -101,7 +101,7 @@ Sincerely,
 The OSG Software & Release Team
 
 * As described by our Community Software Testing Policy,
-(https://opensciencegrid.org/technology/policy/community-testing/)
+(https://osg-htc.org/technology/policy/community-testing/)
 major components of the OSG Software Stack need positive feedback and
 the approval of the release manager before they can be released.
 ```

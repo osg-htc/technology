@@ -16,7 +16,7 @@ Contents and Sources
 Similar to our existing RPM infrastructure, container image sources, build logs, and artifacts will be stored in
 publicly available repositories (e.g. GitHub, Docker Hub) for collaboration and traceability.
 Additionally, container images distributed by the OSG Software team will be based off of the latest version of a 
-[supported platform](https://opensciencegrid.org/docs/release/supported_platforms/) with software installed from OS,
+[supported platform](https://osg-htc.org/docs/release/supported_platforms/) with software installed from OS,
 EPEL, and [OSG](../policy/software-release.md#yum-repositories) Yum repositories.
 
 Tags
@@ -31,7 +31,7 @@ OSG Software container images will be built at least weekly and tagged with the 
 | Field      | Description                                                                                              |
 |------------|----------------------------------------------------------------------------------------------------------|
 | `<SERIES>` | The [OSG release series](release-series.md) used for software installation. Possible values: `3.6` and `3.5`. |
-| `<REPO>`   | [OSG Yum repositories](https://opensciencegrid.org/docs/common/yum/#repositories) used for software installation, including the corresponding `upcoming` repository. Possible values: `release` and `testing`. |
+| `<REPO>`   | [OSG Yum repositories](https://osg-htc.org/docs/common/yum/#repositories) used for software installation, including the corresponding `upcoming` repository. Possible values: `release` and `testing`. |
 | `<TIME>`   | The time that the image was built, in the format YYYYMMDD-HHMM; see below for an example.                 |
 
 
@@ -44,7 +44,7 @@ OSG Software container images will be built at least weekly and tagged with the 
     Image tags with a build time are treated as immutable and do not change.
 
 For example, to deploy an
-[Open Science Data Federation cache](https://opensciencegrid.org/docs/data/stashcache/run-stashcache-container/)
+[Open Science Data Federation cache](https://osg-htc.org/docs/data/stashcache/run-stashcache-container/)
 with the latest production software versions from OSG 3.6, use the following image tag:
 
 ```

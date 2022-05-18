@@ -130,7 +130,7 @@ If your site is running OSG <3.X>, you should upgrade to the current release
 series, OSG 3.Y.  See our upgrade documentation [1] for instructions.  If you
 need assistance upgrading, please contact us at help@opensciencegrid.org.
 
-[1] https://opensciencegrid.org/docs/release/release_series/#updating-from-osg-31-32-33-to-34
+[1] https://osg-htc.org/docs/release/release_series/#updating-from-osg-31-32-33-to-34
 ```
 
 If we're dropping support for a distro (e.g. EL 5 when we drop OSG 3.2), add

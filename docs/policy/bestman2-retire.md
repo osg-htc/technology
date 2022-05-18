@@ -16,7 +16,7 @@ BeStMan2 has not received upstream support for approximately five years; the exi
 Site Transition Plans
 ---------------------
 
-We have released [documentation](https://www.opensciencegrid.org/docs/data/load-balanced-gridftp)
+We have released [documentation](https://www.osg-htc.org/docs/data/load-balanced-gridftp)
 for a configuration of GridFTP that takes advantage of Linux Virtual Server (LVS) for load balancing between multiple
 GridFTP endpoints.
 
@@ -26,7 +26,7 @@ Timeline
 --------
 
 - March 2017 (completed):
-  Release [load balanced GridFTP](https://www.opensciencegrid.org/docs/data/load-balanced-gridftp)
+  Release [load balanced GridFTP](https://www.osg-htc.org/docs/data/load-balanced-gridftp)
   documentation
 - June 2017 (completed): OSG 3.4.0 is released without BeStMan
 - December 2018 (completed): Security-only support for OSG 3.3 series and BeStMan is provided

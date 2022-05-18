@@ -13,7 +13,7 @@ Submitting an Application
 
 To register with the OSG, submit an application using the self-signup process:
 
-1.  Visit <https://opensciencegrid.org/register>
+1.  Visit <https://osg-htc.org/register>
 
 1.  You will be presented with a CILogon Single-Sign On page.
     Select your insitution and sign in with your insitutional credentials:
@@ -52,10 +52,10 @@ Once your registration has been approved, you will receive an email confirming y
 OASIS Managers: Adding an SSH Key
 ---------------------------------
 
-After approval by OSG staff, [OASIS managers](https://opensciencegrid.org/docs/data/update-oasis/) must upload a public
+After approval by OSG staff, [OASIS managers](https://osg-htc.org/docs/data/update-oasis/) must upload a public
 SSH key before being able to access the OASIS login host:
 
-1.  Visit <https://opensciencegrid.org/register> and login if prompted
+1.  Visit <https://osg-htc.org/register> and login if prompted
 
 1.  Click your name in the top right to get a dropdown and click the `My Profile (OSG)` button
 
@@ -81,4 +81,4 @@ Getting Help
 ------------
 
 For assistance with the OSG contact registration process, please use
-[this page](https://opensciencegrid.org/docs/common/help/).
+[this page](https://osg-htc.org/docs/common/help/).

@@ -320,7 +320,7 @@ The following instructions are meant for the release manager (or interim release
 
         We welcome feedback on this release!
 
-2.  The release manager uses the [osg-notify tool](https://opensciencegrid.org/operations/services/sending-announcements/)
+2.  The release manager uses the [osg-notify tool](https://osg-htc.org/operations/services/sending-announcements/)
     on `osg-sw-submit.chtc.wisc.edu` to send the release announcement using the following command:
 
         :::console
