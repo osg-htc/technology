@@ -84,7 +84,7 @@ Before starting, make sure that you have the `git` and `gem` tools installed.
 
         site_name: <TITLE OF YOUR SITE>
         site_url: https://osg-htc.org/<REPO NAME>
-        repo_name: https://github.com/opensciencegrid/<REPO NAME>
+        repo_name: https://github.com/osg-htc/<REPO NAME>
         theme:
           name: material
 
