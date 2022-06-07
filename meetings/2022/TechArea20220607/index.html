@@ -2728,7 +2728,14 @@
 <li>AI (Carl): remove duplicate contact entries in the Topology contact pages (SOFTWARE-5214)</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<p>There are several Docker images that are built from individual GitHub repositories instead of the central "images" repository.
+They should be moved to the images repo; keep an eye on how well GitHub Actions workflows scale, though.</p>
+<p>COManage registration denials seem to be sticky;
+if you want to admit someone you have previously denied, you will have to expunge the CO Person record</p>
+<p>Sometimes packages get stuck in Ready for Testing state because they are considered "critical" but no external people have provided feedback.
+Mat suggests amending our release policy such that critical packages are released after a month without negative feedback, even if no positive feedback has been received.
+Tim says that would be better for software that has received VMU testing or has been well tested outside of OSG.
+We have an IRIS-HEP metric to increase the percentage of packages tested in VMU; Brian will create tickets.</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>JLab (BrianL): JLab and their ScotsGrid site are seeing low CPU utiliziation from Slurm for CLAS12 pilots.
@@ -2736,6 +2743,9 @@
 <li>Belle II (BrianL): will be having a meeting this week to discuss token-based pilot submission</li>
 <li>Texas Tech (BrianL): new backfill container site, working on fixing COManage registrations</li>
 <li>WeNMR (BrianL): helping DIRAC developers test token-based pilot submission</li>
+<li>BNL (Mat): Experiencing CA failures with XRootD TPC.  Their CA certificates look fine;
+    Mat has requested that they perform some manual tests to try and isolate the error.
+    The XRootD developers are Cc'ed on the ticket and can provide debugging assistance.</li>
 </ul>
 <h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
 <ul>
