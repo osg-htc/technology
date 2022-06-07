@@ -1163,26 +1163,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#osg-devops" class="md-nav__link">
-    OSG DevOps
-  </a>
-  
-    <nav class="md-nav" aria-label="OSG DevOps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discussion_1" class="md-nav__link">
-    Discussion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#osg-release-team" class="md-nav__link">
     OSG Release Team
   </a>
@@ -1191,7 +1171,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#discussion_2" class="md-nav__link">
+  <a href="#discussion_1" class="md-nav__link">
     Discussion
   </a>
   
@@ -2591,26 +2571,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#osg-devops" class="md-nav__link">
-    OSG DevOps
-  </a>
-  
-    <nav class="md-nav" aria-label="OSG DevOps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discussion_1" class="md-nav__link">
-    Discussion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#osg-release-team" class="md-nav__link">
     OSG Release Team
   </a>
@@ -2619,7 +2579,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#discussion_2" class="md-nav__link">
+  <a href="#discussion_1" class="md-nav__link">
     Discussion
   </a>
   
@@ -2732,10 +2692,6 @@
 They should be moved to the images repo; keep an eye on how well GitHub Actions workflows scale, though.</p>
 <p>COManage registration denials seem to be sticky;
 if you want to admit someone you have previously denied, you will have to expunge the CO Person record</p>
-<p>Sometimes packages get stuck in Ready for Testing state because they are considered "critical" but no external people have provided feedback.
-Mat suggests amending our release policy such that critical packages are released after a month without negative feedback, even if no positive feedback has been received.
-Tim says that would be better for software that has received VMU testing or has been well tested outside of OSG.
-We have an IRIS-HEP metric to increase the percentage of packages tested in VMU; Brian will create tickets.</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>JLab (BrianL): JLab and their ScotsGrid site are seeing low CPU utiliziation from Slurm for CLAS12 pilots.
@@ -2747,14 +2703,6 @@ We have an IRIS-HEP metric to increase the percentage of packages tested in VMU;
     Mat has requested that they perform some manual tests to try and isolate the error.
     The XRootD developers are Cc'ed on the ticket and can provide debugging assistance.</li>
 </ul>
-<h2 id="osg-devops">OSG DevOps<a class="headerlink" href="#osg-devops" title="Permanent link">&para;</a></h2>
-<ul>
-<li>A few feature requests / bug fixes for StashCP.  One of them ready for pull request: https://github.com/opensciencegrid/stashcp/pull/41</li>
-<li>Shoveler auto-update is working great!  Increased token lifetime on lightweight issuer to 1 hour.</li>
-<li>Did a large pull request for GP-ARGO.  Wondering if we should include the Site Name in the OSG map?  Currently, we show Facility Name, Resource Group, and Resource names.  But we don't show the site level in the map.</li>
-</ul>
-<h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Ready for Testing<ul>
@@ -2821,9 +2769,12 @@ We have an IRIS-HEP metric to increase the percentage of packages tested in VMU;
 </ul>
 </li>
 </ul>
-<h3 id="discussion_2">Discussion<a class="headerlink" href="#discussion_2" title="Permanent link">&para;</a></h3>
-<p>Discussed a new policy to promote packages stuck in RFT for a month to RFR as well as improving coordination of testing
-between OSG Operations and Software</p>
+<h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
+<p>Sometimes packages get stuck in Ready for Testing state because they are considered "critical" but no external people have provided feedback.
+Mat suggests amending our release policy such that critical packages are released after a month without negative feedback, even if no positive feedback has been received.
+Tim says that would be better for software that has received VMU testing or has been well tested outside of OSG.
+We have an IRIS-HEP metric to increase the percentage of packages tested in VMU; Brian will create tickets.
+Also discussed improving coordination of testing between OSG Operations and Software</p>
                 
               
               
