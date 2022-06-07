@@ -2748,29 +2748,15 @@
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Ready for Testing<ul>
+<li><a href="https://glideinwms.fnal.gov/doc.v3_9_5/history.html#development">GlideinWMS 3.9.5</a></li>
 <li>gratia-probe 2.6.1<ul>
+<li>Log schedd cron errors with newer versions of HTCondor</li>
 <li>Replace AuthToken* references with routed job attributes</li>
-<li>Fix mismatched type concatenation in Gratia record send</li>
-<li>Gratia: Set SCHEDD_CRON_LOG_NON_ZERO_EXIT = True in the htcondor-ce configuration</li>
-<li>Remove certinfo file log messages</li>
+<li>Remove certinfo flie log messages</li>
+<li>Fix crash on send failure</li>
 </ul>
 </li>
-<li>HTCondor-CE 5.1.4<ul>
-<li>Fix whole node job glidein CPUs and GPUs exprs that caused held jobs</li>
-<li>Fix bug where default CERequirements were being ignored</li>
-<li>Pass whole node request from GlideinWMS to the batch system</li>
-<li>Fix rrdtool dependencies to ease OSG 3.5 to 3.6 upgrade</li>
-</ul>
-</li>
-<li>GlideinWMS 3.9.4-3: Fix rrdtool dependencies</li>
-<li>rrdtool 1.8.0-1.2-el7: make Python RRDtools available to GlideinWMS</li>
-<li>xrootd-multiuser 2.0.4</li>
-<li>osg-token-renewer 0.8.2</li>
-<li>htvault-config-1.13</li>
-<li>htgettoken 1.12</li>
-<li>XCache 3.1.0</li>
-<li>stashcp 6.7.5</li>
-<li>HTCondor 9.0.13<ul>
+<li><a href="https://htcondor.readthedocs.io/en/v9_0/version-history/stable-release-series-90.html#version-9-0-13">HTCondor 9.0.13</a>: Bug fix release<ul>
 <li>Schedd and startd cron jobs can now log output upon non-zero exit</li>
 <li>condor_config_val now produces correct syntax for multi-line values</li>
 <li>The condor_run tool now reports submit errors and warnings to the terminal</li>
@@ -2778,16 +2764,48 @@
 <li>Fix HTCondor startup failure with certain complex network configurations</li>
 </ul>
 </li>
-<li>Upcoming<ul>
-<li>HTCondor 9.9.0<ul>
-<li>A new authentication method for remote HTCondor administration</li>
-<li>Several changes to improve the security of connections</li>
-<li>Fix issue where DAGMan direct submission failed when using Kerberos</li>
-<li>The submission method is now recorded in the job ClassAd</li>
-<li>Singularity jobs can now pull from Docker style repositories</li>
-<li>The OWNER authorization level has been folded into the ADMINISTRATOR level</li>
+<li>HTCondor-CE 5.1.5<ul>
+<li>Fix whole node job glidein CPUs and GPUs exprs that caused held jobs</li>
+<li>Fix bug where default CERequirements were being ignored</li>
+<li>Pass whole node request from GlideinWMS to the batch system</li>
+<li>Rename AuthToken attributes in the routed job to better support accounting</li>
+<li>Prevent GSI environment from pointing the job to the wrong certificates</li>
+<li>Fix issue where HTCondor-CE would need port 9618 open to start up</li>
 </ul>
 </li>
+<li>XCache 3.1.0<ul>
+<li>Fixed library dependency issues for xcache-reporter</li>
+<li>Add systemd overrides for xrootd-privileged</li>
+</ul>
+</li>
+<li>XRootD 5.4.3 RC4</li>
+<li>htvault-config 1.13<ul>
+<li>removes support for old style secret storage, requires htgettoken &gt;= 1.7</li>
+</ul>
+</li>
+<li>htgettoken 1.12<ul>
+<li>avoids crash when verbose output includes UTF-8</li>
+</ul>
+</li>
+<li>osg-pki-tools 3.5.2<ul>
+<li>bug fix for osg-incommon-cert-request when using host file</li>
+</ul>
+</li>
+<li>osg-release 3.6-5: Add osg-next yum repository</li>
+<li>osg-token-renewer 0.8.2<ul>
+<li>use oidc-agent's built-in password file option</li>
+<li>ensure tokens are renewed more frequently than their lifespan</li>
+</ul>
+</li>
+<li>rrdtool 1.8.0-1.2.el7: make Python RRDtools available to GlideinWMS</li>
+<li>stashcp 6.7.5<ul>
+<li>Adds multi-file transfer and improved error messages</li>
+<li>relax download timeouts for file transfer plugin</li>
+<li>multiple bug fixes</li>
+</ul>
+</li>
+<li>xrootd-multiuser 2.0.4<ul>
+<li>fix crash on EL8</li>
 </ul>
 </li>
 </ul>
