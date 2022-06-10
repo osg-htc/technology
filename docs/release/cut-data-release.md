@@ -158,6 +158,12 @@ REVISION=<REVISION>
 2-push-release -d $REVISION $VERSIONS
 ```
 
+### Step 8: Rebuild the Docker software base
+
+Go to the `build-docker-image` workflow page of the `opensciencegrid/docker-software-base`:
+<https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml>
+Click the `Run Workflow` button, select the `master` branch, and click `Run workflow`.
+
 ### Step 4: Generate the release notes
 
 This script generates the release notes and updates the release information in AFS.
@@ -203,12 +209,6 @@ contents and tags pushed for the [opensciencegrid/osg-wn](https://hub.docker.com
 1.  Click the `Run workflow` button and select the `master` branch
 
 1.  Verify that all builds succeed
-
-### Step 8: Rebuild the Docker software base
-
-Go to the `build-docker-image` workflow page of the `opensciencegrid/docker-software-base`:
-<https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml>
-Click the `Run Workflow` button, select the `master` branch, and click `Run workflow`.
 
 ### Step 8: Verify the VO Package and/or CA certificates
 
