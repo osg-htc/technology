@@ -79,11 +79,6 @@ To test pre-release, you will be kicking off a manual VM universe test run from 
 !!! note
     If there are failures, consult the release-manager before proceeding.
 
-### Step 3: Test the Pre-Release on the Madison ITB site
-
-Test the pre-release on the Madison ITB by following the [ITB pre-release testing instructions](../release/itb-testing.md).
-If you not local to Madison, consult the release manager for the designated person to do this testing.
-
 ### Step 4: Regenerate the build repositories
 
 To avoid 404 errors when retrieving packages, it's necessary to regenerate the build repositories. Run the following script from a machine with your koji-registered user certificate:
