@@ -145,20 +145,6 @@ web site served out of AFS.)
 ./1-upload-tarballs-to-afs -d $REVISION $NON_UPCOMING_VERSION
 ```
 
-### Step 2: Update the UW AFS installation of the tarball client
-
-The UW keeps an installation of the tarball client in `/p/vdt/workspace/tarball-client`
-on the UW's AFS. To update it, run the following commands:
-
-```bash
-NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
-```
-```bash
-for ver in $NON_UPCOMING_VERSIONS; do
-    /p/vdt/workspace/tarball-client/afs-install-tarball-client $ver $REVISION
-done
-```
-
 ### Step 3: Push from pre-release to release
 
 This script moves the packages into release, clones releases into new version-specific release repos,
@@ -206,20 +192,6 @@ done
 ```
 
 The script will automatically ssh you to oasis-login.opensciencegrid.org and give you instructions to complete the process.
-
-### Step 6: Remove old UW AFS installations of the tarball client
-
-To keep space usage down, remove tarball client installations and symlinks under `/p/vdt/workspace/tarball-client` on UW's AFS that are more than 2 months old.
-To remove them, first check the list:
-```bash
-find /p/vdt/workspace/tarball-client -maxdepth 1 -mtime +60 -name 3\* -ls
-```
-Then if the output looks reasonable
-(contains at least one installation, but does not contain recent installations),
-remove them:
-```bash
-find /p/vdt/workspace/tarball-client -maxdepth 1 -mtime +60 -name 3\* -exec rm -rf {} +
-```
 
 ### Step 7: Update the Docker WN client
 
