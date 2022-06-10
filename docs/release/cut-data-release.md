@@ -22,7 +22,9 @@ Requirements
 Pick the Version and Revision Numbers
 -------------------------------------
 
-The rest of this document makes references to `<REVISION>` and `<VERSION(S)>` , which refer to the space-delimited list of OSG version(s) and data revision, respectively (e.g. `3.3.28 3.4.3` and `2`, respectively). If you are unsure about either the version or revision, please consult the release manager.
+The rest of this document makes references to `<REVISION>` and `<VERSION(S)>` , which refer to the space-delimited list of OSG version(s) and data revision, respectively (e.g. `3.6.220609 3.7.220609` and `2`, respectively).
+Generally, just increment the version number from the latest release(s).
+If you are unsure about either the version or revision, please consult the release manager.
 
 Day 0: Generate Preliminary Release List
 ----------------------------------------

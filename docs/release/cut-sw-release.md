@@ -22,7 +22,9 @@ Requirements
 Pick the Version Number
 -----------------------
 
-The rest of this document makes references to `<VERSION(S)>` and `<NON-UPCOMING VERSIONS(S)>`, which refer to a space-delimited list of OSG version(s) and that same list minus `upcoming` (e.g. `3.3.28 3.4.3 upcoming` and `3.3.28 3.4.3`). If you are unsure about either the version or revision, please consult the release manager.
+The rest of this document makes references to `<VERSION(S)>` and `<NON-UPCOMING VERSIONS(S)>`, which refer to a space-delimited list of OSG version(s) and that same list minus the `upcoming` versions (e.g. `3.6.220609 3.4.220609-upcoming` and `3.6.220609`).
+Generally, the third number is the release date encoded as `yymmdd`.
+If you are unsure about either the version or revision, please consult the release manager.
 
 Day 0: Generate Preliminary Release List
 ----------------------------------------
