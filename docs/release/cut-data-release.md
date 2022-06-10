@@ -17,7 +17,6 @@ Requirements
 -   An account on UW CS machines (e.g. `moria`) to access UW's AFS
 -   `release-tools` scripts in your `PATH` ([GitHub](https://github.com/opensciencegrid/release-tools))
 -   `osg-build` scripts in your `PATH` (installed via OSG yum repos or [source](https://github.com/opensciencegrid/osg-build))
--   Access to the tarball repository at UNL (osgcollab@repo.opensciencegrid.org)
 
 Pick the Version and Revision Numbers
 -------------------------------------
@@ -105,7 +104,7 @@ REVISION=<REVISION>
 ```bash
 git clone https://github.com/opensciencegrid/tarball-client.git
 pushd tarball-client
-./docker-make-client-tarball --osgver 3.5 --version $NON_UPCOMING_VERSION --relnum $REVISION --all
+./docker-make-client-tarball --osgver 3.6 --version $NON_UPCOMING_VERSION --relnum $REVISION --all
 popd
 ```
 
@@ -166,21 +165,6 @@ Go to the `build-docker-image` workflow page of the `opensciencegrid/docker-soft
 <https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml>
 Click the `Run Workflow` button, select the `master` branch, and click `Run workflow`.
 
-### Step 4: Generate the release notes
-
-This script generates the release notes and updates the release information in AFS.
-
-```bash
-VERSIONS='<VERSION(S)>'
-REVISION=<REVISION>
-```
-```bash
-2-make-notes -d $REVISION $VERSIONS
-```
-
-1.  `*.txt` files are created and it should be verified that they've been moved to /p/vdt/public/html/release-info/ on UW's AFS.
-2.  For each release version, use the `*release-note*` files to update the relevant sections of the release note pages.
-
 ### Step 5: Install the tarballs into OASIS
 
 !!! note
@@ -223,6 +207,20 @@ verify that the version of the VO Package and/or CA certificates match the versi
 ```bash
 /p/vdt/workspace/tarball-client/current/amd64_rhel7/osgrun osg-update-data
 ```
+
+### Step 4: Update the Release Information
+
+This script generates the release notes and updates the release information in AFS.
+
+```bash
+VERSIONS='<VERSION(S)>'
+REVISION=<REVISION>
+```
+```bash
+2-update-info -d $REVISION $VERSIONS
+```
+
+1.  `*.txt` files are created and it should be verified that they've been moved to /p/vdt/public/html/release-info/ on UW's AFS.
 
 ### Step 9: Make release note pages
 
