@@ -67,12 +67,12 @@ If there are any discrepancies, consult the release manager. You may have to tag
 To test pre-release, you will be kicking off a manual VM universe test run from `osg-sw-submit.chtc.wisc.edu`.
 
 1.  Ensure that you meet the [pre-requisites](https://github.com/opensciencegrid/vm-test-runs) for submitting VM universe test runs
-2.  Prepare the test suite by running:
+1.  Prepare the test suite by running:
 
         osg-run-tests -P 'Testing OSG pre-release'
 
-3.  `cd` into the directory specified in the output of the previous command
-4.  Submit the DAG:
+1.  `cd` into the directory specified in the output of the previous command
+1.  Submit the DAG:
 
         ./master-run.sh
 
@@ -226,19 +226,19 @@ REVISION=<REVISION>
 
 1.  Make a new entry in the `News` section of the release series page.
 
-2.  For the list of changes, make an entry for each package. (VO Package v??, and/or CA certificates based on IGTF 1.??)
+1.  For the list of changes, make an entry for each package. (VO Package v??, and/or CA certificates based on IGTF 1.??)
     Under each package, list the VOs or CAs affected. Usually, you can just paste this from their release announcement.
     (At the time of writing, CA certificate and VO updates are the only packages that go into a data only release.)
 
-3.  Spell check the news.
+1.  Spell check the news.
 
-4.  Locally serve up the web pages and ensure that the formatting looks good and the links work as expected.
+1.  Locally serve up the web pages and ensure that the formatting looks good and the links work as expected.
 
         docker run --rm -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material:7.1.0
 
-5.  Make a pull request, get it approved, and merged.
+1.  Make a pull request, get it approved, and merged.
 
-6.  When the web page is available, you can announce the release.
+1.  When the web page is available, you can announce the release.
 
 
 
@@ -282,7 +282,7 @@ The following instructions are meant for the release manager (or interim release
 
         We welcome feedback on this release!
 
-2.  The release manager uses the [osg-notify tool](https://osg-htc.org/operations/services/sending-announcements/)
+1.  The release manager uses the [osg-notify tool](https://osg-htc.org/operations/services/sending-announcements/)
     on `osg-sw-submit.chtc.wisc.edu` to send the release announcement using the following command:
 
         :::console
@@ -295,5 +295,5 @@ The following instructions are meant for the release manager (or interim release
     Replacing `<EMAIL SUBJECT>` with an appropriate subject for your announcement and `<PATH TO MESSAGE FILE>` with the
     path to the file containing your message in plain text.
 
-3.  The release manager releases the tickets marked 'Ready for Release' in the release's JIRA filter using the 'bulk change' function.
+1.  The release manager releases the tickets marked 'Ready for Release' in the release's JIRA filter using the 'bulk change' function.
 
