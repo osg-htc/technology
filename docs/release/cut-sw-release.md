@@ -65,12 +65,12 @@ If there are any discrepancies, consult the release manager. You may have to tag
 To test pre-release, you will be kicking off a manual VM universe test run from `osg-sw-submit.chtc.wisc.edu`.
 
 1.  Ensure that you meet the [pre-requisites](https://github.com/opensciencegrid/vm-test-runs) for submitting VM universe test runs
-2.  Prepare the test suite by running:
+1.  Prepare the test suite by running:
 
         osg-run-tests -P 'Testing OSG pre-release'
 
-3.  `cd` into the directory specified in the output of the previous command
-4.  Submit the DAG:
+1.  `cd` into the directory specified in the output of the previous command
+1.  Submit the DAG:
 
         ./master-run.sh
 
@@ -80,7 +80,7 @@ To test pre-release, you will be kicking off a manual VM universe test run from 
 !!! note
     If there are failures, consult the release-manager before proceeding.
 
-### Step 4: Regenerate the build repositories
+### Step 3: Regenerate the build repositories
 
 To avoid 404 errors when retrieving packages, it's necessary to regenerate the build repositories. Run the following script from a machine with your koji-registered user certificate:
 
@@ -91,7 +91,7 @@ NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
 ./1-regen-repos $NON_UPCOMING_VERSIONS
 ```
 
-### Step 5: Create the client tarballs
+### Step 4: Create the client tarballs
 
 Create the OSG client tarballs on dumbo.chtc.wisc.edu using the relevant script from git:
 
@@ -107,7 +107,7 @@ popd
 
 The tarballs are found in the tarball-client directory.
 
-### Step 6: Briefly test the client tarballs
+### Step 5: Briefly test the client tarballs
 
 Currently, the yum repositories on dumbo.chtc.wisc.edu are configured in such a way that the
 verify tarball script fails. So, copy the tarballs to a known directory on moria.cs.wisc.edu.
@@ -126,7 +126,7 @@ If you have time, try some of the binaries, such as grid-proxy-init.
 !!! todo
     We need to automate this and have it run on the proper architectures and version of RHEL.
 
-### Step 7: Wait
+### Step 6: Wait
 
 Wait for clearance. The OSG Release Coordinator (in consultation with the Software Team and any testers) need to sign off on the update before it is released. If you are releasing things over two days, this is a good place to stop for the day.
 
@@ -140,10 +140,10 @@ day, since repo.opensciencegrid.org tarballs are automatically updated hourly fr
 web site served out of AFS.)
 
 ```bash
-./1-upload-tarballs-to-afs $NON_UPCOMING_VERSIONS
+./2-upload-tarballs-to-afs $NON_UPCOMING_VERSIONS
 ```
 
-### Step 3: Push from pre-release to release
+### Step 2: Push from pre-release to release
 
 This script moves the packages into release, clones releases into new version-specific release repos,
 locks the repos and regenerates them.
@@ -155,13 +155,13 @@ VERSIONS='<VERSION(S)>'
 2-push-release $VERSIONS
 ```
 
-### Step 8: Rebuild the Docker software base
+### Step 3: Rebuild the Docker software base
 
 Go to the `build-docker-image` workflow page of the `opensciencegrid/docker-software-base`:
 <https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml>
 Click the `Run Workflow` button, select the `master` branch, and click `Run workflow`.
 
-### Step 5: Install the tarballs into OASIS
+### Step 4: Install the tarballs into OASIS
 
 !!! note
     You must be an OASIS manager of the `mis` VO to do these steps. Known managers as of 2014-07-22: Mat, Tim C, Tim T, Brian L. 
@@ -181,7 +181,7 @@ done
 
 The script will automatically ssh you to oasis-login.opensciencegrid.org and give you instructions to complete the process.
 
-### Step 7: Update the Docker WN client
+### Step 5: Update the Docker WN client
 
 The GitHub repository at [opensciencegrid/docker-osg-wn](https://github.com/opensciencegrid/docker-osg-wn) controls the
 contents and tags pushed for the [opensciencegrid/osg-wn](https://hub.docker.com/r/opensciencegrid/osg-wn/) container image.
@@ -192,7 +192,7 @@ contents and tags pushed for the [opensciencegrid/osg-wn](https://hub.docker.com
 
 1.  Verify that all builds succeed
 
-### Step 9: Verify the VO Package and/or CA certificates
+### Step 6: Verify the VO Package and/or CA certificates
 
 If this release contains either the `vo-client` or `osg-ca-certs` package, verify that the CA web site has been updated.
 Wait for the [CA certificates](https://repo.opensciencegrid.org/cadist/) to be updated.
@@ -205,12 +205,12 @@ verify that the version of the VO Package and/or CA certificates match the versi
 /p/vdt/workspace/tarball-client/current/amd64_rhel7/osgrun osg-update-data
 ```
 
-### Step 10: Merge any pending documentation
+### Step 7: Merge any pending documentation
 
 For each documentation ticket in this release, merge the pull requests mentioned in the description or comments.
 
 
-### Step 4: Update the Release Information
+### Step 8: Update the Release Information
 
 This script updates the release information in AFS.
 
@@ -223,34 +223,30 @@ VERSIONS='<VERSION(S)>'
 
 1.  `*.txt` files are created and it should be verified that they've been moved to /p/vdt/public/html/release-info/ on UW's AFS.
 
-### Step 11: Make release note pages
+### Step 9: Update News
 
-1.  Copy the release note page from the latest software release of each series and put the new version number in the
-    file name. Edit the release number and date.
+1.  Make a new entry in the `News` section of the release series page.
 
-2.  Insert the package and RPM lists generated in Step 2 above.
-
-3.  For the list of changes, make an entry for each package that contains short descriptive text that would inform
+1.  For the list of changes, make an entry for each package that contains short descriptive text that would inform
     a system administrator whether or not this change is of concern to them. Also, link in any release announcement
     web page that is available for the software. Look a prior releases of the same software for hints on where to
     find such a page.
 
-4.  Examine the known issues and remove any that were resolved with this release. Of course, add any new ones that
+1.  Examine the known issues and remove any that were resolved with this release. Of course, add any new ones that
     have come up.
 
-5.  Spell check the release note pages.
+1.  Spell check the news.
 
-6.  Add the new pages to the release series table in `docs/release/notes.md`. List the major packages that are
-    mentioned in the release announcement.
+1.  Locally serve up the web pages and ensure that the formatting looks good and the links work as expected.
 
-7.  Locally serve up the web pages and ensure that the formatting looks good and the links work as expected.
+        docker run --rm -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material:7.1.0
 
-8.  Make a pull request, get it approved, and merged.
+1.  Make a pull request, get it approved, and merged.
 
-9.  When the web page is available, you can announce the release.
+1.  When the web page is available, you can announce the release.
 
 
-### Step 11: Announce the release
+### Step 10: Announce the release
 
 The following instructions are meant for the release manager (or interim release manager). If you are not the release manager, let the release manager know that they can announce the release.
 
@@ -270,13 +266,11 @@ The following instructions are meant for the release manager (or interim release
 
         Release notes and pointers to more documentation can be found at:
 
-        http://www.opensciencegrid.org/docs/release/<SERIES.VERSION>/release-<RELEASE-VERSION>/
+        https://opensciencegrid.org/docs/release/osg-36/#latest-news
 
-        The following containers have updated 'release' tags and are available
-        through Docker Hub (https://hub.docker.com/r/opensciencegrid/):
-        - container name 1
-        - container name 2
-        - container name 3
+        The OSG Docker images on Docker Hub
+        (https://hub.docker.com/u/opensciencegrid/)
+        have been updated to contain the new software.
 
         Need help? Let us know:
 
@@ -284,7 +278,7 @@ The following instructions are meant for the release manager (or interim release
 
         We welcome feedback on this release!
 
-2.  The release manager uses the [osg-notify tool](https://osg-htc.org/operations/services/sending-announcements/)
+1.  The release manager uses the [osg-notify tool](https://osg-htc.org/operations/services/sending-announcements/)
     on `osg-sw-submit.chtc.wisc.edu` to send the release announcement using the following command:
 
         :::console
@@ -297,5 +291,5 @@ The following instructions are meant for the release manager (or interim release
     Replacing `<EMAIL SUBJECT>` with an appropriate subject for your announcement and `<PATH TO MESSAGE FILE>` with the
     path to the file containing your message in plain text.
 
-3.  The release manager releases the tickets marked 'Ready for Release' in the release's JIRA filter using the 'bulk change' function.
+1.  The release manager releases the tickets marked 'Ready for Release' in the release's JIRA filter using the 'bulk change' function.
 

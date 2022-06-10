@@ -82,7 +82,7 @@ To test pre-release, you will be kicking off a manual VM universe test run from 
 !!! note
     If there are failures, consult the release-manager before proceeding.
 
-### Step 4: Regenerate the build repositories
+### Step 3: Regenerate the build repositories
 
 To avoid 404 errors when retrieving packages, it's necessary to regenerate the build repositories. Run the following script from a machine with your koji-registered user certificate:
 
@@ -93,7 +93,7 @@ NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
 ./1-regen-repos $NON_UPCOMING_VERSIONS
 ```
 
-### Step 5: Create the client tarballs
+### Step 4: Create the client tarballs
 
 Create the OSG client tarballs on dumbo.chtc.wisc.edu using the relevant script from git:
 
@@ -110,7 +110,7 @@ popd
 
 The tarballs are found in the tarball-client directory.
 
-### Step 6: Briefly test the client tarballs
+### Step 5: Briefly test the client tarballs
 
 Currently, the yum repositories on dumbo.chtc.wisc.edu are configured in such a way that the
 verify tarball script fails. So, copy the tarballs to a known directory on moria.cs.wisc.edu.
@@ -129,7 +129,7 @@ If you have time, try some of the binaries, such as grid-proxy-init.
 !!! todo
     We need to automate this and have it run on the proper architectures and version of RHEL.
 
-### Step 7: Wait
+### Step 6: Wait
 
 Wait for clearance. The OSG Release Coordinator (in consultation with the Software Team and any testers) need to sign off on the update before it is released. If you are releasing things over two days, this is a good place to stop for the day.
 
@@ -143,10 +143,10 @@ day, since repo.opensciencegrid.org tarballs are automatically updated hourly fr
 web site served out of AFS.)
 
 ```bash
-./1-upload-tarballs-to-afs -d $REVISION $NON_UPCOMING_VERSION
+./2-upload-tarballs-to-afs -d $REVISION $NON_UPCOMING_VERSION
 ```
 
-### Step 3: Push from pre-release to release
+### Step 2: Push from pre-release to release
 
 This script moves the packages into release, clones releases into new version-specific release repos,
 locks the repos and regenerates them.
@@ -159,13 +159,13 @@ REVISION=<REVISION>
 2-push-release -d $REVISION $VERSIONS
 ```
 
-### Step 8: Rebuild the Docker software base
+### Step 3: Rebuild the Docker software base
 
 Go to the `build-docker-image` workflow page of the `opensciencegrid/docker-software-base`:
 <https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml>
 Click the `Run Workflow` button, select the `master` branch, and click `Run workflow`.
 
-### Step 5: Install the tarballs into OASIS
+### Step 4: Install the tarballs into OASIS
 
 !!! note
     You must be an OASIS manager of the `mis` VO to do these steps. Known managers as of 2014-07-22: Mat, Tim C, Tim T, Brian L. 
@@ -185,7 +185,7 @@ done
 
 The script will automatically ssh you to oasis-login.opensciencegrid.org and give you instructions to complete the process.
 
-### Step 7: Update the Docker WN client
+### Step 5: Update the Docker WN client
 
 The GitHub repository at [opensciencegrid/docker-osg-wn](https://github.com/opensciencegrid/docker-osg-wn) controls the
 contents and tags pushed for the [opensciencegrid/osg-wn](https://hub.docker.com/r/opensciencegrid/osg-wn/) container image.
@@ -196,7 +196,7 @@ contents and tags pushed for the [opensciencegrid/osg-wn](https://hub.docker.com
 
 1.  Verify that all builds succeed
 
-### Step 8: Verify the VO Package and/or CA certificates
+### Step 6: Verify the VO Package and/or CA certificates
 
 Wait for the [CA certificates](https://repo.opensciencegrid.org/cadist/) to be updated.
 It may take a while for the updates to reach the mirror used to update the web site.
@@ -208,7 +208,7 @@ verify that the version of the VO Package and/or CA certificates match the versi
 /p/vdt/workspace/tarball-client/current/amd64_rhel7/osgrun osg-update-data
 ```
 
-### Step 4: Update the Release Information
+### Step 7: Update the Release Information
 
 This script generates the release notes and updates the release information in AFS.
 
@@ -222,30 +222,27 @@ REVISION=<REVISION>
 
 1.  `*.txt` files are created and it should be verified that they've been moved to /p/vdt/public/html/release-info/ on UW's AFS.
 
-### Step 9: Make release note pages
+### Step 8: Update News
 
-1.  Copy the release note page from the latest data release of each series and put the new version number in the
-    file name. Edit the release number and date.
+1.  Make a new entry in the `News` section of the release series page.
 
-2.  Insert the package and RPM lists generated in Step 2 above.
-
-3.  For the list of changes, make an entry for each package. (VO Package v??, and/or CA certificates based on IGTF 1.??)
+2.  For the list of changes, make an entry for each package. (VO Package v??, and/or CA certificates based on IGTF 1.??)
     Under each package, list the VOs or CAs affected. Usually, you can just paste this from their release announcement.
     (At the time of writing, CA certificate and VO updates are the only packages that go into a data only release.)
 
-4.  Spell check the release note pages.
+3.  Spell check the news.
 
-5.  Add the new pages to the release series table in `docs/release/notes.md`. List the major packages that are
-    mentioned in the release announcement.
+4.  Locally serve up the web pages and ensure that the formatting looks good and the links work as expected.
 
-6.  Locally serve up the web pages and ensure that the formatting looks good and the links work as expected.
+        docker run --rm -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material:7.1.0
 
-7.  Make a pull request, get it approved, and merged.
+5.  Make a pull request, get it approved, and merged.
 
-8.  When the web page is available, you can announce the release.
+6.  When the web page is available, you can announce the release.
 
 
-### Step 10: Announce the release
+
+### Step 9: Announce the release
 
 The following instructions are meant for the release manager (or interim release manager). If you are not the release manager, let the release manager know that they can announce the release.
 
@@ -273,13 +270,11 @@ The following instructions are meant for the release manager (or interim release
 
         Release notes and pointers to more documentation can be found at:
 
-        http://www.opensciencegrid.org/docs/release/<SERIES.VERSION>/release-<RELEASE-VERSION>/
+        https://opensciencegrid.org/docs/release/osg-36/#latest-news
 
-        The following containers have updated 'release' tags and are available
-        through Docker Hub (https://hub.docker.com/r/opensciencegrid/):
-        - container name 1
-        - container name 2
-        - container name 3
+        The OSG Docker images on Docker Hub
+        (https://hub.docker.com/u/opensciencegrid/)
+        have been updated to contain the new data.
 
         Need help? Let us know:
 
