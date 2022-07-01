@@ -69,6 +69,8 @@ These tasks should be completed in order.
     -  Verify that mash did not recreate the repo directory under
        `/usr/local/repo/osg` corresponding to the old release series.
 
+1.  Remove tarballs from repo and OASIS
+
 ### Software & Release
 
 These tasks can be completed in any order.
