@@ -1162,26 +1162,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#osg-release-team" class="md-nav__link">
-    OSG Release Team
-  </a>
-  
-    <nav class="md-nav" aria-label="OSG Release Team">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discussion_1" class="md-nav__link">
-    Discussion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2594,26 +2574,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#osg-release-team" class="md-nav__link">
-    OSG Release Team
-  </a>
-  
-    <nav class="md-nav" aria-label="OSG Release Team">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discussion_1" class="md-nav__link">
-    Discussion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2635,7 +2595,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Carl, Marco Mambelli, Ziyang</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2708,83 +2668,12 @@
 <li>AI (Carl): add ability to specify custom workflows in opensciencegrid/images (SOFTWARE-5013)</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<p>We had a short discussion regarding the appropriate fix for the way that GlideinWMS writes to <code>glidein_config</code>;
+BrianL will discuss thoughts with the HTCSS dev team and get back to Marco</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>OSPool (BrianL, Mat): discovered GlideinWMS file locking issue causing user job wrapper shadow exceptions</li>
 </ul>
-<h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Ready for Testing<ul>
-<li><a href="https://glideinwms.fnal.gov/doc.v3_9_5/history.html#development">GlideinWMS 3.9.5</a></li>
-<li>gratia-probe 2.6.1<ul>
-<li>Log schedd cron errors with newer versions of HTCondor</li>
-<li>Replace AuthToken* references with routed job attributes</li>
-<li>Remove certinfo flie log messages</li>
-<li>Fix crash on send failure</li>
-</ul>
-</li>
-<li><a href="https://htcondor.readthedocs.io/en/v9_0/version-history/stable-release-series-90.html#version-9-0-13">HTCondor 9.0.13</a>: Bug fix release<ul>
-<li>Schedd and startd cron jobs can now log output upon non-zero exit</li>
-<li>condor_config_val now produces correct syntax for multi-line values</li>
-<li>The condor_run tool now reports submit errors and warnings to the terminal</li>
-<li>Fix issue where Kerberos authentication would fail within DAGMan</li>
-<li>Fix HTCondor startup failure with certain complex network configurations</li>
-</ul>
-</li>
-<li>HTCondor-CE 5.1.5<ul>
-<li>Fix whole node job glidein CPUs and GPUs exprs that caused held jobs</li>
-<li>Fix bug where default CERequirements were being ignored</li>
-<li>Pass whole node request from GlideinWMS to the batch system</li>
-<li>Rename AuthToken attributes in the routed job to better support accounting</li>
-<li>Prevent GSI environment from pointing the job to the wrong certificates</li>
-<li>Fix issue where HTCondor-CE would need port 9618 open to start up</li>
-</ul>
-</li>
-<li>XCache 3.1.0<ul>
-<li>Fixed library dependency issues for xcache-reporter</li>
-<li>Add systemd overrides for xrootd-privileged</li>
-</ul>
-</li>
-<li>XRootD 5.4.3 RC4</li>
-<li>htvault-config 1.13<ul>
-<li>removes support for old style secret storage, requires htgettoken &gt;= 1.7</li>
-</ul>
-</li>
-<li>htgettoken 1.12<ul>
-<li>avoids crash when verbose output includes UTF-8</li>
-</ul>
-</li>
-<li>osg-pki-tools 3.5.2<ul>
-<li>bug fix for osg-incommon-cert-request when using host file</li>
-</ul>
-</li>
-<li>osg-release 3.6-5: Add osg-next yum repository</li>
-<li>osg-token-renewer 0.8.2<ul>
-<li>use oidc-agent's built-in password file option</li>
-<li>ensure tokens are renewed more frequently than their lifespan</li>
-</ul>
-</li>
-<li>rrdtool 1.8.0-1.2.el7: make Python RRDtools available to GlideinWMS</li>
-<li>stashcp 6.7.5<ul>
-<li>Adds multi-file transfer and improved error messages</li>
-<li>relax download timeouts for file transfer plugin</li>
-<li>multiple bug fixes</li>
-</ul>
-</li>
-<li>xrootd-multiuser 2.0.4<ul>
-<li>fix crash on EL8</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<p>Sometimes packages get stuck in Ready for Testing state because they are considered "critical" but no external people have provided feedback.
-Mat suggests amending our release policy such that critical packages are released after a month without negative feedback, even if no positive feedback has been received.
-Tim says that would be better for software that has received VMU testing or has been well tested outside of OSG.
-We have an IRIS-HEP metric to increase the percentage of packages tested in VMU; Brian will create tickets.
-Also discussed improving coordination of testing between OSG Operations and Software</p>
                 
               
               
