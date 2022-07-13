@@ -29,6 +29,8 @@ After users have been notified of changes, minor packages will be marked eligibl
 negative feedback after 7 calendar days.
 In addition to the above requirements, major packages must also receive positive feedback and be approved by the Release
 Manager.
+If a major package's functionality is tested by the OSG VM Universe tests, the release manager may approve that
+package for release without positive feedback after the package has been in testing for four weeks.
 If a package receives negative feedback, the offending package will be removed from the relevant testing repository.
 
 Major Packages
@@ -36,13 +38,13 @@ Major Packages
 
 The following packages are considered critical to the production Open Science Grid:
 
-- BLAHP
 - CVMFS
 - Frontier Squid
 - GlideinWMS
 - Gratia Probes
 - HTCondor
 - HTCondor-CE
+- stashcp
 - XCache
 - XRootD
 
