@@ -2647,15 +2647,18 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Carl, Mat</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Derek out this week</li>
+</ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This week: Mat</li>
 <li>Next week: TimT</li>
-<li>11 (-4) open FreshDesk tickets</li>
-<li>1 (+0) open GGUS ticket</li>
+<li>8 (-3) open FreshDesk tickets</li>
+<li>0 (+0) open GGUS ticket</li>
 </ul>
 <h3 id="jira-as-of-monday">Jira (as of Monday)<a class="headerlink" href="#jira-as-of-monday" title="Permanent link">&para;</a></h3>
 <table>
@@ -2668,28 +2671,28 @@
 </thead>
 <tbody>
 <tr>
-<td>191</td>
-<td>+1</td>
+<td>189</td>
+<td>+0</td>
 <td>Open</td>
 </tr>
 <tr>
-<td>32</td>
-<td>+1</td>
+<td>30</td>
+<td>+2</td>
 <td>Selected for Dev</td>
 </tr>
 <tr>
-<td>27</td>
-<td>+3</td>
+<td>31</td>
+<td>+0</td>
 <td>In Progress</td>
 </tr>
 <tr>
-<td>14</td>
-<td>-3</td>
+<td>17</td>
+<td>-5</td>
 <td>Dev Complete</td>
 </tr>
 <tr>
-<td>28</td>
-<td>+3</td>
+<td>16</td>
+<td>+6</td>
 <td>Ready for Testing</td>
 </tr>
 <tr>
@@ -2703,18 +2706,26 @@
 <ul>
 <li>AI (Carl): high prio (must be completed this week), continue Derek's GRACC correction work for Purdue</li>
 <li>Kubernetes hackathon today<ul>
-<li>AI (Mat) build stash-origin chart (SOFTWARE-5258)</li>
-<li>AI (Carl) enumerate differences between Kubernetes caches (SOFTWARE-5259)</li>
+<li>AI (Mat): build stash-origin chart (SOFTWARE-5258)</li>
+<li>AI (Mat): Validate CHTC-canary2 CE; see if pilots are filling up /tmp on exec nodes and why </li>
+<li>AI (Carl): enumerate differences between Kubernetes caches (SOFTWARE-5259)</li>
+<li>AI (BrianL): use Dex and COManage to give external collaborators read-only access to the osgdev namespace </li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>CMS running into problems with their XRootD redirector where due to a misconfiguration, writes went to random hosts.
+    They would like a config knob to prevent this kind of misconfiguration; BrianL suggested that they send mail to the
+    XRootD development list.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Purdue (Derek, Carl, BrianL): help sort out fixes for incorrect accounting of whole node pilots</li>
 <li>IceCube (BrianL): investigate OS Registry failure to issue token due to split of OSPool CCB/CM</li>
 <li>FNAL (BrianL): diagnose FD leaks affecting Bridges2/Expanse Hosted CEs</li>
+<li>FNAL (Carl): waiting for response regarding testing of new version of gratia-probes</li>
+<li>BNL (Mat): GermanGrid CA signed with SHA1; asked Doug if his crypto policy allows that </li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
