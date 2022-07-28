@@ -173,7 +173,7 @@ NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
 ```
 ```bash
 cd /tmp
-git clone --depth 1 file:///p/vdt/workspace/git/repo/tarball-client.git
+git clone --depth 1 https://github.com/opensciencegrid/tarball-client.git
 for ver in $NON_UPCOMING_VERSIONS; do
     /p/vdt/workspace/tarball-client/current/sys/osgrun /tmp/tarball-client/upload-tarballs-to-oasis $ver
 done
