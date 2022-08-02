@@ -2659,7 +2659,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Carl, Derek, Marco Mambelli, Mat, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2723,14 +2723,20 @@
 <li>AI (Carl): complete custom workflows ticket</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>Mat: Topology DataFederation namespaces PR ready for review and also deployed on ITB.</li>
+<li>Marco: Working on GlideinWMS 3.9.6; adding Python 3.9 support.</li>
+<li>Derek: systemd-tmpfiles-setup did not create /var/lock/condor on one site because the "condor" user doesn't exist at
+    the time systemd-tmpfiles-setup runs.  TimT says that condor_master since 8.9.12 should create the necessary
+    directories on startup if they are missing; he and Derek will debug.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Purdue (Derek, Carl, BrianL): help sort out fixes for incorrect accounting of whole node pilots</li>
-<li>IceCube (BrianL): investigate OS Registry failure to issue token due to split of OSPool CCB/CM</li>
-<li>FNAL (BrianL): diagnose FD leaks affecting Bridges2/Expanse Hosted CEs</li>
-<li>FNAL (Carl): waiting for response regarding testing of new version of gratia-probes</li>
-<li>BNL (Mat): GermanGrid CA signed with SHA1; asked Doug if his crypto policy allows that</li>
+<li>FNAL (BrianL): redeployed FNAL CEs; still on OSG 3.5 so they're at risk of running into the same FD limit again</li>
+<li>FNAL (Carl): packaging fixes verified by Yujun.
+    Submitted PR with some of Yujun's requested changes.</li>
+<li>BNL (Mat): Still debugging CA certs.  BrianB had a back-and-forth with the admin; Mat will follow along.</li>
 <li>CLAS12 (Derek): Helping fix gratia, <code>/var/lock/condor</code> failed to be created.</li>
 <li>Florida (Derek): OSG shoveler issuer is issuing token with wrong audience, not sure what's going on, debugging.  (Ugh, the issuer is complicated)</li>
 </ul>
@@ -2744,8 +2750,7 @@
 </li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>No release this week
-</code></pre></div>
+<p>No release this week</p>
                 
               
               
