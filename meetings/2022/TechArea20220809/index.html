@@ -2760,7 +2760,7 @@
 <li>Marco: Working on GlideinWMS 3.9.6; adding Python 3.9 support.</li>
 <li>Derek: systemd-tmpfiles-setup did not create /var/lock/condor on one site because the "condor" user doesn't exist at
     the time systemd-tmpfiles-setup runs.  TimT says that condor_master since 8.9.12 should create the necessary
-    directories on startup if they are missing; he and Derek will debug.</li>
+    directories on startup if they are missing; Derek will send email to ToddM regarding this feature.</li>
 </ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2769,8 +2769,7 @@
 <li>FNAL (Carl): packaging fixes verified by Yujun.
     Submitted PR with some of Yujun's requested changes.</li>
 <li>BNL (Mat): Still debugging CA certs.  BrianB had a back-and-forth with the admin; Mat will follow along.</li>
-<li>CLAS12 (Derek): Helping fix gratia, <code>/var/lock/condor</code> failed to be created.</li>
-<li>Florida (Derek): OSG shoveler issuer is issuing token with wrong audience, not sure what's going on, debugging.  (Ugh, the issuer is complicated)</li>
+<li>Florida (Derek): OSG shoveler issuer is issuing token with wrong audience, Fixed! The JSON of the user-config was not valid (my fault, typo)</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
