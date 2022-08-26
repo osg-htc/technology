@@ -2698,10 +2698,10 @@
                 <h1 id="git-software-development-workflow">Git software development workflow<a class="headerlink" href="#git-software-development-workflow" title="Permanent link">&para;</a></h1>
 <p>This document describes the development workflow for OSG software packages kept in GitHub. It is intended for people who wish to contribute to OSG software.</p>
 <h2 id="git-and-github-basics">Git and GitHub basics<a class="headerlink" href="#git-and-github-basics" title="Permanent link">&para;</a></h2>
-<p>If you are unfamiliar with Git and GitHub, the GitHub website has a good series of tutorials at <a href="https://help.github.com/categories/bootcamp/">https://help.github.com/categories/bootcamp/</a></p>
+<p>If you are unfamiliar with Git and GitHub, the GitHub website has a good series of tutorials at <a href="https://docs.github.com/en/get-started">https://docs.github.com/en/get-started</a></p>
 <h2 id="getting-shell-access-to-github">Getting shell access to GitHub<a class="headerlink" href="#getting-shell-access-to-github" title="Permanent link">&para;</a></h2>
 <p>There are multiple ways of authenticating to GitHub from the shell. This section will cover using SSH keys. This is no longer the method recommended by GitHub, but is easier to set up for someone with existing SSH experience.</p>
-<p>The instructions here are derived from <a href="https://help.github.com/articles/generating-an-ssh-key/">GitHub's own instructions on using SSH keys</a>.</p>
+<p>The instructions here are derived from <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">GitHub's own instructions on using SSH keys</a>.</p>
 <h3 id="creating-a-new-ssh-key-optional-but-recommended">Creating a new SSH key (optional but recommended)<a class="headerlink" href="#creating-a-new-ssh-key-optional-but-recommended" title="Permanent link">&para;</a></h3>
 <p>If you already have an SSH keypair in your <code>~/.ssh</code> directory that you want to use for GitHub, you may skip this step. It is more secure, however, to create a new keypair specifically for use with GitHub.</p>
 <p>The instructions below will create an SSH public/private key pair with the private key stored in <code>~/.ssh/id_github</code> and public key stored in <code>~/.ssh/id_github.pub</code>.</p>
@@ -2734,7 +2734,9 @@
 <h3 id="testing-that-shell-access-works">Testing that shell access works<a class="headerlink" href="#testing-that-shell-access-works" title="Permanent link">&para;</a></h3>
 <p>To verify you can authenticate to GitHub using SSH, SSH to <code>git@github.com</code>. You should see a message that 'you've successfully authenticated, but GitHub does not provide shell access.'</p>
 <h2 id="contribution-workflow">Contribution workflow<a class="headerlink" href="#contribution-workflow" title="Permanent link">&para;</a></h2>
-<p>We use the standard GitHub <a href="https://help.github.com/articles/using-pull-requests/">pull request</a> workflow for making contributions to OSG software.</p>
+<p>We use the standard GitHub
+<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a>
+workflow for making contributions to OSG software.</p>
 <p>If you've never contributed to this project on GitHub before, do the following steps first:</p>
 <ol>
 <li>Using the GitHub web interface, fork the repo you wish to contribute to.</li>
@@ -2751,7 +2753,7 @@ e.g. in order to clone my local fork of the <code>openscience/technology</code> 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you get a "Permission denied" error, your public key may not be set up with GitHub -- please see the "Getting shell access to GitHub" section above.</p>
-<p>If you get some other error, <a href="https://help.github.com/categories/ssh/">the GitHub page on SSH</a> may contain useful information on troubleshooting.</p>
+<p>If you get some other error, <a href="https://docs.github.com/en/authentication/troubleshooting-ssh">the GitHub page on SSH</a> may contain useful information on troubleshooting.</p>
 </div>
 </li>
 </ol>

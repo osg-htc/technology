@@ -732,13 +732,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gsi-openssh" class="md-nav__link">
-    GSI OpenSSH
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#htcondor-ce-collector-wip" class="md-nav__link">
     HTCondor-CE Collector (WIP)
   </a>
@@ -2801,13 +2794,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gsi-openssh" class="md-nav__link">
-    GSI OpenSSH
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#htcondor-ce-collector-wip" class="md-nav__link">
     HTCondor-CE Collector (WIP)
   </a>
@@ -3247,52 +3233,6 @@ CVMFS_HTTP_PROXY=DIRECT
 <li>Run <code>/usr/share/gratia/condor/condor_meter</code></li>
 <li>Check <code>/var/lib/gratia/tmp/gratiafiles/</code> for a <code>subdir.condor_...</code> directory and verify that there are 200 xml jobs and the cpus/wall times are appropriate (either PT0S or PT1M).</li>
 </ul>
-<h2 id="gsi-openssh">GSI OpenSSH<a class="headerlink" href="#gsi-openssh" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Fermicloud policy forbids running the GSI OpenSSH server.
-You will have to test that part locally.</p>
-</div>
-<p>To test a fresh installation:</p>
-<ol>
-<li>Spin up two VM's and set up the EPEL/OSG repos on both of them.</li>
-<li>Choose one of the VM's, it will be the server VM. The hostname of this machine will be referenced below as the <code>&lt;SERVER HOSTNAME&gt;</code>
-    Consult these <a href="https://www.opensciencegrid.org/docs/other/gsissh/">instructions</a> to set up the server.</li>
-<li>
-<p>From the other VM (client):</p>
-<ol>
-<li>
-<p>Install the necessary packages:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">root@host # </span>yum install globus-proxy-utils gsi-openssh-clients
-</code></pre></div>
-
-</li>
-<li>
-<p>Initialize your proxy. After this, none of the gsi commands should prompt you for your password.</p>
-</li>
-<li>
-<p>Connect to the server:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">user@host $ </span>gsissh -p <span class="m">2222</span> &lt;SERVER HOSTNAME&gt;
-</code></pre></div>
-
-</li>
-<li>
-<p>Copy a test file to the server:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">user@host $ </span>gsiscp -p <span class="m">2222</span> testfile &lt;SERVER HOSTNAME&gt;:/tmp
-</code></pre></div>
-
-</li>
-<li>
-<p>Connect to the server via SFTP and grab files:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">user@host $ </span>gsisftp -P <span class="m">2222</span> &lt;SERVER HOSTNAME&gt;
-<span class="gp">user@host $ </span><span class="nb">cd</span> /tmp
-<span class="gp">user@host $ </span>get testfile
-</code></pre></div>
-
-</li>
-</ol>
-</li>
-</ol>
 <h2 id="htcondor-ce-collector-wip">HTCondor-CE Collector (WIP)<a class="headerlink" href="#htcondor-ce-collector-wip" title="Permanent link">&para;</a></h2>
 <p>The CE Collector is a stripped-down version of HTCondor-CE that contains mostly just the collector daemon and configs. It was introduced in htcondor-ce-1.6. The production CE Collectors run at the GOC, but you may want to set up your own for testing.</p>
 <ol>
@@ -3360,7 +3300,7 @@ You will have to test that part locally.</p>
 <p>Testing a fresh installation:</p>
 <ol>
 <li>make sure the yum repositories required by OSG is installed on your host<ul>
-<li>rpm -Uvh <a href="http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm">http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm</a> OR rpm -Uvh <a href="http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el6-release-latest.rpm">http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el6-release-latest.rpm</a></li>
+<li>rpm -Uvh <a href="http://repo.opensciencegrid.org/osg/3.6/osg-3.6-el8-release-latest.rpm">http://repo.opensciencegrid.org/osg/3.6/osg-3.6-el8-release-latest.rpm</a> OR rpm -Uvh <a href="http://repo.opensciencegrid.org/osg/3.6/osg-3.6-el7-release-latest.rpm">http://repo.opensciencegrid.org/osg/3.6/osg-3.6-el7-release-latest.rpm</a></li>
 <li>also make sure epel repo is set up. </li>
 </ul>
 </li>

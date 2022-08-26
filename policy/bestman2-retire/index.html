@@ -2592,15 +2592,14 @@
 <p>OSG currently supports BeStMan2 in "gateway mode" -- in this mode, SRM is only used for metadata operations (listing directory contents), listing total space used, and load-balancing GridFTP servers.  This functionality is redundant to what can be accomplished with GridFTP alone.</p>
 <p>BeStMan2 has not received upstream support for approximately five years; the existing code base (about 150,000 lines of Java - similar in size to Globus GridFTP) and its extensive set of dependencies (such as JGlobus) are now quite outdated and would require significant investment to modernize.  OSG has worked at length with our stakeholders to replace SRM-specific use cases with other equivalents.  We believe none of our stakeholders require sites to have an SRM endpoint: this document describes the site transition plan.</p>
 <h2 id="site-transition-plans">Site Transition Plans<a class="headerlink" href="#site-transition-plans" title="Permanent link">&para;</a></h2>
-<p>We have released <a href="https://www.osg-htc.org/docs/data/load-balanced-gridftp">documentation</a>
+<p>We have released documentation
 for a configuration of GridFTP that takes advantage of Linux Virtual Server (LVS) for load balancing between multiple
 GridFTP endpoints.</p>
 <p>Sites should work with their supported VOs (typically, CMS or ATLAS) to identify any VO-specific usage and replacement plans for BeStMan2.</p>
 <h2 id="timeline">Timeline<a class="headerlink" href="#timeline" title="Permanent link">&para;</a></h2>
 <ul>
 <li>March 2017 (completed):
-  Release <a href="https://www.osg-htc.org/docs/data/load-balanced-gridftp">load balanced GridFTP</a>
-  documentation</li>
+  Release load balanced GridFTP documentation</li>
 <li>June 2017 (completed): OSG 3.4.0 is released without BeStMan</li>
 <li>December 2018 (completed): Security-only support for OSG 3.3 series and BeStMan is provided</li>
 <li>May 2018 (completed): Support is dropped for OSG 3.3 series; no further support for BeStMan is provided.</li>

@@ -2846,7 +2846,7 @@
                 
                 
                 <h1 id="migrating-to-markdown">Migrating to Markdown<a class="headerlink" href="#migrating-to-markdown" title="Permanent link">&para;</a></h1>
-<p>As part of the TWiki retirement (the read-only target date of Oct 1, 2017, with a shutdown date in 2018), we will need to convert the OSG Software and Release3 docs from TWiki syntax to <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a>. The following document outlines the conversion process and conventions.</p>
+<p>As part of the TWiki retirement (the read-only target date of Oct 1, 2017, with a shutdown date in 2018), we will need to convert the OSG Software and Release3 docs from TWiki syntax to <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Markdown</a>. The following document outlines the conversion process and conventions.</p>
 <h2 id="choosing-the-git-repository">Choosing the git repository<a class="headerlink" href="#choosing-the-git-repository" title="Permanent link">&para;</a></h2>
 <p>First you will need to choose which git repoository you will be working with:</p>
 <table>
@@ -2859,11 +2859,11 @@
 <tbody>
 <tr>
 <td align="left">SoftwareTeam</td>
-<td align="left"><a href="https://www.github.com/opensciencegrid/technology/">technology</a></td>
+<td align="left"><a href="https://github.com/osg-htc/technology/">technology</a></td>
 </tr>
 <tr>
 <td align="left">Release3</td>
-<td align="left"><a href="https://www.github.com/opensciencegrid/docs/">docs</a></td>
+<td align="left"><a href="https://github.com/osg-htc/docs/">docs</a></td>
 </tr>
 </tbody>
 </table>
@@ -2886,8 +2886,8 @@
 <h4 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h4>
 <p>To perform a document migration using docker, you will need the following tools and accounts:</p>
 <ul>
-<li><a href="https://help.github.com/articles/fork-a-repo/">Fork</a> and
-  <a href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">clone</a> the
+<li><a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">Fork</a> and
+  <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">clone</a> the
   repository that you chose in the <a href="#choosing-the-git-repository">above section</a></li>
 <li>A host with a running docker service</li>
 <li><code>sudo</code> or membership in the <code>docker</code> group</li>
@@ -2996,7 +2996,7 @@ and <code>&lt;MARKDOWN FILE&gt;</code> is the resulting <code>.md</code> file</p
 <h4 id="requirements_1">Requirements<a class="headerlink" href="#requirements_1" title="Permanent link">&para;</a></h4>
 <p>This method requires the following:</p>
 <ul>
-<li><a href="https://help.github.com/articles/fork-a-repo/">Fork</a> and <a href="https://help.github.com/articles/cloning-a-repository/">clone</a> the repository that you chose in the <a href="#choosing-the-git-repository">above section</a></li>
+<li><a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">Fork</a> and <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">clone</a> the repository that you chose in the <a href="#choosing-the-git-repository">above section</a></li>
 <li>pandoc (&gt; 1.16)</li>
 <li>mkdocs</li>
 <li>MarkdownHighlight</li>
