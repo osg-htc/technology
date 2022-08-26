@@ -57,7 +57,7 @@ Building OSG packages in Koji requires these privileges:
 - access to a login node at UW Comp Sci such as `moria.cs.wisc.edu`
 - access to the Koji service via a grid user certificate
 
-See the [user certificates document](https://osg-htc.org/docs/security/user-certs/)
+See the old [user certificates document](https://github.com/osg-htc/docs/blob/07ae815506a61e8e86485469ea3ddc0e93eba9ea/docs/security/user-certs.md)
 for information about how to get a user certificate.
 
 Open a Freshdesk ticket with the subject "Requesting access to Koji" with the following information:
