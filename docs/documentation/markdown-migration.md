@@ -10,8 +10,8 @@ First you will need to choose which git repoository you will be working with:
 
 | If you are converting a document from... | Use this github repository... |
 | :--------------------------------------- | :---------------------------- |
-| SoftwareTeam | [technology](https://www.github.com/opensciencegrid/technology/) |
-| Release3 | [docs](https://www.github.com/opensciencegrid/docs/) |
+| SoftwareTeam | [technology](https://github.com/osg-htc/technology/) |
+| Release3 | [docs](https://github.com/osg-htc/docs/) |
 
 Once you've chosen the target repository for your document, move onto the next section and pick your conversion method.
 
