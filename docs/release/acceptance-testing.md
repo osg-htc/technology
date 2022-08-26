@@ -308,7 +308,7 @@ RSV
 Testing a fresh installation:
 
 1.  make sure the yum repositories required by OSG is installed on your host
-    -   rpm -Uvh <http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm> OR rpm -Uvh <http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el6-release-latest.rpm>
+    -   rpm -Uvh <http://repo.opensciencegrid.org/osg/3.6/osg-3.6-el8-release-latest.rpm> OR rpm -Uvh <http://repo.opensciencegrid.org/osg/3.6/osg-3.6-el7-release-latest.rpm>
     -   also make sure epel repo is set up. 
 2. install the rpm
     -   yum --enablerepo=osg-testing install rsv 

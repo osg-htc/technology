@@ -39,7 +39,7 @@ document. The intended solution will revolve around mapping local user accounts 
 with any site for which this solution does not work.
 
 LCMAPS VOMS plugin installation and configuration documentation can be
-found [here](https://www.osg-htc.org/docs/security/lcmaps-voms-authentication).
+found here (formerly: lcmaps-voms-authentication).
 
 Timeline
 --------
