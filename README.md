@@ -14,4 +14,4 @@ This repository contains the internal documents for the OSG Technology Area.
 - [Travis-CI integration](https://djw8605.github.io/2017/02/08/deploying-docs-on-github-with-travisci/)
 - [mkdocs documentation](http://www.mkdocs.org/)
 - [Modify mkdoc themes (Jinja2 documentation)](http://jinja.pocoo.org/docs/dev/templates/)
-- [Markdown documentation](https://guides.github.com/features/mastering-markdown/)
+- [Markdown documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)

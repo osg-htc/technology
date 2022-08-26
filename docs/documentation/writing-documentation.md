@@ -14,7 +14,7 @@ Contributing Content
 --------------------
 
 To contribute minor content changes (e.g., fixing typos, changing a couple of sentences), we recommend using the
-[GitHub web interface](https://help.github.com/articles/editing-files-in-your-repository/) to submit a pull request.
+[GitHub web interface](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files) to submit a pull request.
 
 To contribute major content changes to one of the above OSG areas, make sure you and the machine you'll be working on
 meet the following requirements:
@@ -28,9 +28,9 @@ meet the following requirements:
 
 Before making any content changes, you will need to prepare a local git clone:
 
-1. [Fork and clone](https://help.github.com/articles/fork-a-repo/) the GitHub repository that you'd like to contribute to
+1. [Fork and clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the GitHub repository that you'd like to contribute to
 
-1. Add the upstream Github repository as a [remote](https://help.github.com/articles/adding-a-remote/).
+1. Add the upstream Github repository as a [remote](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories).
    For example, if you are working on the User School 2018 pages:
 
         :::console
@@ -111,7 +111,7 @@ To contribute content to the OSG, follow these steps to submit a pull request wi
     Where `<DESCRIPTIVE COMMIT MESSAGE>` is a meaningful short text that identifies the changes applied, it is a good
     practice, to concatenate the ticket number associated e.g. "Removing color macros (SOFTWARE-3739)"
 
-1. From your Github fork, [submit a pull request](https://help.github.com/articles/creating-a-pull-request/)
+1. From your Github fork, [submit a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 
 Document Layout
 ---------------

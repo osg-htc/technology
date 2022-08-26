@@ -13,7 +13,7 @@ Getting shell access to GitHub
 
 There are multiple ways of authenticating to GitHub from the shell. This section will cover using SSH keys. This is no longer the method recommended by GitHub, but is easier to set up for someone with existing SSH experience.
 
-The instructions here are derived from [GitHub's own instructions on using SSH keys](https://docs.github.com/en/authentication/troubleshooting-ssh/connecting-to-github-with-ssh).
+The instructions here are derived from [GitHub's own instructions on using SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 ### Creating a new SSH key (optional but recommended)
 

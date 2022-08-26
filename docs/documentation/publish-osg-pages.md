@@ -72,7 +72,7 @@ Before starting, make sure that you have the `git` and `gem` tools installed.
             Do NOT commit the unencrypted `deploy-key`!
 
     1. Add the contents of `deploy-key.pub` to your repository's list of
-       [deploy keys](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys).
+       [deploy keys](https://docs.github.com/en/developers/overview/managing-deploy-keys#deploy-keys).
        Make sure to check `Allow write access`.
 
 1. Follow [these instructions](https://github.com/opensciencegrid/doc-ci-scripts#travis-ci-documentation-scripts) to add
@@ -160,7 +160,7 @@ This section describes creating an ITB repository for a documentation area creat
         !!! danger
             Do NOT commit the unencrypted `deploy-itb`!
 
-1. Add `deploy-itb.pub` to the **ITB** repository's list of [deploy keys](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys).
+1. Add `deploy-itb.pub` to the **ITB** repository's list of [deploy keys](https://docs.github.com/en/developers/overview/managing-deploy-keys#deploy-keys).
    Make sure to check `Allow write access`.
 1. Still in the non-ITB repository, push your local changes to the GitHub repository
 
@@ -198,7 +198,7 @@ Before upgrading, you must fix the following incompatibilities:
     For example, links should be of the form `../software/development-process.md` instead of
     `/software/development-process`.
 
--   Push your changes to your fork and [create a pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
+-   Push your changes to your fork and [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
 
 !!! tip "Previewing your pages with Docker"
 
@@ -245,7 +245,7 @@ Perform the following actions from the command-line:
 ### Enabling GitHub Actions ###
 
 The new method for validating and publishing OSG pages for a MkDocs repository can be enabled entirely through the
-[GitHub web interface](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/sharing-workflows-with-your-organization#using-a-workflow-template):
+[GitHub web interface](https://docs.github.com/en/actions/using-workflows/sharing-workflows-secrets-and-runners-with-your-organization#using-a-workflow-template):
 
 1.  Navigate to the `opensciencegrid` fork of the GitHub repository in your web browser,
     e.g. <https://github.com/opensciencegrid/docs/>
