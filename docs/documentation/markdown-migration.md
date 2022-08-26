@@ -1,7 +1,7 @@
 Migrating to Markdown
 =====================
 
-As part of the TWiki retirement (the read-only target date of Oct 1, 2017, with a shutdown date in 2018), we will need to convert the OSG Software and Release3 docs from TWiki syntax to [Markdown](https://guides.github.com/features/mastering-markdown/). The following document outlines the conversion process and conventions.
+As part of the TWiki retirement (the read-only target date of Oct 1, 2017, with a shutdown date in 2018), we will need to convert the OSG Software and Release3 docs from TWiki syntax to [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). The following document outlines the conversion process and conventions.
 
 Choosing the git repository
 ---------------------------
@@ -10,8 +10,8 @@ First you will need to choose which git repoository you will be working with:
 
 | If you are converting a document from... | Use this github repository... |
 | :--------------------------------------- | :---------------------------- |
-| SoftwareTeam | [technology](https://www.github.com/opensciencegrid/technology/) |
-| Release3 | [docs](https://www.github.com/opensciencegrid/docs/) |
+| SoftwareTeam | [technology](https://github.com/osg-htc/technology/) |
+| Release3 | [docs](https://github.com/osg-htc/docs/) |
 
 Once you've chosen the target repository for your document, move onto the next section and pick your conversion method.
 
@@ -38,8 +38,8 @@ user@host $ docker pull opensciencegrid/docker-twiki-converter
 
 To perform a document migration using docker, you will need the following tools and accounts:
 
-- [Fork](https://help.github.com/articles/fork-a-repo/) and
-  [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the
+- [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and
+  [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the
   repository that you chose in the [above section](#choosing-the-git-repository)
 - A host with a running docker service
 - `sudo` or membership in the `docker` group
@@ -143,7 +143,7 @@ If you've already used the [docker method](#using-docker), skip to the section a
 
 This method requires the following:
 
-- [Fork](https://help.github.com/articles/fork-a-repo/) and [clone](https://help.github.com/articles/cloning-a-repository/) the repository that you chose in the [above section](#choosing-the-git-repository)
+- [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the repository that you chose in the [above section](#choosing-the-git-repository)
 - pandoc (> 1.16)
 - mkdocs
 - MarkdownHighlight

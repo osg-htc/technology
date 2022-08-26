@@ -23,7 +23,7 @@ To do this, we use GitHub Actions to:
 
 Code for new container images should now be stored in the GitHub repository
 [opensciencegrid/images](https://github.com/opensciencegrid/images);
-[see below for instructions](#add-image-code-to-the-opensciencegrid-images-repo).
+[see below for instructions](#add-image-code-to-the-opensciencegridimages-repo).
 
 The previous convention was to use individual GitHub repos for each image;
 these are [described below](#old-image-repositories).

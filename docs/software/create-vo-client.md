@@ -95,7 +95,7 @@ RPM Spec File Maintenance
 The OSG RPM spec file is [maintained in Subversion](../software/rpm-development-guide.md#revision-control-system).
 
 The VO Client package is located in `native/redhat/trunk/vo-client`; that is,
-[here](https://vdt.cs.wisc.edu/svn/native/redhat/trunk/vo-client/).
+[here](https://vdt.cs.wisc.edu/svn/native/redhat/branches/osg-3.6/vo-client/).
 
 There are two files that need to be maintained:
 

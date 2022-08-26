@@ -6,14 +6,14 @@ This document describes the development workflow for OSG software packages kept 
 Git and GitHub basics
 ---------------------
 
-If you are unfamiliar with Git and GitHub, the GitHub website has a good series of tutorials at <https://help.github.com/categories/bootcamp/>
+If you are unfamiliar with Git and GitHub, the GitHub website has a good series of tutorials at <https://docs.github.com/en/get-started>
 
 Getting shell access to GitHub
 ------------------------------
 
 There are multiple ways of authenticating to GitHub from the shell. This section will cover using SSH keys. This is no longer the method recommended by GitHub, but is easier to set up for someone with existing SSH experience.
 
-The instructions here are derived from [GitHub's own instructions on using SSH keys](https://help.github.com/articles/generating-an-ssh-key/).
+The instructions here are derived from [GitHub's own instructions on using SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 ### Creating a new SSH key (optional but recommended)
 
@@ -63,7 +63,9 @@ To verify you can authenticate to GitHub using SSH, SSH to `git@github.com`. You
 Contribution workflow
 ---------------------
 
-We use the standard GitHub [pull request](https://help.github.com/articles/using-pull-requests/) workflow for making contributions to OSG software.
+We use the standard GitHub
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+workflow for making contributions to OSG software.
 
 If you've never contributed to this project on GitHub before, do the following steps first:
 
@@ -81,7 +83,7 @@ If you've never contributed to this project on GitHub before, do the following s
     !!! note
         If you get a "Permission denied" error, your public key may not be set up with GitHub -- please see the "Getting shell access to GitHub" section above.
 
-        If you get some other error, [the GitHub page on SSH](https://help.github.com/categories/ssh/) may contain useful information on troubleshooting.
+        If you get some other error, [the GitHub page on SSH](https://docs.github.com/en/authentication/troubleshooting-ssh) may contain useful information on troubleshooting.
 
 Once you have your local repo, do the following:
 

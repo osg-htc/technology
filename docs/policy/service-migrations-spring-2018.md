@@ -122,7 +122,7 @@ The central RSV service was a monitoring tool that displayed every service statu
 elected to provide it.
 It was retired since there was no longer a need to monitor OSG site status as a whole.
 If you would like to monitor your OSG services, you can access the status page of your local
-[RSV](https://www.opensciencegrid.org/docs/monitoring/install-rsv/) instance.
+RSV instance.
 
 ### Collector ###
 

@@ -215,42 +215,6 @@ This section documents the testing procedure to test the gratia probes sufficien
 -   Check `/var/lib/gratia/tmp/gratiafiles/` for a `subdir.condor_...` directory and verify that there are 200 xml jobs and the cpus/wall times are appropriate (either PT0S or PT1M).
 
 
-GSI OpenSSH
------------
-
-!!! note
-    Fermicloud policy forbids running the GSI OpenSSH server.
-    You will have to test that part locally.
-
-To test a fresh installation:
-
-1.  Spin up two VM's and set up the EPEL/OSG repos on both of them.
-2.  Choose one of the VM's, it will be the server VM. The hostname of this machine will be referenced below as the `<SERVER HOSTNAME>`
-    Consult these [instructions](https://www.opensciencegrid.org/docs/other/gsissh/) to set up the server.
-3.  From the other VM (client):
-    1.   Install the necessary packages:
-    
-            :::console
-            root@host # yum install globus-proxy-utils gsi-openssh-clients
-
-    1.   Initialize your proxy. After this, none of the gsi commands should prompt you for your password.
-    1.   Connect to the server:
-    
-            :::console
-            user@host $ gsissh -p 2222 <SERVER HOSTNAME>
-
-    1.   Copy a test file to the server:
-    
-            :::console
-            user@host $ gsiscp -p 2222 testfile <SERVER HOSTNAME>:/tmp
-
-    1.   Connect to the server via SFTP and grab files:
-    
-            :::console
-            user@host $ gsisftp -P 2222 <SERVER HOSTNAME>
-            user@host $ cd /tmp
-            user@host $ get testfile
-
 HTCondor-CE Collector (WIP)
 ---------------------------
 
@@ -308,7 +272,7 @@ RSV
 Testing a fresh installation:
 
 1.  make sure the yum repositories required by OSG is installed on your host
-    -   rpm -Uvh <http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm> OR rpm -Uvh <http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el6-release-latest.rpm>
+    -   rpm -Uvh <http://repo.opensciencegrid.org/osg/3.6/osg-3.6-el8-release-latest.rpm> OR rpm -Uvh <http://repo.opensciencegrid.org/osg/3.6/osg-3.6-el7-release-latest.rpm>
     -   also make sure epel repo is set up. 
 2. install the rpm
     -   yum --enablerepo=osg-testing install rsv 
