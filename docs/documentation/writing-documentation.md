@@ -113,22 +113,6 @@ To contribute content to the OSG, follow these steps to submit a pull request wi
 
 1. From your Github fork, [submit a pull request](https://help.github.com/articles/creating-a-pull-request/)
 
-### Deploying content to the ITB (advanced) ###
-
-If you are a member of the OSG software and release team, you can preview large changes to the
-[ITB docs](https://www.opensciencegrid.org/docs-itb/) or [ITB technology](https://www.opensciencegrid.org/technology-itb/)
-by pushing a branch that starts with an `itb.` prefix to the `opensciencegrid/docs` repo.
-For example:
-
-``` console
-$ git remote add upstream https://github.com/opensciencegrid/docs.git
-$ git checkout new_docs
-$ git push upstream new_docs:itb.new_docs
-```
-
-!!! note
-    Since there is only one ITB docs area, simultaneous new commits to different `itb.*` branches will overwrite each other's changes. To re-deploy your changes, find your [Travis-CI build](https://travis-ci.org/opensciencegrid/docs/branches) and restart it **BUT** coordinate with the author of the other commits to avoid conflicts.
-
 Document Layout
 ---------------
 
