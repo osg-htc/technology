@@ -2772,6 +2772,10 @@
 <ul>
 <li>USC (BrianL): helped solve issues with backfill containers; maybe need to make idle timeout clearer in container logs</li>
 <li>Virgo (BrianL): helped Jason resolve issues with Virgo proxy generation due to upstream VOMS server cert update</li>
+<li>User (Derek): Large file in Stash CVMFS.  There was a cap of ~26GB, now in creased to 500GB.  Successfully put in CVMFS.</li>
+<li>MIT (Derek): Credential for lightweight issuer, hopefully can be resolved with a few more back and forths.</li>
+<li>WTAMU (Derek): Difference between pilot and payload hours.  Caused by large slots, with long drain times.  1 or 2 long running jobs would keep the slot active and not let it retire.</li>
+<li>Singularity CVMFS Sync (Derek, Huijun): Hub apparently doesn't support the same tags listing API that docker hub does.  We may not be able to expand * right now.</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
