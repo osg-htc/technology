@@ -2719,10 +2719,13 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Carl, Derek, Marco Mambelli, Mat, TimT, Ziyang</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
-<p>Carl out Wednesdays</p>
+<ul>
+<li>Carl out Wednesdays</li>
+<li>Ziyang's last day is today</li>
+</ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This week: Mat</li>
@@ -2775,19 +2778,38 @@
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>AI (Mat): OSDF origin chart</li>
-<li>AI (Mat): check in with Fabio to see where PR for hawaii origin stands</li>
-<li>AI (Carl): XRootD 5.5.0 release</li>
+<li>AI (Mat): Assist Fabio with setting up the University of Hawaii origin;
+    we are currently waiting on them for Resource Group information, after which Mat will help with Data Federation
+    information -- the format of that information is new</li>
+<li>AI (Carl): XRootD 5.5.0 release; contact Mat for assistance as needed</li>
+<li>AI (Carl): Review various PRs for the Tiger Kubernetes cluster</li>
+<li>AI (BrianL): Review and reprioritize Software Team JIRA tickets</li>
+<li>AI (BrianL): Review PATh metrics for the monthly report before the end of the month</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>Marco: GlideinWMS 3.9.6 expected by the end of the week; fixed setup issues noticed by Mat and others,
+    and added a token generator</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>USC (BrianL): helped solve issues with backfill containers; maybe need to make idle timeout clearer in container logs</li>
+<li>USC (BrianL): helped solve issues with backfill containers; issues caused by tokens and using an outdated image.
+    Admins were surprised that the pilots exited because they didn't get any jobs;
+    this event should be communicated more clearly, perhaps in the container logs</li>
 <li>Virgo (BrianL): helped Jason resolve issues with Virgo proxy generation due to upstream VOMS server cert update</li>
-<li>User (Derek): Large file in Stash CVMFS.  There was a cap of ~26GB, now in creased to 500GB.  Successfully put in CVMFS.</li>
+<li>LIGO (Carl): assisted Peter Couvares with getting the HTCondor version on a CE</li>
+<li>LIGO (Carl): received formal request from LIGO for first-class SIF file support on the OS Pool;
+        redirected to Jason but Mats should also be added -- for now this is a question of OS Pool policy</li>
+<li>OS Pool (Derek): user wanted to have a very large file accessible on <code>/cvmfs/stash.osgstorage.org</code>.
+    Derek increased the max file size from 26 GB to 500 GB. This change should not affect anything except large files,
+    but staff should keep an eye out for issues</li>
 <li>MIT (Derek): Credential for lightweight issuer, hopefully can be resolved with a few more back and forths.</li>
-<li>WTAMU (Derek): Difference between pilot and payload hours.  Caused by large slots, with long drain times.  1 or 2 long running jobs would keep the slot active and not let it retire.</li>
-<li>Singularity CVMFS Sync (Derek, Huijun): Hub apparently doesn't support the same tags listing API that docker hub does.  We may not be able to expand * right now.</li>
+<li>WTAMU (Derek): observed a difference between pilot and payload hours -- looks to be due to the site having
+    huge slots (64 cores) with Glideins pilots retiring (finishing old jobs but no longer accepting new jobs)
+    but with a handful of long, small jobs keeping the pilot alive.  Mats suggested increasing the pilot lifetime</li>
+<li>OS Pool (Derek): cvmfs-singularity-sync started deleting containers on CVMFS yesterday (8/29).
+    The problem was fixed and the containers restored; the issue was due to code changes in order to support tag wildcards
+    on hub.opensciencegrid.org.  Derek is writing a full incident report.</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
