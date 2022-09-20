@@ -2624,56 +2624,84 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> Carl, Marco Mambelli, Mat, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
-<p>Kubernetes Hackathon today</p>
+<p>None this week</p>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This week: Carl</li>
 <li>Next week: Mat</li>
-<li>(TODO) 9 (-2) open FreshDesk tickets</li>
+<li>6 (-3) open FreshDesk tickets</li>
 <li>0 (+0) open GGUS ticket</li>
 </ul>
 <h3 id="jira-as-of-monday">Jira (as of Monday)<a class="headerlink" href="#jira-as-of-monday" title="Permanent link">&para;</a></h3>
-<p>TODO
-| # of tickets | &Delta; | State             |
-|--------------|---------|-------------------|
-| 206          | -1      | Open              |
-| 36           | +5      | Selected for Dev  |
-| 22           | +2      | In Progress       |
-| 9            | +0      | Dev Complete      |
-| 4            | +0      | Ready for Testing |
-| 0            | +0      | Ready for Release |</p>
+<table>
+<thead>
+<tr>
+<th># of tickets</th>
+<th>&Delta;</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>209</td>
+<td>+3</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>33</td>
+<td>-3</td>
+<td>Selected for Dev</td>
+</tr>
+<tr>
+<td>18</td>
+<td>-4</td>
+<td>In Progress</td>
+</tr>
+<tr>
+<td>14</td>
+<td>+5</td>
+<td>Dev Complete</td>
+</tr>
+<tr>
+<td>0</td>
+<td>-4</td>
+<td>Ready for Testing</td>
+</tr>
+<tr>
+<td>0</td>
+<td>+0</td>
+<td>Ready for Release</td>
+</tr>
+</tbody>
+</table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Next doc focus Oct 7</li>
+<li>Kubernetes Hackathon today:<ul>
+<li>AI (Carl): deploy SLATE stashcache chart in Tiger</li>
 <li>AI (Mat): OSDF origin Helm chart</li>
-<li>AI (Mat): fix rsyslog in glideins</li>
-<li>AI (Mat): add changes for XCache:<ul>
-<li>review Carl's PR for authfile generator</li>
-<li>add extra issuer for PRP caches for Fabio</li>
 </ul>
 </li>
-<li>AI (Carl): auto-generate OASIS StashCache configs</li>
-<li>AI (Carl): improve hosted-ce-tools Python 3 support</li>
-<li>AI (BrianL): cut new topology client</li>
-<li>AI (BrianL): meet with Igor et al. to discuss handoff of supporting Lancium provisioner
-    from GIL to Operations or Software</li>
-<li>AI (Mat/Carl): discuss interface for supporting complex disk setups in OSDF Helm charts</li>
-<li>AI (TimT): fix regexps in condor-mapfile in HTCondor-CE 5 to be compatible with HTCondor 9.11+</li>
+<li>Next doc focus Oct 7</li>
+<li>AI (Mat): fix rsyslog in glideins</li>
+<li>AI (Mat): rebuild XCache to fix extra issuer bug</li>
+<li>AI (Carl): build XRootD 5.5.1 release candidate</li>
+<li>AI (Carl): auto-generate OASIS StashCache configs:
+    There is a PR for scripts to compare the various configs against each other;
+    request input from Dave Dykstra and Derek about what to do with the comparison results.</li>
+<li>AI (TimT): Release HTCondor-CE 5.1.6 for various bugfixes</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>LIGO has tested XRootD 5.5.0, which fixed scitokens issues they were having.
-LIGO uses CILogon and Vault for managing token auth.</p>
-<h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>COManage (BrianL): manually fix a user's access, notes in FD#70228</li>
-<li>LIGO (Derek): Debug HTTP(s) transfers with tokens.  Failed with 5.4.3, works with 5.5.0 (osg-testing).  So calling it a success.</li>
-<li>FNAL (Derek): Low cpu utilization at FNAL a few months back.  Not sure there is much to debug as source of truth.</li>
-<li>LIGO (Derek): New CVMFS repo for igwn.osgstorage.org, copy of ligo.osgstorage.org (will be a symlink)</li>
-<li>LIGO (Carl): assisted CalTech in registering their Squid proxy in Topology</li>
+<li>HTCondor-CE 5.1.6 scheduled for this week.</li>
+<li>Marco: GlideinWMS 3.9.6rc3 released last week;
+    this is expected to be the last release candidate before the final release.</li>
+<li>LIGO is interested in Decision Engine; Marco is updating documentation and will send overview material.</li>
 </ul>
+<h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
+<p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
