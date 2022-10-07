@@ -37,7 +37,7 @@ nav:
     - How to Cut a Release: 'release/cut-sw-release.md'
     - Ready for Testing Announcements: 'release/announce-rft-packages.md'
     - New Release Series: 'release/new-release-series.md'
-    - Old Release Series Removal: 'release/old-release-removal.md'
+    - Release Series End-of-Life: 'release/release-eol.md'
     - ITB Prerelease Testing: 'release/itb-testing.md'
     - Empty Packages: 'release/empty-pkgs.md'
     - Acceptance Testing: 'release/acceptance-testing.md'
