@@ -605,43 +605,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#do-first-anytime-before-the-month-of-the-release" class="md-nav__link">
-    Do first, anytime before the month of the release
+  <a href="#prepare-koji-and-osg-build" class="md-nav__link">
+    Prepare Koji and OSG-Build
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-afterward-anytime-before-the-month-of-the-release" class="md-nav__link">
-    Do afterward, anytime before the month of the release
+  <a href="#build-prerequisite-packages" class="md-nav__link">
+    Build prerequisite packages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-on-the-month-of-the-3x0-release" class="md-nav__link">
-    Do on the month of the 3.X.0 release
+  <a href="#prepare-repo-and-test-infrastructure" class="md-nav__link">
+    Prepare repo and test infrastructure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-immediately-after-the-3x0-release" class="md-nav__link">
-    Do immediately after the 3.X.0 release
+  <a href="#build-software" class="md-nav__link">
+    Build software
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-sometime-after-the-3x0-release" class="md-nav__link">
-    Do sometime after the 3.X.0 release
+  <a href="#release" class="md-nav__link">
+    Release!
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes-on-lessons-learned" class="md-nav__link">
-    Notes on lessons learned
+  <a href="#post-release" class="md-nav__link">
+    Post-release
   </a>
   
 </li>
@@ -2617,43 +2617,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#do-first-anytime-before-the-month-of-the-release" class="md-nav__link">
-    Do first, anytime before the month of the release
+  <a href="#prepare-koji-and-osg-build" class="md-nav__link">
+    Prepare Koji and OSG-Build
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-afterward-anytime-before-the-month-of-the-release" class="md-nav__link">
-    Do afterward, anytime before the month of the release
+  <a href="#build-prerequisite-packages" class="md-nav__link">
+    Build prerequisite packages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-on-the-month-of-the-3x0-release" class="md-nav__link">
-    Do on the month of the 3.X.0 release
+  <a href="#prepare-repo-and-test-infrastructure" class="md-nav__link">
+    Prepare repo and test infrastructure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-immediately-after-the-3x0-release" class="md-nav__link">
-    Do immediately after the 3.X.0 release
+  <a href="#build-software" class="md-nav__link">
+    Build software
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#do-sometime-after-the-3x0-release" class="md-nav__link">
-    Do sometime after the 3.X.0 release
+  <a href="#release" class="md-nav__link">
+    Release!
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes-on-lessons-learned" class="md-nav__link">
-    Notes on lessons learned
+  <a href="#post-release" class="md-nav__link">
+    Post-release
   </a>
   
 </li>
@@ -2677,74 +2677,93 @@
                 
                 <h1 id="how-to-prepare-a-new-release-series">How to Prepare a New Release Series<a class="headerlink" href="#how-to-prepare-a-new-release-series" title="Permanent link">&para;</a></h1>
 <p>Throughout this document, we will refer to the new release series as <code>3.X</code>, and the previous release series as <code>3.OLD</code>.
-For example, if we are creating OSG 3.6, then <code>3.X</code> refers to <code>3.6</code>, and <code>3.OLD</code> refers to <code>3.5</code>.</p>
-<h2 id="do-first-anytime-before-the-month-of-the-release">Do first, anytime before the month of the release<a class="headerlink" href="#do-first-anytime-before-the-month-of-the-release" title="Permanent link">&para;</a></h2>
+For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3.7</code>, and <code>3.OLD</code> refers to <code>3.6</code>.</p>
+<p>See the documentation in the <a href="https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI">OSG Technology/Software and Release/Infrastructure Google Drive folder</a>
+ for details on the infrastructure.</p>
+<h2 id="prepare-koji-and-osg-build">Prepare Koji and OSG-Build<a class="headerlink" href="#prepare-koji-and-osg-build" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Add 3.X koji tags and targets</p>
+<p>Add 3.X and 3.X-upcoming Koji tags and targets</p>
 <ul>
 <li>
 <p>Modify this script as appropriate and run:
     <a href="https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-osg3X-tags-etc">https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-osg3X-tags-etc</a></p>
-<p>In particular, update <code>SERIES</code> as appropriate, and include any applicable enterprise linux versions to the
-<code>EL</code> loop (eg, <code>el7 el8</code>)
-    -   Note that, at first, upcoming-build will continue to inherit from 3.OLD-devel</p>
+<p>In particular, update <code>SERIES</code> as appropriate, and include any applicable Enterprise Linux versions to the
+<code>EL</code> loop (eg, <code>el7 el8</code>)</p>
 </li>
 </ul>
 </li>
 <li>
 <p>Add Koji package signing</p>
 <ul>
-<li>On koji.chtc.wisc.edu, <code>/etc/koji-hub/plugins/sign.conf</code>; copy all the <code>[osg-3.OLD-*]</code> entries to new entries,
-    renaming the <code>3.OLD</code> parts in the new enties to <code>3.X</code>.</li>
-<li>Ensure the permissions for <code>/etc/koji-hub/plugins/sign.conf</code> are 0600 apache:apache</li>
-<li>Save the result with <code>etckeeper commit</code></li>
+<li>
+<p>Starting with OSG 3.6, we've been using a different RPM signing key for each series.
+    Generate the new key in the keyring for the Koji sign plugin, and save it (encrypted) in the Koji Ansible config
+    (see <a href="https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI">Infrastructure Google Drive folder</a> for details).</p>
+</li>
+<li>
+<p>Edit <code>koji/roles/signplugin/vars/main.yml</code> and <code>koji/roles/signplugin/templates/sign.conf.j2</code> in the
+    Koji Ansible config to add the key name, password, list of tags the key should be used for,
+    and template code for generating the <code>sign.conf</code> config blocks for those tags.</p>
+</li>
+<li>
+<p>Apply the Koji Ansible config on the Koji Hub host.</p>
+</li>
+<li>
+<p>Export the ASCII-armored public key as <code>RPM-GPG-OSG-KEY-OSG-3.X</code>, and add it to the <code>osg-release</code> RPM.
+    Add the file and modify the <code>template.repo.*</code> files to reference the new key file.</p>
+</li>
 </ul>
 </li>
 <li>
-<p>Update <code>osg-build</code> to use the new koji tags and targets (not by default of course)</p>
-<ul>
-<li>See the <a href="https://github.com/opensciencegrid/osg-build/pull/39/files">Git commits</a> on opensciencegrid/osg-build for SOFTWARE-2693 for details on how to do this</li>
-<li><strong>You will be using this version of <code>osg-build</code> for some tasks, even if it hasn't been released</strong></li>
-</ul>
+<p>Update <code>osg-build</code> to use the new koji tags and targets (not by default of course).
+    See the <a href="https://github.com/opensciencegrid/osg-build/pull/39/files">Git commits</a> on opensciencegrid/osg-build
+    for SOFTWARE-2693 for details on how to do this.
+    Use this version for subsequent steps.</p>
 </li>
 </ul>
-<h2 id="do-afterward-anytime-before-the-month-of-the-release">Do afterward, anytime before the month of the release<a class="headerlink" href="#do-afterward-anytime-before-the-month-of-the-release" title="Permanent link">&para;</a></h2>
+<h2 id="build-prerequisite-packages">Build prerequisite packages<a class="headerlink" href="#build-prerequisite-packages" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Create a blank <code>osg-3.X</code> SVN branch and add <code>buildsys-macros</code> package</p>
+<p>Create a blank <code>osg-3.X</code> SVN branch and add <code>buildsys-macros.elY</code> packages, one for each supported distro version.
+    As an example, here's what you'd do for osg-3.7 and el8:</p>
 <ol>
 <li>
-<p>svn copy <code>buildsys-macros</code> from trunk and hand-edit it to hardcode the new <code>osg_version</code> and <code>dver</code> values</p>
-<p>Do the following steps for all EL versions relevant to the new series; e.g., for EL 7:</p>
-<ol>
-<li>Edit the spec file and set <code>dver</code> to <code>7</code>, and <code>osg_version</code> to <code>3.X</code></li>
-<li>Run the following commands (adjust the NVR as necessary):<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>osg-build rpmbuild --el7
-<span class="gp">$ </span>osg-koji import _build_results/buildsys-macros-*.el7.src.rpm
-<span class="gp">$ </span>osg-koji import _build_results/buildsys-macros-*.el7.noarch.rpm
-<span class="gp">$ </span><span class="nv">pkg</span><span class="o">=</span><span class="k">$(</span>basename _build_results/buildsys-macros-*.el7.src.rpm<span class="k">)</span>
-<span class="gp">$ </span><span class="nv">pkg</span><span class="o">=</span><span class="si">${</span><span class="nv">pkg</span><span class="p">%.src.rpm</span><span class="si">}</span>
-<span class="gp">$ </span>osg-koji tag-pkg osg-3.X-el7-development <span class="s2">&quot;</span><span class="nv">$pkg</span><span class="s2">&quot;</span>
+<p>svn copy the buildsys-macros.elX directories from the osg-3.OLD branch
+    and hand-edit it to hardcode the new <code>osg_version</code> and <code>dver</code> values.</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span><span class="nb">cd</span> native/redhat/branches
+<span class="gp">$ </span>svn mkdir osg-3.7
+<span class="gp">$ </span>svn copy osg-3.6/buildsys-macros.el8 osg-3.7/buildsys-macros.el8
+<span class="gp">$ </span><span class="nb">cd</span> osg-3.7/buildsys-macros.el8
+<span class="gp">$ </span><span class="nv">$EDITOR</span> osg/*.spec
+<span class="gp">#</span><span class="c1">## change the osg_version and dver values as appropriate</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Build locally and import the resulting RPMs (need Koji admin permissions).
+    Run the following commands (adjust the NVR and distro version as necessary):</p>
+<div class="codehilite"><pre><span></span><code>    :::console
+    $ osg-build rpmbuild --el8
+    $ osg-koji import _build_results/buildsys-macros-*.el8.src.rpm
+    $ osg-koji import _build_results/buildsys-macros-*.el8.noarch.rpm
+    $ pkg=$(basename _build_results/buildsys-macros-*.el8.src.rpm .src.rpm)
+    $ osg-koji tag-pkg osg-3.7-el8-development &quot;$pkg&quot;
+</code></pre></div>
+
+</li>
+<li>
+<p>Bump the revision in each <code>buildsys-macros.elY</code> spec file and edit the <code>%changelog</code>,
+    <code>svn commit</code>, then do Koji builds of them.
+    Again, with osg-3.7 and el8:</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>osg-build koji --repo<span class="o">=</span>osg-3.7 --el8 osg-3.7/buildsys-macros.el8
 </code></pre></div>
 
 </li>
 </ol>
 </li>
 <li>
-<p>Do a 'real' build of <code>buildsys-macros</code></p>
-<ol>
-<li>Bump the revision in the <code>buildsys-macros</code> spec file and edit the <code>%changelog</code>.
-    <strong>Again, you will need a version of osg-build with 3.X support.</strong></li>
-</ol>
-<p>Do the following steps for all EL versions relevant to the new series; e.g., for EL 7:</p>
-<ol>
-<li>Set <code>dver</code> to 7. Commit<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>osg-build koji --repo<span class="o">=</span><span class="m">3</span>.X --el7
-</code></pre></div>
-
-</li>
-</ol>
-</li>
-</ol>
+<p>Repeat the previous steps for 3.X-upcoming</p>
 </li>
 <li>
 <p>Update <a href="https://github.com/opensciencegrid/tarball-client/"><code>tarball-client</code></a></p>
@@ -2796,41 +2815,57 @@ For example, if we are creating OSG 3.6, then <code>3.X</code> refers to <code>3
     the way to release, so that all the 3.X repos exist and have at least one rpm in them.</p>
 </li>
 </ul>
-<h2 id="do-on-the-month-of-the-3x0-release">Do on the month of the 3.X.0 release<a class="headerlink" href="#do-on-the-month-of-the-3x0-release" title="Permanent link">&para;</a></h2>
+<h2 id="prepare-repo-and-test-infrastructure">Prepare repo and test infrastructure<a class="headerlink" href="#prepare-repo-and-test-infrastructure" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Populate SVN branch and tags (as in fill it with the packages we're going to release for 3.X)</li>
+<li>Update mash to pull from the new tags, using the new key<ul>
+<li>On repo-itb</li>
+<li>On repo</li>
+</ul>
+</li>
+<li>Put the new public key on repo and repo-itb</li>
+<li>Update documentation <a href="../../software/development-process/">here</a></li>
+<li>Update osg-test / vmu-test-runs<ul>
+<li>They're only going to test from minefield (and eventually testing) until the release</li>
+</ul>
+</li>
+</ul>
+<h2 id="build-software">Build software<a class="headerlink" href="#build-software" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Populate SVN branches and tags (as in fill it with the packages we're going to release for 3.X and 3.X-upcoming)</li>
 <li>Mass rebuild<ul>
 <li>Don't forget to update the <code>empty</code> and <code>contrib</code> tags with the appropriate packages;
     <strong>remove the <code>empty*</code> packages from the development tags after they've been tagged into the <code>empty</code> tags</strong></li>
 </ul>
 </li>
-<li>Update mash<ul>
-<li>On repo-itb</li>
-<li>On repo</li>
-</ul>
-</li>
-<li>Update documentation <a href="../../software/development-process/">here</a></li>
-<li>Update osg-test / vmu-test-runs<ul>
-<li>They're only going to test from minefield (and eventurally testing) until the release</li>
-</ul>
-</li>
-<li>Drop the <code>osg-3.X-elY-bootstrap</code> koji tags (after the successful mass rebuild only)</li>
+<li>Drop the <code>osg-3.X-elY-bootstrap</code> and <code>osg-3.X-upcoming-elY-bootstrap</code> koji tags
+    (after the successful mass rebuild only)</li>
 <li>Update <a href="https://github.com/opensciencegrid/docker-software-base">docker-software-base</a>
-  and any container images that are based on it</li>
+    and any container images that are based on it</li>
 </ul>
-<h2 id="do-immediately-after-the-3x0-release">Do immediately after the 3.X.0 release<a class="headerlink" href="#do-immediately-after-the-3x0-release" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Update tag inheritance on the <code>upcoming-build</code> tags to inherit from <code>3.X-devel</code> instead of <code>3.OLD-devel</code></li>
-</ul>
-<h2 id="do-sometime-after-the-3x0-release">Do sometime after the 3.X.0 release<a class="headerlink" href="#do-sometime-after-the-3x0-release" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Do these three at the same time:<ul>
-<li>Move the SVN <code>trunk</code> to <code>branches/osg-3.OLD</code> and move <code>branches/osg-3.X</code> to <code>trunk</code></li>
-<li>Update the koji <code>osg-elY</code> build targets to build from and to <code>3.X</code> instead of <code>3.OLD</code></li>
-<li>Notify the software list of this change</li>
-</ul>
+<h2 id="release">Release!<a class="headerlink" href="#release" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Update <a href="https://github.com/opensciencegrid/release-tools">release tools scripts</a> as necessary</p>
 </li>
-<li>Update osg-test / vmu-test-runs again to add release and release -&gt; testing tests</li>
+<li>
+<p><a href="../release/cut-sw-release">Cut a release</a></p>
+</li>
+<li>
+<p>Have a release party</p>
+</li>
+<li>
+<p>Update this document and the <a href="https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI">Infrastructure Google Drive folder</a> with issues you ran into</p>
+</li>
+</ol>
+<h2 id="post-release">Post-release<a class="headerlink" href="#post-release" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Update osg-test / vmu-test-runs again to add release and release -&gt; testing tests</p>
+</li>
+<li>
+<p>Update the koji <code>osg-elY</code> build targets to build from and to <code>3.X</code> instead of <code>3.OLD</code>;
+    notify the software-discuss list of this change</p>
+</li>
 <li>
 <p>Update the docker-osg-wn-client scripts to build from <code>3.X</code> (need direct push access)</p>
 <ol>
@@ -2867,18 +2902,6 @@ Check the results before pushing, and then run <code>git push --all</code></p>
     <code>3.OLD</code> is the <em>maintenance</em> branch</p>
 </li>
 </ul>
-<h2 id="notes-on-lessons-learned">Notes on lessons learned<a class="headerlink" href="#notes-on-lessons-learned" title="Permanent link">&para;</a></h2>
-<p>Since the <code>upcoming</code> repos are not tied to an upcoming relative to <code>3.OLD</code> or <code>3.X</code>, the meaning of the <code>upcoming</code> repo
-changes when the new OSG series is released.
-Users which have the <code>upcoming</code> repo enabled before the cutover to <code>3.X</code> will find that a yum update will pull down
-packages relative to the <em>new</em> <code>upcoming</code>, relative to <code>3.X</code>, instead of the old upcoming, which was relative to
-<code>3.OLD</code>.</p>
-<p>This may catch them by surprise, as it happens whether or not they update their <code>osg-release</code> package to the new <code>3.X</code>
-version.</p>
-<p>If it is not their intention to update to packages in the <em>new</em> <code>upcoming</code>, users should disable their <code>upcoming</code> yum
-repo by the time of the new OSG series cutover, and the continuation of their old <code>upcoming</code> packages will effectively
-be the main <code>osg</code> repo for the new <code>3.X</code> series, after they have updated their <code>osg-release</code> package (usually by
-installing <code>osg-3.X-elY-release-latest.rpm</code>).</p>
                 
               
               
