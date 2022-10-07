@@ -27,8 +27,5 @@ jobs:
             --check-html
             --http-status-ignore 302,401,429
             --file-ignore ./site/404.html
-            --url-ignore "https://fonts.gstatic.com,/github.com\/osg-htc\/${{ steps.format-github-repo.outputs.repo-name }}\/edit/,/osg-htc.org\/${{ steps.format-github-repo.outputs.repo-name }}/"
-            --url-ignore "https://operations-portal.egi.eu/broadcast/archive/2293"
-            --url-ignore "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2020-a4bf7c5d9c"
-            --url-ignore "https://docs.fedoraproject.org/en-US/packaging-guidelines/"
+            --url-ignore "https://fonts.gstatic.com,/github.com\/osg-htc\/${{ steps.format-github-repo.outputs.repo-name }}\/edit/,/osg-htc.org\/${{ steps.format-github-repo.outputs.repo-name }}/,https://operations-portal.egi.eu/broadcast/archive/2293,https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2020-a4bf7c5d9c,https://docs.fedoraproject.org/en-US/packaging-guidelines/"
             ./site
