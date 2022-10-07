@@ -133,6 +133,8 @@ Do sometime after the 3.X.0 release
     - Update the koji `osg-elY` build targets to build from and to `3.X` instead of `3.OLD`
     - Notify the software list of this change
 - Update osg-test / vmu-test-runs again to add release and release -> testing tests
+- Update the tarball that is used to keep the CA certificates and VO data current in CVMFS.
+    - Logon as `ouser.mis@oasis-login.opensciencegrid.org` and follow the directions in the `README` file.
 - Update the docker-osg-wn-client scripts to build from `3.X` (need direct push access)
     1.  Update the constants in the `genbranches` script in the `docker-osg-wn-scripts` repo
     2.  Update the branches in `docker-osg-wn-client`; a script like this ought to work:
