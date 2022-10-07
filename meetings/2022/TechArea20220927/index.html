@@ -2743,7 +2743,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong>  BrianL, Mat, Carl, Marco Mambelli, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <p>BrianL OOO Friday</p>
@@ -2798,41 +2798,106 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Next doc focus Oct 7</li>
-<li>AI (Mat): OSDF helm chart for Fabio targeted for this week</li>
-<li>AI (Mat): fix rsyslog in glideins</li>
-<li>AI (Carl): Update Topology to pull GitHub identifier from COManage</li>
-<li>AI (TimT): Release HTCondor-CE 5.1.6 for various bugfixes</li>
-<li>AI (BrianL): coach Aiden on next container building action tasks</li>
+<li>BrianL:</li>
+<li>Assisting Antonios with logging in -- his ACCESS CILogon credentials might
+    be conflicting with his OSG CILogon credentials</li>
+<li>
+<p>Talk to Aiden about tasks for the next two weeks.</p>
+</li>
+<li>
+<p>Carl:</p>
+</li>
+<li>
+<p>Have PR for validating stash/osdf cache data between OASIS and Topology.</p>
+</li>
+<li>
+<p>Mat:</p>
+</li>
+<li>
+<p>Test auth origin support in stash-origin containers.</p>
+</li>
+<li>
+<p>TimT:</p>
+</li>
+<li>Putting 9.12.0 into OSPool.
+    Thin pool improvements are being tested on CHTC.</li>
+<li>Planning on releasing 9.0.17 this week.</li>
+<li>
+<p>Putting finishing touches on 10.0.0; mostly bringing UW spec file in sync
+    with OSG.</p>
+</li>
+<li>
+<p>AIs (Carl):</p>
+</li>
+<li>Putting Git identifiers into COManage.</li>
+<li>
+<p>Upload missing hosted CE records to GRACC.</p>
+</li>
+<li>
+<p>AIs (Mat):</p>
+</li>
+<li>Check if CHTC-canary2 has been sending rsyslog logs to central syslog
+    server.</li>
+<li>Continue work on OSDF-Origin Helm chart.</li>
+<li>Fix rsyslog in pilots; assist Jason with setting up rsyslog for LIGO if
+    needed.</li>
+<li>AIs (BrianL):</li>
+<li>
+<p>Brief our student Aiden on the big picture and upcoming tasks
+    for GitHub container actions.</p>
+</li>
+<li>
+<p>AI (TimT):</p>
+</li>
+<li>
+<p>Update HTCondor-CE in OSG repos to the latest release.</p>
+</li>
+<li>
+<p>AI (BrianL):</p>
+</li>
+<li>
+<p>Brief our student Aiden on the big picture and upcoming tasks for GitHub
+    container actions.</p>
+</li>
+<li>
+<p>GlideinWMS:</p>
+</li>
+<li>Two PRs remaining for GlideinWMS 3.9.6; release targeted for later this
+    week.</li>
+<li>Investigating general credential support improvements.  The factory
+    would like to supply a list of credentials for a CE with fallback
+    from one to the other (instead of using only one credential that has
+    to be listed per-entry).</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>
+<p>Kernel issues in CHTC being investigated; most likely a kernel bug being
+  triggered by having many condor_procds (one for each Glidein).
+  Not worth holding up the release for.</p>
+</li>
+<li>
+<p>EL9 coming - transition tasks likely to be assigned to Carl.</p>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>COManage (BrianL): merged PATh Facility user accounts post-XSEDE retirement</li>
+<li>
+<p>BrianL (PATh Facility): Helping users that have previously had XSEDE
+  credentials log in to the Facility.</p>
+</li>
+<li>
+<p>Carl (unregistered Gratia probes): There are questions about how to match
+  probe names with Topology identifiers.</p>
+</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Patch Tuesday Release today to Execution Points</p>
-</li>
-<li>
-<p>Ready for Testing</p>
-<ul>
-<li>XRootD 5.5.0</li>
-</ul>
-</li>
-<li>Ready for Release<ul>
-<li>stashcp 6.8.1</li>
-<li>osg-token-renewer 0.8.3</li>
-</ul>
-</li>
+<li>Decision Engine:</li>
+<li>Versions 2.0.2 and 1.7.4 have been released. (1.7.4 is for internal use;
+    2.0.2 is the recommended version for external users.)</li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>AI (TimT): reach out to John Thiltges about feasibility of updating to 10.0?
-    (TimT: 9.12.0 in a couple weeks)</li>
-</ul>
                 
               
               
