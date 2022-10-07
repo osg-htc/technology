@@ -4,8 +4,8 @@ How to Prepare a New Release Series
 Throughout this document, we will refer to the new release series as `3.X`, and the previous release series as `3.OLD`.
 For example, if we are creating OSG 3.7, then `3.X` refers to `3.7`, and `3.OLD` refers to `3.6`.
 
-See the documentation in the [OSG Technology/Software and Release/Infrastructure Google Drive folder]
-(https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI) for details on the infrastructure.
+See the documentation in the [OSG Technology/Software and Release/Infrastructure Google Drive folder][google-drive]
+ for details on the infrastructure.
 
 
 Prepare Koji and OSG-Build
@@ -23,7 +23,7 @@ Prepare Koji and OSG-Build
 
     -   Starting with OSG 3.6, we've been using a different RPM signing key for each series.
         Generate the new key in the keyring for the Koji sign plugin, and save it (encrypted) in the Koji Ansible config
-        (see Infrastructure Google Drive folder for details).
+        (see [Infrastructure Google Drive folder][google-drive] for details).
 
     -   Edit `koji/roles/signplugin/vars/main.yml` and `koji/roles/signplugin/templates/sign.conf.j2` in the
         Koji Ansible config to add the key name, password, list of tags the key should be used for,
@@ -153,8 +153,7 @@ Release!
 
 3.  Have a release party
 
-4.  Update this document and the [OSG Technology/Software and Release/Infrastructure Google Drive folder]
-    (https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI) with issues you ran into
+4.  Update this document and the [Infrastructure Google Drive folder][google-drive] with issues you ran into
 
 
 Post-release
@@ -193,3 +192,5 @@ Post-release
 -   Update [documentation](../software/development-process.md) again to reflect that `3.X` is now the _main_ branch and
     `3.OLD` is the _maintenance_ branch
 
+
+[google-drive]: <https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI>
