@@ -21,7 +21,6 @@ nav:
       - Creating the VO Client Package: 'software/create-vo-client.md'
       - Container Development Guide: 'software/container-development-guide.md'
       - Repository Management: 'software/repository-management.md'
-      - Globus Mass Update Procedure: 'software/globus-mass-update-procedure.md'
       - Resurrecting Epel Packages: 'software/resurrecting-epel-packages.md'
       - Koji Mass Rebuilds: 'software/koji-mass-rebuilds.md'
     - Development:
