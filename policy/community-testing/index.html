@@ -2683,6 +2683,8 @@ After users have been notified of changes, minor packages will be marked eligibl
 negative feedback after 7 calendar days.
 In addition to the above requirements, major packages must also receive positive feedback and be approved by the Release
 Manager.
+If a major package has not received feedback after four weeks and it has been sufficiently tested by OSG integration
+tests, the Release Manager may approve the package for release.
 If a package receives negative feedback, the offending package will be removed from the relevant testing repository.</p>
 <h2 id="major-packages">Major Packages<a class="headerlink" href="#major-packages" title="Permanent link">&para;</a></h2>
 <p>The following packages are considered critical to the production Open Science Grid:</p>
@@ -2694,6 +2696,7 @@ If a package receives negative feedback, the offending package will be removed f
 <li>Gratia Probes</li>
 <li>HTCondor</li>
 <li>HTCondor-CE</li>
+<li>stashcp</li>
 <li>XCache</li>
 <li>XRootD</li>
 </ul>
@@ -2709,6 +2712,7 @@ Common exceptions to the policy include releases that contain one or more of the
 </ul>
 <h2 id="version-history">Version History<a class="headerlink" href="#version-history" title="Permanent link">&para;</a></h2>
 <ul>
+<li><strong>2022-10-07</strong>: All promoting of lanquishing critical packages when adequately covered by automated tests</li>
 <li><strong>2022-05-06</strong>: Drop unsupported software from the critical package list</li>
 <li><strong>2019-10-08</strong>: Add policy exceptions</li>
 <li><strong>2019-08-12</strong>: Add notification frequency details</li>
