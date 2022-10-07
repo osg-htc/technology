@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://osg-htc.org/technology/release/old-release-removal/">
+        <link rel="canonical" href="https://osg-htc.org/technology/release/release-eol/">
       
       <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
-        <title>Old Release Series Removal - OSG Technology Area</title>
+        <title>Release Series End-of-Life - OSG Technology Area</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#old-release-series-removal-plan" class="md-skip">
+        <a href="#release-series-end-of-life" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Old Release Series Removal
+              Release Series End-of-Life
             
           </span>
         </div>
@@ -594,72 +594,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Old Release Series Removal
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Old Release Series Removal
+        Release Series End-of-Life
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
-    Tasks
-  </a>
-  
-    <nav class="md-nav" aria-label="Tasks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#operations" class="md-nav__link">
-    Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#software-release" class="md-nav__link">
-    Software &amp; Release
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#undoing" class="md-nav__link">
-    Undoing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#template-email" class="md-nav__link">
-    Template Email
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -2609,55 +2546,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
-    Tasks
-  </a>
-  
-    <nav class="md-nav" aria-label="Tasks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#operations" class="md-nav__link">
-    Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#software-release" class="md-nav__link">
-    Software &amp; Release
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#undoing" class="md-nav__link">
-    Undoing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#template-email" class="md-nav__link">
-    Template Email
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2668,12 +2556,23 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/osg-htc/technology/edit/master/docs/release/old-release-removal.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/osg-htc/technology/edit/master/docs/release/release-eol.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="old-release-series-removal-plan">Old Release Series Removal Plan<a class="headerlink" href="#old-release-series-removal-plan" title="Permanent link">&para;</a></h1>
+                <h1 id="release-series-end-of-life">Release Series End-of-Life<a class="headerlink" href="#release-series-end-of-life" title="Permanent link">&para;</a></h1>
+<p>When a release reaches end-of-life, we need to discountinue a few items.</p>
+<ul>
+<li>
+<p>Remove the retired series from the OSG VMU tests. However, retain the upgrade test from the retired series
+    to the current series.</p>
+</li>
+<li>
+<p>Remove any github actions that build <code>software-base</code> or <code>osg-wn-client</code> Docker images for the retired series.</p>
+</li>
+</ul>
+<h1 id="previous-release-series-removal-plan">Previous Release Series Removal Plan<a class="headerlink" href="#previous-release-series-removal-plan" title="Permanent link">&para;</a></h1>
 <p>In order to reduce clutter and disk usage on our repositories and build system,
 we will remove older OSG Software release series.  This will result in packages
 from those series becoming unavailable, so we will remove a release series when

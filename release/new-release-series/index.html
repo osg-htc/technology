@@ -659,8 +659,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../old-release-removal/" class="md-nav__link">
-        Old Release Series Removal
+      <a href="../release-eol/" class="md-nav__link">
+        Release Series End-of-Life
       </a>
     </li>
   
@@ -2863,6 +2863,12 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 <p>Update osg-test / vmu-test-runs again to add release and release -&gt; testing tests</p>
 </li>
 <li>
+<p>Update the tarball that is used to keep the CA certificates and VO data current in CVMFS.</p>
+<ul>
+<li>Logon as <code>ouser.mis@oasis-login.opensciencegrid.org</code> and follow the directions in the <code>README</code> file.</li>
+</ul>
+</li>
+<li>
 <p>Update the koji <code>osg-elY</code> build targets to build from and to <code>3.X</code> instead of <code>3.OLD</code>;
     notify the software-discuss list of this change</p>
 </li>
@@ -2935,13 +2941,13 @@ Check the results before pushing, and then run <code>git push --all</code></p>
         </a>
       
       
-        <a href="../old-release-removal/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../release-eol/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Old Release Series Removal
+              Release Series End-of-Life
             </div>
           </div>
           <div class="md-footer__button md-icon">
