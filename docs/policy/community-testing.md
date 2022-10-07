@@ -29,8 +29,8 @@ After users have been notified of changes, minor packages will be marked eligibl
 negative feedback after 7 calendar days.
 In addition to the above requirements, major packages must also receive positive feedback and be approved by the Release
 Manager.
-If a major package's functionality is tested by the OSG VM Universe tests, the release manager may approve that
-package for release without positive feedback after the package has been in testing for four weeks.
+If a major package has not received feedback after four weeks and it has been sufficiently tested by OSG integration
+tests, the Release Manager may approve the package for release.
 If a package receives negative feedback, the offending package will be removed from the relevant testing repository.
 
 Major Packages
