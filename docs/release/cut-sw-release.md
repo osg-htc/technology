@@ -1,6 +1,3 @@
-!!! note
-    If you are performing a data release, please follow the instructions [here](cut-data-release.md)
-
 How to Cut a Software Release
 =============================
 
@@ -192,14 +189,14 @@ contents and tags pushed for the [opensciencegrid/osg-wn](https://hub.docker.com
 
 1.  Verify that all builds succeed
 
-### Step 6: Verify the VO Package and/or CA certificates
+### Step 6: Verify the CA certificates update
 
-If this release contains either the `vo-client` or `osg-ca-certs` package, verify that the CA web site has been updated.
+If this release contains either the `osg-ca-certs` package, verify that the CA web site has been updated.
 Wait for the [CA certificates](https://repo.opensciencegrid.org/cadist/) to be updated.
 It may take a while for the updates to reach the mirror used to update the web site.
 The repository is checked hourly for updated CA certificates.
-Once the web page is updated, run the following command to update the VO Package and/or CA certificates in the tarball installations and
-verify that the version of the VO Package and/or CA certificates match the version that was promoted to release.
+Once the web page is updated, run the following command to update the CA certificates in the tarball installation and
+verify that the version of the CA certificates match the version that was promoted to release.
 
 ```bash
 /p/vdt/workspace/tarball-client/current/amd64_rhel7/osgrun osg-update-data
@@ -266,7 +263,7 @@ The following instructions are meant for the release manager (or interim release
 
         Release notes and pointers to more documentation can be found at:
 
-        https://opensciencegrid.org/docs/release/osg-36/#latest-news
+        https://osg-htc.org/docs/release/osg-36/#latest-news
 
         The OSG Docker images on Docker Hub
         (https://hub.docker.com/u/opensciencegrid/)
@@ -274,7 +271,7 @@ The following instructions are meant for the release manager (or interim release
 
         Need help? Let us know:
 
-        http://www.opensciencegrid.org/docs/common/help/
+        http://www.osg-htc.org/docs/common/help/
 
         We welcome feedback on this release!
 
