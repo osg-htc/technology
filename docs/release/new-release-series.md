@@ -2,7 +2,7 @@ How to Prepare a New Release Series
 ===================================
 
 Throughout this document, we will refer to the new release series as `3.X`, and the previous release series as `3.OLD`.
-For example, if we are creating OSG 3.6, then `3.X` refers to `3.6`, and `3.OLD` refers to `3.5`.
+For example, if we are creating OSG 3.7, then `3.X` refers to `3.7`, and `3.OLD` refers to `3.6`.
 
 See the documentation in the [OSG Technology/Software and Release/Infrastructure Google Drive folder]
 (https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI) for details on the infrastructure.
