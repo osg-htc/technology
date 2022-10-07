@@ -14,7 +14,6 @@ Do first, anytime before the month of the release
 
         In particular, update `SERIES` as appropriate, and include any applicable enterprise linux versions to the
         `EL` loop (eg, `el7 el8`)
-    -   Note that, at first, upcoming-build will continue to inherit from 3.OLD-devel
 
 -   Add Koji package signing
 
@@ -119,12 +118,6 @@ Do on the month of the 3.X.0 release
   and any container images that are based on it
 
 
-Do immediately after the 3.X.0 release
---------------------------------------
-
-- Update tag inheritance on the `upcoming-build` tags to inherit from `3.X-devel` instead of `3.OLD-devel`
-
-
 Do sometime after the 3.X.0 release
 -----------------------------------
 
@@ -161,20 +154,3 @@ Do sometime after the 3.X.0 release
 -   Update [documentation](../software/development-process.md) again to reflect that `3.X` is now the _main_ branch and
     `3.OLD` is the _maintenance_ branch
 
-
-Notes on lessons learned
-------------------------
-
-Since the `upcoming` repos are not tied to an upcoming relative to `3.OLD` or `3.X`, the meaning of the `upcoming` repo
-changes when the new OSG series is released.
-Users which have the `upcoming` repo enabled before the cutover to `3.X` will find that a yum update will pull down
-packages relative to the _new_ `upcoming`, relative to `3.X`, instead of the old upcoming, which was relative to
-`3.OLD`.
-
-This may catch them by surprise, as it happens whether or not they update their `osg-release` package to the new `3.X`
-version.
-
-If it is not their intention to update to packages in the _new_ `upcoming`, users should disable their `upcoming` yum
-repo by the time of the new OSG series cutover, and the continuation of their old `upcoming` packages will effectively
-be the main `osg` repo for the new `3.X` series, after they have updated their `osg-release` package (usually by
-installing `osg-3.X-elY-release-latest.rpm`).
