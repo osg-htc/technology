@@ -64,6 +64,7 @@ Common exceptions to the policy include releases that contain one or more of the
 Version History
 ---------------
 
+- **2022-10-07**: All promoting of lanquishing critical packages when adequately covered by automated tests
 - **2022-05-06**: Drop unsupported software from the critical package list
 - **2019-10-08**: Add policy exceptions
 - **2019-08-12**: Add notification frequency details
