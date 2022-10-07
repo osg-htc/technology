@@ -1,5 +1,15 @@
-Old Release Series Removal Plan
-===============================
+Release Series End-of-Life
+==========================
+
+When a release reaches end-of-life, we need to discountinue a few items.
+
+-   Remove the retired series from the OSG VMU tests. However, retain the upgrade test from the retired series
+    to the current series.
+
+-   Remove any github actions that build `software-base` or `osg-wn-client` Docker images for the retired series.
+
+Previous Release Series Removal Plan
+====================================
 
 In order to reduce clutter and disk usage on our repositories and build system,
 we will remove older OSG Software release series.  This will result in packages
