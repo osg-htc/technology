@@ -37,6 +37,9 @@ Prepare Koji and OSG-Build
             $ cd osg-services/koji
             $ ansible-playbook -K -c local -l $(hostname -f) --ask-vault-pass --check --diff secure.yml
 
+            # If the above looks good, run again without --check to apply for real
+            $ ansible-playbook -K -c local -l $(hostname -f) --ask-vault-pass --diff secure.yml
+
             # -K = prompt you for sudo password (BECOME password)
             # -c local = use the "local" connection method
             # -l $(hostname -f) = apply the changes to the current machine only
