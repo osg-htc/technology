@@ -2605,8 +2605,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jira-as-of-monday-todo" class="md-nav__link">
-    Jira (as of Monday) (TODO)
+  <a href="#jira-as-of-monday" class="md-nav__link">
+    Jira (as of Monday)
   </a>
   
 </li>
@@ -2684,21 +2684,20 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> Mat</li>
+<li><strong>Attending:</strong> Carl, Marco, Mat, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>BrianL traveling Nov 28 - Dec 2</li>
-<li>Carl OOO Wednesdays</li>
 </ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This week: Carl</li>
 <li>Next week: ?</li>
-<li>10 (+0) open FreshDesk tickets</li>
+<li>9 (-1) open FreshDesk tickets</li>
 <li>0 (+0) open GGUS ticket</li>
 </ul>
-<h3 id="jira-as-of-monday-todo">Jira (as of Monday) (TODO)<a class="headerlink" href="#jira-as-of-monday-todo" title="Permanent link">&para;</a></h3>
+<h3 id="jira-as-of-monday">Jira (as of Monday)<a class="headerlink" href="#jira-as-of-monday" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2709,28 +2708,28 @@
 </thead>
 <tbody>
 <tr>
-<td>223</td>
-<td>-6</td>
+<td>240</td>
+<td>+7</td>
 <td>Open</td>
 </tr>
 <tr>
-<td>23</td>
-<td>+0</td>
+<td>22</td>
+<td>-1</td>
 <td>Selected for Dev</td>
 </tr>
 <tr>
 <td>15</td>
-<td>-1</td>
+<td>+0</td>
 <td>In Progress</td>
 </tr>
 <tr>
 <td>16</td>
-<td>-1</td>
+<td>+0</td>
 <td>Dev Complete</td>
 </tr>
 <tr>
 <td>6</td>
-<td>+3</td>
+<td>+0</td>
 <td>Ready for Testing</td>
 </tr>
 <tr>
@@ -2742,16 +2741,36 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>AI (Mat): Assist Mats and HTCondor devs in getting container universe working on the OSPool</li>
-<li>AI (Mat, Carl) EL 9 groundwork</li>
+<li>
+<p>Kubernetes Hackathon:</p>
+<ul>
+<li>On Thursday, the default network for the Tiger Kubernetes cluster will change;
+    people should review the services they are responsible for to make sure they will continue to function after the network change.</li>
+<li>AI (Mat): Create a variant of the pilot container that unpacks SIF files if they cannot be used directly.</li>
+<li>AI (Carl): Continue debugging COManage authentication failures on the Topology ITB instance.</li>
+</ul>
+</li>
+<li>
+<p>AI (Mat): Continue to assist Mats and HTCondor devs in getting container universe working on the OSPool,
+    along with other pilot fixes.</p>
+</li>
+<li>
+<p>AI (Mat, Carl) Continue EL 9 groundwork.</p>
+</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<p>GlideinWMS:
+    Fix available for factory monitoring issue.
+    The ITB frontends and factory have been updated;
+    waiting for green light from Mats and Marco Mascheroni before making a release.</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>University of Arkansas Little Rock (BrianL): working around an issue with ORCID and the self-service OS Registry</li>
-<li>NERSC (Mat, BrianB, BrianL): got a patched XRootD into testing for Lisa to install to test issues with missing
-    Role/Capability in her VOMS certificate. That seems to be fixed but there are still ongoing issues.</li>
+<li>
+<p>Mat (FNAL/CMS): Come up with a fix or workaround for gfal2 authentication failures when using the tarball client on EL8.</p>
+</li>
+<li>
+<p>Mat (CalTech): Discuss errors with parsing output of CalTech's periodic scripts with HTCondor dev team.</p>
+</li>
 </ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
