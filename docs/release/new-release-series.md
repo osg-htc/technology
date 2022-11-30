@@ -31,6 +31,23 @@ Prepare Koji and OSG-Build
 
     -   Apply the Koji Ansible config on the Koji Hub host.
 
+            :::console
+            $ ssh koji.chtc.wisc.edu
+            $ git clone gitolite@git.chtc.wisc.edu:osg-services.git
+            $ cd osg-services/koji
+            $ ansible-playbook -K -c local -l $(hostname -f) --ask-vault-pass --check --diff secure.yml
+
+            # If the above looks good, run again without --check to apply for real
+            $ ansible-playbook -K -c local -l $(hostname -f) --ask-vault-pass --diff secure.yml
+
+            # -K = prompt you for sudo password (BECOME password)
+            # -c local = use the "local" connection method
+            # -l $(hostname -f) = apply the changes to the current machine only
+            # --ask-vault-pass = prompt you for the ansible-vault pw
+            # --check = dry-run mode
+            # --diff = show the diffs of any file changes it (would) make
+            # secure.yml = the "playbook" of changes to apply
+
     -   Export the ASCII-armored public key as `RPM-GPG-OSG-KEY-OSG-3.X`, and add it to the `osg-release` RPM.
         Add the file and modify the `template.repo.*` files to reference the new key file.
 
