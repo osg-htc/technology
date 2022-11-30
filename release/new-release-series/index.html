@@ -2756,6 +2756,23 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 </li>
 <li>
 <p>Apply the Koji Ansible config on the Koji Hub host.</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>ssh koji.chtc.wisc.edu
+<span class="gp">$ </span>git clone gitolite@git.chtc.wisc.edu:osg-services.git
+<span class="gp">$ </span><span class="nb">cd</span> osg-services/koji
+<span class="gp">$ </span>ansible-playbook -K -c <span class="nb">local</span> -l <span class="k">$(</span>hostname -f<span class="k">)</span> --ask-vault-pass --check --diff secure.yml
+
+<span class="gp"># </span>If the above looks good, run again without --check to apply <span class="k">for</span> real
+<span class="gp">$ </span>ansible-playbook -K -c <span class="nb">local</span> -l <span class="k">$(</span>hostname -f<span class="k">)</span> --ask-vault-pass --diff secure.yml
+
+<span class="gp"># </span>-K <span class="o">=</span> prompt you <span class="k">for</span> sudo password <span class="o">(</span>BECOME password<span class="o">)</span>
+<span class="gp"># </span>-c <span class="nb">local</span> <span class="o">=</span> use the <span class="s2">&quot;local&quot;</span> connection method
+<span class="gp"># </span>-l <span class="k">$(</span>hostname -f<span class="k">)</span> <span class="o">=</span> apply the changes to the current machine only
+<span class="gp"># </span>--ask-vault-pass <span class="o">=</span> prompt you <span class="k">for</span> the ansible-vault pw
+<span class="gp"># </span>--check <span class="o">=</span> dry-run mode
+<span class="gp"># </span>--diff <span class="o">=</span> show the diffs of any file changes it <span class="o">(</span>would<span class="o">)</span> make
+<span class="gp"># </span>secure.yml <span class="o">=</span> the <span class="s2">&quot;playbook&quot;</span> of changes to apply
+</code></pre></div>
+
 </li>
 <li>
 <p>Export the ASCII-armored public key as <code>RPM-GPG-OSG-KEY-OSG-3.X</code>, and add it to the <code>osg-release</code> RPM.
