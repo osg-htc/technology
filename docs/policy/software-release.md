@@ -140,5 +140,3 @@ Updates to these packages come from the Security Team and Software Team, respect
 They still move through the usual process for release, and the Software and Release Managers decide when these packages
 should be promoted to the next repository level.
 
-[The release process for data packages is discussed here.](../release/cut-data-release.md)
-
