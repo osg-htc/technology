@@ -2910,10 +2910,39 @@
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Ready for Testing<ul>
-<li>GlideinWMS 3.9.6</li>
-<li>CVMFS 2.10.0-1.1 (and osg-oasis 19)</li>
-<li>XRootD 5.5.1-1.4 (fixes FUSE mounts via xrdfs)</li>
-<li>Vault 1.12.1</li>
+<li>osg-scitokens-mapfile 11<ul>
+<li>Support HEPCloud factory</li>
+</ul>
+</li>
+<li>XRootD 5.5.1<ul>
+<li>Fixes critical issue with XRootD FUSE mounts via xrdfs</li>
+</ul>
+</li>
+<li>CVMFS 2.10.0<ul>
+<li><a href="https://cvmfs.readthedocs.io/en/2.10/cpt-releasenotes.html">Release Notes for CernVM-FS 2.10.0</a></li>
+</ul>
+</li>
+<li>GlideinWMS 3.9.6<ul>
+<li>adds token (and hybrid) support for Clouds (AWS/GCE)</li>
+</ul>
+</li>
+<li>XCache 3.3.0<ul>
+<li>Removed X.509 proxy requirement for an unauthenticated stash-cache
+  instance</li>
+</ul>
+</li>
+<li>Vault 1.12.1<ul>
+<li>includes a fix to prevent a potential denial of service attack
+  for HA installations</li>
+</ul>
+</li>
+<li>HTCondor 10.0.0<ul>
+<li>Please consult the upgrade guide for major differences</li>
+<li><a href="https://htcondor.readthedocs.io/en/latest/version-history/upgrading-from-9-0-to-10-0-versions.html">Upgrading from an 9.0 LTS version to an 10.0 LTS version of HTCondor</a></li>
+<li>In particular, consult the second section of things to be aware of when
+  upgrading</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Ready for Release<ul>
