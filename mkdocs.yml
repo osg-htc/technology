@@ -53,7 +53,6 @@ nav:
     - Software Release Policy: 'policy/software-release.md'
     - Container Release Policy: 'policy/container-release.md'
     - 'Community Testing': 'policy/community-testing.md'
-    - Registering with the OSG: 'policy/comanage-instructions-user.md'
     - New OSPool User Registration: 'policy/new-ospool-user.md'
     - Approving COManage Registrations: 'policy/comanage-instructions-admin.md'
     - Handling Topology/Contacts Registrations: 'policy/topology-registration.md'
@@ -208,3 +207,8 @@ markdown_extensions:
   - toc:
       permalink: True
 
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        policy/comanage-instructions-user.md: https://osg-htc.org/docs/common/contact-registration
