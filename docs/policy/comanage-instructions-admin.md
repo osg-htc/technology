@@ -11,7 +11,7 @@ Follow the instructions below to approve a user registration.
 !!! note
     This page is for COManage Admins who want to approve user registrations.
     If you are a user who wants to register with COManage,
-    go to the [Registering for the OSG COManage](../policy/comanage-instructions-user.md) page instead.
+    go to the [Registering for the OSG COManage](https://osg-htc.org/docs/common/contact-registration) page instead.
 
 
 1.  Check for an email from <registry@cilogon.org> saying "Petition for <NAME> changed status from
