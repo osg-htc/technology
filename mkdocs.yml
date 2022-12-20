@@ -69,6 +69,7 @@ nav:
     - SHA-2 Support: 'projects/sha2-support.md'
     - Migrating Documents to Markdown: 'documentation/markdown-migration.md'
   - Meetings:
+    - December 20, 2022: 'meetings/2022/TechArea20221220.md'
     - December 13, 2022: 'meetings/2022/TechArea20221213.md'
     - December 6, 2022: 'meetings/2022/TechArea20221206.md'
     - November 29, 2022: 'meetings/2022/TechArea20221129.md'
