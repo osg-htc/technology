@@ -54,6 +54,10 @@ Prepare Koji and OSG-Build
     -   Export the ASCII-armored public key as `RPM-GPG-OSG-KEY-OSG-3.X`, and add it to the `osg-release` RPM.
         Add the file and modify the `template.repo.*` files to reference the new key file.
 
+-   Update Koji policy as needed (for new distro versions); see
+    [SOFTWARE-5426](https://opensciencegrid.atlassian.net/browse/SOFTWARE-5426)
+    for details.
+
 -   Update `osg-build` to use the new koji tags and targets (not by default of course).
     See the [Git commits](https://github.com/opensciencegrid/osg-build/pull/39/files) on opensciencegrid/osg-build
     for SOFTWARE-2693 for details on how to do this.
