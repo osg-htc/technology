@@ -2783,12 +2783,15 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 <li>
 <p>Starting with OSG 3.6, we've been using a different RPM signing key for each series.
     Generate the new key in the keyring for the Koji sign plugin, and save it (encrypted) in the Koji Ansible config
-    (see <a href="https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI">Infrastructure Google Drive folder</a> for details).</p>
+    (see <a href="https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI">Infrastructure Google Drive folder</a> for details).
+    Use a strong algorithm for the key; 4096-bit RSA is recommended.
+    Note: generate RSA keys on EL9 (e.g. in a container) or they will not be importable in EL9.</p>
 </li>
 <li>
 <p>Edit <code>koji/roles/signplugin/vars/main.yml</code> and <code>koji/roles/signplugin/templates/sign.conf.j2</code> in the
     Koji Ansible config to add the key name, password, list of tags the key should be used for,
-    and template code for generating the <code>sign.conf</code> config blocks for those tags.</p>
+    and template code for generating the <code>sign.conf</code> config blocks for those tags.
+    Tags for EL9 and newer distros should have <code>gpg_digest_algo = sha256</code> set.</p>
 </li>
 <li>
 <p>Apply the Koji Ansible config on the Koji Hub host.</p>
