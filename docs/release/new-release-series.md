@@ -24,10 +24,13 @@ Prepare Koji and OSG-Build
     -   Starting with OSG 3.6, we've been using a different RPM signing key for each series.
         Generate the new key in the keyring for the Koji sign plugin, and save it (encrypted) in the Koji Ansible config
         (see [Infrastructure Google Drive folder][google-drive] for details).
+        Use a strong algorithm for the key; 4096-bit RSA is recommended.
+        Note: generate RSA keys on EL9 (e.g. in a container) or they will not be importable in EL9.
 
     -   Edit `koji/roles/signplugin/vars/main.yml` and `koji/roles/signplugin/templates/sign.conf.j2` in the
         Koji Ansible config to add the key name, password, list of tags the key should be used for,
         and template code for generating the `sign.conf` config blocks for those tags.
+        Tags for EL9 and newer distros should have `gpg_digest_algo = sha256` set.
 
     -   Apply the Koji Ansible config on the Koji Hub host.
 
