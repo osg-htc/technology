@@ -8,7 +8,7 @@ including  enhancements to campus networking and computing resources.
 The [Open Science Grid](https://www.osg-htc.org) (as part of the 
 [Partnership to Advance Throughput Computing (PATh)](https://path-cc.io/)), is here to help you with your 
 Campus Cyberinfrastructure (CC\*) proposal!  Please contact us at 
-[cc-star-proposals@opensciencegrid.org](mailto:cc-star-proposals@opensciencegrid.org)
+[cc-star-proposals@osg-htc.org](mailto:cc-star-proposals@osg-htc.org)
 
 We have significant experience working with CC\* applicants and awardees, offering letters of collaboration and 
 consulting for:
