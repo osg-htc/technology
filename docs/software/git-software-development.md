@@ -269,6 +269,10 @@ Ideally, you can include a ticket reference each of these three places:
     a point to include the ticket name in the title of the pull request.
     (By convention, we include this at the end of the title, in parentheses.)
 
+If there is no ticket associated with your changes, consider creating one
+(or asking an OSG software team member to create one) before submitting your
+pull request.
+
 #### Further reading
 
 There are a number of articles and guides for making good git commits and
