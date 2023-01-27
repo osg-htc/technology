@@ -73,6 +73,16 @@ If you are on triage duty, your responsibilities are as follows:
     original ticket.
     See [this documentation](<https://support.freshdesk.com/support/solutions/articles/80180-merging-two-or-more-tickets-together>).
 
+-   **Split off new support requests in old tickets:**
+    If a user has reopened or followed-up in a ticket with a new support request unrelated to the existing ticket (this
+    is a judgment call) and their comment is the last one in the ticket, split off the comment into a new ticket
+    (see [this documentation](https://support.freshdesk.com/en/support/solutions/articles/228992-how-do-i-split-a-customer-response-into-a-new-ticket-)).
+    If you are unsure if a ticket should be split, consult the Software Area Coordinator.
+
+    !!! danger "Do not split comments other than the last one"
+        FD treats splitting tickets as "take this comment and make it the start of a new ticket" and not "take this
+        comment and all subsequent comments into a new ticket".
+
 -   **Clean up spam:**
     Mark the ticket as spam and block the user.
     See [this documentation](<https://support.freshdesk.com/support/solutions/articles/217539-spam-and-trash>).
