@@ -17,8 +17,8 @@ When providing support for our users, remember the following:
     It can shorten the number of times you ask for information because it collects quite a bit for you.
 -   If you run across a problem that has a chance of being hit by other users:
     -   Is there a bug we should fix in the software? Open a Jira ticket.
-    -   Is there something we could improve in the software? Notify the Software Manager.
-    -   Is there a way to improve our documentation? Notify the Software Manager.
+    -   Is there something we could improve in the software? Notify the Software Area Coordinator.
+    -   Is there a way to improve our documentation? Notify the Software Area Coordinator.
     -   Can you extend our troubleshooting documents to help people track this down more quickly?
         Consider the troubleshooting documents to be as much for us as for our users.
     -   Is this something that other Technology Team members should be aware of?
@@ -29,7 +29,7 @@ Triage Duty
 -----------
 
 The OSG uses [Freshdesk](#freshdesk) to track support issues so you will need a Freshworks account with agent privileges
-(contact the OSG Software Team Manager for access).
+(contact the OSG Software Team Area Coordinator for access).
 
 !!!tip "Logging in as an agent"
     Don't enter your credentials directly into the [login page](https://support.opensciencegrid.org/support/login)!
@@ -48,7 +48,7 @@ If you are on triage duty, your responsibilities are as follows:
         Inasmuch as possible, you should strive to handle the easier tickets and not pass them off to other people.
     -   *If you cannot handle an incoming ticket,* collect initial details such as relevant versions, logs, etc., and
         assign the ticket to the most appropriate Technology Team member.
-        Where appropriate, CC people from other OSG teams, sites, or VOs.
+        Where appropriate, CC people from other OSG teams, sites, or collaborations.
 
     !!! important "New sites interested in joining the OSG"
         For support requests inquiring about joining the OSG, assign the ticket to the `Campus Facilitation` group,
