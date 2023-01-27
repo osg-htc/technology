@@ -65,6 +65,13 @@ If you are on triage duty, your responsibilities are as follows:
         close the ticket and let the customer know that they can re-open it by responding whenever they're ready to
         tackle the issue again.
 
+-   **Review Topology data pull requests:**
+    Review any [Topology PRs](https://github.com/opensciencegrid/topology/pulls) that update anything in the
+    `collaborations`, `projects/`, `topology/`, or `virtual-organizations` directories.
+
+    !!! warning "New institutions"
+        Approval of new facilities or project institutions require PATh Project Office, i.e. Irene or Janet.
+
 -   **Re-assign non-software tickets:**
     Tickets that have been mistakenly assigned to the Software group should be re-assigned to the appropriate group.
 
