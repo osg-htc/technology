@@ -51,8 +51,7 @@ If you are on triage duty, your responsibilities are as follows:
         Where appropriate, CC people from other OSG teams, sites, or collaborations.
 
     !!! important "New sites interested in joining the OSG"
-        For support requests inquiring about joining the OSG, assign the ticket to the `Campus Facilitation` group,
-        and specifically `Lauren Michael` as the agent.
+        For support requests inquiring about joining the OSG, assign the ticket to the `Campus Facilitation` group.
 
 -   **Review assigned software tickets.**
     For tickets that are not being handled in a timely fashion (pay special attention to `OVERDUE` and `Customer
