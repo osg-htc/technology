@@ -2,7 +2,7 @@ Software Support
 ================
 
 This document describes how OSG Technology Team members should support the OSG Software Stack, including triage duty
-responsibilities and when to transition from direct support inquiries to a ticketing system such as Freshdesk or JIRA.
+responsibilities and when to transition from direct support inquiries to a ticketing system such as Freshdesk or Jira.
 
 Considerations
 --------------
@@ -107,7 +107,7 @@ Ticket Systems
 --------------
 
 The OSG Technology Team uses the [Freshdesk](https://support.opensciencegrid.org/) and
-[JIRA](https://jira.opensciencegrid.org) ticketing systems to track support and all other work, respectively.
+[Jira](https://jira.opensciencegrid.org) ticketing systems to track support and all other work, respectively.
 This section describes the differences between the two as well as some OSG Technology Freshdesk conventions.
 
 ### Direct Email ###
@@ -145,16 +145,16 @@ When replying to or otherwise updating a Freshdesk ticket, there are a few thing
     | Resolved               | Support is complete or the user is unresponsive. [See above](#triage-duty). |
     | Closed                 | **DO NOT SET MANUALLY**. Terminal ticket state that is set by Freshdesk.    |
 
-If actionable Technology Team tasks arise from a Freshdesk ticket, [JIRA](#jira) ticket(s) should be created to track
+If actionable Technology Team tasks arise from a Freshdesk ticket, [Jira](#jira) ticket(s) should be created to track
 that work.
-Resultant JIRA tickets should include a link to the original Freshdesk ticket, a description of the problem or feature
+Resultant Jira tickets should include a link to the original Freshdesk ticket, a description of the problem or feature
 request, and a proposed solution or implementation.
 
-After the relevant JIRA tickets have been created, ask the user if they would be ok with tracking the issue via JIRA. 
+After the relevant Jira tickets have been created, ask the user if they would be ok with tracking the issue via Jira. 
 If they say yes, close the Freshdesk ticket.
 
-### JIRA ###
+### Jira ###
 
-JIRA is for tracking our work and it's meant for internal usage, not for user support.
-In general, users should not ask for support via JIRA.
-A single user support ticket might result in zero, one, or multiple JIRA tickets.
+Jira is for tracking our work and it's meant for internal usage, not for user support.
+In general, users should not ask for support via Jira.
+A single user support ticket might result in zero, one, or multiple Jira tickets.
