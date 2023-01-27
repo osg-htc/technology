@@ -99,18 +99,6 @@ Once you have your local repo, do the following:
     	:::console
         [user@client ~ ] $ git push origin <BRANCH>
 
-    !!! tip "The Art of Good Commits"
-        In addition to writing good code, it's important to organize your changes that are helpful to those viewing them
-        in the future (including yourself!).
-        This includes:
-
-        - Splitting up changes into logically separate chunks (`git rebase` can be a helpful tool for this)
-        - Describing the "why" of the change in addition to the "what" and "how" (utilizing the commit body if necessary)
-        - Writing succint commit message titles in the imperative (limited to 72 chars)
-        - Including any relevant ticket numbers (e.g., `Change that default path (SOFTWARE-2345)`).
-
-        See online guides such as [this one](https://dev.to/ruanbrandao/how-to-make-good-git-commits-256k) for more details.
-
 3. Select your branch in the GitHub web interface, then create a "pull request" against the original repo. Add a good description of your change into the message for the pull request. Enter a JIRA ticket number in the message to automatically link the pull request to the JIRA ticket.
 4. Request a review from the drop down menu on the right and wait for your pull request to be reviewed by a software team member.
 
@@ -163,3 +151,20 @@ A release of a software is created from your local clone of a software project. 
       
             :::console
             [user@client ~ ] $ git push upstream <TAG>
+
+Best practices
+--------------
+
+### Making good pull requests ("The Art of Good Commits")
+
+In addition to writing good code, it's important to organize your changes that are helpful to those viewing them
+in the future (including yourself!).
+This includes:
+
+- Splitting up changes into logically separate chunks (`git rebase` can be a helpful tool for this)
+- Describing the "why" of the change in addition to the "what" and "how" (utilizing the commit body if necessary)
+- Writing succint commit message titles in the imperative (limited to 72 chars)
+- Including any relevant ticket numbers (e.g., `Change that default path (SOFTWARE-2345)`).
+
+See online guides such as [this one](https://dev.to/ruanbrandao/how-to-make-good-git-commits-256k) for more details.
+
