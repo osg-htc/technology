@@ -31,7 +31,7 @@ Follow the instructions below to approve a user registration.
     1.  Verify that the request is legitimate by doing at least one of the following:
 
         -   Find associated support tickets by searching for their email address in Freshdesk
-        -   Ask someone affiliated with the site, VO, or the sponsor of a project to verify the registrant's
+        -   Ask someone affiliated with the site, collaboration, or the sponsor of a project to verify the registrant's
             affiliation.
         -   Ask if other staff have been in contact with them via the `#staff` Slack channel
 
