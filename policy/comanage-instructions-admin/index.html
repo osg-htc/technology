@@ -2753,8 +2753,8 @@
                 
                 <h1 id="approving-comanage-registrations">Approving COManage Registrations<a class="headerlink" href="#approving-comanage-registrations" title="Permanent link">&para;</a></h1>
 <p>OSG is using a new identity management system called COManage.
-Initially, this system will be used for managing access to OSG staff-internal monitoring webpages at UNL,
-and managing access for OASIS logins.</p>
+This system is used for managing contact information for OSPool and PATh Facility users, Topology site contacts, and
+OSG/PATh staff.</p>
 <p>User registrations must be manually approved by a COManage admin.
 Follow the instructions below to approve a user registration.</p>
 <div class="admonition note">
@@ -2765,32 +2765,48 @@ go to the <a href="https://osg-htc.org/docs/common/contact-registration">Registe
 </div>
 <ol>
 <li>
-<p>Check for an email from <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#101;&#103;&#105;&#115;&#116;&#114;&#121;&#64;&#99;&#105;&#108;&#111;&#103;&#111;&#110;&#46;&#111;&#114;&#103;">&#114;&#101;&#103;&#105;&#115;&#116;&#114;&#121;&#64;&#99;&#105;&#108;&#111;&#103;&#111;&#110;&#46;&#111;&#114;&#103;</a> saying "Petition for <NAME> changed status from
-    Confirmed to Pending Approval".</p>
+<p>Check for contact registration requests:</p>
+<ul>
+<li>
+<p>If you are a COManage sponsor for a given group of registrants, you will receive email notifications when there
+    are new registration requests.
+    Check for an email from <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#101;&#103;&#105;&#115;&#116;&#114;&#121;&#64;&#99;&#105;&#108;&#111;&#103;&#111;&#110;&#46;&#111;&#114;&#103;">&#114;&#101;&#103;&#105;&#115;&#116;&#114;&#121;&#64;&#99;&#105;&#108;&#111;&#103;&#111;&#110;&#46;&#111;&#114;&#103;</a> saying "Petition for <NAME> changed status from
+    Confirmed to Pending Approval" and visit the first link in the body.</p>
 </li>
 <li>
-<p>Click the first link in the email.</p>
+<p>Alternatively, you can view all requests pending approval
+    <a href="https://registry.cilogon.org/registry/co_petitions/index/co:7/sort:CoPetition.created/direction:desc/search.status:PA">here</a>.
+    Click on the registrant's name to view their request.</p>
+</li>
+</ul>
 </li>
 <li>
-<p>Log in with your institutional credentials.
-    You should see a "View CO Petition..." page.
-    The Status should be "Pending Approval".</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can also access this page by logging into https://registry.cilogon.org/registry and
-clicking on "CO Petitions" under the left-hand "People" menu. </p>
+<p>If prompted, log in with your institutional credentials.</p>
+</li>
+<li>
+<p>Review the request:</p>
+<ol>
+<li>
+<p>Verify that the request is legitimate by doing at least one of the following:</p>
+<ul>
+<li>Find associated support tickets by searching for their email address in Freshdesk</li>
+<li>Ask someone affiliated with the site, collaboration, or the sponsor of a project to verify the registrant's
+    affiliation.</li>
+<li>Ask if other staff have been in contact with them via the <code>#staff</code> Slack channel</li>
+</ul>
+</li>
+<li>
+<p>Verify that the registrant has submitted their request using the correct form,
+    e.g. OSPool users should not have submitted a request to register as a Topology contact.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the top-right corner, click the "Add comment" link and add a note indicating how you verified the request</p>
+<div class="admonition danger">
+<p class="admonition-title">'Approver Comment' is public</p>
+<p>The registrant will see notes added to the "Approver Comment" field</p>
 </div>
-</li>
-<li>
-<p>Click on the name of the pending application. 
-    This will take to you the page where you can see their full application and 
-    have the option to approve them. </p>
-</li>
-<li>
-<p>Verify that the application is legitimate.
-    Ask someone affiliated with the site, VO, or the sponsor of a project to verify the applicant's affiliation.
-    In the future, applicants will be asked to provide the contact information of such a person --
-    similar to our existing <a href="https://osg-htc.org/docs/common/registration/">contact registration process</a>.</p>
 </li>
 <li>
 <p>Click the "Approve" button.
@@ -2798,16 +2814,17 @@ clicking on "CO Petitions" under the left-hand "People" menu. </p>
     The Status should now be "Finalized".</p>
 </li>
 <li>
-<p>The user will get an email saying "Petition for <NAME> changed status from Pending Approval to
-    Approved".</p>
-<p>The links in the email are expected to be useless
-(the first link will give them "Permission Denied" and
-the second link will merely allow them to "acknowledge" that they received the email).</p>
-<p>If the user asks, reassure them that they are registered and no further action needs to be taken.</p>
+<p>Click on their name next to <code>CO Person</code> to verify that the registrant is <code>Active</code> and that they are in the expected
+    groups.</p>
+</li>
+<li>
+<p>The user will get an email saying "Petition for <NAME> changed status from Pending Approval to Approved".</p>
 </li>
 </ol>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="the-comanage-petition-is-stuck-in-the-confirmed-state">The COManage petition is stuck in the "confirmed" state<a class="headerlink" href="#the-comanage-petition-is-stuck-in-the-confirmed-state" title="Permanent link">&para;</a></h3>
+<p>This may happen if there are issues when confirming the user's email address.
+We have seen this occur if a user clicks the confirmation link then closes the tab too quickly.</p>
 <ol>
 <li>
 <p>Under the <code>People</code> drop-down on the left,  click on <code>My Population</code></p>
