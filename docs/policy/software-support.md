@@ -64,15 +64,19 @@ If you are on triage duty, your responsibilities are as follows:
     -   *If the ticket was opened by the customer, is waiting on the customer and they have not responded in > 2 weeks,*
         close the ticket and let the customer know that they can re-open it by responding whenever they're ready to
         tackle the issue again.
+
 -   **Re-assign non-software tickets:**
     Tickets that have been mistakenly assigned to the Software group should be re-assigned to the appropriate group.
+
 -   **Merge duplicate tickets:**
     Responses to a ticket sometimes results in creation of a new ticket; these new tickets should be merged into the
     original ticket.
     See [this documentation](<https://support.freshdesk.com/support/solutions/articles/80180-merging-two-or-more-tickets-together>).
+
 -   **Clean up spam:**
     Mark the ticket as spam and block the user.
     See [this documentation](<https://support.freshdesk.com/support/solutions/articles/217539-spam-and-trash>).
+
 -   **Clean up automated replies:**
     announcements are often sent with `Reply-to: help@opensciencegrid.org` so automated replies (e.g. Out of Office,
     mailing list moderation) will generate tickets.
