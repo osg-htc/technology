@@ -48,7 +48,8 @@ If you are on triage duty, your responsibilities are as follows:
         Inasmuch as possible, you should strive to handle the easier tickets and not pass them off to other people.
     -   *If you cannot handle an incoming ticket,* collect initial details such as relevant versions, logs, etc., and
         assign the ticket to the most appropriate Technology Team member.
-        Where appropriate, CC people from other OSG teams, sites, or collaborations.
+        Where appropriate, CC third-parties or add relevant OSG staff with FD accounts as watchers
+        (see [this documentation](https://support.freshdesk.com/en/support/solutions/articles/37560-monitoring-important-tickets-by-becoming-a-watcher))
 
     !!! important "New sites interested in joining the OSG"
         For support requests inquiring about joining the OSG, assign the ticket to the `Campus Facilitation` group.
