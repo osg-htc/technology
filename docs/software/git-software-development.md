@@ -240,6 +240,9 @@ you are changing and _how_ you are going about it, it is not always clear
 _why_ the change is needed or desired - so it is important to explain your
 reasons, in order to make this clear to the reviewer.
 
+For an example of "explaining your reasons", see
+[this commit message body](https://github.com/opensciencegrid/topology/commit/c3524138ac8d46eee2a3c33cb75fac50acab41c4).
+
 #### Reference any relevant tickets
 
 Code changes often are related to a JIRA ticket, for instance SOFTWARE-1234.
