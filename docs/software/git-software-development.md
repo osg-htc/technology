@@ -208,7 +208,8 @@ If you have such work-in-progress commits, first combine them (this is also
 called "squashing" or "rebasing"), and then break them up into logically
 distinct commits as necessary, representing the final changeset.
 As mentioned above, one way to do this is with a combination of `git rebase -i`
-and `git gui`, though there are other third-party tools available also.
+and `git gui`, though there are other third-party tools (e.g., magit) available
+also.
 
 #### Write a succinct subject to explain what each commit does
 
