@@ -155,7 +155,7 @@ A release of a software is created from your local clone of a software project. 
 Best practices
 --------------
 
-### Making good pull requests ("The Art of Good Commits")
+### Making good pull requests (The Art of Good Commits)
 
 In addition to writing good code, it's important to organize your changes
 to make the task of reviewing them easier, both for the reviewer of the pull
