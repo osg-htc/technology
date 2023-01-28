@@ -99,7 +99,7 @@ Once you have your local repo, do the following:
     	:::console
         [user@client ~ ] $ git push origin <BRANCH>
 
-3. Select your branch in the GitHub web interface, then create a "pull request" against the original repo. Add a good description of your change into the message for the pull request. Enter a JIRA ticket number in the message to automatically link the pull request to the JIRA ticket.
+3. Select your branch in the GitHub web interface, then create a "pull request" against the original repo. Add a good description of your change into the message for the pull request. Enter a Jira ticket number in the message to automatically link the pull request to the Jira ticket.
 4. Request a review from the drop down menu on the right and wait for your pull request to be reviewed by a software team member.
 
      - If the team member accepts your changes, they will merge your pull request, and your changes will be incorporated upstream. You may then delete the branch you created your pull request from.
@@ -245,7 +245,7 @@ For an example of "explaining your reasons", see
 
 #### Reference any relevant tickets
 
-Code changes often are related to a JIRA ticket, for instance SOFTWARE-1234.
+Code changes often are related to a Jira ticket, for instance SOFTWARE-1234.
 
 By referencing the name of a ticket in your pull request, it provides a
 convenient way to look into the background context for the change; and later
