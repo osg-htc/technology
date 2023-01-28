@@ -198,9 +198,9 @@ many changes along the way that didn't make the final cut.
 This is good and healthy, and it's perfectly reasonable to be making many
 small work-in-progress commits locally while you are developing.
 
-However, for the reviewer, the relevant thing is what the final changes are
+However, for the reviewer, the relevant thing is what final changes are
 being introduced into the codebase.
-Having to review several ideas that were put in to and then taken out of the
+Having to review several ideas that were put into and then taken out of the
 changeset is a distraction, and makes it harder to see what the end result is
 for the new changes.
 
