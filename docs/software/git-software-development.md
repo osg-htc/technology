@@ -99,19 +99,7 @@ Once you have your local repo, do the following:
     	:::console
         [user@client ~ ] $ git push origin <BRANCH>
 
-    !!! tip "The Art of Good Commits"
-        In addition to writing good code, it's important to organize your changes that are helpful to those viewing them
-        in the future (including yourself!).
-        This includes:
-
-        - Splitting up changes into logically separate chunks (`git rebase` can be a helpful tool for this)
-        - Describing the "why" of the change in addition to the "what" and "how" (utilizing the commit body if necessary)
-        - Writing succint commit message titles in the imperative (limited to 72 chars)
-        - Including any relevant ticket numbers (e.g., `Change that default path (SOFTWARE-2345)`).
-
-        See online guides such as [this one](https://dev.to/ruanbrandao/how-to-make-good-git-commits-256k) for more details.
-
-3. Select your branch in the GitHub web interface, then create a "pull request" against the original repo. Add a good description of your change into the message for the pull request. Enter a JIRA ticket number in the message to automatically link the pull request to the JIRA ticket.
+3. Select your branch in the GitHub web interface, then create a "pull request" against the original repo. Add a good description of your change into the message for the pull request. Enter a Jira ticket number in the message to automatically link the pull request to the Jira ticket.
 4. Request a review from the drop down menu on the right and wait for your pull request to be reviewed by a software team member.
 
      - If the team member accepts your changes, they will merge your pull request, and your changes will be incorporated upstream. You may then delete the branch you created your pull request from.
@@ -163,3 +151,145 @@ A release of a software is created from your local clone of a software project. 
       
             :::console
             [user@client ~ ] $ git push upstream <TAG>
+
+Best practices
+--------------
+
+### Making good pull requests (The Art of Good Commits)
+
+In addition to writing good code, it's important to organize your changes
+to make the task of reviewing them easier, both for the reviewer of the pull
+request, and even for yourself later.
+
+Here are some general guidelines and tips.
+
+#### Put logically separate changes into separate commits
+
+This becomes more relevant if there are a lot of changes in the pull request.
+Having a single commit with many different changes happening at the same time
+can make the changes harder to review.
+If possible, split up logically separate changes into separate commits.
+
+As a simple example, if you are renaming a variable in many places, and also
+refactoring the structure of some code, these changes can be split into two
+separate commits.
+This will make it easier when reviewing to see clearly what each commit is
+trying to accomplish.
+
+The process you went through to arrive at your final code may have been
+different, but you can clean up your commits after the fact.
+One method is to use `git rebase -i` to combine (squash) several commits
+into one, and then use `git gui` to amend the combined commit, staging the
+parts that represent each logical change into separate commits.
+
+Another example that occasionally comes up is when you want to copy or move
+a file AND make changes to that file.
+If you have a single commit that introduces a file to a new location
+_with changes_, it will not be obvious from the commit diff itself which
+parts are the same (moved or copied in) and which parts you are modifying.
+Instead, by putting the copy or move of the original file into its own commit,
+and then putting your changes in a separate commit, it will make it clear to
+the reviewer which parts are changing from the original.
+
+#### Squash noisy work-in-progress commits
+
+Naturally in the trial-and-error-prone process of development, there will be
+many changes along the way that didn't make the final cut.
+This is good and healthy, and it's perfectly reasonable to be making many
+small work-in-progress commits locally while you are developing.
+
+However, for the reviewer, the relevant thing is what final changes are
+being introduced into the codebase.
+Having to review several ideas that were put into and then taken out of the
+changeset is a distraction, and makes it harder to see what the end result is
+for the new changes.
+
+If you have such work-in-progress commits, first combine them (this is also
+called "squashing" or "rebasing"), and then break them up into logically
+distinct commits as necessary, representing the final changeset.
+As mentioned above, one way to do this is with a combination of `git rebase -i`
+and `git gui`, though there are other third-party tools (e.g., magit) available
+also.
+
+#### Write a succinct subject to explain what each commit does
+
+The first line of a commit message is the "subject" (or sometimes also called
+the "title").
+It should be short and sweet (at most 72 characters) and briefly state _what_
+the commit is designed to do.
+
+As a convention, the subject of the commit message should be written in the
+imperative - that is, it should be written as if it were a command.
+For instance, a subject should start with "fix a bug" rather than "fixing" or
+"fixes".
+
+#### Explain why a change was made in the commit message
+
+It is generally important also to explain _why_ a change was made.
+
+If this is not covered by the succinct subject line of your commit, you should
+explain the rationale behind your change in the commit message body.
+(The commit message starts with the subject line, then is optionally followed
+by a blank line plus the message body.)
+
+You can also explain in the commit message body _how_ this commit accomplishes
+the stated purpose in the subject - and you may find yourself needing to do
+this if there are some tricky details in the changes.
+But even if it is perfectly clear from the code and your commit message _what_
+you are changing and _how_ you are going about it, it is not always clear
+_why_ the change is needed or desired - so it is important to explain your
+reasons, in order to make this clear to the reviewer.
+
+For an example of "explaining your reasons", see
+[this commit message body](https://github.com/opensciencegrid/topology/commit/c3524138ac8d46eee2a3c33cb75fac50acab41c4).
+
+#### Reference any relevant tickets
+
+Code changes often are related to a Jira ticket, for instance SOFTWARE-1234.
+
+By referencing the name of a ticket in your pull request, it provides a
+convenient way to look into the background context for the change; and later
+on down the road, it makes it easy to find which changes were made for a
+particular task, referenced by the ticket name.
+
+Ideally, you can include a ticket reference each of these three places:
+
+1.  Your branch name.
+    For example, name the branch in your fork of the GitHub repo for the
+    pull request `SOFTWARE-1234.fix-memory-leak`.
+1.  Your commit messages.
+    For example, the subject of your commit message might read,
+    `fix a memory leak (SOFTWARE-1234)`.
+    If you have trouble squeezing the ticket name into the subject line,
+    or if you have a number of related tickets that you want to reference,
+    it is also OK to mention them later in the commit message body.
+1.  The pull request title.
+    If your pull request is just a single commit, and you have the ticket
+    reference in the subject line of the commit message, GitHub will include
+    this in the pull request title automatically.
+    But if you have multiple commits, or you have only included the ticket
+    reference in the body of the commit message, or more generally if you
+    want to tweak the title of the pull request, you should in any case make
+    a point to include the ticket name in the title of the pull request.
+    (By convention, we include this at the end of the title, in parentheses.)
+
+If there is no ticket associated with your changes, consider creating one
+(or asking an OSG software team member to create one) before submitting your
+pull request.
+
+#### Further reading
+
+There are a number of articles and guides for making good git commits and
+good pull requests - a simple search will turn up plenty of material for
+the interested reader.
+
+See online guides such as
+[this one](https://dev.to/ruanbrandao/how-to-make-good-git-commits-256k)
+for more details.
+
+#### Brownie points
+
+You will get brownie points from Carl, personally, if you strive to make your
+code (and other text files) fit within an 80-column terminal window.
+
+
