@@ -525,6 +525,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    Best practices
+  </a>
+  
+    <nav class="md-nav" aria-label="Best practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#making-good-pull-requests-the-art-of-good-commits" class="md-nav__link">
+    Making good pull requests (The Art of Good Commits)
+  </a>
+  
+    <nav class="md-nav" aria-label="Making good pull requests (The Art of Good Commits)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#put-logically-separate-changes-into-separate-commits" class="md-nav__link">
+    Put logically separate changes into separate commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squash-noisy-work-in-progress-commits" class="md-nav__link">
+    Squash noisy work-in-progress commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-a-succinct-subject-to-explain-what-each-commit-does" class="md-nav__link">
+    Write a succinct subject to explain what each commit does
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explain-why-a-change-was-made-in-the-commit-message" class="md-nav__link">
+    Explain why a change was made in the commit message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-any-relevant-tickets" class="md-nav__link">
+    Reference any relevant tickets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    Further reading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brownie-points" class="md-nav__link">
+    Brownie points
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2846,6 +2921,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    Best practices
+  </a>
+  
+    <nav class="md-nav" aria-label="Best practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#making-good-pull-requests-the-art-of-good-commits" class="md-nav__link">
+    Making good pull requests (The Art of Good Commits)
+  </a>
+  
+    <nav class="md-nav" aria-label="Making good pull requests (The Art of Good Commits)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#put-logically-separate-changes-into-separate-commits" class="md-nav__link">
+    Put logically separate changes into separate commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squash-noisy-work-in-progress-commits" class="md-nav__link">
+    Squash noisy work-in-progress commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-a-succinct-subject-to-explain-what-each-commit-does" class="md-nav__link">
+    Write a succinct subject to explain what each commit does
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explain-why-a-change-was-made-in-the-commit-message" class="md-nav__link">
+    Explain why a change was made in the commit message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-any-relevant-tickets" class="md-nav__link">
+    Reference any relevant tickets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    Further reading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brownie-points" class="md-nav__link">
+    Brownie points
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2940,22 +3090,9 @@ e.g. in order to clone my local fork of the <code>openscience/technology</code> 
 <div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git push origin &lt;BRANCH&gt;
 </code></pre></div>
 
-<div class="admonition tip">
-<p class="admonition-title">The Art of Good Commits</p>
-<p>In addition to writing good code, it's important to organize your changes that are helpful to those viewing them
-in the future (including yourself!).
-This includes:</p>
-<ul>
-<li>Splitting up changes into logically separate chunks (<code>git rebase</code> can be a helpful tool for this)</li>
-<li>Describing the "why" of the change in addition to the "what" and "how" (utilizing the commit body if necessary)</li>
-<li>Writing succint commit message titles in the imperative (limited to 72 chars)</li>
-<li>Including any relevant ticket numbers (e.g., <code>Change that default path (SOFTWARE-2345)</code>).</li>
-</ul>
-<p>See online guides such as <a href="https://dev.to/ruanbrandao/how-to-make-good-git-commits-256k">this one</a> for more details.</p>
-</div>
 </li>
 <li>
-<p>Select your branch in the GitHub web interface, then create a "pull request" against the original repo. Add a good description of your change into the message for the pull request. Enter a JIRA ticket number in the message to automatically link the pull request to the JIRA ticket.</p>
+<p>Select your branch in the GitHub web interface, then create a "pull request" against the original repo. Add a good description of your change into the message for the pull request. Enter a Jira ticket number in the message to automatically link the pull request to the Jira ticket.</p>
 </li>
 <li>
 <p>Request a review from the drop down menu on the right and wait for your pull request to be reviewed by a software team member.</p>
@@ -3021,6 +3158,115 @@ This includes:</p>
 </ol>
 </li>
 </ol>
+<h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="making-good-pull-requests-the-art-of-good-commits">Making good pull requests (The Art of Good Commits)<a class="headerlink" href="#making-good-pull-requests-the-art-of-good-commits" title="Permanent link">&para;</a></h3>
+<p>In addition to writing good code, it's important to organize your changes
+to make the task of reviewing them easier, both for the reviewer of the pull
+request, and even for yourself later.</p>
+<p>Here are some general guidelines and tips.</p>
+<h4 id="put-logically-separate-changes-into-separate-commits">Put logically separate changes into separate commits<a class="headerlink" href="#put-logically-separate-changes-into-separate-commits" title="Permanent link">&para;</a></h4>
+<p>This becomes more relevant if there are a lot of changes in the pull request.
+Having a single commit with many different changes happening at the same time
+can make the changes harder to review.
+If possible, split up logically separate changes into separate commits.</p>
+<p>As a simple example, if you are renaming a variable in many places, and also
+refactoring the structure of some code, these changes can be split into two
+separate commits.
+This will make it easier when reviewing to see clearly what each commit is
+trying to accomplish.</p>
+<p>The process you went through to arrive at your final code may have been
+different, but you can clean up your commits after the fact.
+One method is to use <code>git rebase -i</code> to combine (squash) several commits
+into one, and then use <code>git gui</code> to amend the combined commit, staging the
+parts that represent each logical change into separate commits.</p>
+<p>Another example that occasionally comes up is when you want to copy or move
+a file AND make changes to that file.
+If you have a single commit that introduces a file to a new location
+<em>with changes</em>, it will not be obvious from the commit diff itself which
+parts are the same (moved or copied in) and which parts you are modifying.
+Instead, by putting the copy or move of the original file into its own commit,
+and then putting your changes in a separate commit, it will make it clear to
+the reviewer which parts are changing from the original.</p>
+<h4 id="squash-noisy-work-in-progress-commits">Squash noisy work-in-progress commits<a class="headerlink" href="#squash-noisy-work-in-progress-commits" title="Permanent link">&para;</a></h4>
+<p>Naturally in the trial-and-error-prone process of development, there will be
+many changes along the way that didn't make the final cut.
+This is good and healthy, and it's perfectly reasonable to be making many
+small work-in-progress commits locally while you are developing.</p>
+<p>However, for the reviewer, the relevant thing is what final changes are
+being introduced into the codebase.
+Having to review several ideas that were put into and then taken out of the
+changeset is a distraction, and makes it harder to see what the end result is
+for the new changes.</p>
+<p>If you have such work-in-progress commits, first combine them (this is also
+called "squashing" or "rebasing"), and then break them up into logically
+distinct commits as necessary, representing the final changeset.
+As mentioned above, one way to do this is with a combination of <code>git rebase -i</code>
+and <code>git gui</code>, though there are other third-party tools (e.g., magit) available
+also.</p>
+<h4 id="write-a-succinct-subject-to-explain-what-each-commit-does">Write a succinct subject to explain what each commit does<a class="headerlink" href="#write-a-succinct-subject-to-explain-what-each-commit-does" title="Permanent link">&para;</a></h4>
+<p>The first line of a commit message is the "subject" (or sometimes also called
+the "title").
+It should be short and sweet (at most 72 characters) and briefly state <em>what</em>
+the commit is designed to do.</p>
+<p>As a convention, the subject of the commit message should be written in the
+imperative - that is, it should be written as if it were a command.
+For instance, a subject should start with "fix a bug" rather than "fixing" or
+"fixes".</p>
+<h4 id="explain-why-a-change-was-made-in-the-commit-message">Explain why a change was made in the commit message<a class="headerlink" href="#explain-why-a-change-was-made-in-the-commit-message" title="Permanent link">&para;</a></h4>
+<p>It is generally important also to explain <em>why</em> a change was made.</p>
+<p>If this is not covered by the succinct subject line of your commit, you should
+explain the rationale behind your change in the commit message body.
+(The commit message starts with the subject line, then is optionally followed
+by a blank line plus the message body.)</p>
+<p>You can also explain in the commit message body <em>how</em> this commit accomplishes
+the stated purpose in the subject - and you may find yourself needing to do
+this if there are some tricky details in the changes.
+But even if it is perfectly clear from the code and your commit message <em>what</em>
+you are changing and <em>how</em> you are going about it, it is not always clear
+<em>why</em> the change is needed or desired - so it is important to explain your
+reasons, in order to make this clear to the reviewer.</p>
+<p>For an example of "explaining your reasons", see
+<a href="https://github.com/opensciencegrid/topology/commit/c3524138ac8d46eee2a3c33cb75fac50acab41c4">this commit message body</a>.</p>
+<h4 id="reference-any-relevant-tickets">Reference any relevant tickets<a class="headerlink" href="#reference-any-relevant-tickets" title="Permanent link">&para;</a></h4>
+<p>Code changes often are related to a Jira ticket, for instance SOFTWARE-1234.</p>
+<p>By referencing the name of a ticket in your pull request, it provides a
+convenient way to look into the background context for the change; and later
+on down the road, it makes it easy to find which changes were made for a
+particular task, referenced by the ticket name.</p>
+<p>Ideally, you can include a ticket reference each of these three places:</p>
+<ol>
+<li>Your branch name.
+    For example, name the branch in your fork of the GitHub repo for the
+    pull request <code>SOFTWARE-1234.fix-memory-leak</code>.</li>
+<li>Your commit messages.
+    For example, the subject of your commit message might read,
+    <code>fix a memory leak (SOFTWARE-1234)</code>.
+    If you have trouble squeezing the ticket name into the subject line,
+    or if you have a number of related tickets that you want to reference,
+    it is also OK to mention them later in the commit message body.</li>
+<li>The pull request title.
+    If your pull request is just a single commit, and you have the ticket
+    reference in the subject line of the commit message, GitHub will include
+    this in the pull request title automatically.
+    But if you have multiple commits, or you have only included the ticket
+    reference in the body of the commit message, or more generally if you
+    want to tweak the title of the pull request, you should in any case make
+    a point to include the ticket name in the title of the pull request.
+    (By convention, we include this at the end of the title, in parentheses.)</li>
+</ol>
+<p>If there is no ticket associated with your changes, consider creating one
+(or asking an OSG software team member to create one) before submitting your
+pull request.</p>
+<h4 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h4>
+<p>There are a number of articles and guides for making good git commits and
+good pull requests - a simple search will turn up plenty of material for
+the interested reader.</p>
+<p>See online guides such as
+<a href="https://dev.to/ruanbrandao/how-to-make-good-git-commits-256k">this one</a>
+for more details.</p>
+<h4 id="brownie-points">Brownie points<a class="headerlink" href="#brownie-points" title="Permanent link">&para;</a></h4>
+<p>You will get brownie points from Carl, personally, if you strive to make your
+code (and other text files) fit within an 80-column terminal window.</p>
                 
               
               
