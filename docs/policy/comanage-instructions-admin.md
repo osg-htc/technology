@@ -24,6 +24,10 @@ Follow the instructions below to approve a user registration.
         [here](https://registry.cilogon.org/registry/co_petitions/index/co:7/sort:CoPetition.created/direction:desc/search.status:PA).
         Click on the registrant's name to view their request.
 
+        !!! note
+            Many groups share our COManage instance so make sure that you're only approving registration requests for
+            the appropriate group, e.g. site contacts.
+
 1.  If prompted, log in with your institutional credentials.
 
 1.  Review the request:
