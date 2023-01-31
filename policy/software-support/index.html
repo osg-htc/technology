@@ -553,7 +553,7 @@
         
           <li class="md-nav__item">
   <a href="#jira" class="md-nav__link">
-    JIRA
+    Jira
   </a>
   
 </li>
@@ -2806,7 +2806,7 @@
         
           <li class="md-nav__item">
   <a href="#jira" class="md-nav__link">
-    JIRA
+    Jira
   </a>
   
 </li>
@@ -2835,7 +2835,7 @@
                 
                 <h1 id="software-support">Software Support<a class="headerlink" href="#software-support" title="Permanent link">&para;</a></h1>
 <p>This document describes how OSG Technology Team members should support the OSG Software Stack, including triage duty
-responsibilities and when to transition from direct support inquiries to a ticketing system such as Freshdesk or JIRA.</p>
+responsibilities and when to transition from direct support inquiries to a ticketing system such as Freshdesk or Jira.</p>
 <h2 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h2>
 <p>When providing support for our users, remember the following:</p>
 <ul>
@@ -2847,8 +2847,8 @@ responsibilities and when to transition from direct support inquiries to a ticke
     It can shorten the number of times you ask for information because it collects quite a bit for you.</li>
 <li>If you run across a problem that has a chance of being hit by other users:<ul>
 <li>Is there a bug we should fix in the software? Open a Jira ticket.</li>
-<li>Is there something we could improve in the software? Notify the Software Manager.</li>
-<li>Is there a way to improve our documentation? Notify the Software Manager.</li>
+<li>Is there something we could improve in the software? Notify the Software Area Coordinator.</li>
+<li>Is there a way to improve our documentation? Notify the Software Area Coordinator.</li>
 <li>Can you extend our troubleshooting documents to help people track this down more quickly?
     Consider the troubleshooting documents to be as much for us as for our users.</li>
 <li>Is this something that other Technology Team members should be aware of?
@@ -2859,7 +2859,7 @@ responsibilities and when to transition from direct support inquiries to a ticke
 </ul>
 <h2 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h2>
 <p>The OSG uses <a href="#freshdesk">Freshdesk</a> to track support issues so you will need a Freshworks account with agent privileges
-(contact the OSG Software Team Manager for access).</p>
+(contact the OSG Software Team Area Coordinator for access).</p>
 <div class="admonition tip">
 <p class="admonition-title">Logging in as an agent</p>
 <p>Don't enter your credentials directly into the <a href="https://support.opensciencegrid.org/support/login">login page</a>!
@@ -2880,12 +2880,12 @@ If you are on triage duty, your responsibilities are as follows:</p>
     Inasmuch as possible, you should strive to handle the easier tickets and not pass them off to other people.</li>
 <li><em>If you cannot handle an incoming ticket,</em> collect initial details such as relevant versions, logs, etc., and
     assign the ticket to the most appropriate Technology Team member.
-    Where appropriate, CC people from other OSG teams, sites, or VOs.</li>
+    Where appropriate, CC third-parties or add relevant OSG staff with FD accounts as watchers
+    (see <a href="https://support.freshdesk.com/en/support/solutions/articles/37560-monitoring-important-tickets-by-becoming-a-watcher">this documentation</a>)</li>
 </ul>
 <div class="admonition important">
 <p class="admonition-title">New sites interested in joining the OSG</p>
-<p>For support requests inquiring about joining the OSG, assign the ticket to the <code>Campus Facilitation</code> group,
-and specifically <code>Lauren Michael</code> as the agent.</p>
+<p>For support requests inquiring about joining the OSG, assign the ticket to the <code>Campus Facilitation</code> group.</p>
 </div>
 </li>
 <li>
@@ -2902,19 +2902,48 @@ and specifically <code>Lauren Michael</code> as the agent.</p>
     tackle the issue again.</li>
 </ul>
 </li>
-<li><strong>Re-assign non-software tickets:</strong>
-    Tickets that have been mistakenly assigned to the Software group should be re-assigned to the appropriate group.</li>
-<li><strong>Merge duplicate tickets:</strong>
-   Responses to a ticket sometimes results in creation of a new ticket; these new tickets should be merged into the
-   original ticket.
-   See <a href="https://support.freshdesk.com/support/solutions/articles/80180-merging-two-or-more-tickets-together">this documentation</a>.</li>
-<li><strong>Clean up spam:</strong>
+<li>
+<p><strong>Review Topology data pull requests:</strong>
+    Review any <a href="https://github.com/opensciencegrid/topology/pulls">Topology PRs</a> that update anything in the
+    <code>collaborations</code>, <code>projects/</code>, <code>topology/</code>, or <code>virtual-organizations</code> directories.</p>
+<div class="admonition warning">
+<p class="admonition-title">New institutions</p>
+<p>Approval of new facilities or project institutions require PATh Project Office, i.e. Irene or Janet.</p>
+</div>
+</li>
+<li>
+<p><strong>Re-assign non-software tickets:</strong>
+    Tickets that have been mistakenly assigned to the Software group should be re-assigned to the appropriate group.</p>
+</li>
+<li>
+<p><strong>Merge duplicate tickets:</strong>
+    Responses to a ticket sometimes results in creation of a new ticket; these new tickets should be merged into the
+    original ticket.
+    See <a href="https://support.freshdesk.com/support/solutions/articles/80180-merging-two-or-more-tickets-together">this documentation</a>.</p>
+</li>
+<li>
+<p><strong>Split off new support requests in old tickets:</strong>
+    If a user has reopened or followed-up in a ticket with a new support request unrelated to the existing ticket (this
+    is a judgment call) and their comment is the last one in the ticket, split off the comment into a new ticket
+    (see <a href="https://support.freshdesk.com/en/support/solutions/articles/228992-how-do-i-split-a-customer-response-into-a-new-ticket-">this documentation</a>).
+    If you are unsure if a ticket should be split, consult the Software Area Coordinator.</p>
+<div class="admonition danger">
+<p class="admonition-title">Do not split comments other than the last one</p>
+<p>FD treats splitting tickets as "take this comment and make it the start of a new ticket" and not "take this
+comment and all subsequent comments into a new ticket".</p>
+</div>
+</li>
+<li>
+<p><strong>Clean up spam:</strong>
     Mark the ticket as spam and block the user.
-    See <a href="https://support.freshdesk.com/support/solutions/articles/217539-spam-and-trash">this documentation</a>.</li>
-<li><strong>Clean up automated replies:</strong>
+    See <a href="https://support.freshdesk.com/support/solutions/articles/217539-spam-and-trash">this documentation</a>.</p>
+</li>
+<li>
+<p><strong>Clean up automated replies:</strong>
     announcements are often sent with <code>Reply-to: help@opensciencegrid.org</code> so automated replies (e.g. Out of Office,
     mailing list moderation) will generate tickets.
-    These tickets can be closed.</li>
+    These tickets can be closed.</p>
+</li>
 </ul>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
@@ -2947,7 +2976,7 @@ To update the triage duty schedule:</p>
 
 <h2 id="ticket-systems">Ticket Systems<a class="headerlink" href="#ticket-systems" title="Permanent link">&para;</a></h2>
 <p>The OSG Technology Team uses the <a href="https://support.opensciencegrid.org/">Freshdesk</a> and
-<a href="https://jira.opensciencegrid.org">JIRA</a> ticketing systems to track support and all other work, respectively.
+<a href="https://jira.opensciencegrid.org">Jira</a> ticketing systems to track support and all other work, respectively.
 This section describes the differences between the two as well as some OSG Technology Freshdesk conventions.</p>
 <h3 id="direct-email">Direct Email<a class="headerlink" href="#direct-email" title="Permanent link">&para;</a></h3>
 <p>Sometimes users may email you directly with support inquiries.
@@ -3007,16 +3036,16 @@ When replying to or otherwise updating a Freshdesk ticket, there are a few thing
 </table>
 </li>
 </ul>
-<p>If actionable Technology Team tasks arise from a Freshdesk ticket, <a href="#jira">JIRA</a> ticket(s) should be created to track
+<p>If actionable Technology Team tasks arise from a Freshdesk ticket, <a href="#jira">Jira</a> ticket(s) should be created to track
 that work.
-Resultant JIRA tickets should include a link to the original Freshdesk ticket, a description of the problem or feature
+Resultant Jira tickets should include a link to the original Freshdesk ticket, a description of the problem or feature
 request, and a proposed solution or implementation.</p>
-<p>After the relevant JIRA tickets have been created, ask the user if they would be ok with tracking the issue via JIRA. 
+<p>After the relevant Jira tickets have been created, ask the user if they would be ok with tracking the issue via Jira. 
 If they say yes, close the Freshdesk ticket.</p>
-<h3 id="jira">JIRA<a class="headerlink" href="#jira" title="Permanent link">&para;</a></h3>
-<p>JIRA is for tracking our work and it's meant for internal usage, not for user support.
-In general, users should not ask for support via JIRA.
-A single user support ticket might result in zero, one, or multiple JIRA tickets.</p>
+<h3 id="jira">Jira<a class="headerlink" href="#jira" title="Permanent link">&para;</a></h3>
+<p>Jira is for tracking our work and it's meant for internal usage, not for user support.
+In general, users should not ask for support via Jira.
+A single user support ticket might result in zero, one, or multiple Jira tickets.</p>
                 
               
               
