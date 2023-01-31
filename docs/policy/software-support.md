@@ -2,7 +2,7 @@ Software Support
 ================
 
 This document describes how OSG Technology Team members should support the OSG Software Stack, including triage duty
-responsibilities and when to transition from direct support inquiries to a ticketing system such as Freshdesk or JIRA.
+responsibilities and when to transition from direct support inquiries to a ticketing system such as Freshdesk or Jira.
 
 Considerations
 --------------
@@ -17,8 +17,8 @@ When providing support for our users, remember the following:
     It can shorten the number of times you ask for information because it collects quite a bit for you.
 -   If you run across a problem that has a chance of being hit by other users:
     -   Is there a bug we should fix in the software? Open a Jira ticket.
-    -   Is there something we could improve in the software? Notify the Software Manager.
-    -   Is there a way to improve our documentation? Notify the Software Manager.
+    -   Is there something we could improve in the software? Notify the Software Area Coordinator.
+    -   Is there a way to improve our documentation? Notify the Software Area Coordinator.
     -   Can you extend our troubleshooting documents to help people track this down more quickly?
         Consider the troubleshooting documents to be as much for us as for our users.
     -   Is this something that other Technology Team members should be aware of?
@@ -29,7 +29,7 @@ Triage Duty
 -----------
 
 The OSG uses [Freshdesk](#freshdesk) to track support issues so you will need a Freshworks account with agent privileges
-(contact the OSG Software Team Manager for access).
+(contact the OSG Software Team Area Coordinator for access).
 
 !!!tip "Logging in as an agent"
     Don't enter your credentials directly into the [login page](https://support.opensciencegrid.org/support/login)!
@@ -48,11 +48,11 @@ If you are on triage duty, your responsibilities are as follows:
         Inasmuch as possible, you should strive to handle the easier tickets and not pass them off to other people.
     -   *If you cannot handle an incoming ticket,* collect initial details such as relevant versions, logs, etc., and
         assign the ticket to the most appropriate Technology Team member.
-        Where appropriate, CC people from other OSG teams, sites, or VOs.
+        Where appropriate, CC third-parties or add relevant OSG staff with FD accounts as watchers
+        (see [this documentation](https://support.freshdesk.com/en/support/solutions/articles/37560-monitoring-important-tickets-by-becoming-a-watcher))
 
     !!! important "New sites interested in joining the OSG"
-        For support requests inquiring about joining the OSG, assign the ticket to the `Campus Facilitation` group,
-        and specifically `Lauren Michael` as the agent.
+        For support requests inquiring about joining the OSG, assign the ticket to the `Campus Facilitation` group.
 
 -   **Review assigned software tickets.**
     For tickets that are not being handled in a timely fashion (pay special attention to `OVERDUE` and `Customer
@@ -64,15 +64,36 @@ If you are on triage duty, your responsibilities are as follows:
     -   *If the ticket was opened by the customer, is waiting on the customer and they have not responded in > 2 weeks,*
         close the ticket and let the customer know that they can re-open it by responding whenever they're ready to
         tackle the issue again.
+
+-   **Review Topology data pull requests:**
+    Review any [Topology PRs](https://github.com/opensciencegrid/topology/pulls) that update anything in the
+    `collaborations`, `projects/`, `topology/`, or `virtual-organizations` directories.
+
+    !!! warning "New institutions"
+        Approval of new facilities or project institutions require PATh Project Office, i.e. Irene or Janet.
+
 -   **Re-assign non-software tickets:**
     Tickets that have been mistakenly assigned to the Software group should be re-assigned to the appropriate group.
--  **Merge duplicate tickets:**
-   Responses to a ticket sometimes results in creation of a new ticket; these new tickets should be merged into the
-   original ticket.
-   See [this documentation](<https://support.freshdesk.com/support/solutions/articles/80180-merging-two-or-more-tickets-together>).
+
+-   **Merge duplicate tickets:**
+    Responses to a ticket sometimes results in creation of a new ticket; these new tickets should be merged into the
+    original ticket.
+    See [this documentation](<https://support.freshdesk.com/support/solutions/articles/80180-merging-two-or-more-tickets-together>).
+
+-   **Split off new support requests in old tickets:**
+    If a user has reopened or followed-up in a ticket with a new support request unrelated to the existing ticket (this
+    is a judgment call) and their comment is the last one in the ticket, split off the comment into a new ticket
+    (see [this documentation](https://support.freshdesk.com/en/support/solutions/articles/228992-how-do-i-split-a-customer-response-into-a-new-ticket-)).
+    If you are unsure if a ticket should be split, consult the Software Area Coordinator.
+
+    !!! danger "Do not split comments other than the last one"
+        FD treats splitting tickets as "take this comment and make it the start of a new ticket" and not "take this
+        comment and all subsequent comments into a new ticket".
+
 -   **Clean up spam:**
     Mark the ticket as spam and block the user.
     See [this documentation](<https://support.freshdesk.com/support/solutions/articles/217539-spam-and-trash>).
+
 -   **Clean up automated replies:**
     announcements are often sent with `Reply-to: help@opensciencegrid.org` so automated replies (e.g. Out of Office,
     mailing list moderation) will generate tickets.
@@ -107,7 +128,7 @@ Ticket Systems
 --------------
 
 The OSG Technology Team uses the [Freshdesk](https://support.opensciencegrid.org/) and
-[JIRA](https://jira.opensciencegrid.org) ticketing systems to track support and all other work, respectively.
+[Jira](https://jira.opensciencegrid.org) ticketing systems to track support and all other work, respectively.
 This section describes the differences between the two as well as some OSG Technology Freshdesk conventions.
 
 ### Direct Email ###
@@ -145,16 +166,16 @@ When replying to or otherwise updating a Freshdesk ticket, there are a few thing
     | Resolved               | Support is complete or the user is unresponsive. [See above](#triage-duty). |
     | Closed                 | **DO NOT SET MANUALLY**. Terminal ticket state that is set by Freshdesk.    |
 
-If actionable Technology Team tasks arise from a Freshdesk ticket, [JIRA](#jira) ticket(s) should be created to track
+If actionable Technology Team tasks arise from a Freshdesk ticket, [Jira](#jira) ticket(s) should be created to track
 that work.
-Resultant JIRA tickets should include a link to the original Freshdesk ticket, a description of the problem or feature
+Resultant Jira tickets should include a link to the original Freshdesk ticket, a description of the problem or feature
 request, and a proposed solution or implementation.
 
-After the relevant JIRA tickets have been created, ask the user if they would be ok with tracking the issue via JIRA. 
+After the relevant Jira tickets have been created, ask the user if they would be ok with tracking the issue via Jira. 
 If they say yes, close the Freshdesk ticket.
 
-### JIRA ###
+### Jira ###
 
-JIRA is for tracking our work and it's meant for internal usage, not for user support.
-In general, users should not ask for support via JIRA.
-A single user support ticket might result in zero, one, or multiple JIRA tickets.
+Jira is for tracking our work and it's meant for internal usage, not for user support.
+In general, users should not ask for support via Jira.
+A single user support ticket might result in zero, one, or multiple Jira tickets.
