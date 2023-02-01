@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://osg-htc.org/technology/documentation/style-guide/">
+        <link rel="canonical" href="https://osg-htc.org/technology/release/new-os-series/">
       
       <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
-        <title>Markdown Style Guide - OSG Technology Area</title>
+        <title>New OS Series - OSG Technology Area</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#markdown-style-guide" class="md-skip">
+        <a href="#how-to-add-a-new-enterprise-linux-series" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Markdown Style Guide
+              New OS Series
             
           </span>
         </div>
@@ -525,12 +525,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Release
@@ -548,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/cut-sw-release/" class="md-nav__link">
+      <a href="../cut-sw-release/" class="md-nav__link">
         How to Cut a Release
       </a>
     </li>
@@ -560,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/announce-rft-packages/" class="md-nav__link">
+      <a href="../announce-rft-packages/" class="md-nav__link">
         Ready for Testing Announcements
       </a>
     </li>
@@ -572,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/new-release-series/" class="md-nav__link">
+      <a href="../new-release-series/" class="md-nav__link">
         New Release Series
       </a>
     </li>
@@ -582,11 +584,56 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../release/new-os-series/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          New OS Series
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         New OS Series
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-koji-and-osg-build" class="md-nav__link">
+    Prepare Koji and OSG-Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsequent-steps" class="md-nav__link">
+    Subsequent Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -596,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/release-eol/" class="md-nav__link">
+      <a href="../release-eol/" class="md-nav__link">
         Release Series End-of-Life
       </a>
     </li>
@@ -608,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/itb-testing/" class="md-nav__link">
+      <a href="../itb-testing/" class="md-nav__link">
         ITB Prerelease Testing
       </a>
     </li>
@@ -620,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/empty-pkgs/" class="md-nav__link">
+      <a href="../empty-pkgs/" class="md-nav__link">
         Empty Packages
       </a>
     </li>
@@ -632,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/acceptance-testing/" class="md-nav__link">
+      <a href="../acceptance-testing/" class="md-nav__link">
         Acceptance Testing
       </a>
     </li>
@@ -849,14 +896,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         Documentation
@@ -874,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../writing-documentation/" class="md-nav__link">
+      <a href="../../documentation/writing-documentation/" class="md-nav__link">
         Writing Documentation
       </a>
     </li>
@@ -886,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reviewing-documentation/" class="md-nav__link">
+      <a href="../../documentation/reviewing-documentation/" class="md-nav__link">
         Reviewing Documentation
       </a>
     </li>
@@ -896,117 +941,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Markdown Style Guide
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../documentation/style-guide/" class="md-nav__link">
         Markdown Style Guide
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#meta" class="md-nav__link">
-    Meta
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#headings" class="md-nav__link">
-    Headings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-    <nav class="md-nav" aria-label="Links">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#section-links" class="md-nav__link">
-    Section links
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command-blocks-and-file-snippets" class="md-nav__link">
-    Command blocks and file snippets
-  </a>
-  
-    <nav class="md-nav" aria-label="Command blocks and file snippets">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#root-and-user-prompts" class="md-nav__link">
-    Root and user prompts
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#highlighting-user-input" class="md-nav__link">
-    Highlighting user input
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists" class="md-nav__link">
-    Lists
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1016,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../publish-osg-pages/" class="md-nav__link">
+      <a href="../../documentation/publish-osg-pages/" class="md-nav__link">
         Publishing OSG pages
       </a>
     </li>
@@ -1118,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-migration/" class="md-nav__link">
+      <a href="../../documentation/markdown-migration/" class="md-nav__link">
         Migrating Documents to Markdown
       </a>
     </li>
@@ -2794,76 +2733,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#meta" class="md-nav__link">
-    Meta
+  <a href="#prepare-koji-and-osg-build" class="md-nav__link">
+    Prepare Koji and OSG-Build
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#headings" class="md-nav__link">
-    Headings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-    <nav class="md-nav" aria-label="Links">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#section-links" class="md-nav__link">
-    Section links
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command-blocks-and-file-snippets" class="md-nav__link">
-    Command blocks and file snippets
-  </a>
-  
-    <nav class="md-nav" aria-label="Command blocks and file snippets">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#root-and-user-prompts" class="md-nav__link">
-    Root and user prompts
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#highlighting-user-input" class="md-nav__link">
-    Highlighting user input
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists" class="md-nav__link">
-    Lists
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
+  <a href="#subsequent-steps" class="md-nav__link">
+    Subsequent Steps
   </a>
   
 </li>
@@ -2880,203 +2758,144 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/osg-htc/technology/edit/master/docs/documentation/style-guide.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/osg-htc/technology/edit/master/docs/release/new-os-series.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="markdown-style-guide">Markdown Style Guide<a class="headerlink" href="#markdown-style-guide" title="Permanent link">&para;</a></h1>
-<p>This document contains markdown conventions that are used in OSG Software documentation.</p>
-<h2 id="meta">Meta<a class="headerlink" href="#meta" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Run a spellchecker to catch any obvious spelling mistakes.</li>
-<li>Use official capitalizations when referring to titles (i.e., HTTPS, HTCondor)</li>
-<li>Start each new sentence on a new line.
-  Lines should not exceed 120 characters, except in the case of <a href="#links">link text</a>,
-  but may be split at earlier points (e.g. punctuation).</li>
-</ul>
-<h2 id="headings">Headings<a class="headerlink" href="#headings" title="Permanent link">&para;</a></h2>
-<p>Use the following conventions for headings:</p>
-<ul>
-<li>The title should be the only level 1 heading</li>
-<li>Level 1 headings should use the <code>====</code> format</li>
-<li>Level 2 headings should use the <code>----</code> format</li>
-<li>Use <a href="https://titlecaseconverter.com/?style=APA&amp;showExplanations=1&amp;keepAllCaps=1&amp;multiLine=1&amp;highlightChanges=1&amp;convertOnPaste=1&amp;straightQuotes=0">APA-style title case</a>
-  for level 1 and level 2 headings.
-  Only capitalize the first word for all other headings.</li>
-<li>Other heading levels should use the appropriate number of <code>#</code></li>
-<li>Go no deeper than of level 5 headings</li>
-<li>Spin-off a new document or re-organize the existing document if you find that you regularly need level 5 headings.</li>
-</ul>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
-<div class="admonition danger">
-<p class="admonition-title">Only use document relative links in MkDocs 1.0.0 and newer</p>
-<p>MkDocs 1.0.0 does not support site-relative links (e.g. <code>/software/development-process.md</code>).
-You must use document-relative links (e.g. <code>../software/development-process.md</code>) instead.</p>
-<p>Earlier versions of this guide recommended site-relative links;
-these only worked in earlier versions of MkDocs.
-Document-relative links work in all versions of MkDocs.</p>
-<p>Please convert any site-relative links to document-relative links
-before updating the <code>doc-ci-scripts</code> submodule to use MkDocs 1.0.0+.</p>
-</div>
+                <h1 id="how-to-add-a-new-enterprise-linux-series">How to Add a New Enterprise Linux Series<a class="headerlink" href="#how-to-add-a-new-enterprise-linux-series" title="Permanent link">&para;</a></h1>
+<p>Throughout this document, we will refer to the new Enterprise Linux series as
+<code>ELX</code>, and the previous EL series as <code>ELX.OLD</code>.
+For example, if we are adding el9, then <code>ELX</code> refers to <code>el9</code>, and <code>ELX.OLD</code>
+refers to <code>el8</code>.</p>
+<p>This document explains how to add support for a new <code>ELX</code> series to an existing
+OSG series.
+For adding a new OSG series, see the <a href="../new-release-series/">New Release Series</a> documentation.</p>
+<p>See the documentation in the <a href="https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI">OSG Technology/Software and Release/Infrastructure Google Drive folder</a>
+ for details on the infrastructure.</p>
+<h2 id="prepare-koji-and-osg-build">Prepare Koji and OSG-Build<a class="headerlink" href="#prepare-koji-and-osg-build" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Links to internal pages must have the <code>.md</code> extension.
-  (Earlier versions of this guide said links should not have the <code>.md</code> extension,
-  but adding the <code>.md</code> extension is required for MkDocs 1.0.0+.
-  Links with the <code>.md</code> extension work in all versions of MkDocs.)</p>
-</li>
-<li>
-<p>Links to the area's homepage (e.g. https://osg-htc.org/technology/) need to be of the form <code>[link text](/)</code></p>
-</li>
-<li>
-<p>Links to other areas (like from https://osg-htc.org/technology/ to
-  https://osg-htc.org/operations/) need to be absolute links (i.e. include the domain name)</p>
-</li>
-</ul>
-<h3 id="section-links">Section links<a class="headerlink" href="#section-links" title="Permanent link">&para;</a></h3>
-<p>To link sections within a page, lowercase the entire section name and replace spaces with dashes. If there are multiple
-sections with the same name you can link the subsequent sections by appending <code>_N</code> where <code>N</code> is the section's ordinal
-number minus one, e.g. append <code>_1</code> for the second section. For example, if you have three sections named "Optional
-Configuration", link them like so:</p>
-<div class="codehilite"><pre><span></span><code>[1st section](#optional-configuration)
-[2nd section](#optional-configuration_1)
-[3rd section](#optional-configuration_2)
-</code></pre></div>
-
-<h2 id="command-blocks-and-file-snippets">Command blocks and file snippets<a class="headerlink" href="#command-blocks-and-file-snippets" title="Permanent link">&para;</a></h2>
-<p>Command blocks and file snippets outside of lists should be wrapped in three back-ticks (```) followed by an optional
-code highlighting format:</p>
-<div class="codehilite"><pre><span></span><code>```console
-# stuff
-```
-</code></pre></div>
-
-<p>Command blocks and file snippets inside of a list should use the appropriate number of spaces before three
-colons followed by an optional code highlighting format:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp"># </span>stuff
-</code></pre></div>
-
-<p>See the <a href="#lists">lists section</a> for details on properly formatting command blocks within a list.</p>
-<p>We use the <a href="http://pygments.org/">Pygments</a> highlighting library for syntax; it knows about 100 different languages.
-The Pygments website contains a live renderer if you want to see how your text will come out.  Please use the <code>console</code>
-language for shell sessions.</p>
-<h3 id="root-and-user-prompts">Root and user prompts<a class="headerlink" href="#root-and-user-prompts" title="Permanent link">&para;</a></h3>
-<p>When specifying instructions for the command-line, indicate to users whether the commands can be run as root 
-(<code>root@host #</code>) or as an unprivileged user (<code>user@host $</code>).</p>
-<p>For example:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">root@host # </span>useradd -m osguser
-<span class="gp">root@host # </span>su - osguser
-<span class="gp">user@host $ </span>whoami
-<span class="go">osguser</span>
-</code></pre></div>
-
-<p>It can provide helpful context to use a more specific hostname in the prompt than <code>host</code>.
-For example, if you're writing a doc for setting up a Storage Element and a command is run as root on the SE, use <code>root@se #</code>.
-Or if you're testing the SE from the client side and the command is run as a normal user on a client, use <code>user@client $</code>.</p>
-<h3 id="highlighting-user-input">Highlighting user input<a class="headerlink" href="#highlighting-user-input" title="Permanent link">&para;</a></h3>
-<p>Use descriptive, all-caps text wrapped in angle brackets to to highlight areas that users would have to insert text
-specific to their site, e.g. <code>&lt;REMOTE SSH HOSTNAME&gt;</code>.
-The same text should be cited verbatim in surrounding prose with further explanation with examples of appropriate values.
-For additional visual highlighting,
-use <a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#highlighting-specific-lines">hl_lines="N"</a>,
-where <code>N</code> can indicate multiple line numbers:</p>
-<div class="codehilite"><pre><span></span><code><span class="go">```console hl_lines=&quot;1 3&quot;</span>
-<span class="gp">root@condor-ce # </span>yum install htcondor-ce
-<span class="gp"># </span>this is a comment
-<span class="gp">root@condor-ce # </span>condor_ce_trace -d &lt;CE HOSTNAME&gt;
-<span class="go">````</span>
-</code></pre></div>
-
-<p>Similarly, you may also specify <code>:::console hl_lines="N"</code> for indented command blocks, replacing <code>console</code> with any
-language supported by <a href="http://pygments.org/languages/">Pygments</a>.
-The above block is rendered below:</p>
-<div class="codehilite"><pre><span></span><code><span class="hll"><span class="gp">root@condor-ce # </span>yum install htcondor-ce
-</span><span class="gp"># </span>this is a comment
-<span class="hll"><span class="gp">root@condor-ce # </span>condor_ce_trace -d &lt;CE HOSTNAME&gt;
-</span></code></pre></div>
-
-<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h2>
-<p>When constructing lists, use the following guidelines:</p>
+<p>Add <code>ELX</code> Koji tags and targets</p>
 <ul>
-<li>Use <code>1.</code> for each item in a numbered list</li>
-<li>To make sure the contents of code blocks, file snippets, and subsequent paragraphs are indented properly, use the
-  following formatting:<ul>
-<li>For code blocks or file snippets, add an empty line after any regular text, then insert <code>(N+1)*4</code> spaces at the
-  beginning of each line, where N is the level of the item in the list. To apply code highlighting, start the code
-  block with <code>:::&lt;FORMAT&gt;</code>; see <a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/">this page</a> for
-  details, including possible highlighting formats.  For an example of formatting a code section inside a list, see
-  <a href="https://github.com/opensciencegrid/docs/blame/fd631cfa594b0726e021584dc12d9cf2a3a69206/docs/release/release_series.md#L110-L118">the release series document</a>.</li>
-<li>For additional text (i.e. after a code block), insert <code>N*4</code> spaces at the beginning of each line, where N is the
-  level of the item in the list.</li>
-</ul>
+<li>
+<p>Modify this script as appropriate and run:
+    <a href="https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-elX-tags-etc">https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-elX-tags-etc</a></p>
+<p>In particular, update <code>EL</code> as appropriate (eg, <code>el9</code>), and update the
+<code>### external repos ###</code> section with a new block of external repos
+to add to the <code>dist-$EL-build</code> tag.</p>
+</li>
+<li>
+<p>Then for the OSG-series specific tags, modify this script as
+    appropriate and run:
+    <a href="https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-osg3X-tags-etc">https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-osg3X-tags-etc</a></p>
+<p>In particular, set <code>SERIES</code> to the current OSG series, and include ONLY
+the new <code>ELX</code> in the <code>EL</code> loop (eg, <code>el9</code>).
+(Do not include <code>EL</code> versions that already exist for this series.)</p>
+</li>
+<li>
+<p>Then for the devops tags, modify this script as appropriate and run:
+    <a href="https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-devops-tags-etc">https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-devops-tags-etc</a></p>
+<p>In particular, set <code>SERIES</code> to the current OSG series, and set <code>EL</code> to
+the new <code>ELX</code> in the <code>EL</code> loop (eg, <code>el9</code>).</p>
 </li>
 </ul>
-<p>For example:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">1.</span> Foo
-    <span class="k">-</span> Bar
-
-            :::console
-            COMMAND
-            BLOCK
-        text associated with Bar
-
-    text associated with Foo
-
-<span class="k">1.</span> Baz
-
-        FILE
-        SNIPPET
-</code></pre></div>
-
-<p>There are 12 spaces and 8 spaces in front of the command block and text associated with <code>Bar</code>, respectively; 4 spaces in
-front of the text associated with <code>Foo</code>; and 8 spaces in front of the file snippet associated with <code>Baz</code>.  The above
-block is rendered below:</p>
-<ol>
+</li>
 <li>
-<p>Foo</p>
+<p>Add Koji package signing, as necessary</p>
 <ul>
-<li>Bar<div class="codehilite"><pre><span></span><code><span class="go">COMMAND</span>
-<span class="go">BLOCK</span>
+<li>
+<p>With any luck, you can use the existing RPM signing key for the OSG
+    series to which you are adding the new EL series.</p>
+<p>If it turns out that you need to create a new RPM signing key for <code>ELX</code>
+(because reusing the one for the current OSG series doesn't work in
+<code>ELX</code> for some unexpected reason), then you will need to generate a new
+key in the keyring for the Koji sign plugin, and save it (encrypted) in
+the Koji Ansible config.
+See <a href="https://drive.google.com/drive/folders/1cdAfLJhLbA0vV_E5EWs_OkqtF7xDXxuI">Infrastructure Google Drive folder</a> for details.</p>
+<p>Either way, you will need to make modifications to the <code>osg-services</code>
+repo, <code>gitolite@git.chtc.wisc.edu:osg-services.git</code>, so get a checkout
+of that ready.</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>ssh koji.chtc.wisc.edu
+<span class="gp">$ </span>git clone gitolite@git.chtc.wisc.edu:osg-services.git
+<span class="gp">$ </span><span class="nb">cd</span> osg-services
 </code></pre></div>
 
-<p>text associated with Bar</p>
-</li>
-</ul>
-<p>text associated with Foo</p>
 </li>
 <li>
-<p>Baz</p>
-<div class="codehilite"><pre><span></span><code>FILE
-SNIPPET
+<p>If you are adding a new RPM signing key, you need to edit
+    <code>koji/roles/signplugin/vars/main.yml</code> to add the key name, password,
+    and list of tags the key should be used for; and
+    <code>koji/roles/signplugin/templates/sign.conf.j2</code> to add template code for
+    generating the <code>sign.conf</code> config blocks for those tags.</p>
+</li>
+<li>
+<p>If you are using the existing RPM signing key for the OSG series, you
+    only need to edit <code>koji/roles/signplugin/vars/main.yml</code>.</p>
+<p>Find the tags section for your current signing key, eg,
+<code>osg3_build_tags</code>, and add all <code>ELX</code> build tags to this section.
+ Eg, for el9 to OSG 3.6:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">osg3_build_tags:</span>
+<span class="go">  - dist-el9-build</span>
+<span class="go">  - osg-el9-internal-build</span>
+<span class="go">  - osg-3.6-el9-build</span>
+<span class="go">  - osg-3.6-upcoming-el9-build</span>
 </code></pre></div>
 
 </li>
-</ol>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<p>To catch the user's attention for important items or pitfalls, we used <code>%NOTE%</code> TWiki macros, these can be replaced with
-admonition-style notes and warnings:</p>
-<div class="codehilite"><pre><span></span><code>!!! note
-    things to note
+<li>
+<p>Apply the Koji Ansible config on the Koji Hub host.</p>
+<div class="codehilite"><pre><span></span><code><span class="gp"># </span>ssh koji.chtc.wisc.edu
+<span class="gp"># </span>git clone gitolite@git.chtc.wisc.edu:osg-services.git
+<span class="gp">$ </span><span class="nb">cd</span> ~/osg-services/koji
+<span class="gp">$ </span>ansible-playbook -K -c <span class="nb">local</span> -l <span class="k">$(</span>hostname -f<span class="k">)</span> --ask-vault-pass --check --diff secure.yml
+
+<span class="gp"># </span>If the above looks good, run again without --check to apply <span class="k">for</span> real
+<span class="gp">$ </span>ansible-playbook -K -c <span class="nb">local</span> -l <span class="k">$(</span>hostname -f<span class="k">)</span> --ask-vault-pass --diff secure.yml
+
+<span class="gp"># </span>-K <span class="o">=</span> prompt you <span class="k">for</span> sudo password <span class="o">(</span>BECOME password<span class="o">)</span>
+<span class="gp"># </span>-c <span class="nb">local</span> <span class="o">=</span> use the <span class="s2">&quot;local&quot;</span> connection method
+<span class="gp"># </span>-l <span class="k">$(</span>hostname -f<span class="k">)</span> <span class="o">=</span> apply the changes to the current machine only
+<span class="gp"># </span>--ask-vault-pass <span class="o">=</span> prompt you <span class="k">for</span> the ansible-vault pw
+<span class="gp"># </span>--check <span class="o">=</span> dry-run mode
+<span class="gp"># </span>--diff <span class="o">=</span> show the diffs of any file changes it <span class="o">(</span>would<span class="o">)</span> make
+<span class="gp"># </span>secure.yml <span class="o">=</span> the <span class="s2">&quot;playbook&quot;</span> of changes to apply
 </code></pre></div>
 
-<p>or</p>
-<div class="codehilite"><pre><span></span><code>!!! warning
-    if a user doesn&#39;t do this thing, bad stuff will happen
-</code></pre></div>
-
-<p>The above blocks are rendered below as an example.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>things to note</p>
-</div>
-<p>and</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>if a user doesn't do this thing, bad stuff will happen</p>
-</div>
-<p>For a full list of admonition styles, see the documentation
-<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">here</a>.</p>
+</li>
+<li>
+<p>If you are adding a new RPM signing key, export the ASCII-armored
+    public key as <code>RPM-GPG-OSG-KEY-OSG-&lt;N&gt;</code> (where <code>&lt;N&gt;</code> is the previous
+    key's number incremented by one), and add it to the <code>osg-release</code> RPM.</p>
+</li>
+<li>
+<p>In the script
+    <a href="https://github.com/opensciencegrid/Software-Redhat/blob/osg-3.6/osg-release/osg/generate-repo-files.sh"><code>generate-repo-files.sh</code></a>
+    ensure that the logic for selecting the <code>GPGKEY</code> includes the correct
+    behavior for the new <code>ELX</code> to reference the latest key file.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Update <code>osg-build</code> to add the new <code>ELX</code> to the various <code>dvers</code> in python
+    scripts, and <code>extra_dvers</code> in <code>promoter.ini</code>; and add the new <code>ELX</code> tags
+    and targets to the test scripts.
+    See the
+    <a href="https://github.com/opensciencegrid/osg-build/pull/103/files">Git commits</a>
+    on <code>opensciencegrid/osg-build</code> for SOFTWARE-5342 for details on how to do
+    this.
+    Use this version of <code>osg-build</code> for subsequent steps.</p>
+</li>
+</ul>
+<h2 id="subsequent-steps">Subsequent Steps<a class="headerlink" href="#subsequent-steps" title="Permanent link">&para;</a></h2>
+<p>This section is incomplete.</p>
+<p>But for starters, begin with the
+<a href="../new-release-series/#build-prerequisite-packages">Build prerequisite packages</a>
+section of the New Release Series documentation.</p>
+<p>In general, you will not have to repeat steps for creating a new <code>osg-3.Y</code>
+series, but you will have to create a new <code>buildsys-macros.elX</code> package for
+the new <code>EL9</code> series.</p>
+<p>Good luck.</p>
                 
               
               
@@ -3095,7 +2914,7 @@ admonition-style notes and warnings:</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../reviewing-documentation/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../new-release-series/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -3104,19 +2923,19 @@ admonition-style notes and warnings:</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Reviewing Documentation
+              New Release Series
             </div>
           </div>
         </a>
       
       
-        <a href="../publish-osg-pages/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../release-eol/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Publishing OSG pages
+              Release Series End-of-Life
             </div>
           </div>
           <div class="md-footer__button md-icon">
