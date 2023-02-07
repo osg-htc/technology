@@ -2792,7 +2792,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> Brian, Carl, Marco, Mat, Tim</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -2852,12 +2852,22 @@
 <li>AI (Carl): osg-build branch protection</li>
 <li>AI (Carl): document more Git opinions</li>
 <li>AI (Mat): Continue work on container universe changes for the OSPool</li>
-<li>AI (Mat): XRootD mapfile + Topology  work</li>
-<li>Florida requests a backported fix for <a href="https://github.com/xrootd/xrootd/issues/1874">https://github.com/xrootd/xrootd/issues/1874</a>.
-    We've got a lot of patches, should we cut a new build with reduced patches?</li>
+<li>AI (Mat): XRootD mapfile + Topology work</li>
+<li>
+<p>Florida requests a backported fix for <a href="https://github.com/xrootd/xrootd/issues/1874">https://github.com/xrootd/xrootd/issues/1874</a>.
+    We've got a lot of patches, should we cut a new build with reduced patches?</p>
+<p>Relatedly, XRootD 5.5.2 has been released; the software team should patch that version instead of 5.5.1.
+-   x509-scitokens-issuer, which is in osg-contrib, needs to be rebuilt to sign it with the current OSG 3.6 GPG key.</p>
+</li>
 </ul>
+<p>Kubernetes Hackathon:
+-   BrianL: PATh Facility Origin
+-   Mat: ITB EP with a GPU for testing container universe changes</p>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>XRootD developers have requested that the OSG SW team clearly indicate in XRootD packages that they are the
+    OSG versions and not upstream; there is a text file in the XRootD packages that can be used for that purpose.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>BNL (Brian): will hold off on weighted slots work until this sorted out at the WLCG level</li>
