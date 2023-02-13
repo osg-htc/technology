@@ -213,8 +213,8 @@ There are a few considerations to note when it comes to whitespace.
     file".)
 
 -   Avoid mixing tabs and spaces.
-    With the exception of Makefiles, indentation should be done with regular
-    spaces, not tabs.
+    With the exception of Makefiles and Go source code, indentation should
+    be done with regular spaces, not tabs.
     Please configure your text editor accordingly.
     Mixing tabs and spaces in indentation is problematic because different
     editor settings can make tab stops appear at different widths.
