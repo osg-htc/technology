@@ -252,7 +252,7 @@ so that it does not include changes to `file-not-to-commit` like so:
 
             :::console
             [user@client ~ ] $ git reset HEAD^ file-not-to-commit
-            [user@client ~ ] $ git amend
+            [user@client ~ ] $ git commit --amend
 
 If you have multiple commits ready for a pull request, you can review the
 high-level changes for each commit with `git log --stat origin/master..`
