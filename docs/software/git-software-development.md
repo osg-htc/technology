@@ -191,6 +191,85 @@ Instead, by putting the copy or move of the original file into its own commit,
 and then putting your changes in a separate commit, it will make it clear to
 the reviewer which parts are changing from the original.
 
+#### Avoid whitespace noise
+
+There are a few considerations to note when it comes to whitespace.
+
+-   Avoid adding spaces at the end of lines.
+    These are generally considered "noise" that will get cleaned up later
+    (sometimes automatically, depending on editor settings).
+    It's not necessary to "fix" this kind of whitespace noise everywhere you
+    happen to find it in existing files, but it's fine to remove trailing
+    whitespace for lines that you are already modifying for your own changes.
+
+-   Do not strip the final newline at the end-of-file.
+    Some text editors will automatically strip the final newline at the
+    end of file, but this is a form of whitespace noise similar to trailing
+    spaces.
+    If that is the case for your editor, please configure it not to strip
+    the newline at EOF.
+    (GitHub will show the diff for files with a missing newline at EOF with
+    a red circle-minus symbol with the mouseover text "No newline at end of
+    file".)
+
+-   Avoid mixing tabs and spaces.
+    With the exception of Makefiles and Go source code, indentation should
+    be done with regular spaces, not tabs.
+    Please configure your text editor accordingly.
+    Mixing tabs and spaces in indentation is problematic because different
+    editor settings can make tab stops appear at different widths.
+
+    As with trailing whitespace, it's fine to convert stray tabs to spaces
+    on lines you are modifying, but it is not necessary to fix them everywhere,
+    if that is not the purpose of your pull request.
+
+-   Put large whitespace changes into a separate commit.
+    If you do want to change a significant amount of whitespace
+    (either converting tabs to spaces on many lines, or perhaps adjusting
+    the amount of indentation, or wrapping text at a different width),
+    make your whitespace-only changes as a separate commit.
+    This will make it clear that, although many lines may be changing,
+    there is no functional change for that particular commit.
+    Then any functional changes to the text in a following commit will
+    be easier to review.
+
+#### Verify that only the files intended are modified in each commit
+
+Sometimes you may have several files modified at once, but you only
+intend to commit a subset of the changes.
+In such cases you should be aware that `git commit -a` will include
+all the modified files in your commit.
+Likewise, if you have some untracked files in your working copy, that
+you do not intend to commit, be aware that `git add .` will introduce
+
+    !!! note
+        If you do use the `-a` option for `git commit`, you may want to
+        consider using the `-v` option along with it (i.e. `git commit -av`),
+        which will show you the diff to be committed in your editor while you
+        are typing your commit message.
+
+these as new files in the commit.
+
+After making a commit locally, you can verify that only the files you
+intended to modify were included in the commit by running `git show --stat` .
+Or to review the actual changes to those files, `git show` (without `--stat`).
+
+If you find unintended files included in the commit, you can amend the commit
+so that it does not include changes to `file-not-to-commit` like so:
+
+            :::console
+            [user@client ~ ] $ git reset HEAD^ file-not-to-commit
+            [user@client ~ ] $ git commit --amend
+
+If you have multiple commits ready for a pull request, you can review the
+high-level changes for each commit with `git log --stat origin/master..`
+(or `origin/main..`, whichever is the name of the main origin branch).
+Tools like `git gui` also provide a way to review commits.
+
+If you find unintended files included in earlier commits, you can do a
+`git rebase -i origin/master` and `edit` the commits in question, which
+will give you a chance to amend a particular commit as shown above.
+
 #### Squash noisy work-in-progress commits
 
 Naturally in the trial-and-error-prone process of development, there will be
@@ -243,6 +322,40 @@ reasons, in order to make this clear to the reviewer.
 For an example of "explaining your reasons", see
 [this commit message body](https://github.com/opensciencegrid/topology/commit/c3524138ac8d46eee2a3c33cb75fac50acab41c4).
 
+#### Summarize your commits in the pull request title
+
+The title of a pull request is analogous to the subject of a commit.
+
+If you have only one commit in your pull request, GitHub will by default
+set the pull request title and body to match that commit's subject and
+body; and that default is acceptable for single-commit pull requests.
+
+But if you have multiple commits in your pull request, you should try
+to capture the overall goal of these commits in your pull request title.
+
+In the pull request body, you can also mention or discuss the high-level
+changes from each commit, and if relevant discuss how these changes work
+together for the overall goal of the pull request.
+
+#### Choose a separate, descriptive branch name for each pull request
+
+GitHub allows creating pull requests entirely on their web interface,
+and will automatically suggest a generic branch name like `patch-42`.
+But this is boring and not especially helpful to the reviewer or to
+the one submitting the pull request.
+
+Instead, choose a short name for the branch that describes the topic
+of the changes or the feature being introduced.
+For instance, `fix-memory-leak` or `scitokens-support`.
+(As will be discussed more later, it is best to prefix the branch name
+with a ticket reference as well.)
+
+Note that each pull request should get its own branch name, even if two
+pull requests are for the same ticket and the topic is similar.
+New commits pushed to a branch for a pull request will automatically show
+up as part of that pull request; so a second pull request needs a separate
+branch to track the separate set of changes.
+
 #### Reference any relevant tickets
 
 Code changes often are related to a Jira ticket, for instance SOFTWARE-1234.
@@ -292,4 +405,46 @@ for more details.
 You will get brownie points from Carl, personally, if you strive to make your
 code (and other text files) fit within an 80-column terminal window.
 
+### Reviewing pull requests
 
+There are a couple items to note about the review process for GitHub pull
+requests.
+
+#### Batch comments in a formal review
+
+When reviewing a pull request, GitHub allows you to comment on lines
+and presents the option to "Add single comment" or "Start a review".
+
+A single comment added will _not_ be tied to your review, and a separate
+email notification will be sent for every time you click "Add single comment".
+
+Especially for reviewing larger pull requests, we generally prefer to
+"Start a review", and then "Add review comment" for subsequent comments.
+This will tie all of your comments and suggestions together as part of your
+review.
+When you complete your review, you will have the opportunity to make summary
+comments about the changes, when you select Approve/Comment/Request changes.
+By "batching" all of your review comments this way, a single email
+notification will be sent for your review, which contains all of your
+review comments together.
+
+
+#### Batch commits when accepting suggestions from a review
+
+When someone reviews your pull request, they may make suggestions that
+tweak your changes.
+
+Similar to review comments, suggestions from a review can either be
+applied one at a time (Commit suggestion), or they can be batched and
+applied together.
+To batch suggestions, first you need to open the "Files changed" tab;
+then for each suggestion you want to accept, click "Add suggestion to batch".
+Finally, click "Commit suggestions" to apply all batched suggestions as
+a single commit.
+
+Generally we prefer to batch related changes or miscellaneous tweaks
+rather than applying each one individually.
+But if there are a number of suggestions of a different nature, it is OK to
+group them such that you apply one batch for each set of related suggestions
+(consistent with the guideline to put logically separate changes into separate
+commits).
