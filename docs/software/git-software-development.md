@@ -420,3 +420,24 @@ comments about the changes, when you select Approve/Comment/Request changes.
 By "batching" all of your review comments this way, a single email
 notification will be sent for your review, which contains all of your
 review comments together.
+
+
+#### Batch commits when accepting suggestions from a review
+
+When someone reviews your pull request, they may make suggestions that
+tweak your changes.
+
+Similar to review comments, suggestions from a review can either be
+applied one at a time (Commit suggestion), or they can be batched and
+applied together.
+To batch suggestions, first you need to open the "Files changed" tab;
+then for each suggestion you want to accept, click "Add suggestion to batch".
+Finally, click "Commit suggestions" to apply all batched suggestions as
+a single commit.
+
+Generally we prefer to batch related changes or miscellaneous tweaks
+rather than applying each one individually.
+But if there are a number of suggestions of a different nature, it is OK to
+group them such that you apply one batch for each set of related suggestions
+(consistent with the guideline to put logically separate changes into separate
+commits).
