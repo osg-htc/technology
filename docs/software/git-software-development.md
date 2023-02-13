@@ -398,4 +398,25 @@ for more details.
 You will get brownie points from Carl, personally, if you strive to make your
 code (and other text files) fit within an 80-column terminal window.
 
+### Reviewing pull requests
 
+There are a couple items to note about the review process for GitHub pull
+requests.
+
+#### Batch comments in a formal review
+
+When reviewing a pull request, GitHub allows you to comment on lines
+and presents the option to "Add single comment" or "Start a review".
+
+A single comment added will _not_ be tied to your review, and a separate
+email notification will be sent for every time you click "Add single comment".
+
+Especially for reviewing larger pull requests, we generally prefer to
+"Start a review", and then "Add review comment" for subsequent comments.
+This will tie all of your comments and suggestions together as part of your
+review.
+When you complete your review, you will have the opportunity to make summary
+comments about the changes, when you select Approve/Comment/Request changes.
+By "batching" all of your review comments this way, a single email
+notification will be sent for your review, which contains all of your
+review comments together.
