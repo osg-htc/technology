@@ -191,6 +191,48 @@ Instead, by putting the copy or move of the original file into its own commit,
 and then putting your changes in a separate commit, it will make it clear to
 the reviewer which parts are changing from the original.
 
+#### Avoid whitespace noise
+
+There are a few considerations to note when it comes to whitespace.
+
+-   Avoid adding spaces at the end of lines.
+    These are generally considered "noise" that will get cleaned up later
+    (sometimes automatically, depending on editor settings).
+    It's not necessary to "fix" this kind of whitespace noise everywhere you
+    happen to find it in existing files, but it's fine to remove trailing
+    whitespace for lines that you are already modifying for your own changes.
+
+-   Do not strip the final newline at the end-of-file.
+    Some text editors will automatically strip the final newline at the
+    end of file, but this is a form of whitespace noise similar to trailing
+    spaces.
+    If that is the case for your editor, please configure it not to strip
+    the newline at EOF.
+    (GitHub will show the diff for files with a missing newline at EOF with
+    a red circle-minus symbol with the mouseover text "No newline at end of
+    file".)
+
+-   Avoid mixing tabs and spaces.
+    With the exception of Makefiles, indentation should be done with regular
+    spaces, not tabs.
+    Please configure your text editor accordingly.
+    Mixing tabs and spaces in indentation is problematic because different
+    editor settings can make tab stops appear at different widths.
+
+    As with trailing whitespace, it's fine to convert existing tabs to spaces
+    on lines you are modifying, but it is not necessary to fix them everywhere,
+    if that is not the purpose of your pull request.
+
+-   Put large whitespace changes into a separate commit.
+    If you do want to change a significant amount of whitespace
+    (either converting tabs to spaces on many lines, or perhaps adjusting
+    the amount of indentation, or wrapping text at a different width),
+    make your whitespace-only changes as a separate commit.
+    This will make it clear that, although many lines may be changing,
+    there is no functional change for that particular commit.
+    Then any functional changes to the text in a following commit will
+    be easier to review.
+
 #### Squash noisy work-in-progress commits
 
 Naturally in the trial-and-error-prone process of development, there will be
