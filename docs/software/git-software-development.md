@@ -233,6 +233,36 @@ There are a few considerations to note when it comes to whitespace.
     Then any functional changes to the text in a following commit will
     be easier to review.
 
+#### Verify that only the files intended are modified in each commit
+
+Sometimes you may have several files modified at once, but you only
+intend to commit a subset of the changes.
+In such cases you should be aware that `git commit -a` will include
+all the modified files in your commit.
+Likewise, if you have some untracked files in your working copy, that
+you do not intend to commit, be aware that `git add .` will introduce
+these as new files in the commit.
+
+After making a commit locally, you can verify that only the files you
+intended to modify were included in the commit by running `git show --stat` .
+Or to review the actual changes to those files, `git show` (without `--stat`).
+
+If you find unintended files included in the commit, you can amend the commit
+so that it does not include changes to `file-not-to-commit` like so:
+
+            :::console
+            [user@client ~ ] $ git reset HEAD^ file-not-to-commit
+            [user@client ~ ] $ git amend
+
+If you have multiple commits ready for a pull request, you can review the
+high-level changes for each commit with `git log --stat origin/master..`
+(or `origin/main..`, whichever is the name of the main origin branch).
+Tools like `git gui` also provide a way to review commits.
+
+If you find unintended files included in earlier commits, you can do a
+`git rebase -i origin/master` and `edit` the commits in question, which
+will give you a chance to amend a particular commit as shown above.
+
 #### Squash noisy work-in-progress commits
 
 Naturally in the trial-and-error-prone process of development, there will be
