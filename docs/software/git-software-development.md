@@ -330,6 +330,25 @@ In the pull request body, you can also mention or discuss the high-level
 changes from each commit, and if relevant discuss how these changes work
 together for the overall goal of the pull request.
 
+#### Choose a separate, descriptive branch name for each pull request
+
+GitHub allows creating pull requests entirely on their web interface,
+and will automatically suggest a generic branch name like `patch-42`.
+But this is boring and not especially helpful to the reviewer or to
+the one submitting the pull request.
+
+Instead, choose a short name for the branch that describes the topic
+of the changes or the feature being introduced.
+For instance, `fix-memory-leak` or `scitokens-support`.
+(As will be discussed more later, it is best to prefix the branch name
+with a ticket reference as well.)
+
+Note that each pull request should get its own branch name, even if two
+pull requests are for the same ticket and the topic is similar.
+New commits pushed to a branch for a pull request will automatically show
+up as part of that pull request; so a second pull request needs a separate
+branch to track the separate set of changes.
+
 #### Reference any relevant tickets
 
 Code changes often are related to a Jira ticket, for instance SOFTWARE-1234.
