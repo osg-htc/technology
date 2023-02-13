@@ -315,6 +315,21 @@ reasons, in order to make this clear to the reviewer.
 For an example of "explaining your reasons", see
 [this commit message body](https://github.com/opensciencegrid/topology/commit/c3524138ac8d46eee2a3c33cb75fac50acab41c4).
 
+#### Summarize your commits in the pull request title
+
+The title of a pull request is analogous to the subject of a commit.
+
+If you have only one commit in your pull request, GitHub will by default
+set the pull request title and body to match that commit's subject and
+body; and that default is acceptable for single-commit pull requests.
+
+But if you have multiple commits in your pull request, you should try
+to capture the overall goal of these commits in your pull request title.
+
+In the pull request body, you can also mention or discuss the high-level
+changes from each commit, and if relevant discuss how these changes work
+together for the overall goal of the pull request.
+
 #### Reference any relevant tickets
 
 Code changes often are related to a Jira ticket, for instance SOFTWARE-1234.
