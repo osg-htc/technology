@@ -219,7 +219,7 @@ There are a few considerations to note when it comes to whitespace.
     Mixing tabs and spaces in indentation is problematic because different
     editor settings can make tab stops appear at different widths.
 
-    As with trailing whitespace, it's fine to convert existing tabs to spaces
+    As with trailing whitespace, it's fine to convert stray tabs to spaces
     on lines you are modifying, but it is not necessary to fix them everywhere,
     if that is not the purpose of your pull request.
 
@@ -241,6 +241,13 @@ In such cases you should be aware that `git commit -a` will include
 all the modified files in your commit.
 Likewise, if you have some untracked files in your working copy, that
 you do not intend to commit, be aware that `git add .` will introduce
+
+    !!! note
+        If you do use the `-a` option for `git commit`, you may want to
+        consider using the `-v` option along with it (i.e. `git commit -av`),
+        which will show you the diff to be committed in your editor while you
+        are typing your commit message.
+
 these as new files in the commit.
 
 After making a commit locally, you can verify that only the files you
