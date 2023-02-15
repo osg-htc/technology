@@ -29,6 +29,8 @@ nav:
       - CE Scale Testing: 'software/ce-test-scaling.md'
       - IPv6 Testing: 'software/ipv6-testing.md'
       - How to Request Tokens: 'software/requesting-tokens.md'
+    - Technologies:
+      - OSPool Containers: 'software/ospool-containers.md'
     - Software Support: 'policy/software-support.md'
     - Effort Tracking: 'software/effort-tracking.md'
     - Release Planning: 'software/release-planning.md'
