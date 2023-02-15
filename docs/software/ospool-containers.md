@@ -85,7 +85,9 @@ This is probably due to GPU-using software stacks often being complex,
 and so users often turn to containers for their runtime environment,
 including ones that we and others pre-build.
 
-Specifically, the Backfill Container images do not include the NVIDIA CUDA drivers
-(although, we are experimenting with that),
-so a site that contributes capacity using Backfill Containers
-and that wants to run GPU jobs _must_ run them under Apptainer.
+Note that the Backfill Container images themselves do not include the NVIDIA CUDA drivers
+(although, we are experimenting with that).
+Instead, the CUDA drivers that are installed on the host system are mounted inside the running Backfill Container.
+This scheme, which works at most OSPool sites, allows GPU payload jobs to work
+without specifically requesting a container,
+although see above for why many do so anyway.
