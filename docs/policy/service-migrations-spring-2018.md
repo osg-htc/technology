@@ -126,7 +126,7 @@ RSV instance.
 
 ### Collector ###
 
-The [central Collector](http://collector.opensciencegrid.org/) is a central database service that provides details about
+The central Collector is a central database service that provides details about
 pilot jobs currently running in the OSG.
 The physical hosting location of the central Collector was moved but there were no other changes.
 
