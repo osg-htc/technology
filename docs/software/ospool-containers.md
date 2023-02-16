@@ -40,8 +40,6 @@ _all_ user payloads will be run in containers.
 For Backfill Containers, the container itself includes an installation of Apptainer (née Singularity)
 and it will always be used (in unprivileged mode) instead of any system or other installation.
 
-Today, a pilot runs the “user job wrapper” script,
-
 The user job is a vanilla job.
 Today, though, a pilot runs the “user job wrapper” script,
 which is a replacement for the user’s executable that does some stuff and
