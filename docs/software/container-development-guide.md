@@ -31,6 +31,22 @@ these are [described below](#old-image-repositories).
 
 ### Add image code to the opensciencegrid/images repo
 
+The [opensciencegrid/images](https://github.com/opensciencegrid/images) repository is a central repository containing
+multiple container images based on the OSG Software Stack.
+The repository uses GitHub Actions CI to automatically build and push images, both on changes to individual images and
+upon updates to the upstream `opensciencegrid/docker-software-base` image.
+
+This repository is intended for images owned by OSG Staff with relatively simple CI needs:
+
+-   Images using OSG Yum repositories, especially those based on `opensciencegrid/software-base`
+-   Images that need tags based on the `development`, `testing`, and `release` tags for the supported OSG release series
+-   Images that push to Docker Hub and OSG Harbor
+-   Images that do not need CI tests
+
+See [SOFTWARE-5013](https://opensciencegrid.atlassian.net/browse/SOFTWARE-5013) for additional considerations.
+
+#### Creating new images from scratch  ####
+
 Images are automatically built from the subdirectories of the
 [opensciencegrid directory](https://github.com/opensciencegrid/images/tree/main/opensciencegrid).
 A set of images will be built for each subdirectory, with each set containing multiple images
@@ -69,6 +85,48 @@ based on OSG release series (e.g. `3.5`, `3.6`) and release level (e.g. `testing
         ARG BASE_OSG_SERIES=3.6
 
         FROM opensciencegrid/software-base:$BASE_OSG_SERIES-el8-release
+
+#### Adding an existing image from another repository ####
+
+If there is an existing source repository for an image that you would like to pull into the
+[opensciencegrid/images](https://github.com/opensciencegrid/images) central repository
+(e.g., images that make use of OSG Yum repositories),
+use the following instructions to retain history from the old repository.
+
+1.  Install the git filter-repo plugin.
+    For example, on an RPM-based operating system:
+
+        :::console
+        yum install git-filter-repo
+
+1.  Checkout [opensciencegrid/images](https://github.com/opensciencegrid/images) and your other source repository or
+    make sure your local main branches are up-to-date
+
+1.  `cd` to your other source repository and run the following:
+
+        :::console
+        git filter-repo --to-subdirectory-filter opensciencegrid/<IMAGE NAME>
+
+1.  `cd` to your local clone of the images repository and add your local repo as a remote using filesystem paths.
+    For example:
+
+        :::console
+        git remote add <IMAGE NAME> <PATH TO OTHER SOURCE REPO>
+
+1.  In the images repo, create a branch based off of main for your work
+
+1.  In the images repo, make sure your fork knows all the refs from the other source repo remote with the following:
+
+        :::console
+        git fetch <IMAGE NAME> --tags
+
+1.  While on your your new branch, do the merge.
+    For example, if the main branch of your other source repository is `main`:
+
+        :::console
+        git merge --allow-unrelated-histories <IMAGE NAME>/main
+
+1.  Update the merged in `Dockerfile` to accept the `BASE_OSG_SERIES` and `BASE_YUM_REPO` arguments.
 
 
 ### Prepare the Docker Hub repository ###

@@ -173,7 +173,7 @@ Release!
 
 1.  Update [release tools scripts](https://github.com/opensciencegrid/release-tools) as necessary
 
-2.  [Cut a release](../release/cut-sw-release)
+2.  [Cut a release](cut-sw-release.md)
 
 3.  Have a release party
 
