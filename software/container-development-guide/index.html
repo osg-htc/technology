@@ -376,6 +376,26 @@
     Add image code to the opensciencegrid/images repo
   </a>
   
+    <nav class="md-nav" aria-label="Add image code to the opensciencegrid/images repo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-new-images-from-scratch" class="md-nav__link">
+    Creating new images from scratch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-an-existing-image-from-another-repository" class="md-nav__link">
+    Adding an existing image from another repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2871,6 +2891,26 @@
     Add image code to the opensciencegrid/images repo
   </a>
   
+    <nav class="md-nav" aria-label="Add image code to the opensciencegrid/images repo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-new-images-from-scratch" class="md-nav__link">
+    Creating new images from scratch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-an-existing-image-from-another-repository" class="md-nav__link">
+    Adding an existing image from another repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2974,6 +3014,19 @@ To do this, we use GitHub Actions to:</p>
 <p>The previous convention was to use individual GitHub repos for each image;
 these are <a href="#old-image-repositories">described below</a>.</p>
 <h3 id="add-image-code-to-the-opensciencegridimages-repo">Add image code to the opensciencegrid/images repo<a class="headerlink" href="#add-image-code-to-the-opensciencegridimages-repo" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://github.com/opensciencegrid/images">opensciencegrid/images</a> repository is a central repository containing
+multiple container images based on the OSG Software Stack.
+The repository uses GitHub Actions CI to automatically build and push images, both on changes to individual images and
+upon updates to the upstream <code>opensciencegrid/docker-software-base</code> image.</p>
+<p>This repository is intended for images owned by OSG Staff with relatively simple CI needs:</p>
+<ul>
+<li>Images using OSG Yum repositories, especially those based on <code>opensciencegrid/software-base</code></li>
+<li>Images that need tags based on the <code>development</code>, <code>testing</code>, and <code>release</code> tags for the supported OSG release series</li>
+<li>Images that push to Docker Hub and OSG Harbor</li>
+<li>Images that do not need CI tests</li>
+</ul>
+<p>See <a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-5013">SOFTWARE-5013</a> for additional considerations.</p>
+<h4 id="creating-new-images-from-scratch">Creating new images from scratch<a class="headerlink" href="#creating-new-images-from-scratch" title="Permanent link">&para;</a></h4>
 <p>Images are automatically built from the subdirectories of the
 <a href="https://github.com/opensciencegrid/images/tree/main/opensciencegrid">opensciencegrid directory</a>.
 A set of images will be built for each subdirectory, with each set containing multiple images
@@ -3016,6 +3069,56 @@ FROM opensciencegrid/software-base:$BASE_OSG_SERIES-el8-release
 </code></pre></div>
 
 </div>
+<h4 id="adding-an-existing-image-from-another-repository">Adding an existing image from another repository<a class="headerlink" href="#adding-an-existing-image-from-another-repository" title="Permanent link">&para;</a></h4>
+<p>If there is an existing source repository for an image that you would like to pull into the
+<a href="https://github.com/opensciencegrid/images">opensciencegrid/images</a> central repository
+(e.g., images that make use of OSG Yum repositories),
+use the following instructions to retain history from the old repository.</p>
+<ol>
+<li>
+<p>Install the git filter-repo plugin.
+    For example, on an RPM-based operating system:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">yum install git-filter-repo</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Checkout <a href="https://github.com/opensciencegrid/images">opensciencegrid/images</a> and your other source repository or
+    make sure your local main branches are up-to-date</p>
+</li>
+<li>
+<p><code>cd</code> to your other source repository and run the following:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">git filter-repo --to-subdirectory-filter opensciencegrid/&lt;IMAGE NAME&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p><code>cd</code> to your local clone of the images repository and add your local repo as a remote using filesystem paths.
+    For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">git remote add &lt;IMAGE NAME&gt; &lt;PATH TO OTHER SOURCE REPO&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>In the images repo, create a branch based off of main for your work</p>
+</li>
+<li>
+<p>In the images repo, make sure your fork knows all the refs from the other source repo remote with the following:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">git fetch &lt;IMAGE NAME&gt; --tags</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>While on your your new branch, do the merge.
+    For example, if the main branch of your other source repository is <code>main</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="go">git merge --allow-unrelated-histories &lt;IMAGE NAME&gt;/main</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Update the merged in <code>Dockerfile</code> to accept the <code>BASE_OSG_SERIES</code> and <code>BASE_YUM_REPO</code> arguments.</p>
+</li>
+</ol>
 <h3 id="prepare-the-docker-hub-repository">Prepare the Docker Hub repository<a class="headerlink" href="#prepare-the-docker-hub-repository" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Ask the Software Manager to create a Docker Hub repo in the OSG organization.
