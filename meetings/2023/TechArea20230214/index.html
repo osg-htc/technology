@@ -2962,7 +2962,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong></li>
+<li><strong>Attending:</strong> Brian, Carl, Derek, Mat, Tim</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -3016,16 +3016,18 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>AI (Carl): Status on EL9 builds? Can we kick off HTCondor-related tests?</li>
-<li>AI (Mat): review Carl's git branch protection PR</li>
-<li>AI (Carl): document the Topology webhook</li>
-<li>AI (Mat): XRootD mapfile + Topology status?</li>
-<li>x509-scitokens-issuer, which is in osg-contrib, needs to be rebuilt to sign it with the current OSG 3.6 GPG key.
-    Did we do this?</li>
-<li>How to support supplementary groups in xrootd-multiuser? Somehow read works (dir isn't world-readable)</li>
+<li>AI (Carl): Write tests for OSG-Build branch safety.</li>
+<li>AI (Carl): Continue work on EL9 builds</li>
+<li>AI (Mat): Build new VO-Client for second Fermilab cert change.</li>
+<li>AI (Brian): Investigate rrdtool for EL9.</li>
+<li>AI (Mat): Continue work on Topology endpoints for grid-mapfiles.</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<p>Tim will release HTCondor-CE 6 which works with HTCondor 10 this week; HTCondor 10.3.0 expected next week</p>
+<p>Group write permissions for the PATh origin are broken due to xrootd-multiuser not having the right group permission to traverse the directory tree to enter into private directories.</p>
+<p>A potential workaround is to make the parent directories world-traverseable but not world-readable.
+We would have to remind users that they need to make their files not world-readable and also investigate what permissions xrootd gives newly written files.</p>
+<p>A long term solution is to modify xrootd-multiuser to set the process's supplementary groups before accessing files in group directories.</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
