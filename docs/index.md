@@ -11,9 +11,8 @@ The Team
 | Software and Release                | Technology                      |
 |-------------------------------------|---------------------------------|
 | Brian Lin (software manager)        | Brian Bockelman (manager) (15%) |
-| Carl Edquist                        | Derek Weitzel (50%)             |
-| Mat Selmeci                         | Diego Davila (50%)              |
-| Tim Theisen (release manager) (50%) |                                 |
+| Mat Selmeci                         | Derek Weitzel (50%)             |
+| Tim Theisen (release manager) (50%) | Diego Davila (50%)              |
 
 Contact Us
 ----------
