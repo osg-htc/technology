@@ -2986,9 +2986,14 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Marco, Mat, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>BrianL out Thursday March 16 and Friday March 17</li>
+<li>TimT out Monday, March 20 through Friday, March 31.  (May work remotely on March 20 and 21.)</li>
+<li>Mat out Thursday, March 30 through Monday, April 17.</li>
+</ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <p>Triage duty shifts changing to Tue-Mon</p>
 <ul>
@@ -3053,11 +3058,33 @@
 <li>AI (BrianL): Add job to osgvo-docker-pilot GHA to kick off Lancium rebuilds (SOFTWARE-5325)</li>
 </ul>
 </li>
+<li>Other<ul>
+<li>AI (Mat): Use the OSDF Client shipped with HTCondor in OSPool pilots</li>
+</ul>
+</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>
+<p>Marco: Final GlideinWMS release candidate is expected this week. Notable changes:</p>
+<ul>
+<li>Fixes for OSG autoconf script</li>
+<li>The tarball to use for CVMFSEXEC will be configurable</li>
+<li>Fixes error in configuring token lifetime</li>
+</ul>
+</li>
+<li>
+<p>Horst at OU has successfully installed an EL9 CE; he has reported some documentation issues, which BrianL will review</p>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>BrianL (Caltech): Gratia probe failures were due to incorrect directory permissions at the site.
+    This is not the first time such an error has occurred; the Gratia probe should detect this issue and log and/or refuse to start
+    (instead of just discarding records).  BrianL will discuss it with Derek.</li>
+<li>BrianL: A site in India stopped receiving pilots from Fermilab;
+    they reinstalled their CE and need assistance with registration and using token-based pilots</li>
+</ul>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Ready for Testing<ul>
