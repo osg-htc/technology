@@ -3472,22 +3472,21 @@ In such cases you should be aware that <code>git commit -a</code> will include
 all the modified files in your commit.
 Likewise, if you have some untracked files in your working copy, that
 you do not intend to commit, be aware that <code>git add .</code> will introduce</p>
-<div class="codehilite"><pre><span></span><code>!!! note
-    If you do use the `-a` option for `git commit`, you may want to
-    consider using the `-v` option along with it (i.e. `git commit -av`),
-    which will show you the diff to be committed in your editor while you
-    are typing your commit message.
-</code></pre></div>
-
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do use the <code>-a</code> option for <code>git commit</code>, you may want to
+consider using the <code>-v</code> option along with it (i.e. <code>git commit -av</code>),
+which will show you the diff to be committed in your editor while you
+are typing your commit message.</p>
+</div>
 <p>these as new files in the commit.</p>
 <p>After making a commit locally, you can verify that only the files you
 intended to modify were included in the commit by running <code>git show --stat</code> .
 Or to review the actual changes to those files, <code>git show</code> (without <code>--stat</code>).</p>
 <p>If you find unintended files included in the commit, you can amend the commit
 so that it does not include changes to <code>file-not-to-commit</code> like so:</p>
-<div class="codehilite"><pre><span></span><code>        :::console
-        [user@client ~ ] $ git reset HEAD^ file-not-to-commit
-        [user@client ~ ] $ git commit --amend
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git reset HEAD^ file-not-to-commit
+<span class="gp">[user@client ~ ] $ </span>git commit --amend
 </code></pre></div>
 
 <p>If you have multiple commits ready for a pull request, you can review the
