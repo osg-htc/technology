@@ -242,11 +242,11 @@ all the modified files in your commit.
 Likewise, if you have some untracked files in your working copy, that
 you do not intend to commit, be aware that `git add .` will introduce
 
-    !!! note
-        If you do use the `-a` option for `git commit`, you may want to
-        consider using the `-v` option along with it (i.e. `git commit -av`),
-        which will show you the diff to be committed in your editor while you
-        are typing your commit message.
+!!! note
+    If you do use the `-a` option for `git commit`, you may want to
+    consider using the `-v` option along with it (i.e. `git commit -av`),
+    which will show you the diff to be committed in your editor while you
+    are typing your commit message.
 
 these as new files in the commit.
 
@@ -257,9 +257,9 @@ Or to review the actual changes to those files, `git show` (without `--stat`).
 If you find unintended files included in the commit, you can amend the commit
 so that it does not include changes to `file-not-to-commit` like so:
 
-            :::console
-            [user@client ~ ] $ git reset HEAD^ file-not-to-commit
-            [user@client ~ ] $ git commit --amend
+    :::console
+    [user@client ~ ] $ git reset HEAD^ file-not-to-commit
+    [user@client ~ ] $ git commit --amend
 
 If you have multiple commits ready for a pull request, you can review the
 high-level changes for each commit with `git log --stat origin/master..`
