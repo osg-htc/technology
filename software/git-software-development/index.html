@@ -3483,7 +3483,8 @@ intend to commit a subset of the changes.
 In such cases you should be aware that <code>git commit -a</code> will include
 all the modified files in your commit.
 Likewise, if you have some untracked files in your working copy, that
-you do not intend to commit, be aware that <code>git add .</code> will introduce</p>
+you do not intend to commit, be aware that <code>git add .</code> will introduce
+these as new files in the commit.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you do use the <code>-a</code> option for <code>git commit</code>, you may want to
@@ -3491,7 +3492,6 @@ consider using the <code>-v</code> option along with it (i.e. <code>git commit -
 which will show you the diff to be committed in your editor while you
 are typing your commit message.</p>
 </div>
-<p>these as new files in the commit.</p>
 <p>After making a commit locally, you can verify that only the files you
 intended to modify were included in the commit by running <code>git show --stat</code> .
 Or to review the actual changes to those files, <code>git show</code> (without <code>--stat</code>).</p>
