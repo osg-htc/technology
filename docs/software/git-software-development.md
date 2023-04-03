@@ -241,14 +241,13 @@ In such cases you should be aware that `git commit -a` will include
 all the modified files in your commit.
 Likewise, if you have some untracked files in your working copy, that
 you do not intend to commit, be aware that `git add .` will introduce
+these as new files in the commit.
 
 !!! note
     If you do use the `-a` option for `git commit`, you may want to
     consider using the `-v` option along with it (i.e. `git commit -av`),
     which will show you the diff to be committed in your editor while you
     are typing your commit message.
-
-these as new files in the commit.
 
 After making a commit locally, you can verify that only the files you
 intended to modify were included in the commit by running `git show --stat` .
