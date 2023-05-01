@@ -1,783 +1,783 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://osg-htc.org/technology/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/rpm-development-guide/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/osg-build-tools/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/quilt/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/upcoming-to-main/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/koji-workflow/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/create-vo-client/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/container-development-guide/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/repository-management/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/resurrecting-epel-packages/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/koji-mass-rebuilds/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/development-process/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/git-software-development/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/ce-test-scaling/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/ipv6-testing/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/requesting-tokens/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/ospool-containers/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/software-support/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/effort-tracking/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/release-planning/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/new-team-member/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/cut-sw-release/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/announce-rft-packages/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/new-release-series/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/new-os-series/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/release-eol/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/itb-testing/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/empty-pkgs/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/acceptance-testing/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/gridftp-gsi-migration/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/campus-cyberinfrastructure/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/collab-bearer-tokens/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/cream-support/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/release-series/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/globus-toolkit/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/external-oasis-repos/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/flexible-release-model/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/software-release/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/container-release/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/community-testing/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/new-ospool-user/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/comanage-instructions-admin/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/topology-registration/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/documentation/writing-documentation/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/documentation/reviewing-documentation/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/documentation/style-guide/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/documentation/publish-osg-pages/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/service-migrations-spring-2018/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/gums-retire/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/bestman2-retire/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/voms-admin-retire/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/projects/sha2-support/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/documentation/markdown-migration/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230418/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230404/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230328/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230314/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230221/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230221/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230214/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230207/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230131/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230124/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230117/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2023/TechArea20230103/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20221220/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20221213/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20221206/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20221129/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20221122/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20221115/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20221108/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20221101/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20221004/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220927/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220920/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220913/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220906/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220830/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220823/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220816/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220809/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220802/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220726/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220628/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220621/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220607/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220531/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220510/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220503/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220426/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220419/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220405/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220329/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220322/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220308/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220301/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220222/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220208/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220201/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220125/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220118/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220111/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2022/TechArea20220104/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211214/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211207/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211130/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211123/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211116/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211109/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211102/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211026/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211019/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211012/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20211005/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210928/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210914/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210907/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210831/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210824/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210817/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210810/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210803/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210727/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210720/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210713/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210706/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210629/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210622/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210615/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210608/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210518/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210511/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210504/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210420/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210413/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210406/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210330/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210323/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210309/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210302/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210223/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210216/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210209/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210202/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210126/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210119/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210112/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2021/TechArea20210104/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201221/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201214/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201207/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201130/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201123/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201116/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201109/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201102/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201026/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201019/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201012/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20201005/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200928/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200914/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200824/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200817/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200810/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200803/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200727/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200720/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200713/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200706/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200629/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200622/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200615/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200608/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200601/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200518/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200511/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200504/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200427/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200420/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200413/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200406/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200330/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200323/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200316/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200309/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200302/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200224/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200217/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200210/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200203/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200127/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200113/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2020/TechArea20200106/</loc>
-     <lastmod>2023-04-20</lastmod>
+     <lastmod>2023-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
