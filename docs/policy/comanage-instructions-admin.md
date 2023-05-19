@@ -68,7 +68,7 @@ We have seen this occur if a user clicks the confirmation link then closes the t
 
 1.  Browse to the `CO Person` record.
 
-1.  Scroll down to the `Role`, click `Edit`, and set the status for the `Role` to `Active`.
+1.  Scroll down to the `Role Attributes`, click the gear icon, select `Edit`, and set the status for the `Role` to `Active`.
 
 1.  Verify that the overall status of the `CO Person` record is `Active`.  If not, change it to `Active` as well.
 
