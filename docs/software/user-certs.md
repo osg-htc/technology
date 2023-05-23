@@ -94,13 +94,14 @@ To convert a PKCS12 file to PEM files, do the following:
 Using Your User Certificate
 ---------------------------
 
-1. The standard location to place user certificates is in the users certificate home directory in the `.globus` directory:
+1. The standard location to place user certificates is in the `.globus` subdirectory of your home directory:
 
         :::console
-        user@host $ cp mkdir ~/.globus
+        user@host $ mkdir -p ~/.globus
         user@host $ cp userkey.pem ~/.globus/
         user@host $ cp usercert.pem ~/.globus/
         user@host $ cp usercred.p12 ~/.globus/
+        user@host $ chmod go-rwx ~/.globus/userkey.pem ~/.globus/usercred.p12
 
 1. To generate a proxy use the command `voms-proxy-init`. 
 
