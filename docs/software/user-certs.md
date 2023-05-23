@@ -105,20 +105,15 @@ Using Your User Certificate
         user@host $ cp usercred.p12 ~/.globus/
         user@host $ chmod go-rwx ~/.globus/userkey.pem ~/.globus/usercred.p12
 
-1. To generate a proxy use the command `voms-proxy-init`. 
-
-        :::console
-      	user@host $ voms-proxy-init
-
-1. (Optional) If user certificates are not in the `.globus` then the path has to be passed to `voms-proxy-init`
-
-        :::console
-        user@host $ voms-proxy-init --cert /<PATH TO>/usercert.pem --key /<PATH TO>/userkey.pem
-
 1. In order to find the Distinguished Name (DN), issuer and lifetime of a certificate:
 
         :::console
-        user@host $ openssl x509 -in /<PATH TO>/usercert.pem -noout -subject -issuer -enddate
+        user@host $ openssl x509 -in ~/.globus/usercert.pem -noout -subject -issuer -enddate
+
+1. To generate a proxy use the command `voms-proxy-init`.
+
+        :::console
+        user@host $ voms-proxy-init
 
 
 Revoking Your User Certificate
