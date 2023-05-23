@@ -5,7 +5,7 @@ User Certificates
 
 !!! note
     This document describes how to get and set up a **personal** certificate (also called a grid user certificate).
-    For instructions on how to get **host** certificates, see the [Host Certificates document](host-certs.md).
+    For instructions on how to get **host** certificates, see the [Host Certificates document](https://osg-htc.org/docs/security/host-certs/overview/).
 
 Getting a User Certificate
 --------------------------
