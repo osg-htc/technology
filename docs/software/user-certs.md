@@ -10,19 +10,20 @@ User Certificates
 Getting a User Certificate
 --------------------------
 
-This section describes how to get and set up a personal certificate to use on OSG.
-You need a user certificate if you are going to interact directly with OSG resources or infrastructure,
-including activities such as:
+This section describes how to get and set up a personal (user) certificate.
+A user certificate is a type of SSL certificate -- the same technology used for identifying websites when using HTTPS
+-- but identifying a human instead of a host.
 
-- Managing OASIS
-- Directly running jobs on OSG resources
-- Directly interacting with OSG storage elements
-- Obtaining private contact information from OSG systems
+This is used to access some grid resources, such as:
+
+-   [OSG Topology](https://topology.opensciencegrid.org) (for viewing private contact information)
+-   The `osg-notify` tool for sending mass emails
+-   The [GGUS ticketing system](https://ggus.eu)
+-   The [Koji build system](https://koji.opensciencegrid.org) for the OSG Software Stack
+
+User certs may also be useful for debugging storage access (such as XRootD).
 
 Currently, you can get a user certificate from CILogon.
-You may also be able to use other CAs to get a certificate; if your virtual organization (VO) requires that you get a
-certificate from a different CA, [contact your VO Support Center](https://github.com/opensciencegrid/topology/tree/master/virtual-organizations) for
-instructions.
 
 ### Know your responsibilities
 
