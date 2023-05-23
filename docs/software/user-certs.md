@@ -58,13 +58,14 @@ Follow the steps below to get an user certificate:
 
 ### Certificate formats
 
-Your user certificate can be stored in a few different formats.
-The two most common formats used in OSG are the [PKCS12](https://en.wikipedia.org/wiki/PKCS_12) and
-[PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) formats.
-In the PEM format, your user certificate is stored in two separate files: one for the certificate and another for the
-private key.
+Your user certificate can be stored in a few different formats:
+
+CILogon will give you a certificate in the [PKCS12](https://en.wikipedia.org/wiki/PKCS_12) format (file extension `.p12`).
 The PKCS12 format stores the certificate and private key in a single file along with an optional certificate chain.
-Most OSG user tools will work with both but will try to use PEM files first.   
+This is the file format that can be loaded into your browser for accessing Topology, GGUS, or the Koji web interace with.
+
+Most command line tools use the [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format (file extension `.pem`).
+The PEM format stores the public certificate in one file, and the private key in another file.
 
 To convert a PKCS12 file to PEM files, do the following:
 
