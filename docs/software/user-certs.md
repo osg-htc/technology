@@ -118,9 +118,6 @@ Using Your User Certificate
         :::console
         user@host $ openssl x509 -in /<PATH TO>/usercert.pem -noout -subject -issuer -enddate
 
-!!! note
-    For admins trying to validate a service add your user DN to the [grid-map file](lcmaps-voms-authentication.md#mapping-users) of the service.
-  
 
 Revoking Your User Certificate
 ------------------------------
