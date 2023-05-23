@@ -65,18 +65,26 @@ private key.
 The PKCS12 format stores the certificate and private key in a single file along with an optional certificate chain.
 Most OSG user tools will work with both but will try to use PEM files first.   
 
-To convert a PKCS12 file to  PEM files, do the following.  
-   
-1. First, extract your user certificate from your PKCS12 file by running the following command.  You'll be prompted for the password you used to create the certificate. The invocation assumes that the PKCS12 file is called `usercred.p12`.  After running, the PEM certificate will be written to `usercert.pem`. 
+To convert a PKCS12 file to PEM files, do the following:
+
+1.  First, extract your user certificate from your PKCS12 file by running the following command.
+    You'll be prompted for the password you used to create the certificate.
+    The invocation assumes that the PKCS12 file is called `usercred.p12`.
+    After running, the PEM certificate will be written to `usercert.pem`.
 
         :::console
         user@host $ openssl pkcs12 -in usercred.p12 -out usercert.pem -nodes -clcerts -nokeys
         Enter Import Password:
         MAC verified OK
-   
-1. Second, extract the private key by running the following command. You'll be prompted for two different passwords.  The first prompt will be for the password that you used to create the certificate.  The second prompt will be for the password that will encrypt the PEM certificate that will be created.  As before, the invocation assumes that your PKCS12 certificate is located in `usercred.p12`. After running, the PEM certificate with your private key will be written to `userkey.pem`.
 
-        :::console 
+1.  Second, extract the private key by running the following command.
+    You'll be prompted for two different passwords.
+    The first prompt will be for the password that you used to create the certificate.
+    The second prompt will be for the password that will encrypt the PEM certificate that will be created.
+    As before, the invocation assumes that your PKCS12 certificate is located in `usercred.p12`.
+    After running, the PEM certificate with your private key will be written to `userkey.pem`.
+
+        :::console
         user@host $ openssl pkcs12 -in usercred.p12 -out userkey.pem  -nocerts
         Enter Import Password:
         MAC verified OK
