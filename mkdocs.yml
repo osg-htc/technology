@@ -35,6 +35,7 @@ nav:
     - Effort Tracking: 'software/effort-tracking.md'
     - Release Planning: 'software/release-planning.md'
     - New Team Member: 'software/new-team-member.md'
+    - User Certificates: 'software/user-certs.md'
   - Release:
     - How to Cut a Release: 'release/cut-sw-release.md'
     - Ready for Testing Announcements: 'release/announce-rft-packages.md'
