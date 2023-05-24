@@ -25,7 +25,9 @@ We encourage all interested parties to contribute to OSG Software, and all the i
     [software-discuss@opensciencegrid.org](https://listserv.fnal.gov/scripts/wa.exe?SUBED1=SOFTWARE-DISCUSS&A=1) email list.
 -   To create and edit packages: [Obtain access to VDT SVN](http://vdt.cs.wisc.edu/internal/svn.html).
 -   To upload new source tarballs: You must have a cs.wisc.edu account with write access to the VDT source tarball directory. Email the osg-software list and request permission.
--   To build using the OSG's Koji build system: You must have a valid grid certificate and a Koji account. Email the osg-software list with your cert's DN and request permission.
+-   To build using the OSG's Koji build system: 
+    You must have a [valid personal certificate](../software/user-certs.md) and a Koji account.
+    To obtain the Koji account, email the osg-software list with your cert's DN and request permission.
 
 Development Infrastructure
 --------------------------
