@@ -12,7 +12,8 @@ The Team
 |-------------------------------------|---------------------------------|
 | Brian Lin (software manager)        | Brian Bockelman (manager) (15%) |
 | Mat Selmeci                         | Derek Weitzel (50%)             |
-| Tim Theisen (release manager) (50%) | Diego Davila (50%)              |
+| Matt Westphall (50%)                | Diego Davila (50%)              |
+| Tim Theisen (release manager) (50%) |                                 |
 
 Contact Us
 ----------
