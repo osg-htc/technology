@@ -10,7 +10,7 @@ Creating New Pages
 ------------------
 
 !!! help "Need assistance?"
-    If you need any assistance with setting up your GitHub repository, please reach out to <help@opensciencegrid.org>.
+    If you need any assistance with setting up your GitHub repository, please reach out to <help@osg-htc.org>.
 
 This document assumes that you are an administrator of the `opensciencegrid` GitHub organization.
 Before starting, make sure that you have the `git` and `gem` tools installed.
@@ -45,7 +45,7 @@ Before starting, make sure that you have the `git` and `gem` tools installed.
 
     1. Generate the repository deploy key:
 
-            ssh-keygen -t rsa -b 4096 -C "help@opensciencegrid.org" -f deploy-key -N ''
+            ssh-keygen -t rsa -b 4096 -C "help@osg-htc.org" -f deploy-key -N ''
 
     1. Install the `travis` gem:
 
@@ -112,7 +112,7 @@ Before starting, make sure that you have the `git` and `gem` tools installed.
 
     Your documents should be shortly available at `https://www.opensciencegrid.org/<REPO NAME>`
 
-1. Contact <help@opensciencegrid.org> to request repository backups to UW-Madison.
+1. Contact <help@osg-htc.org> to request repository backups to UW-Madison.
 
 Creating an ITB Area
 --------------------
@@ -141,7 +141,7 @@ This section describes creating an ITB repository for a documentation area creat
     1. `cd` into the non-ITB repository and generate the ITB deploy key
 
             cd <REPO NAME>
-            ssh-keygen -t rsa -b 4096 -C "help@opensciencegrid.org" -f deploy-itb
+            ssh-keygen -t rsa -b 4096 -C "help@osg-htc.org" -f deploy-itb
 
     1. Install the `travis` gem:
 
@@ -173,7 +173,7 @@ Transitioning to GitHub Actions
 
 !!! help "Need assistance?"
     If you need any assistance with transitioning your repository to GitHub actions, please reach out to
-    <help@opensciencegrid.org>.
+    <help@osg-htc.org>.
 
 When originally developed, OSG MkDocs repositories were set up to automatically publish web page changes through
 [Travis CI](https://travis-ci.com/).

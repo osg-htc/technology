@@ -67,7 +67,7 @@ based on OSG release series (e.g. `3.5`, `3.6`) and release level (e.g. `testing
         ARG BASE_OSG_SERIES=3.6
         ARG BASE_YUM_REPO=release
 
-        LABEL maintainer OSG Software <help@opensciencegrid.org>
+        LABEL maintainer OSG Software <help@osg-htc.org>
 
         RUN yum install -y <PACKAGE(S)> && \
             yum clean all && \
@@ -154,7 +154,7 @@ Old image repos will have:
 
         FROM opensciencegrid/software-base:<OSG RELEASE SERIES>-<EL MAJOR VERSION>-release
 
-        LABEL maintainer OSG Software <help@opensciencegrid.org>
+        LABEL maintainer OSG Software <help@osg-htc.org>
 
         RUN yum update -y && \
             yum clean all && \

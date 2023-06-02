@@ -93,7 +93,7 @@ To install any of these packages, run the following command:
 Please test this software and send positive or negative feedback to
 software-discuss@opensciencegrid.org.  Be sure to include details describing your
 testing platform, e.g. OSG 3.4 vs 3.5, EL6 vs EL7! If you any questions, you can
-always contact us at help@opensciencegrid.org.
+always contact us at help@osg-htc.org.
 
 JIRA Ticket Summary: https://opensciencegrid.atlassian.net/issues/?filter=12355
 
