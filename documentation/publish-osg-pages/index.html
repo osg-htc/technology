@@ -3046,7 +3046,7 @@ GitHub repository from <a href="https://travis-ci.com/">Travis CI</a> to <a href
 <h2 id="creating-new-pages">Creating New Pages<a class="headerlink" href="#creating-new-pages" title="Permanent link">&para;</a></h2>
 <div class="admonition help">
 <p class="admonition-title">Need assistance?</p>
-<p>If you need any assistance with setting up your GitHub repository, please reach out to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a>.</p>
+<p>If you need any assistance with setting up your GitHub repository, please reach out to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;</a>.</p>
 </div>
 <p>This document assumes that you are an administrator of the <code>opensciencegrid</code> GitHub organization.
 Before starting, make sure that you have the <code>git</code> and <code>gem</code> tools installed.</p>
@@ -3092,7 +3092,7 @@ cd &lt;REPO NAME&gt;
 <ol>
 <li>
 <p>Generate the repository deploy key:</p>
-<div class="codehilite"><pre><span></span><code>ssh-keygen -t rsa -b 4096 -C &quot;help@opensciencegrid.org&quot; -f deploy-key -N &#39;&#39;
+<div class="codehilite"><pre><span></span><code>ssh-keygen -t rsa -b 4096 -C &quot;help@osg-htc.org&quot; -f deploy-key -N &#39;&#39;
 </code></pre></div>
 
 </li>
@@ -3184,7 +3184,7 @@ git commit -m &quot;Staging initial web page contents&quot;
 <p>Your documents should be shortly available at <code>https://www.opensciencegrid.org/&lt;REPO NAME&gt;</code></p>
 </li>
 <li>
-<p>Contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a> to request repository backups to UW-Madison.</p>
+<p>Contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;</a> to request repository backups to UW-Madison.</p>
 </li>
 </ol>
 <h2 id="creating-an-itb-area">Creating an ITB Area<a class="headerlink" href="#creating-an-itb-area" title="Permanent link">&para;</a></h2>
@@ -3221,7 +3221,7 @@ cd &lt;ITB REPO NAME&gt;
 <li>
 <p><code>cd</code> into the non-ITB repository and generate the ITB deploy key</p>
 <div class="codehilite"><pre><span></span><code>cd &lt;REPO NAME&gt;
-ssh-keygen -t rsa -b 4096 -C &quot;help@opensciencegrid.org&quot; -f deploy-itb
+ssh-keygen -t rsa -b 4096 -C &quot;help@osg-htc.org&quot; -f deploy-itb
 </code></pre></div>
 
 </li>
@@ -3269,7 +3269,7 @@ git commit -m &quot;Add ITB deployment&quot;
 <div class="admonition help">
 <p class="admonition-title">Need assistance?</p>
 <p>If you need any assistance with transitioning your repository to GitHub actions, please reach out to
-<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#112;&#101;&#110;&#115;&#99;&#105;&#101;&#110;&#99;&#101;&#103;&#114;&#105;&#100;&#46;&#111;&#114;&#103;</a>.</p>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;</a>.</p>
 </div>
 <p>When originally developed, OSG MkDocs repositories were set up to automatically publish web page changes through
 <a href="https://travis-ci.com/">Travis CI</a>.

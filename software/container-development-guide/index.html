@@ -3191,7 +3191,7 @@ FROM opensciencegrid/software-base:$BASE_OSG_SERIES-&lt;DISTRO VERSION&gt;-$BASE
 ARG BASE_OSG_SERIES=3.6
 ARG BASE_YUM_REPO=release
 
-LABEL maintainer OSG Software &lt;help@opensciencegrid.org&gt;
+LABEL maintainer OSG Software &lt;help@osg-htc.org&gt;
 
 RUN yum install -y &lt;PACKAGE(S)&gt; &amp;&amp; \
     yum clean all &amp;&amp; \
@@ -3282,7 +3282,7 @@ this section describes their layout and mechanics.</p>
 <p>A <code>Dockerfile</code> based off of the OSG Software Base image:</p>
 <div class="codehilite"><pre><span></span><code>FROM opensciencegrid/software-base:&lt;OSG RELEASE SERIES&gt;-&lt;EL MAJOR VERSION&gt;-release
 
-LABEL maintainer OSG Software &lt;help@opensciencegrid.org&gt;
+LABEL maintainer OSG Software &lt;help@osg-htc.org&gt;
 
 RUN yum update -y &amp;&amp; \
     yum clean all &amp;&amp; \
