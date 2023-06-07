@@ -24,7 +24,7 @@ will be available in the next stable series.
 We realize that software retirements can be very disruptive; the OSG and HTCondor
 teams are committed to assisting user communities through the process.  If you
 believe our plan does not fit the needs of your user community, please contact
-<help@opensciencegrid.org>.
+<help@osg-htc.org>.
 
 Regards,
 

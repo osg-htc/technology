@@ -140,7 +140,7 @@ As a reminder, support for OSG <3.X> ended after <MONTH YEAR>.
 
 If your site is running OSG <3.X>, you should upgrade to the current release
 series, OSG 3.Y.  See our upgrade documentation [1] for instructions.  If you
-need assistance upgrading, please contact us at help@opensciencegrid.org.
+need assistance upgrading, please contact us at help@osg-htc.org.
 
 [1] https://osg-htc.org/docs/release/release_series/#updating-from-osg-31-32-33-to-34
 ```
@@ -151,7 +151,7 @@ the following after the first paragraph:
 ```
 Note that OSG <3.X> was the last release that supported Enterprise Linux <Z>
 distributions.  If you believe that you still need support for this operating
-system series, please contact us at help@opensciencegrid.org.
+system series, please contact us at help@osg-htc.org.
 ```
 
 Since we're dropping support for i386 (32-bit) when we drop OSG 3.3, add the
@@ -160,5 +160,5 @@ following after the first paragraph:
 ```
 Note that OSG 3.3 was the last release that contained 32-bit packages.  If
 you believe that you still need support for this architecture, please
-contacts us at help@opensciencegrid.org.
+contacts us at help@osg-htc.org.
 ```
