@@ -107,10 +107,7 @@ These tasks can be completed in any order.
     - All targets referencing the series.
     - All tags referencing the series.
 
-- Remove references to the series from `opensciencegrid/docker-osg-wn-scripts`
-  on GitHub, including the `genbranches` and `update-all` scripts.
-
-- Remove branches from `opensciencegrid/docker-osg-wn` on GitHub.
+- Remove references to the series from `opensciencegrid/docker-osg-wn` on GitHub.
 
 - Move files in `/p/vdt/public/html/release-info` to its `attic` subdirectory.
 
