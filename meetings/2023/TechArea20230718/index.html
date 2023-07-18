@@ -3161,7 +3161,9 @@
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>TimT OOO Thursday</li>
+<li>MattW OOO Thursday + Friday</li>
 <li>BrianL OOO next week</li>
+<li>MatS OOO next Monday afternoon</li>
 </ul>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <p>Triage duty shifts Tue-Mon</p>
@@ -3172,7 +3174,6 @@
 <li>1 (+1) open GGUS ticket</li>
 </ul>
 <h3 id="jira-as-of-monday">Jira (as of Monday)<a class="headerlink" href="#jira-as-of-monday" title="Permanent link">&para;</a></h3>
-<p>Stale due to Jira outage</p>
 <table>
 <thead>
 <tr>
@@ -3220,30 +3221,42 @@
 <li>AI (Mat): Release XRootD 5.6+</li>
 <li>AI (BrianL): Release xrootd-multiuser-2.1.3+</li>
 <li>AI (Matt): osg-ca-scripts missing dependency on perl-filetest.
-    We need this done before we can build EL9 tarballs</li>
-<li>AI (Matt): Release oidc-agent-4.4.2+</li>
+    We need this done before we can build EL9 tarballs - no longer included with base perl packages in EL9.
+    MatS to provide special Perl packaging tips.</li>
+<li>AI (Matt): Release oidc-agent-4.4.2+.
+    SRPMs no longer provided by upstream, github is not properly organized to use as source.
+    Either a spec file in the github, or return to releasing the srpm</li>
 </ul>
-<p>OSG 3.7 tasks</p>
+<p>OSG 23 tasks</p>
 <ul>
-<li>What's the next step in the Yubikey setup for promoting packages?</li>
+<li>What's the next step in the Yubikey setup for promoting packages?
+   Per-developer key, packages get re-signed when promoted from development to testing
+   Need to:<ul>
+<li>Update script OSG Promote</li>
+<li>Generate promotion key</li>
+<li>Create Yubikey for each developer (4 or 5)</li>
+<li>Workflow update: Will need to sign packages locally, since you can't use a Yubikey on Moria</li>
+</ul>
+</li>
 <li>AI (Matt): Build buildsys-macro packages</li>
 <li>AI (BrianL): build package list</li>
-<li>AI (Matt): update release scripts to accommodate OSG 23</li>
+<li>AI (Matt): update release scripts to accommodate OSG 23
+   New args: <YYMMDD> <series 1> ... <series n> (as long as it sorts)</li>
 </ul>
-<p>Kubernetes Hackathon</p>
+<p>Kubernetes Hackathon (Next Week)</p>
 <ul>
-<li>AI (BrianL/Mat/Matt): TACC PATh Facility</li>
-<li>AI (BrianL): testing Flux minor version upgrades</li>
-<li>AI (Matt): repo k8s health probe (OPS-332)</li>
+<li>TBD</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Topology/GGUS (BrianL, Mat): Topology does not accept certs from SHA1-signed CAs.
-    We need to petition Günter to get the German CA to update their signing key.</li>
+    We need to petition Günter to get the German CA to update their signing key.
+    Mat: Reach out to Gunter to update CA, update Topology to temporarily accept SHA1</li>
 <li>Louvain (Mat): OSG-based CVMFS installation hitting Syracuse cache from Europe.
     We should probably just suggest that he install the EGI config while we sort out policy.</li>
+<li>Renewing Colorado host certificates (Matt): Awaiting approval by Douglas  </li>
 </ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3261,6 +3274,7 @@
 <li>HTCondor 10.4.0</li>
 <li>HTCondor-CE 6.0.0</li>
 <li>htgettoken 1.17</li>
+<li>xcache 3.5.0-2</li>
 </ul>
 </li>
 </ul>
