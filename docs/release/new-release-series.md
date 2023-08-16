@@ -68,17 +68,17 @@ Prepare Koji and OSG-Build
 Build prerequisite packages
 ---------------------------
 
--   Create a blank `osg-3.X` SVN branch and add `buildsys-macros.elY` packages, one for each supported distro version.
-    As an example, here's what you'd do for osg-3.7 and el8:
+-   Create a blank `X-main` SVN branch and add `buildsys-macros.elY` packages, one for each supported distro version.
+    As an example, here's what you'd do for osg-23 and el8:
 
     1.  svn copy the buildsys-macros.elX directories from the osg-3.OLD branch
         and hand-edit it to hardcode the new `osg_version` and `dver` values.
 
             :::console
             $ cd native/redhat/branches
-            $ svn mkdir osg-3.7
-            $ svn copy osg-3.6/buildsys-macros.el8 osg-3.7/buildsys-macros.el8
-            $ cd osg-3.7/buildsys-macros.el8
+            $ svn mkdir 23-main
+            $ svn copy osg-3.6/buildsys-macros.el8 23-main/buildsys-macros.el8
+            $ cd 23-main/buildsys-macros.el8
             $ $EDITOR osg/*.spec
             ### change the osg_version and dver values as appropriate
 
@@ -90,37 +90,37 @@ Build prerequisite packages
                 $ osg-koji import _build_results/buildsys-macros-*.el8.src.rpm
                 $ osg-koji import _build_results/buildsys-macros-*.el8.noarch.rpm
                 $ pkg=$(basename _build_results/buildsys-macros-*.el8.src.rpm .src.rpm)
-                $ osg-koji tag-pkg osg-3.7-el8-development "$pkg"
+                $ osg-koji tag-pkg osg-23-main-el8-development "$pkg"
 
     3.  Bump the revision in each `buildsys-macros.elY` spec file and edit the `%changelog`,
         `svn commit`, then do Koji builds of them.
         Again, with osg-3.7 and el8:
 
             :::console
-            $ osg-build koji --repo=osg-3.7 --el8 osg-3.7/buildsys-macros.el8
+            $ osg-build koji --repo=23-main --el8 23-main/buildsys-macros.el8
 
 
--   Repeat the previous steps for 3.X-upcoming
+-   Repeat the previous steps for X-upcoming and X-internal
 
 
 -   Update [`tarball-client`](https://github.com/opensciencegrid/tarball-client/)
     -   `bundles.ini`
     -   `patches/`
-    -   `upload-tarballs-to-oasis` (for 3.X, `foreach_dver_arch` will need to be updated for the new set of 3.X `dver_arches`)
-    -   Add relase-series specific `repos/osg-3.X-el<DVER>.repo.in` for each supported distro version (e.g., `7`, `8`)
+    -   `upload-tarballs-to-oasis` (for X, `foreach_dver_arch` will need to be updated for the new set of X `dver_arches`)
+    -   Add relase-series specific `repos/osg-23-main-el<DVER>.repo.in` for each supported distro version (e.g., `8`, `9`)
 
 -   Populate the `bootstrap` tags
 
-    Need to have them inherit from the 3.OLD development tags, but only packages, not builds (hence the `--noconfig`; yes, the name is weird)
+    Need to have them inherit from the OLD development tags, but only packages, not builds (hence the `--noconfig`; yes, the name is weird)
 
         :::console
-        # set 3.OLD and 3.X as appropriate, specify any relevant dvers for el
+        # set OLD and NEW as appropriate, specify any relevant dvers for el
 
-        $ for el in el7; do \
-            for repo in 3.OLD upcoming; do \
-                osg-koji add-tag-inheritance --noconfig --priority=2 \
-                    osg-3.X-$el-bootstrap osg-$repo-$el-development; \
-            done; \
+        $ for el in el8 el9; do
+            osg-koji add-tag-inheritance --noconfig --priority=2 \
+                osg-$NEW-main-$el-bootstrap osg-$OLD-main-$el-development;
+            osg-koji add-tag-inheritance --noconfig --priority=3 \
+                osg-$NEW-main-$el-bootstrap osg-$OLD-upcoming-$el-development; 
         done
 
 -   Get the actual NVRs to tag
@@ -132,10 +132,10 @@ Build prerequisite packages
     -   Tagging:
 
             :::console
-            # set 3.X as appropriate, specify any relevant dvers for el
+            # set X as appropriate, specify any relevant dvers for el
 
-            $ for el in el7 el8; do \
-                xargs -a pkgtotag-$el osg-koji tag-pkg osg-3.X-$el-bootstrap; \
+            $ for el in el8 el9; do \
+                xargs -a pkgtotag-$el osg-koji tag-pkg osg-X-main-$el-bootstrap; \
             done
 
         (btw, xargs -a doesn't work on a Mac)
@@ -162,7 +162,7 @@ Build software
 -   Mass rebuild
     -   Don't forget to update the `empty` and `contrib` tags with the appropriate packages;
         **remove the `empty*` packages from the development tags after they've been tagged into the `empty` tags**
--   Drop the `osg-3.X-elY-bootstrap` and `osg-3.X-upcoming-elY-bootstrap` koji tags
+-   Drop the `osg-X-main-elY-bootstrap` koji tags
     (after the successful mass rebuild only)
 -   Update [docker-software-base](https://github.com/opensciencegrid/docker-software-base)
     and any container images that are based on it
@@ -188,10 +188,10 @@ Post-release
 - Update the tarball that is used to keep the CA certificates and VO data current in CVMFS.
     - Logon as `ouser.mis@oasis-login.opensciencegrid.org` and follow the directions in the `README` file.
 
--   Update the koji `osg-elY` build targets to build from and to `3.X` instead of `3.OLD`;
+-   Update the koji `osg-elY` build targets to build from and to `X` instead of `OLD`;
     notify the software-discuss list of this change
 
--   Update the docker-osg-wn-client scripts to build from `3.X` (need direct push access)
+-   Update the docker-osg-wn-client scripts to build from `X` (need direct push access)
 
     1.  Update the constants in the `genbranches` script in the `docker-osg-wn-scripts` repo
     2.  Update the branches in `docker-osg-wn-client`; a script like this ought to work:
@@ -217,8 +217,8 @@ Post-release
 
 -   Update the default promotion route aliases in `osg-promote`
 
--   Update [documentation](../software/development-process.md) again to reflect that `3.X` is now the _main_ branch and
-    `3.OLD` is the _maintenance_ branch
+-   Update [documentation](../software/development-process.md) again to reflect that `X` is now the _main_ branch and
+    `OLD` is the _maintenance_ branch
 
 
 [google-drive]: <https://drive.google.com/drive/u/1/folders/1q5y81_qmnzLT2RxOGpNp5Clq2tCCirFQ>
