@@ -51,7 +51,7 @@ then it runs the actual user payload job in Singularity (or Apptainer).
 
 PID namespaces are a key technology that enables containers to isolate from each other.
 See, for example,
-[this Ubuntu copy of the man page](https://manpages.ubuntu.com/manpages/bionic/man7/pid_namespaces.7.html)
+[this Ubuntu copy of the man page](https://manpages.ubuntu.com/manpages/lunar/en/man7/pid_namespaces.7.html)
 for `pid_namespaces`.
 The `root` user always has the ability to create PID namespaces, so a privileged container runtime
 (i.e., not unprivileged Singularity) can always do this.
