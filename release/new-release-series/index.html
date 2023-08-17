@@ -3197,16 +3197,16 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 <h2 id="build-prerequisite-packages">Build prerequisite packages<a class="headerlink" href="#build-prerequisite-packages" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Create a blank <code>osg-3.X</code> SVN branch and add <code>buildsys-macros.elY</code> packages, one for each supported distro version.
-    As an example, here's what you'd do for osg-3.7 and el8:</p>
+<p>Create a blank <code>X-main</code> SVN branch and add <code>buildsys-macros.elY</code> packages, one for each supported distro version.
+    As an example, here's what you'd do for osg-23 and el8:</p>
 <ol>
 <li>
 <p>svn copy the buildsys-macros.elX directories from the osg-3.OLD branch
     and hand-edit it to hardcode the new <code>osg_version</code> and <code>dver</code> values.</p>
 <div class="codehilite"><pre><span></span><code><span class="gp">$ </span><span class="nb">cd</span> native/redhat/branches
-<span class="gp">$ </span>svn mkdir osg-3.7
-<span class="gp">$ </span>svn copy osg-3.6/buildsys-macros.el8 osg-3.7/buildsys-macros.el8
-<span class="gp">$ </span><span class="nb">cd</span> osg-3.7/buildsys-macros.el8
+<span class="gp">$ </span>svn mkdir <span class="m">23</span>-main
+<span class="gp">$ </span>svn copy osg-3.6/buildsys-macros.el8 <span class="m">23</span>-main/buildsys-macros.el8
+<span class="gp">$ </span><span class="nb">cd</span> <span class="m">23</span>-main/buildsys-macros.el8
 <span class="gp">$ </span><span class="nv">$EDITOR</span> osg/*.spec
 <span class="gp">#</span><span class="c1">## change the osg_version and dver values as appropriate</span>
 </code></pre></div>
@@ -3220,7 +3220,7 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
     $ osg-koji import _build_results/buildsys-macros-*.el8.src.rpm
     $ osg-koji import _build_results/buildsys-macros-*.el8.noarch.rpm
     $ pkg=$(basename _build_results/buildsys-macros-*.el8.src.rpm .src.rpm)
-    $ osg-koji tag-pkg osg-3.7-el8-development &quot;$pkg&quot;
+    $ osg-koji tag-pkg osg-23-main-el8-development &quot;$pkg&quot;
 </code></pre></div>
 
 </li>
@@ -3228,34 +3228,34 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 <p>Bump the revision in each <code>buildsys-macros.elY</code> spec file and edit the <code>%changelog</code>,
     <code>svn commit</code>, then do Koji builds of them.
     Again, with osg-3.7 and el8:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>osg-build koji --repo<span class="o">=</span>osg-3.7 --el8 osg-3.7/buildsys-macros.el8
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>osg-build koji --repo<span class="o">=</span><span class="m">23</span>-main --el8 <span class="m">23</span>-main/buildsys-macros.el8
 </code></pre></div>
 
 </li>
 </ol>
 </li>
 <li>
-<p>Repeat the previous steps for 3.X-upcoming</p>
+<p>Repeat the previous steps for X-upcoming and X-internal</p>
 </li>
 <li>
 <p>Update <a href="https://github.com/opensciencegrid/tarball-client/"><code>tarball-client</code></a></p>
 <ul>
 <li><code>bundles.ini</code></li>
 <li><code>patches/</code></li>
-<li><code>upload-tarballs-to-oasis</code> (for 3.X, <code>foreach_dver_arch</code> will need to be updated for the new set of 3.X <code>dver_arches</code>)</li>
-<li>Add relase-series specific <code>repos/osg-3.X-el&lt;DVER&gt;.repo.in</code> for each supported distro version (e.g., <code>7</code>, <code>8</code>)</li>
+<li><code>upload-tarballs-to-oasis</code> (for X, <code>foreach_dver_arch</code> will need to be updated for the new set of X <code>dver_arches</code>)</li>
+<li>Add relase-series specific <code>repos/osg-23-main-el&lt;DVER&gt;.repo.in</code> for each supported distro version (e.g., <code>8</code>, <code>9</code>)</li>
 </ul>
 </li>
 <li>
 <p>Populate the <code>bootstrap</code> tags</p>
-<p>Need to have them inherit from the 3.OLD development tags, but only packages, not builds (hence the <code>--noconfig</code>; yes, the name is weird)</p>
-<div class="codehilite"><pre><span></span><code><span class="gp"># </span><span class="nb">set</span> <span class="m">3</span>.OLD and <span class="m">3</span>.X as appropriate, specify any relevant dvers <span class="k">for</span> el
+<p>Need to have them inherit from the OLD development tags, but only packages, not builds (hence the <code>--noconfig</code>; yes, the name is weird)</p>
+<div class="codehilite"><pre><span></span><code><span class="gp"># </span><span class="nb">set</span> OLD and NEW as appropriate, specify any relevant dvers <span class="k">for</span> el
 
-<span class="gp">$ </span><span class="k">for</span> el <span class="k">in</span> el7<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<span class="go">    for repo in 3.OLD upcoming; do \</span>
-<span class="go">        osg-koji add-tag-inheritance --noconfig --priority=2 \</span>
-<span class="go">            osg-3.X-$el-bootstrap osg-$repo-$el-development; \</span>
-<span class="go">    done; \</span>
+<span class="gp">$ </span><span class="k">for</span> el <span class="k">in</span> el8 el9<span class="p">;</span> <span class="k">do</span>
+<span class="go">    osg-koji add-tag-inheritance --noconfig --priority=2 \</span>
+<span class="go">        osg-$NEW-main-$el-bootstrap osg-$OLD-main-$el-development;</span>
+<span class="go">    osg-koji add-tag-inheritance --noconfig --priority=3 \</span>
+<span class="go">        osg-$NEW-main-$el-bootstrap osg-$OLD-upcoming-$el-development; </span>
 <span class="go">done</span>
 </code></pre></div>
 
@@ -3271,10 +3271,10 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 <li>save the NVRs for each dver to a separate file, eg, pkgtotag-el7.txt and pkgtotag-el8.txt</li>
 <li>
 <p>Tagging:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp"># </span><span class="nb">set</span> <span class="m">3</span>.X as appropriate, specify any relevant dvers <span class="k">for</span> el
+<div class="codehilite"><pre><span></span><code><span class="gp"># </span><span class="nb">set</span> X as appropriate, specify any relevant dvers <span class="k">for</span> el
 
-<span class="gp">$ </span><span class="k">for</span> el <span class="k">in</span> el7 el8<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<span class="go">    xargs -a pkgtotag-$el osg-koji tag-pkg osg-3.X-$el-bootstrap; \</span>
+<span class="gp">$ </span><span class="k">for</span> el <span class="k">in</span> el8 el9<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<span class="go">    xargs -a pkgtotag-$el osg-koji tag-pkg osg-X-main-$el-bootstrap; \</span>
 <span class="go">done</span>
 </code></pre></div>
 
@@ -3309,7 +3309,7 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
     <strong>remove the <code>empty*</code> packages from the development tags after they've been tagged into the <code>empty</code> tags</strong></li>
 </ul>
 </li>
-<li>Drop the <code>osg-3.X-elY-bootstrap</code> and <code>osg-3.X-upcoming-elY-bootstrap</code> koji tags
+<li>Drop the <code>osg-X-main-elY-bootstrap</code> koji tags
     (after the successful mass rebuild only)</li>
 <li>Update <a href="https://github.com/opensciencegrid/docker-software-base">docker-software-base</a>
     and any container images that are based on it</li>
@@ -3341,11 +3341,11 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 </ul>
 </li>
 <li>
-<p>Update the koji <code>osg-elY</code> build targets to build from and to <code>3.X</code> instead of <code>3.OLD</code>;
+<p>Update the koji <code>osg-elY</code> build targets to build from and to <code>X</code> instead of <code>OLD</code>;
     notify the software-discuss list of this change</p>
 </li>
 <li>
-<p>Update the docker-osg-wn-client scripts to build from <code>3.X</code> (need direct push access)</p>
+<p>Update the docker-osg-wn-client scripts to build from <code>X</code> (need direct push access)</p>
 <ol>
 <li>Update the constants in the <code>genbranches</code> script in the <code>docker-osg-wn-scripts</code> repo</li>
 <li>
@@ -3376,8 +3376,8 @@ Check the results before pushing, and then run <code>git push --all</code></p>
 <p>Update the default promotion route aliases in <code>osg-promote</code></p>
 </li>
 <li>
-<p>Update <a href="../../software/development-process/">documentation</a> again to reflect that <code>3.X</code> is now the <em>main</em> branch and
-    <code>3.OLD</code> is the <em>maintenance</em> branch</p>
+<p>Update <a href="../../software/development-process/">documentation</a> again to reflect that <code>X</code> is now the <em>main</em> branch and
+    <code>OLD</code> is the <em>maintenance</em> branch</p>
 </li>
 </ul>
                 
