@@ -3272,11 +3272,33 @@
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <p>OSG 23:</p>
 <ul>
-<li>AI (Matt): Update mash scripts to merge OSG and UW HTCondor repos (SOFTWARE-5653)</li>
-<li>AI (Matt): Kick off OSG 23 XRootD tests (worker node and XRootD)</li>
-<li>AI (BrianL): review OSG 23 package builds</li>
-<li>AI (TimT): populate HTCSS 23 daily repo</li>
-<li>AI (Mat): osg-promote updates</li>
+<li>AI (Matt): Update mash scripts to merge OSG and UW HTCondor repos (SOFTWARE-5653)<ul>
+<li>Table in design doc for which htcss repos to merge with osg</li>
+</ul>
+</li>
+<li>AI (Matt): Complete the two -contrib builds (reach out to Mat for what to do with SVN repo branch) </li>
+<li>AI (Matt): Kick off OSG 23 XRootD tests (worker node and XRootD)<ul>
+<li>Most tests require the HTCSS-23 condor build, these two don't</li>
+<li>May require slight updates to test repo</li>
+</ul>
+</li>
+<li>AI (BrianL): review OSG 23 package builds<ul>
+<li>Rebuild osg-release with new signing keys</li>
+</ul>
+</li>
+<li>AI (TimT): populate HTCSS 23 daily repo<ul>
+<li>Outstanding: condor, condor-plugin. Should be complete today (08/29)</li>
+<li>Issue: Things are still signed with Condor 10.X keys. Will need to get the signing keys to Tim somehow</li>
+<li>Will need to create a separate yubikey for this</li>
+<li>Issue: Moria is EL7, where we've previously seen issues in signing</li>
+<li>Could also sign on an EL8 machine in the current workflow, maybe</li>
+</ul>
+</li>
+<li>AI (Matt): Create new signing yubikey to address the above issue</li>
+<li>AI (Mat): osg-promote updates<ul>
+<li>Next step is koji</li>
+</ul>
+</li>
 </ul>
 <p>OSG 3.6</p>
 <ul>
@@ -3284,14 +3306,23 @@
 </ul>
 <p>Miscellaneous</p>
 <ul>
-<li>AI (BrianL): sort out osg-bot 2FA</li>
+<li>AI (BrianL): sort out osg-bot 2FA<ul>
+<li>Should largely work as-is for automated actions with access tokens</li>
+<li>2FA changes will cause issues if we need to log into the account though</li>
+</ul>
+</li>
+<li>AI (Mat): Figure out issues with PATh-Wisc deployment</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>COManage (BrianL): work with CILogon to identify group misconfiguration issues;
-    helped Will Leight with linking org IDs (contact CILogon about strange error)</li>
+    helped Will Leight with linking org IDs (contact CILogon about strange error)<ul>
+<li>Issue: Group IDs and user IDs are becoming misaligned, which breaks COManage provisioning assumptions</li>
+<li>Issue: Users with multiple identities cannot be successfully linked to a single COManage user entity</li>
+</ul>
+</li>
 </ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
@@ -3299,19 +3330,27 @@
 <ul>
 <li>Ready for Testing<ul>
 <li>HTCondor 10.0.3</li>
-<li>XRootD 5.5.4</li>
+<li>XRootD 5.5.5-1.2<ul>
+<li>Requires testing from Josh Willis prior</li>
+</ul>
+</li>
 <li>frontier-squid 5.8-2.1<ul>
 <li>AI (TimT): create an INF ticket for testing at the CHTC, BrianL to assign</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Ready for Release<ul>
+<li>
+<p>Ready for Release</p>
+<ul>
 <li>HTCondor 10.4.0</li>
 <li>HTCondor-CE 6.0.0</li>
 <li>htgettoken 1.17</li>
 <li>xcache 3.5.0-2</li>
 </ul>
+</li>
+<li>
+<p>AI (MattW): Review release-tools PR</p>
 </li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
