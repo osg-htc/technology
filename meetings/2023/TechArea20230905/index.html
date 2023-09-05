@@ -3291,7 +3291,7 @@
 -   AI (BrianL): Hosted CEs move update WN client scripts to the container image
 -   AI (BrianL): Add support for HelmReleases on Nautilus
 -   AI (Mat): Set up remote Kustomization to TACC
--   AI (Mat): Create postgres Topology institution database in Kubernetes</p>
+-   AI (Matt): Create postgres Topology institution database in Kubernetes</p>
 <p>OSG 23:</p>
 <ul>
 <li>AI (Matt): Update mash scripts to merge OSG and UW HTCondor repos (SOFTWARE-5653)<ul>
@@ -3305,12 +3305,18 @@
   Worth just trying it</li>
 </ul>
 </li>
-<li>AI (TimT): populate HTCSS 23 repos</li>
-<li>AI (Mat): Kojihub update status</li>
+<li>AI (TimT): populate HTCSS 23 repos<ul>
+<li>Path of least resistance to compile newer versions of GnuPG on Moria (needed for daily and RC/release builds)</li>
+</ul>
+</li>
+<li>AI (Mat): Kojihub update status<ul>
+<li>Apache RPM turns on multiproc module, so does Hiera, apache doesn't like it. Talk to Joe to figure out how to turn off the packaging</li>
+</ul>
+</li>
 </ul>
 <p>OSG 3.6</p>
 <ul>
-<li>AI (Mat): review osg-pki-tools promotino request</li>
+<li>AI (Mat): review osg-pki-tools promotion request</li>
 <li>AI (Matt): build CA certs packages, merge in EL9 crypto policy hack</li>
 </ul>
 <p>Miscellaneous</p>
@@ -3318,9 +3324,13 @@
 <li>AI (BrianL): sort out osg-bot 2FA</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<p>GlideinWMS RC2 ready, final release should be ready today or tomorrow.
+-   Added optionally enabled structured logging
+-   Added workaround for rrdtool Python binding issues</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>Caltech (Mat): review OSDF cache ticket for any remaining TODO items</li>
+</ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
