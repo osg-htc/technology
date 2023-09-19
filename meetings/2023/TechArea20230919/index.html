@@ -3252,7 +3252,6 @@
 <li>0 (+0) open GGUS ticket</li>
 </ul>
 <h3 id="jira-as-of-tuesday-morning">Jira (as of Tuesday morning)<a class="headerlink" href="#jira-as-of-tuesday-morning" title="Permanent link">&para;</a></h3>
-<p>Automated Jira ticket summary email seems to be flaky (maybe corresponds to Jira maintenace?)</p>
 <table>
 <thead>
 <tr>
@@ -3303,20 +3302,22 @@
 -   AI (TimT): get HTCondor 23 daily repos in place.
     This is blocking OSG 23 really badly.
 -   AI (Mat): Shepherd Kojihub upgrade to allow promotion via Yubikey (SOFTWARE-5637)
+    - Needs to be updated for internal-development + internal-release
 -   AI (Mat): Replace "osg-internal" tags and targets in 3.7 with "osg-3.7-extra-deps" (SOFTWARE-5611)
 -   AI (Matt): Generate 5 Yubikeys with developer signing key</p>
-<p>OSG 3.6</p>
-<ul>
-<li>AI (Matt): XRootD 5.6.2 (sometime this week)</li>
-</ul>
-<p>Miscellaneous</p>
-<ul>
-<li>AI (BrianL): sort out osg-bot 2FA (needs to be done this week!)</li>
-</ul>
+<p>OSG 3.6
+-   AI (Matt): XRootD 5.6.2 (sometime this week)</p>
+<p>Miscellaneous
+-   AI (BrianL): sort out osg-bot 2FA (needs to be done this week!)</p>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<p>GlideinWMS 3.10.4 is ready for testing
+-   Mats Rynge reported a bug in token caching due to an EL7 pyjwt bug
+-   Marco gave Mats a patch -- this is not fatal, just errors in the logs</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>LIGO (Mat): unexpected behavior for XRootD gridmap, somewhat related Jira ticket</li>
+<li>CMS (Matt): jsoncpp version built for all EL versions, xrootd-cmstfc still needs to be built</li>
+</ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
