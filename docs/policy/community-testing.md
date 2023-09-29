@@ -38,7 +38,6 @@ Major Packages
 
 The following packages are considered critical to the production Open Science Grid:
 
-- BLAHP
 - CVMFS
 - Frontier Squid
 - GlideinWMS
