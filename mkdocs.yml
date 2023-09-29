@@ -50,7 +50,6 @@ nav:
     - Campus Cyberinfrastructure: 'policy/campus-cyberinfrastructure.md'
     - Collaborations and Bearer Tokens: 'policy/collab-bearer-tokens.md'
     - CREAM-CE Support: 'policy/cream-support.md'
-    - 'Release Series Support': 'policy/release-series.md'
     - 'Globus Toolkit Support': 'policy/globus-toolkit.md'
     - 'OASIS Repository Mirroring': 'policy/external-oasis-repos.md'
     - 'Flexible Release Model': 'policy/flexible-release-model.md'
@@ -246,3 +245,4 @@ plugins:
   - redirects:
       redirect_maps:
         policy/comanage-instructions-user.md: https://osg-htc.org/docs/common/contact-registration
+        policy/release-series.md: https://osg-htc.org/docs/release/release_series/
