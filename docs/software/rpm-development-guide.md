@@ -187,7 +187,7 @@ $ sha1sum /p/vdt/public/html/upstream/<PACKAGE>/<VERSION>/<FILE>
 !!! warning
     OSG software policy requires that all Git and GitHub repos used for building software have mirrors at the UW.
     Many software repos under the [opensciencegrid GitHub organization](https://github.com/opensciencegrid) are already mirrored.
-    If you are uncertain, or have a new project that you want mirrored, send email to <technology-team@opensciencegrid.org>.
+    If you are uncertain, or have a new project that you want mirrored, send email to <technology-team@osg-htc.org>.
 
 !!! note
     See also [advanced features for Git and GitHub repos](#advanced-features-for-git-and-github-repos).
@@ -224,7 +224,7 @@ In addition, if the repository contains a file called `rpm/<PROJECT>.spec`, it w
 !!! warning
     OSG software policy requires that all Git and GitHub repos used for building software have mirrors at the UW.
     Many software repos under the [opensciencegrid GitHub organization](https://github.com/opensciencegrid) are already mirrored.
-    If you are uncertain, or have a new project that you want mirrored, send email to <technology-team@opensciencegrid.org>.
+    If you are uncertain, or have a new project that you want mirrored, send email to <technology-team@osg-htc.org>.
 
 !!! note
     You can use a shorter syntax for GitHub repos -- see above.
