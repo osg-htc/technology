@@ -282,7 +282,7 @@ The following instructions are meant for the release manager (or interim release
         $ osg-notify --cert your-cert.pem --key your-key.pem \
             --no-sign --type production --message <PATH TO MESSAGE FILE> \
             --subject '<EMAIL SUBJECT>' \
-            --recipients "osg-general@opensciencegrid.org osg-operations@opensciencegrid.org osg-sites@opensciencegrid.org software-discuss@opensciencegrid.org site-announce@opensciencegrid.org" \
+            --recipients "osg-general@opensciencegrid.org osg-operations@opensciencegrid.org osg-sites@opensciencegrid.org software-discuss@osg-htc.org site-announce@opensciencegrid.org" \
             --oim-recipients resources --oim-recipients vos --oim-contact-type administrative
 
     Replacing `<EMAIL SUBJECT>` with an appropriate subject for your announcement and `<PATH TO MESSAGE FILE>` with the

@@ -19,7 +19,7 @@ Setup Instructions for New Team Members
 1. Access to Koji
     - After obtaining certificate, follow the instructions on the [Koji User Management doc](https://docs.google.com/document/d/1a-8vppY1J969p39ZB_2Pi6nrN-ApcyabC56Q64uqjto/edit#bookmark=id.gjdgxs)
 1. Sign up for mailing lists
-    - [software-discuss@opensciencegrid.org](https://listserv.fnal.gov/scripts/wa.exe?SUBED1=SOFTWARE-DISCUSS&A=1)
+    - [software-discuss@osg-htc.org](https://groups.google.com/u/1/a/osg-htc.org/g/software-discuss/members)
     - technology-team@osg-htc.org
     - osg-commits@cs.wisc.edu
 1. GitHub team membership

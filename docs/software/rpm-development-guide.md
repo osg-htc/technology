@@ -22,7 +22,7 @@ Contributing Packages
 We encourage all interested parties to contribute to OSG Software, and all the infrastructure described on this page should be friendly to external contributors.
 
 -   To participate in the packaging community: You must subscribe to the
-    [software-discuss@opensciencegrid.org](https://listserv.fnal.gov/scripts/wa.exe?SUBED1=SOFTWARE-DISCUSS&A=1) email list.
+    [software-discuss@osg-htc.org](https://groups.google.com/u/1/a/osg-htc.org/g/software-discuss/members) email list.
 -   To create and edit packages: [Obtain access to VDT SVN](http://vdt.cs.wisc.edu/internal/svn.html).
 -   To upload new source tarballs: You must have a cs.wisc.edu account with write access to the VDT source tarball directory. Email the osg-software list and request permission.
 -   To build using the OSG's Koji build system: 
