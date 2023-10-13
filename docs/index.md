@@ -19,7 +19,7 @@ Contact Us
 ----------
 
 -  [software-discuss@osg-htc.org](mailto:software-discuss@osg-htc.org) - General discussion of the OSG
-   Software stack ([subscribe](https://listserv.fnal.gov/scripts/wa.exe?SUBED1=SOFTWARE-DISCUSS&A=1))
+   Software stack ([subscribe](mailto:software-discuss+subscribe@osg-htc.org))
 -  [Slack channel](https://opensciencegrid.slack.com/messages/software) - if you can't create an account,
    send an e-mail to [help@osg-htc.org](mailto:help@osg-htc.org)
 
