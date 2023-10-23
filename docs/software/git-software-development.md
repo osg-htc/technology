@@ -241,9 +241,11 @@ Avoid committing large binaries or data sets.
 Ask yourself if they need to be in the repository before committing.
 
 If, somehow, a large file has been committed and pushed, it's not enough to 
-remove the file in another commit, the file must be removed from all of the 
-history or else the repository will still contain the large file as Git keeps 
-track of deleted files. This can be done using the `git filter-repo` command.
+remove the file in another commit.
+The file must be removed from all of the history or else the repository will still contain the large file as Git keeps 
+track of deleted files.
+This can be done using the [git rebase -i](#verify-that-only-the-files-intended-are-modified-in-each-commit)
+and `git filter-repo` commands.
 
 If a large file must be added to the repository.
 Use (Git LFS)[https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage]
