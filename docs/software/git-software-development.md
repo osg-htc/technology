@@ -233,6 +233,23 @@ There are a few considerations to note when it comes to whitespace.
     Then any functional changes to the text in a following commit will
     be easier to review.
 
+
+#### Don't commit large files
+
+Try to keep the repository small by not committing files that are too large.
+Avoid committing large binaries or data sets.
+Ask yourself if they need to be in the repository before committing.
+
+If, somehow, a large file has been committed and pushed, it's not enough to 
+remove the file in another commit.
+The file must be removed from all of the history or else the repository will still contain the large file as Git keeps 
+track of deleted files.
+This can be done using the [git rebase -i](#verify-that-only-the-files-intended-are-modified-in-each-commit)
+and `git filter-repo` commands.
+
+If a large file must be added to the repository.
+Use (Git LFS)[https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage]
+
 #### Verify that only the files intended are modified in each commit
 
 Sometimes you may have several files modified at once, but you only
