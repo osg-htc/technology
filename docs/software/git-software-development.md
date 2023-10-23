@@ -237,8 +237,8 @@ There are a few considerations to note when it comes to whitespace.
 #### Don't commit large files
 
 Try to keep the repository small by not committing files that are too large.
-Avoid committing large binaries or data sets. Ask yourself if they need to 
-in the repostory before committing.
+Avoid committing large binaries or data sets.
+Ask yourself if they need to be in the repository before committing.
 
 If, somehow, a large file has been committed and pushed, it's not enough to 
 remove the file in another commit, the file must be removed from all of the 
