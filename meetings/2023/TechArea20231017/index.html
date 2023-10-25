@@ -3343,6 +3343,11 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <p>Kubernetes Hackathon
+-   We want to upgrade various Tiger components (Kubernetes, Flux, Kustomize) and need to make sure
+    our existing apps don't get broken, making changes as necessary.
+    AI (BrianA): Investigate the upgrades.  Things to note:
+    -  "patchesStrategicMerge" has been replaced with "patches"
+    -  "vars" are deprecated; "replacements" are the suggested replacement
 -   AI (BrianL): TACC PATh Facility
 -   AI (Mat): Finish deploying repo on Tempest
 -   AI (Mat): osgvo-docker-pilot items</p>
@@ -3357,7 +3362,11 @@ Remaining top items
 <p>Miscellaneous
 -   AI (BrianL, Mat, Matt): offboard Brian Chase</p>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>HTCondor 23.1.0 and 23.0.1 are going onto the CHTC pool this week;
+    we want to deploy in the OSPool as well, but BrianL and Mat will need to help UChicago staff
+    upgrade their APs to OSG 23 first.</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
 <li>JLab (BrianL, Matt): <code>fts-rest-client</code> created non-RFC proxies, which XRootD didn't like (reporting an unknown CA).
