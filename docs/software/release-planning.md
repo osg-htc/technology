@@ -1,7 +1,9 @@
 Plans for Future Releases
 =========================
 
-This informal page is the mapping of "technology goals" (e.g., "release software Foo version X") to release numbers. It is meant to be updated as the releases evolve (and items are moved back in schedule). For package support policy between release series, see [this page](../policy/release-series.md).
+This informal page is the mapping of "technology goals" (e.g., "release software Foo version X") to release numbers.
+It is meant to be updated as the releases evolve (and items are moved back in schedule).
+For package support policy between release series, see [this page](../policy/release-series.md).
 
 Unless explicitly noted, bullet points refer to software in the release repo.
 
