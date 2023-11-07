@@ -3371,7 +3371,12 @@
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <p>OSG 23:</p>
 <ul>
-<li>AI (Matt): Update mash scripts to merge OSG and UW HTCondor repos (SOFTWARE-5653)</li>
+<li>AI (Matt): Update mash scripts to merge OSG and UW HTCondor repos (SOFTWARE-5653)<ul>
+<li>TimT to create empty HTC23 repos for testing</li>
+<li>Open item: Use same signing key(s) for OSG and HTC?</li>
+<li>Open item: Generate OSG 23 promotion key(s)</li>
+</ul>
+</li>
 <li>AI (BrianL): assign OSG 23 package builds</li>
 <li>AI (BrianL, Matt): populate bootstrap tags</li>
 <li>AI (BrianL, Matt): start massive rebuild</li>
@@ -3384,13 +3389,37 @@
 <p>Miscellaneous</p>
 <ul>
 <li>AI (Matt): autogenerate Topology IDs</li>
-<li>AI (Matt): Topology webhook -&gt; GitHub Actions</li>
+<li>AI (Matt): Topology webhook -&gt; GitHub Actions<ul>
+<li>Changes to 2FA will break the webhook in 44 days</li>
+<li>Currently lives in the topology repo, deployed in the same container</li>
+</ul>
+</li>
+<li>Gordon Watts: IRIS HEP talk topic<ul>
+<li>Something K8s related</li>
+</ul>
+</li>
+<li>oidc-agent-4.4.2 - still blocked<ul>
+<li>MattW: Create github ticket to restore spec file</li>
+</ul>
+</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>JLab (BrianL): running into TLS issues upon macaroon request with <code>fts-rest-transfer-client</code></li>
+<li>JLab (BrianL): running into TLS issues upon macaroon request with <code>fts-rest-transfer-client</code><ul>
+<li>Person to contact is John, currently unavailable</li>
+</ul>
+</li>
+<li>OSG School Participants requesting accounts</li>
+<li>X.509 CVMFS Helper Core Dumping on EL9 (Derek)<ul>
+<li>SciTokens support is wrapped up in this package</li>
+</ul>
+</li>
+<li>Python SciTokens EPEL package Rebuild for EL9 (Derek)<ul>
+<li>This is at least a month away from being released in EPEL</li>
+</ul>
+</li>
 </ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
@@ -3403,6 +3432,7 @@
 <li>AI (TimT): create an INF ticket for testing at the CHTC, BrianL to assign</li>
 </ul>
 </li>
+<li>pegasus 5.0.6</li>
 </ul>
 </li>
 <li>Ready for Release<ul>
