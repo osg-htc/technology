@@ -17,7 +17,7 @@ Similar to our existing RPM infrastructure, container image sources, build logs,
 publicly available repositories (e.g. GitHub, Docker Hub) for collaboration and traceability.
 Additionally, container images distributed by the OSG Software team will be based off of the latest version of a 
 [supported platform](https://osg-htc.org/docs/release/supported_platforms/) with software installed from OS,
-EPEL, and [OSG](../policy/software-release.md#yum-repositories) Yum repositories.
+EPEL, and [OSG](https://osg-htc.org/docs/common/yum/) Yum repositories.
 
 Tags
 ----

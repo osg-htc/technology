@@ -3,7 +3,7 @@ Plans for Future Releases
 
 This informal page is the mapping of "technology goals" (e.g., "release software Foo version X") to release numbers.
 It is meant to be updated as the releases evolve (and items are moved back in schedule).
-For package support policy between release series, see [this page](../policy/release-series.md).
+For package support policy between release series, see [this page](https://osg-htc.org/docs/release/release_series/).
 
 Unless explicitly noted, bullet points refer to software in the release repo.
 
@@ -32,7 +32,8 @@ Track OSG 3.4 updates through its [JIRA epic](https://jira.opensciencegrid.org/b
 
 ### Support Policy for OSG 3.3
 
-According to our [release support policy](../policy/release-series.md) and the release date of May 2017 for OSG 3.4, OSG 3.3 will receive routine software updates until November 2017 and critical updates until May 2018.
+According to our [release support policy](https://osg-htc.org/docs/release/release_series/) and the release date of May
+2017 for OSG 3.4, OSG 3.3 will receive routine software updates until November 2017 and critical updates until May 2018.
 
 Previous Releases
 -----------------
