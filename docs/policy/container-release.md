@@ -30,13 +30,13 @@ OSG Software container images will be built at least weekly and tagged with the 
 
 | Field      | Description                                                                                              |
 |------------|----------------------------------------------------------------------------------------------------------|
-| `<SERIES>` | The [OSG release series](release-series.md) used for software installation. Possible values: `3.6` and `3.5`. |
+| `<SERIES>` | The [OSG release series](https://osg-htc.org/docs/release/release_series/) used for software installation. Possible values: `3.6` and `3.5`. |
 | `<REPO>`   | [OSG Yum repositories](https://osg-htc.org/docs/common/yum/#repositories) used for software installation, including the corresponding `upcoming` repository. Possible values: `release` and `testing`. |
 | `<TIME>`   | The time that the image was built, in the format YYYYMMDD-HHMM; see below for an example.                 |
 
 
 !!! warning "OSG Software Release Series life cycle"
-    Container images based on [unsupported OSG release series](release-series.md) will stop receiving regular updates.
+    Container images based on [unsupported OSG release series](https://osg-htc.org/docs/release/release_series/) will stop receiving regular updates.
 
 !!! info "Immutable vs mutable tags"
     Image tags without a build time are treated as mutable, i.e. these tags are regularly updated with the latest
@@ -72,7 +72,7 @@ testing
 ```
 
 Where `<TIME>` is the time that the tag was built.
-See [this page](release-series.md) for more details on release series support.
+See [this page](https://osg-htc.org/docs/release/release_series/) for more details on release series support.
 
 ### Retention ###
 
