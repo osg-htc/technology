@@ -59,6 +59,29 @@ Follow the instructions below to approve a contact registration.
 
 1.  The user will get an email saying "Petition for <NAME> changed status from Pending Approval to Approved".
 
+Revoking AP login access
+------------------------
+
+Login access to AP1 (PATh Facility) and AP40 (OSPool) is controlled by membership to COManage groups.
+To revoke a user's login access to either of these APs, perform the following steps:
+
+1.  Find the corresponding user in [COManage](https://registry.cilogon.org/registry/co_dashboards/search?q=&co=7) and
+    revoke access to all OSG services or just the relevant AP:
+
+    1.  If you are revoking access to all OSG services, set the user's CO Person status to `Suspended`
+
+    1.  If you only need to revoke access to AP1 or AP40, remove the user from the `ap1-login` or `ap40-login` group,
+        respectively
+
+1.  Note the `OSG Username` identifier of the user
+
+1.  On the AP host(s) where you are revoking access, clear the SSSD cache as root:
+
+        :::console
+        root@ap-host # sss_cache -u <OSG Username>
+
+    Replacing `<OSG Username>` with the `OSG Username` identifier that you noted in step (2)
+
 Troubleshooting
 ---------------
 
