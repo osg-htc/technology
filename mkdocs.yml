@@ -31,6 +31,7 @@ nav:
       - How to Request Tokens: 'software/requesting-tokens.md'
     - Technologies:
       - OSPool Containers: 'software/ospool-containers.md'
+      - COmanage Troubleshooting Guide: 'software/comanage-troubleshooting-guide.md'
     - Software Support: 'policy/software-support.md'
     - Effort Tracking: 'software/effort-tracking.md'
     - Release Planning: 'software/release-planning.md'
