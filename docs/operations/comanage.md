@@ -1,15 +1,18 @@
-Approving COManage Registrations
-================================
+COManage Operations
+====================
 
 OSG is using a new identity management system called COManage.
 This system is used for managing contact information for OSPool and PATh Facility users, Topology site contacts, and
 OSG/PATh staff.
 
-User registrations must be manually approved by a COManage admin.
-Follow the instructions below to approve a user registration.
+Contact Registration
+--------------------
+
+Contact registrations must be manually approved by a COManage admin.
+Follow the instructions below to approve a contact registration.
 
 !!! note
-    This page is for COManage Admins who want to approve user registrations.
+    This page is for COManage Admins who want to approve contact registrations.
     If you are a user who wants to register with COManage,
     go to the [Registering for the OSG COManage](https://osg-htc.org/docs/common/contact-registration) page instead.
 
