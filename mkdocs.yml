@@ -31,6 +31,8 @@ nav:
       - How to Request Tokens: 'software/requesting-tokens.md'
     - Technologies:
       - OSPool Containers: 'software/ospool-containers.md'
+    - Operations:
+      - COManage: 'operations/comanage.md'
     - Software Support: 'policy/software-support.md'
     - Effort Tracking: 'software/effort-tracking.md'
     - Release Planning: 'software/release-planning.md'
@@ -57,7 +59,6 @@ nav:
     - Container Release Policy: 'policy/container-release.md'
     - 'Community Testing': 'policy/community-testing.md'
     - New OSPool User Registration: 'policy/new-ospool-user.md'
-    - Approving COManage Registrations: 'policy/comanage-instructions-admin.md'
     - Handling Topology/Contacts Registrations: 'policy/topology-registration.md'
   - Documentation:
     - Writing Documentation: 'documentation/writing-documentation.md'
