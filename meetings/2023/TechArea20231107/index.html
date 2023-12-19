@@ -3372,7 +3372,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong>  </li>
+<li><strong>Attending:</strong> BrianL, Derek, JohnT, MattW, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
@@ -3435,12 +3435,37 @@
 <p>Remaining OSG 23 items <a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-5503">https://opensciencegrid.atlassian.net/browse/SOFTWARE-5503</a>.
 -   Figure out if we need VOMS for EL9/an update to EL8
 -   AI (Tim): Update tarball scripts to use <code>23-main</code> (SOFTWARE-5713)
--   AI (BrianL): Finish transition of internal containers to OSG 23
--   AI (Matt): Write signed OSG 23 RPMs to disk and turn strict signature checking on for 23-development</p>
+-   AI (BrianL): Finish transition of internal containers to OSG 23</p>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>How should we manage containers produced by OSG Staff?<ul>
+<li>We should separate needs/reqs for containers that are built off of the OSG Software pipeline (dev -&gt; testing -&gt;
+    release Yum repos) vs everything else</li>
+<li>Ideally, for everything else, we'd have a GitHub workflow template or action and some convention for tagging as
+    well as immutability/retention policies</li>
+<li>Repo sprawl is a concern for security and management.
+    Harbor creds are per organization so it may be prudent to separate out mostly-internally facing containers to a
+    separate project, e.g. <code>osg-internal</code></li>
+<li>Consolidation into the <code>images</code> repo doesn't work well for many images right now, especially those with "large"
+    code bases as it makes dev (think tracking issues/PRs) more difficult.
+    We should think of the SVN packaging repo as an analog here.
+    We could add some additional flexibility to the <code>images</code> repo that would allow per-image references to external,
+    trusted repos and usage of build processes that aren't so tightly tied to the Software release process.</li>
+<li>For the time being for the <code>xrootd-monitoring-collector</code>, we should just use a custom GitHub Action</li>
+<li>Implementation discussion in <a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-5013">SOFTWARE-5013</a></li>
+</ul>
+</li>
+<li>Release of scitokens-cpp is in bodhi and needs karma. Ready for TimT tobuild for Debian<ul>
+<li>EPEL7: https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2023-f0f162d810</li>
+<li>EPEL8: https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2023-f9dc18f284</li>
+<li>EPEL9: https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2023-2dfb911a54</li>
+</ul>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>CVMFS issue with the latest version that causes the client to hang. DaveD is on it.</li>
+</ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <ul>
 <li>scitokens-cpp release this week.  Already in fedora update system bodhi.</li>
