@@ -769,43 +769,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-rebuild-the-docker-software-base" class="md-nav__link">
-    Step 3: Rebuild the Docker software base
+  <a href="#step-3-update-the-release-information" class="md-nav__link">
+    Step 3: Update the Release Information
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-install-the-tarballs-into-oasis" class="md-nav__link">
-    Step 4: Install the tarballs into OASIS
+  <a href="#step-4-rebuild-the-docker-software-base" class="md-nav__link">
+    Step 4: Rebuild the Docker software base
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-update-the-docker-wn-client" class="md-nav__link">
-    Step 5: Update the Docker WN client
+  <a href="#step-5-install-the-tarballs-into-oasis" class="md-nav__link">
+    Step 5: Install the tarballs into OASIS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-6-verify-the-ca-certificates-update" class="md-nav__link">
-    Step 6: Verify the CA certificates update
+  <a href="#step-6-update-the-docker-wn-client" class="md-nav__link">
+    Step 6: Update the Docker WN client
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-7-merge-any-pending-documentation" class="md-nav__link">
-    Step 7: Merge any pending documentation
+  <a href="#step-7-verify-the-ca-certificates-update" class="md-nav__link">
+    Step 7: Verify the CA certificates update
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-8-update-the-release-information" class="md-nav__link">
-    Step 8: Update the Release Information
+  <a href="#step-8-merge-any-pending-documentation" class="md-nav__link">
+    Step 8: Merge any pending documentation
   </a>
   
 </li>
@@ -3474,43 +3474,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-rebuild-the-docker-software-base" class="md-nav__link">
-    Step 3: Rebuild the Docker software base
+  <a href="#step-3-update-the-release-information" class="md-nav__link">
+    Step 3: Update the Release Information
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-install-the-tarballs-into-oasis" class="md-nav__link">
-    Step 4: Install the tarballs into OASIS
+  <a href="#step-4-rebuild-the-docker-software-base" class="md-nav__link">
+    Step 4: Rebuild the Docker software base
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-update-the-docker-wn-client" class="md-nav__link">
-    Step 5: Update the Docker WN client
+  <a href="#step-5-install-the-tarballs-into-oasis" class="md-nav__link">
+    Step 5: Install the tarballs into OASIS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-6-verify-the-ca-certificates-update" class="md-nav__link">
-    Step 6: Verify the CA certificates update
+  <a href="#step-6-update-the-docker-wn-client" class="md-nav__link">
+    Step 6: Update the Docker WN client
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-7-merge-any-pending-documentation" class="md-nav__link">
-    Step 7: Merge any pending documentation
+  <a href="#step-7-verify-the-ca-certificates-update" class="md-nav__link">
+    Step 7: Verify the CA certificates update
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-8-update-the-release-information" class="md-nav__link">
-    Step 8: Update the Release Information
+  <a href="#step-8-merge-any-pending-documentation" class="md-nav__link">
+    Step 8: Merge any pending documentation
   </a>
   
 </li>
@@ -3558,14 +3558,22 @@ This document does NOT discuss the policy for deciding what goes into a release,
 <p>Due to the length of time that this process takes, it is recommended to do the release over two or more days to allow for errors to be corrected and tests to be run.</p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <ul>
-<li>User certificate registered with OSG's koji with build and release team privileges</li>
-<li>An account on UW CS machines (e.g. <code>moria</code>) to access UW's AFS</li>
+<li>UW netID registered with OSG's koji with build and release team privileges<ul>
+<li>On laptop: kinit netid@AD.WISC.EDU</li>
+</ul>
+</li>
+<li>An account on <code>dumbo</code> and UW CS to access UW's AFS<ul>
+<li>On dumbo: kinit user@CS.WISC.EDU; aklog</li>
+</ul>
+</li>
 <li><code>release-tools</code> scripts in your <code>PATH</code> (<a href="https://github.com/opensciencegrid/release-tools">GitHub</a>)</li>
 <li><code>osg-build</code> scripts in your <code>PATH</code> (installed via OSG yum repos or <a href="https://github.com/opensciencegrid/osg-build">source</a>)</li>
 </ul>
 <h2 id="pick-the-version-number">Pick the Version Number<a class="headerlink" href="#pick-the-version-number" title="Permanent link">&para;</a></h2>
-<p>The rest of this document makes references to <code>&lt;VERSION(S)&gt;</code> and <code>&lt;NON-UPCOMING VERSIONS(S)&gt;</code>, which refer to a space-delimited list of OSG version(s) and that same list minus the <code>upcoming</code> versions (e.g. <code>3.6.220609 3.4.220609-upcoming</code> and <code>3.6.220609</code>).
-Generally, the third number is the release date encoded as <code>yymmdd</code>.
+<p>The rest of this document makes references to <code>&lt;VERSION(S)&gt;</code> and <code>&lt;NON-UPCOMING VERSIONS(S)&gt;</code>, which refer to a space-delimited list of a date string plus the OSG version(s) and that same list minus the <code>upcoming</code> versions (e.g. <code>231130 3.6 3.6-upcoming 23 23-upcoming</code> and <code>231130 3.6 23</code>).
+Generally, the first number is the release date encoded as <code>yymmdd</code>.
+Also this document make references to <code>&lt;FULL VERSION(S)&gt;</code>, which refer to a space-delimited list of version numbers
+(e.g. <code>3.6.231130 23.231130</code>).
 If you are unsure about either the version or revision, please consult the release manager.</p>
 <h2 id="day-0-generate-preliminary-release-list">Day 0: Generate Preliminary Release List<a class="headerlink" href="#day-0-generate-preliminary-release-list" title="Permanent link">&para;</a></h2>
 <p>The release manager often needs a tentative list of packages to be released.
@@ -3574,7 +3582,8 @@ This is done by finding the package differences between osg-testing and the curr
 <div class="codehilite"><pre><span></span><code><span class="nv">VERSIONS</span><span class="o">=</span><span class="s1">&#39;&lt;VERSION(S)&gt;&#39;</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/opensciencegrid/release-tools.git
+<div class="codehilite"><pre><span></span><code><span class="c1"># laptop</span>
+git clone https://github.com/opensciencegrid/release-tools.git
 <span class="nb">cd</span> release-tools
 ./0-generate-pkg-list <span class="nv">$VERSIONS</span>
 </code></pre></div>
@@ -3586,7 +3595,8 @@ This is done by finding the package differences between osg-testing and the curr
 <div class="codehilite"><pre><span></span><code><span class="nv">VERSIONS</span><span class="o">=</span><span class="s1">&#39;&lt;VERSION(S)&gt;&#39;</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>./1-verify-prerelease <span class="nv">$VERSIONS</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># laptop</span>
+./1-verify-prerelease <span class="nv">$VERSIONS</span>
 </code></pre></div>
 
 <p>If there are any discrepancies, consult the release manager. You may have to tag or untag packages with the <code>osg-koji</code> tool.</p>
@@ -3621,44 +3631,47 @@ This is done by finding the package differences between osg-testing and the curr
 <div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>./1-regen-repos <span class="nv">$NON_UPCOMING_VERSIONS</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># laptop</span>
+./1-regen-repos <span class="nv">$NON_UPCOMING_VERSIONS</span>
 </code></pre></div>
 
 <h3 id="step-4-create-the-client-tarballs">Step 4: Create the client tarballs<a class="headerlink" href="#step-4-create-the-client-tarballs" title="Permanent link">&para;</a></h3>
-<p>Create the OSG client tarballs on dumbo.chtc.wisc.edu using the relevant script from git:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSION</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION&gt;&quot;</span>
+<p>Create the OSG client tarballs on <code>dumbo</code> using the relevant script from git:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">FULL_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;FULL VERSION(S)&gt;&quot;</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/opensciencegrid/tarball-client.git
-<span class="nb">pushd</span> tarball-client
-./docker-make-client-tarball --osgver <span class="m">3</span>.6 --version <span class="nv">$NON_UPCOMING_VERSION</span> --all
-<span class="nb">popd</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># dumbo.chtc.wisc.edu</span>
+git clone https://github.com/opensciencegrid/tarball-client.git
+<span class="nb">cd</span> tarball-client
+<span class="k">for</span> ver <span class="k">in</span> <span class="nv">$FULL_VERSIONS</span><span class="p">;</span> <span class="k">do</span>
+    ./docker-make-client-tarball --version <span class="nv">$ver</span> --all
+<span class="k">done</span>
 </code></pre></div>
 
 <p>The tarballs are found in the tarball-client directory.</p>
 <h3 id="step-5-briefly-test-the-client-tarballs">Step 5: Briefly test the client tarballs<a class="headerlink" href="#step-5-briefly-test-the-client-tarballs" title="Permanent link">&para;</a></h3>
-<p>Currently, the yum repositories on dumbo.chtc.wisc.edu are configured in such a way that the
-verify tarball script fails. So, copy the tarballs to a known directory on moria.cs.wisc.edu.</p>
+<p>Test the OSG client tarballs in Docker containers on <code>dumbo</code> using the relevant release-tools script:</p>
 <p>As an <strong>unprivileged user</strong>, run the script:</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>./1-verify-tarballs <span class="nv">$NON_UPCOMING_VERSIONS</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># dumbo.chtc.wisc.edu</span>
+./1-verify-tarballs <span class="nv">$NON_UPCOMING_VERSIONS</span>
 </code></pre></div>
 
 <p>If you have time, try some of the binaries, such as grid-proxy-init.</p>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p>We need to automate this and have it run on the proper architectures and version of RHEL.</p>
-</div>
 <h3 id="step-6-wait">Step 6: Wait<a class="headerlink" href="#step-6-wait" title="Permanent link">&para;</a></h3>
 <p>Wait for clearance. The OSG Release Coordinator (in consultation with the Software Team and any testers) need to sign off on the update before it is released. If you are releasing things over two days, this is a good place to stop for the day.</p>
 <h2 id="day-2-pushing-the-release">Day 2: Pushing the Release<a class="headerlink" href="#day-2-pushing-the-release" title="Permanent link">&para;</a></h2>
 <h3 id="step-1-upload-the-tarballs-to-afs">Step 1: Upload the tarballs to AFS<a class="headerlink" href="#step-1-upload-the-tarballs-to-afs" title="Permanent link">&para;</a></h3>
-<p>Upload the tarballs to AFS. (This step moved to release
+<p>On <code>dumbo</code>, upload the tarballs to AFS. (This step moved to release
 day, since repo.opensciencegrid.org tarballs are automatically updated hourly from the VDT
 web site served out of AFS.)</p>
-<div class="codehilite"><pre><span></span><code>./2-upload-tarballs-to-afs <span class="nv">$NON_UPCOMING_VERSIONS</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># dumbo.chtc.wisc.edu</span>
+./2-upload-tarballs-to-afs <span class="nv">$NON_UPCOMING_VERSIONS</span>
 </code></pre></div>
 
 <h3 id="step-2-push-from-pre-release-to-release">Step 2: Push from pre-release to release<a class="headerlink" href="#step-2-push-from-pre-release-to-release" title="Permanent link">&para;</a></h3>
@@ -3667,31 +3680,45 @@ locks the repos and regenerates them.</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">VERSIONS</span><span class="o">=</span><span class="s1">&#39;&lt;VERSION(S)&gt;&#39;</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="m">2</span>-push-release <span class="nv">$VERSIONS</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># laptop</span>
+<span class="m">2</span>-push-release <span class="nv">$VERSIONS</span>
 </code></pre></div>
 
-<h3 id="step-3-rebuild-the-docker-software-base">Step 3: Rebuild the Docker software base<a class="headerlink" href="#step-3-rebuild-the-docker-software-base" title="Permanent link">&para;</a></h3>
+<h3 id="step-3-update-the-release-information">Step 3: Update the Release Information<a class="headerlink" href="#step-3-update-the-release-information" title="Permanent link">&para;</a></h3>
+<p>This script updates the release information in AFS.</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">VERSIONS</span><span class="o">=</span><span class="s1">&#39;&lt;VERSION(S)&gt;&#39;</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># laptop</span>
+<span class="m">2</span>-update-info <span class="nv">$VERSIONS</span>
+</code></pre></div>
+
+<ol>
+<li><code>*.txt</code> files are created and it should be verified that they've been moved to /p/vdt/public/html/release-info/ on UW's AFS.</li>
+</ol>
+<h3 id="step-4-rebuild-the-docker-software-base">Step 4: Rebuild the Docker software base<a class="headerlink" href="#step-4-rebuild-the-docker-software-base" title="Permanent link">&para;</a></h3>
 <p>Go to the <code>build-docker-image</code> workflow page of the <code>opensciencegrid/docker-software-base</code>:
 <a href="https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml">https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml</a>
 Click the <code>Run Workflow</code> button, select the <code>master</code> branch, and click <code>Run workflow</code>.</p>
-<h3 id="step-4-install-the-tarballs-into-oasis">Step 4: Install the tarballs into OASIS<a class="headerlink" href="#step-4-install-the-tarballs-into-oasis" title="Permanent link">&para;</a></h3>
+<h3 id="step-5-install-the-tarballs-into-oasis">Step 5: Install the tarballs into OASIS<a class="headerlink" href="#step-5-install-the-tarballs-into-oasis" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You must be an OASIS manager of the <code>mis</code> VO to do these steps. Known managers as of 2014-07-22: Mat, Tim C, Tim T, Brian L. </p>
 </div>
 <p>Get the uploader script from Git and run it with <code>osgrun</code> from the UW AFS install of the tarball client you made earlier. On a UW CSL machine:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">FULL_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;FULL VERSION(S)&gt;&quot;</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> /tmp
+<div class="codehilite"><pre><span></span><code><span class="c1"># dumbo.chtc.wisc.edu</span>
 git clone --depth <span class="m">1</span> https://github.com/opensciencegrid/tarball-client.git
-<span class="k">for</span> ver <span class="k">in</span> <span class="nv">$NON_UPCOMING_VERSIONS</span><span class="p">;</span> <span class="k">do</span>
-    /p/vdt/workspace/tarball-client/current/sys/osgrun /tmp/tarball-client/upload-tarballs-to-oasis <span class="nv">$ver</span>
+<span class="nb">cd</span> tarball-client
+<span class="k">for</span> ver <span class="k">in</span> <span class="nv">$FULL_VERSIONS</span><span class="p">;</span> <span class="k">do</span>
+    ./upload-tarballs-to-oasis <span class="nv">$ver</span>
 <span class="k">done</span>
 </code></pre></div>
 
 <p>The script will automatically ssh you to oasis-login.opensciencegrid.org and give you instructions to complete the process.</p>
-<h3 id="step-5-update-the-docker-wn-client">Step 5: Update the Docker WN client<a class="headerlink" href="#step-5-update-the-docker-wn-client" title="Permanent link">&para;</a></h3>
+<h3 id="step-6-update-the-docker-wn-client">Step 6: Update the Docker WN client<a class="headerlink" href="#step-6-update-the-docker-wn-client" title="Permanent link">&para;</a></h3>
 <p>The GitHub repository at <a href="https://github.com/opensciencegrid/docker-osg-wn">opensciencegrid/docker-osg-wn</a> controls the
 contents and tags pushed for the <a href="https://hub.docker.com/r/opensciencegrid/osg-wn/">opensciencegrid/osg-wn</a> container image.</p>
 <ol>
@@ -3705,29 +3732,19 @@ contents and tags pushed for the <a href="https://hub.docker.com/r/opensciencegr
 <p>Verify that all builds succeed</p>
 </li>
 </ol>
-<h3 id="step-6-verify-the-ca-certificates-update">Step 6: Verify the CA certificates update<a class="headerlink" href="#step-6-verify-the-ca-certificates-update" title="Permanent link">&para;</a></h3>
+<h3 id="step-7-verify-the-ca-certificates-update">Step 7: Verify the CA certificates update<a class="headerlink" href="#step-7-verify-the-ca-certificates-update" title="Permanent link">&para;</a></h3>
 <p>If this release contains either the <code>osg-ca-certs</code> package, verify that the CA web site has been updated.
 Wait for the <a href="https://repo.opensciencegrid.org/cadist/">CA certificates</a> to be updated.
 It may take a while for the updates to reach the mirror used to update the web site.
 The repository is checked hourly for updated CA certificates.
 Once the web page is updated, run the following command to update the CA certificates in the tarball installation and
 verify that the version of the CA certificates match the version that was promoted to release.</p>
-<div class="codehilite"><pre><span></span><code>/p/vdt/workspace/tarball-client/current/amd64_rhel7/osgrun osg-update-data
+<div class="codehilite"><pre><span></span><code><span class="c1"># moria.cs.wisc.edu</span>
+/p/vdt/workspace/tarball-client/current/amd64_rhel7/osgrun osg-update-data
 </code></pre></div>
 
-<h3 id="step-7-merge-any-pending-documentation">Step 7: Merge any pending documentation<a class="headerlink" href="#step-7-merge-any-pending-documentation" title="Permanent link">&para;</a></h3>
+<h3 id="step-8-merge-any-pending-documentation">Step 8: Merge any pending documentation<a class="headerlink" href="#step-8-merge-any-pending-documentation" title="Permanent link">&para;</a></h3>
 <p>For each documentation ticket in this release, merge the pull requests mentioned in the description or comments.</p>
-<h3 id="step-8-update-the-release-information">Step 8: Update the Release Information<a class="headerlink" href="#step-8-update-the-release-information" title="Permanent link">&para;</a></h3>
-<p>This script updates the release information in AFS.</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">VERSIONS</span><span class="o">=</span><span class="s1">&#39;&lt;VERSION(S)&gt;&#39;</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="m">2</span>-update-info <span class="nv">$VERSIONS</span>
-</code></pre></div>
-
-<ol>
-<li><code>*.txt</code> files are created and it should be verified that they've been moved to /p/vdt/public/html/release-info/ on UW's AFS.</li>
-</ol>
 <h3 id="step-9-update-news">Step 9: Update News<a class="headerlink" href="#step-9-update-news" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
