@@ -10,16 +10,20 @@ Due to the length of time that this process takes, it is recommended to do the r
 Requirements
 ------------
 
--   User certificate registered with OSG's koji with build and release team privileges
--   An account on UW CS machines (e.g. `moria`) to access UW's AFS
+-   UW netID registered with OSG's koji with build and release team privileges
+    -   On laptop: kinit netid@AD.WISC.EDU
+-   An account on `dumbo` and UW CS to access UW's AFS
+    -   On dumbo: kinit user@CS.WISC.EDU; aklog
 -   `release-tools` scripts in your `PATH` ([GitHub](https://github.com/opensciencegrid/release-tools))
 -   `osg-build` scripts in your `PATH` (installed via OSG yum repos or [source](https://github.com/opensciencegrid/osg-build))
 
 Pick the Version Number
 -----------------------
 
-The rest of this document makes references to `<VERSION(S)>` and `<NON-UPCOMING VERSIONS(S)>`, which refer to a space-delimited list of OSG version(s) and that same list minus the `upcoming` versions (e.g. `3.6.220609 3.4.220609-upcoming` and `3.6.220609`).
-Generally, the third number is the release date encoded as `yymmdd`.
+The rest of this document makes references to `<VERSION(S)>` and `<NON-UPCOMING VERSIONS(S)>`, which refer to a space-delimited list of a date string plus the OSG version(s) and that same list minus the `upcoming` versions (e.g. `231130 3.6 3.6-upcoming 23 23-upcoming` and `231130 3.6 23`).
+Generally, the first number is the release date encoded as `yymmdd`.
+Also this document make references to `<FULL VERSION(S)>`, which refer to a space-delimited list of version numbers
+(e.g. `3.6.231130 23.231130`).
 If you are unsure about either the version or revision, please consult the release manager.
 
 Day 0: Generate Preliminary Release List
@@ -34,6 +38,7 @@ Run `0-generate-pkg-list` from a machine that has your koji-registered user cert
 VERSIONS='<VERSION(S)>'
 ```
 ```bash
+# laptop
 git clone https://github.com/opensciencegrid/release-tools.git
 cd release-tools
 ./0-generate-pkg-list $VERSIONS
@@ -52,6 +57,7 @@ Compare the list of packages already in pre-release to the final list for the re
 VERSIONS='<VERSION(S)>'
 ```
 ```bash
+# laptop
 ./1-verify-prerelease $VERSIONS
 ```
 
@@ -85,29 +91,31 @@ To avoid 404 errors when retrieving packages, it's necessary to regenerate the b
 NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
 ```
 ```bash
+# laptop
 ./1-regen-repos $NON_UPCOMING_VERSIONS
 ```
 
 ### Step 4: Create the client tarballs
 
-Create the OSG client tarballs on dumbo.chtc.wisc.edu using the relevant script from git:
+Create the OSG client tarballs on `dumbo` using the relevant script from git:
 
 ```bash
-NON_UPCOMING_VERSION="<NON-UPCOMING VERSION>"
+FULL_VERSIONS="<FULL VERSION(S)>"
 ```
 ```bash
+# dumbo.chtc.wisc.edu
 git clone https://github.com/opensciencegrid/tarball-client.git
-pushd tarball-client
-./docker-make-client-tarball --osgver 3.6 --version $NON_UPCOMING_VERSION --all
-popd
+cd tarball-client
+for ver in $FULL_VERSIONS; do
+    ./docker-make-client-tarball --version $ver --all
+done
 ```
 
 The tarballs are found in the tarball-client directory.
 
 ### Step 5: Briefly test the client tarballs
 
-Currently, the yum repositories on dumbo.chtc.wisc.edu are configured in such a way that the
-verify tarball script fails. So, copy the tarballs to a known directory on moria.cs.wisc.edu.
+Test the OSG client tarballs in Docker containers on `dumbo` using the relevant release-tools script:
 
 As an **unprivileged user**, run the script:
 
@@ -115,13 +123,11 @@ As an **unprivileged user**, run the script:
 NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
 ```
 ```bash
+# dumbo.chtc.wisc.edu
 ./1-verify-tarballs $NON_UPCOMING_VERSIONS
 ```
 
 If you have time, try some of the binaries, such as grid-proxy-init.
-
-!!! todo
-    We need to automate this and have it run on the proper architectures and version of RHEL.
 
 ### Step 6: Wait
 
@@ -132,11 +138,15 @@ Day 2: Pushing the Release
 
 ### Step 1: Upload the tarballs to AFS
 
-Upload the tarballs to AFS. (This step moved to release
+On `dumbo`, upload the tarballs to AFS. (This step moved to release
 day, since repo.opensciencegrid.org tarballs are automatically updated hourly from the VDT
 web site served out of AFS.)
 
 ```bash
+NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
+```
+```bash
+# dumbo.chtc.wisc.edu
 ./2-upload-tarballs-to-afs $NON_UPCOMING_VERSIONS
 ```
 
@@ -149,16 +159,31 @@ locks the repos and regenerates them.
 VERSIONS='<VERSION(S)>'
 ```
 ```bash
+# laptop
 2-push-release $VERSIONS
 ```
 
-### Step 3: Rebuild the Docker software base
+### Step 3: Update the Release Information
+
+This script updates the release information in AFS.
+
+```bash
+VERSIONS='<VERSION(S)>'
+```
+```bash
+# laptop
+2-update-info $VERSIONS
+```
+
+1.  `*.txt` files are created and it should be verified that they've been moved to /p/vdt/public/html/release-info/ on UW's AFS.
+
+### Step 4: Rebuild the Docker software base
 
 Go to the `build-docker-image` workflow page of the `opensciencegrid/docker-software-base`:
 <https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml>
 Click the `Run Workflow` button, select the `master` branch, and click `Run workflow`.
 
-### Step 4: Install the tarballs into OASIS
+### Step 5: Install the tarballs into OASIS
 
 !!! note
     You must be an OASIS manager of the `mis` VO to do these steps. Known managers as of 2014-07-22: Mat, Tim C, Tim T, Brian L. 
@@ -166,19 +191,20 @@ Click the `Run Workflow` button, select the `master` branch, and click `Run work
 Get the uploader script from Git and run it with `osgrun` from the UW AFS install of the tarball client you made earlier. On a UW CSL machine:
 
 ```bash
-NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
+FULL_VERSIONS="<FULL VERSION(S)>"
 ```
 ```bash
-cd /tmp
+# dumbo.chtc.wisc.edu
 git clone --depth 1 https://github.com/opensciencegrid/tarball-client.git
-for ver in $NON_UPCOMING_VERSIONS; do
-    /p/vdt/workspace/tarball-client/current/sys/osgrun /tmp/tarball-client/upload-tarballs-to-oasis $ver
+cd tarball-client
+for ver in $FULL_VERSIONS; do
+    ./upload-tarballs-to-oasis $ver
 done
 ```
 
 The script will automatically ssh you to oasis-login.opensciencegrid.org and give you instructions to complete the process.
 
-### Step 5: Update the Docker WN client
+### Step 6: Update the Docker WN client
 
 The GitHub repository at [opensciencegrid/docker-osg-wn](https://github.com/opensciencegrid/docker-osg-wn) controls the
 contents and tags pushed for the [opensciencegrid/osg-wn](https://hub.docker.com/r/opensciencegrid/osg-wn/) container image.
@@ -189,7 +215,7 @@ contents and tags pushed for the [opensciencegrid/osg-wn](https://hub.docker.com
 
 1.  Verify that all builds succeed
 
-### Step 6: Verify the CA certificates update
+### Step 7: Verify the CA certificates update
 
 If this release contains either the `osg-ca-certs` package, verify that the CA web site has been updated.
 Wait for the [CA certificates](https://repo.opensciencegrid.org/cadist/) to be updated.
@@ -199,26 +225,14 @@ Once the web page is updated, run the following command to update the CA certifi
 verify that the version of the CA certificates match the version that was promoted to release.
 
 ```bash
+# moria.cs.wisc.edu
 /p/vdt/workspace/tarball-client/current/amd64_rhel7/osgrun osg-update-data
 ```
 
-### Step 7: Merge any pending documentation
+### Step 8: Merge any pending documentation
 
 For each documentation ticket in this release, merge the pull requests mentioned in the description or comments.
 
-
-### Step 8: Update the Release Information
-
-This script updates the release information in AFS.
-
-```bash
-VERSIONS='<VERSION(S)>'
-```
-```bash
-2-update-info $VERSIONS
-```
-
-1.  `*.txt` files are created and it should be verified that they've been moved to /p/vdt/public/html/release-info/ on UW's AFS.
 
 ### Step 9: Update News
 
