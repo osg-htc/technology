@@ -22,6 +22,13 @@ Under certain circumstances Dex may not be able to match a user to their COManag
  - Tiger-Dex credentials missing some or all of a users group permissions.
  - User unable to connect to the Tiger cluster.
  - Error message from Tiger involving an unauthorized user.
+    - Example error message: 
+
+    >kubectl get pods -n osg-dev
+
+    >Error from server (Forbidden): pods is forbidden: User "user@email.edu" cannot list resource "pods" in API group "" in the namespace "osg-dev""
+ 
+ - Empty Dex response
 
 #### Next actions
 
@@ -29,6 +36,7 @@ Under certain circumstances Dex may not be able to match a user to their COManag
  which shares the same value as the COManage identifier used as a source for the LDAP provisioner target.
     - LDAP attributes and their COManage sources can be found [here](https://registry.cilogon.org/registry/ldap_provisioner/co_ldap_provisioner_targets/edit/6)
 1. Have the user log in
+1. Have the user fetch a new Dex token  
 
 ####Explanation of SAML -> CILogon OIDC sub claim -> LDAP matching used in Dex.
 
