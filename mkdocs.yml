@@ -31,9 +31,6 @@ nav:
       - How to Request Tokens: 'software/requesting-tokens.md'
     - Technologies:
       - OSPool Containers: 'software/ospool-containers.md'
-    - Operations:
-      - COManage: 'operations/comanage.md'
-      - COmanage Troubleshooting Guide: 'software/comanage-troubleshooting-guide.md'
     - Software Support: 'policy/software-support.md'
     - Effort Tracking: 'software/effort-tracking.md'
     - Release Planning: 'software/release-planning.md'
@@ -48,6 +45,9 @@ nav:
     - ITB Prerelease Testing: 'release/itb-testing.md'
     - Empty Packages: 'release/empty-pkgs.md'
     - Acceptance Testing: 'release/acceptance-testing.md'
+  - Operations:
+    - COManage: 'operations/comanage.md'
+    - COmanage Troubleshooting Guide: 'operations/comanage-troubleshooting-guide.md'
   - Policy:
     - GridFTP and GSI Migration: 'policy/gridftp-gsi-migration.md'
     - Campus Cyberinfrastructure: 'policy/campus-cyberinfrastructure.md'
