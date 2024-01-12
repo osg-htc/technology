@@ -46,7 +46,7 @@ nav:
     - Empty Packages: 'release/empty-pkgs.md'
     - Acceptance Testing: 'release/acceptance-testing.md'
   - Operations:
-    - COManage: 'operations/comanage.md'
+    - COManage SOP: 'operations/comanage-sop.md'
     - COmanage Troubleshooting Guide: 'operations/comanage-troubleshooting-guide.md'
   - Policy:
     - GridFTP and GSI Migration: 'policy/gridftp-gsi-migration.md'
