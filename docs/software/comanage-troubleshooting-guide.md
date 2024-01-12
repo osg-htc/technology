@@ -35,7 +35,7 @@ Under certain circumstances Dex may not be able to match a user to their COManag
 1. Have the user log in
 1. Have the user fetch a new Dex token  
 
-####Explanation of SAML -> CILogon OIDC sub claim -> LDAP matching used in Dex.
+#### Explanation of SAML -> CILogon OIDC sub claim -> LDAP matching used in Dex.
 
 How the OAuth2 server does the following:
 
