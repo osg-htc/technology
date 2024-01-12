@@ -31,6 +31,8 @@ nav:
       - How to Request Tokens: 'software/requesting-tokens.md'
     - Technologies:
       - OSPool Containers: 'software/ospool-containers.md'
+    - Operations:
+      - COManage: 'operations/comanage.md'
       - COmanage Troubleshooting Guide: 'software/comanage-troubleshooting-guide.md'
     - Software Support: 'policy/software-support.md'
     - Effort Tracking: 'software/effort-tracking.md'
@@ -58,7 +60,6 @@ nav:
     - Container Release Policy: 'policy/container-release.md'
     - 'Community Testing': 'policy/community-testing.md'
     - New OSPool User Registration: 'policy/new-ospool-user.md'
-    - Approving COManage Registrations: 'policy/comanage-instructions-admin.md'
     - Handling Topology/Contacts Registrations: 'policy/topology-registration.md'
   - Documentation:
     - Writing Documentation: 'documentation/writing-documentation.md'
@@ -73,6 +74,8 @@ nav:
     - SHA-2 Support: 'projects/sha2-support.md'
     - Migrating Documents to Markdown: 'documentation/markdown-migration.md'
   - Meetings:
+    - January 9, 2024: 'meetings/2024/TechArea20240109.md'
+    - January 2, 2024: 'meetings/2024/TechArea20240102.md'
     - December 19, 2023: 'meetings/2023/TechArea20231219.md'
     - December 12, 2023: 'meetings/2023/TechArea20231212.md'
     - December 5, 2023: 'meetings/2023/TechArea20231205.md'
