@@ -25,7 +25,7 @@ Under certain circumstances Dex may not be able to match a user to their COManag
 
     >Error from server (Forbidden): pods is forbidden: User "user@email.edu" cannot list resource "pods" in API group "" in the namespace "osg-dev""
  
- - Empty Dex response
+ - Empty groups in the Dex response after logging in with SSO
 
 #### Next actions
 
