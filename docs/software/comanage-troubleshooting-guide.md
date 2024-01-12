@@ -8,9 +8,6 @@ COManage Troubleshooting Items
 ----
 This section contains some of the issues you may encounter when interacting with the OSG COManage.
 
-Problem list:
-
- - [Valid Tiger User is unauthorized with Dex credentials](#valid-tiger-user-is-unauthorized-with-dex-credentials)
 
 ### Valid Tiger User is unauthorized with Dex credentials
 
