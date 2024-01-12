@@ -33,6 +33,7 @@ nav:
       - OSPool Containers: 'software/ospool-containers.md'
     - Operations:
       - COManage: 'operations/comanage.md'
+      - COmanage Troubleshooting Guide: 'software/comanage-troubleshooting-guide.md'
     - Software Support: 'policy/software-support.md'
     - Effort Tracking: 'software/effort-tracking.md'
     - Release Planning: 'software/release-planning.md'
