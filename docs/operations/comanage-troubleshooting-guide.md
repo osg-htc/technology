@@ -8,6 +8,24 @@ COManage Troubleshooting Items
 ----
 This section contains some of the issues you may encounter when interacting with the OSG COManage.
 
+### The COManage petition is stuck in the "confirmed" state
+
+This may happen if there are issues when confirming the user's email address.
+We have seen this occur if a user clicks the confirmation link then closes the tab too quickly.
+
+1.  Under the `People` drop-down on the left,  click on `My Population`
+
+1.  Browse to the `CO Person` record.
+
+1.  Scroll down to the `Role Attributes`, click the gear icon, select `Edit`, and set the status for the `Role` to `Active`.
+
+1.  Verify that the overall status of the `CO Person` record is `Active`.  If not, change it to `Active` as well.
+
+1.  Click on `Autogenerate Identifiers` on the right, so that the necessary identifiers are created.
+
+1.  Now that the necessary identifiers exist for the `CO Person` record, the LDAP DN can be computed and the record
+    provisioned in LDAP. To make sure, click on `Provisioned Services` and then  `Provision`.
+
 
 ### Valid Tiger User is unauthorized with Dex credentials
 
