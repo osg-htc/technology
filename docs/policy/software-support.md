@@ -66,7 +66,7 @@ If you are on triage duty, your responsibilities are as follows:
         tackle the issue again.
 
 -   **Review and approve/deny COManage site contact registrations:**
-    Follow the instructions to review site contact registrations [here](../operations/comanage.md#contact-registration).
+    Follow the instructions to review site contact registrations [here](../operations/comanage-sop.md#contact-registration).
 
 -   **Review Topology data pull requests:**
     Review any [Topology PRs](https://github.com/opensciencegrid/topology/pulls) that update anything in the
