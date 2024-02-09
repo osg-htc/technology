@@ -26,6 +26,26 @@ We have seen this occur if a user clicks the confirmation link then closes the t
 1.  Now that the necessary identifiers exist for the `CO Person` record, the LDAP DN can be computed and the record
     provisioned in LDAP. To make sure, click on `Provisioned Services` and then  `Provision`.
 
+### The COManage petition is stuck in the "Approved" state
+
+This may happen when the approver has internet issues while attempting to approve a CO Petition.
+
+1.  Navigate to the Petitioner's CO Person page (this can be done directly from the CO Petition under the `Attched Identities` section).
+
+1.  Confirm that the CO Person is missing identifiers of types `UID` and `OSG ID`.
+
+1.  On the CO Person page, confirm that the CO Person's status and Role status are both `Approved`.
+
+1.  On the broken CO Person page, click `Autogenerate Identifiers` on the right side of the page.
+
+1.  In the `Status` dropdown in the Person Attributes section, change the CO Persons status to `Active` from `Approved`.
+
+1.  Click on the gear icon for the CO Person's Role attribute, then click "Edit", this will bring you to the CO Person Role page
+
+1.  On the CO Person Role page, set the Role Attribute `Status` to `Active` from `Approved`, then click save.
+
+To verify that the fix worked, navigate back to the related CO Person page and click `Provisioned Services` near the `Autogenerate Identifiers`.
+Confirm that the `Status` column for every row says "Provisioned" instead of "Not Provisioned" (you may need to wait a few minutes and refresh the page).
 
 ### Valid Tiger User is unauthorized with Dex credentials
 
