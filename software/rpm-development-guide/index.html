@@ -4564,7 +4564,11 @@ The exception is that we do not have the equivalent of a <code>fedora-obsolete-p
 <p>After doing a rename or a removal, you must update all the packages and subpackages that require the package being removed or renamed, and change or remove the requirements as appropriate.</p>
 </div>
 <p>To find packages that require the old package at run time, set up a host with the OSG repos and install the <code>yum-utils</code> RPM.
-Then, run:</p>
+On EL8 and newer, run:</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>repoquery --whatrequires <span class="nv">$OLDPACKAGE</span>
+</code></pre></div>
+
+<p>On EL7, run</p>
 <div class="codehilite"><pre><span></span><code><span class="gp">$ </span>repoquery --plugins --whatrequires <span class="nv">$OLDPACKAGE</span>
 </code></pre></div>
 
