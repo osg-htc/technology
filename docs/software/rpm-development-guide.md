@@ -468,7 +468,11 @@ The exception is that we do not have the equivalent of a `fedora-obsolete-packag
     After doing a rename or a removal, you must update all the packages and subpackages that require the package being removed or renamed, and change or remove the requirements as appropriate.
 
 To find packages that require the old package at run time, set up a host with the OSG repos and install the `yum-utils` RPM.
-Then, run:
+On EL8 and newer, run:
+```console
+$ repoquery --whatrequires $OLDPACKAGE
+```
+On EL7, run
 ```console
 $ repoquery --plugins --whatrequires $OLDPACKAGE
 ```
