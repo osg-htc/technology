@@ -3687,30 +3687,59 @@
 <p>Kubernetes Hackathon this afternoon
 -  AI (Matt): set up Traefik in OSDF and UWDF namespaces
 -  AI (Mat): upgrade OSDF central services based on William's document
--  AI (BrianL): clean up services on River</p>
+-  AI (BrianL): clean up services on River
+-  AI (BrianL?): GlideIn Factory namespace stuff </p>
 <p>Yum Repo (Mat):
--   Status update?</p>
+-   Built pungi container
+-   Next step: Write pungi config for koji integration</p>
 <p>Kubernetes Gratia Probe (Matt):
--   Status update?</p>
+-   Working with Ryan (kapel author) to clean up PR
+-   Running into issues getting Gratia to run in non-privileged mode
+-   Build pipeline: Issues with where to put the code/build pipeline, might just defer to manual build
+    - Desired state: We want to be able to build from the Kapel repo via some config in the osg helm charts repo
+- Look at potential updates that Eduardo may have made (github: edubach)
+- May deadline</p>
+<p>OSG Notify (Mat/Matt):
+-   Facilitators need to send out weekly reminders for campus meetup
+-   OSG Notify is not an ideal tool to do this given need to configure certificates
+-   We can dump an email list via OSG Notify and put it in a more user friendly service</p>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<p>AI (Matt W): Need to redeploy OSG Repo with the new mirrorlist after River DNS failure last week
+  - Redeploy to tempest instead of river
+AI (Mat): Nick at NERSC having issues with 3rd party copy
+  - Was able to resolve </p>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Ready for Testing<ul>
-<li>XRootD 5.6.9</li>
+<li>Nothing</li>
 </ul>
 </li>
 <li>Ready for Release<ul>
 <li>Nothing yet</li>
 </ul>
 </li>
+<li>Plan to release Condor 23.7.2 this week<ul>
+<li>Issues with Apptainer in GlideinWMS</li>
+</ul>
+</li>
+<li>Other miscellaneous issues:<ul>
+<li>AI (Matt): Issues with syncing condor testing repo to osg-upcoming-testing repos</li>
+<li>Builds are failing for software-base in Alma 8/9</li>
+</ul>
+</li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>OSG-24: Need a Yubikey multiplexing solution<ul>
+<li>AI (Matt): Confirm that gpg-agent can handle two yubikeys on Linux</li>
+<li>AI (Mat): Confirm that two yubikeys work on Windows</li>
+</ul>
+</li>
+</ul>
                 
               
               
