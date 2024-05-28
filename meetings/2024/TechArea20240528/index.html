@@ -3713,8 +3713,14 @@
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <p>Kubernetes Hackathon:
 -  AI (Mat): repo EL9 replacement container work
+-  AI (Mat): Hermit Crab Glidein work
+    - tokens.tgz is empty in the job
 -  AI (Matt): any remaining kuantifier work
--  Find services that could be ingresses</p>
+    - Changes to helm chart are merged in
+    - Some concerns from Ryan wrt how the new prometheus metrics are being utilized
+    - Lincoln might also be able to get a test environment going to test the chart in 
+-  Find services that could be ingresses
+    - Services that only serve http(s) are eating too many ipv4 addresses</p>
 <p>Release:
 -  AI (Matt): voms-server systemd regression</p>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
@@ -3724,7 +3730,12 @@
 <li>AGLT2 (BrianL): unpriv users could not query CM from AP.
    Dev team suggested that they add ANONYMOUS to <code>SEC_READ_AUTHENTICATION_METHODS</code> on the CM and
    <code>SEC_CLIENT_AUTHENTICATION_METHODS</code> on the AP.</li>
-<li>FNAL (BrianL): <code>voms-server</code> systemd regression -- need to work with them to transition to IAM or similar solution</li>
+<li>FNAL (BrianL): <code>voms-server</code> systemd regression -- need to work with them to transition to IAM or similar solution<ul>
+<li>Would prefer dropping <code>voms-server</code> from osg-24 software stack, rely on epel</li>
+<li>Project is not sufficiently supported upstream</li>
+<li>Need to figure out what to do with OSG patches </li>
+</ul>
+</li>
 </ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
@@ -3738,13 +3749,10 @@
 <li>Nothing yet</li>
 </ul>
 </li>
-<li>Plan to release Condor 23.7.2 this week<ul>
-<li>Issues with Apptainer in GlideinWMS</li>
-</ul>
-</li>
+<li>Plan to release Condor 23.8 2024-06-20</li>
 <li>Other miscellaneous issues:<ul>
-<li>AI (Matt): Issues with syncing condor testing repo to osg-upcoming-testing repos</li>
-<li>Builds are failing for software-base in Alma 8/9</li>
+<li>AI (TimT): Investigate ARM minicondor file transfer issues</li>
+<li>For next week (Mat): xrootd-5.6.9-1.6+</li>
 </ul>
 </li>
 </ul>
