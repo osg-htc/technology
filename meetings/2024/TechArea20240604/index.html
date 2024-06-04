@@ -3454,8 +3454,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jira-as-of-monday-morning-todo" class="md-nav__link">
-    Jira (as of Monday morning) (TODO)
+  <a href="#jira-as-of-monday-morning" class="md-nav__link">
+    Jira (as of Monday morning)
   </a>
   
 </li>
@@ -3540,7 +3540,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> Mat, Matt, Tim</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3550,11 +3550,11 @@
 <p>Triage duty shifts Tue-Mon</p>
 <ul>
 <li>This week: Matt</li>
-<li>Next week: </li>
-<li>7 (+2) open FreshDesk tickets (TODO)</li>
-<li>0 (+0) open GGUS ticket (TODO)</li>
+<li>Next week: TimT</li>
+<li>10 (+3) open FreshDesk tickets</li>
+<li>0 (+0) open GGUS ticket</li>
 </ul>
-<h3 id="jira-as-of-monday-morning-todo">Jira (as of Monday morning) (TODO)<a class="headerlink" href="#jira-as-of-monday-morning-todo" title="Permanent link">&para;</a></h3>
+<h3 id="jira-as-of-monday-morning">Jira (as of Monday morning)<a class="headerlink" href="#jira-as-of-monday-morning" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3565,63 +3565,58 @@
 </thead>
 <tbody>
 <tr>
-<td>212</td>
-<td>-1</td>
+<td>217</td>
+<td>+5</td>
 <td>Open</td>
 </tr>
 <tr>
 <td>20</td>
-<td>-2</td>
+<td>+0</td>
 <td>Selected for Dev</td>
 </tr>
 <tr>
-<td>28</td>
-<td>+7</td>
+<td>23</td>
+<td>-5</td>
 <td>In Progress</td>
 </tr>
 <tr>
 <td>15</td>
-<td>+1</td>
+<td>+0</td>
 <td>Dev Complete</td>
 </tr>
 <tr>
-<td>0</td>
-<td>+0</td>
+<td>5</td>
+<td>+5</td>
 <td>Ready for Testing</td>
 </tr>
 <tr>
 <td>0</td>
-<td>-1</td>
+<td>+0</td>
 <td>Ready for Release</td>
 </tr>
 </tbody>
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
-<p>Kubernetes Hackathon:
--  AI (Mat): repo EL9 replacement container work
--  AI (Mat): Hermit Crab Glidein work
-    - tokens.tgz is empty in the job
--  AI (Matt): any remaining kuantifier work
-    - Changes to helm chart are merged in
-    - Some concerns from Ryan wrt how the new prometheus metrics are being utilized
-    - Lincoln might also be able to get a test environment going to test the chart in 
--  Find services that could be ingresses
-    - Services that only serve http(s) are eating too many ipv4 addresses</p>
-<p>Release:
--  AI (Matt): voms-server systemd regression</p>
+<ul>
+<li>AI (Mat): repo EL9 replacement container work</li>
+<li>AI (Mat): Hermit Crab Glidein work</li>
+<li>AI (Mat): update OSG-Build documentation</li>
+<li>AI (Matt): new kuantifier requests from Armen:<ul>
+<li>Some config values should be split out and more expliticly documented</li>
+<li>Support for NodeSelector in the Helm chart</li>
+</ul>
+</li>
+<li>AI (Matt): investigate tag2distrepo</li>
+</ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>AGLT2 (BrianL): unpriv users could not query CM from AP.
-   Dev team suggested that they add ANONYMOUS to <code>SEC_READ_AUTHENTICATION_METHODS</code> on the CM and
-   <code>SEC_CLIENT_AUTHENTICATION_METHODS</code> on the AP.</li>
-<li>FNAL (BrianL): <code>voms-server</code> systemd regression -- need to work with them to transition to IAM or similar solution<ul>
-<li>Would prefer dropping <code>voms-server</code> from osg-24 software stack, rely on epel</li>
-<li>Project is not sufficiently supported upstream</li>
-<li>Need to figure out what to do with OSG patches </li>
-</ul>
-</li>
+<li>JLab (Mat): user having strange permission issue with Vault support; Mat asking Jason from the HTCondor dev team for help</li>
+<li>SDSC (Mat): user having trouble with the OSDF director and resorting to pulling from caches directly.
+    The issue seems to be with the origin; Mat will ask Fabio, who runs that origin, about its status</li>
+<li>JLab (Matt): their xrootd-multiuser issue is caused by xrootd-multiuser refusing to switch to a group with a
+    GID less than 500 (probably for security reasons); Derek is discussing solutions with the admin</li>
 </ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
