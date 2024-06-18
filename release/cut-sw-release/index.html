@@ -639,6 +639,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#promoting-packages-from-testing-to-pre-release" class="md-nav__link">
+    Promoting Packages from Testing to Pre-release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pick-the-version-number" class="md-nav__link">
     Pick the Version Number
   </a>
@@ -787,6 +794,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-steps" class="md-nav__link">
+    Final Steps
+  </a>
   
 </li>
       
@@ -3662,6 +3676,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#promoting-packages-from-testing-to-pre-release" class="md-nav__link">
+    Promoting Packages from Testing to Pre-release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pick-the-version-number" class="md-nav__link">
     Pick the Version Number
   </a>
@@ -3813,6 +3834,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#final-steps" class="md-nav__link">
+    Final Steps
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3848,6 +3876,15 @@ This document does NOT discuss the policy for deciding what goes into a release,
 <li><code>release-tools</code> scripts in your <code>PATH</code> (<a href="https://github.com/opensciencegrid/release-tools">GitHub</a>)</li>
 <li><code>osg-build</code> scripts in your <code>PATH</code> (installed via OSG yum repos or <a href="https://github.com/opensciencegrid/osg-build">source</a>)</li>
 </ul>
+<h2 id="promoting-packages-from-testing-to-pre-release">Promoting Packages from Testing to Pre-release<a class="headerlink" href="#promoting-packages-from-testing-to-pre-release" title="Permanent link">&para;</a></h2>
+<p>As packages complete testing, they are promoted from the testing repository to the pre-release repository.</p>
+<div class="codehilite"><pre><span></span><code>osg-promote -r <span class="m">23</span>-prerelease -r <span class="m">3</span>.6-prerelease &lt;package name<span class="o">(</span>s<span class="o">)</span>&gt;
+</code></pre></div>
+
+<p>When promoting a package into pre-release, be sure to add the pre-release promotion table to the Jira ticket.
+If there are several tickets under a single umbrella ticket, adding the pre-release promotion table to just the
+parent ticket is sufficient.</p>
+<p>Once the pacakges have been promoted to pre-release, mark the Jira ticket "Ready for Release".</p>
 <h2 id="pick-the-version-number">Pick the Version Number<a class="headerlink" href="#pick-the-version-number" title="Permanent link">&para;</a></h2>
 <p>The rest of this document makes references to <code>&lt;VERSION(S)&gt;</code> and <code>&lt;NON-UPCOMING VERSIONS(S)&gt;</code>, which refer to a space-delimited list of a date string plus the OSG version(s) and that same list minus the <code>upcoming</code> versions (e.g. <code>231130 3.6 3.6-upcoming 23 23-upcoming</code> and <code>231130 3.6 23</code>).
 Generally, the first number is the release date encoded as <code>yymmdd</code>.
@@ -4101,8 +4138,22 @@ We welcome feedback on this release!
 <p>Replacing <code>&lt;EMAIL SUBJECT&gt;</code> with an appropriate subject for your announcement and <code>&lt;PATH TO MESSAGE FILE&gt;</code> with the
 path to the file containing your message in plain text.</p>
 </li>
+</ol>
+<h2 id="final-steps">Final Steps<a class="headerlink" href="#final-steps" title="Permanent link">&para;</a></h2>
+<ol>
 <li>
-<p>The release manager releases the tickets marked 'Ready for Release' in the release's JIRA filter using the 'bulk change' function.</p>
+<p>On the <a href="https://opensciencegrid.atlassian.net/projects/SOFTWARE?selectedItem=com.atlassian.jira.jira-projects-plugin%3Arelease-page">Releases</a>
+    page, create version(s) that matches <code>&lt;FULL VERSION(S)&gt;</code> for this release.</p>
+</li>
+<li>
+<p>Open the <a href="https://opensciencegrid.atlassian.net/issues/?filter=12358">OSG Ready for Release</a> filter and
+    release the tickets, setting the <code>Resolution</code> to <code>Fixed</code> and
+    replacing the <code>Fix versions</code> with the specific full version(s) created above.
+    For tickets that have version numbers in common, use the `Bulk change' functionality.</p>
+</li>
+<li>
+<p>Once all the tickets have been closed, go back to the <a href="https://opensciencegrid.atlassian.net/projects/SOFTWARE?selectedItem=com.atlassian.jira.jira-projects-plugin%3Arelease-page">Releases</a>
+    page and release the specific full versions.</p>
 </li>
 </ol>
                 
