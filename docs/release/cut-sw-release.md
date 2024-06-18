@@ -17,6 +17,21 @@ Requirements
 -   `release-tools` scripts in your `PATH` ([GitHub](https://github.com/opensciencegrid/release-tools))
 -   `osg-build` scripts in your `PATH` (installed via OSG yum repos or [source](https://github.com/opensciencegrid/osg-build))
 
+Promoting Packages from Testing to Pre-release
+----------------------------------------------
+
+As packages complete testing, they are promoted from the testing repository to the pre-release repository.
+
+```bash
+osg-promote -r 23-prerelease -r 3.6-prerelease <package name(s)>
+```
+
+When promoting a package into pre-release, be sure to add the pre-release promotion table to the Jira ticket.
+If there are several tickets under a single umbrella ticket, adding the pre-release promotion table to just the
+parent ticket is sufficient.
+
+Once the pacakges have been promoted to pre-release, mark the Jira ticket "Ready for Release".
+
 Pick the Version Number
 -----------------------
 
@@ -302,5 +317,16 @@ The following instructions are meant for the release manager (or interim release
     Replacing `<EMAIL SUBJECT>` with an appropriate subject for your announcement and `<PATH TO MESSAGE FILE>` with the
     path to the file containing your message in plain text.
 
-1.  The release manager releases the tickets marked 'Ready for Release' in the release's JIRA filter using the 'bulk change' function.
+Final Steps
+-----------
 
+1.  On the [Releases](https://opensciencegrid.atlassian.net/projects/SOFTWARE?selectedItem=com.atlassian.jira.jira-projects-plugin%3Arelease-page)
+    page, create version(s) that matches `<FULL VERSION(S)>` for this release.
+
+1.  Open the [OSG Ready for Release](https://opensciencegrid.atlassian.net/issues/?filter=12358) filter and
+    release the tickets, setting the `Resolution` to `Fixed` and
+    replacing the `Fix versions` with the specific full version(s) created above.
+    For tickets that have version numbers in common, use the `Bulk change' functionality.
+
+1.  Once all the tickets have been closed, go back to the [Releases](https://opensciencegrid.atlassian.net/projects/SOFTWARE?selectedItem=com.atlassian.jira.jira-projects-plugin%3Arelease-page)
+    page and release the specific full versions.
