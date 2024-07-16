@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    
+    <meta name="robots" content="noindex, nofollow" />
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://osg-htc.org/technology/software/create-vo-client/">
+        <link rel="canonical" href="https://osg-htc.org/technology/meetings/2024/TechArea20240716/">
       
-      <link rel="icon" href="../../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
-        <title>Creating the VO Client Package - OSG Technology Area</title>
+        <title>July 16, 2024 - OSG Technology Area</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.33e2939f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -39,7 +39,7 @@
     
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
     
       
@@ -56,7 +56,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-the-vo-client-package" class="md-skip">
+        <a href="#osg-technology-area-meeting-16-july-2024" class="md-skip">
           Skip to content
         </a>
       
@@ -75,7 +75,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="OSG Technology Area" class="md-header__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
+    <a href="../../.." title="OSG Technology Area" class="md-header__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creating the VO Client Package
+              July 16, 2024
             
           </span>
         </div>
@@ -168,7 +168,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="OSG Technology Area" class="md-nav__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
+    <a href="../../.." title="OSG Technology Area" class="md-nav__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -200,7 +200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -213,14 +213,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         Software
@@ -236,14 +234,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       <label class="md-nav__link" for="__nav_2_1">
         Packaging
@@ -261,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rpm-development-guide/" class="md-nav__link">
+      <a href="../../../software/rpm-development-guide/" class="md-nav__link">
         RPM Development Guide
       </a>
     </li>
@@ -273,7 +269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../osg-build-tools/" class="md-nav__link">
+      <a href="../../../software/osg-build-tools/" class="md-nav__link">
         OSG Build Tools
       </a>
     </li>
@@ -285,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quilt/" class="md-nav__link">
+      <a href="../../../software/quilt/" class="md-nav__link">
         Using Quilt
       </a>
     </li>
@@ -297,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upcoming-to-main/" class="md-nav__link">
+      <a href="../../../software/upcoming-to-main/" class="md-nav__link">
         Upcoming to Main
       </a>
     </li>
@@ -309,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../koji-workflow/" class="md-nav__link">
+      <a href="../../../software/koji-workflow/" class="md-nav__link">
         Koji Workflow
       </a>
     </li>
@@ -319,98 +315,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Creating the VO Client Package
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../software/create-vo-client/" class="md-nav__link">
         Creating the VO Client Package
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jira-ticket-for-the-release" class="md-nav__link">
-    JIRA Ticket for the Release
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updates-to-the-gums-template" class="md-nav__link">
-    Updates to the GUMS Template
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#making-the-tarball" class="md-nav__link">
-    Making the Tarball
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rpm-spec-file-maintenance" class="md-nav__link">
-    RPM Spec File Maintenance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rpm-building" class="md-nav__link">
-    RPM Building
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publishing-the-new-release" class="md-nav__link">
-    Publishing the New Release
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#promotion-to-testing-and-release" class="md-nav__link">
-    Promotion to Testing and Release:
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -420,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../container-development-guide/" class="md-nav__link">
+      <a href="../../../software/container-development-guide/" class="md-nav__link">
         Container Development Guide
       </a>
     </li>
@@ -432,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../repository-management/" class="md-nav__link">
+      <a href="../../../software/repository-management/" class="md-nav__link">
         Repository Management
       </a>
     </li>
@@ -444,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resurrecting-epel-packages/" class="md-nav__link">
+      <a href="../../../software/resurrecting-epel-packages/" class="md-nav__link">
         Resurrecting Epel Packages
       </a>
     </li>
@@ -456,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../koji-mass-rebuilds/" class="md-nav__link">
+      <a href="../../../software/koji-mass-rebuilds/" class="md-nav__link">
         Koji Mass Rebuilds
       </a>
     </li>
@@ -495,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development-process/" class="md-nav__link">
+      <a href="../../../software/development-process/" class="md-nav__link">
         Development Process
       </a>
     </li>
@@ -507,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git-software-development/" class="md-nav__link">
+      <a href="../../../software/git-software-development/" class="md-nav__link">
         Git Software Development Process
       </a>
     </li>
@@ -519,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ce-test-scaling/" class="md-nav__link">
+      <a href="../../../software/ce-test-scaling/" class="md-nav__link">
         CE Scale Testing
       </a>
     </li>
@@ -531,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ipv6-testing/" class="md-nav__link">
+      <a href="../../../software/ipv6-testing/" class="md-nav__link">
         IPv6 Testing
       </a>
     </li>
@@ -543,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../requesting-tokens/" class="md-nav__link">
+      <a href="../../../software/requesting-tokens/" class="md-nav__link">
         How to Request Tokens
       </a>
     </li>
@@ -582,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ospool-containers/" class="md-nav__link">
+      <a href="../../../software/ospool-containers/" class="md-nav__link">
         OSPool Containers
       </a>
     </li>
@@ -600,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/software-support/" class="md-nav__link">
+      <a href="../../../policy/software-support/" class="md-nav__link">
         Software Support
       </a>
     </li>
@@ -612,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../effort-tracking/" class="md-nav__link">
+      <a href="../../../software/effort-tracking/" class="md-nav__link">
         Effort Tracking
       </a>
     </li>
@@ -624,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../release-planning/" class="md-nav__link">
+      <a href="../../../software/release-planning/" class="md-nav__link">
         Release Planning
       </a>
     </li>
@@ -636,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../new-team-member/" class="md-nav__link">
+      <a href="../../../software/new-team-member/" class="md-nav__link">
         New Team Member
       </a>
     </li>
@@ -648,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-certs/" class="md-nav__link">
+      <a href="../../../software/user-certs/" class="md-nav__link">
         User Certificates
       </a>
     </li>
@@ -690,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/cut-sw-release/" class="md-nav__link">
+      <a href="../../../release/cut-sw-release/" class="md-nav__link">
         How to Cut a Release
       </a>
     </li>
@@ -702,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/announce-rft-packages/" class="md-nav__link">
+      <a href="../../../release/announce-rft-packages/" class="md-nav__link">
         Ready for Testing Announcements
       </a>
     </li>
@@ -714,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/new-release-series/" class="md-nav__link">
+      <a href="../../../release/new-release-series/" class="md-nav__link">
         New Release Series
       </a>
     </li>
@@ -726,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/new-os-series/" class="md-nav__link">
+      <a href="../../../release/new-os-series/" class="md-nav__link">
         New OS Series
       </a>
     </li>
@@ -738,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/release-eol/" class="md-nav__link">
+      <a href="../../../release/release-eol/" class="md-nav__link">
         Release Series End-of-Life
       </a>
     </li>
@@ -750,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/itb-testing/" class="md-nav__link">
+      <a href="../../../release/itb-testing/" class="md-nav__link">
         ITB Prerelease Testing
       </a>
     </li>
@@ -762,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/empty-pkgs/" class="md-nav__link">
+      <a href="../../../release/empty-pkgs/" class="md-nav__link">
         Empty Packages
       </a>
     </li>
@@ -774,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release/acceptance-testing/" class="md-nav__link">
+      <a href="../../../release/acceptance-testing/" class="md-nav__link">
         Acceptance Testing
       </a>
     </li>
@@ -816,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operations/comanage-sop/" class="md-nav__link">
+      <a href="../../../operations/comanage-sop/" class="md-nav__link">
         COManage SOP
       </a>
     </li>
@@ -828,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operations/comanage-troubleshooting-guide/" class="md-nav__link">
+      <a href="../../../operations/comanage-troubleshooting-guide/" class="md-nav__link">
         COmanage Troubleshooting Guide
       </a>
     </li>
@@ -870,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/gridftp-gsi-migration/" class="md-nav__link">
+      <a href="../../../policy/gridftp-gsi-migration/" class="md-nav__link">
         GridFTP and GSI Migration
       </a>
     </li>
@@ -882,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/campus-cyberinfrastructure/" class="md-nav__link">
+      <a href="../../../policy/campus-cyberinfrastructure/" class="md-nav__link">
         Campus Cyberinfrastructure
       </a>
     </li>
@@ -894,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/collab-bearer-tokens/" class="md-nav__link">
+      <a href="../../../policy/collab-bearer-tokens/" class="md-nav__link">
         Collaborations and Bearer Tokens
       </a>
     </li>
@@ -906,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/cream-support/" class="md-nav__link">
+      <a href="../../../policy/cream-support/" class="md-nav__link">
         CREAM-CE Support
       </a>
     </li>
@@ -918,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/globus-toolkit/" class="md-nav__link">
+      <a href="../../../policy/globus-toolkit/" class="md-nav__link">
         Globus Toolkit Support
       </a>
     </li>
@@ -930,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/external-oasis-repos/" class="md-nav__link">
+      <a href="../../../policy/external-oasis-repos/" class="md-nav__link">
         OASIS Repository Mirroring
       </a>
     </li>
@@ -942,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/flexible-release-model/" class="md-nav__link">
+      <a href="../../../policy/flexible-release-model/" class="md-nav__link">
         Flexible Release Model
       </a>
     </li>
@@ -954,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/software-release/" class="md-nav__link">
+      <a href="../../../policy/software-release/" class="md-nav__link">
         Software Release Policy
       </a>
     </li>
@@ -966,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/container-release/" class="md-nav__link">
+      <a href="../../../policy/container-release/" class="md-nav__link">
         Container Release Policy
       </a>
     </li>
@@ -978,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/community-testing/" class="md-nav__link">
+      <a href="../../../policy/community-testing/" class="md-nav__link">
         Community Testing
       </a>
     </li>
@@ -990,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/new-ospool-user/" class="md-nav__link">
+      <a href="../../../policy/new-ospool-user/" class="md-nav__link">
         New OSPool User Registration
       </a>
     </li>
@@ -1002,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/topology-registration/" class="md-nav__link">
+      <a href="../../../policy/topology-registration/" class="md-nav__link">
         Handling Topology/Contacts Registrations
       </a>
     </li>
@@ -1044,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/writing-documentation/" class="md-nav__link">
+      <a href="../../../documentation/writing-documentation/" class="md-nav__link">
         Writing Documentation
       </a>
     </li>
@@ -1056,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/reviewing-documentation/" class="md-nav__link">
+      <a href="../../../documentation/reviewing-documentation/" class="md-nav__link">
         Reviewing Documentation
       </a>
     </li>
@@ -1068,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/style-guide/" class="md-nav__link">
+      <a href="../../../documentation/style-guide/" class="md-nav__link">
         Markdown Style Guide
       </a>
     </li>
@@ -1080,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/publish-osg-pages/" class="md-nav__link">
+      <a href="../../../documentation/publish-osg-pages/" class="md-nav__link">
         Publishing OSG pages
       </a>
     </li>
@@ -1122,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/service-migrations-spring-2018/" class="md-nav__link">
+      <a href="../../../policy/service-migrations-spring-2018/" class="md-nav__link">
         Service Migrations - Spring 2018
       </a>
     </li>
@@ -1134,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/gums-retire/" class="md-nav__link">
+      <a href="../../../policy/gums-retire/" class="md-nav__link">
         GUMS Retirement
       </a>
     </li>
@@ -1146,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/bestman2-retire/" class="md-nav__link">
+      <a href="../../../policy/bestman2-retire/" class="md-nav__link">
         BeStMan2 Retirement
       </a>
     </li>
@@ -1158,7 +1067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../policy/voms-admin-retire/" class="md-nav__link">
+      <a href="../../../policy/voms-admin-retire/" class="md-nav__link">
         VOMS Admin Retirement
       </a>
     </li>
@@ -1170,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projects/sha2-support/" class="md-nav__link">
+      <a href="../../../projects/sha2-support/" class="md-nav__link">
         SHA-2 Support
       </a>
     </li>
@@ -1182,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/markdown-migration/" class="md-nav__link">
+      <a href="../../../documentation/markdown-migration/" class="md-nav__link">
         Migrating Documents to Markdown
       </a>
     </li>
@@ -1201,12 +1110,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       <label class="md-nav__link" for="__nav_8">
         Meetings
@@ -1222,11 +1133,123 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240716/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          July 16, 2024
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         July 16, 2024
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#announcements" class="md-nav__link">
+    Announcements
+  </a>
+  
+    <nav class="md-nav" aria-label="Announcements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triage-duty" class="md-nav__link">
+    Triage Duty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jira-as-of-monday-morning" class="md-nav__link">
+    Jira (as of Monday morning)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osg-software-team" class="md-nav__link">
+    OSG Software Team
+  </a>
+  
+    <nav class="md-nav" aria-label="OSG Software Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-update" class="md-nav__link">
+    Support Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    DevOps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osg-release-team" class="md-nav__link">
+    OSG Release Team
+  </a>
+  
+    <nav class="md-nav" aria-label="OSG Release Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_1" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1236,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240702/" class="md-nav__link">
+      <a href="../TechArea20240702/" class="md-nav__link">
         July 2, 2024
       </a>
     </li>
@@ -1248,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240625/" class="md-nav__link">
+      <a href="../TechArea20240625/" class="md-nav__link">
         June 25, 2024
       </a>
     </li>
@@ -1260,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240618/" class="md-nav__link">
+      <a href="../TechArea20240618/" class="md-nav__link">
         June 18, 2024
       </a>
     </li>
@@ -1272,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240611/" class="md-nav__link">
+      <a href="../TechArea20240611/" class="md-nav__link">
         June 11, 2024
       </a>
     </li>
@@ -1284,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240528/" class="md-nav__link">
+      <a href="../TechArea20240528/" class="md-nav__link">
         May 28, 2024
       </a>
     </li>
@@ -1296,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240521/" class="md-nav__link">
+      <a href="../TechArea20240521/" class="md-nav__link">
         May 21, 2024
       </a>
     </li>
@@ -1308,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240514/" class="md-nav__link">
+      <a href="../TechArea20240514/" class="md-nav__link">
         May 14, 2024
       </a>
     </li>
@@ -1320,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240507/" class="md-nav__link">
+      <a href="../TechArea20240507/" class="md-nav__link">
         May 7, 2024
       </a>
     </li>
@@ -1332,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240430/" class="md-nav__link">
+      <a href="../TechArea20240430/" class="md-nav__link">
         April 30, 2024
       </a>
     </li>
@@ -1344,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240416/" class="md-nav__link">
+      <a href="../TechArea20240416/" class="md-nav__link">
         April 16, 2024
       </a>
     </li>
@@ -1356,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240409/" class="md-nav__link">
+      <a href="../TechArea20240409/" class="md-nav__link">
         April 9, 2024
       </a>
     </li>
@@ -1368,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240402/" class="md-nav__link">
+      <a href="../TechArea20240402/" class="md-nav__link">
         April 2, 2024
       </a>
     </li>
@@ -1380,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240319/" class="md-nav__link">
+      <a href="../TechArea20240319/" class="md-nav__link">
         March 19, 2024
       </a>
     </li>
@@ -1392,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240312/" class="md-nav__link">
+      <a href="../TechArea20240312/" class="md-nav__link">
         March 12, 2024
       </a>
     </li>
@@ -1404,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240305/" class="md-nav__link">
+      <a href="../TechArea20240305/" class="md-nav__link">
         March 5, 2024
       </a>
     </li>
@@ -1416,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240227/" class="md-nav__link">
+      <a href="../TechArea20240227/" class="md-nav__link">
         February 27, 2024
       </a>
     </li>
@@ -1428,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240220/" class="md-nav__link">
+      <a href="../TechArea20240220/" class="md-nav__link">
         February 20, 2024
       </a>
     </li>
@@ -1440,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240213/" class="md-nav__link">
+      <a href="../TechArea20240213/" class="md-nav__link">
         February 13, 2024
       </a>
     </li>
@@ -1452,7 +1475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240206/" class="md-nav__link">
+      <a href="../TechArea20240206/" class="md-nav__link">
         February 6, 2024
       </a>
     </li>
@@ -1464,7 +1487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240130/" class="md-nav__link">
+      <a href="../TechArea20240130/" class="md-nav__link">
         January 30, 2024
       </a>
     </li>
@@ -1476,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240123/" class="md-nav__link">
+      <a href="../TechArea20240123/" class="md-nav__link">
         January 23, 2024
       </a>
     </li>
@@ -1488,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240116/" class="md-nav__link">
+      <a href="../TechArea20240116/" class="md-nav__link">
         January 16, 2024
       </a>
     </li>
@@ -1500,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240109/" class="md-nav__link">
+      <a href="../TechArea20240109/" class="md-nav__link">
         January 9, 2024
       </a>
     </li>
@@ -1512,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2024/TechArea20240102/" class="md-nav__link">
+      <a href="../TechArea20240102/" class="md-nav__link">
         January 2, 2024
       </a>
     </li>
@@ -1524,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231219/" class="md-nav__link">
+      <a href="../../2023/TechArea20231219/" class="md-nav__link">
         December 19, 2023
       </a>
     </li>
@@ -1536,7 +1559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231212/" class="md-nav__link">
+      <a href="../../2023/TechArea20231212/" class="md-nav__link">
         December 12, 2023
       </a>
     </li>
@@ -1548,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231205/" class="md-nav__link">
+      <a href="../../2023/TechArea20231205/" class="md-nav__link">
         December 5, 2023
       </a>
     </li>
@@ -1560,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231128/" class="md-nav__link">
+      <a href="../../2023/TechArea20231128/" class="md-nav__link">
         November 28, 2023
       </a>
     </li>
@@ -1572,7 +1595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231114/" class="md-nav__link">
+      <a href="../../2023/TechArea20231114/" class="md-nav__link">
         November 14, 2023
       </a>
     </li>
@@ -1584,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231107/" class="md-nav__link">
+      <a href="../../2023/TechArea20231107/" class="md-nav__link">
         November 7, 2023
       </a>
     </li>
@@ -1596,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231031/" class="md-nav__link">
+      <a href="../../2023/TechArea20231031/" class="md-nav__link">
         October 31, 2023
       </a>
     </li>
@@ -1608,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231024/" class="md-nav__link">
+      <a href="../../2023/TechArea20231024/" class="md-nav__link">
         October 24, 2023
       </a>
     </li>
@@ -1620,7 +1643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231017/" class="md-nav__link">
+      <a href="../../2023/TechArea20231017/" class="md-nav__link">
         October 17, 2023
       </a>
     </li>
@@ -1632,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231010/" class="md-nav__link">
+      <a href="../../2023/TechArea20231010/" class="md-nav__link">
         October 10, 2023
       </a>
     </li>
@@ -1644,7 +1667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20231003/" class="md-nav__link">
+      <a href="../../2023/TechArea20231003/" class="md-nav__link">
         October 3, 2023
       </a>
     </li>
@@ -1656,7 +1679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230926/" class="md-nav__link">
+      <a href="../../2023/TechArea20230926/" class="md-nav__link">
         September 26, 2023
       </a>
     </li>
@@ -1668,7 +1691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230919/" class="md-nav__link">
+      <a href="../../2023/TechArea20230919/" class="md-nav__link">
         September 19, 2023
       </a>
     </li>
@@ -1680,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230905/" class="md-nav__link">
+      <a href="../../2023/TechArea20230905/" class="md-nav__link">
         September 5, 2023
       </a>
     </li>
@@ -1692,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230829/" class="md-nav__link">
+      <a href="../../2023/TechArea20230829/" class="md-nav__link">
         August 29, 2023
       </a>
     </li>
@@ -1704,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230815/" class="md-nav__link">
+      <a href="../../2023/TechArea20230815/" class="md-nav__link">
         August 15, 2023
       </a>
     </li>
@@ -1716,7 +1739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230808/" class="md-nav__link">
+      <a href="../../2023/TechArea20230808/" class="md-nav__link">
         August 8, 2023
       </a>
     </li>
@@ -1728,7 +1751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230801/" class="md-nav__link">
+      <a href="../../2023/TechArea20230801/" class="md-nav__link">
         August 1, 2023
       </a>
     </li>
@@ -1740,7 +1763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230725/" class="md-nav__link">
+      <a href="../../2023/TechArea20230725/" class="md-nav__link">
         July 25, 2023
       </a>
     </li>
@@ -1752,7 +1775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230718/" class="md-nav__link">
+      <a href="../../2023/TechArea20230718/" class="md-nav__link">
         July 18, 2023
       </a>
     </li>
@@ -1764,7 +1787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230627/" class="md-nav__link">
+      <a href="../../2023/TechArea20230627/" class="md-nav__link">
         June 27, 2023
       </a>
     </li>
@@ -1776,7 +1799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230620/" class="md-nav__link">
+      <a href="../../2023/TechArea20230620/" class="md-nav__link">
         June 20, 2023
       </a>
     </li>
@@ -1788,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230613/" class="md-nav__link">
+      <a href="../../2023/TechArea20230613/" class="md-nav__link">
         June 13, 2023
       </a>
     </li>
@@ -1800,7 +1823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230606/" class="md-nav__link">
+      <a href="../../2023/TechArea20230606/" class="md-nav__link">
         June 6, 2023
       </a>
     </li>
@@ -1812,7 +1835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230530/" class="md-nav__link">
+      <a href="../../2023/TechArea20230530/" class="md-nav__link">
         May 30, 2023
       </a>
     </li>
@@ -1824,7 +1847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230523/" class="md-nav__link">
+      <a href="../../2023/TechArea20230523/" class="md-nav__link">
         May 23, 2023
       </a>
     </li>
@@ -1836,7 +1859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230516/" class="md-nav__link">
+      <a href="../../2023/TechArea20230516/" class="md-nav__link">
         May 16, 2023
       </a>
     </li>
@@ -1848,7 +1871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230509/" class="md-nav__link">
+      <a href="../../2023/TechArea20230509/" class="md-nav__link">
         May 9, 2023
       </a>
     </li>
@@ -1860,7 +1883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230418/" class="md-nav__link">
+      <a href="../../2023/TechArea20230418/" class="md-nav__link">
         April 18, 2023
       </a>
     </li>
@@ -1872,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230404/" class="md-nav__link">
+      <a href="../../2023/TechArea20230404/" class="md-nav__link">
         April 4, 2023
       </a>
     </li>
@@ -1884,7 +1907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230328/" class="md-nav__link">
+      <a href="../../2023/TechArea20230328/" class="md-nav__link">
         March 28, 2023
       </a>
     </li>
@@ -1896,7 +1919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230314/" class="md-nav__link">
+      <a href="../../2023/TechArea20230314/" class="md-nav__link">
         March 14, 2023
       </a>
     </li>
@@ -1908,7 +1931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230221/" class="md-nav__link">
+      <a href="../../2023/TechArea20230221/" class="md-nav__link">
         February 28, 2023
       </a>
     </li>
@@ -1920,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230221/" class="md-nav__link">
+      <a href="../../2023/TechArea20230221/" class="md-nav__link">
         February 21, 2023
       </a>
     </li>
@@ -1932,7 +1955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230214/" class="md-nav__link">
+      <a href="../../2023/TechArea20230214/" class="md-nav__link">
         February 14, 2023
       </a>
     </li>
@@ -1944,7 +1967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230207/" class="md-nav__link">
+      <a href="../../2023/TechArea20230207/" class="md-nav__link">
         February 7, 2023
       </a>
     </li>
@@ -1956,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230131/" class="md-nav__link">
+      <a href="../../2023/TechArea20230131/" class="md-nav__link">
         January 31, 2023
       </a>
     </li>
@@ -1968,7 +1991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230124/" class="md-nav__link">
+      <a href="../../2023/TechArea20230124/" class="md-nav__link">
         January 24, 2023
       </a>
     </li>
@@ -1980,7 +2003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230117/" class="md-nav__link">
+      <a href="../../2023/TechArea20230117/" class="md-nav__link">
         January 17, 2023
       </a>
     </li>
@@ -1992,7 +2015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2023/TechArea20230103/" class="md-nav__link">
+      <a href="../../2023/TechArea20230103/" class="md-nav__link">
         January 3, 2023
       </a>
     </li>
@@ -2004,7 +2027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20221220/" class="md-nav__link">
+      <a href="../../2022/TechArea20221220/" class="md-nav__link">
         December 20, 2022
       </a>
     </li>
@@ -2016,7 +2039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20221213/" class="md-nav__link">
+      <a href="../../2022/TechArea20221213/" class="md-nav__link">
         December 13, 2022
       </a>
     </li>
@@ -2028,7 +2051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20221206/" class="md-nav__link">
+      <a href="../../2022/TechArea20221206/" class="md-nav__link">
         December 6, 2022
       </a>
     </li>
@@ -2040,7 +2063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20221129/" class="md-nav__link">
+      <a href="../../2022/TechArea20221129/" class="md-nav__link">
         November 29, 2022
       </a>
     </li>
@@ -2052,7 +2075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20221122/" class="md-nav__link">
+      <a href="../../2022/TechArea20221122/" class="md-nav__link">
         November 22, 2022
       </a>
     </li>
@@ -2064,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20221115/" class="md-nav__link">
+      <a href="../../2022/TechArea20221115/" class="md-nav__link">
         November 15, 2022
       </a>
     </li>
@@ -2076,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20221108/" class="md-nav__link">
+      <a href="../../2022/TechArea20221108/" class="md-nav__link">
         November 8, 2022
       </a>
     </li>
@@ -2088,7 +2111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20221101/" class="md-nav__link">
+      <a href="../../2022/TechArea20221101/" class="md-nav__link">
         November 1, 2022
       </a>
     </li>
@@ -2100,7 +2123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20221004/" class="md-nav__link">
+      <a href="../../2022/TechArea20221004/" class="md-nav__link">
         October 4, 2022
       </a>
     </li>
@@ -2112,7 +2135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220927/" class="md-nav__link">
+      <a href="../../2022/TechArea20220927/" class="md-nav__link">
         September 27, 2022
       </a>
     </li>
@@ -2124,7 +2147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220920/" class="md-nav__link">
+      <a href="../../2022/TechArea20220920/" class="md-nav__link">
         September 20, 2022
       </a>
     </li>
@@ -2136,7 +2159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220913/" class="md-nav__link">
+      <a href="../../2022/TechArea20220913/" class="md-nav__link">
         September 13, 2022
       </a>
     </li>
@@ -2148,7 +2171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220906/" class="md-nav__link">
+      <a href="../../2022/TechArea20220906/" class="md-nav__link">
         September 6, 2022
       </a>
     </li>
@@ -2160,7 +2183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220830/" class="md-nav__link">
+      <a href="../../2022/TechArea20220830/" class="md-nav__link">
         August 30, 2022
       </a>
     </li>
@@ -2172,7 +2195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220823/" class="md-nav__link">
+      <a href="../../2022/TechArea20220823/" class="md-nav__link">
         August 23, 2022
       </a>
     </li>
@@ -2184,7 +2207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220816/" class="md-nav__link">
+      <a href="../../2022/TechArea20220816/" class="md-nav__link">
         August 16, 2022
       </a>
     </li>
@@ -2196,7 +2219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220809/" class="md-nav__link">
+      <a href="../../2022/TechArea20220809/" class="md-nav__link">
         August 9, 2022
       </a>
     </li>
@@ -2208,7 +2231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220802/" class="md-nav__link">
+      <a href="../../2022/TechArea20220802/" class="md-nav__link">
         August 2, 2022
       </a>
     </li>
@@ -2220,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220726/" class="md-nav__link">
+      <a href="../../2022/TechArea20220726/" class="md-nav__link">
         July 26, 2022
       </a>
     </li>
@@ -2232,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220628/" class="md-nav__link">
+      <a href="../../2022/TechArea20220628/" class="md-nav__link">
         June 28, 2022
       </a>
     </li>
@@ -2244,7 +2267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220621/" class="md-nav__link">
+      <a href="../../2022/TechArea20220621/" class="md-nav__link">
         June 21, 2022
       </a>
     </li>
@@ -2256,7 +2279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220607/" class="md-nav__link">
+      <a href="../../2022/TechArea20220607/" class="md-nav__link">
         June 7, 2022
       </a>
     </li>
@@ -2268,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220531/" class="md-nav__link">
+      <a href="../../2022/TechArea20220531/" class="md-nav__link">
         May 31, 2022
       </a>
     </li>
@@ -2280,7 +2303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220510/" class="md-nav__link">
+      <a href="../../2022/TechArea20220510/" class="md-nav__link">
         May 10, 2022
       </a>
     </li>
@@ -2292,7 +2315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220503/" class="md-nav__link">
+      <a href="../../2022/TechArea20220503/" class="md-nav__link">
         May 3, 2022
       </a>
     </li>
@@ -2304,7 +2327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220426/" class="md-nav__link">
+      <a href="../../2022/TechArea20220426/" class="md-nav__link">
         April 26, 2022
       </a>
     </li>
@@ -2316,7 +2339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220419/" class="md-nav__link">
+      <a href="../../2022/TechArea20220419/" class="md-nav__link">
         April 19, 2022
       </a>
     </li>
@@ -2328,7 +2351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220405/" class="md-nav__link">
+      <a href="../../2022/TechArea20220405/" class="md-nav__link">
         April 5, 2022
       </a>
     </li>
@@ -2340,7 +2363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220329/" class="md-nav__link">
+      <a href="../../2022/TechArea20220329/" class="md-nav__link">
         March 29, 2022
       </a>
     </li>
@@ -2352,7 +2375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220322/" class="md-nav__link">
+      <a href="../../2022/TechArea20220322/" class="md-nav__link">
         March 22, 2022
       </a>
     </li>
@@ -2364,7 +2387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220308/" class="md-nav__link">
+      <a href="../../2022/TechArea20220308/" class="md-nav__link">
         March 8, 2022
       </a>
     </li>
@@ -2376,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220301/" class="md-nav__link">
+      <a href="../../2022/TechArea20220301/" class="md-nav__link">
         March 1, 2022
       </a>
     </li>
@@ -2388,7 +2411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220222/" class="md-nav__link">
+      <a href="../../2022/TechArea20220222/" class="md-nav__link">
         February 22, 2022
       </a>
     </li>
@@ -2400,7 +2423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220208/" class="md-nav__link">
+      <a href="../../2022/TechArea20220208/" class="md-nav__link">
         February 8, 2022
       </a>
     </li>
@@ -2412,7 +2435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220201/" class="md-nav__link">
+      <a href="../../2022/TechArea20220201/" class="md-nav__link">
         February 1, 2022
       </a>
     </li>
@@ -2424,7 +2447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220125/" class="md-nav__link">
+      <a href="../../2022/TechArea20220125/" class="md-nav__link">
         January 25, 2022
       </a>
     </li>
@@ -2436,7 +2459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220118/" class="md-nav__link">
+      <a href="../../2022/TechArea20220118/" class="md-nav__link">
         January 18, 2022
       </a>
     </li>
@@ -2448,7 +2471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220111/" class="md-nav__link">
+      <a href="../../2022/TechArea20220111/" class="md-nav__link">
         January 11, 2022
       </a>
     </li>
@@ -2460,7 +2483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2022/TechArea20220104/" class="md-nav__link">
+      <a href="../../2022/TechArea20220104/" class="md-nav__link">
         January 4, 2022
       </a>
     </li>
@@ -2472,7 +2495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211214/" class="md-nav__link">
+      <a href="../../2021/TechArea20211214/" class="md-nav__link">
         December 14, 2021
       </a>
     </li>
@@ -2484,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211207/" class="md-nav__link">
+      <a href="../../2021/TechArea20211207/" class="md-nav__link">
         December 7, 2021
       </a>
     </li>
@@ -2496,7 +2519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211130/" class="md-nav__link">
+      <a href="../../2021/TechArea20211130/" class="md-nav__link">
         November 30, 2021
       </a>
     </li>
@@ -2508,7 +2531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211123/" class="md-nav__link">
+      <a href="../../2021/TechArea20211123/" class="md-nav__link">
         November 23, 2021
       </a>
     </li>
@@ -2520,7 +2543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211116/" class="md-nav__link">
+      <a href="../../2021/TechArea20211116/" class="md-nav__link">
         November 16, 2021
       </a>
     </li>
@@ -2532,7 +2555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211109/" class="md-nav__link">
+      <a href="../../2021/TechArea20211109/" class="md-nav__link">
         November 9, 2021
       </a>
     </li>
@@ -2544,7 +2567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211102/" class="md-nav__link">
+      <a href="../../2021/TechArea20211102/" class="md-nav__link">
         November 2, 2021
       </a>
     </li>
@@ -2556,7 +2579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211026/" class="md-nav__link">
+      <a href="../../2021/TechArea20211026/" class="md-nav__link">
         October 26, 2021
       </a>
     </li>
@@ -2568,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211019/" class="md-nav__link">
+      <a href="../../2021/TechArea20211019/" class="md-nav__link">
         October 19, 2021
       </a>
     </li>
@@ -2580,7 +2603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211012/" class="md-nav__link">
+      <a href="../../2021/TechArea20211012/" class="md-nav__link">
         October 12, 2021
       </a>
     </li>
@@ -2592,7 +2615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20211005/" class="md-nav__link">
+      <a href="../../2021/TechArea20211005/" class="md-nav__link">
         October 5, 2021
       </a>
     </li>
@@ -2604,7 +2627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210928/" class="md-nav__link">
+      <a href="../../2021/TechArea20210928/" class="md-nav__link">
         September 28, 2021
       </a>
     </li>
@@ -2616,7 +2639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210914/" class="md-nav__link">
+      <a href="../../2021/TechArea20210914/" class="md-nav__link">
         September 14, 2021
       </a>
     </li>
@@ -2628,7 +2651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210907/" class="md-nav__link">
+      <a href="../../2021/TechArea20210907/" class="md-nav__link">
         September 7, 2021
       </a>
     </li>
@@ -2640,7 +2663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210831/" class="md-nav__link">
+      <a href="../../2021/TechArea20210831/" class="md-nav__link">
         August 31, 2021
       </a>
     </li>
@@ -2652,7 +2675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210824/" class="md-nav__link">
+      <a href="../../2021/TechArea20210824/" class="md-nav__link">
         August 24, 2021
       </a>
     </li>
@@ -2664,7 +2687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210817/" class="md-nav__link">
+      <a href="../../2021/TechArea20210817/" class="md-nav__link">
         August 17, 2021
       </a>
     </li>
@@ -2676,7 +2699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210810/" class="md-nav__link">
+      <a href="../../2021/TechArea20210810/" class="md-nav__link">
         August 10, 2021
       </a>
     </li>
@@ -2688,7 +2711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210803/" class="md-nav__link">
+      <a href="../../2021/TechArea20210803/" class="md-nav__link">
         August 3, 2021
       </a>
     </li>
@@ -2700,7 +2723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210727/" class="md-nav__link">
+      <a href="../../2021/TechArea20210727/" class="md-nav__link">
         July 27, 2021
       </a>
     </li>
@@ -2712,7 +2735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210720/" class="md-nav__link">
+      <a href="../../2021/TechArea20210720/" class="md-nav__link">
         July 20, 2021
       </a>
     </li>
@@ -2724,7 +2747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210713/" class="md-nav__link">
+      <a href="../../2021/TechArea20210713/" class="md-nav__link">
         July 13, 2021
       </a>
     </li>
@@ -2736,7 +2759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210706/" class="md-nav__link">
+      <a href="../../2021/TechArea20210706/" class="md-nav__link">
         July 6, 2021
       </a>
     </li>
@@ -2748,7 +2771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210629/" class="md-nav__link">
+      <a href="../../2021/TechArea20210629/" class="md-nav__link">
         June 29, 2021
       </a>
     </li>
@@ -2760,7 +2783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210622/" class="md-nav__link">
+      <a href="../../2021/TechArea20210622/" class="md-nav__link">
         June 22, 2021
       </a>
     </li>
@@ -2772,7 +2795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210615/" class="md-nav__link">
+      <a href="../../2021/TechArea20210615/" class="md-nav__link">
         June 15, 2021
       </a>
     </li>
@@ -2784,7 +2807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210608/" class="md-nav__link">
+      <a href="../../2021/TechArea20210608/" class="md-nav__link">
         June 8, 2021
       </a>
     </li>
@@ -2796,7 +2819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210518/" class="md-nav__link">
+      <a href="../../2021/TechArea20210518/" class="md-nav__link">
         May 18, 2021
       </a>
     </li>
@@ -2808,7 +2831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210511/" class="md-nav__link">
+      <a href="../../2021/TechArea20210511/" class="md-nav__link">
         May 11, 2021
       </a>
     </li>
@@ -2820,7 +2843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210504/" class="md-nav__link">
+      <a href="../../2021/TechArea20210504/" class="md-nav__link">
         May 4, 2021
       </a>
     </li>
@@ -2832,7 +2855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210420/" class="md-nav__link">
+      <a href="../../2021/TechArea20210420/" class="md-nav__link">
         April 20, 2021
       </a>
     </li>
@@ -2844,7 +2867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210413/" class="md-nav__link">
+      <a href="../../2021/TechArea20210413/" class="md-nav__link">
         April 13, 2021
       </a>
     </li>
@@ -2856,7 +2879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210406/" class="md-nav__link">
+      <a href="../../2021/TechArea20210406/" class="md-nav__link">
         April 6, 2021
       </a>
     </li>
@@ -2868,7 +2891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210330/" class="md-nav__link">
+      <a href="../../2021/TechArea20210330/" class="md-nav__link">
         March 30, 2021
       </a>
     </li>
@@ -2880,7 +2903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210323/" class="md-nav__link">
+      <a href="../../2021/TechArea20210323/" class="md-nav__link">
         March 23, 2021
       </a>
     </li>
@@ -2892,7 +2915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210309/" class="md-nav__link">
+      <a href="../../2021/TechArea20210309/" class="md-nav__link">
         March 9, 2021
       </a>
     </li>
@@ -2904,7 +2927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210302/" class="md-nav__link">
+      <a href="../../2021/TechArea20210302/" class="md-nav__link">
         March 2, 2021
       </a>
     </li>
@@ -2916,7 +2939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210223/" class="md-nav__link">
+      <a href="../../2021/TechArea20210223/" class="md-nav__link">
         February 23, 2021
       </a>
     </li>
@@ -2928,7 +2951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210216/" class="md-nav__link">
+      <a href="../../2021/TechArea20210216/" class="md-nav__link">
         February 16, 2021
       </a>
     </li>
@@ -2940,7 +2963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210209/" class="md-nav__link">
+      <a href="../../2021/TechArea20210209/" class="md-nav__link">
         February 9, 2021
       </a>
     </li>
@@ -2952,7 +2975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210202/" class="md-nav__link">
+      <a href="../../2021/TechArea20210202/" class="md-nav__link">
         February 2, 2021
       </a>
     </li>
@@ -2964,7 +2987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210126/" class="md-nav__link">
+      <a href="../../2021/TechArea20210126/" class="md-nav__link">
         January 26, 2021
       </a>
     </li>
@@ -2976,7 +2999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210119/" class="md-nav__link">
+      <a href="../../2021/TechArea20210119/" class="md-nav__link">
         January 19, 2021
       </a>
     </li>
@@ -2988,7 +3011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210112/" class="md-nav__link">
+      <a href="../../2021/TechArea20210112/" class="md-nav__link">
         January 12, 2021
       </a>
     </li>
@@ -3000,7 +3023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2021/TechArea20210104/" class="md-nav__link">
+      <a href="../../2021/TechArea20210104/" class="md-nav__link">
         January 4, 2021
       </a>
     </li>
@@ -3012,7 +3035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201221/" class="md-nav__link">
+      <a href="../../2020/TechArea20201221/" class="md-nav__link">
         December 21, 2020
       </a>
     </li>
@@ -3024,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201214/" class="md-nav__link">
+      <a href="../../2020/TechArea20201214/" class="md-nav__link">
         December 14, 2020
       </a>
     </li>
@@ -3036,7 +3059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201207/" class="md-nav__link">
+      <a href="../../2020/TechArea20201207/" class="md-nav__link">
         December 7, 2020
       </a>
     </li>
@@ -3048,7 +3071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201130/" class="md-nav__link">
+      <a href="../../2020/TechArea20201130/" class="md-nav__link">
         November 30, 2020
       </a>
     </li>
@@ -3060,7 +3083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201123/" class="md-nav__link">
+      <a href="../../2020/TechArea20201123/" class="md-nav__link">
         November 23, 2020
       </a>
     </li>
@@ -3072,7 +3095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201116/" class="md-nav__link">
+      <a href="../../2020/TechArea20201116/" class="md-nav__link">
         November 16, 2020
       </a>
     </li>
@@ -3084,7 +3107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201109/" class="md-nav__link">
+      <a href="../../2020/TechArea20201109/" class="md-nav__link">
         November 9, 2020
       </a>
     </li>
@@ -3096,7 +3119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201102/" class="md-nav__link">
+      <a href="../../2020/TechArea20201102/" class="md-nav__link">
         November 2, 2020
       </a>
     </li>
@@ -3108,7 +3131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201026/" class="md-nav__link">
+      <a href="../../2020/TechArea20201026/" class="md-nav__link">
         October 26, 2020
       </a>
     </li>
@@ -3120,7 +3143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201019/" class="md-nav__link">
+      <a href="../../2020/TechArea20201019/" class="md-nav__link">
         October 19, 2020
       </a>
     </li>
@@ -3132,7 +3155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201012/" class="md-nav__link">
+      <a href="../../2020/TechArea20201012/" class="md-nav__link">
         October 12, 2020
       </a>
     </li>
@@ -3144,7 +3167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20201005/" class="md-nav__link">
+      <a href="../../2020/TechArea20201005/" class="md-nav__link">
         October 5, 2020
       </a>
     </li>
@@ -3156,7 +3179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200928/" class="md-nav__link">
+      <a href="../../2020/TechArea20200928/" class="md-nav__link">
         September 28, 2020
       </a>
     </li>
@@ -3168,7 +3191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200914/" class="md-nav__link">
+      <a href="../../2020/TechArea20200914/" class="md-nav__link">
         September 14, 2020
       </a>
     </li>
@@ -3180,7 +3203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200824/" class="md-nav__link">
+      <a href="../../2020/TechArea20200824/" class="md-nav__link">
         August 24, 2020
       </a>
     </li>
@@ -3192,7 +3215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200817/" class="md-nav__link">
+      <a href="../../2020/TechArea20200817/" class="md-nav__link">
         August 17, 2020
       </a>
     </li>
@@ -3204,7 +3227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200810/" class="md-nav__link">
+      <a href="../../2020/TechArea20200810/" class="md-nav__link">
         August 10, 2020
       </a>
     </li>
@@ -3216,7 +3239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200803/" class="md-nav__link">
+      <a href="../../2020/TechArea20200803/" class="md-nav__link">
         August 3, 2020
       </a>
     </li>
@@ -3228,7 +3251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200727/" class="md-nav__link">
+      <a href="../../2020/TechArea20200727/" class="md-nav__link">
         July 27, 2020
       </a>
     </li>
@@ -3240,7 +3263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200720/" class="md-nav__link">
+      <a href="../../2020/TechArea20200720/" class="md-nav__link">
         July 20, 2020
       </a>
     </li>
@@ -3252,7 +3275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200713/" class="md-nav__link">
+      <a href="../../2020/TechArea20200713/" class="md-nav__link">
         July 13, 2020
       </a>
     </li>
@@ -3264,7 +3287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200706/" class="md-nav__link">
+      <a href="../../2020/TechArea20200706/" class="md-nav__link">
         July 6, 2020
       </a>
     </li>
@@ -3276,7 +3299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200629/" class="md-nav__link">
+      <a href="../../2020/TechArea20200629/" class="md-nav__link">
         June 29, 2020
       </a>
     </li>
@@ -3288,7 +3311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200622/" class="md-nav__link">
+      <a href="../../2020/TechArea20200622/" class="md-nav__link">
         June 22, 2020
       </a>
     </li>
@@ -3300,7 +3323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200615/" class="md-nav__link">
+      <a href="../../2020/TechArea20200615/" class="md-nav__link">
         June 15, 2020
       </a>
     </li>
@@ -3312,7 +3335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200608/" class="md-nav__link">
+      <a href="../../2020/TechArea20200608/" class="md-nav__link">
         June 8, 2020
       </a>
     </li>
@@ -3324,7 +3347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200601/" class="md-nav__link">
+      <a href="../../2020/TechArea20200601/" class="md-nav__link">
         June 1, 2020
       </a>
     </li>
@@ -3336,7 +3359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200518/" class="md-nav__link">
+      <a href="../../2020/TechArea20200518/" class="md-nav__link">
         May 18, 2020
       </a>
     </li>
@@ -3348,7 +3371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200511/" class="md-nav__link">
+      <a href="../../2020/TechArea20200511/" class="md-nav__link">
         May 11, 2020
       </a>
     </li>
@@ -3360,7 +3383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200504/" class="md-nav__link">
+      <a href="../../2020/TechArea20200504/" class="md-nav__link">
         May 4, 2020
       </a>
     </li>
@@ -3372,7 +3395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200427/" class="md-nav__link">
+      <a href="../../2020/TechArea20200427/" class="md-nav__link">
         April 27, 2020
       </a>
     </li>
@@ -3384,7 +3407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200420/" class="md-nav__link">
+      <a href="../../2020/TechArea20200420/" class="md-nav__link">
         April 20, 2020
       </a>
     </li>
@@ -3396,7 +3419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200413/" class="md-nav__link">
+      <a href="../../2020/TechArea20200413/" class="md-nav__link">
         April 13, 2020
       </a>
     </li>
@@ -3408,7 +3431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200406/" class="md-nav__link">
+      <a href="../../2020/TechArea20200406/" class="md-nav__link">
         April 6, 2020
       </a>
     </li>
@@ -3420,7 +3443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200330/" class="md-nav__link">
+      <a href="../../2020/TechArea20200330/" class="md-nav__link">
         March 30, 2020
       </a>
     </li>
@@ -3432,7 +3455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200323/" class="md-nav__link">
+      <a href="../../2020/TechArea20200323/" class="md-nav__link">
         March 23, 2020
       </a>
     </li>
@@ -3444,7 +3467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200316/" class="md-nav__link">
+      <a href="../../2020/TechArea20200316/" class="md-nav__link">
         March 16, 2020
       </a>
     </li>
@@ -3456,7 +3479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200309/" class="md-nav__link">
+      <a href="../../2020/TechArea20200309/" class="md-nav__link">
         March 9, 2020
       </a>
     </li>
@@ -3468,7 +3491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200302/" class="md-nav__link">
+      <a href="../../2020/TechArea20200302/" class="md-nav__link">
         March 2, 2020
       </a>
     </li>
@@ -3480,7 +3503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200224/" class="md-nav__link">
+      <a href="../../2020/TechArea20200224/" class="md-nav__link">
         February 24, 2020
       </a>
     </li>
@@ -3492,7 +3515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200217/" class="md-nav__link">
+      <a href="../../2020/TechArea20200217/" class="md-nav__link">
         February 17, 2020
       </a>
     </li>
@@ -3504,7 +3527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200210/" class="md-nav__link">
+      <a href="../../2020/TechArea20200210/" class="md-nav__link">
         February 10, 2020
       </a>
     </li>
@@ -3516,7 +3539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200203/" class="md-nav__link">
+      <a href="../../2020/TechArea20200203/" class="md-nav__link">
         February 3, 2020
       </a>
     </li>
@@ -3528,7 +3551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200127/" class="md-nav__link">
+      <a href="../../2020/TechArea20200127/" class="md-nav__link">
         January, 27 2020
       </a>
     </li>
@@ -3540,7 +3563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200113/" class="md-nav__link">
+      <a href="../../2020/TechArea20200113/" class="md-nav__link">
         January, 13 2020
       </a>
     </li>
@@ -3552,7 +3575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meetings/2020/TechArea20200106/" class="md-nav__link">
+      <a href="../../2020/TechArea20200106/" class="md-nav__link">
         January, 6 2020
       </a>
     </li>
@@ -3590,58 +3613,83 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#announcements" class="md-nav__link">
+    Announcements
+  </a>
+  
+    <nav class="md-nav" aria-label="Announcements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triage-duty" class="md-nav__link">
+    Triage Duty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jira-as-of-monday-morning" class="md-nav__link">
+    Jira (as of Monday morning)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osg-software-team" class="md-nav__link">
+    OSG Software Team
+  </a>
+  
+    <nav class="md-nav" aria-label="OSG Software Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-update" class="md-nav__link">
+    Support Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    DevOps
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#jira-ticket-for-the-release" class="md-nav__link">
-    JIRA Ticket for the Release
+  <a href="#osg-release-team" class="md-nav__link">
+    OSG Release Team
+  </a>
+  
+    <nav class="md-nav" aria-label="OSG Release Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_1" class="md-nav__link">
+    Discussion
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#updates-to-the-gums-template" class="md-nav__link">
-    Updates to the GUMS Template
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#making-the-tarball" class="md-nav__link">
-    Making the Tarball
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rpm-spec-file-maintenance" class="md-nav__link">
-    RPM Spec File Maintenance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rpm-building" class="md-nav__link">
-    RPM Building
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publishing-the-new-release" class="md-nav__link">
-    Publishing the New Release
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#promotion-to-testing-and-release" class="md-nav__link">
-    Promotion to Testing and Release:
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3657,147 +3705,96 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/osg-htc/technology/edit/master/docs/software/create-vo-client.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/osg-htc/technology/edit/master/docs/meetings/2024/TechArea20240716.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="creating-the-vo-client-package">Creating the VO Client Package<a class="headerlink" href="#creating-the-vo-client-package" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>This document will explain the step-by-step procedures for creating and releasing the VO Client Package.</p>
-<p>The VO Client Package sources can be found here:
-<a href="https://github.com/opensciencegrid/osg-vo-config">https://github.com/opensciencegrid/osg-vo-config</a></p>
-<p>When upstream changes have been made and are ready for a new VO Client Package release, these sources will be used to
-prepare a release tarball, which will in turn be used for the RPMs.</p>
-<p>In order to build the RPM, one needs:</p>
+                <h1 id="osg-technology-area-meeting-16-july-2024">OSG Technology Area Meeting, 16 July 2024<a class="headerlink" href="#osg-technology-area-meeting-16-july-2024" title="Permanent link">&para;</a></h1>
 <ul>
-<li>The tarball containing the:<ul>
-<li><code>edg-mkgridmap.conf</code> file</li>
-<li><code>gums.config.template</code> file</li>
-<li><code>grid-vorolemap</code> file (generated)</li>
-<li><code>voms-mapfile-default</code> file (generated)</li>
-<li><code>vomses</code> file</li>
-<li><code>vomsdir</code> directory tree, containing the .lsc files.</li>
+<li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
+    <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
+<li><strong>Attending:</strong> </li>
+</ul>
+<h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
+<h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
+<p>Triage duty shifts Tue-Mon</p>
+<ul>
+<li>This week: Matt</li>
+<li>Next week: ?</li>
+<li>5 (-6) open FreshDesk tickets</li>
+<li>0 (+0) open GGUS ticket</li>
+</ul>
+<h3 id="jira-as-of-monday-morning">Jira (as of Monday morning)<a class="headerlink" href="#jira-as-of-monday-morning" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th># of tickets</th>
+<th>&Delta;</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>215</td>
+<td>+0</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>15</td>
+<td>+0</td>
+<td>Selected for Dev</td>
+</tr>
+<tr>
+<td>31</td>
+<td>-1</td>
+<td>In Progress</td>
+</tr>
+<tr>
+<td>16</td>
+<td>+0</td>
+<td>Dev Complete</td>
+</tr>
+<tr>
+<td>4</td>
+<td>+2</td>
+<td>Ready for Testing</td>
+</tr>
+<tr>
+<td>0</td>
+<td>+0</td>
+<td>Ready for Release</td>
+</tr>
+</tbody>
+</table>
+<h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
+<ul>
+<li>AI (Mat): repo upgrade status?</li>
+<li>AI (Matt): k8s Gratia probe (helm chart GHA, nodeSelector/tolerations)</li>
+<li>AI (BrianL): mount AFS on osg-sw-submit for external collaborators</li>
+</ul>
+<p>USB A vs C preference for USB hub?</p>
+<h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
+<p>None this week</p>
+<h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
+<p>None this week</p>
+<h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
+<p>None this week</p>
+<h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Ready for Testing<ul>
+<li>Nothing yet</li>
 </ul>
 </li>
-<li>The RPM spec file, <a href="#rpm-spec-file-maintenance">maintained</a> in the OSG packaging area.</li>
-</ul>
-<h2 id="jira-ticket-for-the-release">JIRA Ticket for the Release<a class="headerlink" href="#jira-ticket-for-the-release" title="Permanent link">&para;</a></h2>
-<p>There should be an associated JIRA ticket with a summary line of the form "Release VO Package 85".
-(Throughout this document, this release number will be referred to as <code>&lt;NN&gt;</code>.)</p>
-<p>The JIRA ticket should contain the details of the changes expected in the new VO Client Package release, which you
-should verify before proceeding.
-You can verify this with your favorite git tool (eg, <code>git diff</code> or <code>gitk</code>), or just view the changes directly on GitHub:</p>
-<ul>
-<li><a href="https://github.com/opensciencegrid/osg-vo-config/compare/release-84...master">https://github.com/opensciencegrid/osg-vo-config/compare/release-84...master</a></li>
-</ul>
-<p>Here, <code>release-84</code> is the <em>previous</em> release tag, which you are comparing to the latest changes in <code>master</code>.
-To use GitHub to view the comparison, you need to specify whatever is the most recent <em>previous</em> release tag.</p>
-<p>Alternatively, you can proceed to <a href="#making-the-tarball">make the tarball</a>, and compare the result to the previous
-<code>vo-client</code> tarball (from the upstream source cache) before <a href="#publishing-the-new-release">publishing the new release</a>.</p>
-<p>However you choose to do it, the point is to verify that the changes going into the release match what is expected in
-the JIRA ticket before publishing a new release.</p>
-<h2 id="updates-to-the-gums-template">Updates to the GUMS Template<a class="headerlink" href="#updates-to-the-gums-template" title="Permanent link">&para;</a></h2>
-<p>Most commonly, VO Client Package releases do not involve changes to the <code>gums.config.template</code> file, though on occasion
-it needs to be updated.
-Before proceeding, any changes to <code>gums.config.template</code> related to this release should be committed to git and pushed
-to the upstream repo on GitHub.</p>
-<p>The procedure for updating <code>gums.config.template</code> is outside the scope of this document, but the main important point is
-that any updates to this file should be done with the GUMS web interface rather than editing its xml contents by hand.</p>
-<h2 id="making-the-tarball">Making the Tarball<a class="headerlink" href="#making-the-tarball" title="Permanent link">&para;</a></h2>
-<p>The process to make a new tarball has been mostly scripted.</p>
-<p>To make the tarball:</p>
-<ul>
-<li>
-<p>Start with a clean checkout of the latest <code>master</code> branch of the <code>osg-vo-config</code>
-    <a href="https://github.com/opensciencegrid/osg-vo-config">source repo</a>.</p>
-<p>This checked out commit should be the one intended to be tagged for the new release.
--   Run the <code>mk-vo-client-tarball</code> script with the new release number <code>&lt;NN&gt;</code>:</p>
-<div class="codehilite"><pre><span></span><code>$ ./bin/mk-vo-client-tarball &lt;NN&gt;
-</code></pre></div>
-
-<p>For example:</p>
-<div class="codehilite"><pre><span></span><code>$ ./bin/mk-vo-client-tarball 85
-</code></pre></div>
-
-<p>This will create a file <code>vo-client-&lt;NN&gt;-osg.tar.gz</code> in the current directory.</p>
-</li>
-</ul>
-<p>Once the tarball is created:</p>
-<ul>
-<li>
-<p>If you have not already verified the changes expected in the JIRA ticket, compare the contents of the new tarball
-    with the previous version in the <a href="../rpm-development-guide/#upstream-source-cache">upstream source cache</a>.</p>
-</li>
-<li>
-<p>Upload the tarball into the <a href="../rpm-development-guide/#upstream-source-cache">upstream source cache</a>, under
-    the <code>vo-client/&lt;NN&gt;/</code> directory.</p>
-</li>
-</ul>
-<h2 id="rpm-spec-file-maintenance">RPM Spec File Maintenance<a class="headerlink" href="#rpm-spec-file-maintenance" title="Permanent link">&para;</a></h2>
-<p>The OSG RPM spec file is <a href="../rpm-development-guide/#revision-control-system">maintained in Subversion</a>.</p>
-<p>The VO Client package is located in <code>native/redhat/trunk/vo-client</code>; that is,
-<a href="https://vdt.cs.wisc.edu/svn/native/redhat/branches/osg-3.6/vo-client/">here</a>.</p>
-<p>There are two files that need to be maintained:</p>
-<ul>
-<li>
-<p><code>osg/vo-client.spec</code></p>
-<ul>
-<li>The <code>Version:</code> field should be updated to match the <code>&lt;NN&gt;</code> number for the release</li>
-<li>A <code>%changelog</code> entry should be added for the new release, mentioning any changes and their associated tickets</li>
-</ul>
-</li>
-<li>
-<p><code>upstream/release_tarball.source</code></p>
-<ul>
-<li>Update the relative path for the new tarball within the
-    <a href="../rpm-development-guide/#upstream-source-cache">upstream source cache</a>.
-    Typically this will be <code>vo-client/&lt;NN&gt;/vo-client-&lt;NN&gt;-osg.tar.gz</code>.</li>
+<li>Ready for Release<ul>
+<li>Nothing yet</li>
 </ul>
 </li>
 </ul>
-<h2 id="rpm-building">RPM Building<a class="headerlink" href="#rpm-building" title="Permanent link">&para;</a></h2>
-<p>After installing the <a href="../osg-build-tools/">osg-build tools</a>, check out a clean copy of the <code>vo-client</code> packaging
-directory from svn, then:</p>
+<h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>osg-build prebuild .</code></li>
-<li>Once there are no errors, run <code>osg-build koji . --scratch</code>.
-    (This can be done without making any permanent change.)</li>
-<li>Once that builds successfully, run <code>osg-build koji .</code>
-    (This is permanent, unlike when you ran with <code>--scratch</code>.)
-    You cannot rebuild this version of the RPM again; to rebuild with changes, you must bump the release number and edit
-    the changelog.</li>
+<li>IGTF CA certs will be released next week due to the holiday</li>
 </ul>
-<p>This will push the RPMs into the OSG development repository.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Koji requires additional setup compared to rpmbuild; <a href="../koji-workflow/">see the documentation here</a>.</p>
-</div>
-<h2 id="publishing-the-new-release">Publishing the New Release<a class="headerlink" href="#publishing-the-new-release" title="Permanent link">&para;</a></h2>
-<p>The final version of the sources in the <code>osg-vo-config</code>, which was used to create the tarball that was used in the koji
-build, needs be tagged in git with a <code>release-&lt;NN&gt;</code> tag (eg, <code>release-85</code>) and published as a release on GitHub.</p>
-<p>You can create and push the <code>release-&lt;NN&gt;</code> from your git checkout of <code>osg-vo-config</code>, OR create the tag while publishing
-the release on GitHub (recommended).</p>
-<p>To publish the new release on GitHub:</p>
-<ul>
-<li>Go to <a href="https://github.com/opensciencegrid/osg-vo-config/releases/new">https://github.com/opensciencegrid/osg-vo-config/releases/new</a></li>
-<li>In the "Tag version" field, enter <code>release-&lt;NN&gt;</code> (eg, <code>release-85</code>)</li>
-<li>If you are creating this tag on GitHub, click the "Target" dropdown button, and under the "Recent Commits" tab, make
-    sure to select the commit you used when creating the tarball
-    (It should be the first one)</li>
-<li>In the "Release title" field, enter <code>&lt;MONTH&gt; &lt;YEAR&gt; VO Package Release &lt;NN&gt;</code>
-    (eg, <code>December 2018 VO Package Release 85</code>)</li>
-<li>
-<p>In the release description, list the changes in this release and their associated ticket numbers, similar to the new
-    <code>%changelog</code> entry added in the rpm spec file</p>
-<p>(You can view the <a href="https://github.com/opensciencegrid/osg-vo-config/releases">releases</a> page for examples)
--   Click the "Publish release" button</p>
-</li>
-</ul>
-<h2 id="promotion-to-testing-and-release">Promotion to Testing and Release:<a class="headerlink" href="#promotion-to-testing-and-release" title="Permanent link">&para;</a></h2>
-<p>Read <a href="../../policy/software-release/">Release Policy</a>.</p>
-<p>Note that the <code>vo-client</code> package frequently is part of a separate <code>-data</code> release; it does not necessarily have to
-wait for the main release cycle.</p>
                 
               
               
@@ -3816,7 +3813,7 @@ wait for the main release cycle.</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../koji-workflow/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../../../documentation/markdown-migration/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -3825,19 +3822,19 @@ wait for the main release cycle.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Koji Workflow
+              Migrating Documents to Markdown
             </div>
           </div>
         </a>
       
       
-        <a href="../container-development-guide/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../TechArea20240702/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Container Development Guide
+              July 2, 2024
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3866,10 +3863,10 @@ wait for the main release cycle.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d892486b.min.js"></script>
       
     
   </body>
