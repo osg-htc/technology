@@ -3714,16 +3714,16 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> MattW, TimT, MatS, BrianL, Marco Mambelli</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <h3 id="triage-duty">Triage Duty<a class="headerlink" href="#triage-duty" title="Permanent link">&para;</a></h3>
 <p>Triage duty shifts Tue-Mon</p>
 <ul>
 <li>This week: Matt</li>
-<li>Next week: ?</li>
+<li>Next week: Mat</li>
 <li>5 (-6) open FreshDesk tickets</li>
-<li>0 (+0) open GGUS ticket</li>
+<li>1 (+1) open GGUS ticket</li>
 </ul>
 <h3 id="jira-as-of-monday-morning">Jira (as of Monday morning)<a class="headerlink" href="#jira-as-of-monday-morning" title="Permanent link">&para;</a></h3>
 <table>
@@ -3769,21 +3769,40 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>AI (Mat): repo upgrade status?</li>
-<li>AI (Matt): k8s Gratia probe (helm chart GHA, nodeSelector/tolerations)</li>
+<li>AI (Mat): repo upgrade status?  </li>
+<li>AI (Matt): k8s Gratia probe (helm chart GHA, nodeSelector/tolerations)<ul>
+<li>GHA should live in osg-htc repo</li>
+<li>Add rptaylor/kapel to osg's repo backup script<ul>
+<li>Backup script currently just lives on AFS</li>
+</ul>
+</li>
+<li>Document process for discovering your cluster's Prometheus server</li>
+</ul>
+</li>
 <li>AI (BrianL): mount AFS on osg-sw-submit for external collaborators</li>
 </ul>
-<p>USB A vs C preference for USB hub?</p>
+<p>USB A vs C preference for USB hub?
+-   Mat: A, Matt: either, Tim: A</p>
+<p>GlideinWMS Software:
+-   Will need continued access to osg 3.6 repos for now
+    - Tests for release 3.11 run into issues when updated to OSG 23 </p>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>AI (Mat): Duncan from IGWN has issues running pilots</li>
+<li>Issues with base container, missing wget</li>
+</ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Ready for Testing<ul>
-<li>Nothing yet</li>
+<li>AI (Matt): GlideinWMS 3.10.7</li>
+<li>htcondor-ce</li>
+<li>osdf-server-7.9.3</li>
+<li>xrootd-5.7.0</li>
+<li>igtf-ca-certs</li>
 </ul>
 </li>
 <li>Ready for Release<ul>
@@ -3794,6 +3813,11 @@
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>IGTF CA certs will be released next week due to the holiday</li>
+<li>Full support periods for HTC23 and OSG23 are not fully aligned<ul>
+<li>Support for OSG 23 lasts several months longer</li>
+</ul>
+</li>
+<li>Marco has been using OSG noarch packages successfully in ARM</li>
 </ul>
                 
               
