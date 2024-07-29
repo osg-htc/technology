@@ -3726,7 +3726,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Mat, Matt, TimT</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3784,12 +3784,29 @@
 </tbody>
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
+<ul>
+<li>AI (TimT, Mat): Migrate various CHTC cron jobs (some of which are used for OSG Software)
+    from moria to a new host</li>
+<li>AI (BrianL): Debug not being able to get a Let's Encrypt cert with a chtc.wisc.edu domain</li>
+<li>AI (Mat): Set up ARM Koji builder</li>
+<li>AI (BrianL): Purchase YubiKeys and USB hubs; USB hubs should have at least 4 ports</li>
+</ul>
 <p>Kubernetes Hackathon
 -   AI (BrianL): deploy ResearchDrive UWDF prod origin
 -   AI (Matt): macrostrat work, remaining kuantifier items
 -   AI (Mat): repo rsync source IP logging</p>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>
+<p>OSG VMU integration tests using the Pelican version of stashcp have been failing
+    since they relied on a Pelican backward compatibility feature that does not seem to be
+    working in current versions.  Mat to start a discussion with the Pelican team to determine
+    the best way forward.</p>
+</li>
+<li>
+<p>Patch Tuesday: new versions of HTCondor and HTCondor-CE ready for OSPool deployment</p>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
