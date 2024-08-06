@@ -3807,11 +3807,17 @@
 <p>What's the process for adding patching XRootD in Pelican containers?</p>
 <ul>
 <li>AI (Matt): Kuantifier<ul>
-<li>Status of NET2 and Prometheus auth?</li>
+<li>Status of NET2 and Prometheus auth?<ul>
+<li>Follow up again re: prometheus API access</li>
+</ul>
+</li>
 <li>Derive ProbeName from SUBMIT_HOST</li>
 <li>nodeSelector + toleration support</li>
 <li>GHA from osg helm-charts repo</li>
-<li>AI (Matt): Ping collaborators</li>
+<li>Require that pods set a CPU resource request<ul>
+<li>We use this to derive the "Processors" field</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>AI (Mat): Set up ARM Koji builder<ul>
@@ -3819,8 +3825,14 @@
 </ul>
 </li>
 <li>AI (Mat): EL9 repo</li>
-<li>Contribute VOMS patches upstream?</li>
-<li>Topology "StashCache" GHA has been failing for some time</li>
+<li>Contribute VOMS patches upstream?<ul>
+<li>Want to drop from OSG software</li>
+</ul>
+</li>
+<li>Topology "StashCache" GHA has been failing for some time<ul>
+<li>Validates topology cache list against cvmfs</li>
+</ul>
+</li>
 <li>New Yubikeys are in, BrianL working on purchasing hubs</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
@@ -3830,6 +3842,11 @@
 <li>University of Tennessee at Chattanooga (BrianL): NVIDIA MPS server (provides a CUDA interface) seems to be causing
    glideins to hang upon <code>condor_gpu_discovery</code>. NVIDIA recommends against using MPS across multiple jobs (but may be
    useful for a single user).</li>
+<li>Add check to see if it's enabled? Show up as a process under <code>ps</code><ul>
+<li>Probably not exposed to containers</li>
+</ul>
+</li>
+<li>JLab (Mat): Support in setting up Pelican Origin, setting up weekly meeting</li>
 </ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
