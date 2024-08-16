@@ -13,7 +13,7 @@ Prepare Koji and OSG-Build
 
 -   Add 2X-main, 2X-internal, 2X-upcoming, 2X-empty, and 2X-contrib Koji tags and targets
 
-    -   Modify this set of scripts as appropriate and run:
+    -   Duplicate this set of scripts into a new `koji/osg-2X` directory, modify as appropriate, and run:
         <https://github.com/opensciencegrid/osg-next-tools/tree/master/koji/osg-24>
 
         In particular, update `SERIES` as appropriate, and include any applicable Enterprise Linux versions to the
