@@ -4,7 +4,7 @@ COManage Recipes
 A collection of step-by-step instructions for common actions for use by administrators of the OSG COManage.
 
 
-Steps for common COManage Actions
+Steps for Common COManage Actions
 ----
 This section contains some common actions administrators perform on the OSG COManage, and how to do so.
 
@@ -19,11 +19,14 @@ Follow these steps to provision a CO Group into LDAP:
     Skip the first bullet point if using an existing Group.
 
     -   Navigate to the `All Groups` page in COManage and click the `+ Add Group` button near the top-right.
+        ![Create-Group-pt1](../img/comanage-create-group.png)
         Give the group a name then click `ADD`, which will bring you to the Edit page for the new group
+        ![Create-Group-pt2](../img/comanage-group-edit-page.png)
     -   Click on `MEMBERS`, then type in the name or identifier for a user you want to give membership to, 
         then select the user from the drop-down and click the `ADD` button. 
         Repeat as necessary for each group member.
         As the creator of the Group, you will already have both Membership in, and Ownership over, the new group.
+        ![Add-Members](../img/comanage-add-group-members.png)
 
 1. #### Find lowest unclaimed OSG GID in the range of non-user GIDS
 
@@ -46,6 +49,8 @@ Follow these steps to provision a CO Group into LDAP:
      (found in the last step).
     -   Add an Identifier of type `OSG Group Name` with the group's name as it should appear in LDAP.
 
+    ![Add-Identifiers](../img/comanage-group-add-identifiers.png)
+
 1.  #### Create Unix Cluster Group
 
     Each COManage Group needs a Unix Cluster Group in order to be provisioned. 
@@ -54,9 +59,13 @@ Follow these steps to provision a CO Group into LDAP:
     -> `+ Add Unix Cluster Group`
     -   Select the name of the Group you are trying to provision from the drop-down menu, then click `ADD`
 
+    ![Create-Unix-Cluster-Group](../img/comanage-create-unix-cluster-group.png)
+
 1.  #### Provision group
 
     -   In the `PROVISIONED SERVICES` tab of the Edit page for the Group,
      click the `⚙ Provision` button, then on `Provision`.
     
+    ![Provision-Group](../img/comanage-group-provision.png)
+
     If all prior steps have been completed, you should get a message that the Group was successfully provisioned.
