@@ -22,8 +22,8 @@ Prepare Koji and OSG-Build
 -   Add Koji package signing
 
     -   Starting with OSG 23, we've been using a set of two RPM signing keys for each new release series:
-        - An "auto" key, used to sign development rpms on-build in Kojihub.
-        - A "developer" key, used to sign rpms upon promotion from development to testing.
+        - An "auto" key, used to sign development RPMs on-build in Kojihub.
+        - A "developer" key, used to sign RPMs upon promotion from development to testing.
 
         These keys should be generated and placed on a Yubikey, then installed on the Kojihub host. 
         See [OSG Yubikey Generation][osg-yubikey] for up-to-date documentation on this process.
