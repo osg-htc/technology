@@ -1,8 +1,8 @@
 How to Prepare a New Release Series
 ===================================
 
-Throughout this document, we will refer to the new release series as `3.X`, and the previous release series as `3.OLD`.
-For example, if we are creating OSG 3.7, then `3.X` refers to `3.7`, and `3.OLD` refers to `3.6`.
+Throughout this document, we will refer to the new release series as `2X`, and the previous release series as `OLD`.
+For example, if we are creating OSG 25, then `2X` refers to `25`, and `OLD` refers to `24`.
 
 See the documentation in the [OSG Technology/Software and Release/Infrastructure Google Drive folder][google-drive]
  for details on the infrastructure.
@@ -11,24 +11,25 @@ See the documentation in the [OSG Technology/Software and Release/Infrastructure
 Prepare Koji and OSG-Build
 --------------------------
 
--   Add 3.X and 3.X-upcoming Koji tags and targets
+-   Add 2X-main, 2X-internal, 2X-upcoming, 2X-empty, and 2X-contrib Koji tags and targets
 
-    -   Modify this script as appropriate and run:
-        <https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-osg3X-tags-etc>
+    -   Duplicate this set of scripts into a new `koji/osg-2X` directory, modify as appropriate, and run:
+        <https://github.com/opensciencegrid/osg-next-tools/tree/master/koji/osg-24>
 
         In particular, update `SERIES` as appropriate, and include any applicable Enterprise Linux versions to the
-        `EL` loop (eg, `el7 el8`)
+        `el` loop (eg, `el8 el9`)
 
 -   Add Koji package signing
 
-    -   Starting with OSG 3.6, we've been using a different RPM signing key for each series.
-        Generate the new key in the keyring for the Koji sign plugin, and save it (encrypted) in the Koji Ansible config
-        (see [Infrastructure Google Drive folder][google-drive] for details).
-        Use a strong algorithm for the key; 4096-bit RSA is recommended.
-        Note: generate RSA keys on EL9 (e.g. in a container) or they will not be importable in EL9.
+    -   Starting with OSG 23, we've been using a set of two RPM signing keys for each new release series:
+        - An "auto" key, used to sign development RPMs on-build in Kojihub.
+        - A "developer" key, used to sign RPMs upon promotion from development to testing.
+
+        These keys should be generated and placed on a Yubikey, then installed on the Kojihub host. 
+        See [OSG Yubikey Generation][osg-yubikey] for up-to-date documentation on this process.
 
     -   Edit `koji/roles/signplugin/vars/main.yml` and `koji/roles/signplugin/templates/sign.conf.j2` in the
-        Koji Ansible config to add the key name, password, list of tags the key should be used for,
+        Koji Ansible config to add the key name, Yubikey PIN, list of tags the key should be used for,
         and template code for generating the `sign.conf` config blocks for those tags.
         Tags for EL9 and newer distros should have `gpg_digest_algo = sha256` set.
 
@@ -51,7 +52,7 @@ Prepare Koji and OSG-Build
             # --diff = show the diffs of any file changes it (would) make
             # secure.yml = the "playbook" of changes to apply
 
-    -   Export the ASCII-armored public key as `RPM-GPG-OSG-KEY-OSG-3.X`, and add it to the `osg-release` RPM.
+    -   Export the ASCII-armored public key as `RPM-GPG-OSG-KEY-OSG-2X-auto`, and add it to the `osg-release` RPM.
         Add the file and modify the `template.repo.*` files to reference the new key file.
 
 -   Update Koji policy as needed (for new distro versions); see
@@ -69,16 +70,16 @@ Build prerequisite packages
 ---------------------------
 
 -   Create a blank `X-main` SVN branch and add `buildsys-macros.elY` packages, one for each supported distro version.
-    As an example, here's what you'd do for osg-23 and el8:
+    As an example, here's what you'd do for osg-24 and el8:
 
-    1.  svn copy the buildsys-macros.elX directories from the osg-3.OLD branch
+    1.  svn copy the buildsys-macros.elX directories from the osg-OLD branch
         and hand-edit it to hardcode the new `osg_version` and `dver` values.
 
             :::console
             $ cd native/redhat/branches
-            $ svn mkdir 23-main
-            $ svn copy osg-3.6/buildsys-macros.el8 23-main/buildsys-macros.el8
-            $ cd 23-main/buildsys-macros.el8
+            $ svn mkdir 24-main
+            $ svn copy 23-main/buildsys-macros.el8 24-main/buildsys-macros.el8
+            $ cd 24-main/buildsys-macros.el8
             $ $EDITOR osg/*.spec
             ### change the osg_version and dver values as appropriate
 
@@ -94,13 +95,17 @@ Build prerequisite packages
 
     3.  Bump the revision in each `buildsys-macros.elY` spec file and edit the `%changelog`,
         `svn commit`, then do Koji builds of them.
-        Again, with osg-3.7 and el8:
+        Again, with osg-24 and el8:
 
             :::console
-            $ osg-build koji --repo=23-main --el8 23-main/buildsys-macros.el8
+            $ osg-build koji --repo=24-main --el8 24-main/buildsys-macros.el8
 
 
--   Repeat the previous steps for X-upcoming and X-internal
+-   Repeat the previous steps for each of the following: 
+    - 2X-upcoming
+    - 2X-internal
+    - 2X-empty
+    - 2X-contrib
 
 
 -   Update [`tarball-client`](https://github.com/opensciencegrid/tarball-client/)
@@ -126,7 +131,7 @@ Build prerequisite packages
 -   Get the actual NVRs to tag
 
     -   I put Brian's spreadsheet into Excel and used its filtering feature to separate out:
-        -   the packages going into 3.X.0
+        -   the packages going into 2X.0
         -   package differences between each dver (eg, el7 vs el8)
     -   save the NVRs for each dver to a separate file, eg, pkgtotag-el7.txt and pkgtotag-el8.txt
     -   Tagging:
@@ -141,7 +146,7 @@ Build prerequisite packages
         (btw, xargs -a doesn't work on a Mac)
 
 -   In order to make testing easier, build the new `osg-release` and `osg-release-itb` packages and promote them all
-    the way to release, so that all the 3.X repos exist and have at least one rpm in them.
+    the way to release, so that all the 2X repos exist and have at least one rpm in them.
 
 
 Prepare repo and test infrastructure
@@ -158,10 +163,8 @@ Prepare repo and test infrastructure
 
 Build software
 --------------
--   Populate SVN branches and tags (as in fill it with the packages we're going to release for 3.X and 3.X-upcoming)
+-   Populate SVN branches and tags (as in fill it with the packages we're going to release for 2X-main, 2X-upcoming, etc.)
 -   Mass rebuild
-    -   Don't forget to update the `empty` and `contrib` tags with the appropriate packages;
-        **remove the `empty*` packages from the development tags after they've been tagged into the `empty` tags**
 -   Drop the `osg-X-main-elY-bootstrap` koji tags
     (after the successful mass rebuild only)
 -   Update [docker-software-base](https://github.com/opensciencegrid/docker-software-base)
@@ -222,3 +225,4 @@ Post-release
 
 
 [google-drive]: <https://drive.google.com/drive/u/1/folders/1q5y81_qmnzLT2RxOGpNp5Clq2tCCirFQ>
+[osg-yubikey]: <https://docs.google.com/document/d/1BNvmDI0Fv4tWDQbydBYQhba1VS37TdXaoSCaw0y-xYs/edit?usp=sharing>
