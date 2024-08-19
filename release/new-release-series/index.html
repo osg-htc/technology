@@ -3681,20 +3681,20 @@
                 
                 
                 <h1 id="how-to-prepare-a-new-release-series">How to Prepare a New Release Series<a class="headerlink" href="#how-to-prepare-a-new-release-series" title="Permanent link">&para;</a></h1>
-<p>Throughout this document, we will refer to the new release series as <code>3.X</code>, and the previous release series as <code>3.OLD</code>.
-For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3.7</code>, and <code>3.OLD</code> refers to <code>3.6</code>.</p>
+<p>Throughout this document, we will refer to the new release series as <code>2X</code>, and the previous release series as <code>OLD</code>.
+For example, if we are creating OSG 25, then <code>2X</code> refers to <code>25</code>, and <code>OLD</code> refers to <code>24</code>.</p>
 <p>See the documentation in the <a href="https://drive.google.com/drive/u/1/folders/1q5y81_qmnzLT2RxOGpNp5Clq2tCCirFQ">OSG Technology/Software and Release/Infrastructure Google Drive folder</a>
  for details on the infrastructure.</p>
 <h2 id="prepare-koji-and-osg-build">Prepare Koji and OSG-Build<a class="headerlink" href="#prepare-koji-and-osg-build" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Add 3.X and 3.X-upcoming Koji tags and targets</p>
+<p>Add 2X-main, 2X-internal, 2X-upcoming, 2X-empty, and 2X-contrib Koji tags and targets</p>
 <ul>
 <li>
-<p>Modify this script as appropriate and run:
-    <a href="https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-osg3X-tags-etc">https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/create-new-koji-osg3X-tags-etc</a></p>
+<p>Duplicate this set of scripts into a new <code>koji/osg-2X</code> directory, modify as appropriate, and run:
+    <a href="https://github.com/opensciencegrid/osg-next-tools/tree/master/koji/osg-24">https://github.com/opensciencegrid/osg-next-tools/tree/master/koji/osg-24</a></p>
 <p>In particular, update <code>SERIES</code> as appropriate, and include any applicable Enterprise Linux versions to the
-<code>EL</code> loop (eg, <code>el7 el8</code>)</p>
+<code>el</code> loop (eg, <code>el8 el9</code>)</p>
 </li>
 </ul>
 </li>
@@ -3702,15 +3702,17 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 <p>Add Koji package signing</p>
 <ul>
 <li>
-<p>Starting with OSG 3.6, we've been using a different RPM signing key for each series.
-    Generate the new key in the keyring for the Koji sign plugin, and save it (encrypted) in the Koji Ansible config
-    (see <a href="https://drive.google.com/drive/u/1/folders/1q5y81_qmnzLT2RxOGpNp5Clq2tCCirFQ">Infrastructure Google Drive folder</a> for details).
-    Use a strong algorithm for the key; 4096-bit RSA is recommended.
-    Note: generate RSA keys on EL9 (e.g. in a container) or they will not be importable in EL9.</p>
+<p>Starting with OSG 23, we've been using a set of two RPM signing keys for each new release series:</p>
+<ul>
+<li>An "auto" key, used to sign development RPMs on-build in Kojihub.</li>
+<li>A "developer" key, used to sign RPMs upon promotion from development to testing.</li>
+</ul>
+<p>These keys should be generated and placed on a Yubikey, then installed on the Kojihub host. 
+See <a href="https://docs.google.com/document/d/1BNvmDI0Fv4tWDQbydBYQhba1VS37TdXaoSCaw0y-xYs/edit?usp=sharing">OSG Yubikey Generation</a> for up-to-date documentation on this process.</p>
 </li>
 <li>
 <p>Edit <code>koji/roles/signplugin/vars/main.yml</code> and <code>koji/roles/signplugin/templates/sign.conf.j2</code> in the
-    Koji Ansible config to add the key name, password, list of tags the key should be used for,
+    Koji Ansible config to add the key name, Yubikey PIN, list of tags the key should be used for,
     and template code for generating the <code>sign.conf</code> config blocks for those tags.
     Tags for EL9 and newer distros should have <code>gpg_digest_algo = sha256</code> set.</p>
 </li>
@@ -3735,7 +3737,7 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 
 </li>
 <li>
-<p>Export the ASCII-armored public key as <code>RPM-GPG-OSG-KEY-OSG-3.X</code>, and add it to the <code>osg-release</code> RPM.
+<p>Export the ASCII-armored public key as <code>RPM-GPG-OSG-KEY-OSG-2X-auto</code>, and add it to the <code>osg-release</code> RPM.
     Add the file and modify the <code>template.repo.*</code> files to reference the new key file.</p>
 </li>
 </ul>
@@ -3756,15 +3758,15 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 <ul>
 <li>
 <p>Create a blank <code>X-main</code> SVN branch and add <code>buildsys-macros.elY</code> packages, one for each supported distro version.
-    As an example, here's what you'd do for osg-23 and el8:</p>
+    As an example, here's what you'd do for osg-24 and el8:</p>
 <ol>
 <li>
-<p>svn copy the buildsys-macros.elX directories from the osg-3.OLD branch
+<p>svn copy the buildsys-macros.elX directories from the osg-OLD branch
     and hand-edit it to hardcode the new <code>osg_version</code> and <code>dver</code> values.</p>
 <div class="codehilite"><pre><span></span><code><span class="gp">$ </span><span class="nb">cd</span> native/redhat/branches
-<span class="gp">$ </span>svn mkdir <span class="m">23</span>-main
-<span class="gp">$ </span>svn copy osg-3.6/buildsys-macros.el8 <span class="m">23</span>-main/buildsys-macros.el8
-<span class="gp">$ </span><span class="nb">cd</span> <span class="m">23</span>-main/buildsys-macros.el8
+<span class="gp">$ </span>svn mkdir <span class="m">24</span>-main
+<span class="gp">$ </span>svn copy <span class="m">23</span>-main/buildsys-macros.el8 <span class="m">24</span>-main/buildsys-macros.el8
+<span class="gp">$ </span><span class="nb">cd</span> <span class="m">24</span>-main/buildsys-macros.el8
 <span class="gp">$ </span><span class="nv">$EDITOR</span> osg/*.spec
 <span class="gp">#</span><span class="c1">## change the osg_version and dver values as appropriate</span>
 </code></pre></div>
@@ -3785,15 +3787,21 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 <li>
 <p>Bump the revision in each <code>buildsys-macros.elY</code> spec file and edit the <code>%changelog</code>,
     <code>svn commit</code>, then do Koji builds of them.
-    Again, with osg-3.7 and el8:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>osg-build koji --repo<span class="o">=</span><span class="m">23</span>-main --el8 <span class="m">23</span>-main/buildsys-macros.el8
+    Again, with osg-24 and el8:</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>osg-build koji --repo<span class="o">=</span><span class="m">24</span>-main --el8 <span class="m">24</span>-main/buildsys-macros.el8
 </code></pre></div>
 
 </li>
 </ol>
 </li>
 <li>
-<p>Repeat the previous steps for X-upcoming and X-internal</p>
+<p>Repeat the previous steps for each of the following: </p>
+<ul>
+<li>2X-upcoming</li>
+<li>2X-internal</li>
+<li>2X-empty</li>
+<li>2X-contrib</li>
+</ul>
 </li>
 <li>
 <p>Update <a href="https://github.com/opensciencegrid/tarball-client/"><code>tarball-client</code></a></p>
@@ -3822,7 +3830,7 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 <p>Get the actual NVRs to tag</p>
 <ul>
 <li>I put Brian's spreadsheet into Excel and used its filtering feature to separate out:<ul>
-<li>the packages going into 3.X.0</li>
+<li>the packages going into 2X.0</li>
 <li>package differences between each dver (eg, el7 vs el8)</li>
 </ul>
 </li>
@@ -3842,7 +3850,7 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 </li>
 <li>
 <p>In order to make testing easier, build the new <code>osg-release</code> and <code>osg-release-itb</code> packages and promote them all
-    the way to release, so that all the 3.X repos exist and have at least one rpm in them.</p>
+    the way to release, so that all the 2X repos exist and have at least one rpm in them.</p>
 </li>
 </ul>
 <h2 id="prepare-repo-and-test-infrastructure">Prepare repo and test infrastructure<a class="headerlink" href="#prepare-repo-and-test-infrastructure" title="Permanent link">&para;</a></h2>
@@ -3861,12 +3869,8 @@ For example, if we are creating OSG 3.7, then <code>3.X</code> refers to <code>3
 </ul>
 <h2 id="build-software">Build software<a class="headerlink" href="#build-software" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Populate SVN branches and tags (as in fill it with the packages we're going to release for 3.X and 3.X-upcoming)</li>
-<li>Mass rebuild<ul>
-<li>Don't forget to update the <code>empty</code> and <code>contrib</code> tags with the appropriate packages;
-    <strong>remove the <code>empty*</code> packages from the development tags after they've been tagged into the <code>empty</code> tags</strong></li>
-</ul>
-</li>
+<li>Populate SVN branches and tags (as in fill it with the packages we're going to release for 2X-main, 2X-upcoming, etc.)</li>
+<li>Mass rebuild</li>
 <li>Drop the <code>osg-X-main-elY-bootstrap</code> koji tags
     (after the successful mass rebuild only)</li>
 <li>Update <a href="https://github.com/opensciencegrid/docker-software-base">docker-software-base</a>
