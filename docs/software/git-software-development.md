@@ -248,7 +248,7 @@ This can be done using the [git rebase -i](#verify-that-only-the-files-intended-
 and `git filter-repo` commands.
 
 If a large file must be added to the repository.
-Use (Git LFS)[https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage]
+Use [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage)
 
 #### Verify that only the files intended are modified in each commit
 
