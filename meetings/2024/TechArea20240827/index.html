@@ -1217,8 +1217,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jira-as-of-monday-morning-todo" class="md-nav__link">
-    Jira (as of Monday morning) (TODO)
+  <a href="#jira-as-of-monday-morning" class="md-nav__link">
+    Jira (as of Monday morning)
   </a>
   
 </li>
@@ -3736,8 +3736,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jira-as-of-monday-morning-todo" class="md-nav__link">
-    Jira (as of Monday morning) (TODO)
+  <a href="#jira-as-of-monday-morning" class="md-nav__link">
+    Jira (as of Monday morning)
   </a>
   
 </li>
@@ -3834,10 +3834,10 @@
 <ul>
 <li>This week: Mat</li>
 <li>Next week: Matt</li>
-<li>7 (+4) open FreshDesk tickets (TODO)</li>
-<li>0 (+0) open GGUS ticket</li>
+<li>9 (+2) open FreshDesk tickets (as of Tuesday morning)</li>
+<li>0 (+0) open GGUS tickets (as of Tuesday morning)</li>
 </ul>
-<h3 id="jira-as-of-monday-morning-todo">Jira (as of Monday morning) (TODO)<a class="headerlink" href="#jira-as-of-monday-morning-todo" title="Permanent link">&para;</a></h3>
+<h3 id="jira-as-of-monday-morning">Jira (as of Monday morning)<a class="headerlink" href="#jira-as-of-monday-morning" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3848,82 +3848,65 @@
 </thead>
 <tbody>
 <tr>
-<td>220</td>
-<td>+0</td>
+<td>217</td>
+<td>-3</td>
 <td>Open</td>
 </tr>
 <tr>
 <td>14</td>
-<td>-3</td>
+<td>+0</td>
 <td>Selected for Dev</td>
 </tr>
 <tr>
-<td>35</td>
-<td>+3</td>
+<td>31</td>
+<td>-4</td>
 <td>In Progress</td>
 </tr>
 <tr>
-<td>16</td>
-<td>+0</td>
+<td>17</td>
+<td>+1</td>
 <td>Dev Complete</td>
 </tr>
 <tr>
-<td>4</td>
-<td>+3</td>
+<td>5</td>
+<td>+1</td>
 <td>Ready for Testing</td>
 </tr>
 <tr>
-<td>2</td>
-<td>+1</td>
+<td>0</td>
+<td>-2</td>
 <td>Ready for Release</td>
 </tr>
 </tbody>
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>AI (Matt): Kuantifier status</p>
-<ul>
-<li>Cut a release candidate, coordinate testing with UNL</li>
-</ul>
-</li>
-<li>
-<p>AI (Mat):</p>
-<ul>
-<li>Koji ARM work is complete  </li>
-<li>K8s hackathon: NRP dev Flux integration</li>
+<li>AI (Mat):<ul>
 <li>Move OSG voms patches upstream, drop support for voms</li>
+<li>Transition EL9 repo work to Matt</li>
+<li>Assist HTCondor dev team on release run-through</li>
 </ul>
 </li>
-<li>
-<p>AI (Matt):</p>
-<ul>
-<li>EL9 repo</li>
-<li>K8s hackathon: Set up new IceCube namespace in the UNL PATh Facility</li>
-<li>OSG 24 yubikeys, usb and paperkey backups </li>
+<li>AI (Mat):<ul>
+<li>Check output transfer transforms on the OSPool</li>
 </ul>
 </li>
-<li>
-<p>AI (Mat): Contribute VOMS patches upstream</p>
-</li>
-<li>
-<p>Marco: GlideinWMS ARM packaging</p>
-<ul>
-<li>Using noarch packages, works pretty well out of our x86_64 repos</li>
-<li>Should attempt to pull from aarch64 repos instead  </li>
+<li>AI (Mat):<ul>
+<li>Add VMU tests for ARM (build images)</li>
+<li>Verify test infrastructure works for multiple architectures</li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <ul>
-<li>TimT currently running releases while on vacation, might need more robust back-up release process in place.</li>
+<li>Matt finished OSG 24 YubiKeys, USB and Paperkey backups</li>
+<li>HTCondor 24 scheduled for October;</li>
+<li>HTCondor 23.9.7 released last week with truncated hold messages and wrong hold reason codes fixed</li>
 </ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
 <ul>
-<li>AI (Matt): JLab CredMon issue<ul>
-<li>Able to start CredMon daemon as root but not from the <code>condor_master</code>. Need to follow up with HTCSS dev team </li>
-</ul>
-</li>
+<li>Oklahoma University (Mat): osg-xrootd-standalone does not start up on a new EL9 installation;
+    not the usual SHA1 problem, so further debugging is needed</li>
 </ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
