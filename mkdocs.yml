@@ -47,6 +47,7 @@ nav:
     - Acceptance Testing: 'release/acceptance-testing.md'
   - Operations:
     - COManage SOP: 'operations/comanage-sop.md'
+    - COManage Recipes: 'operations/comanage-recipes.md'
     - COmanage Troubleshooting Guide: 'operations/comanage-troubleshooting-guide.md'
   - Policy:
     - GridFTP and GSI Migration: 'policy/gridftp-gsi-migration.md'
