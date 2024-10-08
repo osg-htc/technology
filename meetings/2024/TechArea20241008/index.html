@@ -3894,8 +3894,12 @@
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>OSG 24:<ul>
-<li>Start building packages</li>
+<li>Start building packages<ul>
+<li>push osg/igtf-ca-certs into 24-release so osg-24 software base can be built   </li>
+</ul>
+</li>
 <li>AI (BrianL): review Matt's GHA ARM PRs</li>
+<li>el9 repo is not a blocker for osg-24</li>
 <li>Once <code>osg-ca-certs</code> is ready, we can add OSG 24 to the <code>software-base</code> builds</li>
 </ul>
 </li>
@@ -3903,28 +3907,41 @@
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
 <p>None this week</p>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>osg-notify: unable to send outgoing emails<ul>
+<li>Currently send emails via MTA in tiger which relays to DoIT MTA</li>
+<li>Larger issues around spam filtering</li>
+</ul>
+</li>
+<li>software.igwn.org: not yet seeing the new CVMFS namespace<ul>
+<li>need to complete daemonset rollouts in other PATh clusters</li>
+</ul>
+</li>
+</ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Ready for Release:<ul>
-<li>condor 23.10</li>
-<li>condor 23.0.15</li>
+<li>osdf-server-7.10.7<ul>
+<li>To test: install on ap40</li>
+<li>BrianL kicked the tires during the meeting</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Ready for Testing:<ul>
-<li>xrootd-5.7.1</li>
-<li>xrd-pelican-0.9.4<ul>
-<li>To test: install on ap40</li>
-</ul>
-</li>
+<li>None this week</li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>HTCondor 24 not expected until mid-October</li>
+<li>TimT setting up HTCondor-24 RC repo<ul>
+<li>Need to start moving build pipeline from dumbo to nest</li>
+<li>User group/filesystem config needed to support this, will create INF tickets</li>
+</ul>
+</li>
 </ul>
                 
               
