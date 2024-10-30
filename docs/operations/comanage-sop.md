@@ -28,7 +28,7 @@ Follow the instructions below to approve a contact registration.
         Click on the registrant's name to view their request.
 
         !!! note "Topology registrations"
-            You can view the list of Topology registrations [here](https://registry.cilogon.org/registry/co_petitions/index/co:7/sort:CoPetition.created/direction:desc/search.status:PA).)
+            You can view the list of Topology registrations [here](https://registry.cilogon.org/registry/co_petitions/index/co:7/sort:CoPetition.created/direction:desc/search.status:PA/search.cou:55/op:search).
 
         !!! note
             Many groups share our COManage instance so make sure that you're only approving registration requests for
