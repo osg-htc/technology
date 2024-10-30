@@ -3792,13 +3792,25 @@
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <p>OSG 24: aiming for release this Thursday!</p>
 <ul>
-<li>VMU tests look pretty bad with testing + release as expected. Do we have a run against development?</li>
+<li>VMU tests look pretty bad with testing + release as expected. Do we have a run against development?<ul>
+<li>HTCondor not syncing into 24-testing/release - we might need to update el7 repo again</li>
+<li>Development tests https://osg-sw-submit.chtc.wisc.edu/tests/20241021-1629/results.html</li>
+<li>Today: Start pushing packages through -main testing and -upcoming testing</li>
+<li>We are not currently testing 24-upcoming-development, but should have been while we were building packages</li>
+</ul>
+</li>
 <li>Pelican 7.11.0 won't be ready by the initial release so we'll release with 7.10.11 and tell folks to hold off on
     installation / upgrade</li>
-<li>Need to make a decision on <code>hosted-ce-tools</code> when Mat gets back</li>
+<li>Need to make a decision on <code>hosted-ce-tools</code> when Mat gets back<ul>
+<li>Contains some cvmfsexec utilities that we might not be able to get rid of</li>
+</ul>
+</li>
 <li>AI (BrianL): write up OSG 24 initial release, review Matt's OSG 24 changes, OSDF origin/cache </li>
 <li>Container images:<ul>
-<li>AI (Matt): Fix <code>ospool-ep</code> GHA + upgrade instructions</li>
+<li>AI (Matt): Fix <code>ospool-ep</code> GHA + upgrade instructions<ul>
+<li>GHAs fixed, still need instructions</li>
+</ul>
+</li>
 <li>Following repos need OSG 24 added: <ul>
 <li><code>docker-compute-entrypoint</code></li>
 <li><code>docker-xcache</code></li>
@@ -3826,11 +3838,7 @@
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Ready for Release:<ul>
-<li>osdf-server-7.10.7<ul>
-<li>To test: install on ap40</li>
-<li>BrianL kicked the tires during the meeting</li>
-</ul>
-</li>
+<li>pelican-7.10.11</li>
 </ul>
 </li>
 <li>Ready for Testing:<ul>
@@ -3840,11 +3848,7 @@
 </ul>
 <h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>TimT setting up HTCondor-24 RC repo<ul>
-<li>Need to start moving build pipeline from dumbo to nest</li>
-<li>User group/filesystem config needed to support this, will create INF tickets</li>
-</ul>
-</li>
+<li>AI (Matt): Additional XRootD patches for a patch release: #2300 and #2363</li>
 </ul>
                 
               
