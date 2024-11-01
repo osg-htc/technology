@@ -3846,7 +3846,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> BrianL, Mat, Matt, Tim</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3910,6 +3910,7 @@
 <ul>
 <li>AI (Brian): upgrade Prometheus</li>
 <li>AI (Mat): EL9 repo?</li>
+<li>AI (Mat): GLBRC origins</li>
 <li>AI (Mat): one of sealed-secrets or cert-manager upgrades</li>
 <li>AI (Matt): IGWN CVMFS on the PATh Facility</li>
 <li>AI (Matt): PATh FIU IPv6</li>
@@ -3919,14 +3920,38 @@
 <p>OSG 24:</p>
 <ul>
 <li>Package builds assigned!</li>
-<li>AI (Matt): ARM OSPool EP containers?</li>
+<li>AI (Matt): ARM OSPool EP containers?<ul>
+<li>Need to debug x86_64 Singularity test failures causes by adding arm</li>
+<li>Add CPU/memory limiting</li>
+<li>Custom GitHub action for building Docker images needs to be fixed for multiarch builds;</li>
+</ul>
+</li>
+<li>AI (Matt): Merge Mat's repo-scripts PRs for updating the repo server;
+    need to put osg-release for OSG 24 on repo to start testing</li>
 </ul>
 </li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>
+<p>OSPool ARM Singularity images (for payload jobs) do not exist -- Mat, Mats need to design a scheme
+    for distinguishing them from x86_64</p>
+</li>
+<li>
+<p>Kuantifier (Matt): Suggested Prometheus metrics for Kuantifier are easy to access,
+    but the required config changes are not well documented which suggests a low usage rate across the community.
+    The current Kuantifier user base is well versed in Kubernetes so this should be fine for now.</p>
+<ul>
+<li>Related: https://github.com/rptaylor/kapel/issues/71#issuecomment-2384268967</li>
+</ul>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>Many support requests are coming in from IGWN because they want to use the PATh Facility</li>
+<li>Mat (ComputeCanada-Cedar for IGWN): Singularity support wasn't being enabled because GlideinWMS
+    startup scripts were requiring the default images to be from CVMFS.  Fixed in frontend config.</li>
+</ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
