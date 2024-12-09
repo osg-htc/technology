@@ -3682,8 +3682,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jira-as-of-monday-morning-todo" class="md-nav__link">
-    Jira (as of Monday morning) (TODO)
+  <a href="#jira-as-of-monday-morning" class="md-nav__link">
+    Jira (as of Monday morning)
   </a>
   
 </li>
@@ -3768,7 +3768,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> Mat, Matt, Tim</li>
+<li><strong>Attending:</strong> Derek, Marco, Mat, Matt, Tim</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3778,12 +3778,11 @@
 <p>Triage duty shifts Tue-Mon</p>
 <ul>
 <li>This week: Mat</li>
-<li>Next week: Mat</li>
+<li>Next week: Mat?</li>
 <li>10 (+2) open FreshDesk tickets (since 11/19)</li>
 <li>0 (+0) open GGUS ticket</li>
 </ul>
-<h3 id="jira-as-of-monday-morning-todo">Jira (as of Monday morning) (TODO)<a class="headerlink" href="#jira-as-of-monday-morning-todo" title="Permanent link">&para;</a></h3>
-<p>(delta since 11/05 meeting)</p>
+<h3 id="jira-as-of-monday-morning">Jira (as of Monday morning)<a class="headerlink" href="#jira-as-of-monday-morning" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3794,8 +3793,8 @@
 </thead>
 <tbody>
 <tr>
-<td>221</td>
-<td>+0</td>
+<td>223</td>
+<td>+2</td>
 <td>Open</td>
 </tr>
 <tr>
@@ -3804,8 +3803,8 @@
 <td>Selected for Dev</td>
 </tr>
 <tr>
-<td>45</td>
-<td>+0</td>
+<td>37</td>
+<td>-8</td>
 <td>In Progress</td>
 </tr>
 <tr>
@@ -3814,39 +3813,40 @@
 <td>Dev Complete</td>
 </tr>
 <tr>
-<td>1</td>
-<td>-1</td>
+<td>2</td>
+<td>+1</td>
 <td>Ready for Testing</td>
 </tr>
 <tr>
 <td>0</td>
-<td>-1</td>
+<td>+0</td>
 <td>Ready for Release</td>
 </tr>
 </tbody>
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
-<p>OSG 24 clean-up:</p>
 <ul>
-<li>OSDF caches / origins<ul>
-<li>AI (Mat): prepare <code>osdf-server</code> for release with Pelican 7.11</li>
+<li>AI (Mat): fix VMU test images lost in data outage</li>
+<li>AI (Matt): investigate slow rsync of Condor RPMs into repo</li>
 </ul>
-</li>
-<li>AI (Matt): Sync 24-main tarballs onto repo<ul>
-<li>Ask UW CSL to set up rsync server</li>
-</ul>
-</li>
-<li>AI (Matt): Fix various OSG 24 image build issues</li>
-<li>AI (BrianL): Review PRs for:<ul>
-<li>OSG 23 to 24 upgrade docs</li>
-<li>HTCondor-CE 23 to 24 upgrade docs</li>
-</ul>
-</li>
-</ul>
+<p>OSG 24 clean-up:
+-   OSDF caches / origins
+    - AI (Mat): prepare <code>osdf-server</code> for release with Pelican 7.11</p>
 <p>EL9 repo:
 -   AI (Mat): Write repo migration instructions</p>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>3.10.8 is out and has been smoke tested; promotion request will be incoming</p>
+</li>
+<li>
+<p>3.10.7-3 has not been promoted yet: CHTC data outage was preventing VMU tests from running;
+    the only change in this version vs. 3.10.7-2 is disabling path mangling which was causing problems for CMS
+    EL6 containers</p>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
+<p>None this week</p>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>

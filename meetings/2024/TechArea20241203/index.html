@@ -3882,7 +3882,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> </li>
+<li><strong>Attending:</strong> Brian, Tim, Mat, Matt</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3941,14 +3941,61 @@
 </table>
 <h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <ul>
-<li>EL9 repo status?</li>
-<li>Glidein dir cleanup status?</li>
-<li>Thoughts on how we can reduce Hosted CE IPv4 usage?</li>
+<li>
+<p>EL9 repo status</p>
+<ul>
+<li>AI (Mat): Finish announcement email</li>
+<li>AI (Matt): Review PR for migration script</li>
+</ul>
+</li>
+<li>
+<p>Glidein dir cleanup status: temporarily disabled due to holding up Glidein startup
+    at a site with a large number of dirs to clean up on a shared filesystem.
+    Todd T, Matt, and Mat had a brainstorming discussion, for which Todd will write up a design.</p>
+</li>
+<li>
+<p>AI (Mat): Create new VMU disk images so we can run VMU tests again.</p>
+</li>
+<li>AI (Mat): Build XRootD 5.7.2</li>
+<li>
+<p>AI (Mat): Review OSG 24 upgrade instructions PRs</p>
+</li>
+<li>
+<p>AI (Matt): Remaining OSG 24 image builds:</p>
+<ul>
+<li>docker-xcache: Mat to review PR</li>
+<li>docker-compute-entrypoint: requires a new osg-ce build, though hosted CEs should
+    already be using the version of osg-ce from main-testing or upcoming-testing.
+    Matt should ask hosted CE operations if they are running the new version</li>
+</ul>
+</li>
+<li>
+<p>AI (Matt): VMU tests on ARM; CHTC has an ARM machine that is restricted to running jobs
+    from BatLab and CHTC staff; CHTC operations will review the policy.</p>
+</li>
 </ul>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>
+<p>Thoughts on how we can reduce Hosted CE IPv4 usage?
+    Need to discuss with the HTCondor development team if unique IPv4 addresses are necessary;
+    Tim thinks yes, for reverse DNS, but Mat thinks reverse DNS isn't used anymore</p>
+<p>Tim suggests running each Hosted CE on a different port but Brian says that would be verfy
+painful to manage and would essentially lock CEs to specific nodes.</p>
+<p>Brian will investigate IngressRouteTCP.</p>
+</li>
+</ul>
 <h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
+<ul>
+<li>
+<p>SURF (Mat): LIGO site using an xcache-based cache; they got a new cert and need a LIGO
+    test file to test with because their cache does not support the OSG VO.</p>
+</li>
+<li>
+<p>IceCube (Mat): condor_gpu_discovery not discovering Intel GPUs.  Mat will discuss with
+    the HTCondor dev team.</p>
+</li>
+</ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
 <h2 id="osg-release-team">OSG Release Team<a class="headerlink" href="#osg-release-team" title="Permanent link">&para;</a></h2>
