@@ -3682,8 +3682,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jira-as-of-monday-morning-todo" class="md-nav__link">
-    Jira (as of Monday morning) (TODO)
+  <a href="#jira-as-of-monday-morning" class="md-nav__link">
+    Jira (as of Monday morning)
   </a>
   
 </li>
@@ -3694,11 +3694,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#osg-software-team-todo" class="md-nav__link">
-    OSG Software Team (TODO)
+  <a href="#osg-software-team" class="md-nav__link">
+    OSG Software Team
   </a>
   
-    <nav class="md-nav" aria-label="OSG Software Team (TODO)">
+    <nav class="md-nav" aria-label="OSG Software Team">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3709,8 +3709,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#support-update-todo" class="md-nav__link">
-    Support Update (TODO)
+  <a href="#support-update" class="md-nav__link">
+    Support Update
   </a>
   
 </li>
@@ -3768,7 +3768,7 @@
 <ul>
 <li><strong>Coordinates:</strong> Conference: +1-415-655-0002, PIN: 146 266 9392,
     <a href="https://morgridge-org.zoom.us/j/91987518094">https://morgridge-org.zoom.us/j/91987518094</a> (password sent separately)</li>
-<li><strong>Attending:</strong> Mat, Matt, Tim</li>
+<li><strong>Attending:</strong> Marco, Mat, Matt, Tim</li>
 </ul>
 <h2 id="announcements">Announcements<a class="headerlink" href="#announcements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3782,7 +3782,8 @@
 <li>8 (+0) open FreshDesk tickets (since 11/05)</li>
 <li>0 (+0) open GGUS ticket</li>
 </ul>
-<h3 id="jira-as-of-monday-morning-todo">Jira (as of Monday morning) (TODO)<a class="headerlink" href="#jira-as-of-monday-morning-todo" title="Permanent link">&para;</a></h3>
+<h3 id="jira-as-of-monday-morning">Jira (as of Monday morning)<a class="headerlink" href="#jira-as-of-monday-morning" title="Permanent link">&para;</a></h3>
+<p>(delta since 11/05 meeting)</p>
 <table>
 <thead>
 <tr>
@@ -3793,18 +3794,18 @@
 </thead>
 <tbody>
 <tr>
-<td>220</td>
-<td>-1</td>
+<td>221</td>
+<td>+0</td>
 <td>Open</td>
 </tr>
 <tr>
 <td>17</td>
-<td>-4</td>
+<td>+0</td>
 <td>Selected for Dev</td>
 </tr>
 <tr>
 <td>45</td>
-<td>+1</td>
+<td>+0</td>
 <td>In Progress</td>
 </tr>
 <tr>
@@ -3813,55 +3814,49 @@
 <td>Dev Complete</td>
 </tr>
 <tr>
-<td>2</td>
-<td>+1</td>
+<td>1</td>
+<td>-1</td>
 <td>Ready for Testing</td>
 </tr>
 <tr>
-<td>1</td>
-<td>+1</td>
+<td>0</td>
+<td>-1</td>
 <td>Ready for Release</td>
 </tr>
 </tbody>
 </table>
-<h2 id="osg-software-team-todo">OSG Software Team (TODO)<a class="headerlink" href="#osg-software-team-todo" title="Permanent link">&para;</a></h2>
+<h2 id="osg-software-team">OSG Software Team<a class="headerlink" href="#osg-software-team" title="Permanent link">&para;</a></h2>
 <p>OSG 24 clean-up:</p>
 <ul>
 <li>OSDF caches / origins<ul>
 <li>AI (Mat): prepare <code>osdf-server</code> for release with Pelican 7.11</li>
-<li>AI (Mat): write cache doc, these upstream changes will be relevant:
-  <a href="https://github.com/PelicanPlatform/pelican/pull/1709/files">https://github.com/PelicanPlatform/pelican/pull/1709/files</a></li>
-<li>AI (BrianL) write origin docs</li>
 </ul>
 </li>
-<li>Container images:<ul>
-<li>AI (Matt): upgrade instructions for the OSPool EP</li>
-<li>Following repos need OSG 24 added:<ul>
-<li><code>docker-compute-entrypoint</code></li>
-<li><code>docker-xcache</code></li>
-<li><code>gratia-probe</code></li>
-<li><code>htcondor-autoscale-manager</code></li>
-<li><code>open-science-pool-registry</code></li>
-<li><code>osg-repo-scripts</code> (?)</li>
+<li>AI (Matt): Sync 24-main tarballs onto repo<ul>
+<li>Ask UW CSL to set up rsync server</li>
+</ul>
+</li>
+<li>AI (Matt): Fix various OSG 24 image build issues</li>
+<li>AI (BrianL): Review PRs for:<ul>
+<li>OSG 23 to 24 upgrade docs</li>
+<li>HTCondor-CE 23 to 24 upgrade docs</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>AI (Matt): Sync 24-main tarballs onto repo</li>
-</ul>
-<p>EL9 repo: 
+<p>EL9 repo:
 -   AI (Mat): Write repo migration instructions</p>
 <h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
-<p>None this week</p>
-<h3 id="support-update-todo">Support Update (TODO)<a class="headerlink" href="#support-update-todo" title="Permanent link">&para;</a></h3>
 <ul>
-<li>BNL (BrianL): Belle II SSL-based glideins aren't getting reported.
-    Not a supported method in OSG so we have a hacky workaround where they set <code>orig_AuthTokenIssuer</code> and GRACC will map
-    the value to Belle II.</li>
-<li>ATLAS / BNL / AGLT2 (BrianL, MattW): questions about scheduling prioritizing cores and memory efficiency.
-    Greg is taking point on the ATLAS communication thread, seems relevant for us.
-    Notably UChicago doesn't have these problems: they allow Harvester to specify the memory that they want and allow
-    pilots to consume 3x their memory requests</li>
+<li>GlideinWMS: 3.10.8 in progress</li>
+<li>LIGO uses startd disk enforcement, which is causing Glideins to request insufficient disk
+    and exit without running any jobs.
+    Marco will talk to James Clark to debug.</li>
+</ul>
+<h3 id="support-update">Support Update<a class="headerlink" href="#support-update" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Matt (Harrisburg): ospool-ep container not cleaning up scratch directories.
+    Mats Rynge is working on a cleanup script for factory-sent pilots;
+    Matt will investigate making use of that script for container pilots as well.</li>
 </ul>
 <h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
 <p>None this week</p>
