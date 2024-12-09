@@ -52,7 +52,7 @@ If you are on triage duty, your responsibilities are as follows:
         (see [this documentation](https://support.freshdesk.com/en/support/solutions/articles/37560-monitoring-important-tickets-by-becoming-a-watcher))
 
     !!! important "New sites interested in joining the OSG"
-        For support requests inquiring about joining the OSG, assign the ticket to the `Campus Facilitation` group.
+        For support requests inquiring about joining the OSG, assign the ticket to the `Campus Services` group.
 
 -   **Review assigned software tickets.**
     For tickets that are not being handled in a timely fashion (pay special attention to `OVERDUE` and `Customer

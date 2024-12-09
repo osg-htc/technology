@@ -27,6 +27,9 @@ Follow the instructions below to approve a contact registration.
         [here](https://registry.cilogon.org/registry/co_petitions/index/co:7/sort:CoPetition.created/direction:desc/search.status:PA).
         Click on the registrant's name to view their request.
 
+        !!! note "Topology registrations"
+            You can view the list of Topology registrations [here](https://registry.cilogon.org/registry/co_petitions/index/co:7/sort:CoPetition.created/direction:desc/search.status:PA/search.cou:55/op:search).
+
         !!! note
             Many groups share our COManage instance so make sure that you're only approving registration requests for
             the appropriate group, e.g. site contacts.
@@ -35,12 +38,10 @@ Follow the instructions below to approve a contact registration.
 
 1.  Review the request:
 
-    1.  Verify that the request is legitimate by doing at least one of the following:
-
-        -   Find associated support tickets by searching for their email address in Freshdesk
-        -   Ask someone affiliated with the site, collaboration, or the sponsor of a project to verify the registrant's
-            affiliation.
-        -   Ask if other staff have been in contact with them via the `#staff` Slack channel
+    1.  Verify that the request is legitimate by asking someone affiliated with the site, collaboration, or the sponsor
+        of a project to verify the registrant's affiliation.
+        In the case of the OSPool, this should be the OSG Campus Coordinator
+        (try searching Freshdesk for the requester's email address and look for a private note with approval).
 
     1.  Verify that the registrant has submitted their request using the correct form,
         e.g. OSPool users should not have submitted a request to register as a Topology contact.
