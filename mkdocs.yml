@@ -61,6 +61,7 @@ nav:
     - 'Community Testing': 'policy/community-testing.md'
     - New OSPool User Registration: 'policy/new-ospool-user.md'
     - Handling Topology/Contacts Registrations: 'policy/topology-registration.md'
+    - 'Repo Layout Migration - Jan 2025': 'policy/repo-layout-migration-2025.md'
   - Documentation:
     - Writing Documentation: 'documentation/writing-documentation.md'
     - Reviewing Documentation: 'documentation/reviewing-documentation.md'
