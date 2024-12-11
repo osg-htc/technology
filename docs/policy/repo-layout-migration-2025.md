@@ -3,21 +3,21 @@ OSG Software Repo Layout Migration
 
 11 December 2024
 
-On Monday, January 6th, 2025, the OSG Software Team will be upgrading the server that hosts the OSG Software repos
-(<https://repo.osg-htc.org> a.k.a. <https://repo.opensciencegrid.org>),
-which will result in changes to the directory layout for the OSG 23 and OSG 24 YUM repos.
+On Monday, January 6th, 2025, the OSG Software Team will be upgrading the server that hosts the OSG Software Yum repositories
+(<https://repo.osg-htc.org> nee <https://repo.opensciencegrid.org>),
+which will result in changes to the directory layout for the OSG 23 and OSG 24 Yum repos.
 
-Users should not be affected since the URLs of the repos themselves will not change.
-However, mirrors will have to take some action to avoid rsyncing those repos from scratch.
+Users installing packages should not be affected since the URLs of the repositories themselves will not change.
+However, mirror administrators will have to take some action to avoid rsyncing those repos from scratch.
 
 Perform the following steps:
 
-1.  Turn off rsync from `repo-rsync.opensciencegrid.org` (a.k.a. `repo-rsync.osg-htc.org`)
+1.  Turn off rsync from `repo-rsync.opensciencegrid.org` or `repo-rsync.osg-htc.org`
 
 2.  Download the migration script from <https://github.com/osg-htc/osg-repo-scripts/blob/el9/migrate.py>
     ([direct link](https://raw.githubusercontent.com/osg-htc/osg-repo-scripts/refs/heads/el9/migrate.py))
 
-3.  Run the migration script on your OSG 23 and OSG 24 repos.
+3.  Run the migration script on your OSG 23 and OSG 24 Yum repositories.
     For example, if the files on your mirror are under `/mnt/mirror/osg`, then run
 
         :::shell
@@ -41,5 +41,5 @@ Perform the following steps:
 This will switch your mirror to the new repo layout, minimizing disruption to users.
 
 On January 6th, we will upgrade <https://repo.osg-htc.org>, at which point you should change your rsync source
-from `repo-rsync-itb.osg-htc.org` to `repo-rsync.osg-htc.org`
+from `repo-rsync-itb.osg-htc.org` to `repo-rsync.osg-htc.org`.
 
