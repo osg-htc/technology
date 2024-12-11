@@ -4,7 +4,7 @@ OSG Software Repo Layout Migration
 11 December 2024
 
 On Monday, January 6th, 2025, the OSG Software Team will be upgrading the server that hosts the OSG Software Yum repositories
-(<https://repo.osg-htc.org> nee <https://repo.opensciencegrid.org>),
+(<https://repo.osg-htc.org> née <https://repo.opensciencegrid.org>),
 which will result in changes to the directory layout for the OSG 23 and OSG 24 Yum repos.
 
 Users installing packages should not be affected since the URLs of the repositories themselves will not change.
