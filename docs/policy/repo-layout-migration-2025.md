@@ -41,5 +41,5 @@ Perform the following steps:
 This will switch your mirror to the new repo layout, minimizing disruption to users.
 
 On January 6th, we will upgrade <https://repo.osg-htc.org>, at which point you should change your rsync source
-from `repo-rsync-itb.osg-htc.org` to `repo-rsync.osg-htc.org`.
+from `repo-rsync-itb.osg-htc.org` to `repo-rsync.osg-htc.org`.  We will send a reminder after the update.
 
