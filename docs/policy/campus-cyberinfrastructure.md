@@ -54,10 +54,10 @@ To contribute computational resources to the OSG, the following will be needed:
 - Installation of some additional packages on the local cluster, IF the site would like to maximize its ability to support
   users, including those with large per-job data, containerized software, and/or GPU jobs.
 
-(There ARE some exceptions to the above. [Contact us](mailto:support@opensciencegrid.org) to discuss them!)
+(There ARE some exceptions to the above. [Contact us](mailto:support@osg-htc.org) to discuss them!)
 
 !!!success "Next steps"
-    If you are interested in OSG-offered services, please [contact us](mailto:support@opensciencegrid.org) for a
+    If you are interested in OSG-offered services, please [contact us](mailto:support@osg-htc.org) for a
     consultation, even if your site does not meet all the conditions as outlined above!
 
 Additional Materials
