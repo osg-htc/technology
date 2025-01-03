@@ -682,29 +682,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-regenerate-the-build-repositories" class="md-nav__link">
-    Step 3: Regenerate the build repositories
+  <a href="#step-3-create-the-client-tarballs" class="md-nav__link">
+    Step 3: Create the client tarballs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-create-the-client-tarballs" class="md-nav__link">
-    Step 4: Create the client tarballs
+  <a href="#step-4-briefly-test-the-client-tarballs" class="md-nav__link">
+    Step 4: Briefly test the client tarballs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-briefly-test-the-client-tarballs" class="md-nav__link">
-    Step 5: Briefly test the client tarballs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-6-wait" class="md-nav__link">
-    Step 6: Wait
+  <a href="#step-5-wait" class="md-nav__link">
+    Step 5: Wait
   </a>
   
 </li>
@@ -744,15 +737,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-rebuild-the-docker-software-base" class="md-nav__link">
-    Step 4: Rebuild the Docker software base
+  <a href="#step-4-install-the-tarballs-into-oasis" class="md-nav__link">
+    Step 4: Install the tarballs into OASIS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-install-the-tarballs-into-oasis" class="md-nav__link">
-    Step 5: Install the tarballs into OASIS
+  <a href="#step-5-rebuild-the-docker-software-base" class="md-nav__link">
+    Step 5: Rebuild the Docker software base
   </a>
   
 </li>
@@ -3923,29 +3916,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-regenerate-the-build-repositories" class="md-nav__link">
-    Step 3: Regenerate the build repositories
+  <a href="#step-3-create-the-client-tarballs" class="md-nav__link">
+    Step 3: Create the client tarballs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-create-the-client-tarballs" class="md-nav__link">
-    Step 4: Create the client tarballs
+  <a href="#step-4-briefly-test-the-client-tarballs" class="md-nav__link">
+    Step 4: Briefly test the client tarballs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-briefly-test-the-client-tarballs" class="md-nav__link">
-    Step 5: Briefly test the client tarballs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-6-wait" class="md-nav__link">
-    Step 6: Wait
+  <a href="#step-5-wait" class="md-nav__link">
+    Step 5: Wait
   </a>
   
 </li>
@@ -3985,15 +3971,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-rebuild-the-docker-software-base" class="md-nav__link">
-    Step 4: Rebuild the Docker software base
+  <a href="#step-4-install-the-tarballs-into-oasis" class="md-nav__link">
+    Step 4: Install the tarballs into OASIS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-install-the-tarballs-into-oasis" class="md-nav__link">
-    Step 5: Install the tarballs into OASIS
+  <a href="#step-5-rebuild-the-docker-software-base" class="md-nav__link">
+    Step 5: Rebuild the Docker software base
   </a>
   
 </li>
@@ -4146,16 +4132,7 @@ git clone https://github.com/opensciencegrid/release-tools.git
 <p class="admonition-title">Note</p>
 <p>If there are failures, consult the release-manager before proceeding.</p>
 </div>
-<h3 id="step-3-regenerate-the-build-repositories">Step 3: Regenerate the build repositories<a class="headerlink" href="#step-3-regenerate-the-build-repositories" title="Permanent link">&para;</a></h3>
-<p>To avoid 404 errors when retrieving packages, it's necessary to regenerate the build repositories. Run the following script from a machine with your koji-registered user certificate:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="c1"># laptop</span>
-./1-regen-repos <span class="nv">$NON_UPCOMING_VERSIONS</span>
-</code></pre></div>
-
-<h3 id="step-4-create-the-client-tarballs">Step 4: Create the client tarballs<a class="headerlink" href="#step-4-create-the-client-tarballs" title="Permanent link">&para;</a></h3>
+<h3 id="step-3-create-the-client-tarballs">Step 3: Create the client tarballs<a class="headerlink" href="#step-3-create-the-client-tarballs" title="Permanent link">&para;</a></h3>
 <p>Create the OSG client tarballs on <code>dumbo</code> using the relevant script from git:</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">FULL_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;FULL VERSION(S)&gt;&quot;</span>
 </code></pre></div>
@@ -4169,7 +4146,7 @@ git clone https://github.com/opensciencegrid/tarball-client.git
 </code></pre></div>
 
 <p>The tarballs are found in the tarball-client directory.</p>
-<h3 id="step-5-briefly-test-the-client-tarballs">Step 5: Briefly test the client tarballs<a class="headerlink" href="#step-5-briefly-test-the-client-tarballs" title="Permanent link">&para;</a></h3>
+<h3 id="step-4-briefly-test-the-client-tarballs">Step 4: Briefly test the client tarballs<a class="headerlink" href="#step-4-briefly-test-the-client-tarballs" title="Permanent link">&para;</a></h3>
 <p>Test the OSG client tarballs in Docker containers on <code>dumbo</code> using the relevant release-tools script:</p>
 <p>As an <strong>unprivileged user</strong>, run the script:</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
@@ -4180,7 +4157,7 @@ git clone https://github.com/opensciencegrid/tarball-client.git
 </code></pre></div>
 
 <p>If you have time, try some of the binaries, such as grid-proxy-init.</p>
-<h3 id="step-6-wait">Step 6: Wait<a class="headerlink" href="#step-6-wait" title="Permanent link">&para;</a></h3>
+<h3 id="step-5-wait">Step 5: Wait<a class="headerlink" href="#step-5-wait" title="Permanent link">&para;</a></h3>
 <p>Wait for clearance. The OSG Release Coordinator (in consultation with the Software Team and any testers) need to sign off on the update before it is released. If you are releasing things over two days, this is a good place to stop for the day.</p>
 <h2 id="day-2-pushing-the-release">Day 2: Pushing the Release<a class="headerlink" href="#day-2-pushing-the-release" title="Permanent link">&para;</a></h2>
 <h3 id="step-1-upload-the-tarballs-to-afs">Step 1: Upload the tarballs to AFS<a class="headerlink" href="#step-1-upload-the-tarballs-to-afs" title="Permanent link">&para;</a></h3>
@@ -4216,11 +4193,7 @@ locks the repos and regenerates them.</p>
 <ol>
 <li><code>*.txt</code> files are created and it should be verified that they've been moved to /p/vdt/public/html/release-info/ on UW's AFS.</li>
 </ol>
-<h3 id="step-4-rebuild-the-docker-software-base">Step 4: Rebuild the Docker software base<a class="headerlink" href="#step-4-rebuild-the-docker-software-base" title="Permanent link">&para;</a></h3>
-<p>Go to the <code>build-docker-image</code> workflow page of the <code>opensciencegrid/docker-software-base</code>:
-<a href="https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml">https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml</a>
-Click the <code>Run Workflow</code> button, select the <code>master</code> branch, and click <code>Run workflow</code>.</p>
-<h3 id="step-5-install-the-tarballs-into-oasis">Step 5: Install the tarballs into OASIS<a class="headerlink" href="#step-5-install-the-tarballs-into-oasis" title="Permanent link">&para;</a></h3>
+<h3 id="step-4-install-the-tarballs-into-oasis">Step 4: Install the tarballs into OASIS<a class="headerlink" href="#step-4-install-the-tarballs-into-oasis" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You must be an OASIS manager of the <code>mis</code> VO to do these steps. Known managers as of 2014-07-22: Mat, Tim C, Tim T, Brian L. </p>
@@ -4238,6 +4211,10 @@ git clone --depth <span class="m">1</span> https://github.com/opensciencegrid/ta
 </code></pre></div>
 
 <p>The script will automatically ssh you to oasis-login.opensciencegrid.org and give you instructions to complete the process.</p>
+<h3 id="step-5-rebuild-the-docker-software-base">Step 5: Rebuild the Docker software base<a class="headerlink" href="#step-5-rebuild-the-docker-software-base" title="Permanent link">&para;</a></h3>
+<p>Go to the <code>build-docker-image</code> workflow page of the <code>opensciencegrid/docker-software-base</code>:
+<a href="https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml">https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml</a>
+Click the <code>Run Workflow</code> button, select the <code>master</code> branch, and click <code>Run workflow</code>.</p>
 <h3 id="step-6-update-the-docker-wn-client">Step 6: Update the Docker WN client<a class="headerlink" href="#step-6-update-the-docker-wn-client" title="Permanent link">&para;</a></h3>
 <p>The GitHub repository at <a href="https://github.com/opensciencegrid/docker-osg-wn">opensciencegrid/docker-osg-wn</a> controls the
 contents and tags pushed for the <a href="https://hub.docker.com/r/opensciencegrid/osg-wn/">opensciencegrid/osg-wn</a> container image.</p>
@@ -4335,7 +4312,7 @@ We welcome feedback on this release!
 <div class="codehilite"><pre><span></span><code><span class="gp">$ </span>osg-notify --cert your-cert.pem --key your-key.pem <span class="se">\</span>
 <span class="go">    --no-sign --type production --message &lt;PATH TO MESSAGE FILE&gt; \</span>
 <span class="go">    --subject &#39;&lt;EMAIL SUBJECT&gt;&#39; \</span>
-<span class="go">    --recipients &quot;osg-general@opensciencegrid.org osg-operations@opensciencegrid.org osg-sites@opensciencegrid.org software-discuss@osg-htc.org site-announce@opensciencegrid.org&quot; \</span>
+<span class="go">    --recipients &quot;site-announce@osg-htc.org osg-arch@osg-htc.org&quot; \</span>
 <span class="go">    --oim-recipients resources --oim-recipients vos --oim-contact-type administrative</span>
 </code></pre></div>
 
