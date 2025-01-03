@@ -98,19 +98,7 @@ To test pre-release, you will be kicking off a manual VM universe test run from 
 !!! note
     If there are failures, consult the release-manager before proceeding.
 
-### Step 3: Regenerate the build repositories
-
-To avoid 404 errors when retrieving packages, it's necessary to regenerate the build repositories. Run the following script from a machine with your koji-registered user certificate:
-
-```bash
-NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
-```
-```bash
-# laptop
-./1-regen-repos $NON_UPCOMING_VERSIONS
-```
-
-### Step 4: Create the client tarballs
+### Step 3: Create the client tarballs
 
 Create the OSG client tarballs on `dumbo` using the relevant script from git:
 
@@ -128,7 +116,7 @@ done
 
 The tarballs are found in the tarball-client directory.
 
-### Step 5: Briefly test the client tarballs
+### Step 4: Briefly test the client tarballs
 
 Test the OSG client tarballs in Docker containers on `dumbo` using the relevant release-tools script:
 
@@ -144,7 +132,7 @@ NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
 
 If you have time, try some of the binaries, such as grid-proxy-init.
 
-### Step 6: Wait
+### Step 5: Wait
 
 Wait for clearance. The OSG Release Coordinator (in consultation with the Software Team and any testers) need to sign off on the update before it is released. If you are releasing things over two days, this is a good place to stop for the day.
 
@@ -192,13 +180,7 @@ VERSIONS='<VERSION(S)>'
 
 1.  `*.txt` files are created and it should be verified that they've been moved to /p/vdt/public/html/release-info/ on UW's AFS.
 
-### Step 4: Rebuild the Docker software base
-
-Go to the `build-docker-image` workflow page of the `opensciencegrid/docker-software-base`:
-<https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml>
-Click the `Run Workflow` button, select the `master` branch, and click `Run workflow`.
-
-### Step 5: Install the tarballs into OASIS
+### Step 4: Install the tarballs into OASIS
 
 !!! note
     You must be an OASIS manager of the `mis` VO to do these steps. Known managers as of 2014-07-22: Mat, Tim C, Tim T, Brian L. 
@@ -218,6 +200,12 @@ done
 ```
 
 The script will automatically ssh you to oasis-login.opensciencegrid.org and give you instructions to complete the process.
+
+### Step 5: Rebuild the Docker software base
+
+Go to the `build-docker-image` workflow page of the `opensciencegrid/docker-software-base`:
+<https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml>
+Click the `Run Workflow` button, select the `master` branch, and click `Run workflow`.
 
 ### Step 6: Update the Docker WN client
 
@@ -311,7 +299,7 @@ The following instructions are meant for the release manager (or interim release
         $ osg-notify --cert your-cert.pem --key your-key.pem \
             --no-sign --type production --message <PATH TO MESSAGE FILE> \
             --subject '<EMAIL SUBJECT>' \
-            --recipients "osg-general@opensciencegrid.org osg-operations@opensciencegrid.org osg-sites@opensciencegrid.org software-discuss@osg-htc.org site-announce@opensciencegrid.org" \
+            --recipients "site-announce@osg-htc.org osg-arch@osg-htc.org" \
             --oim-recipients resources --oim-recipients vos --oim-contact-type administrative
 
     Replacing `<EMAIL SUBJECT>` with an appropriate subject for your announcement and `<PATH TO MESSAGE FILE>` with the
