@@ -21,7 +21,7 @@ Perform the following steps:
     For example, if the files on your mirror are under `/mnt/mirror/osg`, then run
 
         :::shell
-        python3 migrate.py /mnt/mirror/osg/23-* /mnt/mirror/osg/24-*
+        python3 migrate.py --all /mnt/mirror/osg/23-* /mnt/mirror/osg/24-*
 
 4.  Switch the rsync source to repo-rsync-itb.osg-htc.org and add `--delay-updates --delete-delay` to the rsync command.
     For example, if your rsync command is typically
