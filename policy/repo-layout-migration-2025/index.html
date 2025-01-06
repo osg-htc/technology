@@ -3705,7 +3705,7 @@ However, mirror administrators will have to take some action to avoid rsyncing t
 <li>
 <p>Run the migration script on your OSG 23 and OSG 24 Yum repositories.
     For example, if the files on your mirror are under <code>/mnt/mirror/osg</code>, then run</p>
-<div class="codehilite"><pre><span></span><code>python3 migrate.py /mnt/mirror/osg/23-* /mnt/mirror/osg/24-*
+<div class="codehilite"><pre><span></span><code>python3 migrate.py --all /mnt/mirror/osg/23-* /mnt/mirror/osg/24-*
 </code></pre></div>
 
 </li>
