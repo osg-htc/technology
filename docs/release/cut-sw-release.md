@@ -299,7 +299,7 @@ The following instructions are meant for the release manager (or interim release
         $ osg-notify --cert your-cert.pem --key your-key.pem \
             --no-sign --type production --message <PATH TO MESSAGE FILE> \
             --subject '<EMAIL SUBJECT>' \
-            --recipients "site-announce@osg-htc.org osg-arch@osg-htc.org" \
+            --recipients "site-announce@osg-htc.org" \
             --oim-recipients resources --oim-recipients vos --oim-contact-type administrative
 
     Replacing `<EMAIL SUBJECT>` with an appropriate subject for your announcement and `<PATH TO MESSAGE FILE>` with the
