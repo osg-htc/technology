@@ -4224,6 +4224,12 @@ git clone --depth <span class="m">1</span> https://github.com/opensciencegrid/ta
 
 <p>The script will automatically ssh you to oasis-login.opensciencegrid.org and give you instructions to complete the process.</p>
 <h3 id="step-5-rebuild-the-docker-software-base">Step 5: Rebuild the Docker software base<a class="headerlink" href="#step-5-rebuild-the-docker-software-base" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following docker build workflows pull the latest release RPMs from <code>repo.osg-htc.org</code>, which
+refreshes based on the contents of koji roughly once every 45 minutes. Ensure that <code>repo.osg-htc.org</code>
+is updated prior to running Steps 5 and 6.</p>
+</div>
 <p>Go to the <code>build-docker-image</code> workflow page of the <code>opensciencegrid/docker-software-base</code>:
 <a href="https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml">https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml</a>
 Click the <code>Run Workflow</code> button, select the <code>master</code> branch, and click <code>Run workflow</code>.</p>
