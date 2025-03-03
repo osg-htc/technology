@@ -203,6 +203,11 @@ The script will automatically ssh you to oasis-login.opensciencegrid.org and giv
 
 ### Step 5: Rebuild the Docker software base
 
+!!! note
+    The following docker build workflows pull the latest release RPMs from `repo.osg-htc.org`, which
+    refreshes based on the contents of koji roughly once every 45 minutes. Ensure that `repo.osg-htc.org`
+    is updated prior to running Steps 5 and 6.
+
 Go to the `build-docker-image` workflow page of the `opensciencegrid/docker-software-base`:
 <https://github.com/opensciencegrid/docker-software-base/actions/workflows/build-container.yml>
 Click the `Run Workflow` button, select the `master` branch, and click `Run workflow`.
