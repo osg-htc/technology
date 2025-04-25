@@ -137,8 +137,10 @@ pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
 ```
 
 
-The tools
----------
+Commonly used tools
+-------------------
+
+These are the tools you will be using for day-to-day builds.
 
 ### osg-build
 
@@ -286,21 +288,6 @@ This is required for Koji builds.  See `--repo-list` for a list of repositories.
 
 Lists the available repositories for the `--repo` argument.
 
-### koji-tag-diff
-
-This script displays the differences between the latest packages in two koji tags.
-
-Example invocation: `koji-tag-diff osg-3.4-el6-development osg-3.4-el7-testing`
-
-This prints the packages that are in osg-3.4-el6-development but not in osg-3.4-el7-testing, or vice versa.
-
-### osg-build-test
-
-This script runs automated tests for `osg-build`. Only a few tests have been implemented so far.
-
-### osg-import-srpm
-
-This is a script to fetch an SRPM from a remote site, copy it into the upstream cache on AFS, and create an SVN package dir (if needed) with an `upstream/*.source` file. By default it will put downloaded files into the VDT upstream cache (/p/vdt/public/html/upstream), but you can pass `--upstream-root=<UPSTREAM DIR>` to put them somewhere else. If called with the `--extract-spec` or `-e` argument, it will extract the spec file from the SRPM and place it into the `osg` subdir in SVN. If called with the `--diff-spec` or `-d` argument, it will extract the spec file and compare it to the existing spec file in the `osg` subdir. **The script hasn't been touched in a while and needs a good deal of cleanup.** A planned feature is to allow doing a three-way diff between the existing RPM before OSG modifications, the new RPM before OSG modifications and the existing RPM after OSG modifications.
 
 ### osg-koji
 
@@ -387,6 +374,28 @@ Regenerate the destination repos after promoting.
 
 Do not prompt before promotion.
 
+
+Minor tools
+-----------
+
+These tools are used less frequently or are for specialized purposes.
+
+### koji-tag-diff
+
+This script displays the differences between the latest packages in two koji tags.
+
+Example invocation: `koji-tag-diff osg-3.4-el6-development osg-3.4-el7-testing`
+
+This prints the packages that are in osg-3.4-el6-development but not in osg-3.4-el7-testing, or vice versa.
+
+### osg-build-test
+
+This script runs automated tests for `osg-build`. Only a few tests have been implemented so far.
+
+### osg-import-srpm
+
+This is a script to fetch an SRPM from a remote site, copy it into the upstream cache on AFS, and create an SVN package dir (if needed) with an `upstream/*.source` file. By default it will put downloaded files into the VDT upstream cache (/p/vdt/public/html/upstream), but you can pass `--upstream-root=<UPSTREAM DIR>` to put them somewhere else. If called with the `--extract-spec` or `-e` argument, it will extract the spec file from the SRPM and place it into the `osg` subdir in SVN. If called with the `--diff-spec` or `-d` argument, it will extract the spec file and compare it to the existing spec file in the `osg` subdir. **The script hasn't been touched in a while and needs a good deal of cleanup.** A planned feature is to allow doing a three-way diff between the existing RPM before OSG modifications, the new RPM before OSG modifications and the existing RPM after OSG modifications.
+
 Common Usage Patterns
 ---------------------
 
@@ -417,11 +426,9 @@ Run `osg-build prepare <PACKAGEDIR>`. Look inside the `_build_results` directory
 7.  If you have changes to make to the source code that you want to save as a patch, type `quilt new <PATCHNAME>`, edit the files, type `quilt add <FILE>` on each file you edited, then type `quilt refresh` to recreate the patch.
 8.  Once you're all done, copy the patches in the `patches/` directory to the `osg/` dir in SVN, run `quilt series` to get the application order and update the spec file accordingly.
 
-#### See if a package builds successfully for OSG 3.4
+#### See if a package builds successfully for OSG 24 main
 
--   If you have all the build dependencies of the package installed, run `osg-build rpmbuild <PACKAGEDIR>`. The resulting RPMs will be in the `_build_results` directory.
--   If you do not have all the build dependencies installed, or want to make sure you specified all of the necessary ones and the package builds from a clean environment, run `osg-build mock --mock-config-from-koji osg-3.4-el6-build <PACKAGEDIR>`. The resulting RPMs will be in the `_build_results` directory.
--   If you do not have mock installed, or want to exactly replicate the build environment in Koji, run `osg-build koji --scratch <PACKAGEDIR>`. You may download the resulting RPMs from kojiweb <https://koji.opensciencegrid.org/koji> or pass `--getfiles` to `osg-build koji` and they will get downloaded to the `_build_results` directory.
+-   Run `osg-build koji --scratch <PACKAGEDIR> --repo 24-main`. You may download the resulting RPMs from kojiweb <https://koji.osg-htc.org/koji> or pass `--getfiles` to `osg-build koji` and they will get downloaded to the `_build_results` directory.
 
 #### Check for potential errors in a package
 
