@@ -10,18 +10,18 @@ See installation documentation below.
 This page is up-to-date as of `osg-build` version 1.14.1.
 
 
-Quick start with Singularity/Apptainer
---------------------------------------
-This quick start guide shows how to use the OSG build tools via Apptainer/Singularity.
-This assumes you will use Kerberos for authentication, with UW-Madison credentials.
-For this, you will need to be inside the UW Campus network, either via campus wifi or VPN.
+Quick start with Apptainer
+--------------------------
+This quick start guide shows how to use the OSG build tools via Apptainer. (Singularity should work too.)
+This assumes you will use Kerberos for authentication with UW-Madison or Fermilab credentials.
+To get UW-Madison Kerberos credentials, you will need to be inside the UW Campus network, either via campus wifi or VPN.
 
 In addition, this assumes that the repository you want to build packages from is from a subdirectory under your home directory.
 If not, pass the appropriate `--bind` (`-B`) argument to the `apptainer run` command.
 
 The image is available from hub.opensciencegrid.org.  Pull the image and run it:
 ```
-apptainer pull oras://hub.opensciencegrid.org/osg-htc/osg-build:v2 osg-build.sif
+apptainer pull oras://hub.opensciencegrid.org/osg-htc/osg-build:v2-sif osg-build.sif
 apptainer run osg-build.sif
 ```
 you will be in a shell inside the image.
@@ -31,11 +31,19 @@ Set up your configuration for accessing the OSG Koji environment.
 osg-koji setup
 ```
 Select Kerberos as your auth method.
-Use `kinit` to get a credential:
+Use `kinit` to get a credential.
+
+For UW-Madison:
 ```
 kinit <username>@AD.WISC.EDU
 ```
 replacing `<username>` with the name of your UW NetID.
+
+For Fermilab:
+```
+kinit <username>@FNAL.GOV
+```
+replacing `<username>` with your Fermilab user name.
 
 Verify that you can successfully authenticate to Koji:
 ```
@@ -57,8 +65,8 @@ If using `pip`, you will need to install some dependencies by hand.
 
 ### Install as root via OSG RPM (EL8, EL9)
 
-The OSG 23-internal repositories contain a package called "osg-build-deps".
-[Install the OSG 23 repositories](https://osg-htc.org/docs/common/yum/).
+The OSG 24-internal repositories contain a package called "osg-build-deps".
+[Install the OSG 24 repositories](https://osg-htc.org/docs/common/yum/).
 
 Then, install osg-build-deps:
 ```
