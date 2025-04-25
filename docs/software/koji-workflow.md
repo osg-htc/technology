@@ -1,7 +1,7 @@
 Koji Workflow
 =============
 
-This covers the basics of using and understanding the [OSG Koji](https://koji.opensciencegrid.org/koji) instance. It is meant primarily for OSG Software team members who need to interact with the service.
+This covers the basics of using and understanding the [OSG Koji](https://koji.osg-htc.org/koji) instance. It is meant primarily for OSG Software team members who need to interact with the service.
 
 Terminology
 -----------
@@ -54,8 +54,8 @@ Obtaining Access
 Building OSG packages in Koji requires these privileges:
 
 - access to the OSG Software Packaging repository at https://github.com/osg-htc/software-packaging
-- access to a login node at CHTC such as `osgsw-ap.chtc.wisc.edu`
-- access to the Koji service via Kerberos credential
+- access to `osgsw-ap.chtc.wisc.edu` for uploading to the upstream sources directory
+- access to the Koji service via a Kerberos credential
 
 If you are not already registered as an OSG Contact, follow the registration instructions at this page:
 <https://osg-htc.org/docs/common/contact-registration/>
@@ -74,37 +74,7 @@ Initial Setup
 -------------
 
 You will be using the [OSG Build Tools](../software/osg-build-tools.md) to interact with Koji.
-Follow the instructions on that page to set up the tools.
-
-
-Authenticating to Koji
-----------------------
-
-To use the OSG Build tools and the Koji command-line client, you will need to make sure you can authenticate to Koji.
-This uses Kerberos credentials; you can use `kinit` to get these.
-
-For UW-Madison:
-```
-kinit <netid>@AD.WISC.EDU
-```
-replacing `<netid>` with the name of your UW NetID.
-
-!!!note
-   You must be on campus wifi or using a UW VPN to get an AD.WISC.EDU Kerberos ticket.
-
-For Fermilab:
-```
-kinit <username>@FNAL.GOV
-```
-replacing `<username>` with your Fermilab user name.
-
-
-Verify that you can successfully authenticate to Koji.
-```
-osg-koji hello
-```
-You should see a greeting if authentication is successful, or an error message if unsuccessful.
-
+See the installation guide on that page for information on getting started.
 
 Using Koji
 ----------
@@ -223,7 +193,9 @@ You may check the status of regen-repo tasks in the
 
 ### Promoting Builds from Development -> Testing
 
-Only OSG Software and Release Team members can promote builds from development to testing.
+Software team members can promote any package to testing.
+
+To promote from development to testing:
 
 #### Using *osg-promote*
 
