@@ -135,6 +135,35 @@ pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
 ```
 
 
+Configuring Koji access and OSG Build
+-------------------------------------
+Access to Koji is performed using Kerberos.
+Set up your configuration for accessing the OSG Koji environment.
+```
+osg-koji setup
+```
+You will be prompted for your authentication mehtod; select Kerberos and enter your Kerberos principal at the prompt.
+
+Use `kinit` to get a credential.
+
+For UW-Madison:
+```
+kinit <username>@AD.WISC.EDU
+```
+replacing `<username>` with the name of your UW NetID.
+
+For Fermilab:
+```
+kinit <username>@FNAL.GOV
+```
+replacing `<username>` with your Fermilab user name.
+
+Verify that you can successfully authenticate to Koji:
+```
+osg-koji hello
+```
+If authentication is successful, you are ready to perform Koji build tasks.
+
 Commonly used tools
 -------------------
 
