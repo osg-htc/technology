@@ -7,8 +7,6 @@ This page documents the tools used for RPM development for the OSG Software Stac
 The tools are available in Git in [opensciencegrid/osg-build on GitHub](https://github.com/opensciencegrid/osg-build).
 See installation documentation below.
 
-This page is up-to-date as of `osg-build` version 1.14.1.
-
 
 Quick start with Apptainer
 --------------------------
