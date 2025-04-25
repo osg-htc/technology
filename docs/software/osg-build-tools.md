@@ -154,11 +154,12 @@ This is the primary tool used in building source and binary RPMs.
 
 ##### koji
 
-Prebuilds the final source package, then builds it remotely using the Koji instance hosted at UW-Madison. <https://koji.opensciencegrid.org> By default, the resulting RPMs will end up in the osg-minefield repositories based on the most recent OSG major version (e.g. 3.4). You may specify a different set of repos with `--repo`, described later. RPMs from the osg-minefield repositories are regularly pulled to the osg-development repositories hosted by the GOC at <http://repo.opensciencegrid.org> Unless you specify otherwise (by passing `--el6`, `--el7` or specifying a different koji tag/target), the package will be built for both el6 and el7. This is the method used to build final versions of packages you expect to ship.
+Builds the package on the Koji build service hosted at UW-Madison. <https://koji.osg-htc.org>.
+You must specify the set of destination repos with `--repo`, described later.
 
 ##### lint
 
-Prebuilds the final source package, then runs `rpmlint` on it to check for various problems. You will need to have `rpmlint` installed. People on UW CSL machines should add `/p/vdt/workspace/rpmlint` to their $PATH.
+Runs `rpmlint` the package(s) to check for various problems. You will need to have `rpmlint` installed.
 
 ##### mock
 
@@ -178,7 +179,8 @@ Prebuilds the final source package, then builds it locally using `rpmbuild`, and
 
 ##### quilt
 
-Collects the upstream local sources and spec file, then calls `quilt setup` on the spec file, extracting the source files and adding the patches to a quilt series file. See [Quilt documentation (PDF link)](http://www.shakthimaan.com/downloads/glv/quilt-tutorial/quilt-doc.pdf) for more information on quilt; also look at the example in the Usage Patterns section below. Similar to `prepare` (in fact, `quilt` calls `rpmbuild -bp` behind the scenes), but the source tree is in pre-patch state, and various quilt commands can be used to apply and modify patches. Unpacks into `_quilt` as of `osg-build-1.2.2` or `_final_srpm_contents` in previous versions. Requires `quilt`. People on UW CSL machines should add `/p/vdt/workspace/quilt/bin` to their `$PATH`, and `/p/vdt/workspace/quilt/share/man` to their `$MANPATH`.
+Collects the upstream local sources and spec file, then calls `quilt setup` on the spec file, extracting the source files and adding the patches to a quilt series file. See [Quilt documentation (PDF link)](http://www.shakthimaan.com/downloads/glv/quilt-tutorial/quilt-doc.pdf) for more information on quilt; also look at the example in the Usage Patterns section below. 
+The sources are unpacked into `_quilt`; they will be in pre-patch state and the various quilt commands can be used to apply and modify patches. Requires `quilt`.
 
 #### Options
 
