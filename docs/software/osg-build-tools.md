@@ -184,7 +184,7 @@ The sources are unpacked into `_quilt`; they will be in pre-patch state and the 
 
 #### Options
 
-This section lists the command-line options.
+This section lists the common command-line options.
 
 ##### --help
 
@@ -194,66 +194,15 @@ Prints the built-in usage information and exits without doing anything else.
 
 Prints the version of `osg-build` and exits without doing anything else.
 
-#### Common Options
+#### Options common to all tasks
 
-##### -a, --autoclean, --no-autoclean
+##### --el8, --el9, etc.
 
-Before each build, clean out the contents of the underscore directories (\_build\_results, \_final\_srpm\_contents, \_upstream\_srpm\_contents, \_upstream\_tarball\_contents). If the directories are not cleaned up, earlier builds of a package may interfere with later ones. `--no-autoclean` will disable this.
+Build for these specific distro versions.
 
-Default is `true`.
+##### -q, --quiet, -v, --verbose
 
-Has no effect with the `--vcs` flag.
-
-##### -c, --cache-prefix *prefix*
-
-Sets the *prefix* for upstream source cache references. The prefix must be a valid URI starting with either `http`, `https`, or `file`, or one of the following special values:
-
--   AFS (corresponds to `file:///p/vdt/public/html/upstream`, which is the location of the VDT cache using AFS from a UW CS machine).
--   VDT (corresponds to `http://vdt.cs.wisc.edu/upstream`, which is the location of the VDT cache from off-site).
--   AUTO (AFS if available, VDT if not)
-
-The upstream source cache must be organized as described above. All files referenced by `.source` files in the affected packages must exist in the cache, or a runtime error will occur.
-
-Default is `AUTO`.
-
-Has no effect with the `--vcs` flag.
-
-##### --el6, --el7, --redhat-release *version* (Config: redhat\_release)
-
-Sets the distro version to build for. This affects the %dist tag, the mock config, and the default koji tag and target (unless otherwise specified).
-
-`--el6` is equivalent to `--redhat-release 6`
-
-`--el7` is equivalent to `--redhat-release 7`
-
-##### --loglevel *loglevel*
-
-Sets the verbosity of the script. Valid values are: `debug`, `info`, `warning`, `error` and `critical`.
-
-Default is `info`.
-
-##### -q, --quiet
-
-Do not display as much information. Equivalent to `--loglevel warning`
-
-##### -v, --verbose
-
-Display more information. Equivalent to `--loglevel debug`
-
-##### -w, --working-directory *path*
-
-Use *path* as the root directory of the files created by the script. For example, if *path* is `$HOME/working`, and the package being built is `ndt`, the following tree will be created:
-
--   $HOME/working/ndt/\_upstream\_srpm\_contents
--   $HOME/working/ndt/\_upstream\_tarball\_contents
--   $HOME/working/ndt/\_final\_srpm\_contents
--   $HOME/working/ndt/\_build\_results
-
-If *path* is `TEMP`, a randomly named directory under `/tmp` is used as the working directory.
-
-The default setting is to use the package directory as the working directory.
-
-Has no effect with the `--vcs` flag.
+Decrease or increase the amount of information printed.
 
 #### Options specific to prebuild task
 
@@ -265,15 +214,11 @@ If set, all upstream tarballs will be extracted into `_upstream_tarball_contents
 
 ##### --distro-tag *dist*
 
-Sets the distribution tag added on to the end of the release in the RPM ( `rpmbuild` and `mock` tasks only ).
-
-Default is `.osg.el6` or `.osg.el7`
+Sets the `%dist` tag added on to the end of the release in the RPM ( `rpmbuild` and `mock` tasks only ).
 
 ##### -t, --target-arch *arch*
 
-Specify an architecture to build packages for ( `rpmbuild` and `mock` tasks only ).
-
-Default is unspecified, which builds for the current machine architecture.
+Specify an architecture to build packages for ( `rpmbuild`, `mock`, and scratch `koji` builds only ).
 
 #### Options specific to mock task
 
@@ -303,15 +248,9 @@ Do not actually run koji, merely show the command(s) that will be run. For debug
 
 For scratch builds without `--vcs` only. Download the resulting RPMs and logs from the build into the `_build_results` directory.
 
-##### -k, --kojilogin, --koji-login *login*
-
-Sets the login to use for the koji task. This should most likely be your CN. If not specified, will extract it from your client cert (`~/.osg-koji/client.crt` or `~/.koji/client.crt`).
-
 ##### --koji-target *target*
 
 The koji target to use for building.
-
-Default is `osg-el6` for el6 and `osg-el7` for el7.
 
 ##### --koji-tag *tag*
 
@@ -323,21 +262,6 @@ Default is `osg-el6` or `osg-el7`.
 
 Shorthand for setting both --koji-tag and --koji-target to *arg*.
 
-##### --koji-wrapper, --no-koji-wrapper
-
-Enable/disable use of the `osg-koji` wrapper script around koji. See below for a description of `osg-koji`.
-
-Default is `true`.
-
-##### --koji-backend *backend*
-
-Specifies the method osg-build will use to interface with Koji. This can be `shell` or `kojilib`.
-
-##### --wait, --no-wait, --nowait
-
-Wait for koji tasks to finish. Bad for running multiple builds in a single command, since you will have to type in your passphrase for the first one, wait for it to complete, then type in your passphrase for the second one, wait for it to complete, etc. If you want to wait for multiple tasks to finish, use the `koji watch-task` command or look at the website <https://koji.opensciencegrid.org>.
-
-`--wait` used to be the default until `osg-build-1.1.3`
 
 ##### --regen-repos
 
@@ -353,21 +277,14 @@ Have Koji check the package out from a version control system instead of creatin
 
 `--vcs` defaults to `true` for non-scratch builds, and `false` for scratch builds.
 
-##### --repo=*destination repository*, --upcoming
+##### --repo=*destination repository*
 
-Selects the repositories (osg-3.3, upcoming, etc.) to build packages for. Currently valid repositories are:
+Selects the repository (24-main, 24-upcoming, etc.) to build packages for.
+This is required for Koji builds.  See `--repo-list` for a list of repositories.
 
-| Repository            | Description                                                    |
-|-----------------------|----------------------------------------------------------------|
-| osg                   | OSG Software development repos for trunk (this is the default) |
-| osg-3.3 (or just 3.3) | OSG Software development repos for 3.3 branch                  |
-| upcoming              | OSG Software development repos for upcoming branch             |
-| internal              | OSG Software internal branch                                   |
-| hcc                   | Holland Computing Center (Nebraska) testing repos              |
+##### --repo-list
 
-`--upcoming` is an alias for `--repo=upcoming`
-
-Note that the repo selection affects which VCS paths you are allowed to build from. For example, you are not allowed to build from branches/osg-3.3 (from the OSG SVN) into the 'osg' repo, or from HCC's git repositories into the 'upcoming' repo.
+Lists the available repositories for the `--repo` argument.
 
 ### koji-tag-diff
 
