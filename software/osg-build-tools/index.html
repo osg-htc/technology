@@ -304,11 +304,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-tools" class="md-nav__link">
-    The tools
+  <a href="#quick-start-with-apptainer" class="md-nav__link">
+    Quick start with Apptainer
   </a>
   
-    <nav class="md-nav" aria-label="The tools">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-into-a-linux-system" class="md-nav__link">
+    Installation into a Linux system
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation into a Linux system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-as-root-via-osg-rpm-el8-el9" class="md-nav__link">
+    Install as root via OSG RPM (EL8, EL9)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-via-pip-el8-el9-ubuntu-others" class="md-nav__link">
+    Install via pip (EL8, EL9, Ubuntu, others)
+  </a>
+  
+    <nav class="md-nav" aria-label="Install via pip (EL8, EL9, Ubuntu, others)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-requests-gssapi-from-source" class="md-nav__link">
+    Building requests-gssapi from source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-koji-access-and-osg-build" class="md-nav__link">
+    Configuring Koji access and OSG Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commonly-used-tools" class="md-nav__link">
+    Commonly used tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Commonly used tools">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -416,58 +470,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#common-options" class="md-nav__link">
-    Common Options
+  <a href="#options-common-to-all-tasks" class="md-nav__link">
+    Options common to all tasks
   </a>
   
-    <nav class="md-nav" aria-label="Common Options">
+    <nav class="md-nav" aria-label="Options common to all tasks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-a-autoclean-no-autoclean" class="md-nav__link">
-    -a, --autoclean, --no-autoclean
+  <a href="#-el8-el9-etc" class="md-nav__link">
+    --el8, --el9, etc.
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#-c-cache-prefix-prefix" class="md-nav__link">
-    -c, --cache-prefix prefix
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-el6-el7-redhat-release-version-config-redhat_release" class="md-nav__link">
-    --el6, --el7, --redhat-release version (Config: redhat_release)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-loglevel-loglevel" class="md-nav__link">
-    --loglevel loglevel
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-q-quiet" class="md-nav__link">
-    -q, --quiet
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-v-verbose" class="md-nav__link">
-    -v, --verbose
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-w-working-directory-path" class="md-nav__link">
-    -w, --working-directory path
+  <a href="#-q-quiet-v-verbose" class="md-nav__link">
+    -q, --quiet, -v, --verbose
   </a>
   
 </li>
@@ -581,13 +600,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-k-kojilogin-koji-login-login" class="md-nav__link">
-    -k, --kojilogin, --koji-login login
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#-koji-target-target" class="md-nav__link">
     --koji-target target
   </a>
@@ -604,27 +616,6 @@
           <li class="md-nav__item">
   <a href="#-ktt-koji-tag-and-target-arg" class="md-nav__link">
     --ktt, --koji-tag-and-target arg
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-koji-wrapper-no-koji-wrapper" class="md-nav__link">
-    --koji-wrapper, --no-koji-wrapper
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-koji-backend-backend" class="md-nav__link">
-    --koji-backend backend
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-wait-no-wait-nowait" class="md-nav__link">
-    --wait, --no-wait, --nowait
   </a>
   
 </li>
@@ -651,8 +642,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-repodestination-repository-upcoming" class="md-nav__link">
-    --repo=destination repository, --upcoming
+  <a href="#-repodestination-repository" class="md-nav__link">
+    --repo=destination repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-repo-list" class="md-nav__link">
+    --repo-list
   </a>
   
 </li>
@@ -664,27 +662,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#koji-tag-diff" class="md-nav__link">
-    koji-tag-diff
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#osg-build-test" class="md-nav__link">
-    osg-build-test
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#osg-import-srpm" class="md-nav__link">
-    osg-import-srpm
-  </a>
   
 </li>
         
@@ -811,6 +788,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#minor-tools" class="md-nav__link">
+    Minor tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Minor tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#koji-tag-diff" class="md-nav__link">
+    koji-tag-diff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osg-build-test" class="md-nav__link">
+    osg-build-test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osg-import-srpm" class="md-nav__link">
+    osg-import-srpm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-usage-patterns" class="md-nav__link">
     Common Usage Patterns
   </a>
@@ -847,8 +858,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#see-if-a-package-builds-successfully-for-osg-34" class="md-nav__link">
-    See if a package builds successfully for OSG 3.4
+  <a href="#see-if-a-package-builds-successfully-for-osg-24-main" class="md-nav__link">
+    See if a package builds successfully for OSG 24 main
   </a>
   
 </li>
@@ -4297,11 +4308,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-tools" class="md-nav__link">
-    The tools
+  <a href="#quick-start-with-apptainer" class="md-nav__link">
+    Quick start with Apptainer
   </a>
   
-    <nav class="md-nav" aria-label="The tools">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-into-a-linux-system" class="md-nav__link">
+    Installation into a Linux system
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation into a Linux system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-as-root-via-osg-rpm-el8-el9" class="md-nav__link">
+    Install as root via OSG RPM (EL8, EL9)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-via-pip-el8-el9-ubuntu-others" class="md-nav__link">
+    Install via pip (EL8, EL9, Ubuntu, others)
+  </a>
+  
+    <nav class="md-nav" aria-label="Install via pip (EL8, EL9, Ubuntu, others)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-requests-gssapi-from-source" class="md-nav__link">
+    Building requests-gssapi from source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-koji-access-and-osg-build" class="md-nav__link">
+    Configuring Koji access and OSG Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commonly-used-tools" class="md-nav__link">
+    Commonly used tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Commonly used tools">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4409,58 +4474,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#common-options" class="md-nav__link">
-    Common Options
+  <a href="#options-common-to-all-tasks" class="md-nav__link">
+    Options common to all tasks
   </a>
   
-    <nav class="md-nav" aria-label="Common Options">
+    <nav class="md-nav" aria-label="Options common to all tasks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-a-autoclean-no-autoclean" class="md-nav__link">
-    -a, --autoclean, --no-autoclean
+  <a href="#-el8-el9-etc" class="md-nav__link">
+    --el8, --el9, etc.
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#-c-cache-prefix-prefix" class="md-nav__link">
-    -c, --cache-prefix prefix
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-el6-el7-redhat-release-version-config-redhat_release" class="md-nav__link">
-    --el6, --el7, --redhat-release version (Config: redhat_release)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-loglevel-loglevel" class="md-nav__link">
-    --loglevel loglevel
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-q-quiet" class="md-nav__link">
-    -q, --quiet
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-v-verbose" class="md-nav__link">
-    -v, --verbose
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-w-working-directory-path" class="md-nav__link">
-    -w, --working-directory path
+  <a href="#-q-quiet-v-verbose" class="md-nav__link">
+    -q, --quiet, -v, --verbose
   </a>
   
 </li>
@@ -4574,13 +4604,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-k-kojilogin-koji-login-login" class="md-nav__link">
-    -k, --kojilogin, --koji-login login
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#-koji-target-target" class="md-nav__link">
     --koji-target target
   </a>
@@ -4597,27 +4620,6 @@
           <li class="md-nav__item">
   <a href="#-ktt-koji-tag-and-target-arg" class="md-nav__link">
     --ktt, --koji-tag-and-target arg
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-koji-wrapper-no-koji-wrapper" class="md-nav__link">
-    --koji-wrapper, --no-koji-wrapper
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-koji-backend-backend" class="md-nav__link">
-    --koji-backend backend
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-wait-no-wait-nowait" class="md-nav__link">
-    --wait, --no-wait, --nowait
   </a>
   
 </li>
@@ -4644,8 +4646,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-repodestination-repository-upcoming" class="md-nav__link">
-    --repo=destination repository, --upcoming
+  <a href="#-repodestination-repository" class="md-nav__link">
+    --repo=destination repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-repo-list" class="md-nav__link">
+    --repo-list
   </a>
   
 </li>
@@ -4657,27 +4666,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#koji-tag-diff" class="md-nav__link">
-    koji-tag-diff
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#osg-build-test" class="md-nav__link">
-    osg-build-test
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#osg-import-srpm" class="md-nav__link">
-    osg-import-srpm
-  </a>
   
 </li>
         
@@ -4804,6 +4792,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#minor-tools" class="md-nav__link">
+    Minor tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Minor tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#koji-tag-diff" class="md-nav__link">
+    koji-tag-diff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osg-build-test" class="md-nav__link">
+    osg-build-test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osg-import-srpm" class="md-nav__link">
+    osg-import-srpm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-usage-patterns" class="md-nav__link">
     Common Usage Patterns
   </a>
@@ -4840,8 +4862,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#see-if-a-package-builds-successfully-for-osg-34" class="md-nav__link">
-    See if a package builds successfully for OSG 3.4
+  <a href="#see-if-a-package-builds-successfully-for-osg-24-main" class="md-nav__link">
+    See if a package builds successfully for OSG 24 main
   </a>
   
 </li>
@@ -4898,9 +4920,128 @@
                 
                 <h1 id="osg-build-tools">OSG Build Tools<a class="headerlink" href="#osg-build-tools" title="Permanent link">&para;</a></h1>
 <p>This page documents the tools used for RPM development for the OSG Software Stack. See <a href="../rpm-development-guide/">the RPM development guide</a> for the principles on which these tools are based.</p>
-<p>The tools are distributed in the <code>osg-build</code> RPM in our repositories, but can also be used from a Git clone of <a href="https://github.com/opensciencegrid/osg-build">opensciencegrid/osg-build on GitHub</a>.</p>
-<p>This page is up-to-date as of <code>osg-build</code> version 1.14.1.</p>
-<h2 id="the-tools">The tools<a class="headerlink" href="#the-tools" title="Permanent link">&para;</a></h2>
+<p>The tools are available in Git in <a href="https://github.com/opensciencegrid/osg-build">opensciencegrid/osg-build on GitHub</a>.
+See installation documentation below.</p>
+<h2 id="quick-start-with-apptainer">Quick start with Apptainer<a class="headerlink" href="#quick-start-with-apptainer" title="Permanent link">&para;</a></h2>
+<p>This quick start guide shows how to use the OSG build tools via Apptainer. (Singularity should work too.)
+This assumes you will use Kerberos for authentication with UW-Madison or Fermilab credentials.
+To get UW-Madison Kerberos credentials, you will need to be inside the UW Campus network, either via campus wifi or VPN.</p>
+<p>In addition, this assumes that the repository you want to build packages from is from a subdirectory under your home directory.
+If not, pass the appropriate <code>--bind</code> (<code>-B</code>) argument to the <code>apptainer run</code> command.</p>
+<p>The image is available from hub.opensciencegrid.org.  Pull the image and run it:</p>
+<div class="codehilite"><pre><span></span><code>apptainer pull oras://hub.opensciencegrid.org/osg-htc/osg-build:v2-sif osg-build.sif
+apptainer run osg-build.sif
+</code></pre></div>
+
+<p>you will be in a shell inside the image.</p>
+<p>Set up your configuration for accessing the OSG Koji environment.</p>
+<div class="codehilite"><pre><span></span><code>osg-koji setup
+</code></pre></div>
+
+<p>Select Kerberos as your auth method.
+Use <code>kinit</code> to get a credential.</p>
+<p>For UW-Madison:</p>
+<div class="codehilite"><pre><span></span><code>kinit &lt;username&gt;@AD.WISC.EDU
+</code></pre></div>
+
+<p>replacing <code>&lt;username&gt;</code> with the name of your UW NetID.</p>
+<p>For Fermilab:</p>
+<div class="codehilite"><pre><span></span><code>kinit &lt;username&gt;@FNAL.GOV
+</code></pre></div>
+
+<p>replacing <code>&lt;username&gt;</code> with your Fermilab user name.</p>
+<p>Verify that you can successfully authenticate to Koji:</p>
+<div class="codehilite"><pre><span></span><code>osg-koji hello
+</code></pre></div>
+
+<p>If that succeeds, you will be ready to use the rest of the <code>osg-build</code> and <code>osg-koji</code> commands.</p>
+<p>Note: the <code>mock</code> command does not work in Apptainer/Singularity due to permissions issues.
+For testing builds, use <code>osg-build koji --scratch</code> instead.</p>
+<h2 id="installation-into-a-linux-system">Installation into a Linux system<a class="headerlink" href="#installation-into-a-linux-system" title="Permanent link">&para;</a></h2>
+<p>You may install the software locally, either via <code>pip</code> or via a script distributed by an RPM.
+If using <code>pip</code>, you will need to install some dependencies by hand.</p>
+<h3 id="install-as-root-via-osg-rpm-el8-el9">Install as root via OSG RPM (EL8, EL9)<a class="headerlink" href="#install-as-root-via-osg-rpm-el8-el9" title="Permanent link">&para;</a></h3>
+<p>The OSG 24-internal repositories contain a package called "osg-build-deps".
+<a href="https://osg-htc.org/docs/common/yum/">Install the OSG 24 repositories</a>.</p>
+<p>Then, install osg-build-deps:</p>
+<div class="codehilite"><pre><span></span><code>yum install --enablerepo=osg-internal-development osg-build-deps
+</code></pre></div>
+
+<p>This will pull in the dependencies necessary to run the OSG Build Tools.
+Then, to install the OSG Build Tools themselves into <code>/usr/local</code>, run</p>
+<div class="codehilite"><pre><span></span><code>install-osg-build.sh
+</code></pre></div>
+
+<p>This will clone osg-build into <code>/usr/local/src/osg-build</code> and install the software under the <code>/usr/local</code> tree.</p>
+<h3 id="install-via-pip-el8-el9-ubuntu-others">Install via pip (EL8, EL9, Ubuntu, others)<a class="headerlink" href="#install-via-pip-el8-el9-ubuntu-others" title="Permanent link">&para;</a></h3>
+<p>To use Kerberos authentication you will need the client tools to run <code>kinit</code>.
+On EL8/EL9, run:</p>
+<div class="codehilite"><pre><span></span><code>yum install krb5-workstation
+</code></pre></div>
+
+<p>On Ubuntu, run:</p>
+<div class="codehilite"><pre><span></span><code>apt install krb5-user
+</code></pre></div>
+
+<p>Before installing via pip, you will need to install the <code>requests-gssapi</code> library by hand because it contains compiled binaries.</p>
+<p>On EL8/EL9, run</p>
+<div class="codehilite"><pre><span></span><code>yum install python3-requests-gssapi
+</code></pre></div>
+
+<p>on Ubuntu 24.04, run</p>
+<div class="codehilite"><pre><span></span><code>apt install python3-requests-gssapi
+</code></pre></div>
+
+<p>If <code>requests-gssapi</code> is not available, you will have to compile it by hand; see below.</p>
+<p>To install the OSG Build Tools themselves, run:</p>
+<div class="codehilite"><pre><span></span><code>pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you installed requests-gssapi via RPM/Deb, and you want to run osg-build in a virtualenv or via pipx,
+pass <code>--system-site-packages</code> when creating the virtualenv or running <code>pipx install</code>.</p>
+</div>
+<h4 id="building-requests-gssapi-from-source">Building requests-gssapi from source<a class="headerlink" href="#building-requests-gssapi-from-source" title="Permanent link">&para;</a></h4>
+<p>If the <code>requests-gssapi</code> library is not available or you don't want to install it via a package manager,
+you must install the dependencies that will allow pip to build it from source.</p>
+<p>On EL8/EL9 run:</p>
+<div class="codehilite"><pre><span></span><code>yum install gcc make python3-devel krb5-devel
+</code></pre></div>
+
+<p>On Ubuntu run</p>
+<div class="codehilite"><pre><span></span><code>apt install gcc make libpython-dev libkrb5-dev
+</code></pre></div>
+
+<p>Afterwards, pip install the OSG Build Tools as previously:</p>
+<div class="codehilite"><pre><span></span><code>pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
+</code></pre></div>
+
+<h2 id="configuring-koji-access-and-osg-build">Configuring Koji access and OSG Build<a class="headerlink" href="#configuring-koji-access-and-osg-build" title="Permanent link">&para;</a></h2>
+<p>Access to Koji is performed using Kerberos.
+Set up your configuration for accessing the OSG Koji environment.</p>
+<div class="codehilite"><pre><span></span><code>osg-koji setup
+</code></pre></div>
+
+<p>You will be prompted for your authentication mehtod; select Kerberos and enter your Kerberos principal at the prompt.</p>
+<p>Use <code>kinit</code> to get a credential.</p>
+<p>For UW-Madison:</p>
+<div class="codehilite"><pre><span></span><code>kinit &lt;username&gt;@AD.WISC.EDU
+</code></pre></div>
+
+<p>replacing <code>&lt;username&gt;</code> with the name of your UW NetID.</p>
+<p>For Fermilab:</p>
+<div class="codehilite"><pre><span></span><code>kinit &lt;username&gt;@FNAL.GOV
+</code></pre></div>
+
+<p>replacing <code>&lt;username&gt;</code> with your Fermilab user name.</p>
+<p>Verify that you can successfully authenticate to Koji:</p>
+<div class="codehilite"><pre><span></span><code>osg-koji hello
+</code></pre></div>
+
+<p>If authentication is successful, you are ready to perform Koji build tasks.</p>
+<h2 id="commonly-used-tools">Commonly used tools<a class="headerlink" href="#commonly-used-tools" title="Permanent link">&para;</a></h2>
+<p>These are the tools you will be using for day-to-day builds.</p>
 <h3 id="osg-build">osg-build<a class="headerlink" href="#osg-build" title="Permanent link">&para;</a></h3>
 <h4 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h4>
 <p>This is the primary tool used in building source and binary RPMs.</p>
@@ -4910,9 +5051,10 @@
 <p><em>package_directory</em> is a directory containing an <code>osg/</code> and/or an <code>upstream/</code> subdirectory. See <a href="../rpm-development-guide/">the RPM development guide</a> for how these directories are organized.</p>
 <h4 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h4>
 <h5 id="koji">koji<a class="headerlink" href="#koji" title="Permanent link">&para;</a></h5>
-<p>Prebuilds the final source package, then builds it remotely using the Koji instance hosted at UW-Madison. <a href="https://koji.opensciencegrid.org">https://koji.opensciencegrid.org</a> By default, the resulting RPMs will end up in the osg-minefield repositories based on the most recent OSG major version (e.g. 3.4). You may specify a different set of repos with <code>--repo</code>, described later. RPMs from the osg-minefield repositories are regularly pulled to the osg-development repositories hosted by the GOC at <a href="http://repo.opensciencegrid.org">http://repo.opensciencegrid.org</a> Unless you specify otherwise (by passing <code>--el6</code>, <code>--el7</code> or specifying a different koji tag/target), the package will be built for both el6 and el7. This is the method used to build final versions of packages you expect to ship.</p>
+<p>Builds the package on the Koji build service hosted at UW-Madison. <a href="https://koji.osg-htc.org">https://koji.osg-htc.org</a>.
+You must specify the set of destination repos with <code>--repo</code>, described later.</p>
 <h5 id="lint">lint<a class="headerlink" href="#lint" title="Permanent link">&para;</a></h5>
-<p>Prebuilds the final source package, then runs <code>rpmlint</code> on it to check for various problems. You will need to have <code>rpmlint</code> installed. People on UW CSL machines should add <code>/p/vdt/workspace/rpmlint</code> to their $PATH.</p>
+<p>Runs <code>rpmlint</code> the package(s) to check for various problems. You will need to have <code>rpmlint</code> installed.</p>
 <h5 id="mock">mock<a class="headerlink" href="#mock" title="Permanent link">&para;</a></h5>
 <p>Prebuilds the final source package, then builds it locally using <code>mock</code>, and stores the resulting source and binary RPMs in the package-specific <code>_build_results</code> directory.</p>
 <h5 id="prebuild">prebuild<a class="headerlink" href="#prebuild" title="Permanent link">&para;</a></h5>
@@ -4922,60 +5064,27 @@
 <h5 id="rpmbuild">rpmbuild<a class="headerlink" href="#rpmbuild" title="Permanent link">&para;</a></h5>
 <p>Prebuilds the final source package, then builds it locally using <code>rpmbuild</code>, and stores the resulting source and binary RPMs in the package-specific <code>_build_results</code> directory.</p>
 <h5 id="quilt">quilt<a class="headerlink" href="#quilt" title="Permanent link">&para;</a></h5>
-<p>Collects the upstream local sources and spec file, then calls <code>quilt setup</code> on the spec file, extracting the source files and adding the patches to a quilt series file. See <a href="http://www.shakthimaan.com/downloads/glv/quilt-tutorial/quilt-doc.pdf">Quilt documentation (PDF link)</a> for more information on quilt; also look at the example in the Usage Patterns section below. Similar to <code>prepare</code> (in fact, <code>quilt</code> calls <code>rpmbuild -bp</code> behind the scenes), but the source tree is in pre-patch state, and various quilt commands can be used to apply and modify patches. Unpacks into <code>_quilt</code> as of <code>osg-build-1.2.2</code> or <code>_final_srpm_contents</code> in previous versions. Requires <code>quilt</code>. People on UW CSL machines should add <code>/p/vdt/workspace/quilt/bin</code> to their <code>$PATH</code>, and <code>/p/vdt/workspace/quilt/share/man</code> to their <code>$MANPATH</code>.</p>
+<p>Collects the upstream local sources and spec file, then calls <code>quilt setup</code> on the spec file, extracting the source files and adding the patches to a quilt series file. See <a href="http://www.shakthimaan.com/downloads/glv/quilt-tutorial/quilt-doc.pdf">Quilt documentation (PDF link)</a> for more information on quilt; also look at the example in the Usage Patterns section below. 
+The sources are unpacked into <code>_quilt</code>; they will be in pre-patch state and the various quilt commands can be used to apply and modify patches. Requires <code>quilt</code>.</p>
 <h4 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h4>
-<p>This section lists the command-line options.</p>
+<p>This section lists the common command-line options.</p>
 <h5 id="-help">--help<a class="headerlink" href="#-help" title="Permanent link">&para;</a></h5>
 <p>Prints the built-in usage information and exits without doing anything else.</p>
 <h5 id="-version">--version<a class="headerlink" href="#-version" title="Permanent link">&para;</a></h5>
 <p>Prints the version of <code>osg-build</code> and exits without doing anything else.</p>
-<h4 id="common-options">Common Options<a class="headerlink" href="#common-options" title="Permanent link">&para;</a></h4>
-<h5 id="-a-autoclean-no-autoclean">-a, --autoclean, --no-autoclean<a class="headerlink" href="#-a-autoclean-no-autoclean" title="Permanent link">&para;</a></h5>
-<p>Before each build, clean out the contents of the underscore directories (_build_results, _final_srpm_contents, _upstream_srpm_contents, _upstream_tarball_contents). If the directories are not cleaned up, earlier builds of a package may interfere with later ones. <code>--no-autoclean</code> will disable this.</p>
-<p>Default is <code>true</code>.</p>
-<p>Has no effect with the <code>--vcs</code> flag.</p>
-<h5 id="-c-cache-prefix-prefix">-c, --cache-prefix <em>prefix</em><a class="headerlink" href="#-c-cache-prefix-prefix" title="Permanent link">&para;</a></h5>
-<p>Sets the <em>prefix</em> for upstream source cache references. The prefix must be a valid URI starting with either <code>http</code>, <code>https</code>, or <code>file</code>, or one of the following special values:</p>
-<ul>
-<li>AFS (corresponds to <code>file:///p/vdt/public/html/upstream</code>, which is the location of the VDT cache using AFS from a UW CS machine).</li>
-<li>VDT (corresponds to <code>http://vdt.cs.wisc.edu/upstream</code>, which is the location of the VDT cache from off-site).</li>
-<li>AUTO (AFS if available, VDT if not)</li>
-</ul>
-<p>The upstream source cache must be organized as described above. All files referenced by <code>.source</code> files in the affected packages must exist in the cache, or a runtime error will occur.</p>
-<p>Default is <code>AUTO</code>.</p>
-<p>Has no effect with the <code>--vcs</code> flag.</p>
-<h5 id="-el6-el7-redhat-release-version-config-redhat_release">--el6, --el7, --redhat-release <em>version</em> (Config: redhat_release)<a class="headerlink" href="#-el6-el7-redhat-release-version-config-redhat_release" title="Permanent link">&para;</a></h5>
-<p>Sets the distro version to build for. This affects the %dist tag, the mock config, and the default koji tag and target (unless otherwise specified).</p>
-<p><code>--el6</code> is equivalent to <code>--redhat-release 6</code></p>
-<p><code>--el7</code> is equivalent to <code>--redhat-release 7</code></p>
-<h5 id="-loglevel-loglevel">--loglevel <em>loglevel</em><a class="headerlink" href="#-loglevel-loglevel" title="Permanent link">&para;</a></h5>
-<p>Sets the verbosity of the script. Valid values are: <code>debug</code>, <code>info</code>, <code>warning</code>, <code>error</code> and <code>critical</code>.</p>
-<p>Default is <code>info</code>.</p>
-<h5 id="-q-quiet">-q, --quiet<a class="headerlink" href="#-q-quiet" title="Permanent link">&para;</a></h5>
-<p>Do not display as much information. Equivalent to <code>--loglevel warning</code></p>
-<h5 id="-v-verbose">-v, --verbose<a class="headerlink" href="#-v-verbose" title="Permanent link">&para;</a></h5>
-<p>Display more information. Equivalent to <code>--loglevel debug</code></p>
-<h5 id="-w-working-directory-path">-w, --working-directory <em>path</em><a class="headerlink" href="#-w-working-directory-path" title="Permanent link">&para;</a></h5>
-<p>Use <em>path</em> as the root directory of the files created by the script. For example, if <em>path</em> is <code>$HOME/working</code>, and the package being built is <code>ndt</code>, the following tree will be created:</p>
-<ul>
-<li>$HOME/working/ndt/_upstream_srpm_contents</li>
-<li>$HOME/working/ndt/_upstream_tarball_contents</li>
-<li>$HOME/working/ndt/_final_srpm_contents</li>
-<li>$HOME/working/ndt/_build_results</li>
-</ul>
-<p>If <em>path</em> is <code>TEMP</code>, a randomly named directory under <code>/tmp</code> is used as the working directory.</p>
-<p>The default setting is to use the package directory as the working directory.</p>
-<p>Has no effect with the <code>--vcs</code> flag.</p>
+<h4 id="options-common-to-all-tasks">Options common to all tasks<a class="headerlink" href="#options-common-to-all-tasks" title="Permanent link">&para;</a></h4>
+<h5 id="-el8-el9-etc">--el8, --el9, etc.<a class="headerlink" href="#-el8-el9-etc" title="Permanent link">&para;</a></h5>
+<p>Build for these specific distro versions.</p>
+<h5 id="-q-quiet-v-verbose">-q, --quiet, -v, --verbose<a class="headerlink" href="#-q-quiet-v-verbose" title="Permanent link">&para;</a></h5>
+<p>Decrease or increase the amount of information printed.</p>
 <h4 id="options-specific-to-prebuild-task">Options specific to prebuild task<a class="headerlink" href="#options-specific-to-prebuild-task" title="Permanent link">&para;</a></h4>
 <h5 id="-full-extract">--full-extract<a class="headerlink" href="#-full-extract" title="Permanent link">&para;</a></h5>
 <p>If set, all upstream tarballs will be extracted into <code>_upstream_tarball_contents/</code> during the prebuild step. This flag is now mostly redundant with the <code>prepare</code> and <code>quilt</code> tasks.</p>
 <h4 id="options-specific-to-rpmbuild-and-mock-tasks">Options specific to rpmbuild and mock tasks<a class="headerlink" href="#options-specific-to-rpmbuild-and-mock-tasks" title="Permanent link">&para;</a></h4>
 <h5 id="-distro-tag-dist">--distro-tag <em>dist</em><a class="headerlink" href="#-distro-tag-dist" title="Permanent link">&para;</a></h5>
-<p>Sets the distribution tag added on to the end of the release in the RPM ( <code>rpmbuild</code> and <code>mock</code> tasks only ).</p>
-<p>Default is <code>.osg.el6</code> or <code>.osg.el7</code></p>
+<p>Sets the <code>%dist</code> tag added on to the end of the release in the RPM ( <code>rpmbuild</code> and <code>mock</code> tasks only ).</p>
 <h5 id="-t-target-arch-arch">-t, --target-arch <em>arch</em><a class="headerlink" href="#-t-target-arch-arch" title="Permanent link">&para;</a></h5>
-<p>Specify an architecture to build packages for ( <code>rpmbuild</code> and <code>mock</code> tasks only ).</p>
-<p>Default is unspecified, which builds for the current machine architecture.</p>
+<p>Specify an architecture to build packages for ( <code>rpmbuild</code>, <code>mock</code>, and scratch <code>koji</code> builds only ).</p>
 <h4 id="options-specific-to-mock-task">Options specific to mock task<a class="headerlink" href="#options-specific-to-mock-task" title="Permanent link">&para;</a></h4>
 <h5 id="-mock-clean-no-mock-clean">--mock-clean, --no-mock-clean<a class="headerlink" href="#-mock-clean-no-mock-clean" title="Permanent link">&para;</a></h5>
 <p>Enable/disable deletion of the mock buildroot after a successful build.</p>
@@ -4990,24 +5099,13 @@
 <p>Do not actually run koji, merely show the command(s) that will be run. For debugging purposes.</p>
 <h5 id="-getfiles-get-files">--getfiles, --get-files<a class="headerlink" href="#-getfiles-get-files" title="Permanent link">&para;</a></h5>
 <p>For scratch builds without <code>--vcs</code> only. Download the resulting RPMs and logs from the build into the <code>_build_results</code> directory.</p>
-<h5 id="-k-kojilogin-koji-login-login">-k, --kojilogin, --koji-login <em>login</em><a class="headerlink" href="#-k-kojilogin-koji-login-login" title="Permanent link">&para;</a></h5>
-<p>Sets the login to use for the koji task. This should most likely be your CN. If not specified, will extract it from your client cert (<code>~/.osg-koji/client.crt</code> or <code>~/.koji/client.crt</code>).</p>
 <h5 id="-koji-target-target">--koji-target <em>target</em><a class="headerlink" href="#-koji-target-target" title="Permanent link">&para;</a></h5>
 <p>The koji target to use for building.</p>
-<p>Default is <code>osg-el6</code> for el6 and <code>osg-el7</code> for el7.</p>
 <h5 id="-koji-tag-tag">--koji-tag <em>tag</em><a class="headerlink" href="#-koji-tag-tag" title="Permanent link">&para;</a></h5>
 <p>The koji tag to add packages to. See the <a href="../koji-workflow/">Koji Workflow guide</a> for more information on the terminology. The special value <code>TARGET</code> uses the destination tag defined in the koji target.</p>
 <p>Default is <code>osg-el6</code> or <code>osg-el7</code>.</p>
 <h5 id="-ktt-koji-tag-and-target-arg">--ktt, --koji-tag-and-target <em>arg</em><a class="headerlink" href="#-ktt-koji-tag-and-target-arg" title="Permanent link">&para;</a></h5>
 <p>Shorthand for setting both --koji-tag and --koji-target to <em>arg</em>.</p>
-<h5 id="-koji-wrapper-no-koji-wrapper">--koji-wrapper, --no-koji-wrapper<a class="headerlink" href="#-koji-wrapper-no-koji-wrapper" title="Permanent link">&para;</a></h5>
-<p>Enable/disable use of the <code>osg-koji</code> wrapper script around koji. See below for a description of <code>osg-koji</code>.</p>
-<p>Default is <code>true</code>.</p>
-<h5 id="-koji-backend-backend">--koji-backend <em>backend</em><a class="headerlink" href="#-koji-backend-backend" title="Permanent link">&para;</a></h5>
-<p>Specifies the method osg-build will use to interface with Koji. This can be <code>shell</code> or <code>kojilib</code>.</p>
-<h5 id="-wait-no-wait-nowait">--wait, --no-wait, --nowait<a class="headerlink" href="#-wait-no-wait-nowait" title="Permanent link">&para;</a></h5>
-<p>Wait for koji tasks to finish. Bad for running multiple builds in a single command, since you will have to type in your passphrase for the first one, wait for it to complete, then type in your passphrase for the second one, wait for it to complete, etc. If you want to wait for multiple tasks to finish, use the <code>koji watch-task</code> command or look at the website <a href="https://koji.opensciencegrid.org">https://koji.opensciencegrid.org</a>.</p>
-<p><code>--wait</code> used to be the default until <code>osg-build-1.1.3</code></p>
 <h5 id="-regen-repos">--regen-repos<a class="headerlink" href="#-regen-repos" title="Permanent link">&para;</a></h5>
 <p>Start a <code>regen-repo</code> koji task on the build tag after each koji build, to update the build repository used for the next build. Not useful unless you are launching multiple builds. This enables you to launch builds that depend on each other. Doesn't work too well with <code>--no-wait</code>, since the next build may be started before the regen-repo task is complete. Waiting will keep the next build from being queued until the regen-repo is complete.</p>
 <h5 id="-scratch-no-scratch">--scratch, --no-scratch<a class="headerlink" href="#-scratch-no-scratch" title="Permanent link">&para;</a></h5>
@@ -5015,48 +5113,11 @@
 <h5 id="-vcs-no-vcs-svn-no-svn">--vcs, --no-vcs, --svn, --no-svn<a class="headerlink" href="#-vcs-no-vcs-svn-no-svn" title="Permanent link">&para;</a></h5>
 <p>Have Koji check the package out from a version control system instead of creating an SRPM on the local machine and submitting that to Koji. Currently, SVN and Git are supported. If this flag is specified, you may use SVN URLs or URL@Revision pairs to specify the packages to build. You may continue specify package directories from an SVN checkout, in which case osg-build will use <code>svn info</code> to find the right URL@Revision pair to use and warn you about uncommitted changes. osg-build will also warn you about an outdated working directory.</p>
 <p><code>--vcs</code> defaults to <code>true</code> for non-scratch builds, and <code>false</code> for scratch builds.</p>
-<h5 id="-repodestination-repository-upcoming">--repo=<em>destination repository</em>, --upcoming<a class="headerlink" href="#-repodestination-repository-upcoming" title="Permanent link">&para;</a></h5>
-<p>Selects the repositories (osg-3.3, upcoming, etc.) to build packages for. Currently valid repositories are:</p>
-<table>
-<thead>
-<tr>
-<th>Repository</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>osg</td>
-<td>OSG Software development repos for trunk (this is the default)</td>
-</tr>
-<tr>
-<td>osg-3.3 (or just 3.3)</td>
-<td>OSG Software development repos for 3.3 branch</td>
-</tr>
-<tr>
-<td>upcoming</td>
-<td>OSG Software development repos for upcoming branch</td>
-</tr>
-<tr>
-<td>internal</td>
-<td>OSG Software internal branch</td>
-</tr>
-<tr>
-<td>hcc</td>
-<td>Holland Computing Center (Nebraska) testing repos</td>
-</tr>
-</tbody>
-</table>
-<p><code>--upcoming</code> is an alias for <code>--repo=upcoming</code></p>
-<p>Note that the repo selection affects which VCS paths you are allowed to build from. For example, you are not allowed to build from branches/osg-3.3 (from the OSG SVN) into the 'osg' repo, or from HCC's git repositories into the 'upcoming' repo.</p>
-<h3 id="koji-tag-diff">koji-tag-diff<a class="headerlink" href="#koji-tag-diff" title="Permanent link">&para;</a></h3>
-<p>This script displays the differences between the latest packages in two koji tags.</p>
-<p>Example invocation: <code>koji-tag-diff osg-3.4-el6-development osg-3.4-el7-testing</code></p>
-<p>This prints the packages that are in osg-3.4-el6-development but not in osg-3.4-el7-testing, or vice versa.</p>
-<h3 id="osg-build-test">osg-build-test<a class="headerlink" href="#osg-build-test" title="Permanent link">&para;</a></h3>
-<p>This script runs automated tests for <code>osg-build</code>. Only a few tests have been implemented so far.</p>
-<h3 id="osg-import-srpm">osg-import-srpm<a class="headerlink" href="#osg-import-srpm" title="Permanent link">&para;</a></h3>
-<p>This is a script to fetch an SRPM from a remote site, copy it into the upstream cache on AFS, and create an SVN package dir (if needed) with an <code>upstream/*.source</code> file. By default it will put downloaded files into the VDT upstream cache (/p/vdt/public/html/upstream), but you can pass <code>--upstream-root=&lt;UPSTREAM DIR&gt;</code> to put them somewhere else. If called with the <code>--extract-spec</code> or <code>-e</code> argument, it will extract the spec file from the SRPM and place it into the <code>osg</code> subdir in SVN. If called with the <code>--diff-spec</code> or <code>-d</code> argument, it will extract the spec file and compare it to the existing spec file in the <code>osg</code> subdir. <strong>The script hasn't been touched in a while and needs a good deal of cleanup.</strong> A planned feature is to allow doing a three-way diff between the existing RPM before OSG modifications, the new RPM before OSG modifications and the existing RPM after OSG modifications.</p>
+<h5 id="-repodestination-repository">--repo=<em>destination repository</em><a class="headerlink" href="#-repodestination-repository" title="Permanent link">&para;</a></h5>
+<p>Selects the repository (24-main, 24-upcoming, etc.) to build packages for.
+This is required for Koji builds.  See <code>--repo-list</code> for a list of repositories.</p>
+<h5 id="-repo-list">--repo-list<a class="headerlink" href="#-repo-list" title="Permanent link">&para;</a></h5>
+<p>Lists the available repositories for the <code>--repo</code> argument.</p>
 <h3 id="osg-koji">osg-koji<a class="headerlink" href="#osg-koji" title="Permanent link">&para;</a></h3>
 <p>This is a wrapper script around the <code>koji</code> command line tool. It automatically specifies parameters to access the OSG's koji instance, and forces SSL authentication. It takes the same parameters as <code>koji</code> and passes them on.</p>
 <p>An additional command, <code>osg-koji setup</code> exists, which performs the following tasks:</p>
@@ -5120,6 +5181,16 @@
 <p>Regenerate the destination repos after promoting.</p>
 <h5 id="-y-assume-yes">-y, --assume-yes<a class="headerlink" href="#-y-assume-yes" title="Permanent link">&para;</a></h5>
 <p>Do not prompt before promotion.</p>
+<h2 id="minor-tools">Minor tools<a class="headerlink" href="#minor-tools" title="Permanent link">&para;</a></h2>
+<p>These tools are used less frequently or are for specialized purposes.</p>
+<h3 id="koji-tag-diff">koji-tag-diff<a class="headerlink" href="#koji-tag-diff" title="Permanent link">&para;</a></h3>
+<p>This script displays the differences between the latest packages in two koji tags.</p>
+<p>Example invocation: <code>koji-tag-diff osg-3.4-el6-development osg-3.4-el7-testing</code></p>
+<p>This prints the packages that are in osg-3.4-el6-development but not in osg-3.4-el7-testing, or vice versa.</p>
+<h3 id="osg-build-test">osg-build-test<a class="headerlink" href="#osg-build-test" title="Permanent link">&para;</a></h3>
+<p>This script runs automated tests for <code>osg-build</code>. Only a few tests have been implemented so far.</p>
+<h3 id="osg-import-srpm">osg-import-srpm<a class="headerlink" href="#osg-import-srpm" title="Permanent link">&para;</a></h3>
+<p>This is a script to fetch an SRPM from a remote site, copy it into the upstream cache on AFS, and create an SVN package dir (if needed) with an <code>upstream/*.source</code> file. By default it will put downloaded files into the VDT upstream cache (/p/vdt/public/html/upstream), but you can pass <code>--upstream-root=&lt;UPSTREAM DIR&gt;</code> to put them somewhere else. If called with the <code>--extract-spec</code> or <code>-e</code> argument, it will extract the spec file from the SRPM and place it into the <code>osg</code> subdir in SVN. If called with the <code>--diff-spec</code> or <code>-d</code> argument, it will extract the spec file and compare it to the existing spec file in the <code>osg</code> subdir. <strong>The script hasn't been touched in a while and needs a good deal of cleanup.</strong> A planned feature is to allow doing a three-way diff between the existing RPM before OSG modifications, the new RPM before OSG modifications and the existing RPM after OSG modifications.</p>
 <h2 id="common-usage-patterns">Common Usage Patterns<a class="headerlink" href="#common-usage-patterns" title="Permanent link">&para;</a></h2>
 <h4 id="verify-that-all-files-necessary-to-build-the-package-are-in-the-right-place">Verify that all files necessary to build the package are in the right place<a class="headerlink" href="#verify-that-all-files-necessary-to-build-the-package-are-in-the-right-place" title="Permanent link">&para;</a></h4>
 <p>Run <code>osg-build prebuild &lt;PACKAGEDIR&gt;</code>.</p>
@@ -5144,11 +5215,9 @@
 <li>If you have changes to make to the source code that you want to save as a patch, type <code>quilt new &lt;PATCHNAME&gt;</code>, edit the files, type <code>quilt add &lt;FILE&gt;</code> on each file you edited, then type <code>quilt refresh</code> to recreate the patch.</li>
 <li>Once you're all done, copy the patches in the <code>patches/</code> directory to the <code>osg/</code> dir in SVN, run <code>quilt series</code> to get the application order and update the spec file accordingly.</li>
 </ol>
-<h4 id="see-if-a-package-builds-successfully-for-osg-34">See if a package builds successfully for OSG 3.4<a class="headerlink" href="#see-if-a-package-builds-successfully-for-osg-34" title="Permanent link">&para;</a></h4>
+<h4 id="see-if-a-package-builds-successfully-for-osg-24-main">See if a package builds successfully for OSG 24 main<a class="headerlink" href="#see-if-a-package-builds-successfully-for-osg-24-main" title="Permanent link">&para;</a></h4>
 <ul>
-<li>If you have all the build dependencies of the package installed, run <code>osg-build rpmbuild &lt;PACKAGEDIR&gt;</code>. The resulting RPMs will be in the <code>_build_results</code> directory.</li>
-<li>If you do not have all the build dependencies installed, or want to make sure you specified all of the necessary ones and the package builds from a clean environment, run <code>osg-build mock --mock-config-from-koji osg-3.4-el6-build &lt;PACKAGEDIR&gt;</code>. The resulting RPMs will be in the <code>_build_results</code> directory.</li>
-<li>If you do not have mock installed, or want to exactly replicate the build environment in Koji, run <code>osg-build koji --scratch &lt;PACKAGEDIR&gt;</code>. You may download the resulting RPMs from kojiweb <a href="https://koji.opensciencegrid.org/koji">https://koji.opensciencegrid.org/koji</a> or pass <code>--getfiles</code> to <code>osg-build koji</code> and they will get downloaded to the <code>_build_results</code> directory.</li>
+<li>Run <code>osg-build koji --scratch &lt;PACKAGEDIR&gt; --repo 24-main</code>. You may download the resulting RPMs from kojiweb <a href="https://koji.osg-htc.org/koji">https://koji.osg-htc.org/koji</a> or pass <code>--getfiles</code> to <code>osg-build koji</code> and they will get downloaded to the <code>_build_results</code> directory.</li>
 </ul>
 <h4 id="check-for-potential-errors-in-a-package">Check for potential errors in a package<a class="headerlink" href="#check-for-potential-errors-in-a-package" title="Permanent link">&para;</a></h4>
 <p>Run <code>osg-build lint &lt;PACKAGEDIR&gt;</code>.</p>
