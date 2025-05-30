@@ -4,12 +4,170 @@ OSG Build Tools
 
 This page documents the tools used for RPM development for the OSG Software Stack. See [the RPM development guide](../software/rpm-development-guide.md) for the principles on which these tools are based.
 
-The tools are distributed in the `osg-build` RPM in our repositories, but can also be used from a Git clone of [opensciencegrid/osg-build on GitHub](https://github.com/opensciencegrid/osg-build).
+The tools are available in Git in [opensciencegrid/osg-build on GitHub](https://github.com/opensciencegrid/osg-build).
+See installation documentation below.
 
-This page is up-to-date as of `osg-build` version 1.14.1.
 
-The tools
----------
+Quick start with Apptainer
+--------------------------
+This quick start guide shows how to use the OSG build tools via Apptainer. (Singularity should work too.)
+This assumes you will use Kerberos for authentication with UW-Madison or Fermilab credentials.
+To get UW-Madison Kerberos credentials, you will need to be inside the UW Campus network, either via campus wifi or VPN.
+
+In addition, this assumes that the repository you want to build packages from is from a subdirectory under your home directory.
+If not, pass the appropriate `--bind` (`-B`) argument to the `apptainer run` command.
+
+The image is available from hub.opensciencegrid.org.  Pull the image and run it:
+```
+apptainer pull oras://hub.opensciencegrid.org/osg-htc/osg-build:v2-sif osg-build.sif
+apptainer run osg-build.sif
+```
+you will be in a shell inside the image.
+
+Set up your configuration for accessing the OSG Koji environment.
+```
+osg-koji setup
+```
+Select Kerberos as your auth method.
+Use `kinit` to get a credential.
+
+For UW-Madison:
+```
+kinit <username>@AD.WISC.EDU
+```
+replacing `<username>` with the name of your UW NetID.
+
+For Fermilab:
+```
+kinit <username>@FNAL.GOV
+```
+replacing `<username>` with your Fermilab user name.
+
+Verify that you can successfully authenticate to Koji:
+```
+osg-koji hello
+```
+
+If that succeeds, you will be ready to use the rest of the `osg-build` and `osg-koji` commands.
+
+Note: the `mock` command does not work in Apptainer/Singularity due to permissions issues.
+For testing builds, use `osg-build koji --scratch` instead.
+
+
+Installation into a Linux system
+--------------------------------
+
+You may install the software locally, either via `pip` or via a script distributed by an RPM.
+If using `pip`, you will need to install some dependencies by hand.
+
+
+### Install as root via OSG RPM (EL8, EL9)
+
+The OSG 24-internal repositories contain a package called "osg-build-deps".
+[Install the OSG 24 repositories](https://osg-htc.org/docs/common/yum/).
+
+Then, install osg-build-deps:
+```
+yum install --enablerepo=osg-internal-development osg-build-deps
+```
+This will pull in the dependencies necessary to run the OSG Build Tools.
+Then, to install the OSG Build Tools themselves into `/usr/local`, run
+```
+install-osg-build.sh
+```
+This will clone osg-build into `/usr/local/src/osg-build` and install the software under the `/usr/local` tree.
+
+
+### Install via pip (EL8, EL9, Ubuntu, others)
+
+To use Kerberos authentication you will need the client tools to run `kinit`.
+On EL8/EL9, run:
+```
+yum install krb5-workstation
+```
+On Ubuntu, run:
+```
+apt install krb5-user
+```
+
+Before installing via pip, you will need to install the `requests-gssapi` library by hand because it contains compiled binaries.
+
+On EL8/EL9, run
+```
+yum install python3-requests-gssapi
+```
+on Ubuntu 24.04, run
+```
+apt install python3-requests-gssapi
+```
+If `requests-gssapi` is not available, you will have to compile it by hand; see below.
+
+To install the OSG Build Tools themselves, run:
+
+```
+pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
+```
+
+!!! note
+    If you installed requests-gssapi via RPM/Deb, and you want to run osg-build in a virtualenv or via pipx,
+    pass `--system-site-packages` when creating the virtualenv or running `pipx install`.
+
+
+#### Building requests-gssapi from source
+
+If the `requests-gssapi` library is not available or you don't want to install it via a package manager,
+you must install the dependencies that will allow pip to build it from source.
+
+On EL8/EL9 run:
+```
+yum install gcc make python3-devel krb5-devel
+```
+
+On Ubuntu run
+```
+apt install gcc make libpython-dev libkrb5-dev
+```
+
+Afterwards, pip install the OSG Build Tools as previously:
+
+```
+pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
+```
+
+
+Configuring Koji access and OSG Build
+-------------------------------------
+Access to Koji is performed using Kerberos.
+Set up your configuration for accessing the OSG Koji environment.
+```
+osg-koji setup
+```
+You will be prompted for your authentication mehtod; select Kerberos and enter your Kerberos principal at the prompt.
+
+Use `kinit` to get a credential.
+
+For UW-Madison:
+```
+kinit <username>@AD.WISC.EDU
+```
+replacing `<username>` with the name of your UW NetID.
+
+For Fermilab:
+```
+kinit <username>@FNAL.GOV
+```
+replacing `<username>` with your Fermilab user name.
+
+Verify that you can successfully authenticate to Koji:
+```
+osg-koji hello
+```
+If authentication is successful, you are ready to perform Koji build tasks.
+
+Commonly used tools
+-------------------
+
+These are the tools you will be using for day-to-day builds.
 
 ### osg-build
 
@@ -25,11 +183,12 @@ This is the primary tool used in building source and binary RPMs.
 
 ##### koji
 
-Prebuilds the final source package, then builds it remotely using the Koji instance hosted at UW-Madison. <https://koji.opensciencegrid.org> By default, the resulting RPMs will end up in the osg-minefield repositories based on the most recent OSG major version (e.g. 3.4). You may specify a different set of repos with `--repo`, described later. RPMs from the osg-minefield repositories are regularly pulled to the osg-development repositories hosted by the GOC at <http://repo.opensciencegrid.org> Unless you specify otherwise (by passing `--el6`, `--el7` or specifying a different koji tag/target), the package will be built for both el6 and el7. This is the method used to build final versions of packages you expect to ship.
+Builds the package on the Koji build service hosted at UW-Madison. <https://koji.osg-htc.org>.
+You must specify the set of destination repos with `--repo`, described later.
 
 ##### lint
 
-Prebuilds the final source package, then runs `rpmlint` on it to check for various problems. You will need to have `rpmlint` installed. People on UW CSL machines should add `/p/vdt/workspace/rpmlint` to their $PATH.
+Runs `rpmlint` the package(s) to check for various problems. You will need to have `rpmlint` installed.
 
 ##### mock
 
@@ -49,11 +208,12 @@ Prebuilds the final source package, then builds it locally using `rpmbuild`, and
 
 ##### quilt
 
-Collects the upstream local sources and spec file, then calls `quilt setup` on the spec file, extracting the source files and adding the patches to a quilt series file. See [Quilt documentation (PDF link)](http://www.shakthimaan.com/downloads/glv/quilt-tutorial/quilt-doc.pdf) for more information on quilt; also look at the example in the Usage Patterns section below. Similar to `prepare` (in fact, `quilt` calls `rpmbuild -bp` behind the scenes), but the source tree is in pre-patch state, and various quilt commands can be used to apply and modify patches. Unpacks into `_quilt` as of `osg-build-1.2.2` or `_final_srpm_contents` in previous versions. Requires `quilt`. People on UW CSL machines should add `/p/vdt/workspace/quilt/bin` to their `$PATH`, and `/p/vdt/workspace/quilt/share/man` to their `$MANPATH`.
+Collects the upstream local sources and spec file, then calls `quilt setup` on the spec file, extracting the source files and adding the patches to a quilt series file. See [Quilt documentation (PDF link)](http://www.shakthimaan.com/downloads/glv/quilt-tutorial/quilt-doc.pdf) for more information on quilt; also look at the example in the Usage Patterns section below. 
+The sources are unpacked into `_quilt`; they will be in pre-patch state and the various quilt commands can be used to apply and modify patches. Requires `quilt`.
 
 #### Options
 
-This section lists the command-line options.
+This section lists the common command-line options.
 
 ##### --help
 
@@ -63,66 +223,15 @@ Prints the built-in usage information and exits without doing anything else.
 
 Prints the version of `osg-build` and exits without doing anything else.
 
-#### Common Options
+#### Options common to all tasks
 
-##### -a, --autoclean, --no-autoclean
+##### --el8, --el9, etc.
 
-Before each build, clean out the contents of the underscore directories (\_build\_results, \_final\_srpm\_contents, \_upstream\_srpm\_contents, \_upstream\_tarball\_contents). If the directories are not cleaned up, earlier builds of a package may interfere with later ones. `--no-autoclean` will disable this.
+Build for these specific distro versions.
 
-Default is `true`.
+##### -q, --quiet, -v, --verbose
 
-Has no effect with the `--vcs` flag.
-
-##### -c, --cache-prefix *prefix*
-
-Sets the *prefix* for upstream source cache references. The prefix must be a valid URI starting with either `http`, `https`, or `file`, or one of the following special values:
-
--   AFS (corresponds to `file:///p/vdt/public/html/upstream`, which is the location of the VDT cache using AFS from a UW CS machine).
--   VDT (corresponds to `http://vdt.cs.wisc.edu/upstream`, which is the location of the VDT cache from off-site).
--   AUTO (AFS if available, VDT if not)
-
-The upstream source cache must be organized as described above. All files referenced by `.source` files in the affected packages must exist in the cache, or a runtime error will occur.
-
-Default is `AUTO`.
-
-Has no effect with the `--vcs` flag.
-
-##### --el6, --el7, --redhat-release *version* (Config: redhat\_release)
-
-Sets the distro version to build for. This affects the %dist tag, the mock config, and the default koji tag and target (unless otherwise specified).
-
-`--el6` is equivalent to `--redhat-release 6`
-
-`--el7` is equivalent to `--redhat-release 7`
-
-##### --loglevel *loglevel*
-
-Sets the verbosity of the script. Valid values are: `debug`, `info`, `warning`, `error` and `critical`.
-
-Default is `info`.
-
-##### -q, --quiet
-
-Do not display as much information. Equivalent to `--loglevel warning`
-
-##### -v, --verbose
-
-Display more information. Equivalent to `--loglevel debug`
-
-##### -w, --working-directory *path*
-
-Use *path* as the root directory of the files created by the script. For example, if *path* is `$HOME/working`, and the package being built is `ndt`, the following tree will be created:
-
--   $HOME/working/ndt/\_upstream\_srpm\_contents
--   $HOME/working/ndt/\_upstream\_tarball\_contents
--   $HOME/working/ndt/\_final\_srpm\_contents
--   $HOME/working/ndt/\_build\_results
-
-If *path* is `TEMP`, a randomly named directory under `/tmp` is used as the working directory.
-
-The default setting is to use the package directory as the working directory.
-
-Has no effect with the `--vcs` flag.
+Decrease or increase the amount of information printed.
 
 #### Options specific to prebuild task
 
@@ -134,15 +243,11 @@ If set, all upstream tarballs will be extracted into `_upstream_tarball_contents
 
 ##### --distro-tag *dist*
 
-Sets the distribution tag added on to the end of the release in the RPM ( `rpmbuild` and `mock` tasks only ).
-
-Default is `.osg.el6` or `.osg.el7`
+Sets the `%dist` tag added on to the end of the release in the RPM ( `rpmbuild` and `mock` tasks only ).
 
 ##### -t, --target-arch *arch*
 
-Specify an architecture to build packages for ( `rpmbuild` and `mock` tasks only ).
-
-Default is unspecified, which builds for the current machine architecture.
+Specify an architecture to build packages for ( `rpmbuild`, `mock`, and scratch `koji` builds only ).
 
 #### Options specific to mock task
 
@@ -172,15 +277,9 @@ Do not actually run koji, merely show the command(s) that will be run. For debug
 
 For scratch builds without `--vcs` only. Download the resulting RPMs and logs from the build into the `_build_results` directory.
 
-##### -k, --kojilogin, --koji-login *login*
-
-Sets the login to use for the koji task. This should most likely be your CN. If not specified, will extract it from your client cert (`~/.osg-koji/client.crt` or `~/.koji/client.crt`).
-
 ##### --koji-target *target*
 
 The koji target to use for building.
-
-Default is `osg-el6` for el6 and `osg-el7` for el7.
 
 ##### --koji-tag *tag*
 
@@ -192,21 +291,6 @@ Default is `osg-el6` or `osg-el7`.
 
 Shorthand for setting both --koji-tag and --koji-target to *arg*.
 
-##### --koji-wrapper, --no-koji-wrapper
-
-Enable/disable use of the `osg-koji` wrapper script around koji. See below for a description of `osg-koji`.
-
-Default is `true`.
-
-##### --koji-backend *backend*
-
-Specifies the method osg-build will use to interface with Koji. This can be `shell` or `kojilib`.
-
-##### --wait, --no-wait, --nowait
-
-Wait for koji tasks to finish. Bad for running multiple builds in a single command, since you will have to type in your passphrase for the first one, wait for it to complete, then type in your passphrase for the second one, wait for it to complete, etc. If you want to wait for multiple tasks to finish, use the `koji watch-task` command or look at the website <https://koji.opensciencegrid.org>.
-
-`--wait` used to be the default until `osg-build-1.1.3`
 
 ##### --regen-repos
 
@@ -222,37 +306,15 @@ Have Koji check the package out from a version control system instead of creatin
 
 `--vcs` defaults to `true` for non-scratch builds, and `false` for scratch builds.
 
-##### --repo=*destination repository*, --upcoming
+##### --repo=*destination repository*
 
-Selects the repositories (osg-3.3, upcoming, etc.) to build packages for. Currently valid repositories are:
+Selects the repository (24-main, 24-upcoming, etc.) to build packages for.
+This is required for Koji builds.  See `--repo-list` for a list of repositories.
 
-| Repository            | Description                                                    |
-|-----------------------|----------------------------------------------------------------|
-| osg                   | OSG Software development repos for trunk (this is the default) |
-| osg-3.3 (or just 3.3) | OSG Software development repos for 3.3 branch                  |
-| upcoming              | OSG Software development repos for upcoming branch             |
-| internal              | OSG Software internal branch                                   |
-| hcc                   | Holland Computing Center (Nebraska) testing repos              |
+##### --repo-list
 
-`--upcoming` is an alias for `--repo=upcoming`
+Lists the available repositories for the `--repo` argument.
 
-Note that the repo selection affects which VCS paths you are allowed to build from. For example, you are not allowed to build from branches/osg-3.3 (from the OSG SVN) into the 'osg' repo, or from HCC's git repositories into the 'upcoming' repo.
-
-### koji-tag-diff
-
-This script displays the differences between the latest packages in two koji tags.
-
-Example invocation: `koji-tag-diff osg-3.4-el6-development osg-3.4-el7-testing`
-
-This prints the packages that are in osg-3.4-el6-development but not in osg-3.4-el7-testing, or vice versa.
-
-### osg-build-test
-
-This script runs automated tests for `osg-build`. Only a few tests have been implemented so far.
-
-### osg-import-srpm
-
-This is a script to fetch an SRPM from a remote site, copy it into the upstream cache on AFS, and create an SVN package dir (if needed) with an `upstream/*.source` file. By default it will put downloaded files into the VDT upstream cache (/p/vdt/public/html/upstream), but you can pass `--upstream-root=<UPSTREAM DIR>` to put them somewhere else. If called with the `--extract-spec` or `-e` argument, it will extract the spec file from the SRPM and place it into the `osg` subdir in SVN. If called with the `--diff-spec` or `-d` argument, it will extract the spec file and compare it to the existing spec file in the `osg` subdir. **The script hasn't been touched in a while and needs a good deal of cleanup.** A planned feature is to allow doing a three-way diff between the existing RPM before OSG modifications, the new RPM before OSG modifications and the existing RPM after OSG modifications.
 
 ### osg-koji
 
@@ -339,6 +401,28 @@ Regenerate the destination repos after promoting.
 
 Do not prompt before promotion.
 
+
+Minor tools
+-----------
+
+These tools are used less frequently or are for specialized purposes.
+
+### koji-tag-diff
+
+This script displays the differences between the latest packages in two koji tags.
+
+Example invocation: `koji-tag-diff osg-3.4-el6-development osg-3.4-el7-testing`
+
+This prints the packages that are in osg-3.4-el6-development but not in osg-3.4-el7-testing, or vice versa.
+
+### osg-build-test
+
+This script runs automated tests for `osg-build`. Only a few tests have been implemented so far.
+
+### osg-import-srpm
+
+This is a script to fetch an SRPM from a remote site, copy it into the upstream cache on AFS, and create an SVN package dir (if needed) with an `upstream/*.source` file. By default it will put downloaded files into the VDT upstream cache (/p/vdt/public/html/upstream), but you can pass `--upstream-root=<UPSTREAM DIR>` to put them somewhere else. If called with the `--extract-spec` or `-e` argument, it will extract the spec file from the SRPM and place it into the `osg` subdir in SVN. If called with the `--diff-spec` or `-d` argument, it will extract the spec file and compare it to the existing spec file in the `osg` subdir. **The script hasn't been touched in a while and needs a good deal of cleanup.** A planned feature is to allow doing a three-way diff between the existing RPM before OSG modifications, the new RPM before OSG modifications and the existing RPM after OSG modifications.
+
 Common Usage Patterns
 ---------------------
 
@@ -369,11 +453,9 @@ Run `osg-build prepare <PACKAGEDIR>`. Look inside the `_build_results` directory
 7.  If you have changes to make to the source code that you want to save as a patch, type `quilt new <PATCHNAME>`, edit the files, type `quilt add <FILE>` on each file you edited, then type `quilt refresh` to recreate the patch.
 8.  Once you're all done, copy the patches in the `patches/` directory to the `osg/` dir in SVN, run `quilt series` to get the application order and update the spec file accordingly.
 
-#### See if a package builds successfully for OSG 3.4
+#### See if a package builds successfully for OSG 24 main
 
--   If you have all the build dependencies of the package installed, run `osg-build rpmbuild <PACKAGEDIR>`. The resulting RPMs will be in the `_build_results` directory.
--   If you do not have all the build dependencies installed, or want to make sure you specified all of the necessary ones and the package builds from a clean environment, run `osg-build mock --mock-config-from-koji osg-3.4-el6-build <PACKAGEDIR>`. The resulting RPMs will be in the `_build_results` directory.
--   If you do not have mock installed, or want to exactly replicate the build environment in Koji, run `osg-build koji --scratch <PACKAGEDIR>`. You may download the resulting RPMs from kojiweb <https://koji.opensciencegrid.org/koji> or pass `--getfiles` to `osg-build koji` and they will get downloaded to the `_build_results` directory.
+-   Run `osg-build koji --scratch <PACKAGEDIR> --repo 24-main`. You may download the resulting RPMs from kojiweb <https://koji.osg-htc.org/koji> or pass `--getfiles` to `osg-build koji` and they will get downloaded to the `_build_results` directory.
 
 #### Check for potential errors in a package
 
