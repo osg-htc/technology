@@ -70,4 +70,4 @@ finalized and you will be able to login to the system.
 Getting Help
 ------------
 
-For assistance or questions, please email the support team at <support@opensciencegrid.org>
+For assistance or questions, please email the support team at <support@osg-htc.org>
