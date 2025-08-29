@@ -15,7 +15,6 @@ nav:
     - Packaging:
       - RPM Development Guide: 'software/rpm-development-guide.md'
       - OSG Build Tools: 'software/osg-build-tools.md'
-      - Using Quilt: 'software/quilt.md'
       - Koji Workflow: 'software/koji-workflow.md'
       - Creating the VO Client Package: 'software/create-vo-client.md'
       - Container Development Guide: 'software/container-development-guide.md'

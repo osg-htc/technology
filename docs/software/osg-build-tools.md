@@ -498,18 +498,25 @@ Run `osg-build prepare <PACKAGEDIR>`. Look inside the `_build_results` directory
 
 #### See which patches work with a new version of a package, update or remove them
 
-1.  Place the new source tarball into the upstream cache, edit the version in the spec file and \*.sources files as necessary
-2.  Run `osg-build quilt <PACKAGEDIR>`.
-3.  Enter the extracted sources inside the `_final_srpm_contents` directory. You should see a file called `series` and a symlink called `patches`.
-4.  Type `quilt series` to get a list of patches in order of application.
-5.  Type `quilt push` to apply the next patch.
+1.  Place the new source tarball into the upstream cache, edit the version in the spec file and \*.source files as necessary
+2.  Run `osg-build quilt <PACKAGEDIR>`
+3.  Enter the extracted sources inside the `_quilt` directory.
+    You should see a file called `series` and a symlink called `patches`
+4.  Run `quilt series` to get a list of patches in order of application
+5.  Run `quilt push` to apply the next patch;
     -   If the patch applies cleanly, continue.
-    -   If the patch applies with some fuzz, type `quilt refresh` to update the offsets in the patch.
-    -   If the patch does not apply and you wish to remove it, type `quilt delete <PATCH NAME>` (delete only removes it from the series file, not the disk)
-    -   If the patch does not apply and you wish to fix it, either type `quilt push -f` to interactively apply the patch, or `quilt delete <PATCH NAME>` the patch and use `quilt new` / `quilt edit` / `quilt refresh` to edit files and make a new patch from your changes. Consult the `quilt(1)` manpage for more info.
+    -   If the patch applies with some fuzz, run `quilt refresh` to update the offsets in the patch.
+    -   If the patch does not apply and you wish to remove it, run `quilt delete <PATCH NAME>` (delete only removes it from the series file, not the disk)
+    -   If the patch does not apply and you wish to fix it, your options are:
+            1.  Force-apply the patch by running `quilt push -f`.
+                Then, manually examine the rejected changes (\*.rej files) and make the changes to the corresponding original files.
+                Then, run `quilt refresh` to edit the patch and incorporate your changes.
+            2.  Alternatively, delete the patch from the series file by running `quilt delete <PATCH NAME>`.
+                Then, use `quilt new`, `quilt edit`, and `quilt refresh` and make a new patch.
+                Consult the `quilt(1)` manpage for more info.
 6.  If you have a new patch, run `quilt import <PATCHFILE>` to add the patch to the series file, and run `quilt push` to apply it.
-7.  If you have changes to make to the source code that you want to save as a patch, type `quilt new <PATCHNAME>`, edit the files, type `quilt add <FILE>` on each file you edited, then type `quilt refresh` to recreate the patch.
-8.  Once you're all done, copy the patches in the `patches/` directory to the `osg/` dir in SVN, run `quilt series` to get the application order and update the spec file accordingly.
+7.  If you have changes to make to the source code that you want to save as a patch, run `quilt new <PATCHNAME>`, edit the files, run `quilt add <FILE>` on each file you edited, then run `quilt refresh` to recreate the patch.
+8.  Once you're all done, copy the patches in the `patches/` directory to the `osg/` dir in the packaging repository, run `quilt series` to get the application order and update the spec file accordingly.
 
 #### See if a package builds successfully for OSG 24 main
 
@@ -519,15 +526,11 @@ Run `osg-build prepare <PACKAGEDIR>`. Look inside the `_build_results` directory
 
 Run `osg-build lint <PACKAGEDIR>`.
 
-#### Create and test a final build of a package for all platforms for upcoming
+#### Promote the latest build of a package to testing for the OSG 24 release series
 
-1.  `svn commit` your changes in `branches/upcoming`.
-2.  Type `osg-build koji --repo=upcoming <PACKAGEDIR>`
-3.  Wait for the `osg-upcoming-minefield` repos to be regenerated containing the new version of your package. You can run `osg-koji wait-repo osg-upcoming-el<X>-development --build=<PACKAGENAME-VERSION-RELEASE>` and wait for that process to finish (substitute `6` or `7` for *X*). Or, you can just check kojiweb <https://koji.osg-htc.org/koji/tasks>.
-4.  On your test machine, make sure the `osg-upcoming-minefield` repo is enabled (edit `/etc/yum.repos.d/osg-upcoming-minefield.repo` or `/etc/yum.repos.d/osg-el6-upcoming-minefield.repo`). Clean your cache (`yum clean all; yum clean expire-cache`).
-5.  Install your software, see if it works.
+Run `osg-promote -r 24-main <PACKAGE>`
 
-#### Promote the latest build of a package to testing for the current OSG release series
+#### Promote the latest build of a package to testing for both the OSG 24 and 25 release series
 
 Run `osg-promote -r 24-main -r 25-main <PACKAGE>`
 
