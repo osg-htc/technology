@@ -64,9 +64,9 @@ Additional Materials
 --------------------
 
 If you are interested in learning more about the dHTC, OSG, and what it means to share resources via OSG services, consider
-reviewing the following presentations from our [October 2020 workshop on dHTC and OSG services for campuses](https://indico.fnal.gov/event/45998/timetable/#20201022) ([YouTube Playlist](https://www.youtube.com/playlist?list=PLBWb4iScSWcPGfjvJztz_IeHCKS7f3u1k)):
+reviewing the following presentations from our October 2020 workshop on dHTC and OSG services for campuses ([YouTube Playlist](https://www.youtube.com/playlist?list=PLBWb4iScSWcPGfjvJztz_IeHCKS7f3u1k)):
 
-- Intro to dHTC and PATh Services for Campuses ([slides](https://indico.fnal.gov/event/45998/contributions/199894/attachments/136489/169747/20201022OSGCampusWorkshop_dHTCServiceOverview_LMichael.pdf),[YouTube](https://www.youtube.com/watch?v=hYc6RaWL33g&list=PLBWb4iScSWcPGfjvJztz_IeHCKS7f3u1k&index=2&t=5s))
-- How OSG Works ([slides](https://indico.fnal.gov/event/45998/contributions/199896/attachments/136496/169757/ccstarOctober2020-whatisosg.pdf), [YouTube](https://www.youtube.com/watch?v=kwIs7oa56t8&list=PLBWb4iScSWcPGfjvJztz_IeHCKS7f3u1k&index=4))
-- Intro to OSG Resource Sharing ([slides](https://indico.fnal.gov/event/45998/contributions/199898/attachments/136497/169758/ccstarOctober2020-resourcesharing.pdf), [YouTube](https://www.youtube.com/watch?v=GuR8gxrVRew&list=PLBWb4iScSWcPGfjvJztz_IeHCKS7f3u1k&index=5))
-- Resource Sharing Technology, Security, System Requirements, Setup Process ([slides](https://indico.fnal.gov/event/45998/contributions/199903/attachments/136555/169835/OSG-Sharing-Resources-CCStar-2020.pdf), [YouTube](https://www.youtube.com/watch?v=t5YtIIs7bqg&list=PLBWb4iScSWcPGfjvJztz_IeHCKS7f3u1k&index=7))
+- Intro to dHTC and PATh Services for Campuses ([YouTube](https://www.youtube.com/watch?v=hYc6RaWL33g&list=PLBWb4iScSWcPGfjvJztz_IeHCKS7f3u1k&index=2&t=5s))
+- How OSG Works ([YouTube](https://www.youtube.com/watch?v=kwIs7oa56t8&list=PLBWb4iScSWcPGfjvJztz_IeHCKS7f3u1k&index=4))
+- Intro to OSG Resource Sharing ([YouTube](https://www.youtube.com/watch?v=GuR8gxrVRew&list=PLBWb4iScSWcPGfjvJztz_IeHCKS7f3u1k&index=5))
+- Resource Sharing Technology, Security, System Requirements, Setup Process ([YouTube](https://www.youtube.com/watch?v=t5YtIIs7bqg&list=PLBWb4iScSWcPGfjvJztz_IeHCKS7f3u1k&index=7))
