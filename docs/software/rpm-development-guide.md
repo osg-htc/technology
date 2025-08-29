@@ -22,12 +22,12 @@ Contributing Packages
 We encourage all interested parties to contribute to OSG Software, and all the infrastructure described on this page should be friendly to external contributors.
 
 -   To participate in the packaging community: You must subscribe to the
-    [software-discuss@osg-htc.org](https://groups.google.com/u/1/a/osg-htc.org/g/software-discuss/members) email list.
+    [software-discuss@osg-htc.org](https://groups.google.com/u/1/a/osg-htc.org/g/software-discuss/members) email list
 -   To create and edit packages: [Obtain access to the OSG Software-Packaging repo](https://github.com/osg-htc/software-packaging)
--   To upload new source tarballs: You must have a chtc.wisc.edu account with write access to the OSG source tarball directory.
-    Email the osg-software list and request permission.
--   To build using the OSG's Koji build system, you must be able to get a Kerberos ticket with either an @AD.WISC.EDU or @FNAL.GOV principal. 
-    To obtain the Koji account, email the osg-software list with your cert's DN and request permission.
+-   To upload new source tarballs: You must have a chtc.wisc.edu account with write access to the OSG source tarball directory
+-   To build using the OSG's Koji build system, you must be able to get a Kerberos ticket with either an @AD.WISC.EDU or @FNAL.GOV principal;
+    Send email to <help@osg-htc.org> to request access to the build system.
+    Include your Kerberos principal and desired username in the email.
 
 Development Infrastructure
 --------------------------
@@ -47,7 +47,7 @@ The Koji build system uses this cache; the files are also downloadable from
 The files are stored on `osgsw-ap.chtc.wisc.edu`, in the directory `/osgsw/upstream`.
 To upload files to the cache, you must have shell access to the OSG Software Access Point host,
 `osgsw-ap.chtc.wisc.edu`.
-Email the OSG Software Team to request permission.
+Send email to <help@osg-htc.org> to request permission.
 
 
 #### Upstream Cache Organization
@@ -133,8 +133,8 @@ where:
 | `<TYPE>`        | Type of referenced file                                | `tarball`, `srpm`          |
 
 and contain references to cached files, Git repos, and comments.
-which start with `#` and continue until the end of the line.
-It is useful to add the source of the upstream file into a comment.
+Comments start with `#` and continue until the end of the line.
+It is useful to add the original URL of the upstream file into a comment.
 
 ###### Cached files
 
@@ -159,7 +159,8 @@ $ sha1sum /osgsw/upstream/<PACKAGE>/<VERSION>/<FILE>
 
 !!! warning
     OSG software policy requires that all Git and GitHub repos used for building software have mirrors at the UW.
-    Many software repos under the [opensciencegrid GitHub organization](https://github.com/opensciencegrid) are already mirrored.
+    Many software repos under the [opensciencegrid GitHub organization](https://github.com/opensciencegrid)
+    and [osg-htc GitHub organization](https://github.com/osg-htc) are already mirrored.
     If you are uncertain, or have a new project that you want mirrored, send email to <technology-team@osg-htc.org>.
 
 !!! note
@@ -402,31 +403,30 @@ Some packages may need different build behavior between major versions of the OS
 
 The following macros are defined:
 
-| Name    | Value (EL6)        | Value (EL7)        |
+| Name    | Value (EL8)        | Value (EL9)        |
 |:--------|:-------------------|:-------------------|
-| `%rhel` | `6`                | `7`                |
-| `%el6`  | `1`                | *undefined* or `0` |
-| `%el7`  | *undefined* or `0` | `1`                |
+| `%rhel` | `8`                | `9`                |
+| `%el8`  | `1`                | *undefined* or `0` |
+| `%el9`  | *undefined* or `0` | `1`                |
 
 Here's how to use them:
 
 ```spec
-%if 0%{?el6}
-# this code will be executed on EL 6 only
+%if 0%{?el8}
+# this code will be executed on EL 8 only
 %endif
 
-%if 0%{?el7}
-# this code will be executed on EL 7 only
+%if 0%{?el9}
+# this code will be executed on EL 9 only
 %endif
 
-%if 0%{?rhel} >= 7
-# this code will be executed on EL 7 and newer
+%if 0%{?rhel} >= 9
+# this code will be executed on EL 9 and newer
 %endif
 ```
 
-(There does not seem to be an `%elseif`).
-
-The syntax `%{?el6}` expands to the value of the `%el6` macro if it is defined, and to the empty string if not; the `0` is there to keep the condition from being empty in the `%if` statement if the macro is not defined.
+(the 'else if' macro `%elif` does not parse on EL8 or older.
+The `0` before the `%{?el9}` is required to avoid a syntax error if the macro is undefined.)
 
 
 Renaming or Removing Packages
