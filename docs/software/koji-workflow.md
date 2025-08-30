@@ -65,7 +65,7 @@ to OSG build services.
 Include the following information:
 
 -   your GitHub username
--   your Kerberos principal if you have one;
+-   your Kerberos principal if you already have one;
     for people with a UW NetID account, this is `<netid>@AD.WISC.EDU` and
     for people with a Fermilab account, this is `<username>@FNAL.GOV`
 

@@ -100,7 +100,8 @@ For example, the package directory for `xrootd` for the `osg-24-main-*` tags are
 `24-main/xrootd`
 
 The subtree must correspond to the repos being built to.
-For example, you may not build into `osg-24-main-*` from the `23-upcoming` subtree.
+For example, you may only build into `osg-24-main-*` from the `24-main` subtree.
+(This restriction does not apply to scratch builds.)
 
 
 #### Package Directory Organization
