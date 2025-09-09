@@ -4,10 +4,17 @@ OSG Build Tools
 
 This page documents the tools used for RPM development for the OSG Software Stack. See [the RPM development guide](../software/rpm-development-guide.md) for the principles on which these tools are based.
 
-The tools are available in Git in [opensciencegrid/osg-build on GitHub](https://github.com/opensciencegrid/osg-build).
-See installation documentation below.
+The tools are available in Git in [osg-htc/osg-build on GitHub](https://github.com/osg-htc/osg-build).
+First, acquire the tools via one of the following methods:
+
+- [Apptainer/Singularity](#install-apptainer)
+- [Docker/Podman](#install-docker)
+- Local install
+  - [Rootly install with Make](#install-local-root)
+  - [Install via Pip](#install-local-pip)
 
 
+<a id="install-apptainer"></a>
 Quick start with Apptainer
 --------------------------
 This quick start guide shows how to use the OSG build tools via Apptainer. (Singularity should work too.)
@@ -54,6 +61,56 @@ Note: the `mock` command does not work in Apptainer/Singularity due to permissio
 For testing builds, use `osg-build koji --scratch` instead.
 
 
+<a id="install-docker"></a>
+Quick start with Docker
+-----------------------
+!!!note 
+    The Docker image and helper scripts are a work in progress.
+
+This quick start guide shows how to use the OSG build tools via Docker. (Podman should work too.)
+This assumes you will use Kerberos for authentication with UW-Madison or Fermilab credentials.
+To get UW-Madison Kerberos credentials, you will need to be inside the UW Campus network, either via campus wifi or VPN.
+
+First, pull the GitHub repo hosting the image and helper scripts.
+
+```
+git clone https://github.com/osg-htc/docker-osg-build
+```
+
+Next, run the `initbuilder` script, giving it the directory under which the repo containing the software packaging is.
+For example, if you have your checkout of the [https://github.com/osg-htc/software-packaging](software-packaging repo)
+under `~/software-packaging`, run
+
+```
+cd docker-osg-build
+./initbuilder ~/software-packaging
+```
+Answer the configuration questions from initbuilder.
+
+From then on, use the `osg-build-shell` command to enter into a shell inside the image.
+
+Use `kinit` to get a credential.
+
+For UW-Madison:
+```
+kinit <username>@AD.WISC.EDU
+```
+replacing `<username>` with the name of your UW NetID.
+
+For Fermilab:
+```
+kinit <username>@FNAL.GOV
+```
+replacing `<username>` with your Fermilab user name.
+
+Verify that you can successfully authenticate to Koji:
+```
+osg-koji hello
+```
+
+If that succeeds, you will be ready to use the rest of the `osg-build` and `osg-koji` commands.
+
+
 Installation into a Linux system
 --------------------------------
 
@@ -61,7 +118,8 @@ You may install the software locally, either via `pip` or via a script distribut
 If using `pip`, you will need to install some dependencies by hand.
 
 
-### Install as root via OSG RPM (EL8, EL9)
+<a id="install-local-root"></a>
+### Install as root via OSG RPM (EL8, EL9, EL10)
 
 The OSG 24-internal repositories contain a package called "osg-build-deps".
 [Install the OSG 24 repositories](https://osg-htc.org/docs/common/yum/).
@@ -78,10 +136,11 @@ install-osg-build.sh
 This will clone osg-build into `/usr/local/src/osg-build` and install the software under the `/usr/local` tree.
 
 
-### Install via pip (EL8, EL9, Ubuntu, others)
+<a id="install-local-pip"></a>
+### Install via pip (EL8, EL9, EL10, Ubuntu, others)
 
 To use Kerberos authentication you will need the client tools to run `kinit`.
-On EL8/EL9, run:
+On Enterprise Linux variants and Feodra, run:
 ```
 yum install krb5-workstation
 ```
@@ -92,7 +151,7 @@ apt install krb5-user
 
 Before installing via pip, you will need to install the `requests-gssapi` library by hand because it contains compiled binaries.
 
-On EL8/EL9, run
+On EL8/EL9/EL10, run
 ```
 yum install python3-requests-gssapi
 ```
@@ -105,7 +164,7 @@ If `requests-gssapi` is not available, you will have to compile it by hand; see 
 To install the OSG Build Tools themselves, run:
 
 ```
-pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
+pip install --user git+https://github.com/osg-htc/osg-build@V2-branch
 ```
 
 !!! note
@@ -131,7 +190,7 @@ apt install gcc make libpython-dev libkrb5-dev
 Afterwards, pip install the OSG Build Tools as previously:
 
 ```
-pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
+pip install --user git+https://github.com/osg-htc/osg-build@V2-branch
 ```
 
 
@@ -168,6 +227,8 @@ Commonly used tools
 -------------------
 
 These are the tools you will be using for day-to-day builds.
+
+<!-- TODO Move these docs to the osg-build repo -->
 
 ### osg-build
 
@@ -318,16 +379,11 @@ Lists the available repositories for the `--repo` argument.
 
 ### osg-koji
 
-This is a wrapper script around the `koji` command line tool. It automatically specifies parameters to access the OSG's koji instance, and forces SSL authentication. It takes the same parameters as `koji` and passes them on.
+This is a wrapper script around the `koji` command line tool.
+It automatically specifies parameters to access the OSG's koji instance.
 
-An additional command, `osg-koji setup` exists, which performs the following tasks:
+An additional command, `osg-koji setup` exists, which sets up koji configuration in `~/.osg-koji`.
 
-1.  Create a koji configuration in `~/.osg-koji`
-2.  Create a CA bundle for verifying the server.
-    Use either files in `/etc/grid-security/certificates`, or (if those are not found), from files downloaded from the DOEGrids and DigiCert sites.
-3.  Create a client cert file. This can be a symlink to your grid proxy, or it can be a file created from your grid public and private key files.
-    The location of those files can be specified by the `--usercert` and `--userkey` arguments.
-    If unspecified, `usercert` defaults to `~/.globus/usercert.pem`, and `userkey` defaults to `~/.globus/userkey.pem`.
 
 ### osg-promote
 
@@ -440,18 +496,25 @@ Run `osg-build prepare <PACKAGEDIR>`. Look inside the `_build_results` directory
 
 #### See which patches work with a new version of a package, update or remove them
 
-1.  Place the new source tarball into the upstream cache, edit the version in the spec file and \*.sources files as necessary
-2.  Run `osg-build quilt <PACKAGEDIR>`.
-3.  Enter the extracted sources inside the `_final_srpm_contents` directory. You should see a file called `series` and a symlink called `patches`.
-4.  Type `quilt series` to get a list of patches in order of application.
-5.  Type `quilt push` to apply the next patch.
+1.  Place the new source tarball into the upstream cache, edit the version in the spec file and \*.source files as necessary
+2.  Run `osg-build quilt <PACKAGEDIR>`
+3.  Enter the extracted sources inside the `_quilt` directory.
+    You should see a file called `series` and a symlink called `patches`
+4.  Run `quilt series` to get a list of patches in order of application
+5.  Run `quilt push` to apply the next patch;
     -   If the patch applies cleanly, continue.
-    -   If the patch applies with some fuzz, type `quilt refresh` to update the offsets in the patch.
-    -   If the patch does not apply and you wish to remove it, type `quilt delete <PATCH NAME>` (delete only removes it from the series file, not the disk)
-    -   If the patch does not apply and you wish to fix it, either type `quilt push -f` to interactively apply the patch, or `quilt delete <PATCH NAME>` the patch and use `quilt new` / `quilt edit` / `quilt refresh` to edit files and make a new patch from your changes. Consult the `quilt(1)` manpage for more info.
+    -   If the patch applies with some fuzz, run `quilt refresh` to update the offsets in the patch.
+    -   If the patch does not apply and you wish to remove it, run `quilt delete <PATCH NAME>` (delete only removes it from the series file, not the disk)
+    -   If the patch does not apply and you wish to fix it, your options are:
+            1.  Force-apply the patch by running `quilt push -f`.
+                Then, manually examine the rejected changes (\*.rej files) and make the changes to the corresponding original files.
+                Then, run `quilt refresh` to edit the patch and incorporate your changes.
+            2.  Alternatively, delete the patch from the series file by running `quilt delete <PATCH NAME>`.
+                Then, use `quilt new`, `quilt edit`, and `quilt refresh` and make a new patch.
+                Consult the `quilt(1)` manpage for more info.
 6.  If you have a new patch, run `quilt import <PATCHFILE>` to add the patch to the series file, and run `quilt push` to apply it.
-7.  If you have changes to make to the source code that you want to save as a patch, type `quilt new <PATCHNAME>`, edit the files, type `quilt add <FILE>` on each file you edited, then type `quilt refresh` to recreate the patch.
-8.  Once you're all done, copy the patches in the `patches/` directory to the `osg/` dir in SVN, run `quilt series` to get the application order and update the spec file accordingly.
+7.  If you have changes to make to the source code that you want to save as a patch, run `quilt new <PATCHNAME>`, edit the files, run `quilt add <FILE>` on each file you edited, then run `quilt refresh` to recreate the patch.
+8.  Once you're all done, copy the patches in the `patches/` directory to the `osg/` dir in the packaging repository, run `quilt series` to get the application order and update the spec file accordingly.
 
 #### See if a package builds successfully for OSG 24 main
 
@@ -461,20 +524,12 @@ Run `osg-build prepare <PACKAGEDIR>`. Look inside the `_build_results` directory
 
 Run `osg-build lint <PACKAGEDIR>`.
 
-#### Create and test a final build of a package for all platforms for upcoming
+#### Promote the latest build of a package to testing for the OSG 24 release series
 
-1.  `svn commit` your changes in `branches/upcoming`.
-2.  Type `osg-build koji --repo=upcoming <PACKAGEDIR>`
-3.  Wait for the `osg-upcoming-minefield` repos to be regenerated containing the new version of your package. You can run `osg-koji wait-repo osg-upcoming-el<X>-development --build=<PACKAGENAME-VERSION-RELEASE>` and wait for that process to finish (substitute `6` or `7` for *X*). Or, you can just check kojiweb <https://koji.opensciencegrid.org/koji/tasks>.
-4.  On your test machine, make sure the `osg-upcoming-minefield` repo is enabled (edit `/etc/yum.repos.d/osg-upcoming-minefield.repo` or `/etc/yum.repos.d/osg-el6-upcoming-minefield.repo`). Clean your cache (`yum clean all; yum clean expire-cache`).
-5.  Install your software, see if it works.
+Run `osg-promote -r 24-main <PACKAGE>`
 
-#### Promote the latest build of a package to testing for the current OSG release series
+#### Promote the latest build of a package to testing for both the OSG 23 and 24 release series
 
-Run `osg-promote -r testing <PACKAGE>`
-
-#### Promote the latest build of a package to testing for the 3.3 and 3.4 release series
-
-Run `osg-promote -r 3.3-testing -r 3.4-testing <PACKAGE>`
+Run `osg-promote -r 23-main -r 24-main <PACKAGE>`
 
 
