@@ -98,7 +98,18 @@ To test pre-release, you will be kicking off a manual VM universe test run from 
 !!! note
     If there are failures, consult the release-manager before proceeding.
 
-### Step 3: Create the client tarballs
+### Step 3: Make sure repositories are up to date for building the tarballs
+
+Ask koji to regenerate the repositories needed from the tarballs in this release.
+
+```bash
+# laptop
+./1-regen-repos $VERSIONS
+```
+
+Make sure that the repository regeneration successfully completes by looking at the koji dashboard.
+
+### Step 4: Create the client tarballs
 
 Create the OSG client tarballs on `dumbo` using the relevant script from git:
 
@@ -116,7 +127,7 @@ done
 
 The tarballs are found in the tarball-client directory.
 
-### Step 4: Briefly test the client tarballs
+### Step 5: Briefly test the client tarballs
 
 Test the OSG client tarballs in Docker containers on `dumbo` using the relevant release-tools script:
 
@@ -132,7 +143,7 @@ NON_UPCOMING_VERSIONS="<NON-UPCOMING VERSION(S)>"
 
 If you have time, try some of the binaries, such as grid-proxy-init.
 
-### Step 5: Wait
+### Step 6: Wait
 
 Wait for clearance. The OSG Release Coordinator (in consultation with the Software Team and any testers) need to sign off on the update before it is released. If you are releasing things over two days, this is a good place to stop for the day.
 
