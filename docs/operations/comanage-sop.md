@@ -86,11 +86,15 @@ To revoke a user's login access to either of these APs, perform the following st
 CO Person Merging Procedure
 ---------------------------
 
-Merge Target: The CO Person that records are being merged onto.
+__Terms:__
 
-Merge Material: The CO Person that records are being pulled from, will be marked as duplicate after completion.
+__Merge Target__: The CO Person that records are being merged onto.
 
-Records / Identifiers that should be moved:
+__Merge Material__: The CO Person that records are being pulled from, should be marked as duplicate after completion.
+
+<br>
+
+__Records / Identifiers that should be moved:__
 
 - Organization Identities (OrgIds)
 
@@ -114,17 +118,23 @@ Records / Identifiers that should be moved:
 
     Create a new Identifier of the type `github` on the Merge Target, with the value from the one on the Merge Material
 
-Records / Identifiers that *shouldn't* be moved:
+<br>
+
+__Records / Identifiers that *shouldn't* be moved:__
 
 - PIDs / GIDs and OSG Usernames
 
     If the Merge Target already has a Unix Cluster Account and Group, the Merge Material's UID and OSG Username shouldn't be merged. If the Merge Material's Unix Cluster Account has files/directories `chown`ed to it on hosts, `chown` them to the Merge Target's Unix Cluster Account.
 
-    If the Merge Target doesn't have a Unix Cluster Account and Group, and the Merge Material does,
+    If the Merge Target doesn't have a Unix Cluster Account and Group, and the Merge Material does:
 
-        - If usernames / ids don't need to be preserved: click `AutoGenerate Cluster Accounts` on the Merge Target's `Clusters` page. Provision the user and re-`chown` files on hosts as need.
+    And usernames / ids don't need to be preserved:
 
-        - If the usernames / id do need to be preserved: {re-create Unix Cluster Account of Merge Material for Merge Target}
+        - Click `AutoGenerate Cluster Accounts` on the Merge Target's `Clusters` page. Provision the user and re-`chown` files on hosts as need.
+
+    And the usernames / id do need to be preserved:
+
+      - {re-create Unix Cluster Account of Merge Material for Merge Target}, avoid this when possible.
 
 - OSG IDs
 
