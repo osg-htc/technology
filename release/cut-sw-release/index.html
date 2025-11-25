@@ -634,22 +634,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-create-the-client-tarballs" class="md-nav__link">
-    Step 3: Create the client tarballs
+  <a href="#step-3-make-sure-repositories-are-up-to-date-for-building-the-tarballs" class="md-nav__link">
+    Step 3: Make sure repositories are up to date for building the tarballs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-briefly-test-the-client-tarballs" class="md-nav__link">
-    Step 4: Briefly test the client tarballs
+  <a href="#step-4-create-the-client-tarballs" class="md-nav__link">
+    Step 4: Create the client tarballs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-wait" class="md-nav__link">
-    Step 5: Wait
+  <a href="#step-5-briefly-test-the-client-tarballs" class="md-nav__link">
+    Step 5: Briefly test the client tarballs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-wait" class="md-nav__link">
+    Step 6: Wait
   </a>
   
 </li>
@@ -3880,22 +3887,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-create-the-client-tarballs" class="md-nav__link">
-    Step 3: Create the client tarballs
+  <a href="#step-3-make-sure-repositories-are-up-to-date-for-building-the-tarballs" class="md-nav__link">
+    Step 3: Make sure repositories are up to date for building the tarballs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-briefly-test-the-client-tarballs" class="md-nav__link">
-    Step 4: Briefly test the client tarballs
+  <a href="#step-4-create-the-client-tarballs" class="md-nav__link">
+    Step 4: Create the client tarballs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-wait" class="md-nav__link">
-    Step 5: Wait
+  <a href="#step-5-briefly-test-the-client-tarballs" class="md-nav__link">
+    Step 5: Briefly test the client tarballs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-wait" class="md-nav__link">
+    Step 6: Wait
   </a>
   
 </li>
@@ -4096,7 +4110,14 @@ git clone https://github.com/opensciencegrid/release-tools.git
 <p class="admonition-title">Note</p>
 <p>If there are failures, consult the release-manager before proceeding.</p>
 </div>
-<h3 id="step-3-create-the-client-tarballs">Step 3: Create the client tarballs<a class="headerlink" href="#step-3-create-the-client-tarballs" title="Permanent link">&para;</a></h3>
+<h3 id="step-3-make-sure-repositories-are-up-to-date-for-building-the-tarballs">Step 3: Make sure repositories are up to date for building the tarballs<a class="headerlink" href="#step-3-make-sure-repositories-are-up-to-date-for-building-the-tarballs" title="Permanent link">&para;</a></h3>
+<p>Ask koji to regenerate the repositories needed from the tarballs in this release.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># laptop</span>
+./1-regen-repos <span class="nv">$VERSIONS</span>
+</code></pre></div>
+
+<p>Make sure that the repository regeneration successfully completes by looking at the koji dashboard.</p>
+<h3 id="step-4-create-the-client-tarballs">Step 4: Create the client tarballs<a class="headerlink" href="#step-4-create-the-client-tarballs" title="Permanent link">&para;</a></h3>
 <p>Create the OSG client tarballs on <code>dumbo</code> using the relevant script from git:</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">FULL_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;FULL VERSION(S)&gt;&quot;</span>
 </code></pre></div>
@@ -4110,7 +4131,7 @@ git clone https://github.com/opensciencegrid/tarball-client.git
 </code></pre></div>
 
 <p>The tarballs are found in the tarball-client directory.</p>
-<h3 id="step-4-briefly-test-the-client-tarballs">Step 4: Briefly test the client tarballs<a class="headerlink" href="#step-4-briefly-test-the-client-tarballs" title="Permanent link">&para;</a></h3>
+<h3 id="step-5-briefly-test-the-client-tarballs">Step 5: Briefly test the client tarballs<a class="headerlink" href="#step-5-briefly-test-the-client-tarballs" title="Permanent link">&para;</a></h3>
 <p>Test the OSG client tarballs in Docker containers on <code>dumbo</code> using the relevant release-tools script:</p>
 <p>As an <strong>unprivileged user</strong>, run the script:</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">NON_UPCOMING_VERSIONS</span><span class="o">=</span><span class="s2">&quot;&lt;NON-UPCOMING VERSION(S)&gt;&quot;</span>
@@ -4121,7 +4142,7 @@ git clone https://github.com/opensciencegrid/tarball-client.git
 </code></pre></div>
 
 <p>If you have time, try some of the binaries, such as grid-proxy-init.</p>
-<h3 id="step-5-wait">Step 5: Wait<a class="headerlink" href="#step-5-wait" title="Permanent link">&para;</a></h3>
+<h3 id="step-6-wait">Step 6: Wait<a class="headerlink" href="#step-6-wait" title="Permanent link">&para;</a></h3>
 <p>Wait for clearance. The OSG Release Coordinator (in consultation with the Software Team and any testers) need to sign off on the update before it is released. If you are releasing things over two days, this is a good place to stop for the day.</p>
 <h2 id="day-2-pushing-the-release">Day 2: Pushing the Release<a class="headerlink" href="#day-2-pushing-the-release" title="Permanent link">&para;</a></h2>
 <h3 id="step-1-upload-the-tarballs-to-afs">Step 1: Upload the tarballs to AFS<a class="headerlink" href="#step-1-upload-the-tarballs-to-afs" title="Permanent link">&para;</a></h3>
