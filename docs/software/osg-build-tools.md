@@ -10,23 +10,25 @@ First, acquire the tools via one of the following methods:
 - [Apptainer/Singularity](#install-apptainer)
 - [Docker/Podman](#install-docker)
 - Local install
-  - [Rootly install with Make](#install-local-root)
-  - [Install via Pip](#install-local-pip)
+    - [Rootly install with Make](#install-local-root)
+    - [Install via Pip](#install-local-pip)
 
 
 <a id="install-apptainer"></a>
+
 Quick start with Apptainer
 --------------------------
 This quick start guide shows how to use the OSG build tools via Apptainer. (Singularity should work too.)
+
 This assumes you will use Kerberos for authentication with UW-Madison or Fermilab credentials.
 To get UW-Madison Kerberos credentials, you will need to be inside the UW Campus network, either via campus wifi or VPN.
 
 In addition, this assumes that the repository you want to build packages from is from a subdirectory under your home directory.
 If not, pass the appropriate `--bind` (`-B`) argument to the `apptainer run` command.
 
-The image is available from hub.opensciencegrid.org.  Pull the image and run it:
+The image is available from [OSG Harbor](https://hub.opensciencegrid.org).  Pull the image and run it:
 ```
-apptainer pull oras://hub.opensciencegrid.org/osg-htc/osg-build:v2-sif osg-build.sif
+apptainer pull oras://hub.osg-htc.org/osg-htc/osg-build:v2-sif osg-build.sif
 apptainer run osg-build.sif
 ```
 you will be in a shell inside the image.
@@ -62,6 +64,7 @@ For testing builds, use `osg-build koji --scratch` instead.
 
 
 <a id="install-docker"></a>
+
 Quick start with Docker
 -----------------------
 !!!note 
@@ -118,6 +121,7 @@ If using `pip`, you will need to install some dependencies by hand.
 
 
 <a id="install-local-root"></a>
+
 ### Install as root via OSG RPM (EL8, EL9, EL10)
 
 The OSG 24-internal and 25-internal repositories contain a package called "osg-build-deps".
@@ -136,6 +140,7 @@ This will clone osg-build into `/usr/local/src/osg-build` and install the softwa
 
 
 <a id="install-local-pip"></a>
+
 ### Install via pip (EL8, EL9, EL10, Ubuntu, others)
 
 To use Kerberos authentication you will need the client tools to run `kinit`.
