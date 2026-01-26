@@ -4,10 +4,17 @@ OSG Build Tools
 
 This page documents the tools used for RPM development for the OSG Software Stack. See [the RPM development guide](../software/rpm-development-guide.md) for the principles on which these tools are based.
 
-The tools are available in Git in [opensciencegrid/osg-build on GitHub](https://github.com/opensciencegrid/osg-build).
-See installation documentation below.
+The tools are available in Git in [osg-htc/osg-build on GitHub](https://github.com/osg-htc/osg-build).
+First, acquire the tools via one of the following methods:
+
+- [Apptainer/Singularity](#install-apptainer)
+- [Docker/Podman](#install-docker)
+- Local install
+  - [Rootly install with Make](#install-local-root)
+  - [Install via Pip](#install-local-pip)
 
 
+<a id="install-apptainer"></a>
 Quick start with Apptainer
 --------------------------
 This quick start guide shows how to use the OSG build tools via Apptainer. (Singularity should work too.)
@@ -54,6 +61,55 @@ Note: the `mock` command does not work in Apptainer/Singularity due to permissio
 For testing builds, use `osg-build koji --scratch` instead.
 
 
+<a id="install-docker"></a>
+Quick start with Docker
+-----------------------
+!!!note 
+    The Docker image and helper scripts are a work in progress.
+
+This quick start guide shows how to use the OSG build tools via Docker. (Podman should work too.)
+This assumes you will use Kerberos for authentication with UW-Madison or Fermilab credentials.
+To get UW-Madison Kerberos credentials, you will need to be inside the UW Campus network, either via campus wifi or VPN.
+
+First, pull the GitHub repo hosting the image and helper scripts.
+
+```
+git clone https://github.com/osg-htc/docker-osg-build
+```
+
+Next, run the `initbuilder` script, giving it the directory under which the repo containing the software packaging is.
+For example, if you have your checkout of the VDT SVN repo under `~/native/redhat`, run
+
+```
+cd docker-osg-build
+./initbuilder ~/native/redhat
+```
+Answer the configuration questions from initbuilder.
+
+From then on, use the `osg-build-shell` command to enter into a shell inside the image.
+
+Use `kinit` to get a credential.
+
+For UW-Madison:
+```
+kinit <username>@AD.WISC.EDU
+```
+replacing `<username>` with the name of your UW NetID.
+
+For Fermilab:
+```
+kinit <username>@FNAL.GOV
+```
+replacing `<username>` with your Fermilab user name.
+
+Verify that you can successfully authenticate to Koji:
+```
+osg-koji hello
+```
+
+If that succeeds, you will be ready to use the rest of the `osg-build` and `osg-koji` commands.
+
+
 Installation into a Linux system
 --------------------------------
 
@@ -61,10 +117,11 @@ You may install the software locally, either via `pip` or via a script distribut
 If using `pip`, you will need to install some dependencies by hand.
 
 
-### Install as root via OSG RPM (EL8, EL9)
+<a id="install-local-root"></a>
+### Install as root via OSG RPM (EL8, EL9, EL10)
 
-The OSG 24-internal repositories contain a package called "osg-build-deps".
-[Install the OSG 24 repositories](https://osg-htc.org/docs/common/yum/).
+The OSG 24-internal and 25-internal repositories contain a package called "osg-build-deps".
+[Install the OSG 25 repositories](https://osg-htc.org/docs/common/yum/).
 
 Then, install osg-build-deps:
 ```
@@ -78,10 +135,11 @@ install-osg-build.sh
 This will clone osg-build into `/usr/local/src/osg-build` and install the software under the `/usr/local` tree.
 
 
-### Install via pip (EL8, EL9, Ubuntu, others)
+<a id="install-local-pip"></a>
+### Install via pip (EL8, EL9, EL10, Ubuntu, others)
 
 To use Kerberos authentication you will need the client tools to run `kinit`.
-On EL8/EL9, run:
+On Enterprise Linux variants and Feodra, run:
 ```
 yum install krb5-workstation
 ```
@@ -92,7 +150,7 @@ apt install krb5-user
 
 Before installing via pip, you will need to install the `requests-gssapi` library by hand because it contains compiled binaries.
 
-On EL8/EL9, run
+On EL8/EL9/EL10, run
 ```
 yum install python3-requests-gssapi
 ```
@@ -105,7 +163,7 @@ If `requests-gssapi` is not available, you will have to compile it by hand; see 
 To install the OSG Build Tools themselves, run:
 
 ```
-pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
+pip install --user git+https://github.com/osg-htc/osg-build@V2-branch
 ```
 
 !!! note
@@ -118,7 +176,7 @@ pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
 If the `requests-gssapi` library is not available or you don't want to install it via a package manager,
 you must install the dependencies that will allow pip to build it from source.
 
-On EL8/EL9 run:
+On EL8/EL9/EL10 run:
 ```
 yum install gcc make python3-devel krb5-devel
 ```
@@ -131,7 +189,7 @@ apt install gcc make libpython-dev libkrb5-dev
 Afterwards, pip install the OSG Build Tools as previously:
 
 ```
-pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
+pip install --user git+https://github.com/osg-htc/osg-build@V2-branch
 ```
 
 
@@ -184,7 +242,6 @@ This is the primary tool used in building source and binary RPMs.
 ##### koji
 
 Builds the package on the Koji build service hosted at UW-Madison. <https://koji.osg-htc.org>.
-You must specify the set of destination repos with `--repo`, described later.
 
 ##### lint
 
@@ -200,7 +257,8 @@ Prebuilds the final source package from upstream sources (if any) and local file
 
 ##### prepare
 
-Prebuilds the final source package, then calls `rpmbuild -bp` on the result, extracting and patching the source files (and performing any other steps defined in the `%prep` section of the spec file. The resulting sources will be under `_final_srpm_contents`.
+Prebuilds the final source package, then calls `rpmbuild -bp` on the result, extracting and patching the source files (and performing any other steps defined in the `%prep` section of the spec file.
+The resulting sources will be under `_build_results/BUILD`.
 
 ##### rpmbuild
 
@@ -309,7 +367,7 @@ Have Koji check the package out from a version control system instead of creatin
 ##### --repo=*destination repository*
 
 Selects the repository (24-main, 24-upcoming, etc.) to build packages for.
-This is required for Koji builds.  See `--repo-list` for a list of repositories.
+See `--repo-list` for a list of repositories.
 
 ##### --repo-list
 
@@ -318,16 +376,11 @@ Lists the available repositories for the `--repo` argument.
 
 ### osg-koji
 
-This is a wrapper script around the `koji` command line tool. It automatically specifies parameters to access the OSG's koji instance, and forces SSL authentication. It takes the same parameters as `koji` and passes them on.
+This is a wrapper script around the `koji` command line tool.
+It automatically specifies parameters to access the OSG's koji instance.
 
-An additional command, `osg-koji setup` exists, which performs the following tasks:
+An additional command, `osg-koji setup` exists, which sets up koji configuration in `~/.osg-koji`.
 
-1.  Create a koji configuration in `~/.osg-koji`
-2.  Create a CA bundle for verifying the server.
-    Use either files in `/etc/grid-security/certificates`, or (if those are not found), from files downloaded from the DOEGrids and DigiCert sites.
-3.  Create a client cert file. This can be a symlink to your grid proxy, or it can be a file created from your grid public and private key files.
-    The location of those files can be specified by the `--usercert` and `--userkey` arguments.
-    If unspecified, `usercert` defaults to `~/.globus/usercert.pem`, and `userkey` defaults to `~/.globus/userkey.pem`.
 
 ### osg-promote
 
@@ -465,16 +518,10 @@ Run `osg-build lint <PACKAGEDIR>`.
 
 1.  `svn commit` your changes in `branches/upcoming`.
 2.  Type `osg-build koji --repo=upcoming <PACKAGEDIR>`
-3.  Wait for the `osg-upcoming-minefield` repos to be regenerated containing the new version of your package. You can run `osg-koji wait-repo osg-upcoming-el<X>-development --build=<PACKAGENAME-VERSION-RELEASE>` and wait for that process to finish (substitute `6` or `7` for *X*). Or, you can just check kojiweb <https://koji.opensciencegrid.org/koji/tasks>.
+3.  Wait for the `osg-upcoming-minefield` repos to be regenerated containing the new version of your package. You can run `osg-koji wait-repo osg-upcoming-el<X>-development --build=<PACKAGENAME-VERSION-RELEASE>` and wait for that process to finish (substitute `6` or `7` for *X*). Or, you can just check kojiweb <https://koji.osg-htc.org/koji/tasks>.
 4.  On your test machine, make sure the `osg-upcoming-minefield` repo is enabled (edit `/etc/yum.repos.d/osg-upcoming-minefield.repo` or `/etc/yum.repos.d/osg-el6-upcoming-minefield.repo`). Clean your cache (`yum clean all; yum clean expire-cache`).
 5.  Install your software, see if it works.
 
 #### Promote the latest build of a package to testing for the current OSG release series
 
-Run `osg-promote -r testing <PACKAGE>`
-
-#### Promote the latest build of a package to testing for the 3.3 and 3.4 release series
-
-Run `osg-promote -r 3.3-testing -r 3.4-testing <PACKAGE>`
-
-
+Run `osg-promote -r 24-main -r 25-main <PACKAGE>`
