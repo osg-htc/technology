@@ -24,10 +24,10 @@ We encourage all interested parties to contribute to OSG Software, and all the i
 -   To participate in the packaging community: You must subscribe to the
     [software-discuss@osg-htc.org](https://groups.google.com/u/1/a/osg-htc.org/g/software-discuss/members) email list.
 -   To create and edit packages: [Obtain access to VDT SVN](http://vdt.cs.wisc.edu/internal/svn.html).
--   To upload new source tarballs: You must have a cs.wisc.edu account with write access to the VDT source tarball directory. Email the osg-software list and request permission.
--   To build using the OSG's Koji build system: 
-    You must have a [valid personal certificate](../software/user-certs.md) and a Koji account.
-    To obtain the Koji account, email the osg-software list with your cert's DN and request permission.
+-   To upload new source tarballs: You must have a CHTC account with write access to the OSG source tarball directory.
+-   To build using the OSG's Koji build system, you must be able to get a Kerberos ticket with either an @AD.WISC.EDU or @FNAL.GOV principal;
+    Send email to <help@osg-htc.org> to request access to the build system.
+    Include your Kerberos principal and desired username in the email.
 
 Development Infrastructure
 --------------------------
@@ -41,39 +41,39 @@ This section documents most of what a developer needs to know about our RPM infr
 
 ### Upstream Source Cache
 
-One of our principles (every released package must be reproducible from data stored in our system) creates a potential issue: If we keep all historical source data, especially upstream files like source tarballs and source RPMs, in our revision control system, we may face large checkouts and consequently long checkout and update times.
+Source tarballs and other large files used as inputs to RPM builds are stored in a cache area at CHTC.
+The Koji build system uses this cache; the files are also downloadable from
+<https://sw-upstream.svc.osg-htc.org/upstream/>.
+The files are stored on `osgsw-ap.chtc.wisc.edu`, in the directory `/osgsw/upstream`.
+To upload files to the cache, you must have shell access to the OSG Software Access Point host,
+`osgsw-ap.chtc.wisc.edu`.
+Send email to <help@osg-htc.org> to request permission.
 
-Our solution is to cache all upstream source files in a separate filesystem area, retaining historical files indefinitely. To avoid tainting upstream files, our policy is to leave them unmodified after download.
 
-#### Locating Files in the Cache
+#### Upstream Cache Organization
 
 Upstream source files are stored in the filesystem as follows:
 
-> `/p/vdt/public/html/upstream/<PACKAGE>/<VERSION>/<FILE>`
+> `/osgsw/upstream/<PACKAGE>/<VERSION>/<FILE>`
 
 where:
 
-| Symbol      | Definition                                                                | Example            |
-|:------------|:--------------------------------------------------------------------------|:-------------------|
-| `<PACKAGE>` | Upstream name of the source package, or some widely accepted form thereof | `ndt`              |
-| `<VERSION>` | Upstream version string used to identify the release                      | `3.6.4`            |
-| `<FILE>`    | Upstream filename itself                                                  | `ndt-3.6.4.tar.gz` |
+| Symbol      | Definition                                                    | Example               |
+|:------------|:--------------------------------------------------------------|:----------------------|
+| `<PACKAGE>` | Name of the source package the file is used in                | `xrootd`              |
+| `<VERSION>` | Version of the sources ("Version" field in the RPM spec file) | `5.8.4`               |
+| `<FILE>`    | Filename used in the Source line in the RPM spec file         | `xrootd-5.8.4.tar.gz` |
 
-The authoritative cache is the VDT webserver, which is fully backed up. The Koji build system uses this cache.
+which leads to the complete example of
+
+> `/osgsw/upstream/xrootd/5.8.4/xrootd-5.8.4.tar.gz`
 
 Upstream source files are referenced from within the revision control system; see below for details.
 
 You will need to know the SHA1 checksum of any files you use from the cache.  Do get it, do:
 ```console
-$ sha1sum /p/vdt/public/html/upstream/<PACKAGE>/<VERSION>/<FILE>
+$ sha1sum /osgsw/upstream/<PACKAGE>/<VERSION>/<FILE>
 ```
-
-#### Contributing Upstream Files
-
-You must make sure that any new upstream source files are cached on the VDT webserver before building the package via Koji. You have two options:
-
--   If you have access to a UW–Madison CSL machine, you can scp the source files directly into the AFS locations using that machine
--   If you do not have such access, write to the osg-software list to find someone who will post the files for you
 
 #### Git/GitHub Hosted Upstream Files
 
@@ -157,8 +157,8 @@ where:
 | `<TYPE>`        | Type of referenced file                                | `tarball`, `srpm`          |
 
 and contain references to cached files, Git repos, and comments.
-which start with `#` and continue until the end of the line.
-It is useful to add the source of the upstream file into a comment.
+Comments start with `#` and continue until the end of the line.
+It is useful to add the original URL of the upstream file into a comment.
 
 ###### Cached files
 
@@ -169,11 +169,8 @@ without the prefix component, followed by the sha1sum of the file:
 
 Obtain the sha1sum by running the `sha1sum` command with the source file as an argument, i.e.
 ```console
-$ sha1sum /p/vdt/public/html/upstream/<PACKAGE>/<VERSION>/<FILE>
+$ sha1sum /osgsw/upstream/<PACKAGE>/<VERSION>/<FILE>
 ```
-
-!!! note
-    This feature requires OSG-Build 1.14.0 or later.
 
 !!! example
     The reference file for `globus-common`'s source tarball is named `epel.srpm.source` and contains:
@@ -186,7 +183,8 @@ $ sha1sum /p/vdt/public/html/upstream/<PACKAGE>/<VERSION>/<FILE>
 
 !!! warning
     OSG software policy requires that all Git and GitHub repos used for building software have mirrors at the UW.
-    Many software repos under the [opensciencegrid GitHub organization](https://github.com/opensciencegrid) are already mirrored.
+    Many software repos under the [opensciencegrid GitHub organization](https://github.com/opensciencegrid)
+    and [osg-htc GitHub organization](https://github.com/osg-htc) are already mirrored.
     If you are uncertain, or have a new project that you want mirrored, send email to <technology-team@osg-htc.org>.
 
 !!! note
@@ -393,7 +391,7 @@ Developers may use `rpmbuild` and `mock` for faster iterative development before
 
 ### OSG Software Repository
 
-OSG Operations maintains the Yum repositories that contain our source and binary RPMs at `https://repo.opensciencegrid.org/osg/` and are mirrored at other institutions as well.
+OSG Operations maintains the Yum repositories that contain our source and binary RPMs at `https://repo.osg-htc.org/osg/` and are mirrored at other institutions as well.
 
 #### Release Levels
 
@@ -428,31 +426,30 @@ Some packages may need different build behavior between major versions of the OS
 
 The following macros are defined:
 
-| Name    | Value (EL6)        | Value (EL7)        |
+| Name    | Value (EL8)        | Value (EL9)        |
 |:--------|:-------------------|:-------------------|
-| `%rhel` | `6`                | `7`                |
-| `%el6`  | `1`                | *undefined* or `0` |
-| `%el7`  | *undefined* or `0` | `1`                |
+| `%rhel` | `8`                | `9`                |
+| `%el8`  | `1`                | *undefined* or `0` |
+| `%el9`  | *undefined* or `0` | `1`                |
 
 Here's how to use them:
 
 ```spec
-%if 0%{?el6}
-# this code will be executed on EL 6 only
+%if 0%{?el8}
+# this code will be executed on EL 8 only
 %endif
 
-%if 0%{?el7}
-# this code will be executed on EL 7 only
+%if 0%{?el9}
+# this code will be executed on EL 9 only
 %endif
 
-%if 0%{?rhel} >= 7
-# this code will be executed on EL 7 and newer
+%if 0%{?rhel} >= 9
+# this code will be executed on EL 9 and newer
 %endif
 ```
 
-(There does not seem to be an `%elseif`).
-
-The syntax `%{?el6}` expands to the value of the `%el6` macro if it is defined, and to the empty string if not; the `0` is there to keep the condition from being empty in the `%if` statement if the macro is not defined.
+(the 'else if' macro `%elif` does not parse on EL8 or older.
+The `0` before the `%{?el9}` is required to avoid a syntax error if the macro is undefined.)
 
 
 Renaming or Removing Packages
@@ -511,4 +508,3 @@ Do the following for the main package and any subpackages it may have:
 -   Remove %pre and %post scriptlets
 -   Unless there is a good reason not to, remove %preun and %postun scriptlets
 -   Empty the %files section
-
