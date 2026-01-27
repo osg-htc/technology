@@ -24,7 +24,7 @@ We encourage all interested parties to contribute to OSG Software, and all the i
 -   To participate in the packaging community: You must subscribe to the
     [software-discuss@osg-htc.org](https://groups.google.com/u/1/a/osg-htc.org/g/software-discuss/members) email list.
 -   To create and edit packages: [Obtain access to VDT SVN](http://vdt.cs.wisc.edu/internal/svn.html).
--   To upload new source tarballs: You must have a chtc.wisc.edu account with write access to the OSG source tarball directory.
+-   To upload new source tarballs: You must have a CHTC account with write access to the OSG source tarball directory.
 -   To build using the OSG's Koji build system, you must be able to get a Kerberos ticket with either an @AD.WISC.EDU or @FNAL.GOV principal;
     Send email to <help@osg-htc.org> to request access to the build system.
     Include your Kerberos principal and desired username in the email.
