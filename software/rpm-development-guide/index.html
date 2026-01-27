@@ -322,15 +322,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#locating-files-in-the-cache" class="md-nav__link">
-    Locating Files in the Cache
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#contributing-upstream-files" class="md-nav__link">
-    Contributing Upstream Files
+  <a href="#upstream-cache-organization" class="md-nav__link">
+    Upstream Cache Organization
   </a>
   
 </li>
@@ -4022,15 +4015,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#locating-files-in-the-cache" class="md-nav__link">
-    Locating Files in the Cache
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#contributing-upstream-files" class="md-nav__link">
-    Contributing Upstream Files
+  <a href="#upstream-cache-organization" class="md-nav__link">
+    Upstream Cache Organization
   </a>
   
 </li>
@@ -4353,10 +4339,10 @@
 <li>To participate in the packaging community: You must subscribe to the
     <a href="https://groups.google.com/u/1/a/osg-htc.org/g/software-discuss/members">software-discuss@osg-htc.org</a> email list.</li>
 <li>To create and edit packages: <a href="http://vdt.cs.wisc.edu/internal/svn.html">Obtain access to VDT SVN</a>.</li>
-<li>To upload new source tarballs: You must have a cs.wisc.edu account with write access to the VDT source tarball directory. Email the osg-software list and request permission.</li>
-<li>To build using the OSG's Koji build system: 
-    You must have a <a href="../user-certs/">valid personal certificate</a> and a Koji account.
-    To obtain the Koji account, email the osg-software list with your cert's DN and request permission.</li>
+<li>To upload new source tarballs: You must have a CHTC account with write access to the OSG source tarball directory.</li>
+<li>To build using the OSG's Koji build system, you must be able to get a Kerberos ticket with either an @AD.WISC.EDU or @FNAL.GOV principal;
+    Send email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;</a> to request access to the build system.
+    Include your Kerberos principal and desired username in the email.</li>
 </ul>
 <h2 id="development-infrastructure">Development Infrastructure<a class="headerlink" href="#development-infrastructure" title="Permanent link">&para;</a></h2>
 <p>This section documents most of what a developer needs to know about our RPM infrastructure:</p>
@@ -4367,12 +4353,17 @@
 <li>Yum Repository — the location and organization of our Yum repository, and how to promote packages through it</li>
 </ul>
 <h3 id="upstream-source-cache">Upstream Source Cache<a class="headerlink" href="#upstream-source-cache" title="Permanent link">&para;</a></h3>
-<p>One of our principles (every released package must be reproducible from data stored in our system) creates a potential issue: If we keep all historical source data, especially upstream files like source tarballs and source RPMs, in our revision control system, we may face large checkouts and consequently long checkout and update times.</p>
-<p>Our solution is to cache all upstream source files in a separate filesystem area, retaining historical files indefinitely. To avoid tainting upstream files, our policy is to leave them unmodified after download.</p>
-<h4 id="locating-files-in-the-cache">Locating Files in the Cache<a class="headerlink" href="#locating-files-in-the-cache" title="Permanent link">&para;</a></h4>
+<p>Source tarballs and other large files used as inputs to RPM builds are stored in a cache area at CHTC.
+The Koji build system uses this cache; the files are also downloadable from
+<a href="https://sw-upstream.svc.osg-htc.org/upstream/">https://sw-upstream.svc.osg-htc.org/upstream/</a>.
+The files are stored on <code>osgsw-ap.chtc.wisc.edu</code>, in the directory <code>/osgsw/upstream</code>.
+To upload files to the cache, you must have shell access to the OSG Software Access Point host,
+<code>osgsw-ap.chtc.wisc.edu</code>.
+Send email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;</a> to request permission.</p>
+<h4 id="upstream-cache-organization">Upstream Cache Organization<a class="headerlink" href="#upstream-cache-organization" title="Permanent link">&para;</a></h4>
 <p>Upstream source files are stored in the filesystem as follows:</p>
 <blockquote>
-<p><code>/p/vdt/public/html/upstream/&lt;PACKAGE&gt;/&lt;VERSION&gt;/&lt;FILE&gt;</code></p>
+<p><code>/osgsw/upstream/&lt;PACKAGE&gt;/&lt;VERSION&gt;/&lt;FILE&gt;</code></p>
 </blockquote>
 <p>where:</p>
 <table>
@@ -4386,33 +4377,30 @@
 <tbody>
 <tr>
 <td align="left"><code>&lt;PACKAGE&gt;</code></td>
-<td align="left">Upstream name of the source package, or some widely accepted form thereof</td>
-<td align="left"><code>ndt</code></td>
+<td align="left">Name of the source package the file is used in</td>
+<td align="left"><code>xrootd</code></td>
 </tr>
 <tr>
 <td align="left"><code>&lt;VERSION&gt;</code></td>
-<td align="left">Upstream version string used to identify the release</td>
-<td align="left"><code>3.6.4</code></td>
+<td align="left">Version of the sources ("Version" field in the RPM spec file)</td>
+<td align="left"><code>5.8.4</code></td>
 </tr>
 <tr>
 <td align="left"><code>&lt;FILE&gt;</code></td>
-<td align="left">Upstream filename itself</td>
-<td align="left"><code>ndt-3.6.4.tar.gz</code></td>
+<td align="left">Filename used in the Source line in the RPM spec file</td>
+<td align="left"><code>xrootd-5.8.4.tar.gz</code></td>
 </tr>
 </tbody>
 </table>
-<p>The authoritative cache is the VDT webserver, which is fully backed up. The Koji build system uses this cache.</p>
+<p>which leads to the complete example of</p>
+<blockquote>
+<p><code>/osgsw/upstream/xrootd/5.8.4/xrootd-5.8.4.tar.gz</code></p>
+</blockquote>
 <p>Upstream source files are referenced from within the revision control system; see below for details.</p>
 <p>You will need to know the SHA1 checksum of any files you use from the cache.  Do get it, do:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>sha1sum /p/vdt/public/html/upstream/&lt;PACKAGE&gt;/&lt;VERSION&gt;/&lt;FILE&gt;
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>sha1sum /osgsw/upstream/&lt;PACKAGE&gt;/&lt;VERSION&gt;/&lt;FILE&gt;
 </code></pre></div>
 
-<h4 id="contributing-upstream-files">Contributing Upstream Files<a class="headerlink" href="#contributing-upstream-files" title="Permanent link">&para;</a></h4>
-<p>You must make sure that any new upstream source files are cached on the VDT webserver before building the package via Koji. You have two options:</p>
-<ul>
-<li>If you have access to a UW–Madison CSL machine, you can scp the source files directly into the AFS locations using that machine</li>
-<li>If you do not have such access, write to the osg-software list to find someone who will post the files for you</li>
-</ul>
 <h4 id="gitgithub-hosted-upstream-files">Git/GitHub Hosted Upstream Files<a class="headerlink" href="#gitgithub-hosted-upstream-files" title="Permanent link">&para;</a></h4>
 <p>It is also possible to pull sources and spec files from remote Git or GitHub repos instead of our source cache.
 See the <a href="#upstream">upstream dir info</a> for more information.</p>
@@ -4547,8 +4535,8 @@ See the <a href="#upstream">upstream dir info</a> for more information.</p>
 </tbody>
 </table>
 <p>and contain references to cached files, Git repos, and comments.
-which start with <code>#</code> and continue until the end of the line.
-It is useful to add the source of the upstream file into a comment.</p>
+Comments start with <code>#</code> and continue until the end of the line.
+It is useful to add the original URL of the upstream file into a comment.</p>
 <h6 id="cached-files">Cached files<a class="headerlink" href="#cached-files" title="Permanent link">&para;</a></h6>
 <p>To reference files in the upstream source cache, use the upstream source cache path defined above,
 without the prefix component, followed by the sha1sum of the file:</p>
@@ -4556,13 +4544,9 @@ without the prefix component, followed by the sha1sum of the file:</p>
 <p><code>&lt;PACKAGE&gt;/&lt;VERSION&gt;/&lt;FILE&gt; sha1sum=&lt;SHA1SUM&gt;</code></p>
 </blockquote>
 <p>Obtain the sha1sum by running the <code>sha1sum</code> command with the source file as an argument, i.e.</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>sha1sum /p/vdt/public/html/upstream/&lt;PACKAGE&gt;/&lt;VERSION&gt;/&lt;FILE&gt;
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>sha1sum /osgsw/upstream/&lt;PACKAGE&gt;/&lt;VERSION&gt;/&lt;FILE&gt;
 </code></pre></div>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This feature requires OSG-Build 1.14.0 or later.</p>
-</div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>The reference file for <code>globus-common</code>'s source tarball is named <code>epel.srpm.source</code> and contains:</p>
@@ -4575,7 +4559,8 @@ without the prefix component, followed by the sha1sum of the file:</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>OSG software policy requires that all Git and GitHub repos used for building software have mirrors at the UW.
-Many software repos under the <a href="https://github.com/opensciencegrid">opensciencegrid GitHub organization</a> are already mirrored.
+Many software repos under the <a href="https://github.com/opensciencegrid">opensciencegrid GitHub organization</a>
+and <a href="https://github.com/osg-htc">osg-htc GitHub organization</a> are already mirrored.
 If you are uncertain, or have a new project that you want mirrored, send email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#101;&#99;&#104;&#110;&#111;&#108;&#111;&#103;&#121;&#45;&#116;&#101;&#97;&#109;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;">&#116;&#101;&#99;&#104;&#110;&#111;&#108;&#111;&#103;&#121;&#45;&#116;&#101;&#97;&#109;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;</a>.</p>
 </div>
 <div class="admonition note">
@@ -4835,7 +4820,7 @@ For example, you can use this to make scratch builds of the current master:</p>
 </ol>
 <p>Developers may use <code>rpmbuild</code> and <code>mock</code> for faster iterative development before submitting the package to Koji. <code>osg-build</code> may be used as a wrapper script around <code>rpmbuild</code> and <code>mock</code>.</p>
 <h3 id="osg-software-repository">OSG Software Repository<a class="headerlink" href="#osg-software-repository" title="Permanent link">&para;</a></h3>
-<p>OSG Operations maintains the Yum repositories that contain our source and binary RPMs at <code>https://repo.opensciencegrid.org/osg/</code> and are mirrored at other institutions as well.</p>
+<p>OSG Operations maintains the Yum repositories that contain our source and binary RPMs at <code>https://repo.osg-htc.org/osg/</code> and are mirrored at other institutions as well.</p>
 <h4 id="release-levels">Release Levels<a class="headerlink" href="#release-levels" title="Permanent link">&para;</a></h4>
 <p>Every package is classified into a release level based on the amount of testing it has undergone and our confidence in
 its stability.
@@ -4864,44 +4849,44 @@ The members of the OSG Software and Release teams may promote packages through t
 <thead>
 <tr>
 <th align="left">Name</th>
-<th align="left">Value (EL6)</th>
-<th align="left">Value (EL7)</th>
+<th align="left">Value (EL8)</th>
+<th align="left">Value (EL9)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left"><code>%rhel</code></td>
-<td align="left"><code>6</code></td>
-<td align="left"><code>7</code></td>
+<td align="left"><code>8</code></td>
+<td align="left"><code>9</code></td>
 </tr>
 <tr>
-<td align="left"><code>%el6</code></td>
+<td align="left"><code>%el8</code></td>
 <td align="left"><code>1</code></td>
 <td align="left"><em>undefined</em> or <code>0</code></td>
 </tr>
 <tr>
-<td align="left"><code>%el7</code></td>
+<td align="left"><code>%el9</code></td>
 <td align="left"><em>undefined</em> or <code>0</code></td>
 <td align="left"><code>1</code></td>
 </tr>
 </tbody>
 </table>
 <p>Here's how to use them:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">%if</span> 0%{?el6}
-<span class="c"># this code will be executed on EL 6 only</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">%if</span> 0%{?el8}
+<span class="c"># this code will be executed on EL 8 only</span>
 <span class="cp">%endif</span>
 
-<span class="cp">%if</span> 0%{?el7}
-<span class="c"># this code will be executed on EL 7 only</span>
+<span class="cp">%if</span> 0%{?el9}
+<span class="c"># this code will be executed on EL 9 only</span>
 <span class="cp">%endif</span>
 
-<span class="cp">%if</span> 0%{?rhel} &gt;= 7
-<span class="c"># this code will be executed on EL 7 and newer</span>
+<span class="cp">%if</span> 0%{?rhel} &gt;= 9
+<span class="c"># this code will be executed on EL 9 and newer</span>
 <span class="cp">%endif</span>
 </code></pre></div>
 
-<p>(There does not seem to be an <code>%elseif</code>).</p>
-<p>The syntax <code>%{?el6}</code> expands to the value of the <code>%el6</code> macro if it is defined, and to the empty string if not; the <code>0</code> is there to keep the condition from being empty in the <code>%if</code> statement if the macro is not defined.</p>
+<p>(the 'else if' macro <code>%elif</code> does not parse on EL8 or older.
+The <code>0</code> before the <code>%{?el9}</code> is required to avoid a syntax error if the macro is undefined.)</p>
 <h2 id="renaming-or-removing-packages">Renaming or Removing Packages<a class="headerlink" href="#renaming-or-removing-packages" title="Permanent link">&para;</a></h2>
 <p>Occasionally we want to cause a package to be removed on update, or replaced by a package with a different name.</p>
 <p>For the most part, the <a href="https://docs.fedoraproject.org/en-US/packaging-guidelines/#renaming-or-replacing-existing-packages">Fedora Packaging Guidelines page on renames</a> shows how to do that.

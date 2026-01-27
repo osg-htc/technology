@@ -346,33 +346,6 @@
     Initial Setup
   </a>
   
-    <nav class="md-nav" aria-label="Initial Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-on-moria" class="md-nav__link">
-    Setting up on moria
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-on-your-own-host" class="md-nav__link">
-    Setting up on your own host
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authenticating-to-koji" class="md-nav__link">
-    Authenticating to Koji
-  </a>
-  
 </li>
       
         <li class="md-nav__item">
@@ -382,6 +355,13 @@
   
     <nav class="md-nav" aria-label="Using Koji">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-test-build" class="md-nav__link">
+    Creating a test build
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#creating-a-new-build" class="md-nav__link">
@@ -401,13 +381,6 @@
           <li class="md-nav__item">
   <a href="#how-to-find-build-results" class="md-nav__link">
     How to find build results
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trying-our-your-build" class="md-nav__link">
-    Trying our your build
   </a>
   
 </li>
@@ -448,13 +421,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-custom-koji-areas" class="md-nav__link">
-    Creating custom koji areas
-  </a>
   
 </li>
         
@@ -3827,33 +3793,6 @@
     Initial Setup
   </a>
   
-    <nav class="md-nav" aria-label="Initial Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-on-moria" class="md-nav__link">
-    Setting up on moria
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-on-your-own-host" class="md-nav__link">
-    Setting up on your own host
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authenticating-to-koji" class="md-nav__link">
-    Authenticating to Koji
-  </a>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3863,6 +3802,13 @@
   
     <nav class="md-nav" aria-label="Using Koji">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-test-build" class="md-nav__link">
+    Creating a test build
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#creating-a-new-build" class="md-nav__link">
@@ -3882,13 +3828,6 @@
           <li class="md-nav__item">
   <a href="#how-to-find-build-results" class="md-nav__link">
     How to find build results
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trying-our-your-build" class="md-nav__link">
-    Trying our your build
   </a>
   
 </li>
@@ -3932,13 +3871,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#creating-custom-koji-areas" class="md-nav__link">
-    Creating custom koji areas
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3969,7 +3901,7 @@
                 
                 
                 <h1 id="koji-workflow">Koji Workflow<a class="headerlink" href="#koji-workflow" title="Permanent link">&para;</a></h1>
-<p>This covers the basics of using and understanding the <a href="https://koji.opensciencegrid.org/koji">OSG Koji</a> instance. It is meant primarily for OSG Software team members who need to interact with the service.</p>
+<p>This covers the basics of using and understanding the <a href="https://koji.osg-htc.org/koji">OSG Koji</a> instance. It is meant primarily for OSG Software team members who need to interact with the service.</p>
 <h2 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h2>
 <p>Using and understanding the following terminology correctly will help in the reading of this document:</p>
 <p><strong>Package</strong><br />
@@ -4016,147 +3948,33 @@ A yum repository created from the contents of a tag at a specific point in time.
 <p>Building OSG packages in Koji requires these privileges:</p>
 <ul>
 <li>access to the OSG subversion repository at https://vdt.cs.wisc.edu/svn</li>
-<li>access to a login node at UW Comp Sci such as <code>moria.cs.wisc.edu</code></li>
-<li>access to the Koji service via a grid user certificate</li>
+<li>access to <code>osgsw-ap.chtc.wisc.edu</code> for uploading to the upstream sources directory</li>
+<li>access to the Koji service via a Kerberos credential</li>
 </ul>
-<p>See the old <a href="https://github.com/osg-htc/docs/blob/07ae815506a61e8e86485469ea3ddc0e93eba9ea/docs/security/user-certs.md">user certificates document</a>
-for information about how to get a user certificate.</p>
-<p>Open a Freshdesk ticket with the subject "Requesting access to Koji" with the following information:
-- top 3 username choices for the login node and SVN
-  (8 characters max, no punctuation)
-- the DN of your user certificate</p>
-<p>Assign the ticket to the Software team.</p>
+<p>If you are not already registered as an OSG Contact, follow the registration instructions at this page:
+<a href="https://osg-htc.org/docs/common/contact-registration/">https://osg-htc.org/docs/common/contact-registration/</a></p>
+<p>Once you are registered, open a Freshdesk ticket or send email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;</a> requesting access
+to OSG build services.
+Include the following information:</p>
+<ul>
+<li>your GitHub username</li>
+<li>your Kerberos principal if you already have one;
+    for people with a UW NetID account, this is <code>&lt;netid&gt;@AD.WISC.EDU</code> and
+    for people with a Fermilab account, this is <code>&lt;username&gt;@FNAL.GOV</code></li>
+</ul>
 <h2 id="initial-setup">Initial Setup<a class="headerlink" href="#initial-setup" title="Permanent link">&para;</a></h2>
 <p>You will be using the <a href="../osg-build-tools/">OSG Build Tools</a> to interact with Koji.
-You can use them on either your own machine or on your UW Comp Sci login node such as <code>moria</code>.</p>
-<h3 id="setting-up-on-moria">Setting up on moria<a class="headerlink" href="#setting-up-on-moria" title="Permanent link">&para;</a></h3>
-<p>Perform the following to set up the build tools on <code>moria</code>:</p>
-<ol>
-<li>
-<p>Clone the osg-build git repo</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">you@moria$ </span>git clone https://github.com/opensciencegrid/osg-build <span class="nv">$HOME</span>/osg-build
-</code></pre></div>
-
-</li>
-<li>
-<p>Set your <code>$PATH</code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">you@moria$ </span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/osg-build
-<span class="gp">you@moria$ </span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/p/vdt/workspace/quilt/bin
-<span class="gp">you@moria$ </span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/p/vdt/workspace/tarball-client/stable/sys
-</code></pre></div>
-
-</li>
-<li>
-<p>Copy your user certificate and key into <code>$HOME/.globus/usercert.pem</code> and <code>$HOME/.globus/userkey.pem</code>.
-    Make sure <code>userkey.pem</code> is only readable by yourself.</p>
-</li>
-<li>
-<p>(Optional) Load your certificate into your browser.
-    This will allow you to make some changes using the <a href="https://koji.opensciencegrid.org/koji">Koji web interface</a>.</p>
-</li>
-<li>
-<p>Set up the OSG Koji config</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">you@moria$ </span>osg-koji setup
-</code></pre></div>
-
-<p>Answer "yes" to all questions.</p>
-</li>
-</ol>
-<h3 id="setting-up-on-your-own-host">Setting up on your own host<a class="headerlink" href="#setting-up-on-your-own-host" title="Permanent link">&para;</a></h3>
-<p>This requires an Enterprise Linux 6 or 7 host.</p>
-<ol>
-<li>
-<p>Install the <a href="https://osg-htc.org/docs/common/yum/">OSG YUM repositories</a></p>
-</li>
-<li>
-<p>If using OSG 3.5 or newer, enable the <code>devops</code> repository.</p>
-</li>
-<li>
-<p>Install osg-build and its dependencies:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">you@host$ </span>sudo yum install osg-build
-</code></pre></div>
-
-</li>
-<li>
-<p>Install a program for getting grid certificates</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">you@host$ </span>sudo yum install globus-proxy-utils
-</code></pre></div>
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you already have <code>voms-clients-cpp</code> or <code>voms-clients-java</code> installed,
-you can use <code>voms-proxy-init -rfc</code> instead of <code>grid-proxy-init</code>,
-and don't need to install <code>globus-proxy-utils</code>.</p>
-</div>
-</li>
-<li>
-<p>(Optional) If you want to do mock builds (these are local builds in a chroot), add yourself to the <code>mock</code> user group:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">you@host$ </span>sudo usermod -a -G mock <span class="nv">$USER</span>
-</code></pre></div>
-
-</li>
-<li>
-<p>Copy your user certificate and key into <code>$HOME/.globus/usercert.pem</code> and <code>$HOME/.globus/userkey.pem</code>.
-    Make sure <code>userkey.pem</code> is only readable by yourself.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you are using a certificate from SAML or Kerberos credentials, such as with <code>cigetcert</code> or <code>kx509</code>,
-skip this step.</p>
-</div>
-</li>
-<li>
-<p>(Optional) Load your certificate into your browser.
-    This will allow you to make some changes using the <a href="https://koji.opensciencegrid.org/koji">Koji web interface</a>.</p>
-</li>
-<li>
-<p>Set up the OSG Koji config</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">you@moria$ </span>osg-koji setup
-</code></pre></div>
-
-<p>Answer "yes" to all questions.</p>
-</li>
-</ol>
-<h2 id="authenticating-to-koji">Authenticating to Koji<a class="headerlink" href="#authenticating-to-koji" title="Permanent link">&para;</a></h2>
-<p>To use the OSG Build tools and the Koji command-line client, you will need to make sure you can authenticate to Koji.
-This involves getting a grid proxy certificate.
-Do one of the following:</p>
-<ul>
-<li>
-<p><strong>On moria</strong><br>
-    Run <code>osgrun grid-proxy-init -bits 2048</code> and type your grid certificate password.
-    If you cannot find <code>osgrun</code>, ensure you have <code>/p/vdt/workspace/tarball-client/stable/sys</code> in your <code>$PATH</code>.</p>
-</li>
-<li>
-<p><strong>On your local machine</strong><br>
-    Run <code>grid-proxy-init -bits 2048</code> (if using <code>globus-proxy-utils</code>) or <code>voms-proxy-init -rfc -bits 2048</code> (if using <code>voms-clients</code>)
-    and type your grid certificate password.</p>
-</li>
-<li>
-<p><strong>On your local machine using SAML or Kerberos-based credentials</strong><br>
-    Run <code>cigetcert</code> or <code>kx509</code> and perform whatever identification challenges you are asked.</p>
-</li>
-</ul>
-<p>To verify your login access and permissions, run:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">you@host$ </span>osg-koji list-permissions --mine
-</code></pre></div>
-
-<p>You should see a list of your permissions if successful, or an error message if unsuccessful.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you see the error <code>SSL: EE_KEY_TOO_SMALL</code>, OpenSSL may be rejecting your proxy because it is too short.
-Be sure to request at least 2048 bits by passing <code>-bits 2048</code> to <code>grid-proxy-init</code> or <code>voms-proxy-init</code>.
-You can check the key length by examining your proxy:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">you@host$ </span>openssl x509 -in /tmp/x509up_u<span class="k">$(</span>id -u<span class="k">)</span> -noout -text
-</code></pre></div>
-
-<p>and looking at the "Subject Public Key Info" which might look like</p>
-<div class="codehilite"><pre><span></span><code>Subject Public Key Info:
-    Public Key Algorithm: rsaEncryption
-        RSA Public-Key: (2048 bit)
-</code></pre></div>
-
-</div>
+See the installation guide on that page for information on getting started.</p>
 <h2 id="using-koji">Using Koji<a class="headerlink" href="#using-koji" title="Permanent link">&para;</a></h2>
+<h3 id="creating-a-test-build">Creating a test build<a class="headerlink" href="#creating-a-test-build" title="Permanent link">&para;</a></h3>
+<p>Before pushing package changes to the OSG Software Packaging repository, you should create a "scratch build".
+This builds an RPM from the current directory using Koji, but does not tag the resulting package.</p>
+<p>To make a scratch build, run:</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>osg-build koji --scratch &lt;PACKAGE DIRECTORY&gt;
+</code></pre></div>
+
+<p>To download all of the files from a scratch build, add the <code>--getfiles</code> flag;
+you may also visit the links that osg-build printed to download the files individually.</p>
 <h3 id="creating-a-new-build">Creating a new build<a class="headerlink" href="#creating-a-new-build" title="Permanent link">&para;</a></h3>
 <p>We create a new build in Koji from the package's directory in OSG Software subversion.</p>
 <p>If a successful build already exists in Koji (regardless of whether it is in the tag you use), you cannot replace the build. Two builds are the same if they have the same NVR (Name-Version-Release). You <em>can</em> do a "scratch" build, which recompiles, but the results are not added to the tag. This is useful for experimenting with koji.</p>
@@ -4164,36 +3982,40 @@ You can check the key length by examining your proxy:</p>
 <div class="codehilite"><pre><span></span><code><span class="gp">[you@host]$ </span>osg-build koji &lt;PACKAGE NAME&gt;
 </code></pre></div>
 
-<p>To do a scratch build, simply add the <code>--scratch</code> command line flag.</p>
-<p>When you do a non-scratch build, it will build with the <em>osg-el6</em> and <em>osg-el7</em> targets. This will assign your build the <em>osg-3.4-el6-development</em> and <em>osg-3.4-el7-development</em> tags (and your package will be assigned the <em>osg-el6</em> and <em>osg-el7</em> tags). If successful, your build will end up in the Koji <em>osg-minefield</em> yum repos and will eventually show up in the <em>osg-development</em> yum repos. This is a high latency process.</p>
 <h3 id="build-task-results">Build task Results<a class="headerlink" href="#build-task-results" title="Permanent link">&para;</a></h3>
 <h4 id="how-to-find-build-results">How to find build results<a class="headerlink" href="#how-to-find-build-results" title="Permanent link">&para;</a></h4>
 <p>The most recent build results are always shown on the home page of Koji:</p>
-<p><a href="https://koji.opensciencegrid.org/koji/index">https://koji.opensciencegrid.org/koji/index</a></p>
+<p><a href="https://koji.osg-htc.org/koji/index">https://koji.osg-htc.org/koji/index</a></p>
 <p>Clicking on a build result brings you to the build information page. A successful build will result in the build page having build logs, RPMs, and a SRPM.</p>
 <p>If your build isn't in the recent list, you can use the search box in the upper-right-hand corner. Type the exact package name (or use a wildcard), and it will bring up a list of all builds for that package. You can find your build from there. For example, the "lcmaps" package page is here:</p>
-<p><a href="https://koji.opensciencegrid.org/koji/packageinfo?packageID=56">https://koji.opensciencegrid.org/koji/packageinfo?packageID=56</a></p>
+<p><a href="https://koji.osg-htc.org/koji/packageinfo?packageID=56">https://koji.osg-htc.org/koji/packageinfo?packageID=56</a></p>
 <p>And the lcmaps-1.6.6-1.1.osg33.el6 build is here:</p>
-<p><a href="https://koji.opensciencegrid.org/koji/buildinfo?buildID=7427">https://koji.opensciencegrid.org/koji/buildinfo?buildID=7427</a></p>
-<h4 id="trying-our-your-build">Trying our your build<a class="headerlink" href="#trying-our-your-build" title="Permanent link">&para;</a></h4>
-<p>Because it takes a while for your build to get into one of the regular repositories, it's simplest to download your RPM directly (see the previous section on How to find build results), and install it with:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[root@host]# </span>yum localinstall &lt;RPM&gt;
-</code></pre></div>
-
+<p><a href="https://koji.osg-htc.org/koji/buildinfo?buildID=7427">https://koji.osg-htc.org/koji/buildinfo?buildID=7427</a></p>
 <h4 id="how-to-get-the-resulting-rpm-into-a-repository">How to get the resulting RPM into a repository<a class="headerlink" href="#how-to-get-the-resulting-rpm-into-a-repository" title="Permanent link">&para;</a></h4>
-<p>Once a package has been built, it is added to a tag. We then must turn the tag into a yum repository. This is normally done automatically and you do not need to deal with it yourself. Three notes:</p>
-<ul>
-<li>The kojira daemon creates a repository automatically post-build on the koji-hub host. Eventually, the development repository will be the one hosted by koji-hub.</li>
-<li>
-<p>The koji-hub repository can be created manually by running</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[you@host]$ </span>osg-koji regen-repo &lt;TAG NAME&gt;
+<p>Once a package has been built, it will be signed and added to a tag, typically one of the <code>-development</code> tags.
+The build will eventually be copied and made available for installation at <code>repo.osg-htc.org</code>,
+in typically less than an hour.
+The build will be available for use as a build dependency in under five minutes.</p>
+<p>The OSG repos with names ending in <code>-minefield</code> are built from the <code>-development</code> repos;
+installing RPMs from those repos pulls directly from the Koji build system.
+You may update the <code>-minefield</code> repos by running the <code>osg-koji regen-repo</code> command on the corresponding <code>-development</code> repo.
+For example, to update the <code>osg-minefield</code> repo for OSG series <code>24-main</code> on distro <code>el9</code>, run</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>osg-koji regen-repo osg-24-main-el9-development
 </code></pre></div>
 
-<p>For example, the tag name for osg-development in 3.4 on el6 is "osg-3.4-el6-development". Likely, you won't need to do this when kojira is working.
--   Repositories are created on external hosts with the <code>mash</code> tool. These are usually triggered by cron jobs, but may be run by hand too. Documentation for running mash is on the TODO list.
--   You can create your own personal repository using <code>mash</code>.</p>
-</li>
-</ul>
+<p>This typically only takes a few minutes.
+To do this for multiple distro versions, use a loop.
+For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span><span class="k">for</span> el <span class="k">in</span> el8 el9 el10<span class="p">;</span> <span class="k">do</span> osg-koji regen-repo osg-24-main-<span class="si">${</span><span class="nv">el</span><span class="si">}</span>-development<span class="p">;</span> <span class="k">done</span>
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Due to <a href="https://opensciencegrid.atlassian.net/browse/SOFTWARE-6069">SOFTWARE-6069</a>,
+you must run <code>osg-koji regen-repo</code> by hand to update the <code>minefield</code> repos.</p>
+</div>
+<p>You may check the status of regen-repo tasks in the
+<a href="https://koji.osg-htc.org/koji/tasks?method=newRepo&amp;state=all&amp;view=tree&amp;order=-id">Koji web interface</a>.</p>
 <h4 id="debugging-build-issues">Debugging build issues<a class="headerlink" href="#debugging-build-issues" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
@@ -4246,7 +4068,7 @@ and whatever is listed for the Build Tag is the name of the repo to regen.</p>
 </li>
 </ul>
 <h3 id="promoting-builds-from-development-testing">Promoting Builds from Development -&gt; Testing<a class="headerlink" href="#promoting-builds-from-development-testing" title="Permanent link">&para;</a></h3>
-<p>Software contributors can promote any package to testing. Members of the security team can promote ca-cert packages to testing.</p>
+<p>Software team members can promote any package to testing.</p>
 <p>To promote from development to testing:</p>
 <h4 id="using-osg-promote">Using <em>osg-promote</em><a class="headerlink" href="#using-osg-promote" title="Permanent link">&para;</a></h4>
 <p>Before using <code>osg-promote</code>, <a href="#authenticating-to-koji">authenticate to Koji as above</a>.</p>
@@ -4263,16 +4085,7 @@ and whatever is listed for the Build Tag is the name of the repo to regen.</p>
 <p>&lt;OSGVER&gt; is the OSG major version that you are promoting for (e.g. <code>3.4</code>).</p>
 <p><code>osg-promote</code> will promote both the el6 and el7 builds of a package. After promoting, copy and paste the JIRA code <code>osg-promote</code> produces into the JIRA ticket that you are working on.</p>
 <p>For <code>osg-promote</code>, you may omit the <code>.osg34.el6</code> or <code>.osg34.el7</code>; the script will add the appropriate disttag on.</p>
-<p>See <a href="../osg-build-tools/">OSG Building Tools</a> for full details on <code>osg-promote</code>.</p>
-<h3 id="creating-custom-koji-areas">Creating custom koji areas<a class="headerlink" href="#creating-custom-koji-areas" title="Permanent link">&para;</a></h3>
-<p>Occasionally you may want to make builds of a package (or packages) which you
-do not yet want to go into the main development repos.  In this case, you can
-create a set of custom koji tags and build targets for these builds.  We have
-a script in our
-<a href="https://github.com/opensciencegrid/osg-next-tools/">osg-next-tools</a> repo
-called
-<a href="https://github.com/opensciencegrid/osg-next-tools/blob/master/koji/new-koji-area">new-koji-area</a>
-that facilitates this set up.</p>
+<p>See <a href="../osg-build-tools/">OSG Build Tools</a> for full details on <code>osg-promote</code>.</p>
 <h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Official Koji documentation: <a href="https://docs.pagure.org/koji/">https://docs.pagure.org/koji/</a></li>

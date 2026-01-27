@@ -304,13 +304,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-start-with-apptainer" class="md-nav__link">
-    Quick start with Apptainer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation-into-a-linux-system" class="md-nav__link">
     Installation into a Linux system
   </a>
@@ -319,18 +312,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#install-as-root-via-osg-rpm-el8-el9" class="md-nav__link">
-    Install as root via OSG RPM (EL8, EL9)
+  <a href="#install-as-root-via-osg-rpm-el8-el9-el10" class="md-nav__link">
+    Install as root via OSG RPM (EL8, EL9, EL10)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-via-pip-el8-el9-ubuntu-others" class="md-nav__link">
-    Install via pip (EL8, EL9, Ubuntu, others)
+  <a href="#install-via-pip-el8-el9-el10-ubuntu-others" class="md-nav__link">
+    Install via pip (EL8, EL9, EL10, Ubuntu, others)
   </a>
   
-    <nav class="md-nav" aria-label="Install via pip (EL8, EL9, Ubuntu, others)">
+    <nav class="md-nav" aria-label="Install via pip (EL8, EL9, EL10, Ubuntu, others)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -881,13 +874,6 @@
           <li class="md-nav__item">
   <a href="#promote-the-latest-build-of-a-package-to-testing-for-the-current-osg-release-series" class="md-nav__link">
     Promote the latest build of a package to testing for the current OSG release series
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#promote-the-latest-build-of-a-package-to-testing-for-the-33-and-34-release-series" class="md-nav__link">
-    Promote the latest build of a package to testing for the 3.3 and 3.4 release series
   </a>
   
 </li>
@@ -4260,13 +4246,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-start-with-apptainer" class="md-nav__link">
-    Quick start with Apptainer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation-into-a-linux-system" class="md-nav__link">
     Installation into a Linux system
   </a>
@@ -4275,18 +4254,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#install-as-root-via-osg-rpm-el8-el9" class="md-nav__link">
-    Install as root via OSG RPM (EL8, EL9)
+  <a href="#install-as-root-via-osg-rpm-el8-el9-el10" class="md-nav__link">
+    Install as root via OSG RPM (EL8, EL9, EL10)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-via-pip-el8-el9-ubuntu-others" class="md-nav__link">
-    Install via pip (EL8, EL9, Ubuntu, others)
+  <a href="#install-via-pip-el8-el9-el10-ubuntu-others" class="md-nav__link">
+    Install via pip (EL8, EL9, EL10, Ubuntu, others)
   </a>
   
-    <nav class="md-nav" aria-label="Install via pip (EL8, EL9, Ubuntu, others)">
+    <nav class="md-nav" aria-label="Install via pip (EL8, EL9, EL10, Ubuntu, others)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4841,13 +4820,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#promote-the-latest-build-of-a-package-to-testing-for-the-33-and-34-release-series" class="md-nav__link">
-    Promote the latest build of a package to testing for the 3.3 and 3.4 release series
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -4872,9 +4844,18 @@
                 
                 <h1 id="osg-build-tools">OSG Build Tools<a class="headerlink" href="#osg-build-tools" title="Permanent link">&para;</a></h1>
 <p>This page documents the tools used for RPM development for the OSG Software Stack. See <a href="../rpm-development-guide/">the RPM development guide</a> for the principles on which these tools are based.</p>
-<p>The tools are available in Git in <a href="https://github.com/opensciencegrid/osg-build">opensciencegrid/osg-build on GitHub</a>.
-See installation documentation below.</p>
-<h2 id="quick-start-with-apptainer">Quick start with Apptainer<a class="headerlink" href="#quick-start-with-apptainer" title="Permanent link">&para;</a></h2>
+<p>The tools are available in Git in <a href="https://github.com/osg-htc/osg-build">osg-htc/osg-build on GitHub</a>.
+First, acquire the tools via one of the following methods:</p>
+<ul>
+<li><a href="#install-apptainer">Apptainer/Singularity</a></li>
+<li><a href="#install-docker">Docker/Podman</a></li>
+<li>Local install</li>
+<li><a href="#install-local-root">Rootly install with Make</a></li>
+<li><a href="#install-local-pip">Install via Pip</a></li>
+</ul>
+<p><a id="install-apptainer"></a>
+Quick start with Apptainer</p>
+<hr />
 <p>This quick start guide shows how to use the OSG build tools via Apptainer. (Singularity should work too.)
 This assumes you will use Kerberos for authentication with UW-Madison or Fermilab credentials.
 To get UW-Madison Kerberos credentials, you will need to be inside the UW Campus network, either via campus wifi or VPN.</p>
@@ -4909,12 +4890,51 @@ Use <code>kinit</code> to get a credential.</p>
 <p>If that succeeds, you will be ready to use the rest of the <code>osg-build</code> and <code>osg-koji</code> commands.</p>
 <p>Note: the <code>mock</code> command does not work in Apptainer/Singularity due to permissions issues.
 For testing builds, use <code>osg-build koji --scratch</code> instead.</p>
+<p><a id="install-docker"></a>
+Quick start with Docker</p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Docker image and helper scripts are a work in progress.</p>
+</div>
+<p>This quick start guide shows how to use the OSG build tools via Docker. (Podman should work too.)
+This assumes you will use Kerberos for authentication with UW-Madison or Fermilab credentials.
+To get UW-Madison Kerberos credentials, you will need to be inside the UW Campus network, either via campus wifi or VPN.</p>
+<p>First, pull the GitHub repo hosting the image and helper scripts.</p>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/osg-htc/docker-osg-build
+</code></pre></div>
+
+<p>Next, run the <code>initbuilder</code> script, giving it the directory under which the repo containing the software packaging is.
+For example, if you have your checkout of the VDT SVN repo under <code>~/native/redhat</code>, run</p>
+<div class="codehilite"><pre><span></span><code>cd docker-osg-build
+./initbuilder ~/native/redhat
+</code></pre></div>
+
+<p>Answer the configuration questions from initbuilder.</p>
+<p>From then on, use the <code>osg-build-shell</code> command to enter into a shell inside the image.</p>
+<p>Use <code>kinit</code> to get a credential.</p>
+<p>For UW-Madison:</p>
+<div class="codehilite"><pre><span></span><code>kinit &lt;username&gt;@AD.WISC.EDU
+</code></pre></div>
+
+<p>replacing <code>&lt;username&gt;</code> with the name of your UW NetID.</p>
+<p>For Fermilab:</p>
+<div class="codehilite"><pre><span></span><code>kinit &lt;username&gt;@FNAL.GOV
+</code></pre></div>
+
+<p>replacing <code>&lt;username&gt;</code> with your Fermilab user name.</p>
+<p>Verify that you can successfully authenticate to Koji:</p>
+<div class="codehilite"><pre><span></span><code>osg-koji hello
+</code></pre></div>
+
+<p>If that succeeds, you will be ready to use the rest of the <code>osg-build</code> and <code>osg-koji</code> commands.</p>
 <h2 id="installation-into-a-linux-system">Installation into a Linux system<a class="headerlink" href="#installation-into-a-linux-system" title="Permanent link">&para;</a></h2>
 <p>You may install the software locally, either via <code>pip</code> or via a script distributed by an RPM.
 If using <code>pip</code>, you will need to install some dependencies by hand.</p>
-<h3 id="install-as-root-via-osg-rpm-el8-el9">Install as root via OSG RPM (EL8, EL9)<a class="headerlink" href="#install-as-root-via-osg-rpm-el8-el9" title="Permanent link">&para;</a></h3>
-<p>The OSG 24-internal repositories contain a package called "osg-build-deps".
-<a href="https://osg-htc.org/docs/common/yum/">Install the OSG 24 repositories</a>.</p>
+<p><a id="install-local-root"></a></p>
+<h3 id="install-as-root-via-osg-rpm-el8-el9-el10">Install as root via OSG RPM (EL8, EL9, EL10)<a class="headerlink" href="#install-as-root-via-osg-rpm-el8-el9-el10" title="Permanent link">&para;</a></h3>
+<p>The OSG 24-internal and 25-internal repositories contain a package called "osg-build-deps".
+<a href="https://osg-htc.org/docs/common/yum/">Install the OSG 25 repositories</a>.</p>
 <p>Then, install osg-build-deps:</p>
 <div class="codehilite"><pre><span></span><code>yum install --enablerepo=osg-internal-development osg-build-deps
 </code></pre></div>
@@ -4925,9 +4945,10 @@ Then, to install the OSG Build Tools themselves into <code>/usr/local</code>, ru
 </code></pre></div>
 
 <p>This will clone osg-build into <code>/usr/local/src/osg-build</code> and install the software under the <code>/usr/local</code> tree.</p>
-<h3 id="install-via-pip-el8-el9-ubuntu-others">Install via pip (EL8, EL9, Ubuntu, others)<a class="headerlink" href="#install-via-pip-el8-el9-ubuntu-others" title="Permanent link">&para;</a></h3>
+<p><a id="install-local-pip"></a></p>
+<h3 id="install-via-pip-el8-el9-el10-ubuntu-others">Install via pip (EL8, EL9, EL10, Ubuntu, others)<a class="headerlink" href="#install-via-pip-el8-el9-el10-ubuntu-others" title="Permanent link">&para;</a></h3>
 <p>To use Kerberos authentication you will need the client tools to run <code>kinit</code>.
-On EL8/EL9, run:</p>
+On Enterprise Linux variants and Feodra, run:</p>
 <div class="codehilite"><pre><span></span><code>yum install krb5-workstation
 </code></pre></div>
 
@@ -4936,7 +4957,7 @@ On EL8/EL9, run:</p>
 </code></pre></div>
 
 <p>Before installing via pip, you will need to install the <code>requests-gssapi</code> library by hand because it contains compiled binaries.</p>
-<p>On EL8/EL9, run</p>
+<p>On EL8/EL9/EL10, run</p>
 <div class="codehilite"><pre><span></span><code>yum install python3-requests-gssapi
 </code></pre></div>
 
@@ -4946,7 +4967,7 @@ On EL8/EL9, run:</p>
 
 <p>If <code>requests-gssapi</code> is not available, you will have to compile it by hand; see below.</p>
 <p>To install the OSG Build Tools themselves, run:</p>
-<div class="codehilite"><pre><span></span><code>pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
+<div class="codehilite"><pre><span></span><code>pip install --user git+https://github.com/osg-htc/osg-build@V2-branch
 </code></pre></div>
 
 <div class="admonition note">
@@ -4957,7 +4978,7 @@ pass <code>--system-site-packages</code> when creating the virtualenv or running
 <h4 id="building-requests-gssapi-from-source">Building requests-gssapi from source<a class="headerlink" href="#building-requests-gssapi-from-source" title="Permanent link">&para;</a></h4>
 <p>If the <code>requests-gssapi</code> library is not available or you don't want to install it via a package manager,
 you must install the dependencies that will allow pip to build it from source.</p>
-<p>On EL8/EL9 run:</p>
+<p>On EL8/EL9/EL10 run:</p>
 <div class="codehilite"><pre><span></span><code>yum install gcc make python3-devel krb5-devel
 </code></pre></div>
 
@@ -4966,7 +4987,7 @@ you must install the dependencies that will allow pip to build it from source.</
 </code></pre></div>
 
 <p>Afterwards, pip install the OSG Build Tools as previously:</p>
-<div class="codehilite"><pre><span></span><code>pip install --user git+https://github.com/opensciencegrid/osg-build@V2-branch
+<div class="codehilite"><pre><span></span><code>pip install --user git+https://github.com/osg-htc/osg-build@V2-branch
 </code></pre></div>
 
 <h2 id="configuring-koji-access-and-osg-build">Configuring Koji access and OSG Build<a class="headerlink" href="#configuring-koji-access-and-osg-build" title="Permanent link">&para;</a></h2>
@@ -5003,8 +5024,7 @@ Set up your configuration for accessing the OSG Koji environment.</p>
 <p><em>package_directory</em> is a directory containing an <code>osg/</code> and/or an <code>upstream/</code> subdirectory. See <a href="../rpm-development-guide/">the RPM development guide</a> for how these directories are organized.</p>
 <h4 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h4>
 <h5 id="koji">koji<a class="headerlink" href="#koji" title="Permanent link">&para;</a></h5>
-<p>Builds the package on the Koji build service hosted at UW-Madison. <a href="https://koji.osg-htc.org">https://koji.osg-htc.org</a>.
-You must specify the set of destination repos with <code>--repo</code>, described later.</p>
+<p>Builds the package on the Koji build service hosted at UW-Madison. <a href="https://koji.osg-htc.org">https://koji.osg-htc.org</a>.</p>
 <h5 id="lint">lint<a class="headerlink" href="#lint" title="Permanent link">&para;</a></h5>
 <p>Runs <code>rpmlint</code> the package(s) to check for various problems. You will need to have <code>rpmlint</code> installed.</p>
 <h5 id="mock">mock<a class="headerlink" href="#mock" title="Permanent link">&para;</a></h5>
@@ -5012,7 +5032,8 @@ You must specify the set of destination repos with <code>--repo</code>, describe
 <h5 id="prebuild">prebuild<a class="headerlink" href="#prebuild" title="Permanent link">&para;</a></h5>
 <p>Prebuilds the final source package from upstream sources (if any) and local files (if any). May create or overwrite the <code>_upstream_srpm_contents</code> and <code>_final_srpm_contents</code> directories.</p>
 <h5 id="prepare">prepare<a class="headerlink" href="#prepare" title="Permanent link">&para;</a></h5>
-<p>Prebuilds the final source package, then calls <code>rpmbuild -bp</code> on the result, extracting and patching the source files (and performing any other steps defined in the <code>%prep</code> section of the spec file. The resulting sources will be under <code>_final_srpm_contents</code>.</p>
+<p>Prebuilds the final source package, then calls <code>rpmbuild -bp</code> on the result, extracting and patching the source files (and performing any other steps defined in the <code>%prep</code> section of the spec file.
+The resulting sources will be under <code>_build_results/BUILD</code>.</p>
 <h5 id="rpmbuild">rpmbuild<a class="headerlink" href="#rpmbuild" title="Permanent link">&para;</a></h5>
 <p>Prebuilds the final source package, then builds it locally using <code>rpmbuild</code>, and stores the resulting source and binary RPMs in the package-specific <code>_build_results</code> directory.</p>
 <h5 id="quilt">quilt<a class="headerlink" href="#quilt" title="Permanent link">&para;</a></h5>
@@ -5067,20 +5088,13 @@ The sources are unpacked into <code>_quilt</code>; they will be in pre-patch sta
 <p><code>--vcs</code> defaults to <code>true</code> for non-scratch builds, and <code>false</code> for scratch builds.</p>
 <h5 id="-repodestination-repository">--repo=<em>destination repository</em><a class="headerlink" href="#-repodestination-repository" title="Permanent link">&para;</a></h5>
 <p>Selects the repository (24-main, 24-upcoming, etc.) to build packages for.
-This is required for Koji builds.  See <code>--repo-list</code> for a list of repositories.</p>
+See <code>--repo-list</code> for a list of repositories.</p>
 <h5 id="-repo-list">--repo-list<a class="headerlink" href="#-repo-list" title="Permanent link">&para;</a></h5>
 <p>Lists the available repositories for the <code>--repo</code> argument.</p>
 <h3 id="osg-koji">osg-koji<a class="headerlink" href="#osg-koji" title="Permanent link">&para;</a></h3>
-<p>This is a wrapper script around the <code>koji</code> command line tool. It automatically specifies parameters to access the OSG's koji instance, and forces SSL authentication. It takes the same parameters as <code>koji</code> and passes them on.</p>
-<p>An additional command, <code>osg-koji setup</code> exists, which performs the following tasks:</p>
-<ol>
-<li>Create a koji configuration in <code>~/.osg-koji</code></li>
-<li>Create a CA bundle for verifying the server.
-    Use either files in <code>/etc/grid-security/certificates</code>, or (if those are not found), from files downloaded from the DOEGrids and DigiCert sites.</li>
-<li>Create a client cert file. This can be a symlink to your grid proxy, or it can be a file created from your grid public and private key files.
-    The location of those files can be specified by the <code>--usercert</code> and <code>--userkey</code> arguments.
-    If unspecified, <code>usercert</code> defaults to <code>~/.globus/usercert.pem</code>, and <code>userkey</code> defaults to <code>~/.globus/userkey.pem</code>.</li>
-</ol>
+<p>This is a wrapper script around the <code>koji</code> command line tool.
+It automatically specifies parameters to access the OSG's koji instance.</p>
+<p>An additional command, <code>osg-koji setup</code> exists, which sets up koji configuration in <code>~/.osg-koji</code>.</p>
 <h3 id="osg-promote">osg-promote<a class="headerlink" href="#osg-promote" title="Permanent link">&para;</a></h3>
 <h4 id="overview_1">Overview<a class="headerlink" href="#overview_1" title="Permanent link">&para;</a></h4>
 <p>Run this script to push packages from one set of repos to another (e.g. from development to testing), according to the OSG software promotion guidelines.</p>
@@ -5177,14 +5191,12 @@ This is required for Koji builds.  See <code>--repo-list</code> for a list of re
 <ol>
 <li><code>svn commit</code> your changes in <code>branches/upcoming</code>.</li>
 <li>Type <code>osg-build koji --repo=upcoming &lt;PACKAGEDIR&gt;</code></li>
-<li>Wait for the <code>osg-upcoming-minefield</code> repos to be regenerated containing the new version of your package. You can run <code>osg-koji wait-repo osg-upcoming-el&lt;X&gt;-development --build=&lt;PACKAGENAME-VERSION-RELEASE&gt;</code> and wait for that process to finish (substitute <code>6</code> or <code>7</code> for <em>X</em>). Or, you can just check kojiweb <a href="https://koji.opensciencegrid.org/koji/tasks">https://koji.opensciencegrid.org/koji/tasks</a>.</li>
+<li>Wait for the <code>osg-upcoming-minefield</code> repos to be regenerated containing the new version of your package. You can run <code>osg-koji wait-repo osg-upcoming-el&lt;X&gt;-development --build=&lt;PACKAGENAME-VERSION-RELEASE&gt;</code> and wait for that process to finish (substitute <code>6</code> or <code>7</code> for <em>X</em>). Or, you can just check kojiweb <a href="https://koji.osg-htc.org/koji/tasks">https://koji.osg-htc.org/koji/tasks</a>.</li>
 <li>On your test machine, make sure the <code>osg-upcoming-minefield</code> repo is enabled (edit <code>/etc/yum.repos.d/osg-upcoming-minefield.repo</code> or <code>/etc/yum.repos.d/osg-el6-upcoming-minefield.repo</code>). Clean your cache (<code>yum clean all; yum clean expire-cache</code>).</li>
 <li>Install your software, see if it works.</li>
 </ol>
 <h4 id="promote-the-latest-build-of-a-package-to-testing-for-the-current-osg-release-series">Promote the latest build of a package to testing for the current OSG release series<a class="headerlink" href="#promote-the-latest-build-of-a-package-to-testing-for-the-current-osg-release-series" title="Permanent link">&para;</a></h4>
-<p>Run <code>osg-promote -r testing &lt;PACKAGE&gt;</code></p>
-<h4 id="promote-the-latest-build-of-a-package-to-testing-for-the-33-and-34-release-series">Promote the latest build of a package to testing for the 3.3 and 3.4 release series<a class="headerlink" href="#promote-the-latest-build-of-a-package-to-testing-for-the-33-and-34-release-series" title="Permanent link">&para;</a></h4>
-<p>Run <code>osg-promote -r 3.3-testing -r 3.4-testing &lt;PACKAGE&gt;</code></p>
+<p>Run <code>osg-promote -r 24-main -r 25-main &lt;PACKAGE&gt;</code></p>
                 
               
               
