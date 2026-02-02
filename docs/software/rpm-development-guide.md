@@ -44,9 +44,11 @@ This section documents most of what a developer needs to know about our RPM infr
 Source tarballs and other large files used as inputs to RPM builds are stored in a cache area at CHTC.
 The Koji build system uses this cache; the files are also downloadable from
 <https://sw-upstream.svc.osg-htc.org/upstream/>.
+
 The files are stored on `osgsw-ap.chtc.wisc.edu`, in the directory `/osgsw/upstream`.
 To upload files to the cache, you must have shell access to the OSG Software Access Point host,
 `osgsw-ap.chtc.wisc.edu`.
+
 Send email to <help@osg-htc.org> to request permission.
 
 
