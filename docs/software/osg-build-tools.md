@@ -81,11 +81,12 @@ git clone https://github.com/osg-htc/docker-osg-build
 ```
 
 Next, run the `initbuilder` script, giving it the directory under which the repo containing the software packaging is.
-For example, if you have your checkout of the VDT SVN repo under `~/native/redhat`, run
+For example, if you have your checkout of the [https://github.com/osg-htc/software-packaging](software-packaging repo)
+under `~/software-packaging`, run
 
 ```
 cd docker-osg-build
-./initbuilder ~/native/redhat
+./initbuilder ~/software-packaging
 ```
 Answer the configuration questions from initbuilder.
 
@@ -363,11 +364,24 @@ Start a `regen-repo` koji task on the build tag after each koji build, to update
 
 Perform scratch builds. A scratch build does not go into a repository, but the name-version-release (NVR) of the created RPMs are not considered used, so the build may be modified and repeated without needing a release bump. This has the same use case as the mock task: creating packages that you want to test before releasing. If you do not have a machine with mock set up, or want to test exactly the environment that Koji provides, scratch builds might be more convenient.
 
-##### --vcs, --no-vcs, --svn, --no-svn
+##### --vcs, --git, --svn
 
-Have Koji check the package out from a version control system instead of creating an SRPM on the local machine and submitting that to Koji. Currently, SVN and Git are supported. If this flag is specified, you may use SVN URLs or URL@Revision pairs to specify the packages to build. You may continue specify package directories from an SVN checkout, in which case osg-build will use `svn info` to find the right URL@Revision pair to use and warn you about uncommitted changes. osg-build will also warn you about an outdated working directory.
+Have Koji check the package out from a version control system instead of creating an SRPM on the local machine and submitting that to Koji.
+This is always true for non-scratch builds.
 
-`--vcs` defaults to `true` for non-scratch builds, and `false` for scratch builds.
+If this flag is specified, you may use Git URLs to specify the packages to builds.
+
+A Git URL looks like `git+REPO?DIRECTORY#BRANCH`, e.g.
+```
+git+https://github.com/osg-htc/software-packaging.git?24-main/xrootd#main`
+```
+(the `#main` at the end, specifying the `main` branch, is optional).
+
+You can also use SVN URLs to build from the old SVN repository, such as
+```
+svn+https://vdt.cs.wisc.edu/svn/native/redhat/branches/24-main/xrootd#28000
+```
+(the `#28000` at the end, specifying commit 28000, is optional).
 
 ##### --repo=*destination repository*
 
