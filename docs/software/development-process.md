@@ -30,9 +30,6 @@ For a typical update to an existing package, the overall development cycle is ro
 Build Procedures
 ----------------
 
-<!-- TODO not written yet
-### Verifying builds through GitHub Actions
--->
 
 ### Initial repo setup
 
@@ -46,18 +43,40 @@ Build Procedures
 
 ### Basic building
 
-<!-- TODO flesh this out -->
+The software-packaging repository is laid out into `<SUBTREE>/<PACKAGE>` directories,
+where `<SUBTREE>` corresponds to a set of repos, such as `24-main` or `25-upcoming`,
+and `<PACKAGE>` is the name of a package to be built.
 
-1.  Make changes
-2.  Make a scratch build
-3.  If you have permissions, push directly upstream
+After making changes to a package, do a scratch build in Koji by running the following
+from the package directory:
 
-        :::console
-        $ git push upstream main
+```console
+$ osg-build koji --scratch
+```
 
-    If you do not have permissions, or want your changes reviewed,
-    push to a branch on your own fork and make a Pull Request
-4.  Make a non-scratch build
+Koji will make builds for the tags appropriate to the subtree the directory is under.
+For example, if you build `24-main/xrootd`, it will be built for the `osg-24-main-*` tags.
+osg-build will print links to where you can watch the build tasks and download the results.
+
+Non-scratch builds require the changes to be pushed to the `main` branch in the upstream
+[osg-htc/software-packaging](https://github.com/osg-htc/software-packaging) repository.
+osg-build will warn you if your local checkout is not up-to-date with upstream,
+or if you are not on the `main` branch.
+
+You should have write permissions to the repository, and be able to push your changes directly, e.g.
+
+```console
+$ git push upstream main
+```
+
+If you do not have write permissions, or want your changes reviewed,
+commit to your own branch and make a pull request.
+
+Once the changes have been merged upstream into `main`, you can do a non-scratch build:
+
+```
+$ osg-build koji
+```
 
 
 ### Building packages for multiple OSG release series
