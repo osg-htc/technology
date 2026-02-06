@@ -530,3 +530,5 @@ Run `osg-build lint <PACKAGEDIR>`.
 #### Promote the latest build of a package to testing for the current OSG release series
 
 Run `osg-promote -r 24-main -r 25-main <PACKAGE>`
+
+<!-- -->
