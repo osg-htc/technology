@@ -15,7 +15,6 @@ nav:
     - Packaging:
       - RPM Development Guide: 'software/rpm-development-guide.md'
       - OSG Build Tools: 'software/osg-build-tools.md'
-      - Using Quilt: 'software/quilt.md'
       - Koji Workflow: 'software/koji-workflow.md'
       - Creating the VO Client Package: 'software/create-vo-client.md'
       - Container Development Guide: 'software/container-development-guide.md'
@@ -70,6 +69,7 @@ nav:
     - 'Globus Toolkit Support': 'policy/globus-toolkit.md'
     - GridFTP and GSI Migration: 'policy/gridftp-gsi-migration.md'
     - 'Repo Layout Migration - Jan 2025': 'policy/repo-layout-migration-2025.md'
+    - 'Packaging SVN to Git Migration': 'policy/packaging-svn-to-git-migration.md'
   - Meetings:
     - December 3, 2024: 'meetings/2024/TechArea20241203.md'
     - November 5, 2024: 'meetings/2024/TechArea20241105.md'
