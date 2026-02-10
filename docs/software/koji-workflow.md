@@ -119,12 +119,12 @@ The most recent build results are always shown on the home page of Koji:
 Clicking on a build result brings you to the build information page. A successful build will result in the build page having build logs, RPMs, and a SRPM.
 
 If your build isn't in the recent list, you can use the search box in the upper-right-hand corner.
-Type the exact package name (or use a wildcard), and it will bring up a list of all builds for that package.
-You can find your build from there. For example, the "xrootd" package page is here:
+Type the exact package name (or use a glob, e.g. `osdf*`), and it will bring up a list of all builds for that package.
+You can find your build from there. For example, the `xrootd` package page is here:
 
 <https://koji.osg-htc.org/koji/packageinfo?packageID=89>
 
-And the xrootd-5.9.1-1.2.osg25.el9 build is here:
+And the `xrootd-5.9.1-1.2.osg25.el9` build is here:
 
 <https://koji.osg-htc.org/koji/buildinfo?buildID=18884>
 
