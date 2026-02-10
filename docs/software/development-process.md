@@ -67,10 +67,7 @@ You should have write permissions to the repository, and be able to push your ch
 $ git push upstream main
 ```
 
-If you do not have write permissions, or want your changes reviewed,
-commit to your own branch and make a pull request.
-
-Once the changes have been merged upstream into `main`, you can do a non-scratch build:
+Once the changes are upstream in `main`, you can do a non-scratch build:
 
 ```
 $ osg-build koji
