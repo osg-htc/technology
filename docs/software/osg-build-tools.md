@@ -81,7 +81,7 @@ git clone https://github.com/osg-htc/docker-osg-build
 ```
 
 Next, run the `initbuilder` script, giving it the directory under which the repo containing the software packaging is.
-For example, if you have your checkout of the [https://github.com/osg-htc/software-packaging](software-packaging repo)
+For example, if you have your checkout of the [software-packaging repo](https://github.com/osg-htc/software-packaging)
 under `~/software-packaging`, run
 
 ```
