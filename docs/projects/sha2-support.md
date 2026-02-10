@@ -3,7 +3,7 @@ SHA-2 Compliance
 
 When a certificate authority signs a certificate, it uses one of several possible hash algorithms. 
 Historically, the most popular algorithms were MD5 (now retired due to security issues) and the SHA-1 family.
-SHA-1 certificates are being phased out due to perceived weaknesses — as of February 2017, a practical attack for generating collisions was demonstrated by [Google researchers](https://shattered.io/static/shattered.pdf).
+SHA-1 certificates are being phased out due to perceived weaknesses — as of February 2017, a practical attack for generating collisions was demonstrated by Google researchers.
  These days, the preferred hash algorithm family is SHA-2.
 
 The certificate authorities (CAs), which issue host and user certificates used widely in the OSG, defaulted to SHA-2-based certificates on 1 October 2013; all sites will need to make sure that their software supports certificates using the SHA-2 algorithms. All supported OSG releases support SHA-2.
