@@ -204,7 +204,7 @@ To promote from development to testing:
 
 #### Using *osg-promote*
 
-Before using `osg-promote`, [authenticate to Koji as above](#authenticating-to-koji).
+Before using `osg-promote`, authenticate to Koji using `kinit` and your Kerberos principal (same as for `osg-build`).
 
 If you want to promote the latest version:
 
