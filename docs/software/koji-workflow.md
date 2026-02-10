@@ -28,19 +28,19 @@ A target is used by the build task to know what repository to build from and tag
 **Task**<br>
 A unit of work for Koji. Several common tasks are:
 
--   build  
+-   build<br>
     This task takes a SRPM and a target, and attempts to create a complete Build in the target's destination tag from the target's build repository. This task will launch one buildArch task for each architecture in the destination tag; if each subtask is successful, then it will launch a tagBuild subtask.
 
     !!! note
         If the build task is marked as "scratch", then it won't result in a saved Build.
 
--   buildArch  
+-   buildArch<br>
     This task takes a SRPM, architecture name, and a Koji repository as an input, and runs `mock` to create output RPMs for that arch. The build artifacts are added to the Build if all buildArch tasks are successful.
 
--   tagBuild  
+-   tagBuild<br>
     This adds a successful build to a given tag.
 
--   newRepo  
+-   newRepo<br>
     This creates a new repository from a given tag.
 
 **Build artifacts**<br>
@@ -169,7 +169,7 @@ You may check the status of regen-repo tasks in the
 
 -   Failed build tasks can be seen from the Koji homepage. The logs from the tasks are included. Relevant logs include:
 
-    -   `root.log`  
+    -   `root.log`<br>
         This is the log of mock trying to create an appropriate build root for your RPM. This will invoke yum twice: once to create a generic build root, once for all the dependencies in your BuildRequires. All RPMs in your build root will be logged here. If mock is unable to create the build root, the reason will show up here.
 
         -   404 Errors
@@ -187,7 +187,7 @@ You may check the status of regen-repo tasks in the
                 :::console
                 $ osg-koji regen-repo <BUILD TAG>
 
-    -   `build.log`  
+    -   `build.log`<br>
         The output of the rpmbuild executable. If your package fails to compile, the reason will show up here.
 
 - Other errors
