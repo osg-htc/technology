@@ -245,7 +245,7 @@ Perform the following actions from the command-line:
 ### Enabling GitHub Actions ###
 
 The new method for validating and publishing OSG pages for a MkDocs repository can be enabled entirely through the
-[GitHub web interface](https://docs.github.com/en/actions/using-workflows/sharing-workflows-secrets-and-runners-with-your-organization#using-a-workflow-template):
+[GitHub web interface](https://docs.github.com/en/actions/how-tos/reuse-automations):
 
 1.  Navigate to the `opensciencegrid` fork of the GitHub repository in your web browser,
     e.g. <https://github.com/opensciencegrid/docs/>
