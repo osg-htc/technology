@@ -1,4 +1,3 @@
-
 Software Development Process
 ============================
 
@@ -12,7 +11,7 @@ Overall Development Cycle
 For a typical update to an existing package, the overall development cycle is roughly as follows:
 
 1.  Download the new upstream source (tarball, source RPM, checkout) into
-    [the UW AFS upstream area](../software/rpm-development-guide.md#upstream-source-cache)
+    [the CHTC upstream area](../software/rpm-development-guide.md#upstream-source-cache)
 2.  In [a checkout of our packaging code](../software/rpm-development-guide.md#revision-control-system),
     update [the reference to the upstream file](../software/rpm-development-guide.md#upstream) and,
     as needed, [the RPM spec file](../software/rpm-development-guide.md#osg)
@@ -21,121 +20,121 @@ For a typical update to an existing package, the overall development cycle is ro
 5.  Optionally, lightly test the new RPM(s); if there are problems, redo previous steps until success
 6.  Use [osg-build](../software/osg-build-tools.md#osg-build) to perform an official build of the updated package
     (which will go into the development repos)
-7.  Perform standard developer testing of the new RPM(s) — see below for details
-8.  Obtain permission from the Software Manager to promote the package
+7.  Perform standard developer testing of the new RPMs; this generally means running the VM Universe tests - see below for details
+8.  Have another software team member review your testing and give you permission to promote the package
 9.  Promote the package to testing — see below for details
 
-Versioning Guidelines
----------------------
-
-OSG-owned software should contain three digits, X.Y.Z, where X represents the major version, Y the minor version,
-and Z the maintenance version.
-New releases of software should increment one of the major, minor, or maintenance according to the following guidelines:
-
--   **Major:** Major new software, typically (but not limited to) full rewrites, new architectures, major new features;
-    can certainly break backward compatibility (but should provide a smooth upgrade path). Worthy of introduction into Upcoming.
--   **Minor:** Notable changes to the software, including significant feature changes, API changes, etc.;
-    may break compatibility, but must provide an upgrade path from other versions within the same Major series.
--   **Maintenance:** Bug fixes, minor feature tweaks, etc.;
-    must not break compatibility with other versions within the same Major.Minor series.
-
-If you are unsure about which version number to increment in a software update, consult the Software Manager.
 
 Build Procedures
 ----------------
 
-<!-- TODO not written yet
-### Verifying builds through GitHub Actions
--->
+
+### Initial repo setup
+
+1.  Create your own fork of the <https://github.com/osg-htc/software-packaging> repository.
+2.  Clone your fork, then add the upstream repository as a remote (replacing `<YOURNAME>` with your GitHub username):
+
+        :::console
+        $ git clone https://github.com/<YOURNAME>/software-packaging
+        $ git remote add upstream https://github.com/osg-htc/software-packaging
+
+
+### Basic building
+
+The software-packaging repository is laid out into `<SUBTREE>/<PACKAGE>` directories,
+where `<SUBTREE>` corresponds to a set of repos, such as `24-main` or `25-upcoming`,
+and `<PACKAGE>` is the name of a package to be built.
+
+After making changes to a package, do a scratch build in Koji by running the following
+from the package directory:
+
+```console
+$ osg-build koji --scratch
+```
+
+Koji will make builds for the tags appropriate to the subtree the directory is under.
+For example, if you build `24-main/xrootd`, it will be built for the `osg-24-main-*` tags.
+osg-build will print links to where you can watch the build tasks and download the results.
+
+Non-scratch builds require the changes to be pushed to the `main` branch in the upstream
+[osg-htc/software-packaging](https://github.com/osg-htc/software-packaging) repository.
+osg-build will warn you if your local checkout is not up-to-date with upstream,
+or if you are not on the `main` branch.
+
+You should have write permissions to the repository, and be able to push your changes directly, e.g.
+
+```console
+$ git push upstream main
+```
+
+Once the changes are upstream in `main`, you can do a non-scratch build:
+
+```
+$ osg-build koji
+```
+
 
 ### Building packages for multiple OSG release series
 
-The OSG Software team supports multiple release series, independent but in parallel to a large degree.
-In many cases, a single package is the same across release series, and therefore we want to build the package once
-and share it among the series.
-The procedure below suggests a way to accomplish this task.
+The OSG Software team supports two release series in parallel;
+many of the packages are identical or very similar between release series,
+and you will be making the same change to a package across both release series.
 
-Current definitions:
+We recommend using a diffing tool such as Meld (Linux) or WinMerge (Windows) that is capable of comparing
+directories and not just individual files, to make sure all the changes are carried over.
 
-- maintenance: OSG 3.4 ( **trunk** )
-- current: OSG 3.5 ( **branches/osg-3.5** )
+This is one example workflow, using the "24-main" and "25-main" release series,
+and the package "xrdcl-pelican" which is identical between the two release series.
 
-<!--
-- future: OSG 3.6 ( *branches/osg-3.6* )
--->
+1.  Make changes to `24-main/xrdcl-pelican` 
+2.  Make a scratch build (e.g. `osg-build koji --scratch 24-main/xrdcl-pelican`)
+3.  Open `24-main/xrdcl-pelican` and `25-main/xrdcl-pelican` in a diffing tool, and copy
+    over all the changes
+4.  `git add` and `git commit` the changes; committing the changes to both series in the same commit
+    means you don't have to write the commit message twice,
+    and `git blame` will be accurate for both release series
+5.  `git push` to the upstream repo
+6.  Make non-scratch builds; use the following procedure to submit both at the same time:
 
-Procedure:
+        :::console
+        $ osg-build koji --nowait 25-main/xrdcl-pelican
+        $ osg-build koji --nowait 24-main/xrdcl-pelican
+        $ osg-koji watch-task --mine
 
 
-1.  Make changes to **trunk**
-2.  Optionally, make and test a scratch build from **trunk**
-3.  Commit the changes
-4.  Make an official build from **trunk** (e.g.: `osg-build koji <PACKAGE>`)
-5.  Perform the standard 4 tests for the **current** series (see below)
-6.  Merge the relevant commits from **trunk** into the **maintenance** branch (see below for tips)
-7.  Optionally, make and test a scratch build from the **maintenance** branch
-8.  Commit the merge
-9.  Make an official build from the **maintenance** branch (e.g.: `osg-build koji --repo=3.4 <PACKAGE>`)
-10. Perform the standard 4 tests for the **maintenance** series (see below)
-11. As needed (or directed by the Software manager), perform the cross-series tests (see below)
+If your development process is more iterative and you need multiple commits,
+you could do something like the following (using `xrootd` as an example):
 
-!!! note
-    Do not change the RPM Release number in the **maintenance** branch before rebuilding;
-    the `%dist` tag will differ automatically, and hence the **maintenance** and **current** NVRs will not conflict.
+1.  Make changes to `24-main/xrootd`
+2.  Make a scratch build as above
+3.  Commit your changes as a "checkpoint"
+4.  Repeat 1-3 as necessary until you think you are ready for a non-scratch build
+5.  Copy your changes to `25-main` using a diffing tool as above
+6.  You now have two options:
 
-<!--
-1. Make changes to the *trunk*
-2. Optionally, make and test a scratch build from the *trunk*
-3. Commit the changes
-4. Make an official build from the *trunk* (e.g.: `osg-build koji <PACKAGE>`)
-5. Perform the standard 4 tests for the *current* series (see below)
-6. Merge the relevant commits from the *trunk* into the *future* branch (see below for tips)
-7. Optionally, make and test a scratch build from the *future* branch
-8. Commit the merge
-9. Make an official build from the *future* branch (e.g.: `osg-build koji --repo=3.6 <PACKAGE>`)
-10. Perform install tests for the *future* series (see below)
-11. As needed (or directed by the Software manager), perform the cross-series tests (see below)
--->
+    -   If you haven't pushed, then you can do an interactive rebase to squash your changes to
+        `24-main` and `25-main` down to one commit
 
-### Merging changes from one release series to another
+    -   If you have already pushed, get a log of the recent changes to `24-main/xrootd`:
 
-These instructions assume that you are merging from `trunk` to `branches/osg-3.5`.
-They also assume that the current directory you are in is a checkout of `branches/osg-3.5`.
-I will use `$pkg` to refer to the name of your package.
+            :::console
+            $ git --no-pager log --oneline --since='last week' --reverse -- 24-main/xrootd
 
-First, you will need the commit numbers for your changes:
+        Copy and paste that to a text editor.
+        Then, when you write the commit message for the commit to `24-main/xrootd`,
+        reference the commits from that command.
+        For example:
 
-    svn log \^/native/redhat/trunk/$pkg | less
+            25-main/xrootd: Update xrootd to 5.8.4 and add various patches
 
-Write down the commits you want to merge.
+            Includes the following commits from 24-main/xrootd:
 
-If you only have one commit, merge that commit with -c as follows:
+            8061d7d40 24-main/xrootd: update to 5.8.4; update patches, bring spec file closer to upstream
+            13b858dce 24-main/xrootd: add some more patches
+            773f57f21 24-main/xrootd: Add TPC worker pool patch
 
-    svn merge -c $commit_num \^/native/redhat/trunk/$pkg $pkg
+        Keeping the Git hashes will make future archaeology easier.
 
-Where `$commit_num` is the SVN revision number of that commit (e.g. 17000).
-Merging an individual change like this is referred to as "cherry-picking".
-
-If you have a range of commits and you wish to merge all commits within that range, then do the following:
-
-    svn merge -r $start_num:$end_num \^/native/redhat/trunk/$pkg $pkg
-
-Where `$start_num` is the SVN revision of the commit *BEFORE* your first commit,
-and `$end_num` is the SVN revision of your last commit in that range.
-**Note:** Be very careful when merging a range from trunk into the maintenance branch
-so that you do not introduce more changes to the maintenance branch than are necessary.
-
-If you have multiple commits but they are not contiguous (i.e. there are commits made by you or someone else in that range
-that you do not want to merge), you will need to cherry-pick each individual commit.
-
-    svn merge -c $commit1 \^/native/redhat/trunk/$pkg $pkg
-    svn merge -c $commit2 \^/native/redhat/trunk/$pkg $pkg
-    ...
-
-Where `$commit1`, `$commit2` are the commit numbers of the individual changes.
-
-Note that merge tracking in recent versions of SVN (1.5 or newer) should prevent commits from accidentally being merged multiple times.
-You should still look out for conflicts and examine the changes via `svn diff` before committing the merge.
 
 Testing Procedures
 ------------------
@@ -147,57 +146,30 @@ Normally, the person who builds a package performs the development testing.
 **If you are not doing your own development testing for a package**, contact the Software Manager
 and/or leave a comment in the associated ticket; otherwise, your package may never be promoted to testing and hence never released.
 
-### The "Standard 4" tests, defined
+Testing should be performed for all distro versions the package is built for,
+and all supported release series.
+In addition to a fresh installation, it is also important to test upgrades
+from a previous version of the software.
 
-In most cases, the Software manager will ask a developer to perform the “standard 4” tests
-on an updated package in a release series before promotion.
-This is a shorthand description for a standard set of 4 test runs:
+### VM Universe (VMU) tests
 
--   Fresh install on el6
--   Fresh install on el7
--   Update install on el6
--   Update install on el7
+These are OSG Software's automated tests, which run in VMs powered by HTCondor's VM universe.
+Each run tests installation and/or upgrades of the listed software,
+using the [OSG-Test test suite](https://github.com/opensciencegrid/osg-test) of integration tests.
 
-An “update install” is a fresh install of the relevant package (or better yet, metapackage that includes it)
-**from the production repository**, followed by an update to the new build **from the development repository**.
+Even if there are no functionality tests for your package in OSG-Test,
+you should run the VMU tests to validate the RPM installation and upgrade process.
 
-For each test run, the amount of functional testing required will vary.
-
--   For very simple changes, it may be sufficient to verify that each installation succeeds and that the expected files are in place
--   For some changes, it may be sufficient to run osg-test on the resulting installation
--   For some changes, it will be necessary to perform careful functional tests of the affected component(s)
-
-If you have questions, check with the Software Manager to determine the amount of testing that is required per test run.
-
-### The "Cross-Series" test, defined
-
-The cross-series test may need to be run for packages that have been built for multiple release series of the OSG software stack (i.e. 3.4 and 3.5):
-
--   On el7, install from the 3.4 repositories, then update from the 3.5 repositories
-
-Viewed another way, this test is similar to the update installs, above, except from 3.4-release to 3.5-development.
-
-### The "Long Tail" tests, defined
-
-These tests may need to be run when updating a package that's also in the old, unsupported (3.3) branch. They will consist of:
-
--   Install from 3.3-release and update to 3.5-development (on el7 only)
-
-### The "full set of tests", defined
-
-All of the tests mentioned above.
-
-### Running the tests in VM Universe
-
-In the case that the package you're testing is covered by osg-tested-internal,
-you can run the full set of tests in a manual VM universe test run.
 Make sure you meet the [pre-requisites](https://github.com/opensciencegrid/vm-test-runs) required
-to submit VM Universe jobs on `osghost.chtc.wisc.edu`.
+to submit VM Universe jobs on `osgsw-ap.chtc.wisc.edu`.
+If you do not have permission to submit VMU runs,
+mention "@Software and Release" on the Jira ticket and a Software Team member will run the tests for you.
+
 After that's done, prepare the test suite with a comment describing the test run.
 For example, if you were testing a new `htcondor-ce` package:
 
 ``` console
-osg-run-tests 'Testing htcondor-ce-3.2.1-1'
+osg-run-tests 'Testing htcondor-ce-3.2.1-1 (SOFTWARE-####)'
 ```
 
 After you `cd` into the directory specified in the output of the previous command,
@@ -207,8 +179,10 @@ i.e. clean installs, upgrade installs and upgrade installs between OSG versions.
 Once you're satisfied with your list of parameters, submit the dag:
 
 ``` console
-condor_submit_dag master-run.dag
+./master-run.sh
 ```
+
+
 
 Promoting a Package to Testing
 ------------------------------
@@ -222,44 +196,38 @@ essentially restarting the development cycle.
 ### Preparing a Good Promotion Request
 
 Developers must obtain permission from the OSG Software manager to promote a package from development to testing.
-A promotion request goes into at least one affected JIRA ticket and will be answered there as well.
+A promotion request goes into at least one affected Jira ticket and will be answered there as well.
 Below are some tips for writing a good promotion request:
 
 -   Make sure that relevant information about goals, history, and resolution is in the associated ticket(s)
--   Include globs for the NVRs to be promoted (or a detailed list, if it is that complicated, which it almost never is)
--   If you ran automated tests:
-    -   Link to the results page(s)
-    -   Verify that relevant tests ran successfully (as opposed to being skipped or failing) – briefly summarize your findings
-    -   Note whether the automated tests are just regression tests or actually test the current change(s)
-    -   If there are **any** failures, explain why they are not important to the promotion request
--   If you ran manual tests:
-    -   Summarize your tests and findings
-    -   If there were failures, explain why they are not important to the promotion request
--   If there are critical build dependencies that we typically check, include reports from the `built-against-pkgs` tool
-    -   Note: This step is really just for known, specific cases, like the {HTCondor, BLAHP} set
-    -   Occasionally, the OSG Software manager will request the tool to be run for other cases
--   If other packages depend on the to-be-promoted package, explain whether the dependent packages must be rebuilt or, if not, why not
+-   List the NVRs of the builds to be promoted, as well as the tags they will be promoted into.
+    If a version was not built for a particular platform, mention why not.
+-   Link to the results page of the VMU tests.
+    Make sure the tests actually installed the version to be promoted.
+    Explain any failures.
+-   If you ran manual tests, summarize your tests and findings, and explain any failures.
 
-For example (hypothetical promotion request for HTCondor-CE):
+For example (hypothetical promotion request for XRootD):
 
-> May I promote `htcondor-ce-2.3.4-2.osg3*.el*`? I ran a complete set of automated tests <LINK THE PRECEDING TEXT OR SEPARATELY HERE\>;
-> the HTCondor-CE tests ran and passed in all cases. There were some spurious failures of RSV in the All condition for RHEL 6,
-> but this is a known failure case that is independent of HTCondor-CE. I also did a few spot checks manually
-> (one VM each for SL 6 and SL 7), and in each case setting `use_frobnosticator = true` in the configuration resulted in
-> the expected behavior as defined in the description field above.
-> The `built-against-pkgs` tool shows that I built against all the latest HTCondor and BLAHP builds, see below.
-> <JIRA-formatted table comes after\>
+> VMU test results are at <LINK TO TEST RESULTS PAGE\>;
+> tests passed except for StashCache tests on EL10 because the package is
+> not available on that platform.  I tested turning on the new knob in a container
+> and was able to pull a file from the server successfully.
+> @Software and Release, permission to promote `xrootd-5.9.9-9` to `24-main-testing`
+> and `25-main-testing`?
 
 ### Promoting
 
 Follow these steps to request promotion, promote a package, and note the promotion in JIRA:
 
-1.  Make sure the package update has at least one associated JIRA ticket;
-    if there is no ticket, at least create one for releasing the package(s)
-2.  Obtain permission to promote the package(s) from the Software Manager (see above)
+1.  Make sure the package update has at least one associated Jira ticket;
+    if there is no ticket, create one for releasing the package(s).
+2.  Obtain permission to promote the package(s) from one of the Software Team members,
+    by mentioning "@Software and Release" in the Jira ticket.
 3.  Use [osg-promote](../software/osg-build-tools.md#osg-promote) to promote the package(s) from development to testing
-4.  Comment on the associated JIRA ticket(s) with osg-promote's JIRA-formatted output (or at least the build NVRs) and,
-    if you know, suggestions for acceptance testing
-1.  Update the JIRA ticket description with a bulleted list describing changes in the promoted version(s) compared to
-    the currently released version(s)
-5.  Mark each associated JIRA ticket as “Ready For Testing”
+4.  Comment on the associated Jira ticket(s) with osg-promote's Jira-formatted output (or at least the build NVRs) and,
+    if you know, suggestions for acceptance testing.
+6.  Update the Jira ticket description with a short blurb about the important changes in the new version vs. the old version,
+    so it can be used in the release notes.
+7.  Mark the Jira ticket for the package as “Ready For Testing”;
+    tickets related to this version (e.g. for specific changes) should also be marked “Ready For Testing”.
