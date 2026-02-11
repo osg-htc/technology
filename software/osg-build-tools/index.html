@@ -642,8 +642,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-vcs-no-vcs-svn-no-svn" class="md-nav__link">
-    --vcs, --no-vcs, --svn, --no-svn
+  <a href="#-vcs-git-svn" class="md-nav__link">
+    --vcs, --git, --svn
   </a>
   
 </li>
@@ -879,15 +879,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-and-test-a-final-build-of-a-package-for-all-platforms-for-upcoming" class="md-nav__link">
-    Create and test a final build of a package for all platforms for upcoming
+  <a href="#promote-the-latest-build-of-a-package-to-testing-for-the-osg-24-release-series" class="md-nav__link">
+    Promote the latest build of a package to testing for the OSG 24 release series
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#promote-the-latest-build-of-a-package-to-testing-for-the-current-osg-release-series" class="md-nav__link">
-    Promote the latest build of a package to testing for the current OSG release series
+  <a href="#promote-the-latest-build-of-a-package-to-testing-for-both-the-osg-24-and-25-release-series" class="md-nav__link">
+    Promote the latest build of a package to testing for both the OSG 24 and 25 release series
   </a>
   
 </li>
@@ -901,18 +901,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../quilt/" class="md-nav__link">
-        Using Quilt
-      </a>
     </li>
   
 
@@ -1686,6 +1674,18 @@
     <li class="md-nav__item">
       <a href="../../policy/repo-layout-migration-2025/" class="md-nav__link">
         Repo Layout Migration - Jan 2025
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/packaging-svn-to-git-migration/" class="md-nav__link">
+        Packaging SVN to Git Migration
       </a>
     </li>
   
@@ -2558,8 +2558,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-vcs-no-vcs-svn-no-svn" class="md-nav__link">
-    --vcs, --no-vcs, --svn, --no-svn
+  <a href="#-vcs-git-svn" class="md-nav__link">
+    --vcs, --git, --svn
   </a>
   
 </li>
@@ -2795,15 +2795,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-and-test-a-final-build-of-a-package-for-all-platforms-for-upcoming" class="md-nav__link">
-    Create and test a final build of a package for all platforms for upcoming
+  <a href="#promote-the-latest-build-of-a-package-to-testing-for-the-osg-24-release-series" class="md-nav__link">
+    Promote the latest build of a package to testing for the OSG 24 release series
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#promote-the-latest-build-of-a-package-to-testing-for-the-current-osg-release-series" class="md-nav__link">
-    Promote the latest build of a package to testing for the current OSG release series
+  <a href="#promote-the-latest-build-of-a-package-to-testing-for-both-the-osg-24-and-25-release-series" class="md-nav__link">
+    Promote the latest build of a package to testing for both the OSG 24 and 25 release series
   </a>
   
 </li>
@@ -2893,9 +2893,10 @@ To get UW-Madison Kerberos credentials, you will need to be inside the UW Campus
 </code></pre></div>
 
 <p>Next, run the <code>initbuilder</code> script, giving it the directory under which the repo containing the software packaging is.
-For example, if you have your checkout of the VDT SVN repo under <code>~/native/redhat</code>, run</p>
+For example, if you have your checkout of the <a href="https://github.com/osg-htc/software-packaging">software-packaging repo</a>
+under <code>~/software-packaging</code>, run</p>
 <div class="codehilite"><pre><span></span><code>cd docker-osg-build
-./initbuilder ~/native/redhat
+./initbuilder ~/software-packaging
 </code></pre></div>
 
 <p>Answer the configuration questions from initbuilder.</p>
@@ -3071,9 +3072,20 @@ The sources are unpacked into <code>_quilt</code>; they will be in pre-patch sta
 <p>Start a <code>regen-repo</code> koji task on the build tag after each koji build, to update the build repository used for the next build. Not useful unless you are launching multiple builds. This enables you to launch builds that depend on each other. Doesn't work too well with <code>--no-wait</code>, since the next build may be started before the regen-repo task is complete. Waiting will keep the next build from being queued until the regen-repo is complete.</p>
 <h5 id="-scratch-no-scratch">--scratch, --no-scratch<a class="headerlink" href="#-scratch-no-scratch" title="Permanent link">&para;</a></h5>
 <p>Perform scratch builds. A scratch build does not go into a repository, but the name-version-release (NVR) of the created RPMs are not considered used, so the build may be modified and repeated without needing a release bump. This has the same use case as the mock task: creating packages that you want to test before releasing. If you do not have a machine with mock set up, or want to test exactly the environment that Koji provides, scratch builds might be more convenient.</p>
-<h5 id="-vcs-no-vcs-svn-no-svn">--vcs, --no-vcs, --svn, --no-svn<a class="headerlink" href="#-vcs-no-vcs-svn-no-svn" title="Permanent link">&para;</a></h5>
-<p>Have Koji check the package out from a version control system instead of creating an SRPM on the local machine and submitting that to Koji. Currently, SVN and Git are supported. If this flag is specified, you may use SVN URLs or URL@Revision pairs to specify the packages to build. You may continue specify package directories from an SVN checkout, in which case osg-build will use <code>svn info</code> to find the right URL@Revision pair to use and warn you about uncommitted changes. osg-build will also warn you about an outdated working directory.</p>
-<p><code>--vcs</code> defaults to <code>true</code> for non-scratch builds, and <code>false</code> for scratch builds.</p>
+<h5 id="-vcs-git-svn">--vcs, --git, --svn<a class="headerlink" href="#-vcs-git-svn" title="Permanent link">&para;</a></h5>
+<p>Have Koji check the package out from a version control system instead of creating an SRPM on the local machine and submitting that to Koji.
+This is always true for non-scratch builds.</p>
+<p>If this flag is specified, you may use Git URLs to specify the packages to builds.</p>
+<p>A Git URL looks like <code>git+REPO?DIRECTORY#BRANCH</code>, e.g.</p>
+<div class="codehilite"><pre><span></span><code>git+https://github.com/osg-htc/software-packaging.git?24-main/xrootd#main`
+</code></pre></div>
+
+<p>(the <code>#main</code> at the end, specifying the <code>main</code> branch, is optional).</p>
+<p>You can also use SVN URLs to build from the old SVN repository, such as</p>
+<div class="codehilite"><pre><span></span><code>svn+https://vdt.cs.wisc.edu/svn/native/redhat/branches/24-main/xrootd#28000
+</code></pre></div>
+
+<p>(the <code>#28000</code> at the end, specifying commit 28000, is optional).</p>
 <h5 id="-repodestination-repository">--repo=<em>destination repository</em><a class="headerlink" href="#-repodestination-repository" title="Permanent link">&para;</a></h5>
 <p>Selects the repository (24-main, 24-upcoming, etc.) to build packages for.
 See <code>--repo-list</code> for a list of repositories.</p>
@@ -3154,20 +3166,27 @@ It automatically specifies parameters to access the OSG's koji instance.</p>
 <p>Run <code>osg-build prepare &lt;PACKAGEDIR&gt;</code>. Look inside the <code>_build_results</code> directory.</p>
 <h4 id="see-which-patches-work-with-a-new-version-of-a-package-update-or-remove-them">See which patches work with a new version of a package, update or remove them<a class="headerlink" href="#see-which-patches-work-with-a-new-version-of-a-package-update-or-remove-them" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Place the new source tarball into the upstream cache, edit the version in the spec file and *.sources files as necessary</li>
-<li>Run <code>osg-build quilt &lt;PACKAGEDIR&gt;</code>.</li>
-<li>Enter the extracted sources inside the <code>_final_srpm_contents</code> directory. You should see a file called <code>series</code> and a symlink called <code>patches</code>.</li>
-<li>Type <code>quilt series</code> to get a list of patches in order of application.</li>
-<li>Type <code>quilt push</code> to apply the next patch.<ul>
+<li>Place the new source tarball into the upstream cache, edit the version in the spec file and *.source files as necessary</li>
+<li>Run <code>osg-build quilt &lt;PACKAGEDIR&gt;</code></li>
+<li>Enter the extracted sources inside the <code>_quilt</code> directory.
+    You should see a file called <code>series</code> and a symlink called <code>patches</code></li>
+<li>Run <code>quilt series</code> to get a list of patches in order of application</li>
+<li>Run <code>quilt push</code> to apply the next patch;<ul>
 <li>If the patch applies cleanly, continue.</li>
-<li>If the patch applies with some fuzz, type <code>quilt refresh</code> to update the offsets in the patch.</li>
-<li>If the patch does not apply and you wish to remove it, type <code>quilt delete &lt;PATCH NAME&gt;</code> (delete only removes it from the series file, not the disk)</li>
-<li>If the patch does not apply and you wish to fix it, either type <code>quilt push -f</code> to interactively apply the patch, or <code>quilt delete &lt;PATCH NAME&gt;</code> the patch and use <code>quilt new</code> / <code>quilt edit</code> / <code>quilt refresh</code> to edit files and make a new patch from your changes. Consult the <code>quilt(1)</code> manpage for more info.</li>
+<li>If the patch applies with some fuzz, run <code>quilt refresh</code> to update the offsets in the patch.</li>
+<li>If the patch does not apply and you wish to remove it, run <code>quilt delete &lt;PATCH NAME&gt;</code> (delete only removes it from the series file, not the disk)</li>
+<li>If the patch does not apply and you wish to fix it, your options are:
+        1.  Force-apply the patch by running <code>quilt push -f</code>.
+            Then, manually examine the rejected changes (*.rej files) and make the changes to the corresponding original files.
+            Then, run <code>quilt refresh</code> to edit the patch and incorporate your changes.
+        2.  Alternatively, delete the patch from the series file by running <code>quilt delete &lt;PATCH NAME&gt;</code>.
+            Then, use <code>quilt new</code>, <code>quilt edit</code>, and <code>quilt refresh</code> and make a new patch.
+            Consult the <code>quilt(1)</code> manpage for more info.</li>
 </ul>
 </li>
 <li>If you have a new patch, run <code>quilt import &lt;PATCHFILE&gt;</code> to add the patch to the series file, and run <code>quilt push</code> to apply it.</li>
-<li>If you have changes to make to the source code that you want to save as a patch, type <code>quilt new &lt;PATCHNAME&gt;</code>, edit the files, type <code>quilt add &lt;FILE&gt;</code> on each file you edited, then type <code>quilt refresh</code> to recreate the patch.</li>
-<li>Once you're all done, copy the patches in the <code>patches/</code> directory to the <code>osg/</code> dir in SVN, run <code>quilt series</code> to get the application order and update the spec file accordingly.</li>
+<li>If you have changes to make to the source code that you want to save as a patch, run <code>quilt new &lt;PATCHNAME&gt;</code>, edit the files, run <code>quilt add &lt;FILE&gt;</code> on each file you edited, then run <code>quilt refresh</code> to recreate the patch.</li>
+<li>Once you're all done, copy the patches in the <code>patches/</code> directory to the <code>osg/</code> dir in the packaging repository, run <code>quilt series</code> to get the application order and update the spec file accordingly.</li>
 </ol>
 <h4 id="see-if-a-package-builds-successfully-for-osg-24-main">See if a package builds successfully for OSG 24 main<a class="headerlink" href="#see-if-a-package-builds-successfully-for-osg-24-main" title="Permanent link">&para;</a></h4>
 <ul>
@@ -3175,15 +3194,9 @@ It automatically specifies parameters to access the OSG's koji instance.</p>
 </ul>
 <h4 id="check-for-potential-errors-in-a-package">Check for potential errors in a package<a class="headerlink" href="#check-for-potential-errors-in-a-package" title="Permanent link">&para;</a></h4>
 <p>Run <code>osg-build lint &lt;PACKAGEDIR&gt;</code>.</p>
-<h4 id="create-and-test-a-final-build-of-a-package-for-all-platforms-for-upcoming">Create and test a final build of a package for all platforms for upcoming<a class="headerlink" href="#create-and-test-a-final-build-of-a-package-for-all-platforms-for-upcoming" title="Permanent link">&para;</a></h4>
-<ol>
-<li><code>svn commit</code> your changes in <code>branches/upcoming</code>.</li>
-<li>Type <code>osg-build koji --repo=upcoming &lt;PACKAGEDIR&gt;</code></li>
-<li>Wait for the <code>osg-upcoming-minefield</code> repos to be regenerated containing the new version of your package. You can run <code>osg-koji wait-repo osg-upcoming-el&lt;X&gt;-development --build=&lt;PACKAGENAME-VERSION-RELEASE&gt;</code> and wait for that process to finish (substitute <code>6</code> or <code>7</code> for <em>X</em>). Or, you can just check kojiweb <a href="https://koji.osg-htc.org/koji/tasks">https://koji.osg-htc.org/koji/tasks</a>.</li>
-<li>On your test machine, make sure the <code>osg-upcoming-minefield</code> repo is enabled (edit <code>/etc/yum.repos.d/osg-upcoming-minefield.repo</code> or <code>/etc/yum.repos.d/osg-el6-upcoming-minefield.repo</code>). Clean your cache (<code>yum clean all; yum clean expire-cache</code>).</li>
-<li>Install your software, see if it works.</li>
-</ol>
-<h4 id="promote-the-latest-build-of-a-package-to-testing-for-the-current-osg-release-series">Promote the latest build of a package to testing for the current OSG release series<a class="headerlink" href="#promote-the-latest-build-of-a-package-to-testing-for-the-current-osg-release-series" title="Permanent link">&para;</a></h4>
+<h4 id="promote-the-latest-build-of-a-package-to-testing-for-the-osg-24-release-series">Promote the latest build of a package to testing for the OSG 24 release series<a class="headerlink" href="#promote-the-latest-build-of-a-package-to-testing-for-the-osg-24-release-series" title="Permanent link">&para;</a></h4>
+<p>Run <code>osg-promote -r 24-main &lt;PACKAGE&gt;</code></p>
+<h4 id="promote-the-latest-build-of-a-package-to-testing-for-both-the-osg-24-and-25-release-series">Promote the latest build of a package to testing for both the OSG 24 and 25 release series<a class="headerlink" href="#promote-the-latest-build-of-a-package-to-testing-for-both-the-osg-24-and-25-release-series" title="Permanent link">&para;</a></h4>
 <p>Run <code>osg-promote -r 24-main -r 25-main &lt;PACKAGE&gt;</code></p>
 <!-- -->
                 
@@ -3219,13 +3232,13 @@ It automatically specifies parameters to access the OSG's koji instance.</p>
         </a>
       
       
-        <a href="../quilt/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../koji-workflow/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Using Quilt
+              Koji Workflow
             </div>
           </div>
           <div class="md-footer__button md-icon">

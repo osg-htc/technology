@@ -349,22 +349,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#subversion-access" class="md-nav__link">
-    Subversion Access
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#osg-owned-software" class="md-nav__link">
-    OSG-Owned Software
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#packaging-top-level-directory-organization" class="md-nav__link">
-    Packaging Top-Level Directory Organization
+  <a href="#software-packaging-repo-access" class="md-nav__link">
+    Software Packaging Repo Access
   </a>
   
 </li>
@@ -625,18 +611,6 @@
     <li class="md-nav__item">
       <a href="../osg-build-tools/" class="md-nav__link">
         OSG Build Tools
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../quilt/" class="md-nav__link">
-        Using Quilt
       </a>
     </li>
   
@@ -1416,6 +1390,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/packaging-svn-to-git-migration/" class="md-nav__link">
+        Packaging SVN to Git Migration
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -2002,22 +1988,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#subversion-access" class="md-nav__link">
-    Subversion Access
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#osg-owned-software" class="md-nav__link">
-    OSG-Owned Software
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#packaging-top-level-directory-organization" class="md-nav__link">
-    Packaging Top-Level Directory Organization
+  <a href="#software-packaging-repo-access" class="md-nav__link">
+    Software Packaging Repo Access
   </a>
   
 </li>
@@ -2298,7 +2270,7 @@
 <ul>
 <li>To participate in the packaging community: You must subscribe to the
     <a href="https://groups.google.com/u/1/a/osg-htc.org/g/software-discuss/members">software-discuss@osg-htc.org</a> email list.</li>
-<li>To create and edit packages: <a href="http://vdt.cs.wisc.edu/internal/svn.html">Obtain access to VDT SVN</a>.</li>
+<li>To create and edit packages: <a href="https://github.com/osg-htc/software-packaging">Obtain access to the OSG Software-Packaging repo</a>.</li>
 <li>To upload new source tarballs: You must have a CHTC account with write access to the OSG source tarball directory.</li>
 <li>To build using the OSG's Koji build system, you must be able to get a Kerberos ticket with either an @AD.WISC.EDU or @FNAL.GOV principal;
     Send email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;">&#104;&#101;&#108;&#112;&#64;&#111;&#115;&#103;&#45;&#104;&#116;&#99;&#46;&#111;&#114;&#103;</a> to request access to the build system.
@@ -2365,77 +2337,21 @@ To upload files to the cache, you must have shell access to the OSG Software Acc
 <p>It is also possible to pull sources and spec files from remote Git or GitHub repos instead of our source cache.
 See the <a href="#upstream">upstream dir info</a> for more information.</p>
 <h3 id="revision-control-system">Revision Control System<a class="headerlink" href="#revision-control-system" title="Permanent link">&para;</a></h3>
-<p>All packages that the OSG Software Team releases are checked into our Subversion repository.</p>
-<h4 id="subversion-access">Subversion Access<a class="headerlink" href="#subversion-access" title="Permanent link">&para;</a></h4>
-<p>Our Subversion repository is located at:</p>
+<p>All packages that the OSG Software Team releases are checked into the Software Packaging repository.</p>
+<h4 id="software-packaging-repo-access">Software Packaging Repo Access<a class="headerlink" href="#software-packaging-repo-access" title="Permanent link">&para;</a></h4>
+<p>The OSG Software Packaging repo is located at</p>
 <blockquote>
-<div class="codehilite"><pre><span></span><code>https://vdt.cs.wisc.edu/svn
-</code></pre></div>
-
+<p><a href="https://github.com/osg-htc/software-packaging">https://github.com/osg-htc/software-packaging</a></p>
 </blockquote>
-<p><a href="http://vdt.cs.wisc.edu/internal/svn.html">Procedure for offsite users obtaining access to Subversion</a></p>
-<p>Or, from a UW–Madison Computer Sciences machine:</p>
+<p>The repo is organized as follows:</p>
 <blockquote>
-<div class="codehilite"><pre><span></span><code>file:///p/condor/workspaces/vdt/svn
-</code></pre></div>
-
+<p><code>&lt;SUBTREE&gt;/&lt;PACKAGE&gt;</code></p>
 </blockquote>
-<p>The current SVN directory housing our native package work is <code>$SVN/native/redhat</code> (where <code>$SVN</code> is one of the ways of accessing our SVN repository above). For example, to check out the current package repository via HTTPS, do:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[you@host]$ </span>svn co https://vdt.cs.wisc.edu/svn/native/redhat
-</code></pre></div>
-
-<h4 id="osg-owned-software">OSG-Owned Software<a class="headerlink" href="#osg-owned-software" title="Permanent link">&para;</a></h4>
-<p>OSG-owned software goes into GitHub under the <code>opensciencegrid</code> organization. Files are organized as the developer sees fit.</p>
-<p>It is strongly recommended that each software package include a top-level Makefile with at least the following targets:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Symbol</th>
-<th align="left">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>install</code></td>
-<td align="left">Install the software into final FHS locations rooted at <code>DESTDIR</code></td>
-</tr>
-<tr>
-<td align="left"><code>dist</code></td>
-<td align="left">Create a distribution source tarball (in the current section directory) for a release</td>
-</tr>
-<tr>
-<td align="left"><code>upstream</code></td>
-<td align="left">Install the distribution source tarball into the upstream source cache</td>
-</tr>
-</tbody>
-</table>
-<h4 id="packaging-top-level-directory-organization">Packaging Top-Level Directory Organization<a class="headerlink" href="#packaging-top-level-directory-organization" title="Permanent link">&para;</a></h4>
-<p>The top levels of our Subversion directory hierarchy for packaging are as follows:</p>
-<blockquote>
-<p><code>native/redhat/&lt;SECTION&gt;/&lt;PACKAGE&gt;</code></p>
-</blockquote>
-<p>where:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Symbol</th>
-<th align="left">Definition</th>
-<th align="left">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>&lt;SECTION&gt;</code></td>
-<td align="left">Development section</td>
-<td align="left">Standard Subversion sections like <code>trunk</code> and <code>branches/*</code></td>
-</tr>
-<tr>
-<td align="left"><code>&lt;PACKAGE&gt;</code></td>
-<td align="left">Our standardized name for a source package</td>
-<td align="left"><code>ndt</code></td>
-</tr>
-</tbody>
-</table>
+<p>where a subtree corresponds to a set of OSG Software repos such as <code>25-main</code>, <code>24-upcoming</code>, etc.</p>
+<p>For example, the package directory for <code>xrootd</code> for the <code>osg-25-main-*</code> tags are located in
+<code>25-main/xrootd</code></p>
+<p>The subtree must correspond to the repos being built to.
+For example, you may not build into <code>osg-25-main-*</code> from the <code>24-upcoming</code> subtree.</p>
 <h4 id="package-directory-organization">Package Directory Organization<a class="headerlink" href="#package-directory-organization" title="Permanent link">&para;</a></h4>
 <p>Within a source package directory, the following files (detailed in separate sections below) may exist:</p>
 <table>
@@ -2775,7 +2691,8 @@ For example, you can use this to make scratch builds of the current master:</p>
 </blockquote>
 <h3 id="build-process">Build Process<a class="headerlink" href="#build-process" title="Permanent link">&para;</a></h3>
 <ol>
-<li>All necessary information to create the package will be committed to the VDT source code repository (see below)</li>
+<li>All necessary information to create the package will be committed to the
+    OSG Software Packaging repository (see below)</li>
 <li>The <a href="../osg-build-tools/">OSG build tools</a> will take those files, create a source RPM, and submit it to our Koji build system</li>
 </ol>
 <p>Developers may use <code>rpmbuild</code> and <code>mock</code> for faster iterative development before submitting the package to Koji. <code>osg-build</code> may be used as a wrapper script around <code>rpmbuild</code> and <code>mock</code>.</p>
