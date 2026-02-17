@@ -1,363 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://osg-htc.org/technology/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/rpm-development-guide/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/osg-build-tools/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/koji-workflow/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/create-vo-client/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/container-development-guide/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/koji-mass-rebuilds/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/development-process/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/git-software-development/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/ce-test-scaling/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/ipv6-testing/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/requesting-tokens/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/ospool-containers/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/software-support/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/effort-tracking/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/new-team-member/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/software/user-certs/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/cut-sw-release/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/announce-rft-packages/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/new-release-series/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/new-os-series/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/release-eol/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/itb-testing/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/release/empty-pkgs/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/operations/comanage-sop/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/operations/comanage-recipes/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/operations/comanage-troubleshooting-guide/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/campus-cyberinfrastructure/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/collab-bearer-tokens/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/external-oasis-repos/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/flexible-release-model/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/software-release/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/container-release/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/community-testing/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/new-ospool-user/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/topology-registration/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/documentation/writing-documentation/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/documentation/reviewing-documentation/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/documentation/style-guide/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/documentation/publish-osg-pages/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/service-migrations-spring-2018/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/gums-retire/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/bestman2-retire/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/voms-admin-retire/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/projects/sha2-support/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/documentation/markdown-migration/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/cream-support/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/globus-toolkit/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/gridftp-gsi-migration/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/repo-layout-migration-2025/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/policy/packaging-svn-to-git-migration/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20241203/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20241105/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20241029/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20241015/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20241008/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20241001/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240924/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240903/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240827/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240820/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240813/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240806/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240730/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240723/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240716/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240702/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240625/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240618/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240611/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240528/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240521/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240514/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240507/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240430/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240416/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240409/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240402/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240319/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240312/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240305/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240227/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240220/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240213/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240206/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240130/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240123/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240116/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240109/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://osg-htc.org/technology/meetings/2024/TechArea20240102/</loc>
-     <lastmod>2026-02-11</lastmod>
+     <lastmod>2026-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

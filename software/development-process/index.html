@@ -1841,10 +1841,10 @@ It is meant to be the central source for all development processes for the Softw
 </ol>
 <h2 id="build-procedures">Build Procedures<a class="headerlink" href="#build-procedures" title="Permanent link">&para;</a></h2>
 <h3 id="initial-repo-setup">Initial repo setup<a class="headerlink" href="#initial-repo-setup" title="Permanent link">&para;</a></h3>
+<p>The software packaging repo does not use the typical GitHub pull-request workflow.
+You do not need to make your own fork; instead, push directly to the upstream repository.</p>
 <ol>
-<li>Create your own fork of the <a href="https://github.com/osg-htc/software-packaging">https://github.com/osg-htc/software-packaging</a> repository.</li>
-<li>Clone your fork, then add the upstream repository as a remote (replacing <code>&lt;YOURNAME&gt;</code> with your GitHub username):<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>git clone https://github.com/&lt;YOURNAME&gt;/software-packaging
-<span class="gp">$ </span>git remote add upstream https://github.com/osg-htc/software-packaging
+<li>Clone the <a href="https://github.com/osg-htc/software-packaging">https://github.com/osg-htc/software-packaging</a> repository.<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>git clone https://github.com/osg-htc/software-packaging
 </code></pre></div>
 
 </li>
@@ -1865,8 +1865,8 @@ osg-build will print links to where you can watch the build tasks and download t
 <a href="https://github.com/osg-htc/software-packaging">osg-htc/software-packaging</a> repository.
 osg-build will warn you if your local checkout is not up-to-date with upstream,
 or if you are not on the <code>main</code> branch.</p>
-<p>You should have write permissions to the repository, and be able to push your changes directly, e.g.</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>git push upstream main
+<p>Push your changes directly, e.g.:</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>git push origin main
 </code></pre></div>
 
 <p>Once the changes are upstream in <code>main</code>, you can do a non-scratch build:</p>
