@@ -31,12 +31,13 @@ Build Procedures
 
 ### Initial repo setup
 
-1.  Create your own fork of the <https://github.com/osg-htc/software-packaging> repository.
-2.  Clone your fork, then add the upstream repository as a remote (replacing `<YOURNAME>` with your GitHub username):
+The software packaging repo does not use the typical GitHub pull-request workflow.
+You do not need to make your own fork; instead, push directly to the upstream repository.
+
+1.  Clone the <https://github.com/osg-htc/software-packaging> repository.
 
         :::console
-        $ git clone https://github.com/<YOURNAME>/software-packaging
-        $ git remote add upstream https://github.com/osg-htc/software-packaging
+        $ git clone https://github.com/osg-htc/software-packaging
 
 
 ### Basic building
@@ -61,10 +62,10 @@ Non-scratch builds require the changes to be pushed to the `main` branch in the 
 osg-build will warn you if your local checkout is not up-to-date with upstream,
 or if you are not on the `main` branch.
 
-You should have write permissions to the repository, and be able to push your changes directly, e.g.
+Push your changes directly, e.g.:
 
 ```console
-$ git push upstream main
+$ git push origin main
 ```
 
 Once the changes are upstream in `main`, you can do a non-scratch build:
