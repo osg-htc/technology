@@ -17,6 +17,11 @@ Requirements
 -   `release-tools` scripts in your `PATH` ([GitHub](https://github.com/opensciencegrid/release-tools))
 -   `osg-build` scripts in your `PATH` (installed via OSG yum repos or [source](https://github.com/opensciencegrid/osg-build))
 
+!!! note
+    The release procedure requires running scripts on both `dumbo` (for AFS-facing operations) and your personal laptop
+    (for koji-facing operations). The correct host for each command is indicated by a shell comment in this documentation.
+    Ensure you are running each command on the correct host.
+
 Promoting Packages from Testing to Pre-release
 ----------------------------------------------
 
@@ -194,7 +199,12 @@ VERSIONS='<VERSION(S)>'
 ### Step 4: Install the tarballs into OASIS
 
 !!! note
-    You must be an OASIS manager of the `mis` VO to do these steps. Known managers as of 2014-07-22: Mat, Tim C, Tim T, Brian L. 
+    You must be an OASIS manager of the `mis` VO to do these steps. Known managers as of 2025-02-13: Mat, Tim C, Tim T, Brian L, Matt W. 
+
+!!! note
+    Ensure you've [added your SSH key to oasis](https://osg-htc.org/docs/common/contact-registration/#oasis-managers-adding-an-ssh-key) prior
+    to running this step. Also, ensure you've [enabled SSH agent forwarding](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/using-ssh-agent-forwarding)
+    from a host with your SSH key (such as your laptop) to dumbo.
 
 Get the uploader script from Git and run it with `osgrun` from the UW AFS install of the tarball client you made earlier. On a UW CSL machine:
 
@@ -244,7 +254,7 @@ Once the web page is updated, run the following command to update the CA certifi
 verify that the version of the CA certificates match the version that was promoted to release.
 
 ```bash
-# moria.cs.wisc.edu
+# dumbo.chtc.wisc.edu
 /p/vdt/workspace/tarball-client/current/amd64_rhel7/osgrun osg-update-data
 ```
 
