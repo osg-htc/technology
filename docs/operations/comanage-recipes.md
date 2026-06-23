@@ -41,9 +41,10 @@ Each group needs a unique OSG group ID number or `OSG GID`, assigned from the no
 Run the following command on a host with `ldapsearch` capability (like ap40) to find
  the highest / most recently assigned `OSG GID`.
 
-    sudo ldapsearch -H ldaps://ldap.cilogon.org -D uid=readonly_user,ou=system,o=OSG,o=CO,dc=cilogon,dc=org \
-    -w $(sudo awk '/ldap_default_authtok/ {print $3}' /etc/sssd/conf.d/0060_domain_CILOGON.ORG.conf) \
-    -b ou=groups,o=OSG,o=CO,dc=cilogon,dc=org -s one '(cn=*)' | grep "gidNumber" | sort | tail
+    sudo ldapsearch -H ldaps://ldap-replica-1.osg.chtc.io -D cn=readonly,ou=system,dc=osg-htc,dc=org \
+    -w $(sudo awk '/ldap_default_authtok/ {print $3}' /etc/sssd/conf.d/0070_domain_OSG-HTC.ORG.conf) \
+    -E pr=500/noprompt -b  ou=groups,dc=osg-htc,dc=org \
+    -s one '(gidNumber=*)' gidNumber | grep "gidNumber:" | sort | tail
 
 ### Set OSG GID and OSG Group Name Identifiers
 
