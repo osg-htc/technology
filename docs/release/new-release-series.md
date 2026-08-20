@@ -33,6 +33,36 @@ Prepare Koji and OSG-Build
         and template code for generating the `sign.conf` config blocks for those tags.
         Tags for EL9 and newer distros should have `gpg_digest_algo = sha256` set.
 
+        -  Encrypt the Public Key ID as `osg2X_gpg_name` and the Yubikey PIN as `osg2X_gpg_pass` via `ansible-vault encrypt_string`:
+
+                :::console
+                $ ansible-vault encrypt_string --stdin_name osg2X_gpg_(name|pass)
+                New Vault password: 
+                Confirm New Vault password: 
+                Reading plaintext input from stdin. (ctrl-d to end input, twice if your content does not already have a newline)
+                <value>^D^D
+
+        -  Copy the resulting encrypted strings into `koji/roles/signplugin/vars/main.yml`.
+
+        -  Encrypt kojihub's GPG keyring files (updated during Yubikey configuration) via `ansible-vault encrypt`:
+
+                :::console
+                $ cp /etc/koji-sign-plugin/gnupg/pubring.gpg \
+                    /etc/koji-sign-plugin/gnupg/secring.gpg \
+                    koji/vault/signplugin/
+                $ ansible-vault encrypt /koji/vault/singplugin/*
+                New Vault password: 
+                Confirm New Vault password: 
+                Encryption successful
+
+        !!! warning "In-place Keyring Encryption"
+            This instruction set copies kojihub's GPG keyring into the working directory and then encrypts it in-place. Ensure
+            that the keyring files are encrypted successfully before proceeding.
+    
+        - Commit the changes to the Koji Ansible config and push to the `osg-services` repo.
+
+
+
     -   Apply the Koji Ansible config on the Koji Hub host.
 
             :::console
