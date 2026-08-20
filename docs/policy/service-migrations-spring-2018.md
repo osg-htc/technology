@@ -20,8 +20,6 @@ If you have questions or concerns that are not addressed in this document, pleas
 -  [software-discuss@opensciencegrid.org](mailto:software-discuss@opensciencegrid.org) -
    General discussion of the OSG Software stack
    ([subscribe](https://listserv.fnal.gov/scripts/wa.exe?SUBED1=SOFTWARE-DISCUSS&A=1))
--  [Slack channel](https://opensciencegrid.slack.com/messages/osg-software) - if you can't create an account, 
-   send an e-mail to [help@osg-htc.org](mailto:help@osg-htc.org)
 
 Support Changes
 ---------------

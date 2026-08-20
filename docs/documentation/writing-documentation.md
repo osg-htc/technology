@@ -19,7 +19,7 @@ To contribute minor content changes (e.g., fixing typos, changing a couple of se
 To contribute major content changes to one of the above OSG areas, make sure you and the machine you'll be working on
 meet the following requirements:
 
-- Have a [Github account](https://github.com/join)
+- Have a [Github account](https://github.com)
 - Installations of the following tools:
     - [Docker](https://www.docker.com/)
     - [git](https://git-scm.com/)
