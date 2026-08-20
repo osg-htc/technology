@@ -20,7 +20,7 @@ Contact Us
 
 -  [software-discuss@osg-htc.org](mailto:software-discuss@osg-htc.org) - General discussion of the OSG
    Software stack ([subscribe](mailto:software-discuss+subscribe@osg-htc.org))
--  #software on the [OSG Slack](https://opensciencegrid.slack.com) - if you can't create an account,
+-  \#software on the [OSG Slack](https://opensciencegrid.slack.com) - if you can't create an account,
    send an e-mail to [help@osg-htc.org](mailto:help@osg-htc.org)
 
 Meetings
