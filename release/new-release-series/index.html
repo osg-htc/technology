@@ -1759,6 +1759,41 @@ See <a href="https://docs.google.com/document/d/1BNvmDI0Fv4tWDQbydBYQhba1VS37TdX
     Koji Ansible config to add the key name, Yubikey PIN, list of tags the key should be used for,
     and template code for generating the <code>sign.conf</code> config blocks for those tags.
     Tags for EL9 and newer distros should have <code>gpg_digest_algo = sha256</code> set.</p>
+<ul>
+<li>
+<p>Encrypt the Public Key ID as <code>osg2X_gpg_name</code> and the Yubikey PIN as <code>osg2X_gpg_pass</code> via <code>ansible-vault encrypt_string</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>ansible-vault encrypt_string --stdin_name osg2X_gpg_<span class="o">(</span>name<span class="p">|</span>pass<span class="o">)</span>
+<span class="go">New Vault password: </span>
+<span class="go">Confirm New Vault password: </span>
+<span class="go">Reading plaintext input from stdin. (ctrl-d to end input, twice if your content does not already have a newline)</span>
+<span class="go">&lt;value&gt;^D^D</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Copy the resulting encrypted strings into <code>koji/roles/signplugin/vars/main.yml</code>.</p>
+</li>
+<li>
+<p>Encrypt kojihub's GPG keyring files (updated during Yubikey configuration) via <code>ansible-vault encrypt</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="gp">$ </span>cp /etc/koji-sign-plugin/gnupg/pubring.gpg <span class="se">\</span>
+<span class="go">    /etc/koji-sign-plugin/gnupg/secring.gpg \</span>
+<span class="go">    koji/vault/signplugin/</span>
+<span class="gp">$ </span>ansible-vault encrypt /koji/vault/singplugin/*
+<span class="go">New Vault password: </span>
+<span class="go">Confirm New Vault password: </span>
+<span class="go">Encryption successful</span>
+</code></pre></div>
+
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">In-place Keyring Encryption</p>
+<p>This instruction set copies kojihub's GPG keyring into the working directory and then encrypts it in-place. Ensure
+that the keyring files are encrypted successfully before proceeding.</p>
+</div>
+<ul>
+<li>Commit the changes to the Koji Ansible config and push to the <code>osg-services</code> repo.</li>
+</ul>
 </li>
 <li>
 <p>Apply the Koji Ansible config on the Koji Hub host.</p>
