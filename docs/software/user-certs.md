@@ -31,7 +31,7 @@ If your account or user certificate is compromised, you **must** notify the issu
 In addition, you should update your certificate and revoke the old certificate if any of the information in the
 certificate (such as name or email address) change.
 For the CILogon RA send email to [ca@cilogon.org](mailto:ca@cilogon.org).
-Additional responsibilities required by the CILogon CA are given on [their page](http://ca.cilogon.org/responsibilities).  
+Additional responsibilities required by the CILogon CA are given on `http://ca.cilogon.org/responsibilities` (dead link).
 
 
 ### Getting a certificate from CILogon

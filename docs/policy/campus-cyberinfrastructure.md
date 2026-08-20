@@ -17,7 +17,7 @@ consulting for:
 - gathering science drivers and planning local computing resources 
 - CC*-required resource sharing for the Campus Compute category\*, and other options for integrating local resources into OSG
 
-\*In the most recent call for proposals ([NSF 21-528](https://www.nsf.gov/pubs/2021/nsf21528/nsf21528.htm)), joining the
+\*In the most recent call for proposals ([NSF 21-528](https://www.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure/nsf21-528/solicitation)), joining the
 OSG is mentioned as a potential path to sharing resources with
 the wider research community:
 
@@ -45,8 +45,8 @@ To contribute computational resources to the OSG, the following will be needed:
   [Grid Engine](http://www.univa.com/products/),
   [HTCondor](https://research.cs.wisc.edu/htcondor/),
   [LSF](https://www.ibm.com/us-en/marketplace/hpc-workload-management),
-  [PBS Pro](https://www.altair.com/pbs-professional/)/[Torque](https://adaptivecomputing.com/cherry-services/torque-resource-manager/),
-  [Slurm](https://slurm.schedmd.com/), and some local cloud provisioners.
+  [PBS Pro](https://www.altair.com/pbs-professional/)/[Torque](https://adaptivecomputing.com/torque-resource-manager),
+  [Slurm](https://www.schedmd.com/#slurm), and some local cloud provisioners.
 - Outbound network connectivity from the cluster's worker nodes
 - SSH access to your local cluster's submit node from a known IP address
 - [Temporary scratch space](https://osg-htc.org/docs/worker-node/using-wn/#the-worker-node-environment) on each
