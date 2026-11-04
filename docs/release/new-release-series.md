@@ -193,13 +193,28 @@ Prepare repo and test infrastructure
 
 Build software
 --------------
--   Populate SVN branches and tags (as in fill it with the packages we're going to release for 2X-main, 2X-upcoming, etc.)
+-   Populate [software-packaging](https://github.com/osg-htc/software-packaging) branches and tags (as in fill it with the packages we're going to release for 2X-main, 2X-upcoming, etc.)
 -   Mass rebuild
 -   Drop the `osg-X-main-elY-bootstrap` koji tags
     (after the successful mass rebuild only)
--   Update [docker-software-base](https://github.com/opensciencegrid/docker-software-base)
-    and any container images that are based on it
 
+Update Github Actions
+---------------------
+-   Update [docker-software-base](https://github.com/opensciencegrid/docker-software-base)
+    and any container images that are based on it. Keep the previous release series in the build
+    matrix until release day.
+    -   To build software-base, the following packages must be pre-promoted through to release:
+        -   osg-release 
+        -   osg-ca-certs 
+-   As of OSG 26, the following GitHub Actions must be updated:
+    -   [ospool-ep](https://github.com/opensciencegrid/osgvo-docker-pilot)
+    -   [docker-osg-wn](https://github.com/opensciencegrid/docker-osg-wn/)
+    -   [docker-xcache](https://github.com/opensciencegrid/docker-xcache/)
+    -   [docker-compute-entrypoint](https://github.com/opensciencegrid/docker-compute-entrypoint/)
+    -   [open-science-pool-registry](https://github.com/opensciencegrid/open-science-pool-registry)
+    -   [htcondor-autoscale-manager](https://github.com/opensciencegrid/htcondor-autoscale-manager)
+    -   [osg-repo-scripts](https://github.com/osg-htc/osg-repo-scripts)
+    -   [images](https://github.com/opensciencegrid/docker-osg-wn/)
 
 Release!
 --------
@@ -208,9 +223,11 @@ Release!
 
 2.  [Cut a release](cut-sw-release.md)
 
-3.  Have a release party
+3.  Update Github Actions to drop the previous release series from build matrices.
 
-4.  Update this document and the [Infrastructure Google Drive folder][google-drive] with issues you ran into
+4.  Have a release party
+
+5.  Update this document and the [Infrastructure Google Drive folder][google-drive] with issues you ran into
 
 
 Post-release
