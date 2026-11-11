@@ -624,6 +624,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#update-github-actions" class="md-nav__link">
+    Update Github Actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#release" class="md-nav__link">
     Release!
   </a>
@@ -1694,6 +1701,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#update-github-actions" class="md-nav__link">
+    Update Github Actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#release" class="md-nav__link">
     Release!
   </a>
@@ -1948,12 +1962,34 @@ that the keyring files are encrypted successfully before proceeding.</p>
 </ul>
 <h2 id="build-software">Build software<a class="headerlink" href="#build-software" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Populate SVN branches and tags (as in fill it with the packages we're going to release for 2X-main, 2X-upcoming, etc.)</li>
+<li>Populate <a href="https://github.com/osg-htc/software-packaging">software-packaging</a> branches and tags (as in fill it with the packages we're going to release for 2X-main, 2X-upcoming, etc.)</li>
 <li>Mass rebuild</li>
 <li>Drop the <code>osg-X-main-elY-bootstrap</code> koji tags
     (after the successful mass rebuild only)</li>
+</ul>
+<h2 id="update-github-actions">Update Github Actions<a class="headerlink" href="#update-github-actions" title="Permanent link">&para;</a></h2>
+<ul>
 <li>Update <a href="https://github.com/opensciencegrid/docker-software-base">docker-software-base</a>
-    and any container images that are based on it</li>
+    and any container images that are based on it. Keep the previous release series in the build
+    matrix until release day.<ul>
+<li>To build software-base, the following packages must be pre-promoted through to release:<ul>
+<li>osg-release </li>
+<li>osg-ca-certs </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>As of OSG 26, the following GitHub Actions must be updated:<ul>
+<li><a href="https://github.com/opensciencegrid/osgvo-docker-pilot">ospool-ep</a></li>
+<li><a href="https://github.com/opensciencegrid/docker-osg-wn/">docker-osg-wn</a></li>
+<li><a href="https://github.com/opensciencegrid/docker-xcache/">docker-xcache</a></li>
+<li><a href="https://github.com/opensciencegrid/docker-compute-entrypoint/">docker-compute-entrypoint</a></li>
+<li><a href="https://github.com/opensciencegrid/open-science-pool-registry">open-science-pool-registry</a></li>
+<li><a href="https://github.com/opensciencegrid/htcondor-autoscale-manager">htcondor-autoscale-manager</a></li>
+<li><a href="https://github.com/osg-htc/osg-repo-scripts">osg-repo-scripts</a></li>
+<li><a href="https://github.com/opensciencegrid/docker-osg-wn/">images</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="release">Release!<a class="headerlink" href="#release" title="Permanent link">&para;</a></h2>
 <ol>
@@ -1962,6 +1998,9 @@ that the keyring files are encrypted successfully before proceeding.</p>
 </li>
 <li>
 <p><a href="../cut-sw-release/">Cut a release</a></p>
+</li>
+<li>
+<p>Update Github Actions to drop the previous release series from build matrices.</p>
 </li>
 <li>
 <p>Have a release party</p>
