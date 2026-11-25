@@ -1,4 +1,6 @@
 
+
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -9,11 +11,22 @@
       
       
       
-      
         <link rel="canonical" href="https://osg-htc.org/technology/software/git-software-development/">
       
+      
+      
+      
+        <link rel="prev" href="../development-process/">
+      
+      
+        <link rel="next" href="../ce-test-scaling/">
+      
+      
+        
+      
+      
       <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="zensical-0.1.3">
     
     
       
@@ -21,68 +34,72 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.e2cf241e.min.css">
+      
+      
+      
+
+
+    
+    
+      
+    
+    
+      
         
-      
-    
-    
-    
-      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../../css/extra.css">
     
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
+
     
     
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr">
   
-    
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#git-software-development-workflow" class="md-skip">
-          Skip to content
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
     </div>
     <div data-md-component="announce">
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="OSG Technology Area" class="md-header__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -102,57 +119,46 @@
     </div>
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-      </label>
+    
+    
       
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
-        
-<a href="https://github.com/osg-htc/technology/" title="Go to repository" class="md-source" data-md-component="source">
+    <div class="md-header__source">
+      
+        <a href="https://github.com/osg-htc/technology/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -166,23 +172,23 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="OSG Technology Area" class="md-nav__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     OSG Technology Area
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/osg-htc/technology/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/osg-htc/technology/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -194,14 +200,25 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Home
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
@@ -209,188 +226,407 @@
     
       
       
-      
-
   
   
     
   
   
+  
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+    
       
+        
+        
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-      <label class="md-nav__link" for="__nav_2">
-        Software
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Software" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Software
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
           
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
+  <span class="md-ellipsis">
+    
   
+  Software
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Software
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
-      
-      <label class="md-nav__link" for="__nav_2_1">
-        Packaging
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Packaging" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          Packaging
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
           
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Packaging
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Packaging
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../rpm-development-guide/" class="md-nav__link">
-        RPM Development Guide
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  RPM Development Guide
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../osg-build-tools/" class="md-nav__link">
-        OSG Build Tools
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OSG Build Tools
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../koji-workflow/" class="md-nav__link">
-        Koji Workflow
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Koji Workflow
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../create-vo-client/" class="md-nav__link">
-        Creating the VO Client Package
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Creating the VO Client Package
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../container-development-guide/" class="md-nav__link">
-        Container Development Guide
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Container Development Guide
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../koji-mass-rebuilds/" class="md-nav__link">
-        Koji Mass Rebuilds
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Koji Mass Rebuilds
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+                
+              
+            </ul>
+          </nav>
+        
+      
     </li>
   
 
-          
-            
+                
+              
+                
+                  
   
   
     
   
   
+  
+    
+    
+    
+    
+      
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
-      
-      <label class="md-nav__link" for="__nav_2_2">
-        Development
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Development" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          Development
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
           
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Development
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Development
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../development-process/" class="md-nav__link">
-        Development Process
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Development Process
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Git Software Development Process
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Git Software Development Process
+
+    
+  </span>
+  
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Git Software Development Process
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Git Software Development Process
+
+    
+  </span>
+  
+  
+
       </a>
       
         
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
   
   
     
@@ -398,20 +634,28 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#git-and-github-basics" class="md-nav__link">
-    Git and GitHub basics
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Git and GitHub basics
+      </span>
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#getting-shell-access-to-github" class="md-nav__link">
-    Getting shell access to GitHub
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Getting shell access to GitHub
+      </span>
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Getting shell access to GitHub">
@@ -419,7 +663,11 @@
         
           <li class="md-nav__item">
   <a href="#creating-a-new-ssh-key-optional-but-recommended" class="md-nav__link">
-    Creating a new SSH key (optional but recommended)
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Creating a new SSH key (optional but recommended)
+      </span>
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Creating a new SSH key (optional but recommended)">
@@ -427,14 +675,22 @@
         
           <li class="md-nav__item">
   <a href="#generating-the-key" class="md-nav__link">
-    Generating the key
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Generating the key
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-ssh-to-use-the-key-for-github" class="md-nav__link">
-    Configuring SSH to use the key for GitHub
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configuring SSH to use the key for GitHub
+      </span>
+    </span>
   </a>
   
 </li>
@@ -446,14 +702,22 @@
         
           <li class="md-nav__item">
   <a href="#adding-the-ssh-public-key-to-github" class="md-nav__link">
-    Adding the SSH public key to GitHub
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adding the SSH public key to GitHub
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#testing-that-shell-access-works" class="md-nav__link">
-    Testing that shell access works
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Testing that shell access works
+      </span>
+    </span>
   </a>
   
 </li>
@@ -465,21 +729,33 @@
       
         <li class="md-nav__item">
   <a href="#contribution-workflow" class="md-nav__link">
-    Contribution workflow
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Contribution workflow
+      </span>
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#release-workflow" class="md-nav__link">
-    Release workflow
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Release workflow
+      </span>
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
-    Best practices
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Best practices
+      </span>
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Best practices">
@@ -487,7 +763,11 @@
         
           <li class="md-nav__item">
   <a href="#making-good-pull-requests-the-art-of-good-commits" class="md-nav__link">
-    Making good pull requests (The Art of Good Commits)
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Making good pull requests (The Art of Good Commits)
+      </span>
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Making good pull requests (The Art of Good Commits)">
@@ -495,84 +775,132 @@
         
           <li class="md-nav__item">
   <a href="#put-logically-separate-changes-into-separate-commits" class="md-nav__link">
-    Put logically separate changes into separate commits
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Put logically separate changes into separate commits
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#avoid-whitespace-noise" class="md-nav__link">
-    Avoid whitespace noise
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Avoid whitespace noise
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#dont-commit-large-files" class="md-nav__link">
-    Don't commit large files
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Don't commit large files
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#verify-that-only-the-files-intended-are-modified-in-each-commit" class="md-nav__link">
-    Verify that only the files intended are modified in each commit
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Verify that only the files intended are modified in each commit
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#squash-noisy-work-in-progress-commits" class="md-nav__link">
-    Squash noisy work-in-progress commits
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Squash noisy work-in-progress commits
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#write-a-succinct-subject-to-explain-what-each-commit-does" class="md-nav__link">
-    Write a succinct subject to explain what each commit does
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Write a succinct subject to explain what each commit does
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#explain-why-a-change-was-made-in-the-commit-message" class="md-nav__link">
-    Explain why a change was made in the commit message
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Explain why a change was made in the commit message
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#summarize-your-commits-in-the-pull-request-title" class="md-nav__link">
-    Summarize your commits in the pull request title
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Summarize your commits in the pull request title
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#choose-a-separate-descriptive-branch-name-for-each-pull-request" class="md-nav__link">
-    Choose a separate, descriptive branch name for each pull request
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Choose a separate, descriptive branch name for each pull request
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#reference-any-relevant-tickets" class="md-nav__link">
-    Reference any relevant tickets
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reference any relevant tickets
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#further-reading" class="md-nav__link">
-    Further reading
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Further reading
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#brownie-points" class="md-nav__link">
-    Brownie points
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Brownie points
+      </span>
+    </span>
   </a>
   
 </li>
@@ -584,7 +912,11 @@
         
           <li class="md-nav__item">
   <a href="#reviewing-pull-requests" class="md-nav__link">
-    Reviewing pull requests
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reviewing pull requests
+      </span>
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Reviewing pull requests">
@@ -592,14 +924,22 @@
         
           <li class="md-nav__item">
   <a href="#batch-comments-in-a-formal-review" class="md-nav__link">
-    Batch comments in a formal review
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Batch comments in a formal review
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#batch-commits-when-accepting-suggestions-from-a-review" class="md-nav__link">
-    Batch commits when accepting suggestions from a review
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Batch commits when accepting suggestions from a review
+      </span>
+    </span>
   </a>
   
 </li>
@@ -621,1194 +961,2619 @@
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../ce-test-scaling/" class="md-nav__link">
-        CE Scale Testing
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  CE Scale Testing
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../ipv6-testing/" class="md-nav__link">
-        IPv6 Testing
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IPv6 Testing
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../requesting-tokens/" class="md-nav__link">
-        How to Request Tokens
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How to Request Tokens
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+                
+              
+            </ul>
+          </nav>
+        
+      
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     
+    
+    
+    
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
-      
-      <label class="md-nav__link" for="__nav_2_3">
-        Technologies
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Technologies" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
-          <span class="md-nav__icon md-icon"></span>
-          Technologies
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
           
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Technologies
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Technologies
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../ospool-containers/" class="md-nav__link">
-        OSPool Containers
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OSPool Containers
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+                
+              
+            </ul>
+          </nav>
+        
+      
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/software-support/" class="md-nav__link">
-        Software Support
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Software Support
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../effort-tracking/" class="md-nav__link">
-        Effort Tracking
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Effort Tracking
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../new-team-member/" class="md-nav__link">
-        New Team Member
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  New Team Member
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../user-certs/" class="md-nav__link">
-        User Certificates
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  User Certificates
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+                
+              
+            </ul>
+          </nav>
+        
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
       
+        
+        
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      <label class="md-nav__link" for="__nav_3">
-        Release
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Release" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Release
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
           
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Release
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../release/cut-sw-release/" class="md-nav__link">
-        How to Cut a Release
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How to Cut a Release
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../release/announce-rft-packages/" class="md-nav__link">
-        Ready for Testing Announcements
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ready for Testing Announcements
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../release/new-release-series/" class="md-nav__link">
-        New Release Series
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  New Release Series
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../release/new-os-series/" class="md-nav__link">
-        New OS Series
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  New OS Series
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../release/release-eol/" class="md-nav__link">
-        Release Series End-of-Life
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Series End-of-Life
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../release/itb-testing/" class="md-nav__link">
-        ITB Prerelease Testing
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ITB Prerelease Testing
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../release/empty-pkgs/" class="md-nav__link">
-        Empty Packages
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Empty Packages
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+                
+              
+            </ul>
+          </nav>
+        
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
       
+        
+        
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      <label class="md-nav__link" for="__nav_4">
-        Operations
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Operations" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Operations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
           
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operations
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Operations
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operations/comanage-sop/" class="md-nav__link">
-        COManage SOP
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  COManage SOP
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operations/comanage-recipes/" class="md-nav__link">
-        COManage Recipes
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  COManage Recipes
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operations/comanage-troubleshooting-guide/" class="md-nav__link">
-        COmanage Troubleshooting Guide
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  COmanage Troubleshooting Guide
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+                
+              
+            </ul>
+          </nav>
+        
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
       
+        
+        
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      <label class="md-nav__link" for="__nav_5">
-        Policy
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Policy" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Policy
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Policy
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Policy
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/campus-cyberinfrastructure/" class="md-nav__link">
-        Campus Cyberinfrastructure
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Campus Cyberinfrastructure
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/collab-bearer-tokens/" class="md-nav__link">
-        Collaborations and Bearer Tokens
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Collaborations and Bearer Tokens
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/external-oasis-repos/" class="md-nav__link">
-        OASIS Repository Mirroring
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OASIS Repository Mirroring
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/flexible-release-model/" class="md-nav__link">
-        Flexible Release Model
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Flexible Release Model
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/software-release/" class="md-nav__link">
-        Software Release Policy
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Software Release Policy
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/container-release/" class="md-nav__link">
-        Container Release Policy
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Container Release Policy
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/community-testing/" class="md-nav__link">
-        Community Testing
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Community Testing
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/new-ospool-user/" class="md-nav__link">
-        New OSPool User Registration
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  New OSPool User Registration
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/topology-registration/" class="md-nav__link">
-        Handling Topology/Contacts Registrations
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Handling Topology/Contacts Registrations
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+                
+              
+            </ul>
+          </nav>
+        
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
       
+        
+        
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      <label class="md-nav__link" for="__nav_6">
-        Documentation
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Documentation
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documentation
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Documentation
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../documentation/writing-documentation/" class="md-nav__link">
-        Writing Documentation
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Writing Documentation
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../documentation/reviewing-documentation/" class="md-nav__link">
-        Reviewing Documentation
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Reviewing Documentation
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../documentation/style-guide/" class="md-nav__link">
-        Markdown Style Guide
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Markdown Style Guide
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../documentation/publish-osg-pages/" class="md-nav__link">
-        Publishing OSG pages
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Publishing OSG pages
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+                
+              
+            </ul>
+          </nav>
+        
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
       
+        
+        
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      <label class="md-nav__link" for="__nav_7">
-        Historical Transitions
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Historical Transitions" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Historical Transitions
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Historical Transitions
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Historical Transitions
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/service-migrations-spring-2018/" class="md-nav__link">
-        Service Migrations - Spring 2018
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Service Migrations - Spring 2018
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/gums-retire/" class="md-nav__link">
-        GUMS Retirement
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GUMS Retirement
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/bestman2-retire/" class="md-nav__link">
-        BeStMan2 Retirement
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  BeStMan2 Retirement
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/voms-admin-retire/" class="md-nav__link">
-        VOMS Admin Retirement
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  VOMS Admin Retirement
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../projects/sha2-support/" class="md-nav__link">
-        SHA-2 Support
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SHA-2 Support
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../documentation/markdown-migration/" class="md-nav__link">
-        Migrating Documents to Markdown
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Migrating Documents to Markdown
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/cream-support/" class="md-nav__link">
-        CREAM-CE Support
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  CREAM-CE Support
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/globus-toolkit/" class="md-nav__link">
-        Globus Toolkit Support
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Globus Toolkit Support
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/gridftp-gsi-migration/" class="md-nav__link">
-        GridFTP and GSI Migration
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GridFTP and GSI Migration
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/repo-layout-migration-2025/" class="md-nav__link">
-        Repo Layout Migration - Jan 2025
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Repo Layout Migration - Jan 2025
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../policy/packaging-svn-to-git-migration/" class="md-nav__link">
-        Packaging SVN to Git Migration
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Packaging SVN to Git Migration
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+                
+              
+            </ul>
+          </nav>
+        
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
       
+        
+        
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      <label class="md-nav__link" for="__nav_8">
-        Meetings
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Meetings" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          Meetings
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
           
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Meetings
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Meetings
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20241203/" class="md-nav__link">
-        December 3, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  December 3, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20241105/" class="md-nav__link">
-        November 5, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  November 5, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20241029/" class="md-nav__link">
-        October 29, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  October 29, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20241015/" class="md-nav__link">
-        October 15, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  October 15, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20241008/" class="md-nav__link">
-        October 8, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  October 8, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20241001/" class="md-nav__link">
-        October 1, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  October 1, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240924/" class="md-nav__link">
-        September 24, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  September 24, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240903/" class="md-nav__link">
-        September 3, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  September 3, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240827/" class="md-nav__link">
-        August 27, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  August 27, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240820/" class="md-nav__link">
-        August 20, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  August 20, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240813/" class="md-nav__link">
-        August 13, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  August 13, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240806/" class="md-nav__link">
-        August 6, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  August 6, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240730/" class="md-nav__link">
-        July 30, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  July 30, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240723/" class="md-nav__link">
-        July 23, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  July 23, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240716/" class="md-nav__link">
-        July 16, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  July 16, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240702/" class="md-nav__link">
-        July 2, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  July 2, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240625/" class="md-nav__link">
-        June 25, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  June 25, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240618/" class="md-nav__link">
-        June 18, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  June 18, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240611/" class="md-nav__link">
-        June 11, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  June 11, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240528/" class="md-nav__link">
-        May 28, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  May 28, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240521/" class="md-nav__link">
-        May 21, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  May 21, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240514/" class="md-nav__link">
-        May 14, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  May 14, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240507/" class="md-nav__link">
-        May 7, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  May 7, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240430/" class="md-nav__link">
-        April 30, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  April 30, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240416/" class="md-nav__link">
-        April 16, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  April 16, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240409/" class="md-nav__link">
-        April 9, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  April 9, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240402/" class="md-nav__link">
-        April 2, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  April 2, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240319/" class="md-nav__link">
-        March 19, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  March 19, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240312/" class="md-nav__link">
-        March 12, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  March 12, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240305/" class="md-nav__link">
-        March 5, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  March 5, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240227/" class="md-nav__link">
-        February 27, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  February 27, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240220/" class="md-nav__link">
-        February 20, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  February 20, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240213/" class="md-nav__link">
-        February 13, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  February 13, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240206/" class="md-nav__link">
-        February 6, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  February 6, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240130/" class="md-nav__link">
-        January 30, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  January 30, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240123/" class="md-nav__link">
-        January 23, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  January 23, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240116/" class="md-nav__link">
-        January 16, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  January 16, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240109/" class="md-nav__link">
-        January 9, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  January 9, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-            
+                
+              
+                
+                  
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../meetings/2024/TechArea20240102/" class="md-nav__link">
-        January 2, 2024
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  January 2, 2024
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+                
+              
+            </ul>
+          </nav>
+        
+      
     </li>
   
 
@@ -1823,9 +3588,25 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
   
   
     
@@ -1833,20 +3614,28 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#git-and-github-basics" class="md-nav__link">
-    Git and GitHub basics
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Git and GitHub basics
+      </span>
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#getting-shell-access-to-github" class="md-nav__link">
-    Getting shell access to GitHub
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Getting shell access to GitHub
+      </span>
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Getting shell access to GitHub">
@@ -1854,7 +3643,11 @@
         
           <li class="md-nav__item">
   <a href="#creating-a-new-ssh-key-optional-but-recommended" class="md-nav__link">
-    Creating a new SSH key (optional but recommended)
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Creating a new SSH key (optional but recommended)
+      </span>
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Creating a new SSH key (optional but recommended)">
@@ -1862,14 +3655,22 @@
         
           <li class="md-nav__item">
   <a href="#generating-the-key" class="md-nav__link">
-    Generating the key
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Generating the key
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-ssh-to-use-the-key-for-github" class="md-nav__link">
-    Configuring SSH to use the key for GitHub
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configuring SSH to use the key for GitHub
+      </span>
+    </span>
   </a>
   
 </li>
@@ -1881,14 +3682,22 @@
         
           <li class="md-nav__item">
   <a href="#adding-the-ssh-public-key-to-github" class="md-nav__link">
-    Adding the SSH public key to GitHub
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adding the SSH public key to GitHub
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#testing-that-shell-access-works" class="md-nav__link">
-    Testing that shell access works
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Testing that shell access works
+      </span>
+    </span>
   </a>
   
 </li>
@@ -1900,21 +3709,33 @@
       
         <li class="md-nav__item">
   <a href="#contribution-workflow" class="md-nav__link">
-    Contribution workflow
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Contribution workflow
+      </span>
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#release-workflow" class="md-nav__link">
-    Release workflow
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Release workflow
+      </span>
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
-    Best practices
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Best practices
+      </span>
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Best practices">
@@ -1922,7 +3743,11 @@
         
           <li class="md-nav__item">
   <a href="#making-good-pull-requests-the-art-of-good-commits" class="md-nav__link">
-    Making good pull requests (The Art of Good Commits)
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Making good pull requests (The Art of Good Commits)
+      </span>
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Making good pull requests (The Art of Good Commits)">
@@ -1930,84 +3755,132 @@
         
           <li class="md-nav__item">
   <a href="#put-logically-separate-changes-into-separate-commits" class="md-nav__link">
-    Put logically separate changes into separate commits
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Put logically separate changes into separate commits
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#avoid-whitespace-noise" class="md-nav__link">
-    Avoid whitespace noise
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Avoid whitespace noise
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#dont-commit-large-files" class="md-nav__link">
-    Don't commit large files
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Don't commit large files
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#verify-that-only-the-files-intended-are-modified-in-each-commit" class="md-nav__link">
-    Verify that only the files intended are modified in each commit
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Verify that only the files intended are modified in each commit
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#squash-noisy-work-in-progress-commits" class="md-nav__link">
-    Squash noisy work-in-progress commits
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Squash noisy work-in-progress commits
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#write-a-succinct-subject-to-explain-what-each-commit-does" class="md-nav__link">
-    Write a succinct subject to explain what each commit does
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Write a succinct subject to explain what each commit does
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#explain-why-a-change-was-made-in-the-commit-message" class="md-nav__link">
-    Explain why a change was made in the commit message
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Explain why a change was made in the commit message
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#summarize-your-commits-in-the-pull-request-title" class="md-nav__link">
-    Summarize your commits in the pull request title
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Summarize your commits in the pull request title
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#choose-a-separate-descriptive-branch-name-for-each-pull-request" class="md-nav__link">
-    Choose a separate, descriptive branch name for each pull request
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Choose a separate, descriptive branch name for each pull request
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#reference-any-relevant-tickets" class="md-nav__link">
-    Reference any relevant tickets
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reference any relevant tickets
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#further-reading" class="md-nav__link">
-    Further reading
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Further reading
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#brownie-points" class="md-nav__link">
-    Brownie points
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Brownie points
+      </span>
+    </span>
   </a>
   
 </li>
@@ -2019,7 +3892,11 @@
         
           <li class="md-nav__item">
   <a href="#reviewing-pull-requests" class="md-nav__link">
-    Reviewing pull requests
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reviewing pull requests
+      </span>
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Reviewing pull requests">
@@ -2027,14 +3904,22 @@
         
           <li class="md-nav__item">
   <a href="#batch-comments-in-a-formal-review" class="md-nav__link">
-    Batch comments in a formal review
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Batch comments in a formal review
+      </span>
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#batch-commits-when-accepting-suggestions-from-a-review" class="md-nav__link">
-    Batch commits when accepting suggestions from a review
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Batch commits when accepting suggestions from a review
+      </span>
+    </span>
   </a>
   
 </li>
@@ -2057,16 +3942,24 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
+          
+            <div class="md-content" data-md-component="content">
               
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
-                  <a href="https://github.com/osg-htc/technology/edit/master/docs/software/git-software-development.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                <h1 id="git-software-development-workflow">Git software development workflow<a class="headerlink" href="#git-software-development-workflow" title="Permanent link">&para;</a></h1>
+                  
+
+  
+    <a href="https://github.com/osg-htc/technology/edit/master/docs/software/git-software-development.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="git-software-development-workflow">Git software development workflow<a class="headerlink" href="#git-software-development-workflow" title="Permanent link">&para;</a></h1>
 <p>This document describes the development workflow for OSG software packages kept in GitHub. It is intended for people who wish to contribute to OSG software.</p>
 <h2 id="git-and-github-basics">Git and GitHub basics<a class="headerlink" href="#git-and-github-basics" title="Permanent link">&para;</a></h2>
 <p>If you are unfamiliar with Git and GitHub, the GitHub website has a good series of tutorials at <a href="https://docs.github.com/en/get-started">https://docs.github.com/en/get-started</a></p>
@@ -2078,15 +3971,13 @@
 <p>The instructions below will create an SSH public/private key pair with the private key stored in <code>~/.ssh/id_github</code> and public key stored in <code>~/.ssh/id_github.pub</code>.</p>
 <h4 id="generating-the-key">Generating the key<a class="headerlink" href="#generating-the-key" title="Permanent link">&para;</a></h4>
 <p>Use <code>ssh-keygen</code> to generate the SSH keypair. For <code>&lt;EMAIL_ADDRESS&gt;</code>, use the email address associated with your GitHub account.</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>ssh-keygen -t rsa -b <span class="m">4096</span> -f ~/.ssh/id_github -C &lt;EMAIL_ADDRESS&gt;
+<div class="highlight"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_github<span class="w"> </span>-C<span class="w"> </span>&lt;EMAIL_ADDRESS&gt;
 </code></pre></div>
-
 <h4 id="configuring-ssh-to-use-the-key-for-github">Configuring SSH to use the key for GitHub<a class="headerlink" href="#configuring-ssh-to-use-the-key-for-github" title="Permanent link">&para;</a></h4>
 <p>Make sure SSH uses the new key by default to access GitHub. Create or edit <code>~/.ssh/config</code> and append the following lines:</p>
-<div class="codehilite"><pre><span></span><code>Host github.com
+<div class="highlight"><pre><span></span><code>Host github.com
 <span class="hll">IdentityFile &lt;YOUR_HOME_DIR&gt;/.ssh/id_github
 </span></code></pre></div>
-
 <p>Where <YOUR_HOME_DIR> is the output of the command:
 <code>echo $HOME</code></p>
 <h3 id="adding-the-ssh-public-key-to-github">Adding the SSH public key to GitHub<a class="headerlink" href="#adding-the-ssh-public-key-to-github" title="Permanent link">&para;</a></h3>
@@ -2113,12 +4004,12 @@ workflow for making contributions to OSG software.</p>
 <li>Using the GitHub web interface, fork the repo you wish to contribute to.</li>
 <li>
 <p>Make a clone of your forked repo on your local machine.</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git clone git@github.com:&lt;USERNAME/PROJECT&gt;
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:&lt;USERNAME/PROJECT&gt;
 </code></pre></div>
 
 <p>Where <code>&lt;USERNAME&gt;</code> is your github username and <code>&lt;PROJECT&gt;</code> is the name of the project you want to contribute to,
 e.g. in order to clone my local fork of the <code>openscience/technology</code> repository: </p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git clone https://github.com/ddavila0/technology.git
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ddavila0/technology.git
 </code></pre></div>
 
 <div class="admonition note">
@@ -2134,13 +4025,13 @@ e.g. in order to clone my local fork of the <code>openscience/technology</code> 
 <p>Create a branch to hold changes that are related to the issue you are working on.
    Give the <code>&lt;BRANCH&gt;</code> a name that will remind you of its purpose, including any relevant ticket numbers, such as
    <code>SOFTWARE-2345.pathchange</code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git checkout -b &lt;BRANCH&gt;
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;BRANCH&gt;
 </code></pre></div>
 
 </li>
 <li>
 <p>Make your commits to this branch, then push the branch to your repo on GitHub.</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git push origin &lt;BRANCH&gt;
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;BRANCH&gt;
 </code></pre></div>
 
 </li>
@@ -2161,20 +4052,20 @@ e.g. in order to clone my local fork of the <code>openscience/technology</code> 
 <ol>
 <li>
 <p>If you haven't already, add the OSG repo as a "remote" to your repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git remote add upstream git@github.com:opensciencegrid/&lt;PROJECT&gt;
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>git@github.com:opensciencegrid/&lt;PROJECT&gt;
 </code></pre></div>
 
 <p>Where <code>&lt;PROJECT&gt;</code> is the name of the project you are going to release, e.g. <PROJECT> for <code>openscience/technology</code> repository it would be <code>technology.git</code></p>
 </li>
 <li>
 <p>Fetch changes from the OSG repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git fetch upstream
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>fetch<span class="w"> </span>upstream
 </code></pre></div>
 
 </li>
 <li>
 <p>Compare your branch you are releasing from (probably <code>master</code>) to its copy in the OSG repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git checkout master<span class="p">;</span> git diff upstream/master
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>checkout<span class="w"> </span>master<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>diff<span class="w"> </span>upstream/master
 </code></pre></div>
 
 <p>There should be no differences.</p>
@@ -2192,19 +4083,19 @@ e.g. in order to clone my local fork of the <code>openscience/technology</code> 
 <ol>
 <li>
 <p>Create the tag in your local repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git tag &lt;TAG&gt;
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>tag<span class="w"> </span>&lt;TAG&gt;
 </code></pre></div>
 
 </li>
 <li>
 <p>Push the tag to your own GitHub repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git push origin &lt;TAG&gt;
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;TAG&gt;
 </code></pre></div>
 
 </li>
 <li>
 <p>Push the tag to the OSG repo:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git push upstream &lt;TAG&gt;
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>push<span class="w"> </span>upstream<span class="w"> </span>&lt;TAG&gt;
 </code></pre></div>
 
 </li>
@@ -2317,8 +4208,8 @@ intended to modify were included in the commit by running <code>git show --stat<
 Or to review the actual changes to those files, <code>git show</code> (without <code>--stat</code>).</p>
 <p>If you find unintended files included in the commit, you can amend the commit
 so that it does not include changes to <code>file-not-to-commit</code> like so:</p>
-<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git reset HEAD^ file-not-to-commit
-<span class="gp">[user@client ~ ] $ </span>git commit --amend
+<div class="codehilite"><pre><span></span><code><span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>reset<span class="w"> </span>HEAD^<span class="w"> </span>file-not-to-commit
+<span class="gp">[user@client ~ ] $ </span>git<span class="w"> </span>commit<span class="w"> </span>--amend
 </code></pre></div>
 
 <p>If you have multiple commits ready for a pull request, you can review the
@@ -2466,78 +4357,74 @@ But if there are a number of suggestions of a different nature, it is OK to
 group them such that you apply one batch for each set of related suggestions
 (consistent with the guideline to put logically separate changes into separate
 commits).</p>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
         
       </main>
       
-        
-<footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        <a href="../development-process/" class="md-footer__link md-footer__link--prev" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Development Process
-            </div>
-          </div>
-        </a>
-      
-      
-        <a href="../ce-test-scaling/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              CE Scale Testing
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+    
+      
+      
+      
+      
+        
+        
+          
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","navigation.sections","navigation.top"],"redirect":"../../redirect.json","search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9e76c64c.min.js"></script>
+      
       
     
   </body>
