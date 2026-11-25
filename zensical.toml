@@ -29,6 +29,7 @@ nav = [
     ] },
     { "Technologies" = [
       { "OSPool Containers" = "software/ospool-containers.md" },
+      { "GRACC MCP Server" = "software/gracc-mcp.md" },
     ] },
     { "Software Support" = "policy/software-support.md" },
     { "Effort Tracking" = "software/effort-tracking.md" },
@@ -130,6 +131,7 @@ custom_dir = "osgthedocs"
 favicon = "img/favicon.ico"
 features = [
   "content.action.edit",
+  "content.code.copy",
   "navigation.sections",
   "navigation.top",
 ]
