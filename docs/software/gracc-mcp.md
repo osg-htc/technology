@@ -38,6 +38,11 @@ Any MCP client that supports remote MCP servers can use it.
 In your client, add a remote (sometimes called "custom") MCP server with the address above.
 There is nothing else to configure.
 
+!!! note "Check the connection"
+    After configuring your client,
+    ask the assistant "What data does the GRACC server offer?"
+    It should describe OSG job accounting and OSDF data transfers.
+
 ### Claude Code
 
 Register the server once, then ask questions in any Claude Code session:
@@ -46,9 +51,13 @@ Register the server once, then ask questions in any Claude Code session:
 user@host $ claude mcp add --transport http gracc https://gracc.opensciencegrid.org/mcp
 ```
 
-!!! note "Check the connection"
-    Ask the assistant "What data does the GRACC server offer?"
-    It should describe OSG job accounting and OSDF data transfers.
+### OpenCode
+
+Register the server once, then ask questions in any OpenCode session:
+
+```console
+user@host $ opencode mcp add gracc --global --url https://gracc.opensciencegrid.org/mcp
+```
 
 Example Questions
 -----------------
