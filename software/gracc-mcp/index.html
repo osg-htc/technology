@@ -1,0 +1,4234 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://osg-htc.org/technology/software/gracc-mcp/">
+      
+      
+      
+      
+        <link rel="prev" href="../ospool-containers/">
+      
+      
+        <link rel="next" href="../../policy/software-support/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="zensical-0.1.3">
+    
+    
+      
+        <title>GRACC MCP Server - OSG Technology Area</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.e2cf241e.min.css">
+      
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OSG Technology Area" class="md-header__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OSG Technology Area
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GRACC MCP Server
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/osg-htc/technology/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OSG Technology Area" class="md-nav__button md-logo" aria-label="OSG Technology Area" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    OSG Technology Area
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/osg-htc/technology/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Software
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Software
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Packaging
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Packaging
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rpm-development-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  RPM Development Guide
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../osg-build-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OSG Build Tools
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../koji-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Koji Workflow
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-vo-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Creating the VO Client Package
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container-development-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Container Development Guide
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../koji-mass-rebuilds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Koji Mass Rebuilds
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Development
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Development
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Development Process
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-software-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Git Software Development Process
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce-test-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  CE Scale Testing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ipv6-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IPv6 Testing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requesting-tokens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How to Request Tokens
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Technologies
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Technologies
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ospool-containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OSPool Containers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GRACC MCP Server
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GRACC MCP Server
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connect-an-ai-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Connect an AI Assistant
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connect an AI Assistant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Claude Code
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Example Questions
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Usage
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#science-and-institutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Science and institutions
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-transfers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Data transfers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-assistant-answers-a-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How the Assistant Answers a Question
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Available Data
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Jobs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osdf-data-transfers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OSDF data transfers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projects-vos-and-institutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Projects, VOs and institutions
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Limits
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Good to know
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Example Records
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#institution-university-of-nebraskalincoln" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Institution: University of Nebraska–Lincoln
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-icecube" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Project: IceCube
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vo-ligo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VO: LIGO
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/software-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Software Support
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../effort-tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Effort Tracking
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../new-team-member/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  New Team Member
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-certs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  User Certificates
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Release
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release/cut-sw-release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How to Cut a Release
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release/announce-rft-packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ready for Testing Announcements
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release/new-release-series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  New Release Series
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release/new-os-series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  New OS Series
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release/release-eol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Release Series End-of-Life
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release/itb-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ITB Prerelease Testing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release/empty-pkgs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Empty Packages
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operations
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Operations
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/comanage-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  COManage SOP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/comanage-recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  COManage Recipes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/comanage-troubleshooting-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  COmanage Troubleshooting Guide
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Policy
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Policy
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/campus-cyberinfrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Campus Cyberinfrastructure
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/collab-bearer-tokens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Collaborations and Bearer Tokens
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/external-oasis-repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OASIS Repository Mirroring
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/flexible-release-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Flexible Release Model
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/software-release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Software Release Policy
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/container-release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Container Release Policy
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/community-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Community Testing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/new-ospool-user/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  New OSPool User Registration
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/topology-registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Handling Topology/Contacts Registrations
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documentation
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Documentation
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/writing-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Writing Documentation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/reviewing-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Reviewing Documentation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Markdown Style Guide
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/publish-osg-pages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Publishing OSG pages
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Historical Transitions
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Historical Transitions
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/service-migrations-spring-2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Service Migrations - Spring 2018
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/gums-retire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GUMS Retirement
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/bestman2-retire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  BeStMan2 Retirement
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/voms-admin-retire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  VOMS Admin Retirement
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/sha2-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  SHA-2 Support
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/markdown-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Migrating Documents to Markdown
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/cream-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  CREAM-CE Support
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/globus-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Globus Toolkit Support
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/gridftp-gsi-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GridFTP and GSI Migration
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/repo-layout-migration-2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Repo Layout Migration - Jan 2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policy/packaging-svn-to-git-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Packaging SVN to Git Migration
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Meetings
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Meetings
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20241203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  December 3, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20241105/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  November 5, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20241029/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  October 29, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20241015/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  October 15, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20241008/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  October 8, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20241001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  October 1, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240924/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  September 24, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240903/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  September 3, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240827/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  August 27, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240820/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  August 20, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240813/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  August 13, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240806/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  August 6, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240730/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  July 30, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240723/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  July 23, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240716/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  July 16, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240702/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  July 2, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240625/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  June 25, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240618/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  June 18, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240611/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  June 11, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240528/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  May 28, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240521/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  May 21, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240514/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  May 14, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240507/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  May 7, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240430/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  April 30, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240416/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  April 16, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240409/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  April 9, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240402/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  April 2, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240319/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  March 19, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240312/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  March 12, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240305/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  March 5, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240227/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  February 27, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240220/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  February 20, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240213/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  February 13, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  February 6, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240130/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  January 30, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240123/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  January 23, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240116/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  January 16, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240109/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  January 9, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2024/TechArea20240102/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  January 2, 2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connect-an-ai-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Connect an AI Assistant
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connect an AI Assistant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Claude Code
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Example Questions
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Usage
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#science-and-institutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Science and institutions
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-transfers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Data transfers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-assistant-answers-a-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How the Assistant Answers a Question
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Available Data
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Jobs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osdf-data-transfers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OSDF data transfers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projects-vos-and-institutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Projects, VOs and institutions
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Limits
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Good to know
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Example Records
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#institution-university-of-nebraskalincoln" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Institution: University of Nebraska–Lincoln
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-icecube" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Project: IceCube
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vo-ligo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VO: LIGO
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+    <a href="https://github.com/osg-htc/technology/edit/master/docs/software/gracc-mcp.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="gracc-mcp-server">GRACC MCP Server<a class="headerlink" href="#gracc-mcp-server" title="Permanent link">&para;</a></h1>
+<p>The GRACC MCP server lets an AI assistant answer questions about OSG usage in plain language.
+It is a <a href="https://modelcontextprotocol.io/">Model Context Protocol</a> (MCP) server over
+<a href="https://gracc.opensciencegrid.org/">GRACC</a>, the OSG accounting system.
+It also looks up OSG Topology project and VO metadata and OSG's institution database,
+so an answer can say what science a number represents and which institutions it came from.</p>
+<p>Ask a question such as "Which VOs used the most core hours last month?"
+and the assistant looks up the data and summarizes the results.
+This is useful for broader-impacts sections of funding-agency reports,
+and for anyone curious about how OSG is used.</p>
+<div class="admonition tip">
+<p class="admonition-title">Server address</p>
+<p>Point any MCP client at:</p>
+<div class="codehilite"><pre><span></span><code>https://gracc.opensciencegrid.org/mcp
+</code></pre></div>
+
+<p><strong>Public</strong>, with no login or API key.
+<strong>Read-only</strong>: it can query the data but never change it.
+Transport: <strong>Streamable HTTP</strong>.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Endpoint</td>
+<td><code>https://gracc.opensciencegrid.org/mcp</code></td>
+</tr>
+<tr>
+<td>Transport</td>
+<td>Streamable HTTP</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>OSG job accounting (GRACC) and OSDF data transfers</td>
+</tr>
+<tr>
+<td>Metadata</td>
+<td>OSG Topology projects and VOs, and OSG's institution database</td>
+</tr>
+<tr>
+<td>Source code</td>
+<td><a href="https://github.com/opensciencegrid/gracc-mcp">opensciencegrid/gracc-mcp</a> (Apache-2.0)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="connect-an-ai-assistant">Connect an AI Assistant<a class="headerlink" href="#connect-an-ai-assistant" title="Permanent link">&para;</a></h2>
+<p>Any MCP client that supports remote MCP servers can use it.
+In your client, add a remote (sometimes called "custom") MCP server with the address above.
+There is nothing else to configure.</p>
+<h3 id="claude-code">Claude Code<a class="headerlink" href="#claude-code" title="Permanent link">&para;</a></h3>
+<p>Register the server once, then ask questions in any Claude Code session:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">user@host $ </span>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>--transport<span class="w"> </span>http<span class="w"> </span>gracc<span class="w"> </span>https://gracc.opensciencegrid.org/mcp
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Check the connection</p>
+<p>Ask the assistant "What data does the GRACC server offer?"
+It should describe OSG job accounting and OSDF data transfers.</p>
+</div>
+<h2 id="example-questions">Example Questions<a class="headerlink" href="#example-questions" title="Permanent link">&para;</a></h2>
+<p>Each of these questions works against the live server.
+Use them as they are, or change the VO, site, state or dates to suit your needs.</p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"Which VOs used the most core hours last month?"</li>
+<li>"How many jobs did LIGO run last week, and how many core hours did they use?"</li>
+<li>"Show weekly GPU hours for the last three months."</li>
+</ul>
+<h3 id="science-and-institutions">Science and institutions<a class="headerlink" href="#science-and-institutions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"What ran at the site Nebraska last month, what fields of science were they, and which institutions did they come
+  from?"
+  (<a href="#how-the-assistant-answers-a-question">See how the assistant answers this one.</a>)</li>
+<li>"Over the last 12 months of OSPool usage, which fields of science used the most core hours, and how many distinct
+  institutions were involved?"</li>
+<li>"Which institutions in Nebraska have OSG projects, and how much did each use this year?"</li>
+<li>"Which institutions in EPSCoR jurisdictions ran on the OSPool this year?"</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">EPSCoR jurisdictions</p>
+<p>The server has no EPSCoR flag.
+It gives each institution's US state, and the AI assistant decides on its own which states are
+EPSCoR jurisdictions.
+Ask the assistant to list the jurisdictions it used, so you can check them against NSF's current list.</p>
+</div>
+<h3 id="data-transfers">Data transfers<a class="headerlink" href="#data-transfers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"Which OSDF namespaces read the most data last month?"</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tips for numbers that go into a report</p>
+<ul>
+<li><strong>Name exact dates</strong>, such as "October 2026" or "2026-01-01 to 2026-11-01", rather than "last month",
+  so you can run the same question again later.</li>
+<li><strong>Ask how it got the number.</strong>
+  For example, "Explain how you calculated that."
+  GRACC has no single "OSPool" label, so it is worth knowing how the assistant defined OSPool usage.</li>
+<li><strong>Ask for units.</strong>
+  Core hours, job counts and GPU hours are different measures; OSDF numbers are in bytes.</li>
+</ul>
+</div>
+<h2 id="how-the-assistant-answers-a-question">How the Assistant Answers a Question<a class="headerlink" href="#how-the-assistant-answers-a-question" title="Permanent link">&para;</a></h2>
+<p>Here is how an assistant answers
+"What ran at the site Nebraska last month, what fields of science were they, and which institutions did they come
+from?"
+The question was asked in November 2026, so "last month" means October 2026.</p>
+<ol>
+<li>
+<p><strong>Finds the exact site names.</strong>
+    "Nebraska" matches two OSG sites: Nebraska-CMS and Nebraska-Omaha.</p>
+</li>
+<li>
+<p><strong>Ranks the projects that ran there.</strong>
+    It adds up each project's core hours at those two sites in October: 90 projects in all.</p>
+</li>
+<li>
+<p><strong>Looks up the science and the institutions.</strong>
+    OSG Topology gives each project's field of science and institution.
+    Two of the names, CMS and OSG, are whole VOs rather than projects.</p>
+</li>
+<li>
+<p><strong>Describes the VOs.</strong>
+    It looks up the CMS (Compact Muon Solenoid) and OSG VOs.</p>
+</li>
+<li>
+<p><strong>Groups and adds up.</strong>
+    It sums the core hours by field of science and counts the distinct institutions.</p>
+</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">The answer (October 2026)</p>
+<p>Jobs at Nebraska-CMS and Nebraska-Omaha that reported a project used about 1.03 million core hours
+across 90 projects.
+The CMS VO accounted for about 0.77 million of them.
+The other 88 projects span 36 fields of science, led by Physics, Computer and Information Services,
+and Bioinformatics, and come from 61 institutions.</p>
+</div>
+<h2 id="available-data">Available Data<a class="headerlink" href="#available-data" title="Permanent link">&para;</a></h2>
+<h3 id="jobs">Jobs<a class="headerlink" href="#jobs" title="Permanent link">&para;</a></h3>
+<p>OSG job accounting from GRACC, dated by when each job ended.</p>
+<table>
+<thead>
+<tr>
+<th>Measures</th>
+<th>Broken down by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core hours</td>
+<td>VO</td>
+</tr>
+<tr>
+<td>Job counts</td>
+<td>Project</td>
+</tr>
+<tr>
+<td>Wall time and CPU time</td>
+<td>Site and resource group</td>
+</tr>
+<tr>
+<td>GPU hours</td>
+<td>Resource type</td>
+</tr>
+<tr>
+<td>Processor and GPU counts</td>
+<td>Probe and submit host</td>
+</tr>
+</tbody>
+</table>
+<h3 id="osdf-data-transfers">OSDF data transfers<a class="headerlink" href="#osdf-data-transfers" title="Permanent link">&para;</a></h3>
+<p>Daily summaries of <a href="https://osg-htc.org/services/osdf">Open Science Data Federation</a> (OSDF) transfers.</p>
+<table>
+<thead>
+<tr>
+<th>Measures</th>
+<th>Broken down by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bytes read</td>
+<td>Namespace, the top-level path such as <code>/ospool</code></td>
+</tr>
+<tr>
+<td>Bytes written</td>
+<td>Cache or origin site</td>
+</tr>
+<tr>
+<td>Vector-read bytes</td>
+<td>Server hostname</td>
+</tr>
+<tr>
+<td>Transfer counts</td>
+<td>Client domain, such as <code>wisc.edu</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects-vos-and-institutions">Projects, VOs and institutions<a class="headerlink" href="#projects-vos-and-institutions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Record</th>
+<th>What it includes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Projects</td>
+<td>Field of science, organization, department, sponsor, and institution</td>
+</tr>
+<tr>
+<td>VOs</td>
+<td>Long name, community, fields of science, and URL</td>
+</tr>
+<tr>
+<td>Institutions</td>
+<td>Name, US state, ROR ID, IPEDS and Carnegie details, and their OSG projects</td>
+</tr>
+</tbody>
+</table>
+<p>This information comes from <a href="https://topology.opensciencegrid.org/">OSG Topology</a>
+and OSG's institution database, and is refreshed about once an hour.</p>
+<h3 id="limits">Limits<a class="headerlink" href="#limits" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Limit</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time range</td>
+<td>Up to 366 days per query</td>
+</tr>
+<tr>
+<td>Results</td>
+<td>Up to 500 per query</td>
+</tr>
+<tr>
+<td>Request rate</td>
+<td>About 120 requests per minute per client</td>
+</tr>
+</tbody>
+</table>
+<h3 id="good-to-know">Good to know<a class="headerlink" href="#good-to-know" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Field of science and institution come from the project that each job reports.
+  Some usage, such as CMS's, is recorded under a whole VO rather than a project;
+  the assistant describes that usage at the VO level.</li>
+<li>When an institution detail is unknown, it is left blank rather than counted as "no".</li>
+<li>For the full list of the server's tools and options, see the
+  <a href="https://github.com/opensciencegrid/gracc-mcp">gracc-mcp repository</a>.</li>
+</ul>
+<h2 id="example-records">Example Records<a class="headerlink" href="#example-records" title="Permanent link">&para;</a></h2>
+<p>These records come from the live server and show the kinds of details you can ask about.</p>
+<h3 id="institution-university-of-nebraskalincoln">Institution: University of Nebraska–Lincoln<a class="headerlink" href="#institution-university-of-nebraskalincoln" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Detail</th>
+<th>Value</th>
+<th>Question to try</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>State</td>
+<td>NE</td>
+<td>"Which institutions in Kansas have OSG projects?"</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>Public</td>
+<td>"Which public institutions in Kansas have OSG projects?"</td>
+</tr>
+<tr>
+<td>Institution size</td>
+<td>20,000 and above</td>
+<td>"Which projects come from institutions with under 1,000 students?"</td>
+</tr>
+<tr>
+<td>Program length</td>
+<td>Four or more years</td>
+<td>"Do any two-year colleges have OSG projects?"</td>
+</tr>
+<tr>
+<td>Carnegie classification (2021)</td>
+<td>Doctoral Universities: Very High Research Activity</td>
+<td></td>
+</tr>
+<tr>
+<td>Carnegie classification (2025)</td>
+<td>Research 1: Very High Spending and Doctorate Production</td>
+<td>"How many institutions classified as Research 2 have OSG projects?"</td>
+</tr>
+<tr>
+<td>ROR ID</td>
+<td>https://ror.org/043mer456</td>
+<td>"List the ROR IDs of the institutions behind last month's top 20 projects."</td>
+</tr>
+<tr>
+<td>Website</td>
+<td>www.unl.edu</td>
+<td></td>
+</tr>
+<tr>
+<td>OSG projects</td>
+<td>29</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="project-icecube">Project: IceCube<a class="headerlink" href="#project-icecube" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Detail</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Field of science</td>
+<td>Astrophysics</td>
+</tr>
+<tr>
+<td>Organization</td>
+<td>University of Wisconsin–Madison</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>Physics</td>
+</tr>
+<tr>
+<td>Sponsor</td>
+<td>OSG Connect</td>
+</tr>
+<tr>
+<td>Institution</td>
+<td>University of Wisconsin–Madison (WI)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vo-ligo">VO: LIGO<a class="headerlink" href="#vo-ligo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Detail</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Long name</td>
+<td>The Laser Interferometer Gravitational-Wave Observatory</td>
+</tr>
+<tr>
+<td>Community</td>
+<td>The LIGO Scientific Collaboration (LSC)</td>
+</tr>
+<tr>
+<td>Fields of science</td>
+<td>Gravitational Physics (primary); Astrophysics, Physics, and Physics and astronomy (secondary)</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>http://www.ligo.org</td>
+</tr>
+<tr>
+<td>Active</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+          
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.code.copy","navigation.sections","navigation.top"],"redirect":"../../redirect.json","search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9e76c64c.min.js"></script>
+      
+      
+    
+  </body>
+</html>
