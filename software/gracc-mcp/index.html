@@ -853,6 +853,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#opencode" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OpenCode
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3563,6 +3574,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#opencode" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OpenCode
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3834,15 +3856,20 @@ Transport: <strong>Streamable HTTP</strong>.</p>
 <p>Any MCP client that supports remote MCP servers can use it.
 In your client, add a remote (sometimes called "custom") MCP server with the address above.
 There is nothing else to configure.</p>
+<div class="admonition note">
+<p class="admonition-title">Check the connection</p>
+<p>After configuring your client,
+ask the assistant "What data does the GRACC server offer?"
+It should describe OSG job accounting and OSDF data transfers.</p>
+</div>
 <h3 id="claude-code">Claude Code<a class="headerlink" href="#claude-code" title="Permanent link">&para;</a></h3>
 <p>Register the server once, then ask questions in any Claude Code session:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">user@host $ </span>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>--transport<span class="w"> </span>http<span class="w"> </span>gracc<span class="w"> </span>https://gracc.opensciencegrid.org/mcp
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Check the connection</p>
-<p>Ask the assistant "What data does the GRACC server offer?"
-It should describe OSG job accounting and OSDF data transfers.</p>
-</div>
+<h3 id="opencode">OpenCode<a class="headerlink" href="#opencode" title="Permanent link">&para;</a></h3>
+<p>Register the server once, then ask questions in any OpenCode session:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">user@host $ </span>opencode<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>gracc<span class="w"> </span>--global<span class="w"> </span>--url<span class="w"> </span>https://gracc.opensciencegrid.org/mcp
+</code></pre></div>
 <h2 id="example-questions">Example Questions<a class="headerlink" href="#example-questions" title="Permanent link">&para;</a></h2>
 <p>Each of these questions works against the live server.
 Use them as they are, or change the VO, site, state or dates to suit your needs.</p>
